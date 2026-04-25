@@ -759,6 +759,74 @@
     </div>
   </section>
 
+  <!-- SOFIPOS -->
+  <section class="module" id="sofipos">
+    <div class="container">
+      <div class="module-head">
+        <span class="module-num">01b</span>
+        <h2 class="module-title">Sociedades Financieras Populares (SoFiPOs)</h2>
+        <span class="module-desc">Segmento de inclusión financiera — perfil de riesgo diferenciado</span>
+      </div>
+      <div class="grid">
+
+        <!-- KPIs SoFiPOs -->
+        <div class="card" style="grid-column: 1 / -1;">
+          <div class="card-header">
+            <div>
+              <div class="card-title">IMOR Sistema SoFiPOs vs Banca Múltiple</div>
+              <div class="card-subtitle" id="sofipos-subtitle">Comparativo — desde enero 2016</div>
+            </div>
+            <span class="signal red" id="sofipos-signal">—</span>
+          </div>
+
+          <!-- KPIs actuales -->
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-bottom:1.2rem;">
+            <div style="padding:1rem; background:rgba(248,81,73,0.06); border:1px solid rgba(248,81,73,0.2); border-radius:6px; text-align:center;">
+              <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.08em; color:#f85149; margin-bottom:0.3rem;">IMOR SoFiPOs</div>
+              <div style="font-family:var(--serif); font-size:1.8rem; color:#f85149;" id="sofipos-imor">—</div>
+              <div style="font-size:0.7rem; color:var(--text-dim);">dic 2025</div>
+            </div>
+            <div style="padding:1rem; background:rgba(31,111,235,0.06); border:1px solid rgba(31,111,235,0.2); border-radius:6px; text-align:center;">
+              <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.08em; color:#1f6feb; margin-bottom:0.3rem;">IMOR Banca Múltiple</div>
+              <div style="font-family:var(--serif); font-size:1.8rem; color:#1f6feb;" id="sofipos-bm-imor">2.2%</div>
+              <div style="font-size:0.7rem; color:var(--text-dim);">feb 2026</div>
+            </div>
+            <div style="padding:1rem; background:rgba(248,81,73,0.06); border:1px solid rgba(248,81,73,0.2); border-radius:6px; text-align:center;">
+              <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.08em; color:#f85149; margin-bottom:0.3rem;">IMORA SoFiPOs</div>
+              <div style="font-family:var(--serif); font-size:1.8rem; color:#f85149;" id="sofipos-imora">—</div>
+              <div style="font-size:0.7rem; color:var(--text-dim);">dic 2025</div>
+            </div>
+            <div style="padding:1rem; background:rgba(248,81,73,0.06); border:1px solid rgba(248,81,73,0.2); border-radius:6px; text-align:center;">
+              <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.08em; color:#f85149; margin-bottom:0.3rem;">ROA SoFiPOs</div>
+              <div style="font-family:var(--serif); font-size:1.8rem; color:#f85149;" id="sofipos-roa">—</div>
+              <div style="font-size:0.7rem; color:var(--text-dim);">dic 2025</div>
+            </div>
+          </div>
+
+          <!-- Chart comparativo -->
+          <div class="chart-wrap" style="height:260px;"><canvas id="chart-sofipos"></canvas></div>
+          <div class="period-selector" style="justify-content:flex-end; margin-top:0.4rem;">
+            <button class="period-btn" onclick="setSofipoPeriod(this,12)">12M</button>
+            <button class="period-btn" onclick="setSofipoPeriod(this,36)">3A</button>
+            <button class="period-btn active" onclick="setSofipoPeriod(this,0)">Histórico</button>
+          </div>
+
+          <!-- IMOR por segmento SoFiPOs -->
+          <div style="margin-top:1rem; padding:0.8rem 1rem; background:var(--surface); border:1px solid var(--border); border-radius:6px;">
+            <p style="font-size:0.75rem; color:var(--text-dim); margin-bottom:0.6rem;">IMOR por segmento (dic 2025):</p>
+            <div style="display:flex; gap:1.5rem; flex-wrap:wrap;" id="sofipos-segs"></div>
+          </div>
+
+          <div style="margin-top:0.8rem; padding:0.8rem 1rem; background:rgba(248,81,73,0.04); border:1px solid rgba(248,81,73,0.15); border-radius:6px; font-size:0.78rem; color:var(--text-dim); line-height:1.6;">
+            <strong style="color:var(--text);">ℹ️ Contexto:</strong> Las SoFiPOs atienden segmentos sin acceso a banca formal (microempresarios, comunidades rurales). Su IMOR estructuralmente más alto refleja el perfil de riesgo del segmento, no necesariamente una crisis. El ROA negativo indica que el sector en conjunto opera con pérdidas.
+          </div>
+          <div class="source">Fuente: CNBV Portafolio de Información · SoFiPOs · Sistema total · enero 2016 – diciembre 2025</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- MERCADO -->
   <section class="module" id="mercado">
     <div class="container">
@@ -1530,6 +1598,10 @@
       if (json.credito && json.credito.historico_por_cartera) {
         imorsegData = json.credito.historico_por_cartera;
         buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
+      }
+      if (json.sofipos) {
+        sofiposData = json.sofipos;
+        buildSofiposChart(sofipoPeriod);
       }
       if (json.ifrs9) {
         ifrs9DataStore = json.ifrs9;
