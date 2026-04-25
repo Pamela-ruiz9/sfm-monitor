@@ -1,0 +1,1820 @@
+[
+  {
+    "fecha": "2000-12",
+    "cartera_total_mdp": 11221054.1,
+    "cartera_vencida_mdp": 1694830.9,
+    "imor": 15.1
+  },
+  {
+    "fecha": "2001-01",
+    "cartera_total_mdp": 11287315.2,
+    "cartera_vencida_mdp": 155146.5,
+    "imor": 1.37
+  },
+  {
+    "fecha": "2001-02",
+    "cartera_total_mdp": 11477626.6,
+    "cartera_vencida_mdp": 294319.9,
+    "imor": 2.56
+  },
+  {
+    "fecha": "2001-03",
+    "cartera_total_mdp": 11385168.7,
+    "cartera_vencida_mdp": 443673.5,
+    "imor": 3.9
+  },
+  {
+    "fecha": "2001-04",
+    "cartera_total_mdp": 11493896.2,
+    "cartera_vencida_mdp": 574835.9,
+    "imor": 5.0
+  },
+  {
+    "fecha": "2001-05",
+    "cartera_total_mdp": 11690997.4,
+    "cartera_vencida_mdp": 708004.0,
+    "imor": 6.06
+  },
+  {
+    "fecha": "2001-06",
+    "cartera_total_mdp": 11748462.1,
+    "cartera_vencida_mdp": 817674.9,
+    "imor": 6.96
+  },
+  {
+    "fecha": "2001-07",
+    "cartera_total_mdp": 12231691.6,
+    "cartera_vencida_mdp": 924823.9,
+    "imor": 7.56
+  },
+  {
+    "fecha": "2001-08",
+    "cartera_total_mdp": 12554557.9,
+    "cartera_vencida_mdp": 1027116.0,
+    "imor": 8.18
+  },
+  {
+    "fecha": "2001-09",
+    "cartera_total_mdp": 12421126.1,
+    "cartera_vencida_mdp": 1135345.8,
+    "imor": 9.14
+  },
+  {
+    "fecha": "2001-10",
+    "cartera_total_mdp": 12793406.3,
+    "cartera_vencida_mdp": 1243767.3,
+    "imor": 9.72
+  },
+  {
+    "fecha": "2001-11",
+    "cartera_total_mdp": 12881524.9,
+    "cartera_vencida_mdp": 1308122.3,
+    "imor": 10.16
+  },
+  {
+    "fecha": "2001-12",
+    "cartera_total_mdp": 12783505.4,
+    "cartera_vencida_mdp": 1402691.5,
+    "imor": 10.97
+  },
+  {
+    "fecha": "2002-01",
+    "cartera_total_mdp": 12987225.8,
+    "cartera_vencida_mdp": 89094.7,
+    "imor": 0.69
+  },
+  {
+    "fecha": "2002-02",
+    "cartera_total_mdp": 12727606.2,
+    "cartera_vencida_mdp": 176548.7,
+    "imor": 1.39
+  },
+  {
+    "fecha": "2002-03",
+    "cartera_total_mdp": 13036356.2,
+    "cartera_vencida_mdp": 270235.7,
+    "imor": 2.07
+  },
+  {
+    "fecha": "2002-04",
+    "cartera_total_mdp": 12776336.5,
+    "cartera_vencida_mdp": 355411.2,
+    "imor": 2.78
+  },
+  {
+    "fecha": "2002-05",
+    "cartera_total_mdp": 13073493.1,
+    "cartera_vencida_mdp": 441953.2,
+    "imor": 3.38
+  },
+  {
+    "fecha": "2002-06",
+    "cartera_total_mdp": 13526468.6,
+    "cartera_vencida_mdp": 532336.4,
+    "imor": 3.94
+  },
+  {
+    "fecha": "2002-07",
+    "cartera_total_mdp": 12959175.2,
+    "cartera_vencida_mdp": 629235.0,
+    "imor": 4.86
+  },
+  {
+    "fecha": "2002-08",
+    "cartera_total_mdp": 12906382.1,
+    "cartera_vencida_mdp": 720975.6,
+    "imor": 5.59
+  },
+  {
+    "fecha": "2002-09",
+    "cartera_total_mdp": 13219608.9,
+    "cartera_vencida_mdp": 814480.5,
+    "imor": 6.16
+  },
+  {
+    "fecha": "2002-10",
+    "cartera_total_mdp": 13500570.4,
+    "cartera_vencida_mdp": 921823.6,
+    "imor": 6.83
+  },
+  {
+    "fecha": "2002-11",
+    "cartera_total_mdp": 13813897.8,
+    "cartera_vencida_mdp": 1020827.0,
+    "imor": 7.39
+  },
+  {
+    "fecha": "2002-12",
+    "cartera_total_mdp": 13491875.6,
+    "cartera_vencida_mdp": 1130265.8,
+    "imor": 8.38
+  },
+  {
+    "fecha": "2003-01",
+    "cartera_total_mdp": 13016056.7,
+    "cartera_vencida_mdp": 99097.7,
+    "imor": 0.76
+  },
+  {
+    "fecha": "2003-02",
+    "cartera_total_mdp": 13306346.3,
+    "cartera_vencida_mdp": 192735.9,
+    "imor": 1.45
+  },
+  {
+    "fecha": "2003-03",
+    "cartera_total_mdp": 13753849.2,
+    "cartera_vencida_mdp": 306362.3,
+    "imor": 2.23
+  },
+  {
+    "fecha": "2003-04",
+    "cartera_total_mdp": 14099816.8,
+    "cartera_vencida_mdp": 410785.7,
+    "imor": 2.91
+  },
+  {
+    "fecha": "2003-05",
+    "cartera_total_mdp": 13689374.3,
+    "cartera_vencida_mdp": 497376.5,
+    "imor": 3.63
+  },
+  {
+    "fecha": "2003-06",
+    "cartera_total_mdp": 13685380.2,
+    "cartera_vencida_mdp": 574110.7,
+    "imor": 4.2
+  },
+  {
+    "fecha": "2003-07",
+    "cartera_total_mdp": 13838387.4,
+    "cartera_vencida_mdp": 652486.8,
+    "imor": 4.72
+  },
+  {
+    "fecha": "2003-08",
+    "cartera_total_mdp": 14276789.7,
+    "cartera_vencida_mdp": 729968.1,
+    "imor": 5.11
+  },
+  {
+    "fecha": "2003-09",
+    "cartera_total_mdp": 14201781.7,
+    "cartera_vencida_mdp": 810548.3,
+    "imor": 5.71
+  },
+  {
+    "fecha": "2003-10",
+    "cartera_total_mdp": 14320234.4,
+    "cartera_vencida_mdp": 896802.1,
+    "imor": 6.26
+  },
+  {
+    "fecha": "2003-11",
+    "cartera_total_mdp": 14480469.9,
+    "cartera_vencida_mdp": 981268.8,
+    "imor": 6.78
+  },
+  {
+    "fecha": "2003-12",
+    "cartera_total_mdp": 14523698.9,
+    "cartera_vencida_mdp": 1077422.9,
+    "imor": 7.42
+  },
+  {
+    "fecha": "2004-01",
+    "cartera_total_mdp": 14875916.2,
+    "cartera_vencida_mdp": 87962.3,
+    "imor": 0.59
+  },
+  {
+    "fecha": "2004-02",
+    "cartera_total_mdp": 15024280.1,
+    "cartera_vencida_mdp": 170557.4,
+    "imor": 1.14
+  },
+  {
+    "fecha": "2004-03",
+    "cartera_total_mdp": 15101525.6,
+    "cartera_vencida_mdp": 267990.6,
+    "imor": 1.77
+  },
+  {
+    "fecha": "2004-04",
+    "cartera_total_mdp": 14719118.7,
+    "cartera_vencida_mdp": 361976.4,
+    "imor": 2.46
+  },
+  {
+    "fecha": "2004-05",
+    "cartera_total_mdp": 14781293.5,
+    "cartera_vencida_mdp": 456863.5,
+    "imor": 3.09
+  },
+  {
+    "fecha": "2004-06",
+    "cartera_total_mdp": 15421066.9,
+    "cartera_vencida_mdp": 552131.2,
+    "imor": 3.58
+  },
+  {
+    "fecha": "2004-07",
+    "cartera_total_mdp": 15073261.8,
+    "cartera_vencida_mdp": 652321.9,
+    "imor": 4.33
+  },
+  {
+    "fecha": "2004-08",
+    "cartera_total_mdp": 15300592.6,
+    "cartera_vencida_mdp": 760961.9,
+    "imor": 4.97
+  },
+  {
+    "fecha": "2004-09",
+    "cartera_total_mdp": 15557051.3,
+    "cartera_vencida_mdp": 869268.1,
+    "imor": 5.59
+  },
+  {
+    "fecha": "2004-10",
+    "cartera_total_mdp": 16019738.9,
+    "cartera_vencida_mdp": 989996.3,
+    "imor": 6.18
+  },
+  {
+    "fecha": "2004-11",
+    "cartera_total_mdp": 16520663.6,
+    "cartera_vencida_mdp": 1112744.3,
+    "imor": 6.74
+  },
+  {
+    "fecha": "2004-12",
+    "cartera_total_mdp": 16416835.3,
+    "cartera_vencida_mdp": 1250225.0,
+    "imor": 7.62
+  },
+  {
+    "fecha": "2005-01",
+    "cartera_total_mdp": 17028854.0,
+    "cartera_vencida_mdp": 131096.4,
+    "imor": 0.77
+  },
+  {
+    "fecha": "2005-02",
+    "cartera_total_mdp": 17233337.9,
+    "cartera_vencida_mdp": 253634.9,
+    "imor": 1.47
+  },
+  {
+    "fecha": "2005-03",
+    "cartera_total_mdp": 17152318.8,
+    "cartera_vencida_mdp": 394738.8,
+    "imor": 2.3
+  },
+  {
+    "fecha": "2005-04",
+    "cartera_total_mdp": 17127601.7,
+    "cartera_vencida_mdp": 538060.1,
+    "imor": 3.14
+  },
+  {
+    "fecha": "2005-05",
+    "cartera_total_mdp": 17652081.4,
+    "cartera_vencida_mdp": 691447.5,
+    "imor": 3.92
+  },
+  {
+    "fecha": "2005-06",
+    "cartera_total_mdp": 17600979.0,
+    "cartera_vencida_mdp": 838499.7,
+    "imor": 4.76
+  },
+  {
+    "fecha": "2005-07",
+    "cartera_total_mdp": 17894666.0,
+    "cartera_vencida_mdp": 991989.7,
+    "imor": 5.54
+  },
+  {
+    "fecha": "2005-08",
+    "cartera_total_mdp": 18508809.3,
+    "cartera_vencida_mdp": 1150764.6,
+    "imor": 6.22
+  },
+  {
+    "fecha": "2005-09",
+    "cartera_total_mdp": 18326637.1,
+    "cartera_vencida_mdp": 1301253.0,
+    "imor": 7.1
+  },
+  {
+    "fecha": "2005-10",
+    "cartera_total_mdp": 18566352.3,
+    "cartera_vencida_mdp": 1461193.1,
+    "imor": 7.87
+  },
+  {
+    "fecha": "2005-11",
+    "cartera_total_mdp": 19452389.3,
+    "cartera_vencida_mdp": 1622033.5,
+    "imor": 8.34
+  },
+  {
+    "fecha": "2005-12",
+    "cartera_total_mdp": 19098201.0,
+    "cartera_vencida_mdp": 1789204.6,
+    "imor": 9.37
+  },
+  {
+    "fecha": "2006-01",
+    "cartera_total_mdp": 19843090.5,
+    "cartera_vencida_mdp": 155481.9,
+    "imor": 0.78
+  },
+  {
+    "fecha": "2006-02",
+    "cartera_total_mdp": 19956344.6,
+    "cartera_vencida_mdp": 298620.9,
+    "imor": 1.5
+  },
+  {
+    "fecha": "2006-03",
+    "cartera_total_mdp": 19798706.7,
+    "cartera_vencida_mdp": 450280.0,
+    "imor": 2.27
+  },
+  {
+    "fecha": "2006-04",
+    "cartera_total_mdp": 19886801.6,
+    "cartera_vencida_mdp": 598639.9,
+    "imor": 3.01
+  },
+  {
+    "fecha": "2006-05",
+    "cartera_total_mdp": 20944894.9,
+    "cartera_vencida_mdp": 749639.9,
+    "imor": 3.58
+  },
+  {
+    "fecha": "2006-06",
+    "cartera_total_mdp": 20868979.7,
+    "cartera_vencida_mdp": 903750.1,
+    "imor": 4.33
+  },
+  {
+    "fecha": "2006-07",
+    "cartera_total_mdp": 20313904.5,
+    "cartera_vencida_mdp": 1060107.7,
+    "imor": 5.22
+  },
+  {
+    "fecha": "2006-08",
+    "cartera_total_mdp": 20729662.6,
+    "cartera_vencida_mdp": 1219506.7,
+    "imor": 5.88
+  },
+  {
+    "fecha": "2006-09",
+    "cartera_total_mdp": 21162213.2,
+    "cartera_vencida_mdp": 1385505.8,
+    "imor": 6.55
+  },
+  {
+    "fecha": "2006-10",
+    "cartera_total_mdp": 21236845.9,
+    "cartera_vencida_mdp": 1563264.3,
+    "imor": 7.36
+  },
+  {
+    "fecha": "2006-11",
+    "cartera_total_mdp": 21987780.3,
+    "cartera_vencida_mdp": 1727512.5,
+    "imor": 7.86
+  },
+  {
+    "fecha": "2006-12",
+    "cartera_total_mdp": 21680039.5,
+    "cartera_vencida_mdp": 1910126.2,
+    "imor": 8.81
+  },
+  {
+    "fecha": "2007-01",
+    "cartera_total_mdp": 23111672.2,
+    "cartera_vencida_mdp": 170627.9,
+    "imor": 0.74
+  },
+  {
+    "fecha": "2007-02",
+    "cartera_total_mdp": 22686695.5,
+    "cartera_vencida_mdp": 331929.6,
+    "imor": 1.46
+  },
+  {
+    "fecha": "2007-03",
+    "cartera_total_mdp": 22368113.6,
+    "cartera_vencida_mdp": 505948.0,
+    "imor": 2.26
+  },
+  {
+    "fecha": "2007-04",
+    "cartera_total_mdp": 22897781.8,
+    "cartera_vencida_mdp": 676874.7,
+    "imor": 2.96
+  },
+  {
+    "fecha": "2007-05",
+    "cartera_total_mdp": 23762259.8,
+    "cartera_vencida_mdp": 853137.1,
+    "imor": 3.59
+  },
+  {
+    "fecha": "2007-06",
+    "cartera_total_mdp": 23412494.0,
+    "cartera_vencida_mdp": 1027243.0,
+    "imor": 4.39
+  },
+  {
+    "fecha": "2007-07",
+    "cartera_total_mdp": 24116046.1,
+    "cartera_vencida_mdp": 1221100.2,
+    "imor": 5.06
+  },
+  {
+    "fecha": "2007-08",
+    "cartera_total_mdp": 23923606.5,
+    "cartera_vencida_mdp": 1416848.2,
+    "imor": 5.92
+  },
+  {
+    "fecha": "2007-09",
+    "cartera_total_mdp": 23938767.4,
+    "cartera_vencida_mdp": 1613288.1,
+    "imor": 6.74
+  },
+  {
+    "fecha": "2007-10",
+    "cartera_total_mdp": 25260266.4,
+    "cartera_vencida_mdp": 1821138.8,
+    "imor": 7.21
+  },
+  {
+    "fecha": "2007-11",
+    "cartera_total_mdp": 25125439.9,
+    "cartera_vencida_mdp": 2026433.7,
+    "imor": 8.07
+  },
+  {
+    "fecha": "2007-12",
+    "cartera_total_mdp": 25163796.5,
+    "cartera_vencida_mdp": 2244170.7,
+    "imor": 8.92
+  },
+  {
+    "fecha": "2008-01",
+    "cartera_total_mdp": 25934285.1,
+    "cartera_vencida_mdp": 202677.7,
+    "imor": 0.78
+  },
+  {
+    "fecha": "2008-02",
+    "cartera_total_mdp": 25430408.3,
+    "cartera_vencida_mdp": 398666.9,
+    "imor": 1.57
+  },
+  {
+    "fecha": "2008-03",
+    "cartera_total_mdp": 25835379.9,
+    "cartera_vencida_mdp": 606287.5,
+    "imor": 2.35
+  },
+  {
+    "fecha": "2008-04",
+    "cartera_total_mdp": 26186028.3,
+    "cartera_vencida_mdp": 810158.4,
+    "imor": 3.09
+  },
+  {
+    "fecha": "2008-05",
+    "cartera_total_mdp": 26691088.7,
+    "cartera_vencida_mdp": 1021162.4,
+    "imor": 3.83
+  },
+  {
+    "fecha": "2008-06",
+    "cartera_total_mdp": 26609012.0,
+    "cartera_vencida_mdp": 1233349.9,
+    "imor": 4.64
+  },
+  {
+    "fecha": "2008-07",
+    "cartera_total_mdp": 26687737.8,
+    "cartera_vencida_mdp": 1453240.9,
+    "imor": 5.45
+  },
+  {
+    "fecha": "2008-08",
+    "cartera_total_mdp": 26799842.1,
+    "cartera_vencida_mdp": 1678339.2,
+    "imor": 6.26
+  },
+  {
+    "fecha": "2008-09",
+    "cartera_total_mdp": 26933015.1,
+    "cartera_vencida_mdp": 1903416.8,
+    "imor": 7.07
+  },
+  {
+    "fecha": "2008-10",
+    "cartera_total_mdp": 25580576.6,
+    "cartera_vencida_mdp": 2140620.0,
+    "imor": 8.37
+  },
+  {
+    "fecha": "2008-11",
+    "cartera_total_mdp": 26010679.7,
+    "cartera_vencida_mdp": 2379106.4,
+    "imor": 9.15
+  },
+  {
+    "fecha": "2008-12",
+    "cartera_total_mdp": 26281770.3,
+    "cartera_vencida_mdp": 2590359.2,
+    "imor": 9.86
+  },
+  {
+    "fecha": "2009-01",
+    "cartera_total_mdp": 26498443.1,
+    "cartera_vencida_mdp": 227863.4,
+    "imor": 0.86
+  },
+  {
+    "fecha": "2009-02",
+    "cartera_total_mdp": 28887033.1,
+    "cartera_vencida_mdp": 452818.3,
+    "imor": 1.57
+  },
+  {
+    "fecha": "2009-03",
+    "cartera_total_mdp": 28920605.5,
+    "cartera_vencida_mdp": 643761.7,
+    "imor": 2.23
+  },
+  {
+    "fecha": "2009-04",
+    "cartera_total_mdp": 28754491.5,
+    "cartera_vencida_mdp": 836730.4,
+    "imor": 2.91
+  },
+  {
+    "fecha": "2009-05",
+    "cartera_total_mdp": 28601804.8,
+    "cartera_vencida_mdp": 1050711.3,
+    "imor": 3.67
+  },
+  {
+    "fecha": "2009-06",
+    "cartera_total_mdp": 28187615.0,
+    "cartera_vencida_mdp": 1231213.3,
+    "imor": 4.37
+  },
+  {
+    "fecha": "2009-07",
+    "cartera_total_mdp": 29079797.4,
+    "cartera_vencida_mdp": 1409661.4,
+    "imor": 4.85
+  },
+  {
+    "fecha": "2009-08",
+    "cartera_total_mdp": 28525390.6,
+    "cartera_vencida_mdp": 1582568.6,
+    "imor": 5.55
+  },
+  {
+    "fecha": "2009-09",
+    "cartera_total_mdp": 29429945.2,
+    "cartera_vencida_mdp": 1765608.2,
+    "imor": 6.0
+  },
+  {
+    "fecha": "2009-10",
+    "cartera_total_mdp": 28893015.9,
+    "cartera_vencida_mdp": 1948944.8,
+    "imor": 6.75
+  },
+  {
+    "fecha": "2009-11",
+    "cartera_total_mdp": 28588411.9,
+    "cartera_vencida_mdp": 2129946.7,
+    "imor": 7.45
+  },
+  {
+    "fecha": "2009-12",
+    "cartera_total_mdp": 28046469.3,
+    "cartera_vencida_mdp": 2307552.4,
+    "imor": 8.23
+  },
+  {
+    "fecha": "2010-01",
+    "cartera_total_mdp": 28152390.7,
+    "cartera_vencida_mdp": 179205.6,
+    "imor": 0.64
+  },
+  {
+    "fecha": "2010-02",
+    "cartera_total_mdp": 28495330.3,
+    "cartera_vencida_mdp": 346485.6,
+    "imor": 1.22
+  },
+  {
+    "fecha": "2010-03",
+    "cartera_total_mdp": 28749924.9,
+    "cartera_vencida_mdp": 528928.2,
+    "imor": 1.84
+  },
+  {
+    "fecha": "2010-04",
+    "cartera_total_mdp": 29014444.9,
+    "cartera_vencida_mdp": 704925.5,
+    "imor": 2.43
+  },
+  {
+    "fecha": "2010-05",
+    "cartera_total_mdp": 29501426.7,
+    "cartera_vencida_mdp": 880570.2,
+    "imor": 2.98
+  },
+  {
+    "fecha": "2010-06",
+    "cartera_total_mdp": 29669240.1,
+    "cartera_vencida_mdp": 1058655.1,
+    "imor": 3.57
+  },
+  {
+    "fecha": "2010-07",
+    "cartera_total_mdp": 29127198.7,
+    "cartera_vencida_mdp": 1234845.6,
+    "imor": 4.24
+  },
+  {
+    "fecha": "2010-08",
+    "cartera_total_mdp": 30274993.5,
+    "cartera_vencida_mdp": 1418034.6,
+    "imor": 4.68
+  },
+  {
+    "fecha": "2010-09",
+    "cartera_total_mdp": 30970553.5,
+    "cartera_vencida_mdp": 1596533.3,
+    "imor": 5.16
+  },
+  {
+    "fecha": "2010-10",
+    "cartera_total_mdp": 30147886.2,
+    "cartera_vencida_mdp": 1781628.4,
+    "imor": 5.91
+  },
+  {
+    "fecha": "2010-11",
+    "cartera_total_mdp": 30223127.4,
+    "cartera_vencida_mdp": 1968393.2,
+    "imor": 6.51
+  },
+  {
+    "fecha": "2010-12",
+    "cartera_total_mdp": 30705616.5,
+    "cartera_vencida_mdp": 2155664.5,
+    "imor": 7.02
+  },
+  {
+    "fecha": "2011-01",
+    "cartera_total_mdp": 30946708.0,
+    "cartera_vencida_mdp": 188488.5,
+    "imor": 0.61
+  },
+  {
+    "fecha": "2011-02",
+    "cartera_total_mdp": 30770979.6,
+    "cartera_vencida_mdp": 367422.6,
+    "imor": 1.19
+  },
+  {
+    "fecha": "2011-03",
+    "cartera_total_mdp": 31677905.8,
+    "cartera_vencida_mdp": 562032.8,
+    "imor": 1.77
+  },
+  {
+    "fecha": "2011-04",
+    "cartera_total_mdp": 31722752.5,
+    "cartera_vencida_mdp": 753599.2,
+    "imor": 2.38
+  },
+  {
+    "fecha": "2011-05",
+    "cartera_total_mdp": 31823967.6,
+    "cartera_vencida_mdp": 945051.1,
+    "imor": 2.97
+  },
+  {
+    "fecha": "2011-06",
+    "cartera_total_mdp": 33036007.3,
+    "cartera_vencida_mdp": 1136952.5,
+    "imor": 3.44
+  },
+  {
+    "fecha": "2011-07",
+    "cartera_total_mdp": 32948945.7,
+    "cartera_vencida_mdp": 1337207.0,
+    "imor": 4.06
+  },
+  {
+    "fecha": "2011-08",
+    "cartera_total_mdp": 33496503.0,
+    "cartera_vencida_mdp": 1540152.8,
+    "imor": 4.6
+  },
+  {
+    "fecha": "2011-09",
+    "cartera_total_mdp": 33761885.4,
+    "cartera_vencida_mdp": 1742274.5,
+    "imor": 5.16
+  },
+  {
+    "fecha": "2011-10",
+    "cartera_total_mdp": 33829696.9,
+    "cartera_vencida_mdp": 1958575.6,
+    "imor": 5.79
+  },
+  {
+    "fecha": "2011-11",
+    "cartera_total_mdp": 34920333.9,
+    "cartera_vencida_mdp": 2162018.0,
+    "imor": 6.19
+  },
+  {
+    "fecha": "2011-12",
+    "cartera_total_mdp": 34401163.5,
+    "cartera_vencida_mdp": 2380688.9,
+    "imor": 6.92
+  },
+  {
+    "fecha": "2012-01",
+    "cartera_total_mdp": 34662683.3,
+    "cartera_vencida_mdp": 221915.8,
+    "imor": 0.64
+  },
+  {
+    "fecha": "2012-02",
+    "cartera_total_mdp": 34444893.9,
+    "cartera_vencida_mdp": 429787.0,
+    "imor": 1.25
+  },
+  {
+    "fecha": "2012-03",
+    "cartera_total_mdp": 34547152.4,
+    "cartera_vencida_mdp": 646870.7,
+    "imor": 1.87
+  },
+  {
+    "fecha": "2012-04",
+    "cartera_total_mdp": 35193003.8,
+    "cartera_vencida_mdp": 862406.9,
+    "imor": 2.45
+  },
+  {
+    "fecha": "2012-05",
+    "cartera_total_mdp": 35612127.7,
+    "cartera_vencida_mdp": 1083871.7,
+    "imor": 3.04
+  },
+  {
+    "fecha": "2012-06",
+    "cartera_total_mdp": 35693737.2,
+    "cartera_vencida_mdp": 1297707.2,
+    "imor": 3.64
+  },
+  {
+    "fecha": "2012-07",
+    "cartera_total_mdp": 35434437.7,
+    "cartera_vencida_mdp": 1521535.0,
+    "imor": 4.29
+  },
+  {
+    "fecha": "2012-08",
+    "cartera_total_mdp": 35230034.8,
+    "cartera_vencida_mdp": 1746138.9,
+    "imor": 4.96
+  },
+  {
+    "fecha": "2012-09",
+    "cartera_total_mdp": 35389900.5,
+    "cartera_vencida_mdp": 1965765.3,
+    "imor": 5.55
+  },
+  {
+    "fecha": "2012-10",
+    "cartera_total_mdp": 36098589.8,
+    "cartera_vencida_mdp": 2193554.6,
+    "imor": 6.08
+  },
+  {
+    "fecha": "2012-11",
+    "cartera_total_mdp": 36558900.2,
+    "cartera_vencida_mdp": 2425216.6,
+    "imor": 6.63
+  },
+  {
+    "fecha": "2012-12",
+    "cartera_total_mdp": 35889391.4,
+    "cartera_vencida_mdp": 2665508.4,
+    "imor": 7.43
+  },
+  {
+    "fecha": "2013-01",
+    "cartera_total_mdp": 36403762.6,
+    "cartera_vencida_mdp": 233510.8,
+    "imor": 0.64
+  },
+  {
+    "fecha": "2013-02",
+    "cartera_total_mdp": 36699603.7,
+    "cartera_vencida_mdp": 450405.1,
+    "imor": 1.23
+  },
+  {
+    "fecha": "2013-03",
+    "cartera_total_mdp": 36467067.4,
+    "cartera_vencida_mdp": 681874.2,
+    "imor": 1.87
+  },
+  {
+    "fecha": "2013-04",
+    "cartera_total_mdp": 37711148.0,
+    "cartera_vencida_mdp": 910839.7,
+    "imor": 2.42
+  },
+  {
+    "fecha": "2013-05",
+    "cartera_total_mdp": 37780133.7,
+    "cartera_vencida_mdp": 1165619.4,
+    "imor": 3.09
+  },
+  {
+    "fecha": "2013-06",
+    "cartera_total_mdp": 37477309.5,
+    "cartera_vencida_mdp": 1392996.0,
+    "imor": 3.72
+  },
+  {
+    "fecha": "2013-07",
+    "cartera_total_mdp": 37369349.8,
+    "cartera_vencida_mdp": 1626369.5,
+    "imor": 4.35
+  },
+  {
+    "fecha": "2013-08",
+    "cartera_total_mdp": 37910243.0,
+    "cartera_vencida_mdp": 1863543.3,
+    "imor": 4.92
+  },
+  {
+    "fecha": "2013-09",
+    "cartera_total_mdp": 37840640.9,
+    "cartera_vencida_mdp": 2095826.0,
+    "imor": 5.54
+  },
+  {
+    "fecha": "2013-10",
+    "cartera_total_mdp": 38738865.8,
+    "cartera_vencida_mdp": 2335571.8,
+    "imor": 6.03
+  },
+  {
+    "fecha": "2013-11",
+    "cartera_total_mdp": 38385718.1,
+    "cartera_vencida_mdp": 2565913.8,
+    "imor": 6.68
+  },
+  {
+    "fecha": "2013-12",
+    "cartera_total_mdp": 39220241.2,
+    "cartera_vencida_mdp": 2811548.7,
+    "imor": 7.17
+  },
+  {
+    "fecha": "2014-01",
+    "cartera_total_mdp": 39743635.4,
+    "cartera_vencida_mdp": 245259.5,
+    "imor": 0.62
+  },
+  {
+    "fecha": "2014-02",
+    "cartera_total_mdp": 39331155.5,
+    "cartera_vencida_mdp": 469568.3,
+    "imor": 1.19
+  },
+  {
+    "fecha": "2014-03",
+    "cartera_total_mdp": 40473429.8,
+    "cartera_vencida_mdp": 711367.1,
+    "imor": 1.76
+  },
+  {
+    "fecha": "2014-04",
+    "cartera_total_mdp": 41458795.1,
+    "cartera_vencida_mdp": 948987.8,
+    "imor": 2.29
+  },
+  {
+    "fecha": "2014-05",
+    "cartera_total_mdp": 41651417.6,
+    "cartera_vencida_mdp": 1188116.6,
+    "imor": 2.85
+  },
+  {
+    "fecha": "2014-06",
+    "cartera_total_mdp": 41698907.8,
+    "cartera_vencida_mdp": 1423875.1,
+    "imor": 3.41
+  },
+  {
+    "fecha": "2014-07",
+    "cartera_total_mdp": 41772188.5,
+    "cartera_vencida_mdp": 1656533.4,
+    "imor": 3.97
+  },
+  {
+    "fecha": "2014-08",
+    "cartera_total_mdp": 41909134.0,
+    "cartera_vencida_mdp": 1890753.0,
+    "imor": 4.51
+  },
+  {
+    "fecha": "2014-09",
+    "cartera_total_mdp": 42351308.9,
+    "cartera_vencida_mdp": 2126989.6,
+    "imor": 5.02
+  },
+  {
+    "fecha": "2014-10",
+    "cartera_total_mdp": 42926886.1,
+    "cartera_vencida_mdp": 2375003.2,
+    "imor": 5.53
+  },
+  {
+    "fecha": "2014-11",
+    "cartera_total_mdp": 43368820.6,
+    "cartera_vencida_mdp": 2625193.6,
+    "imor": 6.05
+  },
+  {
+    "fecha": "2014-12",
+    "cartera_total_mdp": 41342657.3,
+    "cartera_vencida_mdp": 2890978.4,
+    "imor": 6.99
+  },
+  {
+    "fecha": "2015-01",
+    "cartera_total_mdp": 43183709.5,
+    "cartera_vencida_mdp": 253095.7,
+    "imor": 0.59
+  },
+  {
+    "fecha": "2015-02",
+    "cartera_total_mdp": 42849431.5,
+    "cartera_vencida_mdp": 496034.0,
+    "imor": 1.16
+  },
+  {
+    "fecha": "2015-03",
+    "cartera_total_mdp": 44041821.4,
+    "cartera_vencida_mdp": 721693.4,
+    "imor": 1.64
+  },
+  {
+    "fecha": "2015-04",
+    "cartera_total_mdp": 43808185.4,
+    "cartera_vencida_mdp": 966627.5,
+    "imor": 2.21
+  },
+  {
+    "fecha": "2015-05",
+    "cartera_total_mdp": 44547591.2,
+    "cartera_vencida_mdp": 1209193.7,
+    "imor": 2.71
+  },
+  {
+    "fecha": "2015-06",
+    "cartera_total_mdp": 44145705.6,
+    "cartera_vencida_mdp": 1454189.6,
+    "imor": 3.29
+  },
+  {
+    "fecha": "2015-07",
+    "cartera_total_mdp": 45217475.7,
+    "cartera_vencida_mdp": 1704272.2,
+    "imor": 3.77
+  },
+  {
+    "fecha": "2015-08",
+    "cartera_total_mdp": 45623176.9,
+    "cartera_vencida_mdp": 1961524.2,
+    "imor": 4.3
+  },
+  {
+    "fecha": "2015-09",
+    "cartera_total_mdp": 46844762.3,
+    "cartera_vencida_mdp": 2212433.0,
+    "imor": 4.72
+  },
+  {
+    "fecha": "2015-10",
+    "cartera_total_mdp": 45877205.1,
+    "cartera_vencida_mdp": 2471455.9,
+    "imor": 5.39
+  },
+  {
+    "fecha": "2015-11",
+    "cartera_total_mdp": 45680209.3,
+    "cartera_vencida_mdp": 2729028.7,
+    "imor": 5.97
+  },
+  {
+    "fecha": "2015-12",
+    "cartera_total_mdp": 46402799.3,
+    "cartera_vencida_mdp": 2989524.6,
+    "imor": 6.44
+  },
+  {
+    "fecha": "2016-01",
+    "cartera_total_mdp": 48265700.3,
+    "cartera_vencida_mdp": 282606.1,
+    "imor": 0.59
+  },
+  {
+    "fecha": "2016-02",
+    "cartera_total_mdp": 48501857.4,
+    "cartera_vencida_mdp": 557817.0,
+    "imor": 1.15
+  },
+  {
+    "fecha": "2016-03",
+    "cartera_total_mdp": 48490395.2,
+    "cartera_vencida_mdp": 848761.6,
+    "imor": 1.75
+  },
+  {
+    "fecha": "2016-04",
+    "cartera_total_mdp": 47909212.3,
+    "cartera_vencida_mdp": 1126796.2,
+    "imor": 2.35
+  },
+  {
+    "fecha": "2016-05",
+    "cartera_total_mdp": 48104732.8,
+    "cartera_vencida_mdp": 1419695.3,
+    "imor": 2.95
+  },
+  {
+    "fecha": "2016-06",
+    "cartera_total_mdp": 48975237.5,
+    "cartera_vencida_mdp": 1705105.4,
+    "imor": 3.48
+  },
+  {
+    "fecha": "2016-07",
+    "cartera_total_mdp": 48177444.4,
+    "cartera_vencida_mdp": 2014501.9,
+    "imor": 4.18
+  },
+  {
+    "fecha": "2016-08",
+    "cartera_total_mdp": 49016089.8,
+    "cartera_vencida_mdp": 2336429.3,
+    "imor": 4.77
+  },
+  {
+    "fecha": "2016-09",
+    "cartera_total_mdp": 49279815.3,
+    "cartera_vencida_mdp": 2656363.4,
+    "imor": 5.39
+  },
+  {
+    "fecha": "2016-10",
+    "cartera_total_mdp": 48573613.8,
+    "cartera_vencida_mdp": 2981144.0,
+    "imor": 6.14
+  },
+  {
+    "fecha": "2016-11",
+    "cartera_total_mdp": 52372267.7,
+    "cartera_vencida_mdp": 3342394.1,
+    "imor": 6.38
+  },
+  {
+    "fecha": "2016-12",
+    "cartera_total_mdp": 51783467.5,
+    "cartera_vencida_mdp": 3698147.4,
+    "imor": 7.14
+  },
+  {
+    "fecha": "2017-01",
+    "cartera_total_mdp": 52734388.7,
+    "cartera_vencida_mdp": 344215.2,
+    "imor": 0.65
+  },
+  {
+    "fecha": "2017-02",
+    "cartera_total_mdp": 51722704.3,
+    "cartera_vencida_mdp": 677463.6,
+    "imor": 1.31
+  },
+  {
+    "fecha": "2017-03",
+    "cartera_total_mdp": 50798715.5,
+    "cartera_vencida_mdp": 1050141.9,
+    "imor": 2.07
+  },
+  {
+    "fecha": "2017-04",
+    "cartera_total_mdp": 51937973.7,
+    "cartera_vencida_mdp": 1411299.1,
+    "imor": 2.72
+  },
+  {
+    "fecha": "2017-05",
+    "cartera_total_mdp": 52344359.9,
+    "cartera_vencida_mdp": 1782088.1,
+    "imor": 3.4
+  },
+  {
+    "fecha": "2017-06",
+    "cartera_total_mdp": 51334089.2,
+    "cartera_vencida_mdp": 2150253.4,
+    "imor": 4.19
+  },
+  {
+    "fecha": "2017-07",
+    "cartera_total_mdp": 50508015.7,
+    "cartera_vencida_mdp": 2532601.3,
+    "imor": 5.01
+  },
+  {
+    "fecha": "2017-08",
+    "cartera_total_mdp": 51181505.2,
+    "cartera_vencida_mdp": 2918714.1,
+    "imor": 5.7
+  },
+  {
+    "fecha": "2017-09",
+    "cartera_total_mdp": 51834074.0,
+    "cartera_vencida_mdp": 3301874.8,
+    "imor": 6.37
+  },
+  {
+    "fecha": "2017-10",
+    "cartera_total_mdp": 53500967.2,
+    "cartera_vencida_mdp": 3691329.5,
+    "imor": 6.9
+  },
+  {
+    "fecha": "2017-11",
+    "cartera_total_mdp": 53396548.9,
+    "cartera_vencida_mdp": 4087098.2,
+    "imor": 7.65
+  },
+  {
+    "fecha": "2017-12",
+    "cartera_total_mdp": 53892607.6,
+    "cartera_vencida_mdp": 4484829.8,
+    "imor": 8.32
+  },
+  {
+    "fecha": "2018-01",
+    "cartera_total_mdp": 54043537.9,
+    "cartera_vencida_mdp": 415707.7,
+    "imor": 0.77
+  },
+  {
+    "fecha": "2018-02",
+    "cartera_total_mdp": 55003609.1,
+    "cartera_vencida_mdp": 795106.4,
+    "imor": 1.45
+  },
+  {
+    "fecha": "2018-03",
+    "cartera_total_mdp": 54362131.4,
+    "cartera_vencida_mdp": 1214016.6,
+    "imor": 2.23
+  },
+  {
+    "fecha": "2018-04",
+    "cartera_total_mdp": 55159896.7,
+    "cartera_vencida_mdp": 1628139.7,
+    "imor": 2.95
+  },
+  {
+    "fecha": "2018-05",
+    "cartera_total_mdp": 57178480.2,
+    "cartera_vencida_mdp": 2060498.7,
+    "imor": 3.6
+  },
+  {
+    "fecha": "2018-06",
+    "cartera_total_mdp": 56759644.2,
+    "cartera_vencida_mdp": 2484975.7,
+    "imor": 4.38
+  },
+  {
+    "fecha": "2018-07",
+    "cartera_total_mdp": 55342829.0,
+    "cartera_vencida_mdp": 2870818.7,
+    "imor": 5.19
+  },
+  {
+    "fecha": "2018-08",
+    "cartera_total_mdp": 55057968.6,
+    "cartera_vencida_mdp": 3317065.8,
+    "imor": 6.02
+  },
+  {
+    "fecha": "2018-09",
+    "cartera_total_mdp": 55161199.1,
+    "cartera_vencida_mdp": 3748870.1,
+    "imor": 6.8
+  },
+  {
+    "fecha": "2018-10",
+    "cartera_total_mdp": 58256265.5,
+    "cartera_vencida_mdp": 4206907.7,
+    "imor": 7.22
+  },
+  {
+    "fecha": "2018-11",
+    "cartera_total_mdp": 58474299.2,
+    "cartera_vencida_mdp": 4657814.3,
+    "imor": 7.97
+  },
+  {
+    "fecha": "2018-12",
+    "cartera_total_mdp": 57127548.0,
+    "cartera_vencida_mdp": 5132660.3,
+    "imor": 8.98
+  },
+  {
+    "fecha": "2019-01",
+    "cartera_total_mdp": 56697274.0,
+    "cartera_vencida_mdp": 472467.3,
+    "imor": 0.83
+  },
+  {
+    "fecha": "2019-02",
+    "cartera_total_mdp": 57022613.3,
+    "cartera_vencida_mdp": 903883.2,
+    "imor": 1.59
+  },
+  {
+    "fecha": "2019-03",
+    "cartera_total_mdp": 57109107.9,
+    "cartera_vencida_mdp": 1384742.0,
+    "imor": 2.42
+  },
+  {
+    "fecha": "2019-04",
+    "cartera_total_mdp": 57652026.7,
+    "cartera_vencida_mdp": 1845511.3,
+    "imor": 3.2
+  },
+  {
+    "fecha": "2019-05",
+    "cartera_total_mdp": 58957537.6,
+    "cartera_vencida_mdp": 2333066.6,
+    "imor": 3.96
+  },
+  {
+    "fecha": "2019-06",
+    "cartera_total_mdp": 58377364.7,
+    "cartera_vencida_mdp": 2788890.0,
+    "imor": 4.78
+  },
+  {
+    "fecha": "2019-07",
+    "cartera_total_mdp": 58321700.4,
+    "cartera_vencida_mdp": 3265148.7,
+    "imor": 5.6
+  },
+  {
+    "fecha": "2019-08",
+    "cartera_total_mdp": 60699944.4,
+    "cartera_vencida_mdp": 3761796.4,
+    "imor": 6.2
+  },
+  {
+    "fecha": "2019-09",
+    "cartera_total_mdp": 58989405.4,
+    "cartera_vencida_mdp": 4219317.3,
+    "imor": 7.15
+  },
+  {
+    "fecha": "2019-10",
+    "cartera_total_mdp": 59951220.9,
+    "cartera_vencida_mdp": 4692635.8,
+    "imor": 7.83
+  },
+  {
+    "fecha": "2019-11",
+    "cartera_total_mdp": 60129272.4,
+    "cartera_vencida_mdp": 5160006.7,
+    "imor": 8.58
+  },
+  {
+    "fecha": "2019-12",
+    "cartera_total_mdp": 58765072.9,
+    "cartera_vencida_mdp": 5623549.4,
+    "imor": 9.57
+  },
+  {
+    "fecha": "2020-01",
+    "cartera_total_mdp": 59729054.9,
+    "cartera_vencida_mdp": 471116.4,
+    "imor": 0.79
+  },
+  {
+    "fecha": "2020-02",
+    "cartera_total_mdp": 61169303.1,
+    "cartera_vencida_mdp": 939160.1,
+    "imor": 1.54
+  },
+  {
+    "fecha": "2020-03",
+    "cartera_total_mdp": 68923751.4,
+    "cartera_vencida_mdp": 1503870.5,
+    "imor": 2.18
+  },
+  {
+    "fecha": "2020-04",
+    "cartera_total_mdp": 71557686.2,
+    "cartera_vencida_mdp": 1931645.6,
+    "imor": 2.7
+  },
+  {
+    "fecha": "2020-05",
+    "cartera_total_mdp": 69265994.2,
+    "cartera_vencida_mdp": 2350197.8,
+    "imor": 3.39
+  },
+  {
+    "fecha": "2020-06",
+    "cartera_total_mdp": 69797082.5,
+    "cartera_vencida_mdp": 2749915.0,
+    "imor": 3.94
+  },
+  {
+    "fecha": "2020-07",
+    "cartera_total_mdp": 69197031.8,
+    "cartera_vencida_mdp": 3153095.7,
+    "imor": 4.56
+  },
+  {
+    "fecha": "2020-08",
+    "cartera_total_mdp": 68123606.7,
+    "cartera_vencida_mdp": 3554325.6,
+    "imor": 5.22
+  },
+  {
+    "fecha": "2020-09",
+    "cartera_total_mdp": 67709296.1,
+    "cartera_vencida_mdp": 3949945.7,
+    "imor": 5.83
+  },
+  {
+    "fecha": "2020-10",
+    "cartera_total_mdp": 67759965.2,
+    "cartera_vencida_mdp": 4338518.4,
+    "imor": 6.4
+  },
+  {
+    "fecha": "2020-11",
+    "cartera_total_mdp": 67558830.4,
+    "cartera_vencida_mdp": 4716420.0,
+    "imor": 6.98
+  },
+  {
+    "fecha": "2020-12",
+    "cartera_total_mdp": 66901157.0,
+    "cartera_vencida_mdp": 5103722.7,
+    "imor": 7.63
+  },
+  {
+    "fecha": "2021-01",
+    "cartera_total_mdp": 67442875.4,
+    "cartera_vencida_mdp": 392322.5,
+    "imor": 0.58
+  },
+  {
+    "fecha": "2021-02",
+    "cartera_total_mdp": 67080084.4,
+    "cartera_vencida_mdp": 761688.5,
+    "imor": 1.14
+  },
+  {
+    "fecha": "2021-03",
+    "cartera_total_mdp": 65530596.1,
+    "cartera_vencida_mdp": 1153399.8,
+    "imor": 1.76
+  },
+  {
+    "fecha": "2021-04",
+    "cartera_total_mdp": 65646259.7,
+    "cartera_vencida_mdp": 1523743.7,
+    "imor": 2.32
+  },
+  {
+    "fecha": "2021-05",
+    "cartera_total_mdp": 66393764.2,
+    "cartera_vencida_mdp": 1908761.1,
+    "imor": 2.87
+  },
+  {
+    "fecha": "2021-06",
+    "cartera_total_mdp": 65823511.2,
+    "cartera_vencida_mdp": 2284964.8,
+    "imor": 3.47
+  },
+  {
+    "fecha": "2021-07",
+    "cartera_total_mdp": 65254778.7,
+    "cartera_vencida_mdp": 2672864.6,
+    "imor": 4.1
+  },
+  {
+    "fecha": "2021-08",
+    "cartera_total_mdp": 65032973.1,
+    "cartera_vencida_mdp": 3074231.9,
+    "imor": 4.73
+  },
+  {
+    "fecha": "2021-09",
+    "cartera_total_mdp": 66344653.3,
+    "cartera_vencida_mdp": 3478225.2,
+    "imor": 5.24
+  },
+  {
+    "fecha": "2021-10",
+    "cartera_total_mdp": 66561156.5,
+    "cartera_vencida_mdp": 3883091.9,
+    "imor": 5.83
+  },
+  {
+    "fecha": "2021-11",
+    "cartera_total_mdp": 70086190.4,
+    "cartera_vencida_mdp": 4328955.1,
+    "imor": 6.18
+  },
+  {
+    "fecha": "2021-12",
+    "cartera_total_mdp": 66291719.3,
+    "cartera_vencida_mdp": 4721001.3,
+    "imor": 7.12
+  },
+  {
+    "fecha": "2022-01",
+    "cartera_total_mdp": 69093026.2,
+    "cartera_vencida_mdp": 481949.9,
+    "imor": 0.7
+  },
+  {
+    "fecha": "2022-02",
+    "cartera_total_mdp": 69560958.8,
+    "cartera_vencida_mdp": 945836.7,
+    "imor": 1.36
+  },
+  {
+    "fecha": "2022-03",
+    "cartera_total_mdp": 71026132.0,
+    "cartera_vencida_mdp": 1449601.6,
+    "imor": 2.04
+  },
+  {
+    "fecha": "2022-04",
+    "cartera_total_mdp": 71823079.5,
+    "cartera_vencida_mdp": 1966552.7,
+    "imor": 2.74
+  },
+  {
+    "fecha": "2022-05",
+    "cartera_total_mdp": 72733873.8,
+    "cartera_vencida_mdp": 2490610.2,
+    "imor": 3.42
+  },
+  {
+    "fecha": "2022-06",
+    "cartera_total_mdp": 73025705.5,
+    "cartera_vencida_mdp": 3034192.8,
+    "imor": 4.15
+  },
+  {
+    "fecha": "2022-07",
+    "cartera_total_mdp": 73145515.3,
+    "cartera_vencida_mdp": 3617076.5,
+    "imor": 4.95
+  },
+  {
+    "fecha": "2022-08",
+    "cartera_total_mdp": 74196606.7,
+    "cartera_vencida_mdp": 4229323.6,
+    "imor": 5.7
+  },
+  {
+    "fecha": "2022-09",
+    "cartera_total_mdp": 74901765.7,
+    "cartera_vencida_mdp": 4855730.5,
+    "imor": 6.48
+  },
+  {
+    "fecha": "2022-10",
+    "cartera_total_mdp": 75556088.5,
+    "cartera_vencida_mdp": 5523786.9,
+    "imor": 7.31
+  },
+  {
+    "fecha": "2022-11",
+    "cartera_total_mdp": 75635568.4,
+    "cartera_vencida_mdp": 6194240.1,
+    "imor": 8.19
+  },
+  {
+    "fecha": "2022-12",
+    "cartera_total_mdp": 75447143.6,
+    "cartera_vencida_mdp": 6911228.1,
+    "imor": 9.16
+  },
+  {
+    "fecha": "2023-01",
+    "cartera_total_mdp": 76082100.8,
+    "cartera_vencida_mdp": 742960.4,
+    "imor": 0.98
+  },
+  {
+    "fecha": "2023-02",
+    "cartera_total_mdp": 77325720.4,
+    "cartera_vencida_mdp": 1436038.9,
+    "imor": 1.86
+  },
+  {
+    "fecha": "2023-03",
+    "cartera_total_mdp": 77533911.2,
+    "cartera_vencida_mdp": 2215500.2,
+    "imor": 2.86
+  },
+  {
+    "fecha": "2023-04",
+    "cartera_total_mdp": 78460001.4,
+    "cartera_vencida_mdp": 2981916.7,
+    "imor": 3.8
+  },
+  {
+    "fecha": "2023-05",
+    "cartera_total_mdp": 78831985.2,
+    "cartera_vencida_mdp": 3792036.6,
+    "imor": 4.81
+  },
+  {
+    "fecha": "2023-06",
+    "cartera_total_mdp": 77153897.4,
+    "cartera_vencida_mdp": 4570017.2,
+    "imor": 5.92
+  },
+  {
+    "fecha": "2023-07",
+    "cartera_total_mdp": 78360181.1,
+    "cartera_vencida_mdp": 5384089.9,
+    "imor": 6.87
+  },
+  {
+    "fecha": "2023-08",
+    "cartera_total_mdp": 78625413.5,
+    "cartera_vencida_mdp": 6215094.8,
+    "imor": 7.9
+  },
+  {
+    "fecha": "2023-09",
+    "cartera_total_mdp": 79779960.7,
+    "cartera_vencida_mdp": 7042762.9,
+    "imor": 8.83
+  },
+  {
+    "fecha": "2023-10",
+    "cartera_total_mdp": 80393435.8,
+    "cartera_vencida_mdp": 7894407.0,
+    "imor": 9.82
+  },
+  {
+    "fecha": "2023-11",
+    "cartera_total_mdp": 81038292.8,
+    "cartera_vencida_mdp": 8714726.7,
+    "imor": 10.75
+  },
+  {
+    "fecha": "2023-12",
+    "cartera_total_mdp": 79573062.8,
+    "cartera_vencida_mdp": 9564201.2,
+    "imor": 12.02
+  },
+  {
+    "fecha": "2024-01",
+    "cartera_total_mdp": 82100537.7,
+    "cartera_vencida_mdp": 857349.0,
+    "imor": 1.04
+  },
+  {
+    "fecha": "2024-02",
+    "cartera_total_mdp": 82406175.2,
+    "cartera_vencida_mdp": 1666747.0,
+    "imor": 2.02
+  },
+  {
+    "fecha": "2024-03",
+    "cartera_total_mdp": 82654403.9,
+    "cartera_vencida_mdp": 2529815.8,
+    "imor": 3.06
+  },
+  {
+    "fecha": "2024-04",
+    "cartera_total_mdp": 82956414.0,
+    "cartera_vencida_mdp": 3388514.0,
+    "imor": 4.08
+  },
+  {
+    "fecha": "2024-05",
+    "cartera_total_mdp": 83344654.3,
+    "cartera_vencida_mdp": 4259732.5,
+    "imor": 5.11
+  },
+  {
+    "fecha": "2024-06",
+    "cartera_total_mdp": 84133549.1,
+    "cartera_vencida_mdp": 5141018.9,
+    "imor": 6.11
+  },
+  {
+    "fecha": "2024-07",
+    "cartera_total_mdp": 85285716.6,
+    "cartera_vencida_mdp": 6055608.3,
+    "imor": 7.1
+  },
+  {
+    "fecha": "2024-08",
+    "cartera_total_mdp": 86506683.5,
+    "cartera_vencida_mdp": 6993485.5,
+    "imor": 8.08
+  },
+  {
+    "fecha": "2024-09",
+    "cartera_total_mdp": 85276402.1,
+    "cartera_vencida_mdp": 7873844.9,
+    "imor": 9.23
+  },
+  {
+    "fecha": "2024-10",
+    "cartera_total_mdp": 88571692.3,
+    "cartera_vencida_mdp": 8788370.7,
+    "imor": 9.92
+  },
+  {
+    "fecha": "2024-11",
+    "cartera_total_mdp": 89844769.3,
+    "cartera_vencida_mdp": 9702848.5,
+    "imor": 10.8
+  },
+  {
+    "fecha": "2024-12",
+    "cartera_total_mdp": 90996686.5,
+    "cartera_vencida_mdp": 10652387.2,
+    "imor": 11.71
+  },
+  {
+    "fecha": "2025-01",
+    "cartera_total_mdp": 91856459.1,
+    "cartera_vencida_mdp": 948995.4,
+    "imor": 1.03
+  },
+  {
+    "fecha": "2025-02",
+    "cartera_total_mdp": 90287543.5,
+    "cartera_vencida_mdp": 1811232.2,
+    "imor": 2.01
+  },
+  {
+    "fecha": "2025-03",
+    "cartera_total_mdp": 91388821.8,
+    "cartera_vencida_mdp": 2729132.3,
+    "imor": 2.99
+  },
+  {
+    "fecha": "2025-04",
+    "cartera_total_mdp": 91614936.3,
+    "cartera_vencida_mdp": 3642947.5,
+    "imor": 3.98
+  },
+  {
+    "fecha": "2025-05",
+    "cartera_total_mdp": 93372023.5,
+    "cartera_vencida_mdp": 4563879.6,
+    "imor": 4.89
+  },
+  {
+    "fecha": "2025-06",
+    "cartera_total_mdp": 91540274.1,
+    "cartera_vencida_mdp": 5448665.0,
+    "imor": 5.95
+  },
+  {
+    "fecha": "2025-07",
+    "cartera_total_mdp": 92134000.1,
+    "cartera_vencida_mdp": 6343977.9,
+    "imor": 6.89
+  },
+  {
+    "fecha": "2025-08",
+    "cartera_total_mdp": 92374245.6,
+    "cartera_vencida_mdp": 7228749.7,
+    "imor": 7.83
+  },
+  {
+    "fecha": "2025-09",
+    "cartera_total_mdp": 92031714.1,
+    "cartera_vencida_mdp": 8039879.2,
+    "imor": 8.74
+  },
+  {
+    "fecha": "2025-10",
+    "cartera_total_mdp": 93649748.2,
+    "cartera_vencida_mdp": 8911481.9,
+    "imor": 9.52
+  },
+  {
+    "fecha": "2025-11",
+    "cartera_total_mdp": 93493313.9,
+    "cartera_vencida_mdp": 9762054.9,
+    "imor": 10.44
+  },
+  {
+    "fecha": "2025-12",
+    "cartera_total_mdp": 93112126.9,
+    "cartera_vencida_mdp": 10636213.2,
+    "imor": 11.42
+  },
+  {
+    "fecha": "2026-01",
+    "cartera_total_mdp": 93721999.6,
+    "cartera_vencida_mdp": 867658.6,
+    "imor": 0.93
+  },
+  {
+    "fecha": "2026-02",
+    "cartera_total_mdp": 94556079.7,
+    "cartera_vencida_mdp": 1662088.0,
+    "imor": 1.76
+  }
+]
