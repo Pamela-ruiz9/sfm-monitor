@@ -8,7 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3"></script>
+<script>
     // KPI Info toggle
     function toggleKpiInfo(btn) {
       const panel = btn.nextElementSibling;
@@ -519,6 +521,19 @@
     .kpi-info-row .label { color: var(--gold); font-weight: 600; white-space: nowrap; }
     .kpi-info-row .val { color: var(--text-dim); }
 
+    /* ===== PERIOD SELECTOR ===== */
+    .period-selector {
+      display: flex; gap: 0.3rem; margin-top: 0.5rem;
+    }
+    .period-btn {
+      padding: 0.2rem 0.6rem; font-size: 0.65rem; border-radius: 3px;
+      background: transparent; border: 1px solid var(--border);
+      color: var(--text-dim); cursor: pointer; font-family: var(--sans);
+      transition: all 0.15s;
+    }
+    .period-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .period-btn.active { background: rgba(31,111,235,0.15); border-color: var(--blue); color: var(--blue); }
+
     </style>
 </head>
 <body>
@@ -572,6 +587,11 @@
           <div class="metric-value green">2.8<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
           <div class="metric-label">Cartera vencida / cartera total</div>
           <div class="chart-wrap"><canvas id="chart-imor"></canvas></div>
+          <div class="period-selector">
+            <button class="period-btn active" onclick="setPeriod(this, 'chart-imor', 12)">12M</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-imor', 36)">3A</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-imor', 0)">Histórico</button>
+          </div>
           <div class="source">Fuente: CNBV, Portafolio de Información</div>
           <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
           <div class="kpi-info-panel">
@@ -592,12 +612,43 @@
           <div class="metric-value green">165<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
           <div class="metric-label">Reservas / cartera vencida</div>
           <div class="chart-wrap"><canvas id="chart-cobertura"></canvas></div>
+          <div class="period-selector">
+            <button class="period-btn active" onclick="setPeriod(this, 'chart-cobertura', 12)">12M</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-cobertura', 36)">3A</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-cobertura', 0)">Histórico</button>
+          </div>
           <div class="metric-note">Las reservas cubren 1.65x la cartera vencida total.</div>
           <div class="source">Fuente: CNBV</div>
           <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
           <div class="kpi-info-panel">
             <div class="kpi-info-def">Mide cuántas veces las reservas preventivas cubren la cartera vencida. Un índice de 165% significa que por cada peso vencido, el banco tiene $1.65 en reservas para absorber pérdidas.</div>
             <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde ≥130% · Amarillo 100–130% · Rojo <100%</span></div>
+            <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Actualización mensual.</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Crecimiento de Cartera Total</div>
+              <div class="card-subtitle">Variación anual — Marzo 2026</div>
+            </div>
+            <span class="signal green">🟢 Saludable</span>
+          </div>
+          <div class="metric-value green">+8.2<span style="font-size:0.5em;color:var(--text-dim)">% a/a</span></div>
+          <div class="metric-label">Crecimiento anual del crédito total</div>
+          <div class="chart-wrap"><canvas id="chart-cartera"></canvas></div>
+          <div class="period-selector">
+            <button class="period-btn active" onclick="setPeriod(this, 'chart-cartera', 12)">12M</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-cartera', 36)">3A</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-cartera', 0)">Histórico</button>
+          </div>
+          <div class="metric-note">Expansión moderada del crédito — no hay señales de sobrecalentamiento.</div>
+          <div class="source">Fuente: CNBV, Portafolio de Información</div>
+          <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
+          <div class="kpi-info-panel">
+            <div class="kpi-info-def">Mide la expansión anual del crédito total del sistema bancario. Un crecimiento moderado y sostenido es saludable; crecimientos muy altos (>20%) pueden indicar sobrecalentamiento y riesgo futuro de cartera.</div>
+            <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde 4–12% · Amarillo 12–20% o <4% · Rojo >20% o negativo</span></div>
             <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Actualización mensual.</span></div>
           </div>
         </div>
@@ -627,6 +678,11 @@
           <div class="metric-value yellow">$17.40</div>
           <div class="metric-label">Pesos por dólar (cotización FIX)</div>
           <div class="chart-wrap"><canvas id="chart-fx"></canvas></div>
+          <div class="period-selector">
+            <button class="period-btn active" onclick="setPeriod(this, 'chart-fx', 12)">12M</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-fx', 36)">3A</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-fx', 0)">Histórico</button>
+          </div>
           <div class="metric-note">Depreciación de ~1% en 12m en 12 meses.</div>
           <div class="source">Fuente: Banxico · Actualización automática pendiente Fase 2</div>
           <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
@@ -648,6 +704,11 @@
           <div class="metric-value yellow">8.50<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
           <div class="metric-label">Tasa objetivo de política monetaria</div>
           <div class="chart-wrap"><canvas id="chart-tasa"></canvas></div>
+          <div class="period-selector">
+            <button class="period-btn active" onclick="setPeriod(this, 'chart-tasa', 12)">12M</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-tasa', 36)">3A</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-tasa', 0)">Histórico</button>
+          </div>
           <div class="metric-note">Ciclo de recortes iniciado por la Junta de Gobierno.</div>
           <div class="source">Fuente: Banxico</div>
           <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
@@ -683,6 +744,11 @@
           <div class="metric-value yellow">0.4<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
           <div class="metric-label">Q1 2026 (estimado preliminar)</div>
           <div class="chart-wrap tall"><canvas id="chart-pib"></canvas></div>
+          <div class="period-selector">
+            <button class="period-btn active" onclick="setPeriod(this, 'chart-pib', 12)">12M</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-pib', 36)">3A</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-pib', 0)">Histórico</button>
+          </div>
           <div class="source">Fuente: INEGI</div>
           <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
           <div class="kpi-info-panel">
@@ -703,6 +769,11 @@
           <div class="metric-value green">3.8<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
           <div class="metric-label">Variación anual del INPC</div>
           <div class="chart-wrap"><canvas id="chart-inflacion"></canvas></div>
+          <div class="period-selector">
+            <button class="period-btn active" onclick="setPeriod(this, 'chart-inflacion', 12)">12M</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-inflacion', 36)">3A</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-inflacion', 0)">Histórico</button>
+          </div>
           <div class="metric-note">Dentro del objetivo de Banxico: 3% ±1%.</div>
           <div class="source">Fuente: INEGI / Banxico</div>
           <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
@@ -886,6 +957,83 @@
     return;
   }
 
+  // ==== Crisis anotaciones (México) ====
+  const CRISIS_MX = [
+    { mes: "1995-01", label: "Tequilazo", color: "#f85149" },
+    { mes: "2001-09", label: "9/11", color: "#d29922" },
+    { mes: "2008-09", label: "Crisis Global", color: "#f85149" },
+    { mes: "2020-03", label: "COVID-19", color: "#f85149" },
+    { mes: "2022-01", label: "Inflación pico", color: "#d29922" },
+    { mes: "2025-01", label: "Aranceles", color: "#d29922" },
+  ];
+
+  // ==== Chart registry to allow period switching ====
+  const chartRegistry = {};
+  window.chartRegistry = chartRegistry;
+
+  function registerChart(id, chart, allLabels, allData, datasetIndex = 0) {
+    chartRegistry[id] = { chart, allLabels, allData, datasetIndex };
+  }
+  window.registerChart = registerChart;
+
+  window.setPeriod = function(btn, chartId, months) {
+    // Update button styles
+    btn.parentElement.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const reg = chartRegistry[chartId];
+    if (!reg) return;
+    const { chart, allLabels, allData } = reg;
+
+    let labels, data;
+    if (months === 0) {
+      labels = allLabels;
+      data = allData;
+    } else {
+      labels = allLabels.slice(-months);
+      data = allData.slice(-months);
+    }
+
+    // Build crisis annotations for this range (solo en vista histórica)
+    const annotations = {};
+    if (months === 0) {
+      CRISIS_MX.forEach((c, i) => {
+        const idx = labels.findIndex(l => typeof l === 'string' && l >= c.mes);
+        if (idx !== -1) {
+          annotations[`crisis${i}`] = {
+            type: 'line',
+            xMin: idx, xMax: idx,
+            borderColor: c.color,
+            borderWidth: 1.5,
+            borderDash: [4, 3],
+            label: {
+              display: true,
+              content: c.label,
+              position: 'start',
+              backgroundColor: c.color + '22',
+              color: c.color,
+              font: { size: 9, family: 'Inter' },
+              padding: 2
+            }
+          };
+        }
+      });
+    }
+
+    chart.data.labels = labels;
+    chart.data.datasets[0].data = data;
+    if (chart.options.plugins && chart.options.plugins.annotation) {
+      chart.options.plugins.annotation.annotations = annotations;
+    } else if (chart.options.plugins) {
+      chart.options.plugins.annotation = { annotations };
+    }
+    // color bars dynamically if it's a bar chart with dynamic colors
+    if (chart.config.type === 'bar' && chart.data.datasets[0]._dynColor) {
+      chart.data.datasets[0].backgroundColor = data.map(chart.data.datasets[0]._dynColor);
+    }
+    chart.update();
+  };
+
   Chart.defaults.font.family = "'Inter', sans-serif";
   Chart.defaults.color = C.dim;
   Chart.defaults.borderColor = C.borderSoft;
@@ -934,7 +1082,7 @@
   const allMonthLabels = monthLabels2023to2026mar(); // 39 labels
   const imorLabels = allMonthLabels.slice(allMonthLabels.length - imorValues.length);
 
-  new Chart(document.getElementById('chart-imor'), {
+  const imorChart = new Chart(document.getElementById('chart-imor'), {
     type: 'bar',
     data: {
       labels: imorLabels,
@@ -944,6 +1092,7 @@
         backgroundColor: imorValues.map(v => v > 4.5 ? C.red : (v > 3.5 ? C.yellow : C.green)),
         borderRadius: 3,
         borderSkipped: false,
+        _dynColor: (v) => v > 4.5 ? C.red : (v > 3.5 ? C.yellow : C.green),
       }]
     },
     options: {
@@ -962,12 +1111,13 @@
       }
     }
   });
+  registerChart('chart-imor', imorChart, imorLabels, imorValues);
 
   // ==== Cobertura ====
   const cobValues = [170, 168, 165, 168, 172, 170, 168, 165, 162, 165, 168, 170, 168, 165, 162, 165, 168, 170, 165, 163, 165, 168, 165, 165];
   const cobLabels = allMonthLabels.slice(allMonthLabels.length - cobValues.length);
 
-  new Chart(document.getElementById('chart-cobertura'), {
+  const cobChart = new Chart(document.getElementById('chart-cobertura'), {
     type: 'line',
     data: {
       labels: cobLabels,
@@ -1003,12 +1153,13 @@
       }
     }
   });
+  registerChart('chart-cobertura', cobChart, cobLabels, cobValues);
 
   // ==== FX ====
   const fxValues = [17.26, 17.45, 17.8, 18.1, 17.9, 18.3, 18.8, 19.1, 18.9, 19.2, 19.5, 17.40];
   const fxLabels = ['may-25','jun-25','jul-25','ago-25','sep-25','oct-25','nov-25','dic-25','ene-26','feb-26','mar-26','abr-26'];
 
-  new Chart(document.getElementById('chart-fx'), {
+  const fxChart = new Chart(document.getElementById('chart-fx'), {
     type: 'line',
     data: {
       labels: fxLabels,
@@ -1044,12 +1195,13 @@
       }
     }
   });
+  registerChart('chart-fx', fxChart, fxLabels, fxValues);
 
   // ==== Tasa Banxico ====
   const tasaValues = [11.25, 11.25, 11.00, 10.75, 10.50, 10.25, 10.00, 9.75, 9.50, 9.25, 9.00, 8.75, 8.50];
   const tasaLabels = ['abr-25','may-25','jun-25','jul-25','ago-25','sep-25','oct-25','nov-25','dic-25','ene-26','feb-26','mar-26','abr-26'];
 
-  new Chart(document.getElementById('chart-tasa'), {
+  const tasaChart = new Chart(document.getElementById('chart-tasa'), {
     type: 'line',
     data: {
       labels: tasaLabels,
@@ -1085,12 +1237,13 @@
       }
     }
   });
+  registerChart('chart-tasa', tasaChart, tasaLabels, tasaValues);
 
   // ==== PIB ====
   const pibValues = [3.1, 3.4, 3.2, 3.6, 2.8, 2.3, 1.9, 1.5, 0.4];
   const pibLabels = ['Q1 24','Q2 24','Q3 24','Q4 24','Q1 25','Q2 25','Q3 25','Q4 25','Q1 26 (est.)'];
 
-  new Chart(document.getElementById('chart-pib'), {
+  const pibChart = new Chart(document.getElementById('chart-pib'), {
     type: 'bar',
     data: {
       labels: pibLabels,
@@ -1100,6 +1253,7 @@
         backgroundColor: pibValues.map(v => v < 0 ? C.red : (v < 1 ? C.yellow : (v < 2.5 ? C.gold : C.green))),
         borderRadius: 4,
         borderSkipped: false,
+        _dynColor: (v) => v < 0 ? C.red : (v < 1 ? C.yellow : (v < 2.5 ? C.gold : C.green)),
       }]
     },
     options: {
@@ -1118,6 +1272,7 @@
       }
     }
   });
+  registerChart('chart-pib', pibChart, pibLabels, pibValues);
 
   // ==== Inflación ====
   const inflValues = [4.63, 4.28, 3.99, 3.85, 3.72, 3.68, 3.75, 3.82, 3.80];
@@ -1125,7 +1280,7 @@
   // Spec lists 9 labels (ago-25 to mar-26 = 8); adjust to match 9 values by adding a projected
   const inflLabelsClean = ['ago-25','sep-25','oct-25','nov-25','dic-25','ene-26','feb-26','mar-26','abr-26'];
 
-  new Chart(document.getElementById('chart-inflacion'), {
+  const inflChart = new Chart(document.getElementById('chart-inflacion'), {
     type: 'line',
     data: {
       labels: inflLabelsClean,
@@ -1160,6 +1315,116 @@
       }
     }
   });
+  registerChart('chart-inflacion', inflChart, inflLabelsClean, inflValues);
+
+  // ==== Crecimiento de Cartera Total ====
+  const carteraLabels = ['ene-24','feb-24','mar-24','abr-24','may-24','jun-24','jul-24','ago-24','sep-24','oct-24','nov-24','dic-24','ene-25','feb-25','mar-25','abr-25','may-25','jun-25','jul-25','ago-25','sep-25','oct-25','nov-25','dic-25','ene-26','feb-26','mar-26'];
+  const carteraData = [10.2, 10.5, 10.8, 11.0, 10.7, 10.3, 9.8, 9.5, 9.2, 9.0, 8.8, 8.5, 8.3, 8.5, 8.6, 8.8, 9.0, 9.2, 9.0, 8.8, 8.5, 8.3, 8.2, 8.2, 8.3, 8.2, 8.2];
+  const carteraEl = document.getElementById('chart-cartera');
+  let carteraChart = null;
+  if (carteraEl) {
+    carteraChart = new Chart(carteraEl, {
+      type: 'line',
+      data: {
+        labels: carteraLabels.slice(-12),
+        datasets: [{
+          label: 'Cartera % a/a',
+          data: carteraData.slice(-12),
+          borderColor: C.green,
+          backgroundColor: (ctx) => makeGradient(ctx.chart.ctx, ctx.chart.chartArea, C.green),
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: C.green,
+          pointHoverBorderColor: '#fff',
+          pointHoverBorderWidth: 2,
+          tension: 0.35,
+          fill: true,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: (ctx) => 'Cartera: +' + ctx.parsed.y.toFixed(1) + '% a/a'
+            }
+          }
+        },
+        scales: {
+          x: { ...baseAxis, grid: { display: false }, ticks: { ...baseAxis.ticks, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 } },
+          y: { ...baseAxis, suggestedMin: 6, suggestedMax: 12, ticks: { ...baseAxis.ticks, callback: v => v.toFixed(1) + '%' } }
+        }
+      }
+    });
+    registerChart('chart-cartera', carteraChart, carteraLabels, carteraData);
+  }
+
+  // ==== Fetch datos históricos y enriquecer registry ====
+  fetch('data/sfm-data.json')
+    .then(r => r.ok ? r.json() : null)
+    .then(json => {
+      if (!json || !json.historico) return;
+      const h = json.historico;
+
+      // FX desde 1994
+      if (Array.isArray(h.tipo_cambio_desde_1994) && chartRegistry['chart-fx']) {
+        const labels = h.tipo_cambio_desde_1994.map(x => x.mes);
+        const data = h.tipo_cambio_desde_1994.map(x => x.valor);
+        chartRegistry['chart-fx'].allLabels = labels;
+        chartRegistry['chart-fx'].allData = data;
+      }
+
+      // Inflación desde 2000
+      if (Array.isArray(h.inflacion_mensual_desde_2000) && chartRegistry['chart-inflacion']) {
+        const labels = h.inflacion_mensual_desde_2000.map(x => x.mes);
+        const data = h.inflacion_mensual_desde_2000.map(x => x.var_anual);
+        chartRegistry['chart-inflacion'].allLabels = labels;
+        chartRegistry['chart-inflacion'].allData = data;
+      }
+
+      // Tasa Banxico desde 2008 (construir serie mensual escalonada)
+      if (Array.isArray(h.tasa_banxico_desde_2008) && chartRegistry['chart-tasa']) {
+        // Orden por fecha (fecha es dd/mm/yyyy)
+        const parse = (f) => {
+          const [d, m, y] = f.split('/');
+          return new Date(+y, +m - 1, +d);
+        };
+        const sorted = [...h.tasa_banxico_desde_2008].sort((a, b) => parse(a.fecha) - parse(b.fecha));
+        // Expandir a serie mensual hold-forward desde primer mes hasta último
+        const labels = [];
+        const data = [];
+        if (sorted.length) {
+          const first = parse(sorted[0].fecha);
+          const last = parse(sorted[sorted.length - 1].fecha);
+          let cursor = new Date(first.getFullYear(), first.getMonth(), 1);
+          const end = new Date(last.getFullYear(), last.getMonth(), 1);
+          let idx = 0;
+          let currentValor = sorted[0].valor;
+          while (cursor <= end) {
+            // Avanza el cursor sobre las decisiones que caen en este mes
+            while (idx < sorted.length) {
+              const dec = parse(sorted[idx].fecha);
+              if (dec.getFullYear() < cursor.getFullYear() ||
+                  (dec.getFullYear() === cursor.getFullYear() && dec.getMonth() <= cursor.getMonth())) {
+                currentValor = sorted[idx].valor;
+                idx++;
+              } else break;
+            }
+            const yy = cursor.getFullYear();
+            const mm = String(cursor.getMonth() + 1).padStart(2, '0');
+            labels.push(`${yy}-${mm}`);
+            data.push(currentValor);
+            cursor = new Date(yy, cursor.getMonth() + 1, 1);
+          }
+          chartRegistry['chart-tasa'].allLabels = labels;
+          chartRegistry['chart-tasa'].allData = data;
+        }
+      }
+    })
+    .catch(err => console.warn('fetch sfm-data.json fallo:', err));
 
 })();
 
