@@ -1070,7 +1070,7 @@
   let imorsegChart = null;
   let imorsegData = null;
   let imorsegCurrentKey = 'imor_total';
-  let imorsegCurrentMonths = 12;
+  let imorsegCurrentMonths = 0;
   let imorsegView = 'cartera';
   let imorsegBankData = null;
   let imorsegCurrentBank = '5';
@@ -1420,7 +1420,7 @@
   // Mismatch in spec. I'll use the 24 values and pair with the most recent 24 labels (abr-24 to mar-26) to keep integrity.
 
   // Initialize IMOR seg chart with placeholder
-  buildImorsegChart(imorsegCurrentKey, 12);
+  buildImorsegChart(imorsegCurrentKey, 0);
 
   // ==== Cobertura ====
   const cobValues = [170, 168, 165, 168, 172, 170, 168, 165, 162, 165, 168, 170, 168, 165, 162, 165, 168, 170, 165, 163, 165, 168, 165, 165];
@@ -1797,6 +1797,10 @@
         imorsegBankData = json.credito.historico_por_banco;
       }
 
+      // Re-trigger IMOR if on Histórico view
+      if (imorsegCurrentMonths === 0) {
+        if (currentSector === 'bm') buildImorsegChart(imorsegCurrentKey, 0);
+      }
       // Re-trigger any active "Histórico" buttons after data loads
       document.querySelectorAll('.period-btn').forEach(btn => {
         if (!btn.classList.contains('active')) return;
