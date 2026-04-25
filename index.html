@@ -593,11 +593,11 @@
           <div class="card-header">
             <div>
               <div class="card-title">Cobertura de Cartera Vencida</div>
-              <div class="card-subtitle">Marzo 2026</div>
+              <div class="card-subtitle" id="cob-subtitle">Cargando...</div>
             </div>
-            <span class="signal green">🟢 Sólida</span>
+            <span class="signal green" id="cob-signal">🟢</span>
           </div>
-          <div class="metric-value green">165<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
+          <div class="metric-value green" id="cobval">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
           <div class="metric-label">Reservas / cartera vencida</div>
           <div class="chart-wrap"><canvas id="chart-cobertura"></canvas></div>
           <div class="period-selector">
@@ -1737,6 +1737,53 @@
       if (json.credito && json.credito.historico_por_cartera) {
         imorsegData = json.credito.historico_por_cartera;
         buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
+
+        // Update ICOR chart with real data
+        const hpc = json.credito.historico_por_cartera;
+        const imor = json.credito.imor;
+        const icorData = hpc.icor_total || [];
+        const roaData = (hpc.roa || []).map(v => v != null ? +(v*100).toFixed(4) : null);
+        const fechasHpc = hpc.fechas || [];
+
+        // Update cobertura card value
+        const lastIcor = icorData.filter(v=>v!=null).slice(-1)[0];
+        const lastFechaIcor = fechasHpc[icorData.map((v,i)=>v!=null?i:-1).filter(i=>i>=0).slice(-1)[0]] || '';
+        const cobValEl = document.querySelector('.metric-value.green + .metric-label + .chart-wrap + .period-selector + .metric-note');
+        // Update the big number in cobertura card
+        const cards = document.querySelectorAll('.card .metric-value');
+        cards.forEach(el => {
+          // Find cobertura card (has "165" in it currently)
+          if (el.textContent.includes('165') && lastIcor) {
+            el.innerHTML = lastIcor.toFixed(0) + '<span style="font-size:0.5em;color:var(--text-dim)">%</span>';
+            el.className = el.className.replace(/red|yellow|green/, lastIcor >= 130 ? 'green' : lastIcor >= 100 ? 'yellow' : 'red');
+          }
+          // Update IMOR main value (single card shows "2.8")  
+          if (el.textContent.includes('2.8') && imor && imor.actual) {
+            el.innerHTML = imor.actual.toFixed(2) + '<span style="font-size:0.5em;color:var(--text-dim)">%</span>';
+            el.className = el.className.replace(/red|yellow|green/, imor.actual <= 3.5 ? 'green' : imor.actual <= 4.5 ? 'yellow' : 'red');
+          }
+        });
+
+        // Update cobertura chart with real data if it's registered
+        if (chartRegistry['chart-cobertura'] && icorData.length > 0) {
+          chartRegistry['chart-cobertura'].allLabels = fechasHpc;
+          chartRegistry['chart-cobertura'].allData = icorData;
+          const cobLabelsR = fechasHpc.slice(-24);
+          const cobDataR = icorData.slice(-24);
+          const cobChart = chartRegistry['chart-cobertura'].chart;
+          cobChart.data.labels = cobLabelsR;
+          cobChart.data.datasets[0].data = cobDataR;
+          cobChart.update();
+          // Update cobertura card values
+          const cobValEl = document.getElementById('cobval');
+          const cobSub = document.getElementById('cob-subtitle');
+          const cobSig = document.getElementById('cob-signal');
+          if (cobValEl && lastIcor) { cobValEl.innerHTML = lastIcor.toFixed(0) + '<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; cobValEl.className = 'metric-value ' + (lastIcor >= 130 ? 'green' : lastIcor >= 100 ? 'yellow' : 'red'); }
+          if (cobSub && lastFechaIcor) { cobSub.textContent = lastFechaIcor.replace('-','/')+ ' 2026'; }
+          if (cobSig) { cobSig.textContent = lastIcor >= 130 ? '🟢 Sólida' : '🟡 Moderada'; cobSig.className = 'signal ' + (lastIcor >= 130 ? 'green' : 'yellow'); }
+          // Enable Histórico
+          document.querySelectorAll('[onclick*="chart-cobertura"]').forEach(btn => { if (btn.hasAttribute('disabled')) { btn.removeAttribute('disabled'); btn.style.opacity=''; btn.style.cursor='pointer'; btn.removeAttribute('title'); } });
+        }
       }
       if (json.sofipos) {
         sofiposData = json.sofipos;
