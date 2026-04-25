@@ -534,6 +534,17 @@
     .period-btn:hover { border-color: var(--blue); color: var(--blue); }
     .period-btn.active { background: rgba(31,111,235,0.15); border-color: var(--blue); color: var(--blue); }
 
+    
+    /* ===== CARTERA SELECTOR ===== */
+    .cartera-btn {
+      padding: 0.3rem 0.8rem; font-size: 0.72rem; border-radius: 4px;
+      background: transparent; border: 1px solid var(--border);
+      color: var(--text-dim); cursor: pointer; font-family: var(--sans);
+      transition: all 0.2s;
+    }
+    .cartera-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--text); }
+    .cartera-btn.active { font-weight: 600; }
+
     </style>
 </head>
 <body>
@@ -652,6 +663,34 @@
             <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Actualización mensual.</span></div>
           </div>
         </div>
+
+      <!-- CARD: IMOR POR SEGMENTO DE CARTERA -->
+      <div class="card" style="grid-column: 1 / -1;">
+        <div class="card-header">
+          <div>
+            <div class="card-title">IMOR por Segmento de Cartera</div>
+            <div class="card-subtitle" id="imor-seg-subtitle">Historial desde diciembre 2000</div>
+          </div>
+          <span class="signal" id="imor-seg-signal">—</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="cartera-selector">
+            <button class="cartera-btn active" data-key="imor_total" data-label="Total" data-color="#1f6feb">Total</button>
+            <button class="cartera-btn" data-key="imor_comercial" data-label="Comercial" data-color="#3fb950">Comercial</button>
+            <button class="cartera-btn" data-key="imor_consumo" data-label="Consumo" data-color="#d29922">Consumo</button>
+            <button class="cartera-btn" data-key="imor_vivienda" data-label="Vivienda" data-color="#9467bd">Vivienda</button>
+            <button class="cartera-btn" data-key="imor_tarjeta" data-label="Tarjeta" data-color="#f85149">Tarjeta</button>
+          </div>
+          <div class="metric-value" id="imor-seg-valor" style="font-size:2rem; margin:0;">—</div>
+        </div>
+        <div class="chart-wrap" style="height:280px;"><canvas id="chart-imor-seg"></canvas></div>
+        <div class="period-selector" style="justify-content:flex-end; margin-top:0.4rem;">
+          <button class="period-btn" onclick="setImorsegPeriod(this,12)">12M</button>
+          <button class="period-btn" onclick="setImorsegPeriod(this,36)">3A</button>
+          <button class="period-btn active" onclick="setImorsegPeriod(this,0)">Histórico</button>
+        </div>
+        <div class="source">Fuente: CNBV Portafolio de Información · Banca Múltiple · Sistema total (entidad 5)</div>
+      </div>
 
       </div>
     </div>
@@ -1422,6 +1461,12 @@
           chartRegistry['chart-tasa'].allLabels = labels;
           chartRegistry['chart-tasa'].allData = data;
         }
+      }
+
+      // Load IMOR por cartera data
+      if (json.credito && json.credito.historico_por_cartera) {
+        imorsegData = json.credito.historico_por_cartera;
+        buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
       }
 
       // Re-trigger any active "Histórico" buttons after data loads
