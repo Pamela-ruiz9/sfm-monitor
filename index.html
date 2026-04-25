@@ -1423,6 +1423,16 @@
           chartRegistry['chart-tasa'].allData = data;
         }
       }
+
+      // Re-trigger any active "Histórico" buttons after data loads
+      document.querySelectorAll('.period-btn').forEach(btn => {
+        if (!btn.classList.contains('active')) return;
+        const onclick = btn.getAttribute('onclick') || '';
+        if (onclick.includes(', 0)')) {
+          const m = onclick.match(/setPeriod\(this,\s*'([^']+)',/);
+          if (m) window.setPeriod(btn, m[1], 0);
+        }
+      });
     })
     .catch(err => console.warn('fetch sfm-data.json fallo:', err));
 
