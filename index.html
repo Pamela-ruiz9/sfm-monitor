@@ -1402,6 +1402,8 @@
     return out;
   }
 
+  const allMonthLabels = monthLabels2023to2026mar();
+
   function makeGradient(ctx, area, color) {
     if (!area) return color;
     const g = ctx.createLinearGradient(0, area.top, 0, area.bottom);
