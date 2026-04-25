@@ -1,0 +1,118 @@
+name: Update SFM Data
+
+on:
+  schedule:
+    - cron: '0 14 * * 1-5'  # 8 AM CDMX (UTC-6) lunes a viernes
+  workflow_dispatch:          # también se puede correr manualmente
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch Banxico data
+        env:
+          BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}
+        run: |
+          python3 << 'PYEOF'
+          import urllib.request, json, os
+          from datetime import date, timedelta
+
+          TOKEN = os.environ["BANXICO_TOKEN"]
+          BASE = "https://www.banxico.org.mx/SieAPIRest/service/v1"
+
+          def fetch(series_id, start, end=None):
+              end = end or date.today().strftime("%Y-%m-%d")
+              url = f"{BASE}/series/{series_id}/datos/{start}/{end}"
+              req = urllib.request.Request(url, headers={"Bmx-Token": TOKEN})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  d = json.loads(r.read())
+              return d["bmx"]["series"][0]["datos"]
+
+          today = date.today().strftime("%Y-%m-%d")
+          start_18m = (date.today() - timedelta(days=548)).strftime("%Y-%m-%d")
+          start_3y = (date.today() - timedelta(days=1095)).strftime("%Y-%m-%d")
+
+          # 1. Tipo de cambio FIX (SF43718) — últimos 18 meses
+          fx_daily = fetch("SF43718", start_18m)
+          fx_monthly = {}
+          for x in fx_daily:
+              d, m, y = x["fecha"].split("/")
+              key = f"{y}-{m}"
+              fx_monthly[key] = {"fecha": x["fecha"], "dato": x["dato"]}
+          fx_series = sorted(fx_monthly.items())[-18:]
+
+          # 2. Tasa objetivo (SF61745) — cambios únicos últimos 2 años
+          tasa_daily = fetch("SF61745", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))
+          tasa_changes = []
+          prev = None
+          for x in tasa_daily:
+              if x["dato"] != prev:
+                  tasa_changes.append(x)
+                  prev = x["dato"]
+
+          # 3. Inflación anual calculada del INPC (SP74625)
+          inpc_data = fetch("SP74625", (date.today() - timedelta(days=760)).strftime("%Y-%m-%d"))
+          infl_anual = []
+          for i in range(len(inpc_data)):
+              d_now = inpc_data[i]["fecha"]
+              parts = d_now.split("/")
+              fecha_prev = f"{parts[0]}/{parts[1]}/{int(parts[2])-1}"
+              for j in range(len(inpc_data)):
+                  if inpc_data[j]["fecha"] == fecha_prev:
+                      v = float(inpc_data[i]["dato"])
+                      vp = float(inpc_data[j]["dato"])
+                      pct = round((v - vp) / vp * 100, 2)
+                      infl_anual.append({"fecha": d_now, "var_anual": pct})
+                      break
+
+          # Build JSON
+          data = {
+              "ultima_actualizacion": date.today().strftime("%d/%m/%Y"),
+              "fuentes": {
+                  "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
+                  "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
+                  "inflacion": "Banxico SIE SP74625 - INPC variación anual calculada"
+              },
+              "tipo_cambio": {
+                  "actual": fx_series[-1][1]["dato"],
+                  "fecha": fx_series[-1][1]["fecha"],
+                  "historico_mensual": [{"mes": k, "valor": round(float(v["dato"]), 4)} for k, v in fx_series]
+              },
+              "tasa_banxico": {
+                  "actual": tasa_changes[-1]["dato"],
+                  "fecha": tasa_changes[-1]["fecha"],
+                  "historico": [{"fecha": x["fecha"], "valor": float(x["dato"])} for x in tasa_changes[-20:]]
+              },
+              "inflacion": {
+                  "actual": infl_anual[-1]["var_anual"] if infl_anual else None,
+                  "fecha": infl_anual[-1]["fecha"] if infl_anual else None,
+                  "historico_mensual": [{"mes": x["fecha"][:7], "fecha": x["fecha"], "valor": x["var_anual"]} for x in infl_anual[-24:]]
+              }
+          }
+
+          os.makedirs("data", exist_ok=True)
+          with open("data/sfm-data.json", "w") as f:
+              json.dump(data, f, indent=2, ensure_ascii=False)
+
+          print(f"✅ FX: {data['tipo_cambio']['actual']} ({data['tipo_cambio']['fecha']})")
+          print(f"✅ Tasa: {data['tasa_banxico']['actual']}% ({data['tasa_banxico']['fecha']})")
+          print(f"✅ Inflación: {data['inflacion']['actual']}% ({data['inflacion']['fecha']})")
+          PYEOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sfm-monitor-bot"
+          git config user.email "sfm-monitor@noreply.github.com"
+          git add data/sfm-data.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "data: auto-update Banxico data $(date +%Y-%m-%d)"
+            git push
+          fi
