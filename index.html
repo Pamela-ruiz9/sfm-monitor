@@ -673,15 +673,37 @@
           </div>
           <span class="signal" id="imor-seg-signal">—</span>
         </div>
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
+        <!-- VIEW TOGGLE: Cartera vs Banco -->
+        <div style="display:flex; gap:0.4rem; margin-bottom:1rem;">
+          <button class="period-btn active" id="view-cartera-btn" onclick="switchImorsegView('cartera')">Por cartera</button>
+          <button class="period-btn" id="view-banco-btn" onclick="switchImorsegView('banco')">Por banco (G-7)</button>
+        </div>
+
+        <!-- SELECTOR CARTERA -->
+        <div id="imor-cartera-row" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
           <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="cartera-selector">
-            <button class="cartera-btn active" data-key="imor_total" data-label="Total" data-color="#1f6feb">Total</button>
+            <button class="cartera-btn active" data-key="imor_total" data-label="Total" data-color="#1f6feb">Sistema</button>
             <button class="cartera-btn" data-key="imor_comercial" data-label="Comercial" data-color="#3fb950">Comercial</button>
             <button class="cartera-btn" data-key="imor_consumo" data-label="Consumo" data-color="#d29922">Consumo</button>
             <button class="cartera-btn" data-key="imor_vivienda" data-label="Vivienda" data-color="#9467bd">Vivienda</button>
             <button class="cartera-btn" data-key="imor_tarjeta" data-label="Tarjeta" data-color="#f85149">Tarjeta</button>
           </div>
           <div class="metric-value" id="imor-seg-valor" style="font-size:2rem; margin:0;">—</div>
+        </div>
+
+        <!-- SELECTOR BANCO -->
+        <div id="imor-banco-row" style="display:none; justify-content:space-between; align-items:center; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="banco-selector">
+            <button class="cartera-btn active" data-bankid="5" data-label="Sistema Total" data-color="#1f6feb">Sistema</button>
+            <button class="cartera-btn" data-bankid="040012" data-label="BBVA" data-color="#004f9f">BBVA</button>
+            <button class="cartera-btn" data-bankid="040002" data-label="Banamex" data-color="#cc0000">Banamex</button>
+            <button class="cartera-btn" data-bankid="040072" data-label="Banorte" data-color="#e2001a">Banorte</button>
+            <button class="cartera-btn" data-bankid="040014" data-label="Santander" data-color="#eb0000">Santander</button>
+            <button class="cartera-btn" data-bankid="040021" data-label="HSBC" data-color="#db0011">HSBC</button>
+            <button class="cartera-btn" data-bankid="040044" data-label="Scotiabank" data-color="#e31837">Scotia</button>
+            <button class="cartera-btn" data-bankid="040036" data-label="Inbursa" data-color="#0066cc">Inbursa</button>
+          </div>
+          <div class="metric-value" id="imor-banco-valor" style="font-size:2rem; margin:0;">—</div>
         </div>
         <div class="chart-wrap" style="height:280px;"><canvas id="chart-imor-seg"></canvas></div>
         <div class="period-selector" style="justify-content:flex-end; margin-top:0.4rem;">
@@ -1467,6 +1489,9 @@
       if (json.credito && json.credito.historico_por_cartera) {
         imorsegData = json.credito.historico_por_cartera;
         buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
+      }
+      if (json.credito && json.credito.historico_por_banco) {
+        imorsegBankData = json.credito.historico_por_banco;
       }
 
       // Re-trigger any active "Histórico" buttons after data loads
