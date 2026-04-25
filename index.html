@@ -1107,7 +1107,7 @@
       },
       scales: {
         x: { ...baseAxis, grid: { display: false }, ticks: { ...baseAxis.ticks, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 } },
-        y: { ...baseAxis, beginAtZero: false, suggestedMin: 2.4, suggestedMax: 3.2, ticks: { ...baseAxis.ticks, callback: v => v + '%' } }
+        y: { ...baseAxis, beginAtZero: false, suggestedMin: 2.4, suggestedMax: 3.2, ticks: { ...baseAxis.ticks, callback: v => (+v).toFixed(1) + '%' } }
       }
     }
   });
@@ -1149,7 +1149,7 @@
       },
       scales: {
         x: { ...baseAxis, grid: { display: false }, ticks: { ...baseAxis.ticks, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 } },
-        y: { ...baseAxis, suggestedMin: 155, suggestedMax: 180, ticks: { ...baseAxis.ticks, callback: v => v + '%' } }
+        y: { ...baseAxis, suggestedMin: 155, suggestedMax: 180, ticks: { ...baseAxis.ticks, callback: v => Math.round(v) + '%' } }
       }
     }
   });
@@ -1268,7 +1268,7 @@
       },
       scales: {
         x: { ...baseAxis, grid: { display: false } },
-        y: { ...baseAxis, suggestedMin: 0, suggestedMax: 4, ticks: { ...baseAxis.ticks, callback: v => v + '%' } }
+        y: { ...baseAxis, suggestedMin: 0, suggestedMax: 4, ticks: { ...baseAxis.ticks, callback: v => (+v).toFixed(1) + '%' } }
       }
     }
   });
