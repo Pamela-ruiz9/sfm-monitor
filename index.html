@@ -587,30 +587,7 @@
       </div>
       <div class="grid">
 
-        <div class="card">
-          <div class="card-header">
-            <div>
-              <div class="card-title">IMOR — Índice de Morosidad</div>
-              <div class="card-subtitle">Marzo 2026</div>
-            </div>
-            <span class="signal green">🟢 Bajo</span>
-          </div>
-          <div class="metric-value green">2.8<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
-          <div class="metric-label">Cartera vencida / cartera total</div>
-          <div class="chart-wrap"><canvas id="chart-imor"></canvas></div>
-          <div class="period-selector">
-            <button class="period-btn active" onclick="setPeriod(this, 'chart-imor', 12)">12M</button>
-            <button class="period-btn" onclick="setPeriod(this, 'chart-imor', 36)">3A</button>
-            <button class="period-btn" style="opacity:0.4;cursor:not-allowed;" title="Datos CNBV históricos próximamente" disabled>Histórico</button>
-          </div>
-          <div class="source">Fuente: CNBV, Portafolio de Información</div>
-          <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
-          <div class="kpi-info-panel">
-            <div class="kpi-info-def">El IMOR mide el porcentaje de la cartera de crédito que está vencida. Se calcula dividiendo la cartera vencida entre la cartera total. Un IMOR bajo indica que los acreditados están cumpliendo sus pagos.</div>
-            <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde ≤3.5% · Amarillo 3.5–4.5% · Rojo >4.5%</span></div>
-            <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Publicación mensual con ~30 días de rezago.</span></div>
-          </div>
-        </div>
+
 
         <div class="card">
           <div class="card-header">
@@ -1155,6 +1132,18 @@
     chart.update();
   };
 
+  // Initialize IMOR chart immediately with placeholder (data loads via fetch)
+  const imorPlaceholderLabels = ['ene-25','feb-25','mar-25','abr-25','may-25','jun-25','jul-25','ago-25','sep-25','oct-25','nov-25','dic-25','ene-26','feb-26'];
+  const imorPlaceholderValues = [2.1,2.1,2.0,2.0,2.0,2.0,2.1,2.1,2.2,2.2,2.2,2.1,2.1,2.2];
+  imorsegData = {
+    fechas: imorPlaceholderLabels,
+    imor_total: imorPlaceholderValues,
+    imor_comercial: imorPlaceholderValues.map(v => v * 0.65),
+    imor_consumo: imorPlaceholderValues.map(v => v * 1.55),
+    imor_vivienda: imorPlaceholderValues.map(v => v * 1.4),
+    imor_tarjeta: imorPlaceholderValues.map(v => v * 1.55),
+  };
+
   Chart.defaults.font.family = "'Inter', sans-serif";
   Chart.defaults.color = C.dim;
   Chart.defaults.borderColor = C.borderSoft;
@@ -1199,40 +1188,9 @@
   // Task datapoints: 2.9, 2.8, 2.7, 2.9, 3.0, 2.9, 2.8, 2.9, 2.8, 2.7, 2.9, 2.8, 2.7, 2.8, 2.9, 2.8, 2.7, 2.8, 2.9, 2.8, 2.7, 2.8, 2.9, 2.8
   // = 24 values. Labels: ene-23 a dic-25 (36) + ene/feb/mar-26 (3) = 39 labels.
   // Mismatch in spec. I'll use the 24 values and pair with the most recent 24 labels (abr-24 to mar-26) to keep integrity.
-  const imorValues = [2.9, 2.8, 2.7, 2.9, 3.0, 2.9, 2.8, 2.9, 2.8, 2.7, 2.9, 2.8, 2.7, 2.8, 2.9, 2.8, 2.7, 2.8, 2.9, 2.8, 2.7, 2.8, 2.9, 2.8];
-  const allMonthLabels = monthLabels2023to2026mar(); // 39 labels
-  const imorLabels = allMonthLabels.slice(allMonthLabels.length - imorValues.length);
 
-  const imorChart = new Chart(document.getElementById('chart-imor'), {
-    type: 'bar',
-    data: {
-      labels: imorLabels,
-      datasets: [{
-        label: 'IMOR %',
-        data: imorValues,
-        backgroundColor: imorValues.map(v => v > 4.5 ? C.red : (v > 3.5 ? C.yellow : C.green)),
-        borderRadius: 3,
-        borderSkipped: false,
-        _dynColor: (v) => v > 4.5 ? C.red : (v > 3.5 ? C.yellow : C.green),
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        tooltip: {
-          callbacks: {
-            label: (ctx) => 'IMOR: ' + ctx.parsed.y.toFixed(1) + '%'
-          }
-        }
-      },
-      scales: {
-        x: { ...baseAxis, grid: { display: false }, ticks: { ...baseAxis.ticks, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 } },
-        y: { ...baseAxis, beginAtZero: false, suggestedMin: 2.4, suggestedMax: 3.2, ticks: { ...baseAxis.ticks, callback: v => (+v).toFixed(1) + '%' } }
-      }
-    }
-  });
-  registerChart('chart-imor', imorChart, imorLabels, imorValues);
+  // Initialize IMOR seg chart with placeholder
+  buildImorsegChart(imorsegCurrentKey, 12);
 
   // ==== Cobertura ====
   const cobValues = [170, 168, 165, 168, 172, 170, 168, 165, 162, 165, 168, 170, 168, 165, 162, 165, 168, 170, 165, 163, 165, 168, 165, 165];
