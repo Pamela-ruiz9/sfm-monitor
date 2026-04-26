@@ -1071,6 +1071,7 @@
   let imorsegData = null;
   let imorsegCurrentKey = 'imor_total';
   let imorsegCurrentMonths = 0;
+  let imorsegUserSelected = false; // tracks if user manually picked a period
   let imorsegView = 'cartera';
   let imorsegBankData = null;
   let imorsegCurrentBank = '5';
@@ -1144,6 +1145,7 @@
     btn.parentElement.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     imorsegCurrentMonths = months;
+    imorsegUserSelected = true;
     if (currentSector === 'bm') {
       if (imorsegView === 'banco') buildImorsegBankChart(imorsegCurrentBank, months);
       else buildImorsegChart(imorsegCurrentKey, months);
@@ -1797,9 +1799,9 @@
         imorsegBankData = json.credito.historico_por_banco;
       }
 
-      // Re-trigger IMOR if on Histórico view
-      if (imorsegCurrentMonths === 0) {
-        if (currentSector === 'bm') buildImorsegChart(imorsegCurrentKey, 0);
+      // Re-trigger IMOR with historical data, respecting user's period selection
+      if (currentSector === 'bm') {
+        buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
       }
       // Re-trigger any active "Histórico" buttons after data loads
       document.querySelectorAll('.period-btn').forEach(btn => {
