@@ -1362,7 +1362,7 @@
     if (imorsegChart) {
       imorsegChart.data.labels = labels; imorsegChart.data.datasets[0].data = vals; imorsegChart.data.datasets[0].borderColor = color; imorsegChart.data.datasets[0].backgroundColor = color+'18'; imorsegChart.data.datasets[0].pointBackgroundColor = color;
       if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = {};
-      if (imorsegChart.options.scales.y) imorsegChart.options.scales.y.suggestedMax = 35;
+      if (imorsegChart.options.scales.y) { imorsegChart.options.scales.y.max = 35; imorsegChart.options.scales.y.suggestedMax = 35; }
       imorsegChart.update();
     }
   }
@@ -2034,12 +2034,12 @@
     if (!sel || sel.children.length > 0) return;
     const entidades = sofiposEntidadData.entidades;
     // Featured institutions (well-known ones pinned first)
-    const FEATURED = ['027001','027026','027033','027014','027036','027047','027031','027032','027045','027008','027020','027034'];
-    // All others sorted by IMOR
-    const allEntries = Object.entries(entidades).filter(([id]) => id !== '027022'); // exclude system total here
-    const featured = allEntries.filter(([id]) => FEATURED.includes(id)).sort((a,b) => (b[1].imor_latest||0) - (a[1].imor_latest||0));
-    const rest = allEntries.filter(([id]) => !FEATURED.includes(id)).sort((a,b) => (b[1].imor_latest||0) - (a[1].imor_latest||0));
-    const sorted = featured.concat(rest);
+    // Top 15 by asset size (from CNBV data)
+    const TOP15_BY_ASSET = ['027014','027033','027032','027009','027035','027036','027029','027026','027045','027031','027019','027020','027018','027030','027012'];
+    const allEntries = Object.entries(entidades).filter(([id]) => id !== '027022');
+    const top15 = allEntries.filter(([id]) => TOP15_BY_ASSET.includes(id)).sort((a,b) => TOP15_BY_ASSET.indexOf(a[0]) - TOP15_BY_ASSET.indexOf(b[0]));
+    const rest = allEntries.filter(([id]) => !TOP15_BY_ASSET.includes(id) && id !== '027022').sort((a,b) => (b[1].imor_latest||0) - (a[1].imor_latest||0));
+    const sorted = top15.concat(rest);
     sorted.forEach(([id, e]) => {
       const imor = e.imor_latest;
       const color = imor > 20 ? '#f85149' : imor > 10 ? '#d29922' : '#3fb950';
@@ -2150,7 +2150,6 @@
       imorsegChart.data.datasets[0].backgroundColor = color+'18';
       imorsegChart.data.datasets[0].pointBackgroundColor = color;
       if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = annotations;
-      if (imorsegChart.options.scales.y) imorsegChart.options.scales.y.suggestedMax = 15;
       imorsegChart.update();
     }
   }
