@@ -608,9 +608,8 @@
 
         <!-- NIVEL 2: Vista (solo BM) -->
         <div id="nivel2-bm" style="display:flex; gap:0.4rem; margin-bottom:0.8rem; flex-wrap:wrap;">
-          <button class="period-btn active" id="view-cartera-btn" onclick="switchImorsegView('cartera')">Por cartera</button>
-          <button class="period-btn" id="view-banco-btn" onclick="switchImorsegView('banco')">Por entidad</button>
-          <button class="period-btn" id="view-bxc-btn" onclick="switchImorsegView('bxc')">Entidad × Cartera</button>
+          <button class="period-btn active" id="view-cartera-btn" onclick="switchImorsegView('cartera')">Sistema</button>
+          <button class="period-btn" id="view-bxc-btn" onclick="switchImorsegView('bxc')">Por entidad</button>
         </div>
 
         <!-- SELECTOR CARTERA (BM) -->
@@ -1202,14 +1201,12 @@
     imorsegView = view;
     if (currentSector !== 'bm') return;
     document.getElementById('view-cartera-btn')?.classList.toggle('active', view === 'cartera');
-    document.getElementById('view-banco-btn')?.classList.toggle('active', view === 'banco');
     document.getElementById('view-bxc-btn')?.classList.toggle('active', view === 'bxc');
     document.getElementById('imor-cartera-row').style.display = view === 'cartera' ? 'flex' : 'none';
-    document.getElementById('imor-banco-row').style.display = view === 'banco' ? 'flex' : 'none';
+    document.getElementById('imor-banco-row').style.display = 'none';
     const bxcRow = document.getElementById('imor-bxc-row');
     if (bxcRow) bxcRow.style.display = view === 'bxc' ? 'flex' : 'none';
-    if (view === 'banco') buildImorsegBankChart(imorsegCurrentBank, imorsegCurrentMonths);
-    else if (view === 'bxc') { if (typeof buildBxCChart === 'function') buildBxCChart(bxcCurrentBank, bxcCurrentKey, imorsegCurrentMonths); }
+    if (view === 'bxc') { if (typeof buildBxCChart === 'function') buildBxCChart(bxcCurrentBank, bxcCurrentKey, imorsegCurrentMonths); }
     else buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
   }
 
