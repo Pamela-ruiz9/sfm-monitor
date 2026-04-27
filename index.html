@@ -609,7 +609,7 @@
         <!-- NIVEL 2: Vista (solo BM) -->
         <div id="nivel2-bm" style="display:flex; gap:0.4rem; margin-bottom:0.8rem;">
           <button class="period-btn active" id="view-cartera-btn" onclick="switchImorsegView('cartera')">Por cartera</button>
-          <button class="period-btn" id="view-banco-btn" onclick="switchImorsegView('banco')">Por banco (G-7)</button>
+          <button class="period-btn" id="view-banco-btn" onclick="switchImorsegView('banco')">Por entidad</button>
         </div>
 
         <!-- SELECTOR CARTERA (BM) -->
@@ -627,14 +627,14 @@
         <!-- SELECTOR BANCO (BM) -->
         <div id="imor-banco-row" style="display:none; justify-content:space-between; align-items:center; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
           <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="banco-selector">
-            <button class="cartera-btn active" data-bankid="5" data-label="Sistema Total" data-color="#1f6feb">Sistema</button>
-            <button class="cartera-btn" data-bankid="040012" data-label="BBVA" data-color="#004f9f">BBVA</button>
-            <button class="cartera-btn" data-bankid="040002" data-label="Banamex" data-color="#cc0000">Banamex</button>
-            <button class="cartera-btn" data-bankid="040072" data-label="Banorte" data-color="#e2001a">Banorte</button>
-            <button class="cartera-btn" data-bankid="040014" data-label="Santander" data-color="#eb0000">Santander</button>
-            <button class="cartera-btn" data-bankid="040021" data-label="HSBC" data-color="#db0011">HSBC</button>
-            <button class="cartera-btn" data-bankid="040044" data-label="Scotiabank" data-color="#e31837">Scotia</button>
-            <button class="cartera-btn" data-bankid="040036" data-label="Inbursa" data-color="#0066cc">Inbursa</button>
+            <button class="cartera-btn active" data-bankid="5" data-label="Sistema Total" data-color="#1f6feb">Sistema <span style="color:#3fb950">2.2%</span></button>
+            <button class="cartera-btn" data-bankid="040012" data-label="BBVA" data-color="#004f9f">BBVA <span style="color:#3fb950">1.6%</span></button>
+            <button class="cartera-btn" data-bankid="040002" data-label="Banamex" data-color="#cc0000">Banamex <span style="color:#d29922">3.1%</span></button>
+            <button class="cartera-btn" data-bankid="040072" data-label="Banorte" data-color="#e2001a">Banorte <span style="color:#3fb950">1.5%</span></button>
+            <button class="cartera-btn" data-bankid="040014" data-label="Santander" data-color="#eb0000">Santander <span style="color:#d29922">2.2%</span></button>
+            <button class="cartera-btn" data-bankid="040021" data-label="HSBC" data-color="#db0011">HSBC <span style="color:#d29922">3.1%</span></button>
+            <button class="cartera-btn" data-bankid="040044" data-label="Scotiabank" data-color="#e31837">Scotia <span style="color:#f85149">4.2%</span></button>
+            <button class="cartera-btn" data-bankid="040036" data-label="Inbursa" data-color="#0066cc">Inbursa <span style="color:#3fb950">0.9%</span></button>
           </div>
           <div class="metric-value" id="imor-banco-valor" style="font-size:2rem; margin:0;">—</div>
         </div>
