@@ -1585,6 +1585,23 @@
         options: { responsive: true, maintainAspectRatio: false, interaction:{mode:'index',intersect:false}, plugins:{legend:{display:false},annotation:{}}, scales: { x:{grid:{display:false},ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0}}, y:{min:0,suggestedMax:3,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+'x'}} } }
       });
     }
+    // IFRS9 (initialize with empty data)
+    const ifrs9Ctx = document.getElementById('chart-ifrs9')?.getContext('2d');
+    if (ifrs9Ctx) {
+      ifrs9Chart = new Chart(ifrs9Ctx, {
+        type: 'line',
+        data: { labels: allMonthLabels, datasets: [
+          { label: 'Etapa 1 (%)', data: new Array(allMonthLabels.length).fill(null), borderColor: '#3fb950', backgroundColor: 'rgba(63,185,80,0.08)', borderWidth: 2, pointRadius: 0, fill: true, tension: 0.2, yAxisID: 'y1' },
+          { label: 'Etapa 2 (%)', data: new Array(allMonthLabels.length).fill(null), borderColor: '#d29922', backgroundColor: 'rgba(209,153,34,0.12)', borderWidth: 2, pointRadius: 2, pointBackgroundColor: '#d29922', fill: true, tension: 0.3, yAxisID: 'y2' },
+          { label: 'Etapa 3 (%)', data: new Array(allMonthLabels.length).fill(null), borderColor: '#f85149', backgroundColor: 'rgba(248,81,73,0.08)', borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.2, yAxisID: 'y2' },
+        ]},
+        options: { responsive: true, maintainAspectRatio: false, interaction:{mode:'index',intersect:false},
+          plugins: { legend:{display:true,labels:{color:'#e6edf3',font:{size:10,family:'Inter'},usePointStyle:true,pointStyle:'circle'}}, tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.parsed.y.toFixed(2)+'%'}}, annotation:{} },
+          scales: { x:{grid:{display:false},ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:10,autoSkip:true,maxRotation:0}}, y1:{position:'left',min:93,max:100,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#7d8590',font:{size:9},callback:v=>v+'%'}}, y2:{position:'right',min:0,max:5,grid:{display:false},ticks:{color:'#7d8590',font:{size:9},callback:v=>v.toFixed(1)+'%'}} }
+        }
+      });
+    }
+
     // ROA
     const roaCtx = document.getElementById('chart-roa')?.getContext('2d');
     if (roaCtx) {
@@ -2035,6 +2052,15 @@
       }
       if (json.ifrs9) {
         ifrs9DataStore = json.ifrs9;
+        // Update pre-initialized chart
+        if (ifrs9Chart) {
+          const all = json.ifrs9;
+          ifrs9Chart.data.labels = all.fechas;
+          ifrs9Chart.data.datasets[0].data = all.etapa1_pct;
+          ifrs9Chart.data.datasets[1].data = all.etapa2_pct;
+          ifrs9Chart.data.datasets[2].data = all.etapa3_pct;
+          ifrs9Chart.update();
+        }
         buildIfrs9Chart(ifrs9CurrentMonths);
       }
       if (json.credito && json.credito.historico_por_banco) {
