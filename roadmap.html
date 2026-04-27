@@ -449,6 +449,177 @@
     </div>
   </div>
 
+  <!-- MÉTRICAS PENDIENTES DEL CSV CNBV -->
+  <div class="phase" data-phase="metricas">
+    <div class="phase-header" onclick="togglePhase(this)">
+      <span class="phase-badge badge-pending">📊 Backlog</span>
+      <span class="phase-title">Métricas disponibles en CSV CNBV — pendientes de implementar</span>
+      <span class="phase-count"></span>
+      <span class="phase-arrow">▼</span>
+    </div>
+    <div class="phase-body">
+
+      <div style="padding:0.8rem 1.5rem; font-size:0.75rem; color:var(--text-dim); border-bottom:1px solid var(--border);">
+        📁 <strong style="color:var(--text);">Sector 40 Banca Múltiple</strong> — CSV sh_datos_40.csv ya descargado (303 meses desde dic 2000)
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">IMORA por banco G-7 <span class="task-tag data">40200033 × entidad</span></div>
+          <div class="task-note">IMOR ajustado por banco individual. ¿Qué banco tiene más cartera en zona gris?</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">ICOR por banco G-7 <span class="task-tag data">40200096 × entidad</span></div>
+          <div class="task-note">Cobertura de reservas por banco. ¿Cuál tiene menos colchón?</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">ROA y ROE por banco G-7 <span class="task-tag data">40200001/002 × entidad</span></div>
+          <div class="task-note">Rentabilidad por institución. Comparar eficiencia entre bancos.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Tasa de interés implícita activa <span class="task-tag data">40200162</span></div>
+          <div class="task-note">Qué tasa cobran los bancos por la cartera vigente E1+E2. Por cartera y por banco.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Tasa de interés implícita pasiva (costo de fondeo) <span class="task-tag data">40200037</span></div>
+          <div class="task-note">Qué pagan los bancos por sus depósitos. Sistema y por entidad.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Margen de intermediación financiera (MIF) <span class="task-tag data">40200218</span></div>
+          <div class="task-note">Tasa activa − Tasa pasiva = ganancia del banco. Clave para entender rentabilidad estructural.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Tasa de deterioro ajustada (TDA) <span class="task-tag data">40200074</span></div>
+          <div class="task-note">Medida de deterioro de flujo. Complementa IMOR que mide stock. Por cartera total, comercial, consumo, vivienda.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">EPRC / Cartera IFRS9 (E1+E2+E3) <span class="task-tag data">40200118</span></div>
+          <div class="task-note">Nivel de provisionamiento relativo a la cartera por etapa. ¿Están bien provisionados?</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Quitas y castigos — flujo 12 meses <span class="task-tag data">40200193</span></div>
+          <div class="task-note">IMOR puede bajar por castigos (no por pago). Esta métrica explica la diferencia. Por cartera y por banco.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Crecimiento de cartera total (flujo anual) <span class="task-tag data">del balance</span></div>
+          <div class="task-note">Variación anual de la cartera total. Señal de expansión o contracción del crédito.</div>
+        </div>
+      </div>
+
+      <div style="padding:0.8rem 1.5rem; font-size:0.75rem; color:var(--text-dim); border-bottom:1px solid var(--border); border-top:1px solid var(--border); margin-top:0.5rem;">
+        📁 <strong style="color:var(--text);">Reporte R12A IFRS9</strong> — ya disponible (dic 2019 – feb 2026)
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">IFRS9 etapas 1/2/3 por banco G-7 <span class="task-tag data">R12A × entidad</span></div>
+          <div class="task-note">¿Qué banco tiene más cartera en Etapa 2 (alerta temprana)? Visibilidad que el IMOR no da.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">IFRS9 etapas por segmento de cartera <span class="task-tag data">R12A × cartera</span></div>
+          <div class="task-note">¿En qué cartera está migrando más a E2? ¿TDC? ¿Vivienda? ¿Comercial?</div>
+        </div>
+      </div>
+
+      <div style="padding:0.8rem 1.5rem; font-size:0.75rem; color:var(--text-dim); border-bottom:1px solid var(--border); border-top:1px solid var(--border); margin-top:0.5rem;">
+        📁 <strong style="color:var(--text);">SoFiPOs</strong> — requiere CSV R11 por institución (pendiente descarga)
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">IMORA e ICOR por entidad SoFiPO</div>
+          <div class="task-note">Requiere CSV R11 con cve_institucion individual. Solicitar al portal CNBV.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">IMOR por cartera × entidad SoFiPO</div>
+          <div class="task-note">Comercial, consumo, vivienda por institución. Mismo CSV R11.</div>
+        </div>
+      </div>
+
+      <div style="padding:0.8rem 1.5rem; font-size:0.75rem; color:var(--text-dim); border-bottom:1px solid var(--border); border-top:1px solid var(--border); margin-top:0.5rem;">
+        📁 <strong style="color:var(--text);">Otros reportes CNBV</strong> — pendientes de descarga
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Liquidez LCR y NSFR (Basilea III) <span class="task-tag">Reporte R13 o similar</span></div>
+          <div class="task-note">Activos líquidos de alta calidad / salidas netas 30 días. Mide capacidad de resistir corridas.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">ICAP — Índice de capitalización <span class="task-tag">Reporte de solvencia</span></div>
+          <div class="task-note">Capital neto / Activos sujetos a riesgo. Mínimo regulatorio 10.5%. Por sistema y por banco.</div>
+        </div>
+      </div>
+
+      <div style="padding:0.8rem 1.5rem; font-size:0.75rem; color:var(--text-dim); border-bottom:1px solid var(--border); border-top:1px solid var(--border); margin-top:0.5rem;">
+        📡 <strong style="color:var(--text);">Banxico SIE API</strong> — ya configurada (token activo)
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Reservas internacionales brutas <span class="task-tag auto">automático</span></div>
+          <div class="task-note">Serie SF43707. Publicación semanal. Ya configurada en GH Actions — solo falta agregar al dashboard.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">TIIE de Fondeo (sustituto TIIE 28d) <span class="task-tag auto">automático</span></div>
+          <div class="task-note">Serie SF343410 — nueva tasa de referencia del mercado. Más representativa que TIIE 28d para productos indexados.</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">PIB trimestral (IGAE como proxy mensual) <span class="task-tag auto">INEGI</span></div>
+          <div class="task-note">IGAE serie 736181. T+53 días. Reemplaza el PIB hardcodeado actual.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- NOTAS -->
   <div class="notes-section">
     <div class="notes-header">📝 Notas de sesión</div>
