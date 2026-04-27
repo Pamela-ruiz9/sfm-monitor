@@ -753,6 +753,105 @@
           </div>
         </div>
 
+      <!-- CARD: IMORA -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">IMORA — Índice de Morosidad Ajustado</div>
+            <div class="card-subtitle" id="imora-subtitle">Feb 2026</div>
+          </div>
+          <span class="signal" id="imora-signal">—</span>
+        </div>
+        <div class="metric-value" id="imora-val" style="margin-bottom:0.3rem;">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
+        <div class="metric-label">Cartera vencida + reestructurada / cartera total</div>
+        <div class="chart-wrap"><canvas id="chart-imora"></canvas></div>
+        <div class="period-selector">
+          <button class="period-btn" onclick="setIndicPeriod(this,'chart-imora',12)">12M</button>
+          <button class="period-btn" onclick="setIndicPeriod(this,'chart-imora',36)">3A</button>
+          <button class="period-btn active" onclick="setIndicPeriod(this,'chart-imora',0)">Histórico</button>
+        </div>
+        <div class="source">Fuente: CNBV · Sector 40 Banca Múltiple · Sistema total</div>
+        <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
+        <div class="kpi-info-panel">
+          <div class="kpi-info-def">El IMORA incluye no solo la cartera vencida sino también la cartera en reestructura o prórroga. Captura el deterioro <strong>antes</strong> de que llegue a vencida — es un indicador más adelantado que el IMOR tradicional.</div>
+          <div class="kpi-info-row"><span class="label">Fórmula:</span><span class="val">IMORA = (Cartera vencida + Cartera reestructurada) / Cartera total × 100</span></div>
+          <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde ≤6% · Amarillo 6–9% · Rojo >9%</span></div>
+          <div class="kpi-info-row"><span class="label">Interpretación:</span><span class="val">IMORA ÷ IMOR > 2x sugiere que hay mucha cartera en zona de riesgo que no ha vencido aún.</span></div>
+          <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Concepto 40200033.</span></div>
+        </div>
+      </div>
+
+      <!-- CARD: ICOR -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">ICOR — Índice de Cobertura</div>
+            <div class="card-subtitle" id="icor-subtitle">Feb 2026</div>
+          </div>
+          <span class="signal" id="icor-signal">—</span>
+        </div>
+        <div class="metric-value" id="icor-val" style="margin-bottom:0.3rem;">—<span style="font-size:0.5em;color:var(--text-dim)">x</span></div>
+        <div class="metric-label">Reservas preventivas / cartera vencida</div>
+        <div class="chart-wrap"><canvas id="chart-icor"></canvas></div>
+        <div class="period-selector">
+          <button class="period-btn" onclick="setIndicPeriod(this,'chart-icor',12)">12M</button>
+          <button class="period-btn" onclick="setIndicPeriod(this,'chart-icor',36)">3A</button>
+          <button class="period-btn active" onclick="setIndicPeriod(this,'chart-icor',0)">Histórico</button>
+        </div>
+        <div class="source">Fuente: CNBV · Concepto 40200096</div>
+        <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
+        <div class="kpi-info-panel">
+          <div class="kpi-info-def">El ICOR mide cuántas veces las reservas preventivas cubren la cartera vencida. Un ICOR de 1.5x significa que el banco tiene $1.50 en reservas por cada peso de cartera vencida — puede absorber pérdidas y tener margen adicional.</div>
+          <div class="kpi-info-row"><span class="label">Fórmula:</span><span class="val">ICOR = Estimación preventiva para riesgos crediticios / Cartera vencida</span></div>
+          <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde ≥1.3x · Amarillo 1.0–1.3x · Rojo &lt;1.0x (insuficiente)</span></div>
+          <div class="kpi-info-row"><span class="label">Interpretación:</span><span class="val">ICOR &lt;1.0x significa que las reservas son insuficientes para cubrir la cartera vencida — señal crítica.</span></div>
+          <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Concepto 40200096.</span></div>
+        </div>
+      </div>
+
+      <!-- CARD: ROA y ROE -->
+      <div class="card" style="grid-column: 1 / -1;">
+        <div class="card-header">
+          <div>
+            <div class="card-title">ROA y ROE — Rentabilidad del Sistema Bancario</div>
+            <div class="card-subtitle" id="roaroe-subtitle">Feb 2026</div>
+          </div>
+          <span class="signal" id="roaroe-signal">—</span>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:0.8rem;">
+          <div>
+            <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-dim); margin-bottom:0.2rem;">ROA</div>
+            <div class="metric-value" id="roa-val" style="font-size:2rem; margin:0;">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
+            <div class="metric-label" style="margin-top:0.2rem;">Rendimiento sobre activos</div>
+          </div>
+          <div>
+            <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-dim); margin-bottom:0.2rem;">ROE</div>
+            <div class="metric-value" id="roe-val" style="font-size:2rem; margin:0;">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
+            <div class="metric-label" style="margin-top:0.2rem;">Rendimiento sobre capital</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:0.4rem; margin-bottom:0.5rem;">
+          <button class="cartera-btn active" data-roakey="roa" data-color="#c4a35a">ROA</button>
+          <button class="cartera-btn" data-roakey="roe" data-color="#1f6feb">ROE</button>
+        </div>
+        <div class="chart-wrap" style="height:220px;"><canvas id="chart-roa"></canvas></div>
+        <div class="period-selector">
+          <button class="period-btn" onclick="setIndicPeriod(this,'chart-roa',12)">12M</button>
+          <button class="period-btn" onclick="setIndicPeriod(this,'chart-roa',36)">3A</button>
+          <button class="period-btn active" onclick="setIndicPeriod(this,'chart-roa',0)">Histórico</button>
+        </div>
+        <div class="source">Fuente: CNBV · Conceptos 40200001 (ROA) y 40200002 (ROE)</div>
+        <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
+        <div class="kpi-info-panel">
+          <div class="kpi-info-def"><strong>ROA</strong> mide qué tan eficientemente usa el banco sus activos para generar utilidades. <strong>ROE</strong> mide el retorno para los accionistas sobre su capital invertido.</div>
+          <div class="kpi-info-row"><span class="label">Fórmula ROA:</span><span class="val">Utilidad neta anualizada / Activo total promedio × 100</span></div>
+          <div class="kpi-info-row"><span class="label">Fórmula ROE:</span><span class="val">Utilidad neta anualizada / Capital contable promedio × 100</span></div>
+          <div class="kpi-info-row"><span class="label">Semáforo ROA:</span><span class="val">Verde >1.5% · Amarillo 0.5–1.5% · Rojo &lt;0.5% o negativo</span></div>
+          <div class="kpi-info-row"><span class="label">Semáforo ROE:</span><span class="val">Verde >12% · Amarillo 6–12% · Rojo &lt;6% o negativo</span></div>
+          <div class="kpi-info-row"><span class="label">Interpretación:</span><span class="val">ROA <0.5% indica problemas de eficiencia. ROE &lt;6% sugiere que el banco no remunera bien al capital frente a otras inversiones.</span></div>
+        </div>
+      </div>
+
       <!-- CARD: IFRS9 ETAPAS -->
       <div class="card" style="grid-column: 1 / -1;">
         <div class="card-header">
@@ -1800,6 +1899,39 @@
         if (imorsegChart) { imorsegChart.destroy(); imorsegChart = null; }
         buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
 
+        // Initialize IMORA, ICOR, ROA/ROE charts with historical data
+        const fechas = hpc.fechas || [];
+        const imora = hpc.imora_total || [];
+        const icor = hpc.icor_total || [];
+        const roa = hpc.roa || [];
+        const roe = hpc.roe || [];
+        initIndicChart('chart-imora', '#d29922', 0, 12, '%', imora, fechas);
+        initIndicChart('chart-icor', '#3fb950', 0, 3, 'x', icor, fechas);
+        initIndicChart('chart-roa', '#c4a35a', -5, 5, '%', roa, fechas);
+
+        // Update header KPI values
+        const latestImora = imora.filter(v=>v!=null).slice(-1)[0];
+        const latestIcor = icor.filter(v=>v!=null).slice(-1)[0];
+        const latestRoa = roa.filter(v=>v!=null).slice(-1)[0];
+        const latestRoe = roe.filter(v=>v!=null).slice(-1)[0];
+
+        const imoraEl = document.getElementById('imora-val');
+        if (imoraEl && latestImora) { imoraEl.innerHTML = latestImora.toFixed(2) + '<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; }
+        const icorEl = document.getElementById('icor-val');
+        if (icorEl && latestIcor) { icorEl.innerHTML = latestIcor.toFixed(2) + '<span style="font-size:0.5em;color:var(--text-dim)">x</span>'; }
+        const roaEl = document.getElementById('roa-val');
+        if (roaEl && latestRoa) { roaEl.innerHTML = latestRoa.toFixed(2) + '<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; }
+        const roeEl = document.getElementById('roe-val');
+        if (roeEl && latestRoe) { roeEl.innerHTML = latestRoe.toFixed(2) + '<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; }
+
+        // Signals
+        const imoraSig = document.getElementById('imora-signal');
+        if (imoraSig) { imoraSig.textContent = latestImora > 9 ? '🔴 Alto' : latestImora > 6 ? '🟡 Moderado' : '🟢 Normal'; imoraSig.className = 'signal '+(latestImora>9?'red':latestImora>6?'yellow':'green'); }
+        const icorSig = document.getElementById('icor-signal');
+        if (icorSig) { icorSig.textContent = latestIcor >= 1.3 ? '🟢 Sólida' : latestIcor >= 1.0 ? '🟡 Suficiente' : '🔴 Insuficiente'; icorSig.className = 'signal '+(latestIcor>=1.3?'green':latestIcor>=1.0?'yellow':'red'); }
+        const roaroeSig = document.getElementById('roaroe-signal');
+        if (roaroeSig) { roaroeSig.textContent = latestRoa >= 1.5 ? '🟢 Rentable' : latestRoa >= 0.5 ? '🟡 Moderado' : '🔴 Bajo'; roaroeSig.className = 'signal '+(latestRoa>=1.5?'green':latestRoa>=0.5?'yellow':'red'); }
+
         // Update ICOR chart with real data
         const hpc = json.credito.historico_por_cartera;
         const imor = json.credito.imor;
@@ -2064,6 +2196,77 @@
   window.bxcData = bxcData;
   window.bxcCurrentBank = bxcCurrentBank;
   window.bxcCurrentKey = bxcCurrentKey;
+
+  // ===== INDICADORES CREDITO: IMORA, ICOR, ROA/ROE =====
+  const indicCharts = {};
+  let roaCurrentKey = 'roa';
+
+  function initIndicChart(id, color, yMin, yMax, suffix, data, labels) {
+    const ctx = document.getElementById(id)?.getContext('2d');
+    if (!ctx) return;
+    const ch = new Chart(ctx, {
+      type: 'line',
+      data: { labels, datasets: [{ label: id, data, borderColor: color, backgroundColor: color+'15', borderWidth: 2, pointRadius: 0, tension: 0.2, fill: true, spanGaps: true }] },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ctx.parsed.y != null ? ctx.parsed.y.toFixed(2) + suffix : 'N/D' } },
+          annotation: {}
+        },
+        scales: {
+          x: { grid:{display:false}, ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0} },
+          y: { min: yMin, suggestedMax: yMax, grid:{color:'rgba(255,255,255,0.04)'}, ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+suffix} }
+        }
+      }
+    });
+    indicCharts[id] = ch;
+    return ch;
+  }
+
+  function setIndicPeriod(btn, chartId, months) {
+    btn.parentElement.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const ch = indicCharts[chartId];
+    if (!ch || !imorsegData) return;
+    const keyMap = {'chart-imora':'imora_total','chart-icor':'icor_total','chart-roa': roaCurrentKey};
+    const key = keyMap[chartId] || 'imor_total';
+    const allL = imorsegData.fechas, allD = imorsegData[key] || [];
+    ch.data.labels = months === 0 ? allL : allL.slice(-months);
+    ch.data.datasets[0].data = months === 0 ? allD : allD.slice(-months);
+    // Add crisis annotations on historical
+    if (months === 0 && ch.options.plugins.annotation) {
+      const annotations = {};
+      CRISIS_MX.forEach((c,i) => {
+        const idx = ch.data.labels.findIndex(l=>l>=c.mes);
+        if (idx !== -1) annotations['c'+i] = {type:'line',xMin:idx,xMax:idx,borderColor:c.color,borderWidth:1.5,borderDash:[4,3],label:{display:true,content:c.label,position:'start',backgroundColor:c.color+'22',color:c.color,font:{size:9},padding:2}};
+      });
+      ch.options.plugins.annotation.annotations = annotations;
+    } else if (ch.options.plugins.annotation) {
+      ch.options.plugins.annotation.annotations = {};
+    }
+    ch.update();
+  }
+  window.setIndicPeriod = setIndicPeriod;
+
+  // ROA/ROE toggle
+  document.querySelectorAll('[data-roakey]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('[data-roakey]').forEach(b => { b.classList.remove('active'); b.style.borderColor=''; b.style.color=''; b.style.background=''; });
+      this.classList.add('active');
+      const c = this.dataset.color; this.style.borderColor=c; this.style.color=c; this.style.background=c+'15';
+      roaCurrentKey = this.dataset.roakey;
+      const ch = indicCharts['chart-roa'];
+      if (!ch || !imorsegData) return;
+      const months = 0; // keep current view
+      const allD = imorsegData[roaCurrentKey] || [];
+      ch.data.datasets[0].borderColor = c;
+      ch.data.datasets[0].backgroundColor = c+'15';
+      ch.data.datasets[0].data = allD;
+      ch.update();
+    });
+  });
 
   // Expose all interactive functions and variables to global scope
   window.buildImorsegChart = buildImorsegChart;
