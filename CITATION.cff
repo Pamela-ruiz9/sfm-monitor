@@ -4,11 +4,14 @@ type: software
 title: "SFM Risk Monitor"
 abstract: "Dashboard público, citable y open source del riesgo del Sistema Financiero Mexicano. Agrega indicadores de Banxico, CNBV, INEGI, FMI y BIS."
 authors:
+  - family-names: "Ruiz Puga"
+    given-names: "Ingrid Pamela"
+    orcid: ""
   - family-names: "Padilla"
     given-names: "Artemio"
     orcid: ""
-repository-code: "https://github.com/ArtemioPadilla/sfm-risk-monitor"
-url: "https://sfmrisk.mx"
+repository-code: "https://github.com/Pamela-ruiz9/sfm-monitor"
+url: "https://pamela-ruiz9.github.io/sfm-monitor/"
 license: MIT
 keywords:
   - "sistema financiero mexicano"
