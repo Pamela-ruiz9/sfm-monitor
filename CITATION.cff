@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
-title: "SFM Risk Monitor"
+title: "SFM Monitor — Monitor de Riesgo del Sistema Financiero Mexicano"
 abstract: "Dashboard público, citable y open source del riesgo del Sistema Financiero Mexicano. Agrega indicadores de Banxico, CNBV, INEGI, FMI y BIS."
 authors:
   - family-names: "Ruiz Puga"
@@ -10,6 +10,8 @@ authors:
   - family-names: "Padilla"
     given-names: "Artemio"
     orcid: ""
+version: "0.1.0"
+date-released: "2026-04-27"
 repository-code: "https://github.com/Pamela-ruiz9/sfm-monitor"
 url: "https://pamela-ruiz9.github.io/sfm-monitor/"
 license: MIT
@@ -19,5 +21,7 @@ keywords:
   - "dashboard"
   - "banxico"
   - "cnbv"
+  - "ifrs9"
+  - "imor"
   - "open source"
   - "open data"

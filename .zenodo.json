@@ -1,0 +1,38 @@
+{
+  "title": "SFM Monitor — Monitor de Riesgo del Sistema Financiero Mexicano",
+  "description": "<p>Dashboard público, citable y open source del riesgo del Sistema Financiero Mexicano. Agrega indicadores de riesgo de crédito (IMOR, IMORA, ICOR, IFRS9), riesgo de mercado (FX, tasas) y contexto macro de fuentes oficiales: Banxico SIE, CNBV Portafolio de Información, e INEGI BIE.</p><p>Versión 0.1.0 — implementación inicial en HTML/CSS/JS estático con Chart.js, deploy en GitHub Pages, actualización automática diaria de Banxico vía GitHub Actions.</p>",
+  "creators": [
+    {
+      "name": "Ruiz Puga, Ingrid Pamela",
+      "affiliation": "BBVA México"
+    },
+    {
+      "name": "Padilla, Artemio"
+    }
+  ],
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "sistema financiero mexicano",
+    "riesgo financiero",
+    "dashboard",
+    "banxico",
+    "cnbv",
+    "ifrs9",
+    "imor",
+    "open data",
+    "open source",
+    "fintech"
+  ],
+  "language": "spa",
+  "communities": [],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Pamela-ruiz9/sfm-monitor",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Datos de fuentes públicas oficiales (Banxico SIE, CNBV, INEGI). Las licencias de los datos crudos retienen los términos originales de cada fuente upstream. El código del dashboard está bajo licencia MIT; el contenido editorial y datasets derivados bajo CC-BY 4.0 (ver LICENSE-CONTENT). Este proyecto NO es producto oficial de Banxico/CNBV/INEGI y no constituye asesoría financiera ni de inversión."
+}

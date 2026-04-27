@@ -5,6 +5,8 @@ Dashboard público de riesgo financiero para México — datos reales de CNBV y 
 
 🔗 **Live:** [pamela-ruiz9.github.io/sfm-monitor](https://pamela-ruiz9.github.io/sfm-monitor)
 📋 **Roadmap:** [pamela-ruiz9.github.io/sfm-monitor/roadmap.html](https://pamela-ruiz9.github.io/sfm-monitor/roadmap.html)
+🧭 **Blueprint:** [docs/research/blueprint-2026.md](docs/research/blueprint-2026.md)
+📜 **Versión actual:** `v0.1.0` ([CHANGELOG](CHANGELOG.md))
 
 ---
 
@@ -118,9 +120,32 @@ Ver roadmap interactivo en [roadmap.html](https://pamela-ruiz9.github.io/sfm-mon
 
 ---
 
-## 👩‍💻 Autora
+## 📚 Cómo citar
 
-**Pame Ruiz** — Científica de datos, BBVA México
-Proyecto personal para monitoreo del Sistema Financiero Mexicano.
+Si usas SFM Monitor en investigación, periodismo o análisis, por favor cita:
 
-_Datos de fuentes públicas oficiales. No constituye asesoría financiera._
+```
+Ruiz Puga, I. P., & Padilla, A. (2026). SFM Monitor — Monitor de Riesgo del
+Sistema Financiero Mexicano (Versión 0.1.0). Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+```
+
+GitHub muestra el botón **Cite this repository** (arriba a la derecha) con APA y BibTeX listos para copiar — basado en [`CITATION.cff`](CITATION.cff).
+
+Guía completa de citabilidad y registro de DOI Zenodo: [`docs/citability.md`](docs/citability.md).
+
+---
+
+## 📜 Licencia
+
+- **Código** ([`LICENSE`](LICENSE)): MIT
+- **Contenido editorial y datasets derivados** ([`LICENSE-CONTENT`](LICENSE-CONTENT)): CC-BY 4.0
+- **Datos crudos**: retienen licencia original de la fuente upstream (Banxico/CNBV/INEGI). Ver atribución textual requerida en [`docs/citability.md`](docs/citability.md).
+
+---
+
+## 👩‍💻 Autores
+
+- **Ingrid Pamela Ruiz Puga** — Científica de datos, BBVA México (autora principal del dashboard y del trabajo de datos)
+- **Artemio Padilla** — Coautor del blueprint estratégico 2026 y migración a stack Astro
+
+_Datos de fuentes públicas oficiales. Este dashboard NO es producto oficial de Banxico/CNBV/INEGI. No constituye asesoría financiera ni de inversión._
