@@ -5,6 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SFM Risk Monitor · Sistema Financiero Mexicano</title>
 <meta name="description" content="Dashboard público de riesgo del Sistema Financiero Mexicano. Indicadores de crédito, mercado y macro. Fuentes: CNBV, Banxico, INEGI.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalog",
+  "name": "SFM Risk Monitor",
+  "description": "Dashboard público de indicadores de riesgo del Sistema Financiero Mexicano. Incluye IMOR, ICAP, LCR, ROA, ROE, tasas Banxico y tipo de cambio. Fuentes: CNBV Portafolio de Información, Banxico SIE.",
+  "url": "https://pamela-ruiz9.github.io/sfm-monitor/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Person",
+    "name": "Pamela Ruiz",
+    "url": "https://github.com/Pamela-ruiz9"
+  },
+  "dateModified": "2026-04-27",
+  "inLanguage": "es",
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "name": "Indicadores Banca Múltiple México",
+      "description": "IMOR, IMORA, ICOR, ICAP, LCR, ROA, ROE de la Banca Múltiple. Fuente: CNBV Portafolio de Información, Sector 40.",
+      "url": "https://pamela-ruiz9.github.io/sfm-monitor/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": {"@type": "Person", "name": "Pamela Ruiz"},
+      "spatialCoverage": "México",
+      "temporalCoverage": "2010/..",
+      "distribution": [{
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "contentUrl": "https://pamela-ruiz9.github.io/sfm-monitor/data/sfm-data.json"
+      }]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Indicadores Monetarios y de Mercado México",
+      "description": "Tasa objetivo Banxico, TIIE, tipo de cambio MXN/USD, CETES, inflación INPC. Fuente: Banxico SIE.",
+      "url": "https://pamela-ruiz9.github.io/sfm-monitor/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": {"@type": "Person", "name": "Pamela Ruiz"},
+      "spatialCoverage": "México",
+      "temporalCoverage": "2000/.."
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
