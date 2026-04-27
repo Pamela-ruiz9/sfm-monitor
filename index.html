@@ -1173,9 +1173,11 @@
     document.getElementById('sector-bm-btn')?.classList.toggle('active', isBM);
     document.getElementById('sector-sofipos-btn')?.classList.toggle('active', !isBM);
     document.getElementById('nivel2-bm').style.display = isBM ? 'flex' : 'none';
+    document.getElementById('nivel2-sofipos') && (document.getElementById('nivel2-sofipos').style.display = !isBM ? 'flex' : 'none');
     document.getElementById('imor-cartera-row').style.display = isBM && imorsegView === 'cartera' ? 'flex' : 'none';
     document.getElementById('imor-banco-row').style.display = isBM && imorsegView === 'banco' ? 'flex' : 'none';
-    document.getElementById('imor-sofipos-row').style.display = !isBM ? 'flex' : 'none';
+    document.getElementById('imor-sofipos-row').style.display = !isBM && sfView === 'cartera' ? 'flex' : 'none';
+    document.getElementById('imor-sofipos-entidad-row') && (document.getElementById('imor-sofipos-entidad-row').style.display = !isBM && sfView === 'entidad' ? 'flex' : 'none');
     const srcEl = document.getElementById('imor-source');
     if (srcEl) srcEl.textContent = isBM ? 'Fuente: CNBV · Banca Múltiple · Sistema total' : 'Fuente: CNBV · SoFiPOs · 2016–2025';
     // Adjust Y axis range for sector
@@ -1798,6 +1800,9 @@
       if (json.sofipos) {
         sofiposData = json.sofipos;
         buildSofiposChart(sofipoPeriod);
+        if (json.sofipos.historico_por_entidad) {
+          sofiposEntidadData = json.sofipos.historico_por_entidad;
+        }
       }
       if (json.ifrs9) {
         ifrs9DataStore = json.ifrs9;
@@ -1836,6 +1841,78 @@
       });
     });
   });
+
+  // ===== SOFIPOS POR ENTIDAD =====
+  let sfView = 'cartera';
+  let sfCurrentEntidad = null;
+  let sofiposEntidadData = null;
+
+  function switchSfView(view) {
+    sfView = view;
+    document.getElementById('sf-view-cartera-btn')?.classList.toggle('active', view === 'cartera');
+    document.getElementById('sf-view-entidad-btn')?.classList.toggle('active', view === 'entidad');
+    document.getElementById('imor-sofipos-row').style.display = view === 'cartera' ? 'flex' : 'none';
+    document.getElementById('imor-sofipos-entidad-row').style.display = view === 'entidad' ? 'flex' : 'none';
+    if (view === 'entidad') { buildSofiposEntidades(); if (sfCurrentEntidad) buildSofiposEntidadChart(sfCurrentEntidad, imorsegCurrentMonths); }
+    else buildSofiposImor(sofiposCurrentKey, imorsegCurrentMonths);
+  }
+
+  function buildSofiposEntidades() {
+    if (!sofiposEntidadData) return;
+    const sel = document.getElementById('sofipos-entidad-selector');
+    if (!sel || sel.children.length > 0) return;
+    const entidades = sofiposEntidadData.entidades;
+    // Sort by latest IMOR
+    const sorted = Object.entries(entidades).sort((a,b) => (b[1].imor_latest||0) - (a[1].imor_latest||0));
+    sorted.slice(0,15).forEach(([id, e]) => {
+      const imor = e.imor_latest;
+      const color = imor > 20 ? '#f85149' : imor > 10 ? '#d29922' : '#3fb950';
+      const btn = document.createElement('button');
+      btn.className = 'cartera-btn';
+      btn.dataset.entid = id;
+      btn.dataset.color = color;
+      btn.style.fontSize = '0.65rem';
+      btn.innerHTML = e.nombre + ' <span style="color:' + color + '">' + (imor ? imor.toFixed(1)+'%' : '') + '</span>';
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('#sofipos-entidad-selector .cartera-btn').forEach(b => { b.classList.remove('active'); b.style.borderColor=''; b.style.background=''; });
+        this.classList.add('active');
+        this.style.borderColor = color; this.style.background = color + '15';
+        sfCurrentEntidad = id;
+        buildSofiposEntidadChart(id, imorsegCurrentMonths);
+      });
+      sel.appendChild(btn);
+    });
+    // Auto-select first
+    if (sorted.length > 0) { sfCurrentEntidad = sorted[0][0]; sel.children[0]?.click(); }
+  }
+
+  function buildSofiposEntidadChart(entId, months) {
+    if (!sofiposEntidadData) return;
+    const e = sofiposEntidadData.entidades[entId];
+    if (!e) return;
+    const allL = sofiposEntidadData.fechas;
+    const allV = e.imor || [];
+    const labels = months === 0 ? allL : allL.slice(-months);
+    const vals = months === 0 ? allV : allV.slice(-months);
+    const color = document.querySelector('#sofipos-entidad-selector .cartera-btn.active')?.dataset.color || '#f85149';
+    const latest = vals.filter(v=>v!=null).slice(-1)[0];
+    const valEl = document.getElementById('imor-sofipos-entidad-valor');
+    if (valEl) { valEl.textContent = latest != null ? latest.toFixed(1)+'%' : '—'; valEl.style.color = latest > 20 ? '#f85149' : latest > 10 ? '#d29922' : '#3fb950'; }
+    const subEl = document.getElementById('imor-seg-subtitle');
+    if (subEl) subEl.textContent = 'SoFiPOs · ' + e.nombre + ' · ' + (months === 0 ? 'Histórico' : 'Últimos ' + months + 'm');
+    if (imorsegChart) {
+      imorsegChart.data.labels = labels;
+      imorsegChart.data.datasets[0].data = vals;
+      imorsegChart.data.datasets[0].borderColor = color;
+      imorsegChart.data.datasets[0].backgroundColor = color + '18';
+      imorsegChart.data.datasets[0].pointBackgroundColor = color;
+      if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = {};
+      if (imorsegChart.options.scales.y) imorsegChart.options.scales.y.suggestedMax = 70;
+      imorsegChart.update();
+    }
+  }
+  window.switchSfView = switchSfView;
+  window.buildSofiposEntidadChart = buildSofiposEntidadChart;
 
   // Expose all interactive functions to global scope
   window.buildImorsegChart = buildImorsegChart;
