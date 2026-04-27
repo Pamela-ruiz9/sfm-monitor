@@ -1251,6 +1251,13 @@
       imorsegChart.data.datasets[0].backgroundColor = color + '18';
       imorsegChart.data.datasets[0].pointBackgroundColor = color;
       if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = annotations;
+      // Fix Y max based on full series (so scale stays consistent across 12M/3A/Histórico)
+      if (imorsegChart.options.scales.y) {
+        const fullMax = allData.filter(v=>v!=null).reduce((a,b)=>Math.max(a,b), 0);
+        const yMax = Math.max(Math.ceil(fullMax * 1.15 / 5) * 5, 5);
+        imorsegChart.options.scales.y.max = yMax;
+        delete imorsegChart.options.scales.y.suggestedMax;
+      }
       imorsegChart.update();
     } else {
       const ctx = document.getElementById('chart-imor-seg')?.getContext('2d');
@@ -1342,6 +1349,12 @@
     if (imorsegChart) {
       imorsegChart.data.labels = labels; imorsegChart.data.datasets[0].data = vals; imorsegChart.data.datasets[0].borderColor = color; imorsegChart.data.datasets[0].backgroundColor = color+'18'; imorsegChart.data.datasets[0].pointBackgroundColor = color;
       if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = annotations;
+      if (imorsegChart.options.scales.y) {
+        const fullMax = allVals.filter(v=>v!=null).reduce((a,b)=>Math.max(a,b), 0);
+        const yMax = Math.max(Math.ceil(fullMax * 1.15 / 5) * 5, 5);
+        imorsegChart.options.scales.y.max = yMax;
+        delete imorsegChart.options.scales.y.suggestedMax;
+      }
       imorsegChart.update();
     }
   }
@@ -2040,7 +2053,8 @@
     const top15 = allEntries.filter(([id]) => TOP15_BY_ASSET.includes(id)).sort((a,b) => TOP15_BY_ASSET.indexOf(a[0]) - TOP15_BY_ASSET.indexOf(b[0]));
     const rest = allEntries.filter(([id]) => !TOP15_BY_ASSET.includes(id) && id !== '027022').sort((a,b) => (b[1].imor_latest||0) - (a[1].imor_latest||0));
     const sorted = top15.concat(rest);
-    sorted.forEach(([id, e]) => {
+    // Show only top 15 by asset size
+    sorted.slice(0, 15).forEach(([id, e]) => {
       const imor = e.imor_latest;
       const color = imor > 20 ? '#f85149' : imor > 10 ? '#d29922' : '#3fb950';
       const btn = document.createElement('button');
