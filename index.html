@@ -1178,6 +1178,8 @@
 <script>
 (function() {
   // ==== Chart.js global defaults ====
+  const indicCharts = {};  // must be declared before chart init
+  let roaCurrentKey = 'roa';
   const C = {
     text: '#e6edf3',
     dim: '#8b949e',
@@ -2243,8 +2245,7 @@
   window.bxcCurrentKey = bxcCurrentKey;
 
   // ===== INDICADORES CREDITO: IMORA, ICOR, ROA/ROE =====
-  const indicCharts = {};
-  let roaCurrentKey = 'roa';
+
 
   function initIndicChart(id, color, yMin, yMax, suffix, data, labels) {
     const ctx = document.getElementById(id)?.getContext('2d');
