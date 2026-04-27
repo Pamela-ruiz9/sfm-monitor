@@ -1123,6 +1123,12 @@
       imorsegChart.data.datasets[0].backgroundColor = color + '18';
       imorsegChart.data.datasets[0].pointBackgroundColor = color;
       if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = annotations;
+      // Update Y axis max based on visible data
+      const validVals = data.filter(v => v != null);
+      if (validVals.length && imorsegChart.options.scales.y) {
+        const dataMax = Math.max(...validVals);
+        imorsegChart.options.scales.y.suggestedMax = Math.max(dataMax * 1.15, currentSector === 'sofipos' ? 35 : 15);
+      }
       imorsegChart.update();
     } else {
       const ctx = document.getElementById('chart-imor-seg')?.getContext('2d');
@@ -1178,6 +1184,11 @@
     document.getElementById('imor-sofipos-row').style.display = !isBM ? 'flex' : 'none';
     const srcEl = document.getElementById('imor-source');
     if (srcEl) srcEl.textContent = isBM ? 'Fuente: CNBV · Banca Múltiple · Sistema total' : 'Fuente: CNBV · SoFiPOs · 2016–2025';
+    // Adjust Y axis range for sector
+    if (imorsegChart && imorsegChart.options.scales.y) {
+      imorsegChart.options.scales.y.suggestedMax = isBM ? 15 : 35;
+      imorsegChart.options.scales.y.min = 0;
+    }
     if (!isBM) buildSofiposImor(sofiposCurrentKey, imorsegCurrentMonths);
     else { if (imorsegView === 'banco') buildImorsegBankChart(imorsegCurrentBank, imorsegCurrentMonths); else buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths); }
   }
@@ -1817,6 +1828,19 @@
     })
     .catch(err => console.warn('fetch sfm-data.json fallo:', err));
 
+
+  // Wire SoFiPOs segment selector (must run after DOM)
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('#sofipos-seg-selector .cartera-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('#sofipos-seg-selector .cartera-btn').forEach(function(b) { b.classList.remove('active'); b.style.borderColor=''; b.style.color=''; b.style.background=''; });
+        this.classList.add('active');
+        var c = this.dataset.color; this.style.borderColor=c; this.style.color=c; this.style.background=c+'15';
+        sofiposCurrentKey = this.dataset.sfkey;
+        buildSofiposImor(sofiposCurrentKey, imorsegCurrentMonths);
+      });
+    });
+  });
 
   // Expose all interactive functions to global scope
   window.buildImorsegChart = buildImorsegChart;
