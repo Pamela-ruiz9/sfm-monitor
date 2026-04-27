@@ -640,6 +640,18 @@
         </div>
 
         <!-- SELECTOR SOFIPOS -->
+        <!-- NIVEL 2 SoFiPOs -->
+        <div id="nivel2-sofipos" style="display:none; gap:0.4rem; margin-bottom:0.8rem;">
+          <button class="period-btn active" id="sf-view-cartera-btn" onclick="switchSfView('cartera')">Por cartera</button>
+          <button class="period-btn" id="sf-view-entidad-btn" onclick="switchSfView('entidad')">Por entidad</button>
+        </div>
+
+        <!-- SELECTOR ENTIDADES SOFIPOS -->
+        <div id="imor-sofipos-entidad-row" style="display:none; justify-content:space-between; align-items:center; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap; max-height:90px; overflow-y:auto;" id="sofipos-entidad-selector"></div>
+          <div class="metric-value" id="imor-sofipos-entidad-valor" style="font-size:2rem; margin:0; color:#f85149;">—</div>
+        </div>
+
         <div id="imor-sofipos-row" style="display:none; justify-content:space-between; align-items:center; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
           <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="sofipos-seg-selector">
             <button class="cartera-btn active" data-sfkey="imor_total" data-label="Total" data-color="#f85149">Sistema</button>
