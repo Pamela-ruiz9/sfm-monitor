@@ -1796,6 +1796,8 @@
       if (json.credito && json.credito.historico_por_cartera) {
         imorsegData = json.credito.historico_por_cartera;
         window.imorsegData = imorsegData;  // sync to global
+        // Destroy and recreate chart with real historical data
+        if (imorsegChart) { imorsegChart.destroy(); imorsegChart = null; }
         buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
 
         // Update ICOR chart with real data
