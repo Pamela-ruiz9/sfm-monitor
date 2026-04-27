@@ -253,3 +253,60 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 ---
 
 *Última actualización: 27 de abril 2026 — Nyx 🌙*
+
+---
+
+## Métricas disponibles en CSV CNBV — backlog para implementar
+
+> Inventario de indicadores que ya están en los archivos descargados y pueden agregarse al dashboard sin descargar nada nuevo.
+
+### Del CSV sh_datos_40.csv (Sector 40 Banca Múltiple — 303 meses, dic 2000 – feb 2026)
+
+| Métrica | Concepto CNBV | Nivel disponible | Prioridad |
+|---|---|---|---|
+| IMORA por banco G-7 | 40200033 × entidad | Sistema, por banco | Alta |
+| ICOR por banco G-7 | 40200096 × entidad | Sistema, por banco | Alta |
+| ROA y ROE por banco G-7 | 40200001/002 × entidad | Sistema, por banco | Alta |
+| Tasa de interés implícita activa | 40200162 | Sistema, por cartera | Alta |
+| Tasa de interés implícita pasiva | 40200037 | Sistema | Alta |
+| Margen de intermediación financiera (MIF) | 40200218 | Sistema | Alta |
+| Tasa de deterioro ajustada (TDA) | 40200074 | Sistema, por cartera | Media |
+| EPRC / Cartera IFRS9 (E1+E2+E3) | 40200118 | Sistema, por cartera | Media |
+| Quitas y castigos — flujo 12 meses | 40200193 | Sistema, por cartera | Media |
+| Crecimiento de cartera total (flujo anual) | Balance conceptos | Sistema, por cartera | Media |
+
+### Del R12A IFRS9 (ya descargado — dic 2019 – feb 2026)
+
+| Métrica | Disponibilidad | Prioridad |
+|---|---|---|
+| IFRS9 etapas 1/2/3 por banco G-7 | Por entidad | Alta |
+| IFRS9 etapas por segmento de cartera | Comercial/Consumo/Vivienda | Alta |
+
+### SoFiPOs (requiere CSV R11 por institución — pendiente descarga)
+
+| Métrica | Disponibilidad actual | Lo que falta |
+|---|---|---|
+| IMORA e ICOR por entidad | Solo sistema total | CSV R11 con cve_institucion individual |
+| IMOR por cartera × entidad | Solo sistema total | Mismo CSV R11 |
+| IFRS9 etapas por entidad SoFiPO | No disponible | R12A SoFiPOs |
+
+### Otros reportes CNBV (pendientes de descarga)
+
+| Métrica | Fuente | Notas |
+|---|---|---|
+| Liquidez LCR y NSFR | Reporte R13/similar | Basilea III — activos líquidos / salidas netas 30 días |
+| ICAP índice de capitalización | Reporte de solvencia | Capital neto / Activos sujetos a riesgo — mínimo 10.5% |
+
+### Banxico SIE API (token activo — solo falta agregar al JSON y al dashboard)
+
+| Métrica | Serie | Frecuencia |
+|---|---|---|
+| Reservas internacionales brutas | SF43707 | Semanal |
+| TIIE de Fondeo (nueva referencia) | SF343410 | Diaria |
+| PIB trimestral / IGAE proxy mensual | INEGI BIE 736181 | T+53 días |
+| INPC subyacente | SP74625 | Mensual |
+| INPC no subyacente | SP74627 | Mensual |
+
+---
+
+*Actualizado: 27 de abril 2026 — Nyx 🌙*
