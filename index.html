@@ -1795,6 +1795,7 @@
       // Load IMOR por cartera data
       if (json.credito && json.credito.historico_por_cartera) {
         imorsegData = json.credito.historico_por_cartera;
+        window.imorsegData = imorsegData;  // sync to global
         buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
 
         // Update ICOR chart with real data
@@ -2062,8 +2063,18 @@
   window.bxcCurrentBank = bxcCurrentBank;
   window.bxcCurrentKey = bxcCurrentKey;
 
-  // Expose all interactive functions to global scope
+  // Expose all interactive functions and variables to global scope
   window.buildImorsegChart = buildImorsegChart;
+  window.imorsegData = imorsegData;
+  window.imorsegCurrentMonths = imorsegCurrentMonths;
+  window.imorsegCurrentKey = imorsegCurrentKey;
+  window.imorsegView = imorsegView;
+  window.currentSector = currentSector;
+  window.sfView = sfView;
+  window.sofiposData = sofiposData;
+  window.bxcData = bxcData;
+  window.bxcCurrentBank = bxcCurrentBank;
+  window.bxcCurrentKey = bxcCurrentKey;
   window.setImorsegPeriod = setImorsegPeriod;
   window.switchImorsegView = switchImorsegView;
   window.switchSector = switchSector;
