@@ -756,99 +756,87 @@
       <!-- CARD: IMORA -->
       <div class="card">
         <div class="card-header">
-          <div>
-            <div class="card-title">IMORA — Índice de Morosidad Ajustado</div>
-            <div class="card-subtitle" id="imora-subtitle">Feb 2026</div>
-          </div>
+          <div><div class="card-title">IMORA — Índice de Morosidad Ajustado</div><div class="card-subtitle" id="imora-subtitle">Sistema · Histórico</div></div>
           <span class="signal" id="imora-signal">—</span>
         </div>
         <div class="metric-value" id="imora-val" style="margin-bottom:0.3rem;">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
         <div class="metric-label">Cartera vencida + reestructurada / cartera total</div>
         <div class="chart-wrap"><canvas id="chart-imora"></canvas></div>
         <div class="period-selector">
-          <button class="period-btn" onclick="setIndicPeriod(this,'chart-imora',12)">12M</button>
-          <button class="period-btn" onclick="setIndicPeriod(this,'chart-imora',36)">3A</button>
-          <button class="period-btn active" onclick="setIndicPeriod(this,'chart-imora',0)">Histórico</button>
+          <button class="period-btn" onclick="setIndicPeriod(this,'imora',12)">12M</button>
+          <button class="period-btn" onclick="setIndicPeriod(this,'imora',36)">3A</button>
+          <button class="period-btn active" onclick="setIndicPeriod(this,'imora',0)">Histórico</button>
         </div>
-        <div class="source">Fuente: CNBV · Sector 40 Banca Múltiple · Sistema total</div>
+        <div class="source">Fuente: CNBV · Concepto 40200033</div>
         <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
         <div class="kpi-info-panel">
-          <div class="kpi-info-def">El IMORA incluye no solo la cartera vencida sino también la cartera en reestructura o prórroga. Captura el deterioro <strong>antes</strong> de que llegue a vencida — es un indicador más adelantado que el IMOR tradicional.</div>
-          <div class="kpi-info-row"><span class="label">Fórmula:</span><span class="val">IMORA = (Cartera vencida + Cartera reestructurada) / Cartera total × 100</span></div>
+          <div class="kpi-info-def">Incluye cartera vencida <strong>más</strong> cartera en reestructura. Captura el deterioro antes de que llegue a vencida — indicador más adelantado que el IMOR.</div>
+          <div class="kpi-info-row"><span class="label">Fórmula:</span><span class="val">(Cartera vencida + Reestructurada) / Cartera total × 100</span></div>
           <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde ≤6% · Amarillo 6–9% · Rojo >9%</span></div>
-          <div class="kpi-info-row"><span class="label">Interpretación:</span><span class="val">IMORA ÷ IMOR > 2x sugiere que hay mucha cartera en zona de riesgo que no ha vencido aún.</span></div>
-          <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Concepto 40200033.</span></div>
+          <div class="kpi-info-row"><span class="label">Señal:</span><span class="val">IMORA ÷ IMOR > 2x = mucha cartera en zona de riesgo sin vencer aún.</span></div>
         </div>
       </div>
 
       <!-- CARD: ICOR -->
       <div class="card">
         <div class="card-header">
-          <div>
-            <div class="card-title">ICOR — Índice de Cobertura</div>
-            <div class="card-subtitle" id="icor-subtitle">Feb 2026</div>
-          </div>
+          <div><div class="card-title">ICOR — Índice de Cobertura</div><div class="card-subtitle" id="icor-subtitle">Sistema · Histórico</div></div>
           <span class="signal" id="icor-signal">—</span>
         </div>
         <div class="metric-value" id="icor-val" style="margin-bottom:0.3rem;">—<span style="font-size:0.5em;color:var(--text-dim)">x</span></div>
         <div class="metric-label">Reservas preventivas / cartera vencida</div>
         <div class="chart-wrap"><canvas id="chart-icor"></canvas></div>
         <div class="period-selector">
-          <button class="period-btn" onclick="setIndicPeriod(this,'chart-icor',12)">12M</button>
-          <button class="period-btn" onclick="setIndicPeriod(this,'chart-icor',36)">3A</button>
-          <button class="period-btn active" onclick="setIndicPeriod(this,'chart-icor',0)">Histórico</button>
+          <button class="period-btn" onclick="setIndicPeriod(this,'icor',12)">12M</button>
+          <button class="period-btn" onclick="setIndicPeriod(this,'icor',36)">3A</button>
+          <button class="period-btn active" onclick="setIndicPeriod(this,'icor',0)">Histórico</button>
         </div>
         <div class="source">Fuente: CNBV · Concepto 40200096</div>
         <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
         <div class="kpi-info-panel">
-          <div class="kpi-info-def">El ICOR mide cuántas veces las reservas preventivas cubren la cartera vencida. Un ICOR de 1.5x significa que el banco tiene $1.50 en reservas por cada peso de cartera vencida — puede absorber pérdidas y tener margen adicional.</div>
-          <div class="kpi-info-row"><span class="label">Fórmula:</span><span class="val">ICOR = Estimación preventiva para riesgos crediticios / Cartera vencida</span></div>
-          <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde ≥1.3x · Amarillo 1.0–1.3x · Rojo &lt;1.0x (insuficiente)</span></div>
-          <div class="kpi-info-row"><span class="label">Interpretación:</span><span class="val">ICOR &lt;1.0x significa que las reservas son insuficientes para cubrir la cartera vencida — señal crítica.</span></div>
-          <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Concepto 40200096.</span></div>
+          <div class="kpi-info-def">Cuántas veces las reservas cubren la cartera vencida. ICOR 1.5x = $1.50 en reservas por cada peso vencido.</div>
+          <div class="kpi-info-row"><span class="label">Fórmula:</span><span class="val">Reservas preventivas / Cartera vencida</span></div>
+          <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde ≥1.3x · Amarillo 1.0–1.3x · Rojo &lt;1.0x</span></div>
+          <div class="kpi-info-row"><span class="label">Señal crítica:</span><span class="val">ICOR &lt;1.0x = reservas insuficientes para cubrir la cartera vencida.</span></div>
         </div>
       </div>
 
-      <!-- CARD: ROA y ROE -->
-      <div class="card" style="grid-column: 1 / -1;">
+      <!-- CARD: ROA + ROE -->
+      <div class="card" style="grid-column:1/-1;">
         <div class="card-header">
-          <div>
-            <div class="card-title">ROA y ROE — Rentabilidad del Sistema Bancario</div>
-            <div class="card-subtitle" id="roaroe-subtitle">Feb 2026</div>
-          </div>
+          <div><div class="card-title">Rentabilidad — ROA y ROE</div><div class="card-subtitle" id="roaroe-subtitle">Sistema · Histórico</div></div>
           <span class="signal" id="roaroe-signal">—</span>
         </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:0.8rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:0.8rem;">
           <div>
-            <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-dim); margin-bottom:0.2rem;">ROA</div>
-            <div class="metric-value" id="roa-val" style="font-size:2rem; margin:0;">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
+            <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dim);margin-bottom:0.2rem;">ROA</div>
+            <div class="metric-value" id="roa-val" style="font-size:2rem;margin:0;">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
             <div class="metric-label" style="margin-top:0.2rem;">Rendimiento sobre activos</div>
           </div>
           <div>
-            <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-dim); margin-bottom:0.2rem;">ROE</div>
-            <div class="metric-value" id="roe-val" style="font-size:2rem; margin:0;">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
+            <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dim);margin-bottom:0.2rem;">ROE</div>
+            <div class="metric-value" id="roe-val" style="font-size:2rem;margin:0;">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
             <div class="metric-label" style="margin-top:0.2rem;">Rendimiento sobre capital</div>
           </div>
         </div>
-        <div style="display:flex; gap:0.4rem; margin-bottom:0.5rem;">
-          <button class="cartera-btn active" data-roakey="roa" data-color="#c4a35a">ROA</button>
+        <div style="display:flex;gap:0.4rem;margin-bottom:0.5rem;">
+          <button class="cartera-btn active" data-roakey="roa" data-color="#c4a35a" style="border-color:#c4a35a;color:#c4a35a;background:#c4a35a15;">ROA</button>
           <button class="cartera-btn" data-roakey="roe" data-color="#1f6feb">ROE</button>
         </div>
         <div class="chart-wrap" style="height:220px;"><canvas id="chart-roa"></canvas></div>
         <div class="period-selector">
-          <button class="period-btn" onclick="setIndicPeriod(this,'chart-roa',12)">12M</button>
-          <button class="period-btn" onclick="setIndicPeriod(this,'chart-roa',36)">3A</button>
-          <button class="period-btn active" onclick="setIndicPeriod(this,'chart-roa',0)">Histórico</button>
+          <button class="period-btn" onclick="setIndicPeriod(this,'roa',12)">12M</button>
+          <button class="period-btn" onclick="setIndicPeriod(this,'roa',36)">3A</button>
+          <button class="period-btn active" onclick="setIndicPeriod(this,'roa',0)">Histórico</button>
         </div>
         <div class="source">Fuente: CNBV · Conceptos 40200001 (ROA) y 40200002 (ROE)</div>
         <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
         <div class="kpi-info-panel">
-          <div class="kpi-info-def"><strong>ROA</strong> mide qué tan eficientemente usa el banco sus activos para generar utilidades. <strong>ROE</strong> mide el retorno para los accionistas sobre su capital invertido.</div>
-          <div class="kpi-info-row"><span class="label">Fórmula ROA:</span><span class="val">Utilidad neta anualizada / Activo total promedio × 100</span></div>
-          <div class="kpi-info-row"><span class="label">Fórmula ROE:</span><span class="val">Utilidad neta anualizada / Capital contable promedio × 100</span></div>
-          <div class="kpi-info-row"><span class="label">Semáforo ROA:</span><span class="val">Verde >1.5% · Amarillo 0.5–1.5% · Rojo &lt;0.5% o negativo</span></div>
-          <div class="kpi-info-row"><span class="label">Semáforo ROE:</span><span class="val">Verde >12% · Amarillo 6–12% · Rojo &lt;6% o negativo</span></div>
-          <div class="kpi-info-row"><span class="label">Interpretación:</span><span class="val">ROA <0.5% indica problemas de eficiencia. ROE &lt;6% sugiere que el banco no remunera bien al capital frente a otras inversiones.</span></div>
+          <div class="kpi-info-def"><strong>ROA:</strong> eficiencia en uso de activos para generar utilidades. <strong>ROE:</strong> retorno para accionistas sobre capital invertido.</div>
+          <div class="kpi-info-row"><span class="label">ROA:</span><span class="val">Utilidad neta anualizada / Activo total promedio × 100</span></div>
+          <div class="kpi-info-row"><span class="label">ROE:</span><span class="val">Utilidad neta anualizada / Capital contable promedio × 100</span></div>
+          <div class="kpi-info-row"><span class="label">Semáforo ROA:</span><span class="val">Verde >1.5% · Amarillo 0.5–1.5% · Rojo &lt;0.5%</span></div>
+          <div class="kpi-info-row"><span class="label">Semáforo ROE:</span><span class="val">Verde >12% · Amarillo 6–12% · Rojo &lt;6%</span></div>
         </div>
       </div>
 
@@ -1178,8 +1166,6 @@
 <script>
 (function() {
   // ==== Chart.js global defaults ====
-  const indicCharts = {};  // must be declared before chart init
-  let roaCurrentKey = 'roa';
   const C = {
     text: '#e6edf3',
     dim: '#8b949e',
@@ -1564,55 +1550,6 @@
 
   const allMonthLabels = monthLabels2023to2026mar();
 
-  // Initialize IMORA, ICOR, ROA charts with empty data (populated after fetch)
-  (function() {
-    const placeholder12 = new Array(allMonthLabels.length).fill(null);
-    // IMORA
-    const imoraCtx = document.getElementById('chart-imora')?.getContext('2d');
-    if (imoraCtx) {
-      indicCharts['chart-imora'] = new Chart(imoraCtx, {
-        type: 'line',
-        data: { labels: allMonthLabels, datasets: [{ data: placeholder12, borderColor: '#d29922', backgroundColor: '#d2992215', borderWidth: 2, pointRadius: 0, tension: 0.2, fill: true, spanGaps: true }] },
-        options: { responsive: true, maintainAspectRatio: false, interaction:{mode:'index',intersect:false}, plugins:{legend:{display:false},annotation:{}}, scales: { x:{grid:{display:false},ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0}}, y:{min:0,suggestedMax:12,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+'%'}} } }
-      });
-    }
-    // ICOR
-    const icorCtx = document.getElementById('chart-icor')?.getContext('2d');
-    if (icorCtx) {
-      indicCharts['chart-icor'] = new Chart(icorCtx, {
-        type: 'line',
-        data: { labels: allMonthLabels, datasets: [{ data: placeholder12, borderColor: '#3fb950', backgroundColor: '#3fb95015', borderWidth: 2, pointRadius: 0, tension: 0.2, fill: true, spanGaps: true }] },
-        options: { responsive: true, maintainAspectRatio: false, interaction:{mode:'index',intersect:false}, plugins:{legend:{display:false},annotation:{}}, scales: { x:{grid:{display:false},ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0}}, y:{min:0,suggestedMax:3,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+'x'}} } }
-      });
-    }
-    // IFRS9 (initialize with empty data)
-    const ifrs9Ctx = document.getElementById('chart-ifrs9')?.getContext('2d');
-    if (ifrs9Ctx) {
-      ifrs9Chart = new Chart(ifrs9Ctx, {
-        type: 'line',
-        data: { labels: allMonthLabels, datasets: [
-          { label: 'Etapa 1 (%)', data: new Array(allMonthLabels.length).fill(null), borderColor: '#3fb950', backgroundColor: 'rgba(63,185,80,0.08)', borderWidth: 2, pointRadius: 0, fill: true, tension: 0.2, yAxisID: 'y1' },
-          { label: 'Etapa 2 (%)', data: new Array(allMonthLabels.length).fill(null), borderColor: '#d29922', backgroundColor: 'rgba(209,153,34,0.12)', borderWidth: 2, pointRadius: 2, pointBackgroundColor: '#d29922', fill: true, tension: 0.3, yAxisID: 'y2' },
-          { label: 'Etapa 3 (%)', data: new Array(allMonthLabels.length).fill(null), borderColor: '#f85149', backgroundColor: 'rgba(248,81,73,0.08)', borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.2, yAxisID: 'y2' },
-        ]},
-        options: { responsive: true, maintainAspectRatio: false, interaction:{mode:'index',intersect:false},
-          plugins: { legend:{display:true,labels:{color:'#e6edf3',font:{size:10,family:'Inter'},usePointStyle:true,pointStyle:'circle'}}, tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.parsed.y.toFixed(2)+'%'}}, annotation:{} },
-          scales: { x:{grid:{display:false},ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:10,autoSkip:true,maxRotation:0}}, y1:{position:'left',min:93,max:100,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#7d8590',font:{size:9},callback:v=>v+'%'}}, y2:{position:'right',min:0,max:5,grid:{display:false},ticks:{color:'#7d8590',font:{size:9},callback:v=>v.toFixed(1)+'%'}} }
-        }
-      });
-    }
-
-    // ROA
-    const roaCtx = document.getElementById('chart-roa')?.getContext('2d');
-    if (roaCtx) {
-      indicCharts['chart-roa'] = new Chart(roaCtx, {
-        type: 'line',
-        data: { labels: allMonthLabels, datasets: [{ data: placeholder12, borderColor: '#c4a35a', backgroundColor: '#c4a35a15', borderWidth: 2, pointRadius: 0, tension: 0.2, fill: true, spanGaps: true }] },
-        options: { responsive: true, maintainAspectRatio: false, interaction:{mode:'index',intersect:false}, plugins:{legend:{display:false},annotation:{}}, scales: { x:{grid:{display:false},ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0}}, y:{suggestedMin:-2,suggestedMax:5,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+'%'}} } }
-      });
-    }
-  })();
-
   function makeGradient(ctx, area, color) {
     if (!area) return color;
     const g = ctx.createLinearGradient(0, area.top, 0, area.bottom);
@@ -1945,56 +1882,7 @@
       // Load IMOR por cartera data
       if (json.credito && json.credito.historico_por_cartera) {
         imorsegData = json.credito.historico_por_cartera;
-        window.imorsegData = imorsegData;  // sync to global
-        // Destroy and recreate chart with real historical data
-        if (imorsegChart) { imorsegChart.destroy(); imorsegChart = null; }
         buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
-
-        // Initialize IMORA, ICOR, ROA/ROE charts with historical data
-        const fechas = hpc.fechas || [];
-        const imora = hpc.imora_total || [];
-        const icor = hpc.icor_total || [];
-        const roa = hpc.roa || [];
-        const roe = hpc.roe || [];
-        // Update pre-initialized charts with real data
-        if (indicCharts['chart-imora']) {
-          indicCharts['chart-imora'].data.labels = fechas;
-          indicCharts['chart-imora'].data.datasets[0].data = imora;
-          indicCharts['chart-imora'].update();
-        }
-        if (indicCharts['chart-icor']) {
-          indicCharts['chart-icor'].data.labels = fechas;
-          indicCharts['chart-icor'].data.datasets[0].data = icor;
-          indicCharts['chart-icor'].update();
-        }
-        if (indicCharts['chart-roa']) {
-          indicCharts['chart-roa'].data.labels = fechas;
-          indicCharts['chart-roa'].data.datasets[0].data = roa;
-          indicCharts['chart-roa'].update();
-        }
-
-        // Update header KPI values
-        const latestImora = imora.filter(v=>v!=null).slice(-1)[0];
-        const latestIcor = icor.filter(v=>v!=null).slice(-1)[0];
-        const latestRoa = roa.filter(v=>v!=null).slice(-1)[0];
-        const latestRoe = roe.filter(v=>v!=null).slice(-1)[0];
-
-        const imoraEl = document.getElementById('imora-val');
-        if (imoraEl && latestImora) { imoraEl.innerHTML = latestImora.toFixed(2) + '<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; }
-        const icorEl = document.getElementById('icor-val');
-        if (icorEl && latestIcor) { icorEl.innerHTML = latestIcor.toFixed(2) + '<span style="font-size:0.5em;color:var(--text-dim)">x</span>'; }
-        const roaEl = document.getElementById('roa-val');
-        if (roaEl && latestRoa) { roaEl.innerHTML = latestRoa.toFixed(2) + '<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; }
-        const roeEl = document.getElementById('roe-val');
-        if (roeEl && latestRoe) { roeEl.innerHTML = latestRoe.toFixed(2) + '<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; }
-
-        // Signals
-        const imoraSig = document.getElementById('imora-signal');
-        if (imoraSig) { imoraSig.textContent = latestImora > 9 ? '🔴 Alto' : latestImora > 6 ? '🟡 Moderado' : '🟢 Normal'; imoraSig.className = 'signal '+(latestImora>9?'red':latestImora>6?'yellow':'green'); }
-        const icorSig = document.getElementById('icor-signal');
-        if (icorSig) { icorSig.textContent = latestIcor >= 1.3 ? '🟢 Sólida' : latestIcor >= 1.0 ? '🟡 Suficiente' : '🔴 Insuficiente'; icorSig.className = 'signal '+(latestIcor>=1.3?'green':latestIcor>=1.0?'yellow':'red'); }
-        const roaroeSig = document.getElementById('roaroe-signal');
-        if (roaroeSig) { roaroeSig.textContent = latestRoa >= 1.5 ? '🟢 Rentable' : latestRoa >= 0.5 ? '🟡 Moderado' : '🔴 Bajo'; roaroeSig.className = 'signal '+(latestRoa>=1.5?'green':latestRoa>=0.5?'yellow':'red'); }
 
         // Update ICOR chart with real data
         const hpc = json.credito.historico_por_cartera;
@@ -2052,15 +1940,6 @@
       }
       if (json.ifrs9) {
         ifrs9DataStore = json.ifrs9;
-        // Update pre-initialized chart
-        if (ifrs9Chart) {
-          const all = json.ifrs9;
-          ifrs9Chart.data.labels = all.fechas;
-          ifrs9Chart.data.datasets[0].data = all.etapa1_pct;
-          ifrs9Chart.data.datasets[1].data = all.etapa2_pct;
-          ifrs9Chart.data.datasets[2].data = all.etapa3_pct;
-          ifrs9Chart.update();
-        }
         buildIfrs9Chart(ifrs9CurrentMonths);
       }
       if (json.credito && json.credito.historico_por_banco) {
@@ -2075,6 +1954,38 @@
       // Re-trigger IMOR with historical data, respecting user's period selection
       if (currentSector === 'bm') {
         buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
+      }
+
+      // Update new indicator charts with real historical data
+      const _hpc = json.credito && json.credito.historico_por_cartera;
+      if (_hpc && _hpc.fechas && _hpc.fechas.length > 14) {
+        // IMORA
+        if (_indicCharts['imora']) {
+          _indicCharts['imora'].data.labels = _hpc.fechas;
+          _indicCharts['imora'].data.datasets[0].data = _hpc.imora_total || [];
+          _indicCharts['imora'].update();
+          const v = (_hpc.imora_total||[]).filter(x=>x!=null).slice(-1)[0];
+          if (v) { const el=document.getElementById('imora-val'); if(el) el.innerHTML=v.toFixed(2)+'<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; const sig=document.getElementById('imora-signal'); if(sig){sig.textContent=v>9?'🔴 Alto':v>6?'🟡 Moderado':'🟢 Normal';sig.className='signal '+(v>9?'red':v>6?'yellow':'green');} }
+        }
+        // ICOR
+        if (_indicCharts['icor']) {
+          _indicCharts['icor'].data.labels = _hpc.fechas;
+          _indicCharts['icor'].data.datasets[0].data = _hpc.icor_total || [];
+          _indicCharts['icor'].update();
+          const v = (_hpc.icor_total||[]).filter(x=>x!=null).slice(-1)[0];
+          if (v) { const el=document.getElementById('icor-val'); if(el) el.innerHTML=v.toFixed(2)+'<span style="font-size:0.5em;color:var(--text-dim)">x</span>'; const sig=document.getElementById('icor-signal'); if(sig){sig.textContent=v>=1.3?'🟢 Sólida':v>=1.0?'🟡 Suficiente':'🔴 Insuficiente';sig.className='signal '+(v>=1.3?'green':v>=1.0?'yellow':'red');} }
+        }
+        // ROA
+        if (_indicCharts['roa']) {
+          _indicCharts['roa'].data.labels = _hpc.fechas;
+          _indicCharts['roa'].data.datasets[0].data = _hpc[_roaKey] || [];
+          _indicCharts['roa'].update();
+          const roa=(_hpc.roa||[]).filter(x=>x!=null).slice(-1)[0];
+          const roe=(_hpc.roe||[]).filter(x=>x!=null).slice(-1)[0];
+          if (roa) { const el=document.getElementById('roa-val'); if(el) el.innerHTML=roa.toFixed(2)+'<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; }
+          if (roe) { const el=document.getElementById('roe-val'); if(el) el.innerHTML=roe.toFixed(2)+'<span style="font-size:0.5em;color:var(--text-dim)">%</span>'; }
+          const sig=document.getElementById('roaroe-signal'); if(sig&&roa){sig.textContent=roa>=1.5?'🟢 Rentable':roa>=0.5?'🟡 Moderado':'🔴 Bajo';sig.className='signal '+(roa>=1.5?'green':roa>=0.5?'yellow':'red');}
+        }
       }
       // Re-trigger any active "Histórico" buttons after data loads
       document.querySelectorAll('.period-btn').forEach(btn => {
@@ -2270,88 +2181,8 @@
   window.bxcCurrentBank = bxcCurrentBank;
   window.bxcCurrentKey = bxcCurrentKey;
 
-  // ===== INDICADORES CREDITO: IMORA, ICOR, ROA/ROE =====
-
-
-  function initIndicChart(id, color, yMin, yMax, suffix, data, labels) {
-    const ctx = document.getElementById(id)?.getContext('2d');
-    if (!ctx) return;
-    const ch = new Chart(ctx, {
-      type: 'line',
-      data: { labels, datasets: [{ label: id, data, borderColor: color, backgroundColor: color+'15', borderWidth: 2, pointRadius: 0, tension: 0.2, fill: true, spanGaps: true }] },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: {
-          legend: { display: false },
-          tooltip: { callbacks: { label: ctx => ctx.parsed.y != null ? ctx.parsed.y.toFixed(2) + suffix : 'N/D' } },
-          annotation: {}
-        },
-        scales: {
-          x: { grid:{display:false}, ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0} },
-          y: { min: yMin, suggestedMax: yMax, grid:{color:'rgba(255,255,255,0.04)'}, ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+suffix} }
-        }
-      }
-    });
-    indicCharts[id] = ch;
-    return ch;
-  }
-
-  function setIndicPeriod(btn, chartId, months) {
-    btn.parentElement.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const ch = indicCharts[chartId];
-    if (!ch || !imorsegData) return;
-    const keyMap = {'chart-imora':'imora_total','chart-icor':'icor_total','chart-roa': roaCurrentKey};
-    const key = keyMap[chartId] || 'imor_total';
-    const allL = imorsegData.fechas, allD = imorsegData[key] || [];
-    ch.data.labels = months === 0 ? allL : allL.slice(-months);
-    ch.data.datasets[0].data = months === 0 ? allD : allD.slice(-months);
-    // Add crisis annotations on historical
-    if (months === 0 && ch.options.plugins.annotation) {
-      const annotations = {};
-      CRISIS_MX.forEach((c,i) => {
-        const idx = ch.data.labels.findIndex(l=>l>=c.mes);
-        if (idx !== -1) annotations['c'+i] = {type:'line',xMin:idx,xMax:idx,borderColor:c.color,borderWidth:1.5,borderDash:[4,3],label:{display:true,content:c.label,position:'start',backgroundColor:c.color+'22',color:c.color,font:{size:9},padding:2}};
-      });
-      ch.options.plugins.annotation.annotations = annotations;
-    } else if (ch.options.plugins.annotation) {
-      ch.options.plugins.annotation.annotations = {};
-    }
-    ch.update();
-  }
-  window.setIndicPeriod = setIndicPeriod;
-
-  // ROA/ROE toggle
-  document.querySelectorAll('[data-roakey]').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('[data-roakey]').forEach(b => { b.classList.remove('active'); b.style.borderColor=''; b.style.color=''; b.style.background=''; });
-      this.classList.add('active');
-      const c = this.dataset.color; this.style.borderColor=c; this.style.color=c; this.style.background=c+'15';
-      roaCurrentKey = this.dataset.roakey;
-      const ch = indicCharts['chart-roa'];
-      if (!ch || !imorsegData) return;
-      const months = 0; // keep current view
-      const allD = imorsegData[roaCurrentKey] || [];
-      ch.data.datasets[0].borderColor = c;
-      ch.data.datasets[0].backgroundColor = c+'15';
-      ch.data.datasets[0].data = allD;
-      ch.update();
-    });
-  });
-
-  // Expose all interactive functions and variables to global scope
+  // Expose all interactive functions to global scope
   window.buildImorsegChart = buildImorsegChart;
-  window.imorsegData = imorsegData;
-  window.imorsegCurrentMonths = imorsegCurrentMonths;
-  window.imorsegCurrentKey = imorsegCurrentKey;
-  window.imorsegView = imorsegView;
-  window.currentSector = currentSector;
-  window.sfView = sfView;
-  window.sofiposData = sofiposData;
-  window.bxcData = bxcData;
-  window.bxcCurrentBank = bxcCurrentBank;
-  window.bxcCurrentKey = bxcCurrentKey;
   window.setImorsegPeriod = setImorsegPeriod;
   window.switchImorsegView = switchImorsegView;
   window.switchSector = switchSector;
@@ -2360,6 +2191,71 @@
   window.setIfrs9Period = setIfrs9Period;
   window.setSofipoPeriod = setSofipoPeriod;
   window.buildSofiposChart = buildSofiposChart;
+
+  // ===== INDICADORES ADICIONALES: IMORA, ICOR, ROA/ROE =====
+  // Isolated from IMOR chart variables to prevent conflicts
+  const _indicData = {};  // stores data keyed by 'imora','icor','roa','roe'
+  const _indicCharts = {};  // chart instances
+  let _roaKey = 'roa';
+
+  function _initIndic(id, key, color, yMin, yMax, suffix) {
+    const ctx = document.getElementById('chart-' + id)?.getContext('2d');
+    if (!ctx) return;
+    const ch = new Chart(ctx, {
+      type: 'line',
+      data: { labels: [], datasets: [{ data: [], borderColor: color, backgroundColor: color+'15', borderWidth: 2, pointRadius: 0, tension: 0.2, fill: true, spanGaps: true }] },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: { legend:{display:false}, annotation:{}, tooltip:{callbacks:{label:ctx=>ctx.parsed.y!=null?ctx.parsed.y.toFixed(2)+suffix:'N/D'}} },
+        scales: {
+          x: { grid:{display:false}, ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0} },
+          y: { min:yMin, suggestedMax:yMax, grid:{color:'rgba(255,255,255,0.04)'}, ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+suffix} }
+        }
+      }
+    });
+    _indicCharts[id] = ch;
+    _indicData[id] = { color, suffix };
+    return ch;
+  }
+
+  function setIndicPeriod(btn, id, months) {
+    btn.parentElement.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const ch = _indicCharts[id];
+    if (!ch) return;
+    const hpc = typeof imorsegData !== 'undefined' && imorsegData ? imorsegData : null;
+    if (!hpc || !hpc.fechas) return;
+    const keyMap = {imora:'imora_total', icor:'icor_total', roa: _roaKey, roe:'roe'};
+    const key = keyMap[id] || id;
+    const allL = hpc.fechas, allD = hpc[key] || [];
+    ch.data.labels = months === 0 ? allL : allL.slice(-months);
+    ch.data.datasets[0].data = months === 0 ? allD : allD.slice(-months);
+    // Crisis annotations on historical
+    if (months === 0 && ch.options.plugins.annotation) {
+      const ann = {};
+      CRISIS_MX.forEach((c,i)=>{ const idx=ch.data.labels.findIndex(l=>l>=c.mes); if(idx!=-1) ann['c'+i]={type:'line',xMin:idx,xMax:idx,borderColor:c.color,borderWidth:1.5,borderDash:[4,3],label:{display:true,content:c.label,position:'start',backgroundColor:c.color+'22',color:c.color,font:{size:9},padding:2}}; });
+      ch.options.plugins.annotation.annotations = ann;
+    } else if (ch.options.plugins.annotation) { ch.options.plugins.annotation.annotations = {}; }
+    ch.update();
+  }
+  window.setIndicPeriod = setIndicPeriod;
+
+  // Initialize new charts immediately
+  _initIndic('imora', 'imora_total', '#d29922', 0, 12, '%');
+  _initIndic('icor', 'icor_total', '#3fb950', 0, 3, 'x');
+  _initIndic('roa', 'roa', '#c4a35a', -5, 5, '%');
+
+  // ROA/ROE toggle
+  document.querySelectorAll('[data-roakey]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('[data-roakey]').forEach(b => { b.classList.remove('active'); b.style.borderColor=''; b.style.color=''; b.style.background=''; });
+      this.classList.add('active');
+      const c = this.dataset.color; this.style.borderColor=c; this.style.color=c; this.style.background=c+'15';
+      _roaKey = this.dataset.roakey;
+      setIndicPeriod(document.querySelector('#chart-roa').closest('.card').querySelector('.period-btn.active') || {parentElement:{querySelectorAll:()=>[]},classList:{add:()=>{}}}, 'roa', 0);
+    });
+  });
 
 })();
 
