@@ -607,9 +607,10 @@
         </div>
 
         <!-- NIVEL 2: Vista (solo BM) -->
-        <div id="nivel2-bm" style="display:flex; gap:0.4rem; margin-bottom:0.8rem;">
+        <div id="nivel2-bm" style="display:flex; gap:0.4rem; margin-bottom:0.8rem; flex-wrap:wrap;">
           <button class="period-btn active" id="view-cartera-btn" onclick="switchImorsegView('cartera')">Por cartera</button>
           <button class="period-btn" id="view-banco-btn" onclick="switchImorsegView('banco')">Por entidad</button>
+          <button class="period-btn" id="view-bxc-btn" onclick="switchImorsegView('bxc')">Entidad × Cartera</button>
         </div>
 
         <!-- SELECTOR CARTERA (BM) -->
@@ -660,6 +661,34 @@
             <button class="cartera-btn" data-sfkey="imor_vivienda" data-label="Vivienda" data-color="#9467bd">Vivienda</button>
           </div>
           <div class="metric-value" id="imor-sofipos-valor" style="font-size:2rem; margin:0; color:#f85149;">—</div>
+        </div>
+
+        <!-- SELECTOR BANCO × CARTERA -->
+        <div id="imor-bxc-row" style="display:none; flex-direction:column; gap:0.6rem; margin-bottom:0.8rem;">
+          <div>
+            <div style="font-size:0.65rem; color:var(--text-dim); margin-bottom:0.3rem; text-transform:uppercase; letter-spacing:0.08em;">1. Selecciona banco</div>
+            <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="bxc-banco-selector">
+              <button class="cartera-btn active" data-bxcbank="5" data-color="#1f6feb">Sistema <span style="color:#3fb950">2.2%</span></button>
+              <button class="cartera-btn" data-bxcbank="040012" data-color="#004f9f">BBVA <span style="color:#3fb950">1.6%</span></button>
+              <button class="cartera-btn" data-bxcbank="040002" data-color="#cc0000">Banamex <span style="color:#d29922">3.1%</span></button>
+              <button class="cartera-btn" data-bxcbank="040072" data-color="#e2001a">Banorte <span style="color:#3fb950">1.5%</span></button>
+              <button class="cartera-btn" data-bxcbank="040014" data-color="#eb0000">Santander <span style="color:#d29922">2.2%</span></button>
+              <button class="cartera-btn" data-bxcbank="040021" data-color="#db0011">HSBC <span style="color:#d29922">3.1%</span></button>
+              <button class="cartera-btn" data-bxcbank="040044" data-color="#e31837">Scotia <span style="color:#f85149">4.2%</span></button>
+              <button class="cartera-btn" data-bxcbank="040036" data-color="#0066cc">Inbursa <span style="color:#3fb950">0.9%</span></button>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:0.65rem; color:var(--text-dim); margin-bottom:0.3rem; text-transform:uppercase; letter-spacing:0.08em;">2. Selecciona cartera</div>
+            <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="bxc-cartera-selector">
+              <button class="cartera-btn active" data-bxckey="imor_total" data-color="#1f6feb">Total</button>
+              <button class="cartera-btn" data-bxckey="imor_comercial" data-color="#3fb950">Comercial</button>
+              <button class="cartera-btn" data-bxckey="imor_consumo" data-color="#d29922">Consumo</button>
+              <button class="cartera-btn" data-bxckey="imor_tarjeta" data-color="#f85149">Tarjeta</button>
+              <button class="cartera-btn" data-bxckey="imor_vivienda" data-color="#9467bd">Vivienda</button>
+            </div>
+          </div>
+          <div class="metric-value" id="imor-bxc-valor" style="font-size:1.8rem; margin:0;">—</div>
         </div>
 
         <div class="chart-wrap" style="height:280px;"><canvas id="chart-imor-seg"></canvas></div>
@@ -1173,9 +1202,13 @@
     if (currentSector !== 'bm') return;
     document.getElementById('view-cartera-btn')?.classList.toggle('active', view === 'cartera');
     document.getElementById('view-banco-btn')?.classList.toggle('active', view === 'banco');
+    document.getElementById('view-bxc-btn')?.classList.toggle('active', view === 'bxc');
     document.getElementById('imor-cartera-row').style.display = view === 'cartera' ? 'flex' : 'none';
     document.getElementById('imor-banco-row').style.display = view === 'banco' ? 'flex' : 'none';
+    const bxcRow = document.getElementById('imor-bxc-row');
+    if (bxcRow) bxcRow.style.display = view === 'bxc' ? 'flex' : 'none';
     if (view === 'banco') buildImorsegBankChart(imorsegCurrentBank, imorsegCurrentMonths);
+    else if (view === 'bxc') { if (typeof buildBxCChart === 'function') buildBxCChart(bxcCurrentBank, bxcCurrentKey, imorsegCurrentMonths); }
     else buildImorsegChart(imorsegCurrentKey, imorsegCurrentMonths);
   }
 
@@ -1822,6 +1855,11 @@
       }
       if (json.credito && json.credito.historico_por_banco) {
         imorsegBankData = json.credito.historico_por_banco;
+        // Load bank × cartera data
+        if (json.credito.historico_por_banco.bancos_x_cartera) {
+          bxcData = json.credito.historico_por_banco.bancos_x_cartera;
+          bxcData._fechas = json.credito.historico_por_banco.fechas || [];
+        }
       }
 
       // Re-trigger IMOR with historical data, respecting user's period selection
@@ -1930,6 +1968,82 @@
   }
   window.switchSfView = switchSfView;
   window.buildSofiposEntidadChart = buildSofiposEntidadChart;
+
+  // ===== BANCO × CARTERA =====
+  let bxcData = null;
+  let bxcCurrentBank = '5';
+  let bxcCurrentKey = 'imor_total';
+
+  function buildBxCChart(bankId, key, months) {
+    if (!bxcData) return;
+    const bd = bxcData[bankId];
+    if (!bd) return;
+    const allL = bxcData._fechas || [];
+    const allV = bd[key] || [];
+    const labels = months === 0 ? allL : allL.slice(-months);
+    const vals = months === 0 ? allV : allV.slice(-months);
+    const bankColor = document.querySelector('#bxc-banco-selector .cartera-btn.active')?.dataset.color || '#1f6feb';
+    const keyColor = document.querySelector('#bxc-cartera-selector .cartera-btn.active')?.dataset.color || '#1f6feb';
+    const color = keyColor;
+    const latest = vals.filter(v=>v!=null).slice(-1)[0];
+
+    const valEl = document.getElementById('imor-bxc-valor');
+    if (valEl) {
+      valEl.textContent = latest != null ? latest.toFixed(2)+'%' : 'N/D';
+      valEl.style.color = latest != null && latest > 4.5 ? '#f85149' : latest > 3.5 ? '#d29922' : '#3fb950';
+    }
+    const subEl = document.getElementById('imor-seg-subtitle');
+    if (subEl) {
+      const bankName = bd.nombre || bankId;
+      const keyName = {'imor_total':'Total','imor_comercial':'Comercial','imor_consumo':'Consumo','imor_tarjeta':'Tarjeta','imor_vivienda':'Vivienda'}[key] || key;
+      subEl.textContent = 'BM · ' + bankName + ' · ' + keyName + ' · ' + (months === 0 ? 'Histórico' : 'Últimos ' + months + 'm');
+    }
+
+    const annotations = {};
+    if (months === 0) {
+      CRISIS_MX.forEach((c, i) => {
+        const idx = labels.findIndex(l => l >= c.mes);
+        if (idx !== -1) annotations['c'+i] = {type:'line',xMin:idx,xMax:idx,borderColor:c.color,borderWidth:1.5,borderDash:[4,3],label:{display:true,content:c.label,position:'start',backgroundColor:c.color+'22',color:c.color,font:{size:9},padding:2}};
+      });
+    }
+
+    if (imorsegChart) {
+      imorsegChart.data.labels = labels;
+      imorsegChart.data.datasets[0].data = vals;
+      imorsegChart.data.datasets[0].borderColor = color;
+      imorsegChart.data.datasets[0].backgroundColor = color+'18';
+      imorsegChart.data.datasets[0].pointBackgroundColor = color;
+      if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = annotations;
+      if (imorsegChart.options.scales.y) imorsegChart.options.scales.y.suggestedMax = 15;
+      imorsegChart.update();
+    }
+  }
+
+  // Wire BxC bank selector
+  document.querySelectorAll('#bxc-banco-selector .cartera-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('#bxc-banco-selector .cartera-btn').forEach(b => { b.classList.remove('active'); b.style.borderColor=''; b.style.color=''; b.style.background=''; });
+      this.classList.add('active');
+      const c = this.dataset.color; this.style.borderColor=c; this.style.color=c; this.style.background=c+'15';
+      bxcCurrentBank = this.dataset.bxcbank;
+      buildBxCChart(bxcCurrentBank, bxcCurrentKey, imorsegCurrentMonths);
+    });
+  });
+
+  // Wire BxC cartera selector
+  document.querySelectorAll('#bxc-cartera-selector .cartera-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('#bxc-cartera-selector .cartera-btn').forEach(b => { b.classList.remove('active'); b.style.borderColor=''; b.style.color=''; b.style.background=''; });
+      this.classList.add('active');
+      const c = this.dataset.color; this.style.borderColor=c; this.style.color=c; this.style.background=c+'15';
+      bxcCurrentKey = this.dataset.bxckey;
+      buildBxCChart(bxcCurrentBank, bxcCurrentKey, imorsegCurrentMonths);
+    });
+  });
+  window.buildBxCChart = buildBxCChart;
+  window.bxcData = bxcData;
+  window.bxcCurrentBank = bxcCurrentBank;
+  window.bxcCurrentKey = bxcCurrentKey;
 
   // Expose all interactive functions to global scope
   window.buildImorsegChart = buildImorsegChart;
