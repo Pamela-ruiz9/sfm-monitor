@@ -1218,9 +1218,13 @@
     document.getElementById('nivel2-bm').style.display = isBM ? 'flex' : 'none';
     document.getElementById('nivel2-sofipos') && (document.getElementById('nivel2-sofipos').style.display = !isBM ? 'flex' : 'none');
     document.getElementById('imor-cartera-row').style.display = isBM && imorsegView === 'cartera' ? 'flex' : 'none';
-    document.getElementById('imor-banco-row').style.display = isBM && imorsegView === 'banco' ? 'flex' : 'none';
+    document.getElementById('imor-banco-row').style.display = 'none';
+    // BxC row: ONLY visible in BM + entidad mode
+    const bxcRowS = document.getElementById('imor-bxc-row');
+    if (bxcRowS) bxcRowS.style.display = (isBM && imorsegView === 'bxc') ? 'flex' : 'none';
     document.getElementById('imor-sofipos-row').style.display = !isBM && sfView === 'cartera' ? 'flex' : 'none';
-    document.getElementById('imor-sofipos-entidad-row') && (document.getElementById('imor-sofipos-entidad-row').style.display = !isBM && sfView === 'entidad' ? 'flex' : 'none');
+    const sfEntRowS = document.getElementById('imor-sofipos-entidad-row');
+    if (sfEntRowS) sfEntRowS.style.display = (!isBM && sfView === 'entidad') ? 'flex' : 'none';
     const srcEl = document.getElementById('imor-source');
     if (srcEl) srcEl.textContent = isBM ? 'Fuente: CNBV · Banca Múltiple · Sistema total' : 'Fuente: CNBV · SoFiPOs · 2016–2025';
     // Adjust Y axis range for sector
