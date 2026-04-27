@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "SFM Risk Monitor"
+abstract: "Dashboard público, citable y open source del riesgo del Sistema Financiero Mexicano. Agrega indicadores de Banxico, CNBV, INEGI, FMI y BIS."
+authors:
+  - family-names: "Padilla"
+    given-names: "Artemio"
+    orcid: ""
+repository-code: "https://github.com/ArtemioPadilla/sfm-risk-monitor"
+url: "https://sfmrisk.mx"
+license: MIT
+keywords:
+  - "sistema financiero mexicano"
+  - "riesgo financiero"
+  - "dashboard"
+  - "banxico"
+  - "cnbv"
+  - "open source"
+  - "open data"
