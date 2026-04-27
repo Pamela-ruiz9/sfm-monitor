@@ -1123,12 +1123,6 @@
       imorsegChart.data.datasets[0].backgroundColor = color + '18';
       imorsegChart.data.datasets[0].pointBackgroundColor = color;
       if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = annotations;
-      // Update Y axis max based on visible data
-      const validVals = data.filter(v => v != null);
-      if (validVals.length && imorsegChart.options.scales.y) {
-        const dataMax = Math.max(...validVals);
-        imorsegChart.options.scales.y.suggestedMax = Math.max(dataMax * 1.15, currentSector === 'sofipos' ? 35 : 15);
-      }
       imorsegChart.update();
     } else {
       const ctx = document.getElementById('chart-imor-seg')?.getContext('2d');
@@ -1232,6 +1226,7 @@
     if (imorsegChart) {
       imorsegChart.data.labels = labels; imorsegChart.data.datasets[0].data = vals; imorsegChart.data.datasets[0].borderColor = color; imorsegChart.data.datasets[0].backgroundColor = color+'18'; imorsegChart.data.datasets[0].pointBackgroundColor = color;
       if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = {};
+      if (imorsegChart.options.scales.y) imorsegChart.options.scales.y.suggestedMax = 35;
       imorsegChart.update();
     }
   }
