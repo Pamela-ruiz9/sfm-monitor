@@ -1562,6 +1562,38 @@
 
   const allMonthLabels = monthLabels2023to2026mar();
 
+  // Initialize IMORA, ICOR, ROA charts with empty data (populated after fetch)
+  (function() {
+    const placeholder12 = new Array(allMonthLabels.length).fill(null);
+    // IMORA
+    const imoraCtx = document.getElementById('chart-imora')?.getContext('2d');
+    if (imoraCtx) {
+      indicCharts['chart-imora'] = new Chart(imoraCtx, {
+        type: 'line',
+        data: { labels: allMonthLabels, datasets: [{ data: placeholder12, borderColor: '#d29922', backgroundColor: '#d2992215', borderWidth: 2, pointRadius: 0, tension: 0.2, fill: true, spanGaps: true }] },
+        options: { responsive: true, maintainAspectRatio: false, interaction:{mode:'index',intersect:false}, plugins:{legend:{display:false},annotation:{}}, scales: { x:{grid:{display:false},ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0}}, y:{min:0,suggestedMax:12,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+'%'}} } }
+      });
+    }
+    // ICOR
+    const icorCtx = document.getElementById('chart-icor')?.getContext('2d');
+    if (icorCtx) {
+      indicCharts['chart-icor'] = new Chart(icorCtx, {
+        type: 'line',
+        data: { labels: allMonthLabels, datasets: [{ data: placeholder12, borderColor: '#3fb950', backgroundColor: '#3fb95015', borderWidth: 2, pointRadius: 0, tension: 0.2, fill: true, spanGaps: true }] },
+        options: { responsive: true, maintainAspectRatio: false, interaction:{mode:'index',intersect:false}, plugins:{legend:{display:false},annotation:{}}, scales: { x:{grid:{display:false},ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0}}, y:{min:0,suggestedMax:3,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+'x'}} } }
+      });
+    }
+    // ROA
+    const roaCtx = document.getElementById('chart-roa')?.getContext('2d');
+    if (roaCtx) {
+      indicCharts['chart-roa'] = new Chart(roaCtx, {
+        type: 'line',
+        data: { labels: allMonthLabels, datasets: [{ data: placeholder12, borderColor: '#c4a35a', backgroundColor: '#c4a35a15', borderWidth: 2, pointRadius: 0, tension: 0.2, fill: true, spanGaps: true }] },
+        options: { responsive: true, maintainAspectRatio: false, interaction:{mode:'index',intersect:false}, plugins:{legend:{display:false},annotation:{}}, scales: { x:{grid:{display:false},ticks:{color:'#7d8590',font:{size:10},maxTicksLimit:8,autoSkip:true,maxRotation:0}}, y:{suggestedMin:-2,suggestedMax:5,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#7d8590',font:{size:10},callback:v=>(+v).toFixed(1)+'%'}} } }
+      });
+    }
+  })();
+
   function makeGradient(ctx, area, color) {
     if (!area) return color;
     const g = ctx.createLinearGradient(0, area.top, 0, area.bottom);
@@ -1905,9 +1937,22 @@
         const icor = hpc.icor_total || [];
         const roa = hpc.roa || [];
         const roe = hpc.roe || [];
-        initIndicChart('chart-imora', '#d29922', 0, 12, '%', imora, fechas);
-        initIndicChart('chart-icor', '#3fb950', 0, 3, 'x', icor, fechas);
-        initIndicChart('chart-roa', '#c4a35a', -5, 5, '%', roa, fechas);
+        // Update pre-initialized charts with real data
+        if (indicCharts['chart-imora']) {
+          indicCharts['chart-imora'].data.labels = fechas;
+          indicCharts['chart-imora'].data.datasets[0].data = imora;
+          indicCharts['chart-imora'].update();
+        }
+        if (indicCharts['chart-icor']) {
+          indicCharts['chart-icor'].data.labels = fechas;
+          indicCharts['chart-icor'].data.datasets[0].data = icor;
+          indicCharts['chart-icor'].update();
+        }
+        if (indicCharts['chart-roa']) {
+          indicCharts['chart-roa'].data.labels = fechas;
+          indicCharts['chart-roa'].data.datasets[0].data = roa;
+          indicCharts['chart-roa'].update();
+        }
 
         // Update header KPI values
         const latestImora = imora.filter(v=>v!=null).slice(-1)[0];
