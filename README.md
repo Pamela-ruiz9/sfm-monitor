@@ -1,5 +1,5 @@
-# SFM Monitor 📊
-**Monitor del Sistema Financiero Mexicano**
+# SFM Risk Monitor 📊
+**Monitor de Riesgo del Sistema Financiero Mexicano**
 
 Dashboard público de riesgo financiero para México — datos reales de CNBV y Banxico.
 
