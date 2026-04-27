@@ -589,58 +589,7 @@
 
 
 
-        <div class="card">
-          <div class="card-header">
-            <div>
-              <div class="card-title">Cobertura de Cartera Vencida</div>
-              <div class="card-subtitle" id="cob-subtitle">Cargando...</div>
-            </div>
-            <span class="signal green" id="cob-signal">🟢</span>
-          </div>
-          <div class="metric-value green" id="cobval">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
-          <div class="metric-label">Reservas / cartera vencida</div>
-          <div class="chart-wrap"><canvas id="chart-cobertura"></canvas></div>
-          <div class="period-selector">
-            <button class="period-btn active" onclick="setPeriod(this, 'chart-cobertura', 12)">12M</button>
-            <button class="period-btn" onclick="setPeriod(this, 'chart-cobertura', 36)">3A</button>
-            <button class="period-btn" style="opacity:0.4;cursor:not-allowed;" title="Datos CNBV históricos próximamente" disabled>Histórico</button>
-          </div>
-          <div class="metric-note">Las reservas cubren 1.65x la cartera vencida total.</div>
-          <div class="source">Fuente: CNBV</div>
-          <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
-          <div class="kpi-info-panel">
-            <div class="kpi-info-def">Mide cuántas veces las reservas preventivas cubren la cartera vencida. Un índice de 165% significa que por cada peso vencido, el banco tiene $1.65 en reservas para absorber pérdidas.</div>
-            <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde ≥130% · Amarillo 100–130% · Rojo <100%</span></div>
-            <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Actualización mensual.</span></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <div>
-              <div class="card-title">Crecimiento de Cartera Total</div>
-              <div class="card-subtitle">Variación anual — Marzo 2026</div>
-            </div>
-            <span class="signal green">🟢 Saludable</span>
-          </div>
-          <div class="metric-value green">+8.2<span style="font-size:0.5em;color:var(--text-dim)">% a/a</span></div>
-          <div class="metric-label">Crecimiento anual del crédito total</div>
-          <div class="chart-wrap"><canvas id="chart-cartera"></canvas></div>
-          <div class="period-selector">
-            <button class="period-btn active" onclick="setPeriod(this, 'chart-cartera', 12)">12M</button>
-            <button class="period-btn" onclick="setPeriod(this, 'chart-cartera', 36)">3A</button>
-            <button class="period-btn" style="opacity:0.4;cursor:not-allowed;" title="Datos CNBV históricos próximamente" disabled>Histórico</button>
-          </div>
-          <div class="metric-note">Expansión moderada del crédito — no hay señales de sobrecalentamiento.</div>
-          <div class="source">Fuente: CNBV, Portafolio de Información</div>
-          <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
-          <div class="kpi-info-panel">
-            <div class="kpi-info-def">Mide la expansión anual del crédito total del sistema bancario. Un crecimiento moderado y sostenido es saludable; crecimientos muy altos (>20%) pueden indicar sobrecalentamiento y riesgo futuro de cartera.</div>
-            <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde 4–12% · Amarillo 12–20% o <4% · Rojo >20% o negativo</span></div>
-            <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Actualización mensual.</span></div>
-          </div>
-        </div>
-
+ 
       <!-- CARD: IMOR UNIFICADO BM + SoFiPOs -->
       <div class="card" style="grid-column: 1 / -1;">
         <div class="card-header">
@@ -709,6 +658,59 @@
         </div>
         <div class="source" id="imor-source">Fuente: CNBV Portafolio de Información · Banca Múltiple · Sistema total</div>
       </div>
+
+
+       <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Cobertura de Cartera Vencida</div>
+              <div class="card-subtitle" id="cob-subtitle">Cargando...</div>
+            </div>
+            <span class="signal green" id="cob-signal">🟢</span>
+          </div>
+          <div class="metric-value green" id="cobval">—<span style="font-size:0.5em;color:var(--text-dim)">%</span></div>
+          <div class="metric-label">Reservas / cartera vencida</div>
+          <div class="chart-wrap"><canvas id="chart-cobertura"></canvas></div>
+          <div class="period-selector">
+            <button class="period-btn active" onclick="setPeriod(this, 'chart-cobertura', 12)">12M</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-cobertura', 36)">3A</button>
+            <button class="period-btn" style="opacity:0.4;cursor:not-allowed;" title="Datos CNBV históricos próximamente" disabled>Histórico</button>
+          </div>
+          <div class="metric-note">Las reservas cubren 1.65x la cartera vencida total.</div>
+          <div class="source">Fuente: CNBV</div>
+          <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
+          <div class="kpi-info-panel">
+            <div class="kpi-info-def">Mide cuántas veces las reservas preventivas cubren la cartera vencida. Un índice de 165% significa que por cada peso vencido, el banco tiene $1.65 en reservas para absorber pérdidas.</div>
+            <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde ≥130% · Amarillo 100–130% · Rojo <100%</span></div>
+            <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Actualización mensual.</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Crecimiento de Cartera Total</div>
+              <div class="card-subtitle">Variación anual — Marzo 2026</div>
+            </div>
+            <span class="signal green">🟢 Saludable</span>
+          </div>
+          <div class="metric-value green">+8.2<span style="font-size:0.5em;color:var(--text-dim)">% a/a</span></div>
+          <div class="metric-label">Crecimiento anual del crédito total</div>
+          <div class="chart-wrap"><canvas id="chart-cartera"></canvas></div>
+          <div class="period-selector">
+            <button class="period-btn active" onclick="setPeriod(this, 'chart-cartera', 12)">12M</button>
+            <button class="period-btn" onclick="setPeriod(this, 'chart-cartera', 36)">3A</button>
+            <button class="period-btn" style="opacity:0.4;cursor:not-allowed;" title="Datos CNBV históricos próximamente" disabled>Histórico</button>
+          </div>
+          <div class="metric-note">Expansión moderada del crédito — no hay señales de sobrecalentamiento.</div>
+          <div class="source">Fuente: CNBV, Portafolio de Información</div>
+          <button class="kpi-info-btn" onclick="toggleKpiInfo(this)">i+ Más información</button>
+          <div class="kpi-info-panel">
+            <div class="kpi-info-def">Mide la expansión anual del crédito total del sistema bancario. Un crecimiento moderado y sostenido es saludable; crecimientos muy altos (>20%) pueden indicar sobrecalentamiento y riesgo futuro de cartera.</div>
+            <div class="kpi-info-row"><span class="label">Semáforo:</span><span class="val">Verde 4–12% · Amarillo 12–20% o <4% · Rojo >20% o negativo</span></div>
+            <div class="kpi-info-row"><span class="label">Fuente:</span><span class="val">CNBV, Portafolio de Información. Actualización mensual.</span></div>
+          </div>
+        </div>
 
       <!-- CARD: IFRS9 ETAPAS -->
       <div class="card" style="grid-column: 1 / -1;">
@@ -1814,6 +1816,18 @@
       });
     })
     .catch(err => console.warn('fetch sfm-data.json fallo:', err));
+
+
+  // Expose all interactive functions to global scope
+  window.buildImorsegChart = buildImorsegChart;
+  window.setImorsegPeriod = setImorsegPeriod;
+  window.switchImorsegView = switchImorsegView;
+  window.switchSector = switchSector;
+  window.buildSofiposImor = buildSofiposImor;
+  window.buildIfrs9Chart = buildIfrs9Chart;
+  window.setIfrs9Period = setIfrs9Period;
+  window.setSofipoPeriod = setSofipoPeriod;
+  window.buildSofiposChart = buildSofiposChart;
 
 })();
 
