@@ -14760,7 +14760,7 @@
       ],
       "entidades": {
         "027013": {
-          "nombre": "Credicapital",
+          "nombre": "Asea",
           "id": "027013",
           "imor": [
             6.35,
@@ -15144,7 +15144,7 @@
           "roa_latest": -0.81
         },
         "027032": {
-          "nombre": "STORI",
+          "nombre": "STORI (Antes SAVVI)",
           "id": "027032",
           "imor": [
             10.63,
@@ -15272,7 +15272,7 @@
           "roa_latest": 2.34
         },
         "027009": {
-          "nombre": "KLAR",
+          "nombre": "KLAR (Antes SEFIA)",
           "id": "027009",
           "imor": [
             8.3,
@@ -15400,7 +15400,7 @@
           "roa_latest": -3.24
         },
         "027044": {
-          "nombre": "SOFIPO44",
+          "nombre": "Súmate",
           "id": "027044",
           "imor": [
             5.39,
@@ -15784,7 +15784,7 @@
           "roa_latest": -0.52
         },
         "027019": {
-          "nombre": "Alternativas",
+          "nombre": "Alternativas Económicas",
           "id": "027019",
           "imor": [
             null,
@@ -16424,7 +16424,7 @@
           "roa_latest": 0.63
         },
         "027036": {
-          "nombre": "Fondea",
+          "nombre": "Fondeadora (Antes Apoyo Múltiple)",
           "id": "027036",
           "imor": [
             48.66,
@@ -16552,7 +16552,7 @@
           "roa_latest": -4.87
         },
         "027004": {
-          "nombre": "Finamigo",
+          "nombre": "Desarrollo Rural",
           "id": "027004",
           "imor": [
             8.1,
@@ -17576,7 +17576,7 @@
           "roa_latest": -1.71
         },
         "027046": {
-          "nombre": "F Sustentable",
+          "nombre": "Financiera Sustentable",
           "id": "027046",
           "imor": [
             2.02,
@@ -17960,7 +17960,7 @@
           "roa_latest": -39.95
         },
         "027020": {
-          "nombre": "Multiplica",
+          "nombre": "Multiplica México",
           "id": "027020",
           "imor": [
             13.36,
@@ -18344,7 +18344,7 @@
           "roa_latest": -25.37
         },
         "027014": {
-          "nombre": "Nu México",
+          "nombre": "Nu México (Antes Akala)",
           "id": "027014",
           "imor": [
             2.78,
@@ -18472,7 +18472,7 @@
           "roa_latest": -1.58
         },
         "027042": {
-          "nombre": "SOFIPO42",
+          "nombre": "Paso Seguro",
           "id": "027042",
           "imor": [
             9.68,
