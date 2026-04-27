@@ -288,6 +288,123 @@
     </div>
   </div>
 
+  <!-- FASE 3b: INDICADORES ADICIONALES -->
+  <div class="phase" data-phase="3b">
+    <div class="phase-header" onclick="togglePhase(this)">
+      <span class="phase-badge badge-pending">Pendiente</span>
+      <span class="phase-title">Fase 3b — Más indicadores del CSV CNBV</span>
+      <span class="phase-count"></span>
+      <span class="phase-arrow">▼</span>
+    </div>
+    <div class="phase-body">
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">IMORA por banco G-7 (banco × cartera ajustada) <span class="task-tag data">datos</span></div>
+          <div class="task-note">Concepto 40200033 por entidad — mismo patrón que IMOR por banco</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">ICOR por banco G-7 (cobertura por entidad) <span class="task-tag data">datos</span></div>
+          <div class="task-note">Concepto 40200096 por entidad — ¿qué banco tiene peor cobertura?</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">ROA y ROE por banco G-7 <span class="task-tag data">datos</span></div>
+          <div class="task-note">Conceptos 40200001/40200002 por entidad — rentabilidad comparada</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Tasa de interés implícita activa <span class="task-tag data">datos</span></div>
+          <div class="task-note">Concepto 40200162 — tasa que cobra el banco por créditos vigentes E1+E2</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Tasa de interés implícita pasiva <span class="task-tag data">datos</span></div>
+          <div class="task-note">Concepto 40200037 — costo de fondeo (lo que paga el banco por depósitos)</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Margen de intermediación financiera (MIF) <span class="task-tag data">datos</span></div>
+          <div class="task-note">Concepto 40200218 — tasa activa − tasa pasiva = ganancia del banco</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Tasa de deterioro ajustada (TDA) por cartera <span class="task-tag data">datos</span></div>
+          <div class="task-note">Concepto 40200074 — medida de deterioro de flujo, complemento del IMOR</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">EPRC / Cartera etapa 1+2+3 por segmento <span class="task-tag data">datos</span></div>
+          <div class="task-note">Concepto 40200118 — nivel de provisionamiento IFRS9 por cartera</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Quitas y castigos (flujo 12 meses) <span class="task-tag data">datos</span></div>
+          <div class="task-note">Concepto 40200193 — muestra limpieza de cartera; IMOR puede bajar por castigos no por pagos</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Crecimiento de cartera total (flujo anual) <span class="task-tag data">datos</span></div>
+          <div class="task-note">Cartera actual vs 12 meses antes — señal de expansión o contracción del crédito</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">IFRS9 etapas por banco G-7 <span class="task-tag data">datos</span></div>
+          <div class="task-note">Requiere R12A por entidad — ¿qué banco tiene más E2 (alerta temprana)?</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">SoFiPOs: IMORA e ICOR por entidad <span class="task-tag data">datos</span></div>
+          <div class="task-note">Requiere el CSV del R11 por institución — pendiente descarga</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Captación total histórica (fondeo) <span class="task-tag data">datos</span></div>
+          <div class="task-note">Concepto 40100042 — evolución del fondeo bancario, complemento de liquidez</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">Liquidez (LCR, NSFR) <span class="task-tag">requiere otro reporte</span></div>
+          <div class="task-note">Reporte diferente — CNBV reporte R13 o similar</div>
+        </div>
+      </div>
+      <div class="task" onclick="toggleTask(this)">
+        <div class="task-check"></div>
+        <div class="task-content">
+          <div class="task-title">ICAP (Índice de capitalización) <span class="task-tag">requiere otro reporte</span></div>
+          <div class="task-note">Reporte de solvencia — Capital neto / Activos sujetos a riesgo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FASE 4 -->
   <div class="phase" data-phase="4">
     <div class="phase-header" onclick="togglePhase(this)">
