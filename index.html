@@ -697,6 +697,7 @@
           <button class="period-btn" onclick="setImorsegPeriod(this,36)">3A</button>
           <button class="period-btn active" onclick="setImorsegPeriod(this,0)">Histórico</button>
         </div>
+        <div id="imor-context-note" style="display:none; margin-top:0.6rem; padding:0.7rem 1rem; background:rgba(209,153,34,0.07); border:1px solid rgba(209,153,34,0.25); border-radius:6px; font-size:0.76rem; color:var(--text-dim); line-height:1.6;"></div>
         <div class="source" id="imor-source">Fuente: CNBV Portafolio de Información · Banca Múltiple · Sistema total</div>
       </div>
 
@@ -1964,6 +1965,21 @@
       if (imorsegChart.options.plugins?.annotation) imorsegChart.options.plugins.annotation.annotations = {};
       if (imorsegChart.options.scales.y) imorsegChart.options.scales.y.suggestedMax = 70;
       imorsegChart.update();
+    }
+    // Context note for extreme IMOR or specific institutions
+    const noteEl = document.getElementById('imor-context-note');
+    if (noteEl) {
+      const maxVal = vals.filter(v=>v!=null).reduce((a,b)=>Math.max(a,b), 0);
+      const CONTEXT_NOTES = {
+        '027014': '⚠️ Nu México (antes Akala) registró IMOR >80% en 2020 por cartera muy pequeña + COVID. Conforme escaló como fintech, el IMOR se normalizó. IMOR alto en instituciones pequeñas puede reflejar pocos créditos vencidos, no necesariamente crisis sistémica.',
+        '027022': 'ℹ️ El "Sistema SOFIPO" agrega 48 instituciones de tamaños muy heterogéneos. Las instituciones pequeñas o en liquidación pueden inflar el IMOR sistémico.',
+      };
+      const ent_id = Object.keys(sofiposEntidadData.entidades).find(k => sofiposEntidadData.entidades[k].nombre === (e && e.nombre));
+      let note = CONTEXT_NOTES[entId] || '';
+      if (!note && maxVal > 50) note = '⚠️ IMOR mayor al 50% puede indicar institución en proceso de liquidación, cartera residual o portafolio muy pequeño. Verificar con CNBV.';
+      else if (!note && maxVal > 30) note = '⚠️ Nivel de morosidad elevado. Puede reflejar segmento de alto riesgo, cartera pequeña o estrés financiero de la institución.';
+      noteEl.style.display = note ? 'block' : 'none';
+      noteEl.textContent = note;
     }
   }
   window.switchSfView = switchSfView;
