@@ -1,5 +1,11 @@
 import { expect, test } from '@playwright/test';
 
+test.beforeEach(async ({ context }) => {
+  await context.addInitScript(() => {
+    localStorage.setItem('sfm-onboarding-done', 'true');
+  });
+});
+
 const TABS = [
   { path: '/', heading: /Resumen ejecutivo|SFM Monitor|sistema|Riesgo/i },
   { path: '/mercado', heading: /MXN\/USD|Tasa objetivo|Mercado/i },

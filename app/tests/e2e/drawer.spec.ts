@@ -1,5 +1,12 @@
 import { expect, test } from '@playwright/test';
 
+// Set localStorage flag to skip the onboarding tour BEFORE the page loads.
+test.beforeEach(async ({ context }) => {
+  await context.addInitScript(() => {
+    localStorage.setItem('sfm-onboarding-done', 'true');
+  });
+});
+
 test('clicking FX KPI opens drawer with FX content', async ({ page }) => {
   await page.goto('/');
   await page.locator('[data-drawer-trigger="fx"]').first().click();

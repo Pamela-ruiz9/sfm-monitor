@@ -1,5 +1,11 @@
 import { expect, test } from '@playwright/test';
 
+test.beforeEach(async ({ context }) => {
+  await context.addInitScript(() => {
+    localStorage.setItem('sfm-onboarding-done', 'true');
+  });
+});
+
 const PATHS = ['/', '/mercado', '/credito', '/sofipos', '/macro'];
 
 for (const path of PATHS) {
