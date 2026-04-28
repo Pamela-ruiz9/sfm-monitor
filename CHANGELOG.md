@@ -10,11 +10,20 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ---
 
-## [Sin publicar]
+## [Sin publicar] — `0.2.0-dev`
 
-### Por hacer
-- Migración a Astro 5 + React 19 + TypeScript strict (ver `docs/migration-astro.md`)
-- DOI persistente vía Zenodo (ver `docs/citability.md`)
+### En curso (Astro 5 + React 19 migration, ver `docs/migration-astro.md`)
+- ✅ M0 bootstrap: `app/` con Astro 5.16 + React 19.2 + TS strict + Tailwind v4 + Zod root schema
+- ✅ M0 foundations: branded types (Percentage, BasisPoints, Currency, SeriesId), data loader con cache y fail-loud
+- ✅ M1 parcial: 3 charts migradas (`FXChart`, `TasaBanxicoChart`, `InflacionChart`)
+- 🔄 M1 pendiente: visual regression con Playwright `toHaveScreenshot()`
+- 📋 M2: charts CNBV (IMOR histórico, IMOR por segmento, IMOR por banco G-7) + tabla virtualizada
+- 📋 M3: IFRS 9 stacked area + SoFiPOs top 15
+- 📋 M4: features citables (JSON-LD `Dataset`, `<CitationBox>`, glosario, OG dinámico)
+- 📋 M5: cutover a `v0.2.0` siguiendo `docs/cutover.md` (gates G1-G7 deben estar ✅)
+
+### Por hacer (no bloqueado por migración Astro)
+- DOI persistente vía Zenodo — requiere paso manual (ver `docs/citability.md`)
 - Pipeline CNBV CSV automatizado (R12A IFRS9, SoFiPOs R11)
 - Integración Banxico API para inflación subyacente (SP74625)
 
