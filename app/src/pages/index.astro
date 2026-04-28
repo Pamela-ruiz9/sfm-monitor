@@ -11,6 +11,7 @@ import { FXChart } from '~/components/charts/FXChart';
 import { loadSfmData } from '~/data/loader';
 import { computeDelta, formatMxn, formatPct } from '~/lib/utils';
 import { DollarSign, Percent, TrendingUp, Activity } from 'lucide-react';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 
 const data = loadSfmData();
 
@@ -114,5 +115,6 @@ const imorPlaceholder = 2.2;
     </div>
   </div>
 
+  <ChartDrawer slot="drawer" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>

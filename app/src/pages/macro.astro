@@ -6,6 +6,7 @@ import BottomNav from '~/components/shell/BottomNav.astro';
 import Section from '~/components/chrome/Section.astro';
 import { InflacionChart } from '~/components/charts/InflacionChart';
 import { loadSfmData } from '~/data/loader';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 
 const data = loadSfmData();
 const inflacionHistorica =
@@ -32,5 +33,6 @@ const inflacionHistorica =
     </Section>
   </div>
 
+  <ChartDrawer slot="drawer" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>
