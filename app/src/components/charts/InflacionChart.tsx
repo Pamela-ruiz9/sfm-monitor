@@ -66,7 +66,7 @@ export function InflacionChart({
   };
 
   return (
-    <div className="h-72 md:h-80">
+    <div className="h-64 md:h-72 -mx-1">
       <Line
         data={data}
         options={{
