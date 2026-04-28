@@ -1,7 +1,7 @@
 {
   "name": "sfm-monitor-app",
-  "version": "0.2.0-dev.0",
-  "description": "Astro 5 + React 19 + TypeScript strict frontend for SFM Monitor — runs alongside legacy index.html during migration",
+  "version": "0.2.0-dev.1",
+  "description": "Astro 5 + React 19 + TypeScript strict frontend for SFM Monitor — app-like redesign + PWA targeting custom domain",
   "private": true,
   "type": "module",
   "scripts": {
