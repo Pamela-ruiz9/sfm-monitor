@@ -20,6 +20,15 @@ dist/
 node_modules/
 .astro/
 
+# Astro build output
+app/dist/
+
+# Test artifacts (regenerable)
+app/playwright-report/
+app/test-results/
+app/.lighthouseci/
+app/tests/e2e/.cache/
+
 # Secrets
 .env.local
 *.token
