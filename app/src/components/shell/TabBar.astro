@@ -1,0 +1,44 @@
+---
+import { Home, LineChart, Activity, Building2, TrendingUp } from 'lucide-react';
+
+const TABS = [
+  { href: '/', label: 'Resumen', match: /^\/$/, Icon: Home },
+  { href: '/mercado', label: 'Mercado', match: /^\/mercado/, Icon: LineChart },
+  { href: '/credito', label: 'Crédito', match: /^\/credito/, Icon: Activity },
+  { href: '/sofipos', label: 'SoFiPOs', match: /^\/sofipos/, Icon: Building2 },
+  { href: '/macro', label: 'Macro', match: /^\/macro/, Icon: TrendingUp },
+] as const;
+
+const path = Astro.url.pathname;
+---
+
+<nav
+  aria-label="Secciones del dashboard"
+  class="hidden lg:block border-b border-[--color-border-soft]">
+  <div
+    class="max-w-7xl mx-auto px-6 flex gap-1 overflow-x-auto"
+    role="tablist">
+    {
+      TABS.map(({ href, label, match, Icon }) => {
+        const active = match.test(path);
+        return (
+          <a
+            href={href}
+            role="tab"
+            aria-selected={active}
+            aria-current={active ? 'page' : undefined}
+            data-astro-prefetch
+            class:list={[
+              'inline-flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap',
+              active
+                ? 'text-[--color-gold] border-[--color-gold]'
+                : 'text-[--color-text-mute] border-transparent hover:text-[--color-text-dim] hover:border-[--color-border]',
+            ]}>
+            <Icon className="size-4" aria-hidden="true" />
+            {label}
+          </a>
+        );
+      })
+    }
+  </div>
+</nav>

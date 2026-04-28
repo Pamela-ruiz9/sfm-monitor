@@ -1,0 +1,47 @@
+---
+import { loadSfmData } from '~/data/loader';
+import { DataFreshnessBadge } from '~/components/DataFreshnessBadge';
+
+const data = loadSfmData();
+const lastUpdated = data.ultima_actualizacion;
+---
+
+<header
+  class="sticky top-0 z-40 border-b border-[--color-border] backdrop-blur-md"
+  style="background: linear-gradient(180deg, rgba(13,17,23,0.92), rgba(13,17,23,0.78))">
+  <div class="max-w-7xl mx-auto px-4 lg:px-6 h-14 flex items-center justify-between gap-3">
+    <a
+      href="/"
+      class="flex items-center gap-2 group"
+      data-astro-prefetch>
+      <span
+        class="size-7 rounded-md inline-block"
+        style="background: linear-gradient(135deg, var(--color-gold), #8b6f3a); border: 1px solid rgba(196,163,90,0.4);"
+        aria-hidden="true"></span>
+      <span class="serif text-lg font-semibold text-[--color-text] leading-none">
+        SFM Monitor
+      </span>
+      <span class="text-[10px] text-[--color-text-mute] hidden sm:inline">
+        v0.2.0
+      </span>
+    </a>
+
+    <div class="flex items-center gap-3">
+      <DataFreshnessBadge
+        source="Banxico"
+        lastUpdated={lastUpdated}
+        client:load
+      />
+      <button
+        type="button"
+        data-cmdk-trigger
+        class="hidden sm:inline-flex items-center gap-2 px-2.5 py-1 rounded-md border border-[--color-border] bg-[--color-bg-elev] text-[11px] text-[--color-text-dim] hover:text-[--color-text] hover:border-[--color-gold] transition-colors"
+        aria-label="Buscar indicador">
+        Buscar
+        <kbd class="text-[10px] mono px-1.5 py-0.5 rounded bg-[--color-bg-elev-2] border border-[--color-border-soft] text-[--color-text-dim]">
+          ⌘K
+        </kbd>
+      </button>
+    </div>
+  </div>
+</header>
