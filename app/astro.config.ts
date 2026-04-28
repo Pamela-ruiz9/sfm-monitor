@@ -3,12 +3,13 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
-const SITE = 'https://pamela-ruiz9.github.io';
+// Custom domain target — adjust if a different one is registered.
+// CNAME file at app/public/CNAME drives GitHub Pages / Cloudflare Pages
+// to serve from this hostname. Until DNS is wired, the dev/preview URLs
+// still work from localhost — `site` only affects canonical/sitemap.
+const SITE = 'https://sfmrisk.mx';
 
-// During migration the Astro app is served from a subpath so it can coexist
-// with the legacy index.html at the repo root. After cutover (see
-// docs/cutover.md) the base will change to '/sfm-monitor/' or sfmrisk.mx root.
-const BASE = '/sfm-monitor/app';
+const BASE = '/';
 
 export default defineConfig({
   site: SITE,

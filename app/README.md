@@ -1,14 +1,18 @@
 # SFM Monitor — Astro app (`v0.2.0-dev`)
 
-Migración del dashboard SFM Monitor a **Astro 5 + React 19 + TypeScript strict**, corriendo junto al `../index.html` legacy durante la transición.
+Migración del dashboard SFM Monitor a **Astro 5 + React 19 + TypeScript strict**, target deploy en **custom domain** (`sfmrisk.mx` por defecto, ver `public/CNAME`).
 
-## Por qué junto al legacy
+## Hosting
 
-El dashboard actual (`../index.html`) está en producción en `pamela-ruiz9.github.io/sfm-monitor`. Cualquier link, cita o embed externo apunta ahí. Migrar de golpe rompe esos links. La estrategia:
+- **Site canónico**: `https://sfmrisk.mx` (definido en `astro.config.ts` → `site`, y en `public/CNAME`)
+- **Base path**: `/` (root del dominio, sin subpath)
+- **Legacy** `../index.html` sigue accesible en `https://pamela-ruiz9.github.io/sfm-monitor/` mientras GitHub Pages del repo siga apuntando ahí — son sitios separados, no compiten
 
-1. Astro vive en `/sfm-monitor/app/` (subpath) durante migración → no toca el dashboard live
-2. Migración chart por chart, validando paridad visual con Playwright (ver `docs/migration-astro.md`)
-3. Cutover en `v0.2.0`: `index.html` → `legacy/v0.1.0.html`, Astro toma el root
+Para cambiar el dominio target (ej. otro nombre disponible):
+1. Editar `public/CNAME` con el dominio nuevo
+2. Editar `astro.config.ts` → `SITE`
+3. Configurar el CNAME en el DNS provider apuntando a Cloudflare Pages / GitHub Pages
+4. Esperar propagación + cert SSL automático
 
 ## Quick start
 
