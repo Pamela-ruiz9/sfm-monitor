@@ -15,6 +15,7 @@ import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
 import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
 
 const data = loadSfmData();
 
@@ -122,5 +123,6 @@ const imorPlaceholder = 2.2;
   <CmdKPalette slot="cmdk" client:idle />
   <UpdateToast slot="update-toast" client:idle />
   <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>
