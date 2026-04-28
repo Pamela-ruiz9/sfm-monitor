@@ -1,5 +1,5 @@
 ---
-import { Home, LineChart, Activity, Building2, TrendingUp } from 'lucide-react';
+import { Home, LineChart, Activity, Building2, TrendingUp, BookOpen } from 'lucide-react';
 
 const TABS = [
   { href: '/', label: 'Resumen', match: /^\/$/, Icon: Home },
@@ -7,6 +7,7 @@ const TABS = [
   { href: '/credito', label: 'Crédito', match: /^\/credito/, Icon: Activity },
   { href: '/sofipos', label: 'SoFiPOs', match: /^\/sofipos/, Icon: Building2 },
   { href: '/macro', label: 'Macro', match: /^\/macro/, Icon: TrendingUp },
+  { href: '/metodologia', label: 'Metodología', match: /^\/metodologia/, Icon: BookOpen },
 ] as const;
 
 const path = Astro.url.pathname;

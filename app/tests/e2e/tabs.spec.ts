@@ -12,6 +12,7 @@ const TABS = [
   { path: '/credito', heading: /Crédito|Banca/i },
   { path: '/sofipos', heading: /SoFiPOs/i },
   { path: '/macro', heading: /INPC|Inflación|Macro/i },
+  { path: '/metodologia', heading: /Metodología|umbrales|fuentes/i },
 ];
 
 for (const { path, heading } of TABS) {

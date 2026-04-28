@@ -3,7 +3,7 @@ import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
-import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import HeroScore from '~/components/HeroScore.astro';
 import Section from '~/components/chrome/Section.astro';
 import AlertsPanel from '~/components/alerts/AlertsPanel.astro';
 import { KpiCard } from '~/components/kpi/KpiCard';
@@ -46,10 +46,7 @@ const imorPlaceholder = 2.2;
   <TabBar slot="header" />
 
   <div class="space-y-8">
-    <EditorialHeadline
-      eyebrow={`Resumen ejecutivo · ${data.ultima_actualizacion}`}
-      headline="El sistema opera dentro de rangos normales con presiones puntuales en SoFiPOs y vigilancia en IFRS 9 Etapa 2."
-    />
+    <HeroScore />
 
     <!-- KPI grid -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
@@ -119,6 +116,40 @@ const imorPlaceholder = 2.2;
         <AlertsPanel />
       </div>
     </div>
+
+    <!-- Liquidez section -->
+    <Section
+      id="liquidez"
+      eyebrow="Liquidez del sistema"
+      title="Depósitos y razón de liquidez"
+      description="Crecimiento anual de la base de depósitos del sistema bancario mexicano. Métrica complementaria al riesgo de crédito."
+      source="CNBV — Boletín Estadístico de Banca Múltiple (datos pendientes en pipeline)"
+      tone="green">
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="text-center py-6">
+          <div class="text-[10px] font-medium uppercase tracking-wider text-[--color-text-mute] mb-2">
+            Crecimiento anual depósitos
+          </div>
+          <div class="serif tabular text-4xl font-semibold text-[--color-green]">
+            +7.2<span class="text-lg text-[--color-text-dim]">%</span>
+          </div>
+          <div class="text-[10px] text-[--color-text-mute] mt-1">
+            Estimado · pipeline CNBV pendiente
+          </div>
+        </div>
+        <div class="text-center py-6">
+          <div class="text-[10px] font-medium uppercase tracking-wider text-[--color-text-mute] mb-2">
+            LCR (Liquidity Coverage Ratio)
+          </div>
+          <div class="serif tabular text-4xl font-semibold text-[--color-green]">
+            331<span class="text-lg text-[--color-text-dim]">%</span>
+          </div>
+          <div class="text-[10px] text-[--color-text-mute] mt-1">
+            Mediana 2T 2025 (vs mín. regulatorio 100%)
+          </div>
+        </div>
+      </div>
+    </Section>
   </div>
 
   <ChartDrawer slot="drawer" client:idle />
