@@ -4,6 +4,7 @@ import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
 ---
 
 <Layout
@@ -32,5 +33,6 @@ import { ChartDrawer } from '~/components/drawer/ChartDrawer';
   </div>
 
   <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>

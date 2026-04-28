@@ -12,6 +12,7 @@ import { loadSfmData } from '~/data/loader';
 import { computeDelta, formatMxn, formatPct } from '~/lib/utils';
 import { DollarSign, Percent, TrendingUp, Activity } from 'lucide-react';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
 
 const data = loadSfmData();
 
@@ -116,5 +117,6 @@ const imorPlaceholder = 2.2;
   </div>
 
   <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>

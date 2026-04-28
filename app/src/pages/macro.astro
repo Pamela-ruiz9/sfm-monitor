@@ -7,6 +7,7 @@ import Section from '~/components/chrome/Section.astro';
 import { InflacionChart } from '~/components/charts/InflacionChart';
 import { loadSfmData } from '~/data/loader';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
 
 const data = loadSfmData();
 const inflacionHistorica =
@@ -34,5 +35,6 @@ const inflacionHistorica =
   </div>
 
   <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>

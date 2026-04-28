@@ -8,6 +8,7 @@ import { FXChart } from '~/components/charts/FXChart';
 import { TasaBanxicoChart } from '~/components/charts/TasaBanxicoChart';
 import { loadSfmData } from '~/data/loader';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
 
 const data = loadSfmData();
 ---
@@ -60,5 +61,6 @@ const data = loadSfmData();
   </div>
 
   <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>
