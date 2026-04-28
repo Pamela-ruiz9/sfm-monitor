@@ -3,6 +3,12 @@ import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import { KpiCard } from '~/components/kpi/KpiCard';
+import { SofiposSegmentChart } from '~/components/charts/SofiposSegmentChart';
+import { SofiposEntidadesChart } from '~/components/charts/SofiposEntidadesChart';
+import { SofiposImoraRoaChart } from '~/components/charts/SofiposImoraRoaChart';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
@@ -10,6 +16,22 @@ import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
 import { OnboardingTour } from '~/components/shell/OnboardingTour';
 import { SwipeNav } from '~/components/shell/SwipeNav';
 import { PullToRefresh } from '~/components/shell/PullToRefresh';
+import { loadSfmData } from '~/data/loader';
+import { formatPct } from '~/lib/utils';
+import { Activity, TrendingDown, Percent, TrendingUp } from 'lucide-react';
+
+const data = loadSfmData();
+const s = data.sofipos;
+const ultima = s.ultima!;
+
+const ents = Object.values(s.historico_por_entidad?.entidades ?? {}) as Array<{
+  nombre: string;
+  imor: (number | null)[];
+}>;
+const top15 = [...ents]
+  .filter((e) => e.imor.length > 0)
+  .sort((a, b) => (b.imor[b.imor.length - 1] ?? 0) - (a.imor[a.imor.length - 1] ?? 0))
+  .slice(0, 15);
 ---
 
 <Layout
@@ -18,22 +40,96 @@ import { PullToRefresh } from '~/components/shell/PullToRefresh';
   <Header slot="header" />
   <TabBar slot="header" />
 
-  <div class="card-surface p-10 text-center">
-    <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[--color-gold] mb-2">
-      Próximamente · v0.2.0
+  <div class="space-y-6">
+    <EditorialHeadline
+      eyebrow={`SoFiPOs · Sociedades Financieras Populares · ${ultima.fecha}`}
+      headline="El sector reporta morosidad ~4× la de Banca Múltiple, con vivienda al 31% y rentabilidad negativa."
+    />
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <KpiCard
+        label="IMOR Total"
+        value={formatPct(ultima.imor_total)}
+        asOf={ultima.fecha}
+        Icon={Activity}
+        tone="yellow"
+        indicatorId="sofipos-imor"
+        client:visible
+      />
+      <KpiCard
+        label="IMOR Vivienda"
+        value={formatPct(ultima.imor_vivienda)}
+        asOf={ultima.fecha}
+        Icon={TrendingDown}
+        tone="red"
+        indicatorId="sofipos-imor-vivienda"
+        client:visible
+      />
+      <KpiCard
+        label="IMORA"
+        value={formatPct(ultima.imora_total)}
+        asOf={ultima.fecha}
+        Icon={Percent}
+        tone="yellow"
+        indicatorId="sofipos-imora"
+        client:visible
+      />
+      <KpiCard
+        label="ROA"
+        value={formatPct(ultima.roa)}
+        asOf={ultima.fecha}
+        Icon={TrendingUp}
+        tone="red"
+        indicatorId="sofipos-roa"
+        client:visible
+      />
     </div>
-    <h2 class="serif text-2xl font-semibold text-[--color-text] mb-3">
-      SoFiPOs · Sociedades Financieras Populares
-    </h2>
-    <p class="text-sm text-[--color-text-dim] max-w-md mx-auto leading-relaxed">
-      IMOR top 15 por activo (eje fijo 45%), IMORA, ROA, comparativo sectorial
-      vs Banca Múltiple. Pendiente de migración del pipeline R11.
-    </p>
-    <a
-      href="https://pamela-ruiz9.github.io/sfm-monitor/"
-      class="inline-flex items-center gap-1 mt-4 text-sm text-[--color-gold] hover:underline">
-      Ver en dashboard estable ↗
-    </a>
+
+    <Section
+      id="sofipos-imor-cartera"
+      eyebrow="Morosidad por cartera"
+      title="IMOR por cartera"
+      description="Índice de Morosidad por tipo de cartera. Eje Y fijo 0–45% para comparación consistente. Vivienda supera sistemáticamente el 25%."
+      source="CNBV Sector 50 (SoFiPOs)"
+      tone="yellow">
+      <SofiposSegmentChart
+        fechas={s.fechas}
+        total={s.imor_total}
+        comercial={s.imor_comercial}
+        consumo={s.imor_consumo}
+        vivienda={s.imor_vivienda}
+        client:visible
+      />
+    </Section>
+
+    <Section
+      id="sofipos-top15"
+      eyebrow="Entidades individuales"
+      title="Top 15 entidades por IMOR (último mes)"
+      description="Las 15 SoFiPOs con mayor índice de morosidad en el último mes disponible. Eje Y fijo 0–45%."
+      source="CNBV Sector 50 (SoFiPOs) — histórico por entidad"
+      tone="red">
+      <SofiposEntidadesChart
+        fechas={s.historico_por_entidad?.fechas ?? s.fechas}
+        entidades={top15}
+        client:visible
+      />
+    </Section>
+
+    <Section
+      id="sofipos-imora-roa"
+      eyebrow="Calidad y rentabilidad"
+      title="IMORA + ROA dual"
+      description="IMORA total (eje izquierdo, amarillo) y ROA del sector (eje derecho, rojo). El ROA negativo señala rentabilidad por debajo del costo de capital."
+      source="CNBV Sector 50 (SoFiPOs)"
+      tone="yellow">
+      <SofiposImoraRoaChart
+        fechas={s.fechas}
+        imora={s.imora_total}
+        roa={s.roa}
+        client:visible
+      />
+    </Section>
   </div>
 
   <ChartDrawer slot="drawer" client:idle />

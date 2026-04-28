@@ -10,6 +10,7 @@ import { ImoraChart } from '~/components/charts/ImoraChart';
 import { IcorChart } from '~/components/charts/IcorChart';
 import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
 import { Ifrs9Chart } from '~/components/charts/Ifrs9Chart';
+import { ImorSegPivotChart } from '~/components/charts/ImorSegPivotChart';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
@@ -24,6 +25,48 @@ import { Activity, Shield, TrendingUp, Percent } from 'lucide-react';
 const data = loadSfmData();
 const hpc = data.credito.historico_por_cartera;
 const ifrs = data.ifrs9;
+
+const hpb = data.credito.historico_por_banco;
+const bancosArr = hpb
+  ? Object.values(hpb.bancos).map((b) => ({
+      id: b.id,
+      nombre: b.nombre,
+      imor_total: b.imor_total,
+    }))
+  : [];
+
+const sofiposEntsArr = data.sofipos.historico_por_entidad
+  ? Object.values(data.sofipos.historico_por_entidad.entidades).map((e) => ({
+      id: e.id,
+      nombre: e.nombre,
+      imor: e.imor,
+    }))
+  : [];
+
+const pivotProps = {
+  bm: {
+    fechas: hpc.fechas,
+    cartera: {
+      total: hpc.imor_total,
+      comercial: hpc.imor_comercial,
+      consumo: hpc.imor_consumo,
+      vivienda: hpc.imor_vivienda,
+      tarjeta: hpc.imor_tarjeta,
+      consumo_norev: hpc.imor_consumo_norev,
+    },
+    bancos: bancosArr,
+  },
+  sofipos: {
+    fechas: data.sofipos.fechas,
+    cartera: {
+      total: data.sofipos.imor_total,
+      comercial: data.sofipos.imor_comercial,
+      consumo: data.sofipos.imor_consumo,
+      vivienda: data.sofipos.imor_vivienda,
+    },
+    entidades: sofiposEntsArr,
+  },
+};
 ---
 
 <Layout
@@ -76,6 +119,16 @@ const ifrs = data.ifrs9;
         client:visible
       />
     </div>
+
+    <Section
+      id="imor-pivot"
+      eyebrow="Explorador interactivo"
+      title="IMOR por sector / banco / cartera / entidad"
+      description="Pivotea entre Banca Múltiple y SoFiPOs, vista Sistema o por entidad/banco, y selecciona cartera o entidad específica. Réplica del módulo principal del dashboard estable."
+      source="CNBV Sector 40 (Banca Múltiple) + Sector 50 (SoFiPOs)"
+      tone="gold">
+      <ImorSegPivotChart {...pivotProps} client:visible />
+    </Section>
 
     <Section
       id="imora"
