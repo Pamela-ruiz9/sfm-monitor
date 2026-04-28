@@ -1,9 +1,7 @@
 import { useMemo } from 'react';
 
 interface Props {
-  /** Source label (e.g. "Banxico", "CNBV"). */
   source: string;
-  /** Last updated date in DD/MM/YYYY (matches sfm-data.json convention). */
   lastUpdated: string;
 }
 
@@ -20,28 +18,26 @@ function parseDdmmyyyy(s: string): Date | null {
 }
 
 export function DataFreshnessBadge({ source, lastUpdated }: Props) {
-  const { color, label } = useMemo(() => {
+  const { dotClass, label } = useMemo(() => {
     const date = parseDdmmyyyy(lastUpdated);
-    if (!date) {
-      return { color: 'bg-slate-500', label: 'sin fecha' };
-    }
-    const ageHours = (Date.now() - date.getTime()) / (1000 * 60 * 60);
-    if (ageHours < 24) {
-      return { color: 'bg-emerald-500', label: 'fresco' };
-    }
-    if (ageHours < 72) {
-      return { color: 'bg-amber-500', label: 'reciente' };
-    }
-    return { color: 'bg-red-500', label: 'desactualizado' };
+    if (!date) return { dotClass: 'bg-[--color-text-mute]', label: 'sin fecha' };
+    const ageH = (Date.now() - date.getTime()) / (1000 * 60 * 60);
+    if (ageH < 24)
+      return { dotClass: 'bg-[--color-green]', label: 'fresco' };
+    if (ageH < 72)
+      return { dotClass: 'bg-[--color-yellow]', label: 'reciente' };
+    return { dotClass: 'bg-[--color-red]', label: 'desactualizado' };
   }, [lastUpdated]);
 
   return (
-    <span className="inline-flex items-center gap-2 text-xs text-slate-400">
+    <span
+      className="inline-flex items-center gap-2 text-[11px] text-[--color-text-mute]"
+      aria-live="polite">
       <span
-        className={`inline-block w-2 h-2 rounded-full ${color}`}
+        className={`inline-block w-2 h-2 rounded-full ${dotClass}`}
         aria-hidden="true"
       />
-      {source} · {lastUpdated} · {label}
+      {source} · <span className="tabular">{lastUpdated}</span> · {label}
     </span>
   );
 }

@@ -3,7 +3,7 @@ import Layout from '~/layouts/Layout.astro';
 // import Hero from '~/components/Hero.astro';       // removed in Task 5 — rewritten in Task 10
 // import Sidebar from '~/components/Sidebar.astro'; // removed in Task 5 — rewritten in Task 10
 // import Section from '~/components/Section.astro'; // removed in Task 5 — use chrome/Section.astro
-import { KpiCard } from '~/components/KpiCard';
+import { KpiCard } from '~/components/kpi/KpiCard';
 import { FXChart } from '~/components/charts/FXChart';
 import { TasaBanxicoChart } from '~/components/charts/TasaBanxicoChart';
 import { InflacionChart } from '~/components/charts/InflacionChart';
@@ -55,7 +55,7 @@ const imorPlaceholder = 2.2;
           label="MXN/USD FIX"
           value={formatMxn(fxLatest, 4)}
           asOf={data.tipo_cambio.fecha}
-          tone="cyan"
+          tone="gold"
           Icon={DollarSign}
           delta={
             fxDelta && {
@@ -69,7 +69,7 @@ const imorPlaceholder = 2.2;
           label="Tasa Banxico"
           value={formatPct(tasaLatest, 2)}
           asOf={data.tasa_banxico.fecha}
-          tone="rose"
+          tone="red"
           Icon={Percent}
           delta={
             tasaDelta && {
@@ -83,7 +83,7 @@ const imorPlaceholder = 2.2;
           label="Inflación anual"
           value={formatPct(inflacionLatest, 2)}
           asOf={data.inflacion.fecha}
-          tone="amber"
+          tone="yellow"
           Icon={TrendingUp}
           delta={
             inflacionDelta && {
@@ -97,7 +97,7 @@ const imorPlaceholder = 2.2;
           label="IMOR Banca Múltiple"
           value={formatPct(imorPlaceholder, 2)}
           asOf="placeholder · CNBV pendiente"
-          tone="emerald"
+          tone="green"
           Icon={Activity}
         />
       </div>
