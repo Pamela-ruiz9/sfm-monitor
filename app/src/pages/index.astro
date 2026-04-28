@@ -1,8 +1,8 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-import Hero from '~/components/Hero.astro';
-import Sidebar from '~/components/Sidebar.astro';
-import Section from '~/components/Section.astro';
+// import Hero from '~/components/Hero.astro';       // removed in Task 5 — rewritten in Task 10
+// import Sidebar from '~/components/Sidebar.astro'; // removed in Task 5 — rewritten in Task 10
+// import Section from '~/components/Section.astro'; // removed in Task 5 — use chrome/Section.astro
 import { KpiCard } from '~/components/KpiCard';
 import { FXChart } from '~/components/charts/FXChart';
 import { TasaBanxicoChart } from '~/components/charts/TasaBanxicoChart';
@@ -45,7 +45,7 @@ const imorPlaceholder = 2.2;
   title="SFM Monitor"
   description="Dashboard público de riesgo del Sistema Financiero Mexicano. Datos de Banxico SIE, CNBV e INEGI. Actualización automática diaria.">
   <div class="space-y-10">
-    <Hero lastUpdated={data.ultima_actualizacion} />
+    {/* <Hero lastUpdated={data.ultima_actualizacion} /> */}{/* removed in Task 5 — rewritten in Task 10 */}
 
     {/* KPI cards */}
     <section aria-labelledby="kpi-heading" class="space-y-3">
@@ -103,7 +103,8 @@ const imorPlaceholder = 2.2;
       </div>
     </section>
 
-    {/* Main grid: sidebar + content */}
+    {/* NOTE: Sidebar + Section grid commented out in Task 5 — fully rewritten in Tasks 10-11 */}
+    {/*
     <div class="grid lg:grid-cols-[200px_1fr] gap-8">
       <Sidebar />
 
@@ -181,5 +182,6 @@ const imorPlaceholder = 2.2;
         </section>
       </div>
     </div>
+    */}
   </div>
 </Layout>
