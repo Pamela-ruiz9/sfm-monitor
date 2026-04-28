@@ -11,6 +11,7 @@ import {
 } from 'chart.js';
 import 'chartjs-adapter-date-fns';
 import { Line } from 'react-chartjs-2';
+import { ChartErrorBoundary } from './ChartErrorBoundary';
 
 ChartJS.register(
   CategoryScale,
@@ -70,38 +71,40 @@ export function TasaBanxicoChart({ series }: Props) {
   };
 
   return (
-    <div className="h-64 md:h-72 -mx-1">
-      <Line
-        data={data}
-        options={{
-          responsive: true,
-          maintainAspectRatio: false,
-          interaction: { mode: 'index', intersect: false },
-          plugins: {
-            legend: { labels: { color: '#e2e8f0' } },
-            tooltip: {
-              callbacks: {
-                label: (ctx) => {
-                  const y = ctx.parsed.y;
-                  return y == null ? '—' : `${y.toFixed(2)}%`;
+    <ChartErrorBoundary chartName="Tasa Banxico">
+      <div className="h-64 md:h-72 -mx-1">
+        <Line
+          data={data}
+          options={{
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+              legend: { labels: { color: '#e2e8f0' } },
+              tooltip: {
+                callbacks: {
+                  label: (ctx) => {
+                    const y = ctx.parsed.y;
+                    return y == null ? '—' : `${y.toFixed(2)}%`;
+                  },
                 },
               },
             },
-          },
-          scales: {
-            x: {
-              type: 'time',
-              time: { unit: 'year' },
-              ticks: { color: '#94a3b8' },
-              grid: { color: 'rgba(148, 163, 184, 0.1)' },
+            scales: {
+              x: {
+                type: 'time',
+                time: { unit: 'year' },
+                ticks: { color: '#94a3b8' },
+                grid: { color: 'rgba(148, 163, 184, 0.1)' },
+              },
+              y: {
+                ticks: { color: '#94a3b8', callback: (v) => `${v}%` },
+                grid: { color: 'rgba(148, 163, 184, 0.1)' },
+              },
             },
-            y: {
-              ticks: { color: '#94a3b8', callback: (v) => `${v}%` },
-              grid: { color: 'rgba(148, 163, 184, 0.1)' },
-            },
-          },
-        }}
-      />
-    </div>
+          }}
+        />
+      </div>
+    </ChartErrorBoundary>
   );
 }
