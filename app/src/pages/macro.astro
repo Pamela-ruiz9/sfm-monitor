@@ -8,6 +8,7 @@ import { InflacionChart } from '~/components/charts/InflacionChart';
 import { loadSfmData } from '~/data/loader';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
 
 const data = loadSfmData();
 const inflacionHistorica =
@@ -36,5 +37,6 @@ const inflacionHistorica =
 
   <ChartDrawer slot="drawer" client:idle />
   <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>

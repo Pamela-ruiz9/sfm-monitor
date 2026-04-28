@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import AstroPWA from '@vite-pwa/astro';
 
 // Custom domain target — adjust if a different one is registered.
 // CNAME file at app/public/CNAME drives GitHub Pages / Cloudflare Pages
@@ -36,6 +37,32 @@ export default defineConfig({
       i18n: {
         defaultLocale: 'es',
         locales: { es: 'es-MX', en: 'en-US' },
+      },
+    }),
+    AstroPWA({
+      registerType: 'autoUpdate',
+      manifest: false, // we ship manifest.webmanifest manually
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,woff2,svg,png,ico}'],
+        runtimeCaching: [
+          {
+            urlPattern: /\/data\/.*\.json$/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'sfm-data',
+              networkTimeoutSeconds: 3,
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 7,
+              },
+            },
+          },
+          {
+            urlPattern: /^https:\/\/(rsms\.me|fonts\.(googleapis|gstatic)\.com)/,
+            handler: 'StaleWhileRevalidate',
+            options: { cacheName: 'sfm-fonts' },
+          },
+        ],
       },
     }),
   ],
