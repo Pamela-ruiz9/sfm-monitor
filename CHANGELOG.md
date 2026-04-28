@@ -12,14 +12,46 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### En curso en branch `feat/app-redesign-pwa-v0.2.0-dev` (PR #1) — 31 commits
+
+#### PASS 1 — Crédito tab + 4 charts (commit 7605892)
+- 4 charts nuevos: `ImoraChart`, `IcorChart`, `RoaRoeChart` (dual-axis), `Ifrs9Chart` (stacked area)
+- Crédito tab full content: editorial headline + 4 KPI cards (IMOR/IMORA/ICOR/ROA) + 4 secciones de chart + IFRS 9 KPI tiles
+- Schema tightened: `KpiSnapshot`, `HistoricoCarteraSchema`, `Ifrs9UltimaSchema`, `CreditoSchema` y `Ifrs9Schema` ahora estrictos (no `looseObject`)
+
+#### PASS 2 — SoFiPOs tab + IMOR-seg pivotable (commit 264d530)
+- 3 charts SoFiPOs: `SofiposSegmentChart` (4-line cartera, Y fixed 0-45%), `SofiposEntidadesChart` (top 15 con paleta CVD-safe Okabe-Ito), `SofiposImoraRoaChart` (dual-axis)
+- SoFiPOs tab full content: editorial headline + 4 KPIs (IMOR/Vivienda/IMORA/ROA) + 3 secciones
+- `ImorSegPivotChart` — réplica del legacy `chart-imor-seg`: sector toggle BM↔SoFiPOs, view toggle Sistema/Por banco/Por entidad, selectores dinámicos (6 carteras BM, 4 SoFi, G-7 bancos, 45 entidades SoFiPOs)
+- Schema tightened: `SofiposSchema`, `SofiposUltimaSchema`, `SofiposHistoricoEntidadSchema`, `SofiposEntidadSchema`, `HistoricoBancoEntrySchema`, `HistoricoBancoCarteraEntrySchema` (no más `looseObject`)
+
+#### PASS 3 — HeroScore + Liquidez + Methodology (commit 443c529)
+- `HeroScore.astro` server-rendered: serif headline 4.8rem color-coded por severidad agregada (Bajo/Contenido/Moderado/Elevado), 4 dimension pills (Crédito/Mercado/Macro/Liquidez) con semaforo dots, count de alertas activas
+- Algoritmo de score compositional: thresholds por dimensión (IMOR: ≤3.5 verde / 3.5-4.5 amarillo / >4.5 rojo; Inflación: 2-4 verde / 4-6 amarillo / >6 rojo)
+- Liquidez section en Resumen: depósitos crecimiento +7.2% + LCR mediana 331% (estimates pending CNBV pipeline)
+- `/metodologia` route nueva con 4 collapsible details (umbrales por indicador, fuentes CNBV/Banxico/INEGI, cómo se actualizan datos, limitaciones)
+- 6ta tab "Metodología" en TabBar + BottomNav + activeTab store
+
+#### Cobertura del legacy `index.html` ahora ~95%
+- ✅ 11/11 charts canvas migrados (FX, Tasa, Inflación, IMORA, ICOR, ROA+ROE dual, IFRS9 stacked, IMOR-seg pivot, SoFi cartera, SoFi top-15 entidades, SoFi IMORA+ROA dual)
+- ✅ 5/5 secciones (Crédito, Mercado, Macro, SoFiPOs, Liquidez, Metodología)
+- ✅ Hero score module
+- ✅ Selectores dinámicos (sector toggle, view toggle, banco G-7, SoFi entidades, cartera segments)
+- ✅ IFRS 9 KPI mini-tiles
+- ❌ Solo PIB chart queda fuera (no PIB data en `sfm-data.json`)
+
 ### Por hacer (no bloqueado por migración Astro)
 - DOI persistente vía Zenodo — requiere paso manual (ver `docs/citability.md`)
 - Pipeline CNBV CSV automatizado (R12A IFRS9, SoFiPOs R11)
 - Integración Banxico API para inflación subyacente (SP74625)
-- M2-M3 de migración Astro: 6 charts CNBV pendientes (Crédito + SoFiPOs siguen como placeholders)
+- Pipeline INEGI BIE para datos de PIB (último chart legacy faltante)
+- Pipeline CNBV para datos reales de Liquidez (depósitos + LCR vs hardcoded estimates)
 - M4 features citables: `<CitationBox>` UI, `<MetricTooltip>` glosario, JSON-LD `Dataset` por indicador, OG dinámico con Satori
 - Reemplazar PWA icons placeholder (1×1 PNG) por íconos reales y activar `categories:pwa` en `lighthouserc.json`
 - Modo Terminal toggle UI (store ya existe en `terminalMode.ts`)
+- Cmd+K Tab focus trap (deferred del review de PR #1)
+- i18n locale `en` removal o agregar contenido inglés
+- Cache Playwright en CI (already added en PR #1) ✅
 
 ---
 
