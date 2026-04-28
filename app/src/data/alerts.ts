@@ -28,7 +28,7 @@ export function computeAlerts(data: SfmData): Alert[] {
       label: above
         ? `Inflación ${inflationLatest.toFixed(2)}% sobre rango Banxico (3% ±1pp)`
         : `Inflación ${inflationLatest.toFixed(2)}% bajo rango Banxico (3% ±1pp)`,
-      severity: above ? 'yellow' : 'green',
+      severity: 'yellow',
       indicatorId: 'inflacion',
     });
   }

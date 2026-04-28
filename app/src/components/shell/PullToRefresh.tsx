@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { RotateCw } from 'lucide-react';
 
 const THRESHOLD = 80;
@@ -6,33 +6,37 @@ const THRESHOLD = 80;
 export function PullToRefresh() {
   const [pulling, setPulling] = useState(0);
   const [refreshing, setRefreshing] = useState(false);
+  const pullingRef = useRef(0);
+  const startYRef = useRef(0);
+  const activeRef = useRef(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    let startY = 0;
-    let active = false;
 
     function start(e: TouchEvent) {
       if (window.scrollY > 0) return;
       const t = e.touches[0]!;
-      startY = t.clientY;
-      active = true;
+      startYRef.current = t.clientY;
+      activeRef.current = true;
     }
     function move(e: TouchEvent) {
-      if (!active) return;
+      if (!activeRef.current) return;
       const t = e.touches[0]!;
-      const dy = t.clientY - startY;
+      const dy = t.clientY - startYRef.current;
       if (dy <= 0) return;
-      setPulling(Math.min(dy, THRESHOLD * 1.5));
+      const next = Math.min(dy, THRESHOLD * 1.5);
+      pullingRef.current = next;
+      setPulling(next);
     }
     function end() {
-      if (!active) return;
-      active = false;
-      if (pulling >= THRESHOLD) {
+      if (!activeRef.current) return;
+      activeRef.current = false;
+      if (pullingRef.current >= THRESHOLD) {
         setRefreshing(true);
         setPulling(THRESHOLD);
         setTimeout(() => window.location.reload(), 200);
       } else {
+        pullingRef.current = 0;
         setPulling(0);
       }
     }
@@ -45,7 +49,7 @@ export function PullToRefresh() {
       document.removeEventListener('touchmove', move);
       document.removeEventListener('touchend', end);
     };
-  }, [pulling]);
+  }, []); // empty deps — listeners attached once, refs hold mutable state
 
   if (pulling === 0 && !refreshing) return null;
 

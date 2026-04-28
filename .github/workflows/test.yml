@@ -31,11 +31,21 @@ jobs:
       - name: Unit tests
         run: npm test
 
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('app/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
       - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
 
-      - name: E2E tests
-        run: npm run test:e2e -- --project=desktop
+      - name: E2E tests (excludes visual regression — snapshots are darwin-only)
+        run: npm run test:e2e -- --project=desktop --grep-invert "visual"
 
       - name: Upload Playwright report
         if: always()

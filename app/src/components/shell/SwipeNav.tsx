@@ -1,4 +1,3 @@
-import { useDrag } from '@use-gesture/react';
 import { useEffect } from 'react';
 import { useStore } from '@nanostores/react';
 import { $activeTab, adjacentTab, tabPath } from '~/stores/activeTab';
@@ -44,8 +43,5 @@ export function SwipeNav() {
     };
   }, [tab, drawerOpen]);
 
-  // useDrag is imported but unused here intentionally — kept for future
-  // pointer-event gesture refinement when we add visual feedback during drag.
-  void useDrag;
   return null;
 }

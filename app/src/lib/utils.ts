@@ -27,6 +27,13 @@ export function formatPct(n: number, decimals = 2): string {
 }
 
 /**
+ * Threshold below which a delta is considered flat (no meaningful change).
+ * 0.0001 covers basis points and percentage points without false-flagging
+ * floating-point noise. Override per-indicator if needed in the future.
+ */
+const FLAT_DELTA_THRESHOLD = 0.0001;
+
+/**
  * Compute delta between the latest value and the previous value in a series.
  * Returns the raw difference plus formatted deltas. Returns null if series
  * has fewer than 2 points.
@@ -39,7 +46,8 @@ export function computeDelta(
   const prev = values[values.length - 2]!;
   const abs = last - prev;
   const pct = prev === 0 ? 0 : (abs / prev) * 100;
-  const direction = abs > 0.0001 ? 'up' : abs < -0.0001 ? 'down' : 'flat';
+  const direction =
+    abs > FLAT_DELTA_THRESHOLD ? 'up' : abs < -FLAT_DELTA_THRESHOLD ? 'down' : 'flat';
   return { abs, pct, direction };
 }
 

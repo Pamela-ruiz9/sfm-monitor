@@ -2,6 +2,8 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests/e2e',
+  // Visual regression snapshots are platform-specific (darwin baselines).
+  // CI excludes them via `--grep-invert "visual"`. Run locally with full suite.
   fullyParallel: true,
   forbidOnly: !!process.env['CI'],
   retries: process.env['CI'] ? 2 : 0,

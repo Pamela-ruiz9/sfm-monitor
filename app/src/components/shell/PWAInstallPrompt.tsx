@@ -13,10 +13,15 @@ const DISMISS_DAYS = 30;
 
 function isIOS(): boolean {
   if (typeof navigator === 'undefined') return false;
-  return (
-    /iPad|iPhone|iPod/.test(navigator.userAgent) &&
-    !(window as unknown as { MSStream?: unknown }).MSStream
-  );
+  const ua = navigator.userAgent;
+  if (/iPad|iPhone|iPod/.test(ua) && !(window as unknown as { MSStream?: unknown }).MSStream) {
+    return true;
+  }
+  // iPad in desktop mode reports UA as Mac but has touch support
+  if (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) {
+    return true;
+  }
+  return false;
 }
 
 function isStandalone(): boolean {

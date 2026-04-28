@@ -13,6 +13,12 @@ function syncFromUrl(): void {
     return;
   }
   const indicator = getIndicator(id);
+  if (!indicator && import.meta.env['DEV']) {
+    console.warn(
+      `[drawerState] Unknown indicator id "${id}" in URL. ` +
+        `Check ~/data/indicators.ts for valid ids.`,
+    );
+  }
   $drawerIndicator.set(indicator ? indicator.id : null);
 }
 
