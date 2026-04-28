@@ -16,6 +16,8 @@ import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
 import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
 import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
 
 const data = loadSfmData();
 
@@ -124,5 +126,7 @@ const imorPlaceholder = 2.2;
   <UpdateToast slot="update-toast" client:idle />
   <PWAInstallPrompt slot="install-prompt" client:idle />
   <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>
