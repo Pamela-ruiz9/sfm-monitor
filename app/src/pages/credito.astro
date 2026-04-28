@@ -6,6 +6,7 @@ import BottomNav from '~/components/shell/BottomNav.astro';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
 ---
 
 <Layout
@@ -36,5 +37,6 @@ import { UpdateToast } from '~/components/shell/UpdateToast';
   <ChartDrawer slot="drawer" client:idle />
   <CmdKPalette slot="cmdk" client:idle />
   <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>

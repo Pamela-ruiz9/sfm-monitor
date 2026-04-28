@@ -14,6 +14,7 @@ import { DollarSign, Percent, TrendingUp, Activity } from 'lucide-react';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
 
 const data = loadSfmData();
 
@@ -120,5 +121,6 @@ const imorPlaceholder = 2.2;
   <ChartDrawer slot="drawer" client:idle />
   <CmdKPalette slot="cmdk" client:idle />
   <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>
