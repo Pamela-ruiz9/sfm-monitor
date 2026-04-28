@@ -70,7 +70,7 @@ export function TasaBanxicoChart({ series }: Props) {
   };
 
   return (
-    <div className="bg-slate-800 rounded-lg p-4 h-80">
+    <div className="h-72 md:h-80">
       <Line
         data={data}
         options={{

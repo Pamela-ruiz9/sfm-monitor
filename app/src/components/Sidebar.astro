@@ -1,0 +1,67 @@
+---
+interface NavItem {
+  href: string;
+  label: string;
+  badge?: string;
+}
+
+const items: NavItem[] = [
+  { href: '#mercado', label: 'Mercado' },
+  { href: '#macro', label: 'Macro' },
+  { href: '#credito', label: 'Crédito', badge: 'pendiente' },
+  { href: '#sofipos', label: 'SoFiPOs', badge: 'pendiente' },
+];
+---
+
+<nav class="hidden lg:block sticky top-24 self-start" aria-label="Secciones del dashboard">
+  <div class="text-[11px] font-medium uppercase tracking-wider text-slate-500 mb-3 px-3">
+    Secciones
+  </div>
+  <ul class="space-y-0.5">
+    {
+      items.map((it) => (
+        <li>
+          <a
+            href={it.href}
+            class="flex items-center justify-between rounded-md px-3 py-1.5 text-sm text-slate-400 hover:bg-slate-800/50 hover:text-slate-100 transition-colors">
+            <span>{it.label}</span>
+            {it.badge && (
+              <span class="text-[10px] uppercase tracking-wider text-slate-600">
+                {it.badge}
+              </span>
+            )}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <div class="mt-8 px-3 space-y-2">
+    <div class="text-[11px] font-medium uppercase tracking-wider text-slate-500">
+      Recursos
+    </div>
+    <ul class="space-y-0.5 text-sm">
+      <li>
+        <a
+          href="https://github.com/Pamela-ruiz9/sfm-monitor/blob/main/CHANGELOG.md"
+          class="block rounded-md px-3 py-1.5 text-slate-400 hover:bg-slate-800/50 hover:text-slate-100">
+          CHANGELOG
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/Pamela-ruiz9/sfm-monitor/blob/main/docs/citability.md"
+          class="block rounded-md px-3 py-1.5 text-slate-400 hover:bg-slate-800/50 hover:text-slate-100">
+          Cómo citar
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/Pamela-ruiz9/sfm-monitor/blob/main/docs/research/blueprint-2026.md"
+          class="block rounded-md px-3 py-1.5 text-slate-400 hover:bg-slate-800/50 hover:text-slate-100">
+          Blueprint 2026
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

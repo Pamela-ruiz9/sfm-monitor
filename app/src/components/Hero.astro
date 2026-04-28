@@ -1,0 +1,55 @@
+---
+interface Props {
+  lastUpdated: string;
+}
+
+const { lastUpdated } = Astro.props;
+---
+
+<section class="relative overflow-hidden rounded-2xl surface-strong p-8 md:p-12">
+  <div
+    class="absolute -right-20 -top-20 size-64 rounded-full bg-blue-500/10 blur-3xl"
+    aria-hidden="true">
+  </div>
+  <div
+    class="absolute -left-10 bottom-0 size-48 rounded-full bg-cyan-500/10 blur-3xl"
+    aria-hidden="true">
+  </div>
+
+  <div class="relative space-y-4 max-w-3xl">
+    <div class="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs text-amber-300">
+      <span class="size-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+      Preview Astro · v0.2.0-dev · migración en curso
+    </div>
+
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-50 leading-[1.1]">
+      Riesgo del Sistema
+      <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+        Financiero Mexicano
+      </span>
+    </h1>
+
+    <p class="text-base md:text-lg text-slate-300 leading-relaxed">
+      Indicadores de crédito, mercado y macro de fuentes oficiales —
+      Banxico, CNBV e INEGI. Actualización automática diaria, datos abiertos,
+      metodología pública.
+    </p>
+
+    <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 pt-1">
+      <span class="inline-flex items-center gap-1.5">
+        <span class="size-1.5 rounded-full bg-emerald-400"></span>
+        Última actualización: <span class="text-slate-200 tabular">{lastUpdated}</span>
+      </span>
+      <span class="text-slate-600">·</span>
+      <a href="/sfm-monitor/" class="hover:text-slate-200 underline-offset-4 hover:underline">
+        Dashboard estable
+      </a>
+      <span class="text-slate-600">·</span>
+      <a
+        href="https://github.com/Pamela-ruiz9/sfm-monitor"
+        class="hover:text-slate-200 underline-offset-4 hover:underline">
+        Ver código en GitHub
+      </a>
+    </div>
+  </div>
+</section>

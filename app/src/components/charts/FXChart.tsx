@@ -57,7 +57,7 @@ export function FXChart({ series, crises = DEFAULT_CRISES }: Props) {
   };
 
   return (
-    <div className="bg-slate-800 rounded-lg p-4 h-96">
+    <div className="h-72 md:h-80">
       <Line
         data={data}
         options={{

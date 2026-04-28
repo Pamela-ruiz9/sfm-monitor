@@ -1,5 +1,6 @@
 ---
 import '~/styles/global.css';
+import Footer from '~/components/Footer.astro';
 
 interface Props {
   title: string;
@@ -9,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'Monitor de Riesgo del Sistema Financiero Mexicano',
+  description = 'Monitor de Riesgo del Sistema Financiero Mexicano · Datos de Banxico, CNBV e INEGI',
   canonical,
 } = Astro.props;
 
@@ -31,46 +32,57 @@ const canonicalUrl =
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0a0e1a" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <title>{fullTitle}</title>
   </head>
-  <body class="bg-[--color-sfm-bg] text-[--color-sfm-text] min-h-screen">
-    <header class="border-b border-slate-700 px-6 py-4">
-      <div class="max-w-6xl mx-auto flex items-center justify-between">
-        <a href={import.meta.env.BASE_URL} class="text-lg font-semibold">
-          SFM Monitor
+  <body class="min-h-screen">
+    <header
+      class="sticky top-0 z-40 border-b border-slate-800/60 backdrop-blur-md"
+      style="background: linear-gradient(180deg, rgba(10, 14, 26, 0.85), rgba(10, 14, 26, 0.7))">
+      <div
+        class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+        <a
+          href={import.meta.env.BASE_URL}
+          class="flex items-center gap-2 group">
+          <div
+            class="size-7 rounded-md bg-gradient-to-br from-blue-500 to-cyan-500 grid place-items-center text-[11px] font-bold text-white shadow-lg shadow-blue-500/20">
+            SFM
+          </div>
+          <span class="font-semibold text-slate-100 group-hover:text-white">
+            Monitor
+          </span>
+          <span class="text-[10px] text-slate-500 ml-1 hidden sm:inline">
+            v0.2.0-dev
+          </span>
         </a>
-        <nav class="flex gap-4 text-sm">
-          <a href="/sfm-monitor/" class="text-slate-400 hover:text-white">
-            ← Dashboard legacy
+
+        <nav class="flex items-center gap-1 text-sm" aria-label="Principal">
+          <a
+            href="/sfm-monitor/"
+            class="px-3 py-1.5 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 transition-colors">
+            Estable v0.1.0
           </a>
           <a
             href="https://github.com/Pamela-ruiz9/sfm-monitor"
-            class="text-slate-400 hover:text-white">
+            class="px-3 py-1.5 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 transition-colors">
             GitHub
           </a>
         </nav>
       </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-8">
+    <main class="max-w-7xl mx-auto px-6 py-8">
       <slot />
     </main>
 
-    <footer
-      class="border-t border-slate-700 px-6 py-6 text-sm text-[--color-sfm-muted]">
-      <div class="max-w-6xl mx-auto space-y-1">
-        <p>
-          Datos de fuentes públicas oficiales (Banxico, CNBV, INEGI). Este
-          dashboard NO es producto oficial. No constituye asesoría financiera.
-        </p>
-        <p>
-          Código MIT · Contenido CC-BY 4.0 ·
-          <a href="/sfm-monitor/CHANGELOG.md" class="underline">CHANGELOG</a> ·
-          <a href="/sfm-monitor/docs/citability.md" class="underline">
-            Cómo citar
-          </a>
-        </p>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
