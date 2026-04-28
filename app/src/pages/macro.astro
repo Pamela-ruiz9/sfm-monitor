@@ -1,0 +1,36 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/shell/Header.astro';
+import TabBar from '~/components/shell/TabBar.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import { InflacionChart } from '~/components/charts/InflacionChart';
+import { loadSfmData } from '~/data/loader';
+
+const data = loadSfmData();
+const inflacionHistorica =
+  data.historico.inflacion_mensual_desde_2000 ??
+  data.inflacion.historico_mensual;
+---
+
+<Layout
+  title="Macro"
+  description="Contexto macro: inflación INPC, banda objetivo Banxico.">
+  <Header slot="header" />
+  <TabBar slot="header" />
+
+  <div class="space-y-6">
+    <Section
+      id="inflacion"
+      eyebrow="Inflación"
+      title="INPC anual"
+      description="Variación anual del Índice Nacional de Precios al Consumidor. Banda verde: objetivo Banxico 3% ±1pp."
+      source="Banco de México, SIE, serie SP74625"
+      refCode="SP74625"
+      tone="yellow">
+      <InflacionChart series={inflacionHistorica} client:visible />
+    </Section>
+  </div>
+
+  <BottomNav slot="bottom-nav" />
+</Layout>

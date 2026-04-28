@@ -1,0 +1,34 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/shell/Header.astro';
+import TabBar from '~/components/shell/TabBar.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+---
+
+<Layout
+  title="Crédito"
+  description="Riesgo de crédito Banca Múltiple: IMOR, IMORA, ICOR, IFRS9, ROA/ROE.">
+  <Header slot="header" />
+  <TabBar slot="header" />
+
+  <div class="card-surface p-10 text-center">
+    <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[--color-gold] mb-2">
+      Próximamente · v0.2.0
+    </div>
+    <h2 class="serif text-2xl font-semibold text-[--color-text] mb-3">
+      Riesgo de crédito · Banca Múltiple
+    </h2>
+    <p class="text-sm text-[--color-text-dim] max-w-md mx-auto leading-relaxed">
+      IMOR histórico, IMOR por segmento (comercial, consumo, vivienda, tarjeta),
+      IMOR por banco G-7, IMORA, ICOR, ROA, ROE, IFRS 9 etapas 1/2/3.
+      Disponible en el dashboard estable mientras se migra el pipeline CNBV.
+    </p>
+    <a
+      href="https://pamela-ruiz9.github.io/sfm-monitor/"
+      class="inline-flex items-center gap-1 mt-4 text-sm text-[--color-gold] hover:underline">
+      Ver en dashboard estable ↗
+    </a>
+  </div>
+
+  <BottomNav slot="bottom-nav" />
+</Layout>

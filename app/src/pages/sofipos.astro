@@ -1,0 +1,33 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/shell/Header.astro';
+import TabBar from '~/components/shell/TabBar.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+---
+
+<Layout
+  title="SoFiPOs"
+  description="Sociedades Financieras Populares: IMOR top 15 por activo, IMORA, ROA, comparativo vs Banca Múltiple.">
+  <Header slot="header" />
+  <TabBar slot="header" />
+
+  <div class="card-surface p-10 text-center">
+    <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[--color-gold] mb-2">
+      Próximamente · v0.2.0
+    </div>
+    <h2 class="serif text-2xl font-semibold text-[--color-text] mb-3">
+      SoFiPOs · Sociedades Financieras Populares
+    </h2>
+    <p class="text-sm text-[--color-text-dim] max-w-md mx-auto leading-relaxed">
+      IMOR top 15 por activo (eje fijo 45%), IMORA, ROA, comparativo sectorial
+      vs Banca Múltiple. Pendiente de migración del pipeline R11.
+    </p>
+    <a
+      href="https://pamela-ruiz9.github.io/sfm-monitor/"
+      class="inline-flex items-center gap-1 mt-4 text-sm text-[--color-gold] hover:underline">
+      Ver en dashboard estable ↗
+    </a>
+  </div>
+
+  <BottomNav slot="bottom-nav" />
+</Layout>
