@@ -2,12 +2,25 @@
 import Layout from '~/layouts/Layout.astro';
 import { DataFreshnessBadge } from '~/components/DataFreshnessBadge';
 import { FXChart } from '~/components/charts/FXChart';
+import { TasaBanxicoChart } from '~/components/charts/TasaBanxicoChart';
+import { InflacionChart } from '~/components/charts/InflacionChart';
 import { loadSfmData } from '~/data/loader';
 
 const data = loadSfmData();
+
 const fxSeries = data.tipo_cambio.historico_mensual;
 const fxLatest = Number(data.tipo_cambio.actual).toFixed(4);
 const fxLatestMonth = data.tipo_cambio.fecha;
+
+const tasaSeries = data.tasa_banxico.historico;
+const tasaLatest = Number(data.tasa_banxico.actual).toFixed(2);
+const tasaFecha = data.tasa_banxico.fecha;
+
+const inflacionSeries = data.inflacion.historico_mensual;
+const inflacionHistorica =
+  data.historico.inflacion_mensual_desde_2000 ?? inflacionSeries;
+const inflacionLatest = Number(data.inflacion.actual).toFixed(2);
+const inflacionFecha = data.inflacion.fecha;
 ---
 
 <Layout
@@ -49,11 +62,38 @@ const fxLatestMonth = data.tipo_cambio.fecha;
       <FXChart series={fxSeries} client:visible />
     </article>
 
+    <article class="border-t border-slate-700 pt-6 space-y-3">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-xl font-semibold">Tasa objetivo Banxico</h2>
+        <div class="text-right">
+          <div class="text-3xl font-mono tabular">{tasaLatest}%</div>
+          <div class="text-xs text-[--color-sfm-muted]">{tasaFecha}</div>
+        </div>
+      </div>
+      <p class="text-sm text-[--color-sfm-muted]">
+        Decisiones de política monetaria. Fuente: Banco de México, SIE, serie SF61745.
+      </p>
+      <TasaBanxicoChart series={tasaSeries} client:visible />
+    </article>
+
+    <article class="border-t border-slate-700 pt-6 space-y-3">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-xl font-semibold">Inflación anual (INPC)</h2>
+        <div class="text-right">
+          <div class="text-3xl font-mono tabular">{inflacionLatest}%</div>
+          <div class="text-xs text-[--color-sfm-muted]">{inflacionFecha}</div>
+        </div>
+      </div>
+      <p class="text-sm text-[--color-sfm-muted]">
+        Variación anual del Índice Nacional de Precios al Consumidor. Banda
+        verde: objetivo Banxico 3% ±1pp. Fuente: Banxico SIE serie SP74625.
+      </p>
+      <InflacionChart series={inflacionHistorica} client:visible />
+    </article>
+
     <article class="border-t border-slate-700 pt-6 space-y-2">
       <h2 class="text-lg font-semibold">Próximas charts a migrar</h2>
       <ul class="text-sm text-[--color-sfm-muted] list-disc list-inside space-y-1">
-        <li>Tasa objetivo Banxico + TIIE 28d</li>
-        <li>Inflación INPC anual vs objetivo 3% ±1%</li>
         <li>IMOR Banca Múltiple histórico</li>
         <li>IMOR por segmento (comercial/consumo/vivienda/tarjeta)</li>
         <li>IMOR por banco G-7</li>
