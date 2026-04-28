@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+@theme {
+  /* SFM brand palette (matches legacy index.html) */
+  --color-sfm-bg: #0f172a;
+  --color-sfm-surface: #1e293b;
+  --color-sfm-text: #e2e8f0;
+  --color-sfm-muted: #94a3b8;
+  --color-sfm-accent: #3b82f6;
+
+  /* Risk semaphore (Banxico-style YlOrRd) */
+  --color-risk-low: #10b981;
+  --color-risk-mid: #f59e0b;
+  --color-risk-high: #ef4444;
+
+  /* Tabular numerics for financial tables */
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-feature-settings: 'tnum', 'lnum';
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums lining-nums;
+}
