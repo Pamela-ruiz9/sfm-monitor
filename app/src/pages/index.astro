@@ -1,187 +1,118 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-// import Hero from '~/components/Hero.astro';       // removed in Task 5 — rewritten in Task 10
-// import Sidebar from '~/components/Sidebar.astro'; // removed in Task 5 — rewritten in Task 10
-// import Section from '~/components/Section.astro'; // removed in Task 5 — use chrome/Section.astro
+import Header from '~/components/shell/Header.astro';
+import TabBar from '~/components/shell/TabBar.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import Section from '~/components/chrome/Section.astro';
+import AlertsPanel from '~/components/alerts/AlertsPanel.astro';
 import { KpiCard } from '~/components/kpi/KpiCard';
 import { FXChart } from '~/components/charts/FXChart';
-import { TasaBanxicoChart } from '~/components/charts/TasaBanxicoChart';
-import { InflacionChart } from '~/components/charts/InflacionChart';
 import { loadSfmData } from '~/data/loader';
 import { computeDelta, formatMxn, formatPct } from '~/lib/utils';
-import {
-  DollarSign,
-  Percent,
-  TrendingUp,
-  Activity,
-} from 'lucide-react';
+import { DollarSign, Percent, TrendingUp, Activity } from 'lucide-react';
 
 const data = loadSfmData();
 
-// FX
-const fxSeries = data.tipo_cambio.historico_mensual;
 const fxLatest = Number(data.tipo_cambio.actual);
-const fxDelta = computeDelta(fxSeries.map((p) => p.valor));
-
-// Tasa Banxico
-const tasaSeries = data.tasa_banxico.historico;
-const tasaLatest = Number(data.tasa_banxico.actual);
-const tasaDelta = computeDelta(tasaSeries.map((p) => p.valor));
-
-// Inflación
-const inflacionSeries = data.inflacion.historico_mensual;
-const inflacionHistorica =
-  data.historico.inflacion_mensual_desde_2000 ?? inflacionSeries;
-const inflacionLatest = Number(data.inflacion.actual);
-const inflacionDelta = computeDelta(
-  inflacionSeries.map((p) => p.var_anual),
+const fxDelta = computeDelta(
+  data.tipo_cambio.historico_mensual.map((p) => p.valor),
 );
 
-// IMOR (placeholder while CNBV pipeline lands in app/)
+const tasaLatest = Number(data.tasa_banxico.actual);
+const tasaDelta = computeDelta(
+  data.tasa_banxico.historico.map((p) => p.valor),
+);
+
+const inflacionLatest = Number(data.inflacion.actual);
+const inflacionDelta = computeDelta(
+  data.inflacion.historico_mensual.map((p) => p.var_anual),
+);
+
 const imorPlaceholder = 2.2;
 ---
 
 <Layout
   title="SFM Monitor"
-  description="Dashboard público de riesgo del Sistema Financiero Mexicano. Datos de Banxico SIE, CNBV e INEGI. Actualización automática diaria.">
-  <div class="space-y-10">
-    {/* <Hero lastUpdated={data.ultima_actualizacion} /> */}{/* removed in Task 5 — rewritten in Task 10 */}
+  description="Resumen ejecutivo del riesgo del Sistema Financiero Mexicano. Datos de Banxico SIE, CNBV e INEGI.">
+  <Header slot="header" />
+  <TabBar slot="header" />
 
-    {/* KPI cards */}
-    <section aria-labelledby="kpi-heading" class="space-y-3">
-      <h2 id="kpi-heading" class="sr-only">Indicadores actuales</h2>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <KpiCard
-          label="MXN/USD FIX"
-          value={formatMxn(fxLatest, 4)}
-          asOf={data.tipo_cambio.fecha}
-          tone="gold"
-          Icon={DollarSign}
-          delta={
-            fxDelta && {
-              direction: fxDelta.direction,
-              label: `${fxDelta.abs > 0 ? '+' : ''}${fxDelta.abs.toFixed(4)}`,
-              upIsGood: false,
-            }
-          }
-        />
-        <KpiCard
-          label="Tasa Banxico"
-          value={formatPct(tasaLatest, 2)}
-          asOf={data.tasa_banxico.fecha}
-          tone="red"
-          Icon={Percent}
-          delta={
-            tasaDelta && {
-              direction: tasaDelta.direction,
-              label: `${tasaDelta.abs > 0 ? '+' : ''}${tasaDelta.abs.toFixed(2)} pp`,
-              upIsGood: false,
-            }
-          }
-        />
-        <KpiCard
-          label="Inflación anual"
-          value={formatPct(inflacionLatest, 2)}
-          asOf={data.inflacion.fecha}
-          tone="yellow"
-          Icon={TrendingUp}
-          delta={
-            inflacionDelta && {
-              direction: inflacionDelta.direction,
-              label: `${inflacionDelta.abs > 0 ? '+' : ''}${inflacionDelta.abs.toFixed(2)} pp`,
-              upIsGood: false,
-            }
-          }
-        />
-        <KpiCard
-          label="IMOR Banca Múltiple"
-          value={formatPct(imorPlaceholder, 2)}
-          asOf="placeholder · CNBV pendiente"
-          tone="green"
-          Icon={Activity}
-        />
-      </div>
-    </section>
+  <div class="space-y-8">
+    <EditorialHeadline
+      eyebrow={`Resumen ejecutivo · ${data.ultima_actualizacion}`}
+      headline="El sistema opera dentro de rangos normales con presiones puntuales en SoFiPOs y vigilancia en IFRS 9 Etapa 2."
+    />
 
-    {/* NOTE: Sidebar + Section grid commented out in Task 5 — fully rewritten in Tasks 10-11 */}
-    {/*
-    <div class="grid lg:grid-cols-[200px_1fr] gap-8">
-      <Sidebar />
+    <!-- KPI grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
+      <KpiCard
+        label="MXN/USD FIX"
+        value={formatMxn(fxLatest, 4)}
+        asOf={data.tipo_cambio.fecha}
+        Icon={DollarSign}
+        tone="gold"
+        indicatorId="fx"
+        delta={fxDelta && {
+          direction: fxDelta.direction,
+          label: `${fxDelta.abs > 0 ? '+' : ''}${fxDelta.abs.toFixed(4)}`,
+          upIsGood: false,
+        }}
+      />
+      <KpiCard
+        label="Tasa Banxico"
+        value={formatPct(tasaLatest, 2)}
+        asOf={data.tasa_banxico.fecha}
+        Icon={Percent}
+        tone="red"
+        indicatorId="tasa"
+        delta={tasaDelta && {
+          direction: tasaDelta.direction,
+          label: `${tasaDelta.abs > 0 ? '+' : ''}${tasaDelta.abs.toFixed(2)} pp`,
+          upIsGood: false,
+        }}
+      />
+      <KpiCard
+        label="Inflación anual"
+        value={formatPct(inflacionLatest, 2)}
+        asOf={data.inflacion.fecha}
+        Icon={TrendingUp}
+        tone="yellow"
+        indicatorId="inflacion"
+        delta={inflacionDelta && {
+          direction: inflacionDelta.direction,
+          label: `${inflacionDelta.abs > 0 ? '+' : ''}${inflacionDelta.abs.toFixed(2)} pp`,
+          upIsGood: false,
+        }}
+      />
+      <KpiCard
+        label="IMOR Banca"
+        value={formatPct(imorPlaceholder, 2)}
+        asOf="placeholder · CNBV pendiente"
+        Icon={Activity}
+        tone="green"
+        indicatorId="imor"
+      />
+    </div>
 
-      <div class="space-y-12 min-w-0">
+    <!-- Featured chart + alerts -->
+    <div class="grid lg:grid-cols-3 gap-4 items-stretch">
+      <div class="lg:col-span-2">
         <Section
-          id="mercado"
           eyebrow="Riesgo de mercado"
-          title="Tipo de cambio MXN/USD (FIX)"
-          description="Serie histórica mensual desde 1994. Bandas verticales: crisis Tequila (1994-95), Gran Crisis Financiera (2008-09), COVID-19 (2020)."
-          source="Banco de México, SIE, serie SF43718">
-          <FXChart series={fxSeries} client:visible />
+          title="Tipo de cambio MXN/USD · histórico"
+          description="Serie mensual desde 1994. Bandas verticales: crisis Tequila (1994-95), Gran Crisis Financiera (2008-09), COVID-19 (2020)."
+          source="Banco de México, SIE, serie SF43718"
+          refCode="SF43718"
+          tone="gold">
+          <FXChart series={data.tipo_cambio.historico_mensual} client:visible />
         </Section>
-
-        <div class="grid xl:grid-cols-2 gap-8">
-          <Section
-            id="tasa"
-            eyebrow="Política monetaria"
-            title="Tasa objetivo Banxico"
-            description="Decisiones de política monetaria. Stepped — el valor mantiene hasta la siguiente decisión."
-            source="Banco de México, SIE, serie SF61745">
-            <TasaBanxicoChart series={tasaSeries} client:visible />
-          </Section>
-
-          <Section
-            id="macro"
-            eyebrow="Contexto macro"
-            title="Inflación anual (INPC)"
-            description="Variación anual del Índice Nacional de Precios al Consumidor. Banda verde: objetivo Banxico 3% ± 1pp."
-            source="Banco de México, SIE, serie SP74625">
-            <InflacionChart series={inflacionHistorica} client:visible />
-          </Section>
-        </div>
-
-        <section
-          id="credito"
-          class="surface rounded-xl p-8 text-center scroll-mt-24">
-          <div class="text-[11px] font-medium uppercase tracking-wider text-blue-400 mb-2">
-            Próximamente
-          </div>
-          <h3 class="text-xl font-semibold text-slate-100 mb-2">
-            Riesgo de crédito · Banca Múltiple
-          </h3>
-          <p class="text-sm text-slate-400 max-w-md mx-auto">
-            IMOR histórico, IMOR por segmento (comercial, consumo, vivienda,
-            tarjeta), IMOR por banco G-7, IMORA, ICOR, ROA, ROE, IFRS 9 etapas
-            1/2/3. Disponible en el dashboard estable mientras se migra el
-            pipeline CNBV.
-          </p>
-          <a
-            href="https://pamela-ruiz9.github.io/sfm-monitor/"
-            class="inline-flex items-center gap-1 mt-4 text-sm text-blue-400 hover:text-blue-300">
-            Ver en dashboard estable →
-          </a>
-        </section>
-
-        <section
-          id="sofipos"
-          class="surface rounded-xl p-8 text-center scroll-mt-24">
-          <div class="text-[11px] font-medium uppercase tracking-wider text-blue-400 mb-2">
-            Próximamente
-          </div>
-          <h3 class="text-xl font-semibold text-slate-100 mb-2">
-            SoFiPOs · Sociedades Financieras Populares
-          </h3>
-          <p class="text-sm text-slate-400 max-w-md mx-auto">
-            IMOR top 15 por activo (eje fijo 45%), IMORA, ROA, comparativo
-            sectorial vs Banca Múltiple. Pendiente de migración del pipeline
-            R11.
-          </p>
-          <a
-            href="https://pamela-ruiz9.github.io/sfm-monitor/"
-            class="inline-flex items-center gap-1 mt-4 text-sm text-blue-400 hover:text-blue-300">
-            Ver en dashboard estable →
-          </a>
-        </section>
+      </div>
+      <div>
+        <AlertsPanel />
       </div>
     </div>
-    */}
   </div>
+
+  <BottomNav slot="bottom-nav" />
 </Layout>
