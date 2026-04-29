@@ -8,9 +8,9 @@ import AstroPWA from '@vite-pwa/astro';
 // CNAME file at app/public/CNAME drives GitHub Pages / Cloudflare Pages
 // to serve from this hostname. Until DNS is wired, the dev/preview URLs
 // still work from localhost — `site` only affects canonical/sitemap.
-const SITE = 'https://sfmrisk.mx';
+const SITE = 'https://pamela-ruiz9.github.io';
 
-const BASE = '/';
+const BASE = '/sfm-monitor';
 
 export default defineConfig({
   site: SITE,
