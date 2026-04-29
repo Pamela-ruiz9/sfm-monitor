@@ -1,0 +1,44 @@
+---
+import { Home, LineChart, Activity, Building2, TrendingUp, BookOpen } from 'lucide-react';
+
+const TABS = [
+  { href: '/', label: 'Resumen', match: /^\/$/, Icon: Home },
+  { href: '/mercado', label: 'Mercado', match: /^\/mercado/, Icon: LineChart },
+  { href: '/credito', label: 'Crédito', match: /^\/credito/, Icon: Activity },
+  { href: '/sofipos', label: 'SoFiPOs', match: /^\/sofipos/, Icon: Building2 },
+  { href: '/macro', label: 'Macro', match: /^\/macro/, Icon: TrendingUp },
+  { href: '/metodologia', label: 'Metodología', match: /^\/metodologia/, Icon: BookOpen },
+] as const;
+
+const path = Astro.url.pathname;
+---
+
+<nav
+  aria-label="Navegación principal"
+  class="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-[--color-border]"
+  style="background: linear-gradient(180deg, rgba(13,17,23,0.85), rgba(13,17,23,0.95)); backdrop-filter: blur(12px); padding-bottom: env(safe-area-inset-bottom);">
+  <ul class="flex justify-around items-stretch" role="tablist">
+    {
+      TABS.map(({ href, label, match, Icon }) => {
+        const active = match.test(path);
+        return (
+          <li class="flex-1">
+            <a
+              href={href}
+              role="tab"
+              aria-selected={active}
+              aria-current={active ? 'page' : undefined}
+              data-astro-prefetch
+              class:list={[
+                'flex flex-col items-center justify-center gap-1 py-2 text-[10px] font-medium transition-colors',
+                active ? 'text-[--color-gold]' : 'text-[--color-text-mute]',
+              ]}>
+              <Icon className="size-5" aria-hidden="true" />
+              <span>{label}</span>
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

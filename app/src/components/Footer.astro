@@ -1,0 +1,82 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-20 border-t border-slate-800/60">
+  <div class="max-w-7xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-4 text-sm">
+    <div class="space-y-2 md:col-span-2">
+      <div class="font-semibold text-slate-100">SFM Monitor</div>
+      <p class="text-slate-400 leading-relaxed max-w-md">
+        Dashboard público y citable del riesgo del Sistema Financiero
+        Mexicano. NO es producto oficial de Banxico, CNBV o INEGI. No
+        constituye asesoría financiera ni de inversión.
+      </p>
+      <p class="text-xs text-slate-500 pt-2">
+        © {year} Ingrid Pamela Ruiz Puga · Artemio Padilla
+      </p>
+    </div>
+
+    <div class="space-y-2">
+      <div class="text-[11px] font-medium uppercase tracking-wider text-slate-500">
+        Datos
+      </div>
+      <ul class="space-y-1 text-slate-400">
+        <li>
+          <a
+            href="https://www.banxico.org.mx/SieAPIRest/"
+            class="hover:text-slate-200 underline-offset-4 hover:underline">
+            Banxico SIE
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://portafolioinfo.cnbv.gob.mx/"
+            class="hover:text-slate-200 underline-offset-4 hover:underline">
+            CNBV Portafolio
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.inegi.org.mx/servicios/api_indicadores.html"
+            class="hover:text-slate-200 underline-offset-4 hover:underline">
+            INEGI BIE
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="space-y-2">
+      <div class="text-[11px] font-medium uppercase tracking-wider text-slate-500">
+        Proyecto
+      </div>
+      <ul class="space-y-1 text-slate-400">
+        <li>
+          <a
+            href="https://github.com/Pamela-ruiz9/sfm-monitor"
+            class="hover:text-slate-200 underline-offset-4 hover:underline">
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Pamela-ruiz9/sfm-monitor/blob/main/CHANGELOG.md"
+            class="hover:text-slate-200 underline-offset-4 hover:underline">
+            Changelog
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Pamela-ruiz9/sfm-monitor/blob/main/docs/citability.md"
+            class="hover:text-slate-200 underline-offset-4 hover:underline">
+            Cómo citar
+          </a>
+        </li>
+        <li>
+          <span class="text-slate-500">
+            Código MIT · Contenido CC-BY 4.0
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

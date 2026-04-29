@@ -3,10 +3,11 @@
 
 Dashboard público de riesgo financiero para México — datos reales de CNBV y Banxico.
 
-🔗 **Live:** [pamela-ruiz9.github.io/sfm-monitor](https://pamela-ruiz9.github.io/sfm-monitor)
+🔗 **Live (estable v0.1.0):** [pamela-ruiz9.github.io/sfm-monitor](https://pamela-ruiz9.github.io/sfm-monitor)
 📋 **Roadmap:** [pamela-ruiz9.github.io/sfm-monitor/roadmap.html](https://pamela-ruiz9.github.io/sfm-monitor/roadmap.html)
 🧭 **Blueprint:** [docs/research/blueprint-2026.md](docs/research/blueprint-2026.md)
 📜 **Versión actual:** `v0.1.0` ([CHANGELOG](CHANGELOG.md))
+🧪 **Preview Astro v0.2.0-dev:** [`app/`](app/) — app-like redesign + PWA en branch `feat/app-redesign-pwa-v0.2.0-dev` ([PR #1](https://github.com/Pamela-ruiz9/sfm-monitor/pull/1))
 
 ---
 

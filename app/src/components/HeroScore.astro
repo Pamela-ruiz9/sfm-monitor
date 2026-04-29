@@ -1,0 +1,95 @@
+---
+import { loadSfmData } from '~/data/loader';
+import { computeAlerts } from '~/data/alerts';
+
+const data = loadSfmData();
+const alerts = computeAlerts(data);
+
+// Simple compositional score:
+// - Crédito: green if IMOR <= 3.5, yellow if 3.5-4.5, red if > 4.5
+// - Mercado: yellow default (FX volatility hard to compute server-side from monthly data)
+// - Macro: based on inflation (green 2-4, yellow 4-6, red >6)
+// - Liquidez: green if no liquidity-related alerts, else yellow
+
+function semaforoFromImor(imor: number): 'green' | 'yellow' | 'red' {
+  if (imor <= 3.5) return 'green';
+  if (imor <= 4.5) return 'yellow';
+  return 'red';
+}
+function semaforoFromInflacion(inf: number): 'green' | 'yellow' | 'red' {
+  if (inf >= 2 && inf <= 4) return 'green';
+  if (inf <= 6) return 'yellow';
+  return 'red';
+}
+
+const credito = semaforoFromImor(Number(data.credito.imor.actual));
+const macro = semaforoFromInflacion(Number(data.inflacion.actual));
+const mercado: 'green' | 'yellow' | 'red' = 'yellow'; // simple default until FX vol logic lands
+const liquidez: 'green' | 'yellow' | 'red' = 'green'; // simple default until depósitos data is wired
+
+// Aggregate score: count yellows and reds
+const tones = [credito, mercado, macro, liquidez];
+const reds = tones.filter((t) => t === 'red').length;
+const yellows = tones.filter((t) => t === 'yellow').length;
+
+let scoreLabel: string;
+let scoreColor: string;
+if (reds >= 2) {
+  scoreLabel = 'Riesgo Elevado';
+  scoreColor = 'var(--color-red)';
+} else if (reds >= 1 || yellows >= 3) {
+  scoreLabel = 'Riesgo Moderado';
+  scoreColor = 'var(--color-yellow)';
+} else if (yellows >= 1) {
+  scoreLabel = 'Riesgo Contenido';
+  scoreColor = 'var(--color-gold)';
+} else {
+  scoreLabel = 'Riesgo Bajo';
+  scoreColor = 'var(--color-green)';
+}
+
+const PILL_DOT = {
+  green: 'bg-[--color-green]',
+  yellow: 'bg-[--color-yellow]',
+  red: 'bg-[--color-red]',
+} as const;
+
+const pills = [
+  { label: 'Crédito', tone: credito },
+  { label: 'Mercado', tone: mercado },
+  { label: 'Macro', tone: macro },
+  { label: 'Liquidez', tone: liquidez },
+] as const;
+---
+
+<section class="space-y-3">
+  <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[--color-gold]">
+    Score Global del Sistema
+  </div>
+  <h1
+    class="serif font-semibold leading-[1.05] tracking-tight"
+    style={`font-size: clamp(2.8rem, 6vw, 4.8rem); color: ${scoreColor}`}>
+    {scoreLabel}
+  </h1>
+  <p class="text-sm text-[--color-text-dim] max-w-3xl leading-relaxed">
+    Índice compuesto basado en indicadores de crédito, mercado, macro y
+    liquidez del sistema bancario mexicano. Detalle por dimensión:
+  </p>
+  <div class="flex flex-wrap gap-2 pt-1">
+    {
+      pills.map((p) => (
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-[--color-border] bg-[--color-bg-elev] text-xs text-[--color-text-dim]">
+          <span class={`size-2 rounded-full ${PILL_DOT[p.tone]}`} aria-hidden="true" />
+          {p.label}
+        </span>
+      ))
+    }
+  </div>
+  {
+    alerts.length > 0 && (
+      <p class="text-[11px] text-[--color-text-mute] pt-1">
+        {alerts.length} {alerts.length === 1 ? 'alerta activa' : 'alertas activas'} — ver panel debajo.
+      </p>
+    )
+  }
+</section>

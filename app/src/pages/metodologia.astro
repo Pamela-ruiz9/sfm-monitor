@@ -1,0 +1,130 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/shell/Header.astro';
+import TabBar from '~/components/shell/TabBar.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
+
+const SEMAFORO_DOT = {
+  green: 'bg-[--color-green]',
+  yellow: 'bg-[--color-yellow]',
+  red: 'bg-[--color-red]',
+};
+---
+
+<Layout
+  title="Metodología"
+  description="Notas metodológicas: cómo se calculan los semáforos del SFM Monitor, fuentes de datos, frecuencia de actualización.">
+  <Header slot="header" />
+  <TabBar slot="header" />
+
+  <div class="space-y-8 max-w-3xl">
+    <EditorialHeadline
+      eyebrow="Metodología"
+      headline="Cómo se construyen los indicadores y semáforos del SFM Monitor."
+    />
+
+    <details class="card-surface p-5 group" open>
+      <summary class="cursor-pointer text-base font-semibold text-[--color-text] flex items-center justify-between">
+        Cómo se calculan los semáforos
+        <span class="text-[--color-text-mute] group-open:rotate-180 transition-transform">▾</span>
+      </summary>
+      <div class="mt-4 space-y-3 text-sm text-[--color-text-dim] leading-relaxed">
+        <p>Cada indicador tiene umbrales específicos basados en referencias históricas y estándares regulatorios.</p>
+        <h4 class="text-[--color-text] font-medium mt-4">Umbrales por indicador</h4>
+        <div class="space-y-2">
+          <div class="flex items-baseline gap-3 flex-wrap">
+            <strong class="text-[--color-text] min-w-[120px]">IMOR:</strong>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.green}`}></span>≤3.5%</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.yellow}`}></span>3.5–4.5%</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.red}`}></span>&gt;4.5%</span>
+          </div>
+          <div class="flex items-baseline gap-3 flex-wrap">
+            <strong class="text-[--color-text] min-w-[120px]">Cobertura (ICOR):</strong>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.green}`}></span>≥130%</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.yellow}`}></span>100–130%</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.red}`}></span>&lt;100%</span>
+          </div>
+          <div class="flex items-baseline gap-3 flex-wrap">
+            <strong class="text-[--color-text] min-w-[120px]">Inflación:</strong>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.green}`}></span>2–4%</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.yellow}`}></span>4–6%</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.red}`}></span>&gt;6%</span>
+          </div>
+          <div class="flex items-baseline gap-3 flex-wrap">
+            <strong class="text-[--color-text] min-w-[120px]">FX volatilidad:</strong>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.green}`}></span>estable</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.yellow}`}></span>depreciación &gt;10% anual</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.red}`}></span>&gt;20%</span>
+          </div>
+          <div class="flex items-baseline gap-3 flex-wrap">
+            <strong class="text-[--color-text] min-w-[120px]">PIB anual:</strong>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.green}`}></span>&gt;2%</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.yellow}`}></span>0–2%</span>
+            <span class="flex items-center gap-1.5 text-xs"><span class={`size-2 rounded-full ${SEMAFORO_DOT.red}`}></span>negativo</span>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="card-surface p-5 group">
+      <summary class="cursor-pointer text-base font-semibold text-[--color-text] flex items-center justify-between">
+        Fuentes de datos
+        <span class="text-[--color-text-mute] group-open:rotate-180 transition-transform">▾</span>
+      </summary>
+      <div class="mt-4 space-y-3 text-sm text-[--color-text-dim] leading-relaxed">
+        <ul class="space-y-2 list-disc list-inside">
+          <li><strong class="text-[--color-text]">CNBV</strong> — Comisión Nacional Bancaria y de Valores. Portafolio de Información (IMOR, IMORA, ICOR, ROA, ROE) Sectores 40 (Banca Múltiple) y 50 (SoFiPOs). Reporte R12A para etapas IFRS 9.</li>
+          <li><strong class="text-[--color-text]">Banxico</strong> — Banco de México. Sistema de Información Económica (SIE): SF43718 (FX FIX), SF61745 (tasa objetivo), SF43783 (TIIE 28d), SP74625 (INPC).</li>
+          <li><strong class="text-[--color-text]">INEGI</strong> — Instituto Nacional de Estadística y Geografía. INPC y PIB trimestral.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card-surface p-5 group">
+      <summary class="cursor-pointer text-base font-semibold text-[--color-text] flex items-center justify-between">
+        Cómo se actualizan los datos
+        <span class="text-[--color-text-mute] group-open:rotate-180 transition-transform">▾</span>
+      </summary>
+      <div class="mt-4 space-y-3 text-sm text-[--color-text-dim] leading-relaxed">
+        <p>Una GitHub Action corre lunes a viernes a las 8:00 AM CDMX y actualiza los datos diarios de Banxico (FX, tasa, TIIE, INPC). Los datos mensuales de CNBV (IMOR, IMORA, ICOR, IFRS 9, SoFiPOs) se actualizan manualmente cuando CNBV publica el nuevo mes — típicamente con ~30 días de rezago.</p>
+        <p>Cada visita al dashboard descarga el JSON consolidado más reciente. La PWA (cuando se instala) cachea el último JSON para uso offline.</p>
+      </div>
+    </details>
+
+    <details class="card-surface p-5 group">
+      <summary class="cursor-pointer text-base font-semibold text-[--color-text] flex items-center justify-between">
+        Limitaciones
+        <span class="text-[--color-text-mute] group-open:rotate-180 transition-transform">▾</span>
+      </summary>
+      <div class="mt-4 space-y-3 text-sm text-[--color-text-dim] leading-relaxed">
+        <ul class="space-y-2 list-disc list-inside">
+          <li>El score global y los semáforos son indicativos, no predicen crisis ni constituyen recomendación de inversión.</li>
+          <li>El IMOR refleja morosidad observada, no riesgo prospectivo. Para riesgo prospectivo ver IFRS 9 Etapa 2 (cartera con SICR).</li>
+          <li>SoFiPOs tiene cobertura desigual entre instituciones — algunas SoFiPOs reportan con rezago o no reportan.</li>
+          <li>Datos de SHCP (deuda pública), IPAB (cobertura) y BIS/IMF (cross-country) no están aún integrados — ver roadmap.</li>
+        </ul>
+      </div>
+    </details>
+
+    <p class="text-[11px] text-[--color-text-mute] pt-4 border-t border-[--color-border-soft]">
+      Para más detalle metodológico ver el blueprint en <a href="https://github.com/Pamela-ruiz9/sfm-monitor/blob/main/docs/research/blueprint-2026.md" class="text-[--color-gold] hover:underline">docs/research/blueprint-2026.md</a>.
+    </p>
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
+  <BottomNav slot="bottom-nav" />
+</Layout>

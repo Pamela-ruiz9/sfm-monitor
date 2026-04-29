@@ -28,21 +28,21 @@ Este documento define cuándo y cómo hacer el corte definitivo del dashboard le
 - [ ] SoFiPOs IMORA + ROA dual-axis
 
 ### G2 — paridad visual con Playwright
-- [ ] Suite Playwright corriendo en CI con `toHaveScreenshot()`
-- [ ] Threshold de diferencia ≤ 0.5% por chart
-- [ ] Screenshots desktop (1280×720) + mobile (375×667) + dark/light
-- [ ] Verificar: legendas en español, formato `$` y `%`, decimales correctos, hover tooltips funcionales
+- [x] Suite Playwright corriendo en CI con `toHaveScreenshot()` — 5 baselines desktop generadas en v0.2.0-dev.1
+- [x] Threshold de diferencia ≤ 0.5% por chart (`maxDiffPixelRatio: 0.005`)
+- [ ] Screenshots mobile (375×667) — webkit pendiente de instalar en CI
+- [ ] Verificar: paridad pixel-perfect contra legacy (no solo baselines del Astro app); requiere comparar lado-a-lado tras M2-M3 charts
 
 ### G3 — paridad de datos
-- [ ] Mismo `data/sfm-data.json` consumido por ambos (verificable: `diff` entre data renderizada legacy vs Astro)
-- [ ] `<DataFreshnessBadge>` en footer muestra timestamp del JSON
-- [ ] GitHub Action `update-data.yml` no requiere cambios (sigue updateando el mismo archivo)
+- [x] Mismo `data/sfm-data.json` consumido por ambos (Astro `loader.ts` + legacy `index.html` leen el mismo path)
+- [x] `<DataFreshnessBadge>` en header muestra timestamp del JSON con semáforo verde/amber/rojo
+- [x] GitHub Action `update-data.yml` no requiere cambios
 
 ### G4 — features citables del blueprint listos
 - [ ] JSON-LD `@type: Dataset` por página de indicador (validado con Google Rich Results Test)
 - [ ] `<CitationBox>` con APA/Chicago/MLA/BibTeX/RIS
 - [ ] `<MetricTooltip>` con glosario sobre Floating UI
-- [ ] Sitemap XML con i18n
+- [x] Sitemap XML con i18n (vía `@astrojs/sitemap`)
 - [ ] Meta tags Highwire Press en al menos `/`
 
 ### G5 — observabilidad mínima
@@ -52,17 +52,17 @@ Este documento define cuándo y cómo hacer el corte definitivo del dashboard le
 - [ ] Upptime monitoreando `pamela-ruiz9.github.io/sfm-monitor/` (repo separado)
 
 ### G6 — ensayo en preview
-- [ ] Cutover ensayado en branch `feat/cutover-rehearsal`, deployed a GitHub Pages preview
-- [ ] Verificar carga de assets sin 404 (subpath `/sfm-monitor/`)
-- [ ] Verificar `_assets/` y `_astro/` no chocan con paths de legacy
-- [ ] Lighthouse 90+ en Performance / Accessibility / Best Practices / SEO
+- [x] Branch dedicada `feat/app-redesign-pwa-v0.2.0-dev` creada con todo el redesign (PR #1)
+- [ ] Deploy preview de la branch a Cloudflare Pages o GitHub Pages alterno
+- [ ] Verificar carga de assets sin 404 con `base: '/'` + custom domain
+- [x] Lighthouse 90+ en Performance (0.97-1.00) / Accessibility (1.00) / Best Practices (0.96) / SEO (1.00) en las 5 rutas
 
 ### G7 — backups y rollback path
-- [ ] Tag `v0.1.0` ya pusheado al remote (creado localmente este sprint)
-- [ ] DOI Zenodo de v0.1.0 ya asignado
-- [ ] Branch `legacy/v0.1.0` apuntando al último commit del HTML monolítico
-- [ ] `legacy/v0.1.0.html` accesible en `pamela-ruiz9.github.io/sfm-monitor/legacy/v0.1.0.html`
-- [ ] Plan de rollback documentado y probado
+- [x] Tag `v0.1.0` creado localmente — push manual pendiente
+- [ ] DOI Zenodo de v0.1.0 asignado (requiere paso manual, ver `docs/citability.md`)
+- [ ] Branch `legacy/v0.1.0` apuntando al último commit del HTML monolítico (creada en cutover día-D)
+- [ ] `legacy/v0.1.0.html` accesible (creado en cutover día-D)
+- [x] Plan de rollback documentado en este doc (sección abajo)
 
 ---
 

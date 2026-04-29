@@ -1,0 +1,216 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/shell/Header.astro';
+import TabBar from '~/components/shell/TabBar.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import { KpiCard } from '~/components/kpi/KpiCard';
+import { ImoraChart } from '~/components/charts/ImoraChart';
+import { IcorChart } from '~/components/charts/IcorChart';
+import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
+import { Ifrs9Chart } from '~/components/charts/Ifrs9Chart';
+import { ImorSegPivotChart } from '~/components/charts/ImorSegPivotChart';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
+import { loadSfmData } from '~/data/loader';
+import { formatPct } from '~/lib/utils';
+import { Activity, Shield, TrendingUp, Percent } from 'lucide-react';
+
+const data = loadSfmData();
+const hpc = data.credito.historico_por_cartera;
+const ifrs = data.ifrs9;
+
+const hpb = data.credito.historico_por_banco;
+const bancosArr = hpb
+  ? Object.values(hpb.bancos).map((b) => ({
+      id: b.id,
+      nombre: b.nombre,
+      imor_total: b.imor_total,
+    }))
+  : [];
+
+const sofiposEntsArr = data.sofipos.historico_por_entidad
+  ? Object.values(data.sofipos.historico_por_entidad.entidades).map((e) => ({
+      id: e.id,
+      nombre: e.nombre,
+      imor: e.imor,
+    }))
+  : [];
+
+const pivotProps = {
+  bm: {
+    fechas: hpc.fechas,
+    cartera: {
+      total: hpc.imor_total,
+      comercial: hpc.imor_comercial,
+      consumo: hpc.imor_consumo,
+      vivienda: hpc.imor_vivienda,
+      tarjeta: hpc.imor_tarjeta,
+      consumo_norev: hpc.imor_consumo_norev,
+    },
+    bancos: bancosArr,
+  },
+  sofipos: {
+    fechas: data.sofipos.fechas,
+    cartera: {
+      total: data.sofipos.imor_total,
+      comercial: data.sofipos.imor_comercial,
+      consumo: data.sofipos.imor_consumo,
+      vivienda: data.sofipos.imor_vivienda,
+    },
+    entidades: sofiposEntsArr,
+  },
+};
+---
+
+<Layout
+  title="Crédito"
+  description="Riesgo de crédito Banca Múltiple: IMOR, IMORA, ICOR, IFRS9, ROA/ROE.">
+  <Header slot="header" />
+  <TabBar slot="header" />
+
+  <div class="space-y-6">
+    <EditorialHeadline
+      eyebrow="Riesgo de crédito · Banca Múltiple"
+      headline="IMOR estable; cobertura por encima del 140% indica colchón saludable de reservas frente a la cartera vencida."
+    />
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <KpiCard
+        label="IMOR"
+        value={formatPct(data.credito.imor.actual)}
+        asOf={data.credito.imor.fecha}
+        Icon={Activity}
+        tone="green"
+        indicatorId="imor"
+        client:visible
+      />
+      <KpiCard
+        label="IMORA"
+        value={formatPct(data.credito.imora.actual)}
+        asOf={data.credito.imora.fecha}
+        Icon={Percent}
+        tone="yellow"
+        indicatorId="imora"
+        client:visible
+      />
+      <KpiCard
+        label="ICOR"
+        value={`${data.credito.icor.actual.toFixed(2)}×`}
+        asOf={data.credito.icor.fecha}
+        Icon={Shield}
+        tone="green"
+        indicatorId="icor"
+        client:visible
+      />
+      <KpiCard
+        label="ROA"
+        value={formatPct(data.credito.roa.actual)}
+        asOf={data.credito.roa.fecha}
+        Icon={TrendingUp}
+        tone="green"
+        indicatorId="roa"
+        client:visible
+      />
+    </div>
+
+    <Section
+      id="imor-pivot"
+      eyebrow="Explorador interactivo"
+      title="IMOR por sector / banco / cartera / entidad"
+      description="Pivotea entre Banca Múltiple y SoFiPOs, vista Sistema o por entidad/banco, y selecciona cartera o entidad específica. Réplica del módulo principal del dashboard estable."
+      source="CNBV Sector 40 (Banca Múltiple) + Sector 50 (SoFiPOs)"
+      tone="gold">
+      <ImorSegPivotChart {...pivotProps} client:visible />
+    </Section>
+
+    <Section
+      id="imora"
+      eyebrow="Morosidad ajustada"
+      title="IMORA — Índice de Morosidad Ajustado"
+      description="Incluye cartera vencida más castigos contables acumulados en los últimos 12 meses."
+      source="CNBV Sector 40"
+      tone="yellow">
+      <ImoraChart fechas={hpc.fechas} values={hpc.imora_total} client:visible />
+    </Section>
+
+    <Section
+      id="icor"
+      eyebrow="Cobertura de cartera"
+      title="ICOR — Índice de Cobertura"
+      description="Razón entre reservas preventivas y cartera vencida. Un valor > 1 indica cobertura igual o superior al 100%."
+      source="CNBV Sector 40"
+      tone="green">
+      <IcorChart fechas={hpc.fechas} values={hpc.icor_total} client:visible />
+    </Section>
+
+    <Section
+      id="roa-roe"
+      eyebrow="Rentabilidad"
+      title="Rentabilidad — ROA y ROE"
+      description="Retorno sobre activos (eje izquierdo) y retorno sobre capital (eje derecho). Banca Múltiple consolidado."
+      source="CNBV Sector 40"
+      tone="green">
+      <RoaRoeChart fechas={hpc.fechas} roa={hpc.roa} roe={hpc.roe} client:visible />
+    </Section>
+
+    <Section
+      id="ifrs9"
+      eyebrow="Estándares contables"
+      title="IFRS 9 — Etapas 1/2/3"
+      description="Distribución porcentual de la cartera por etapa de riesgo crediticio bajo IFRS 9. Etapa 1: riesgo bajo; Etapa 2: aumento significativo; Etapa 3: deteriorada."
+      source="CNBV Reporte R12A"
+      tone="yellow">
+      {ifrs.ultima && (
+        <div class="grid grid-cols-3 gap-3 mb-4">
+          <div class="card-surface p-4 text-center">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">
+              Etapa 1
+            </div>
+            <div class="serif text-2xl font-semibold text-[--color-green]">
+              {formatPct(ifrs.ultima.etapa1)}
+            </div>
+          </div>
+          <div class="card-surface p-4 text-center">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">
+              Etapa 2
+            </div>
+            <div class="serif text-2xl font-semibold text-[--color-yellow]">
+              {formatPct(ifrs.ultima.etapa2)}
+            </div>
+          </div>
+          <div class="card-surface p-4 text-center">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">
+              Etapa 3
+            </div>
+            <div class="serif text-2xl font-semibold text-[--color-red]">
+              {formatPct(ifrs.ultima.etapa3)}
+            </div>
+          </div>
+        </div>
+      )}
+      <Ifrs9Chart
+        fechas={ifrs.fechas}
+        etapa1={ifrs.etapa1_pct}
+        etapa2={ifrs.etapa2_pct}
+        etapa3={ifrs.etapa3_pct}
+        client:visible
+      />
+    </Section>
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
+  <BottomNav slot="bottom-nav" />
+</Layout>

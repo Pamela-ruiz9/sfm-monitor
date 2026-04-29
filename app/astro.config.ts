@@ -2,13 +2,15 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import AstroPWA from '@vite-pwa/astro';
 
-const SITE = 'https://pamela-ruiz9.github.io';
+// Custom domain target — adjust if a different one is registered.
+// CNAME file at app/public/CNAME drives GitHub Pages / Cloudflare Pages
+// to serve from this hostname. Until DNS is wired, the dev/preview URLs
+// still work from localhost — `site` only affects canonical/sitemap.
+const SITE = 'https://sfmrisk.mx';
 
-// During migration the Astro app is served from a subpath so it can coexist
-// with the legacy index.html at the repo root. After cutover (see
-// docs/cutover.md) the base will change to '/sfm-monitor/' or sfmrisk.mx root.
-const BASE = '/sfm-monitor/app';
+const BASE = '/';
 
 export default defineConfig({
   site: SITE,
@@ -35,6 +37,32 @@ export default defineConfig({
       i18n: {
         defaultLocale: 'es',
         locales: { es: 'es-MX', en: 'en-US' },
+      },
+    }),
+    AstroPWA({
+      registerType: 'autoUpdate',
+      manifest: false, // we ship manifest.webmanifest manually
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,woff2,svg,png,ico}'],
+        runtimeCaching: [
+          {
+            urlPattern: /\/data\/.*\.json$/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'sfm-data',
+              networkTimeoutSeconds: 3,
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 7,
+              },
+            },
+          },
+          {
+            urlPattern: /^https:\/\/(rsms\.me|fonts\.(googleapis|gstatic)\.com)/,
+            handler: 'StaleWhileRevalidate',
+            options: { cacheName: 'sfm-fonts' },
+          },
+        ],
       },
     }),
   ],

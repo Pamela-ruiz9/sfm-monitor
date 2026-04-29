@@ -91,40 +91,112 @@ const HistoricoSchema = z.object({
   imor_desde_2000: z.array(ImorHistoricoPoint).optional(),
 });
 
-// CNBV credit module — loose shape for now (will be tightened in v0.2.x as
-// the CSV pipeline lands and stabilises the schema).
-const CreditoSchema = z.looseObject({
-  ultima_actualizacion: z.string().optional(),
-  fuente: z.string().optional(),
-  imor: z.unknown().optional(),
-  imora: z.unknown().optional(),
-  icor: z.unknown().optional(),
-  roa: z.unknown().optional(),
-  roe: z.unknown().optional(),
-  historico_por_cartera: z.unknown().optional(),
-  historico_por_banco: z.unknown().optional(),
+const KpiSnapshot = z.object({
+  actual: z.number(),
+  fecha: z.string(),
+  semaforo: z.enum(['verde', 'amarillo', 'rojo']).optional(),
 });
 
-const Ifrs9Schema = z.looseObject({
-  ultima_actualizacion: z.string().optional(),
-  fechas: z.array(z.string()).optional(),
-  etapa1_pct: z.array(z.number()).optional(),
-  etapa2_pct: z.array(z.number()).optional(),
-  etapa3_pct: z.array(z.number()).optional(),
-  ultima: z.unknown().optional(),
+const HistoricoCarteraSchema = z.object({
+  fechas: z.array(z.string()),
+  imor_total: z.array(z.number()),
+  imor_comercial: z.array(z.number()),
+  imor_consumo: z.array(z.number()),
+  imor_vivienda: z.array(z.number()),
+  imor_tarjeta: z.array(z.number()),
+  imor_consumo_norev: z.array(z.number()),
+  imora_total: z.array(z.number().nullable()),
+  icor_total: z.array(z.number()),
+  roa: z.array(z.number().nullable()),
+  roe: z.array(z.number().nullable()),
 });
 
-const SofiposSchema = z.looseObject({
+const HistoricoBancoEntrySchema = z.object({
+  nombre: z.string(),
+  id: z.string(),
+  imor_total: z.array(z.number().nullable()),
+});
+
+const HistoricoBancoCarteraEntrySchema = z.looseObject({
+  nombre: z.string(),
+  id: z.string(),
+  imor_total: z.array(z.number().nullable()),
+  imor_comercial: z.array(z.number().nullable()).optional(),
+  imor_consumo: z.array(z.number().nullable()).optional(),
+  imor_vivienda: z.array(z.number().nullable()).optional(),
+  imor_tarjeta: z.array(z.number().nullable()).optional(),
+  imor_latest: z.unknown().optional(),
+});
+
+const HistoricoBancoSchema = z.object({
+  fechas: z.array(z.string()),
+  bancos: z.record(z.string(), HistoricoBancoEntrySchema),
+  bancos_x_cartera: z.record(z.string(), HistoricoBancoCarteraEntrySchema).optional(),
+});
+
+const CreditoSchema = z.object({
   ultima_actualizacion: z.string().optional(),
   fuente: z.string().optional(),
-  fechas: z.array(z.string()).optional(),
-  imor_total: z.unknown().optional(),
-  imor_comercial: z.unknown().optional(),
-  imor_consumo: z.unknown().optional(),
-  imor_vivienda: z.unknown().optional(),
-  imora_total: z.unknown().optional(),
-  roa: z.unknown().optional(),
-  roe: z.unknown().optional(),
+  imor: KpiSnapshot,
+  imora: KpiSnapshot,
+  icor: KpiSnapshot,
+  roa: KpiSnapshot,
+  roe: KpiSnapshot,
+  historico_por_cartera: HistoricoCarteraSchema,
+  historico_por_banco: HistoricoBancoSchema.optional(),
+});
+
+const Ifrs9UltimaSchema = z.object({
+  fecha: z.string(),
+  etapa1: z.number(),
+  etapa2: z.number(),
+  etapa3: z.number(),
+});
+
+const Ifrs9Schema = z.object({
+  ultima_actualizacion: z.string().optional(),
+  fechas: z.array(z.string()),
+  etapa1_pct: z.array(z.number()),
+  etapa2_pct: z.array(z.number()),
+  etapa3_pct: z.array(z.number()),
+  ultima: Ifrs9UltimaSchema.optional(),
+});
+
+const SofiposEntidadSchema = z.looseObject({
+  nombre: z.string(),
+  id: z.string(),
+  imor: z.array(z.number().nullable()),
+});
+
+const SofiposHistoricoEntidadSchema = z.object({
+  fechas: z.array(z.string()),
+  entidades: z.record(z.string(), SofiposEntidadSchema),
+});
+
+const SofiposUltimaSchema = z.object({
+  fecha: z.string(),
+  imor_total: z.number(),
+  imor_comercial: z.number(),
+  imor_consumo: z.number(),
+  imor_vivienda: z.number(),
+  imora_total: z.number(),
+  roa: z.number(),
+  roe: z.number(),
+});
+
+const SofiposSchema = z.object({
+  ultima_actualizacion: z.string().optional(),
+  fuente: z.string().optional(),
+  fechas: z.array(z.string()),
+  imor_total: z.array(z.number()),
+  imor_comercial: z.array(z.number()),
+  imor_consumo: z.array(z.number()),
+  imor_vivienda: z.array(z.number()),
+  imora_total: z.array(z.number().nullable()),
+  roa: z.array(z.number().nullable()),
+  roe: z.array(z.number().nullable()),
+  ultima: SofiposUltimaSchema.optional(),
+  historico_por_entidad: SofiposHistoricoEntidadSchema.optional(),
 });
 
 // ---------- root ----------

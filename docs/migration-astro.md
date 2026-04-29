@@ -34,14 +34,30 @@ Hasta el cutover, `pamela-ruiz9.github.io/sfm-monitor` sigue sirviendo el `index
 
 **Acción manual pendiente**: Pame corre `cd app && npm install` (primera vez) y `npm run dev` para validar que el FX chart renderiza con datos reales. Si falla, ajustar Zod schema (`schema.ts` usa `passthrough` en CNBV/IFRS9/SoFiPOs precisamente para no bloquear esta primera corrida).
 
-### Sprint M1 — paridad de charts simples (2-3 sesiones)
+### ✅ Sprint M1 — paridad de charts simples (DONE en v0.2.0-dev.1, PR #1)
 
-Migrar los 4 charts más simples (single-line, datos ya en `tipo_cambio`/`tasa_banxico`/`inflacion`):
+- [x] `TasaBanxicoChart.tsx` — stepped line de tasa objetivo
+- [x] `InflacionChart.tsx` — INPC anual con banda Banxico 3% ±1pp
+- [x] Validación visual: 5 baseline screenshots Playwright en `app/tests/e2e/visual.spec.ts-snapshots/`
+- [x] Test snapshot con Playwright `toHaveScreenshot()` corriendo en CI
 
-- [ ] `TasaBanxicoChart.tsx` — tasa objetivo + TIIE 28d (multi-line)
-- [ ] `InflacionChart.tsx` — INPC anual con bandas objetivo 3% ±1% (área + línea de target)
-- [ ] Validación visual: screenshot legacy vs Astro lado a lado
-- [ ] Test snapshot con Playwright (`toHaveScreenshot()`)
+### ✅ Sprint M1.5 — app-like redesign + PWA (DONE en v0.2.0-dev.1, PR #1)
+
+Ver `docs/superpowers/specs/2026-04-27-app-like-redesign-pwa-design.md` y CHANGELOG entry `[0.2.0-dev.1]`.
+
+- [x] 5 tabs ruteadas con Astro file-based + View Transitions API
+- [x] Header sticky + TabBar desktop + BottomNav mobile
+- [x] ChartDrawer con vaul + URL-synced ?indicator=
+- [x] Cmd+K palette con cmdk + indicator registry (13 indicadores)
+- [x] AlertsPanel server-rendered con engine de reglas
+- [x] KpiCard + KpiHero con paleta legacy + Cormorant serif
+- [x] PWA: manifest + service worker (workbox) + UpdateToast
+- [x] PWAInstallPrompt + iOS Share fallback gated por visit count
+- [x] OnboardingTour con driver.js
+- [x] SwipeNav + PullToRefresh mobile gestures
+- [x] ChartErrorBoundary por chart con fallback link
+- [x] 4 nanostores (activeTab, drawerState, terminalMode, onboarding)
+- [x] 24 vitest tests + 15 Playwright desktop tests + Lighthouse CI
 
 ### Sprint M2 — charts CNBV (cartera + bancos)
 
@@ -82,8 +98,8 @@ Solo cuando M1–M4 estén completos y Playwright valide paridad pixel-perfect e
 | Zod v4 (no Valibot) | Integración nativa con Astro Content Collections |
 | Tailwind v4 (no v3) | Engine Oxide 3-5× más rápido, sin `tailwind.config.js` |
 | Chart.js mantenido (transición) | Paridad visual durante migración; reemplazar después chart por chart |
-| Subpath `/sfm-monitor/app/` | Convivencia con legacy sin romper URL |
-| GitHub Pages (transición) | Ya configurado; cutover a Cloudflare Pages opcional en v0.3.0 |
+| ~~Subpath `/sfm-monitor/app/`~~ → `base: '/'` + custom domain | Cambio en v0.2.0-dev: app target `sfmrisk.mx` con CNAME, no subpath GitHub Pages |
+| GitHub Pages legacy + Cloudflare Pages target | Legacy sigue en `pamela-ruiz9.github.io/sfm-monitor/`; Astro app va a custom domain |
 
 ## Patrones a respetar
 

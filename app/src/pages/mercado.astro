@@ -1,0 +1,76 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/shell/Header.astro';
+import TabBar from '~/components/shell/TabBar.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import { FXChart } from '~/components/charts/FXChart';
+import { TasaBanxicoChart } from '~/components/charts/TasaBanxicoChart';
+import { loadSfmData } from '~/data/loader';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
+
+const data = loadSfmData();
+---
+
+<Layout
+  title="Mercado"
+  description="Riesgo de mercado: tipo de cambio, tasa objetivo Banxico, TIIE 28 días.">
+  <Header slot="header" />
+  <TabBar slot="header" />
+
+  <div class="space-y-6">
+    <Section
+      id="fx"
+      eyebrow="Tipo de cambio"
+      title="MXN/USD FIX"
+      description="Serie histórica mensual desde 1994."
+      source="Banco de México, SIE, serie SF43718"
+      refCode="SF43718"
+      tone="gold">
+      <FXChart series={data.tipo_cambio.historico_mensual} client:visible />
+    </Section>
+
+    <Section
+      id="tasa"
+      eyebrow="Política monetaria"
+      title="Tasa objetivo Banxico"
+      description="Decisiones de política monetaria — stepped, mantiene hasta la siguiente."
+      source="Banco de México, SIE, serie SF61745"
+      refCode="SF61745"
+      tone="red">
+      <TasaBanxicoChart series={data.tasa_banxico.historico} client:visible />
+    </Section>
+
+    <Section
+      id="tiie28"
+      eyebrow="Tasas interbancarias"
+      title="TIIE 28 días"
+      description="Pendiente de migración del pipeline Banxico."
+      source="Banco de México, SIE, serie SF43783"
+      refCode="SF43783">
+      <p class="text-sm text-[--color-text-dim] py-8 text-center">
+        Disponible próximamente.
+        <a
+          href="https://pamela-ruiz9.github.io/sfm-monitor/"
+          class="text-[--color-gold] hover:underline">
+          Ver en dashboard estable ↗
+        </a>
+      </p>
+    </Section>
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
+  <BottomNav slot="bottom-nav" />
+</Layout>

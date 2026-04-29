@@ -20,6 +20,15 @@ dist/
 node_modules/
 .astro/
 
+# Astro build output
+app/dist/
+
+# Test artifacts (regenerable)
+app/playwright-report/
+app/test-results/
+app/.lighthouseci/
+app/tests/e2e/.cache/
+
 # Secrets
 .env.local
 *.token
@@ -27,6 +36,10 @@ node_modules/
 # OS
 .DS_Store
 Thumbs.db
+
+# Superpowers brainstorm scratch
+.superpowers/
+.claude/
 
 # Firebase
 firebase-debug.log
