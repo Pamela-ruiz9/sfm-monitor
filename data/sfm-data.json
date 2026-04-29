@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "28/04/2026",
+  "ultima_actualizacion": "29/04/2026",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP74625 - INPC variación anual calculada"
   },
   "tipo_cambio": {
-    "actual": "17.3838",
-    "fecha": "2026-04",
+    "actual": "17.4030",
+    "fecha": "28/04/2026",
     "historico_mensual": [
       {
         "mes": "2024-11",
@@ -79,7 +79,7 @@
       },
       {
         "mes": "2026-04",
-        "valor": 17.3838
+        "valor": 17.403
       }
     ]
   },
@@ -88,7 +88,7 @@
     "fecha": "27/03/2026",
     "historico": [
       {
-        "fecha": "28/04/2024",
+        "fecha": "29/04/2024",
         "valor": 11.0
       },
       {
@@ -150,64 +150,64 @@
     "fecha": "01/03/2026",
     "historico_mensual": [
       {
-        "mes": "2025-04",
+        "mes": "01/04/2",
         "fecha": "01/04/2025",
-        "var_anual": 3.93
+        "valor": 3.93
       },
       {
-        "mes": "2025-05",
+        "mes": "01/05/2",
         "fecha": "01/05/2025",
-        "var_anual": 4.06
+        "valor": 4.06
       },
       {
-        "mes": "2025-06",
+        "mes": "01/06/2",
         "fecha": "01/06/2025",
-        "var_anual": 4.24
+        "valor": 4.24
       },
       {
-        "mes": "2025-07",
+        "mes": "01/07/2",
         "fecha": "01/07/2025",
-        "var_anual": 4.23
+        "valor": 4.23
       },
       {
-        "mes": "2025-08",
+        "mes": "01/08/2",
         "fecha": "01/08/2025",
-        "var_anual": 4.23
+        "valor": 4.23
       },
       {
-        "mes": "2025-09",
+        "mes": "01/09/2",
         "fecha": "01/09/2025",
-        "var_anual": 4.28
+        "valor": 4.28
       },
       {
-        "mes": "2025-10",
+        "mes": "01/10/2",
         "fecha": "01/10/2025",
-        "var_anual": 4.28
+        "valor": 4.28
       },
       {
-        "mes": "2025-11",
+        "mes": "01/11/2",
         "fecha": "01/11/2025",
-        "var_anual": 4.43
+        "valor": 4.43
       },
       {
-        "mes": "2025-12",
+        "mes": "01/12/2",
         "fecha": "01/12/2025",
-        "var_anual": 4.33
+        "valor": 4.33
       },
       {
-        "mes": "2026-01",
+        "mes": "01/01/2",
         "fecha": "01/01/2026",
-        "var_anual": 4.52
+        "valor": 4.52
       },
       {
-        "mes": "2026-02",
+        "mes": "01/02/2",
         "fecha": "01/02/2026",
-        "var_anual": 4.5
+        "valor": 4.5
       },
       {
-        "mes": "2026-03",
+        "mes": "01/03/2",
         "fecha": "01/03/2026",
-        "var_anual": 4.45
+        "valor": 4.45
       }
     ]
   }
