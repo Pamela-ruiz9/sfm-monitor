@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "05/05/2026",
+  "ultima_actualizacion": "06/05/2026",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP74625 - INPC variación anual calculada"
   },
   "tipo_cambio": {
-    "actual": "17.5157",
-    "fecha": "04/05/2026",
+    "actual": "17.3752",
+    "fecha": "05/05/2026",
     "historico_mensual": [
       {
         "mes": "2024-12",
@@ -79,7 +79,7 @@
       },
       {
         "mes": "2026-05",
-        "valor": 17.5157
+        "valor": 17.3752
       }
     ]
   },
@@ -88,7 +88,7 @@
     "fecha": "27/03/2026",
     "historico": [
       {
-        "fecha": "05/05/2024",
+        "fecha": "06/05/2024",
         "valor": 11.0
       },
       {
