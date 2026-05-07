@@ -29,7 +29,7 @@ ChartJS.register(
 interface InflacionPoint {
   fecha: string;
   mes: string; // YYYY-MM
-  var_anual: number;
+  valor: number;
 }
 
 interface Props {
@@ -48,7 +48,7 @@ export function InflacionChart({
   const points = series
     .slice()
     .sort((a, b) => a.mes.localeCompare(b.mes))
-    .map((p) => ({ x: `${p.mes}-15`, y: p.var_anual }));
+    .map((p) => ({ x: `${p.mes}-15`, y: p.valor }));
 
   const data = {
     datasets: [
