@@ -26,13 +26,13 @@ const MonthlyPoint = z.object({
 });
 
 /**
- * Inflation points: annual variation under `var_anual` plus both
- * `fecha` (DD/MM/YYYY) and `mes` (YYYY-MM).
+ * Inflation points: annual % variation.
+ * Pipeline emits {mes: YYYY-MM, fecha: YYYY-MM-DD, valor: number} after PR #5 normalization.
  */
 const InflacionPoint = z.object({
   fecha: LooseDate,
   mes: IsoMonth,
-  var_anual: z.number(),
+  valor: z.number(),
 });
 
 /**
@@ -53,7 +53,8 @@ const FuentesSchema = z.object({
 
 const TipoCambioSchema = z.object({
   actual: NumericString,
-  fecha: IsoMonth,
+  // Pipeline emits YYYY-MM-DD (exact date of last FX reading)
+  fecha: LooseDate,
   historico_mensual: z.array(MonthlyPoint),
 });
 

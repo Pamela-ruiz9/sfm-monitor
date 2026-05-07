@@ -33,7 +33,7 @@ const tasaDelta = computeDelta(
 
 const inflacionLatest = Number(data.inflacion.actual);
 const inflacionDelta = computeDelta(
-  data.inflacion.historico_mensual.map((p) => p.var_anual),
+  data.inflacion.historico_mensual.map((p) => p.valor),
 );
 
 const imorPlaceholder = 2.2;

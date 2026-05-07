@@ -11,7 +11,7 @@ const minimal: SfmData = {
     actual: 4.45,
     fecha: '01/03/2026',
     historico_mensual: [
-      { fecha: '01/03/2026', mes: '2026-03', var_anual: 4.45 },
+      { fecha: '2026-03-01', mes: '2026-03', valor: 4.45 },
     ],
   },
   historico: {},
