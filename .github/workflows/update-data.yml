@@ -3,13 +3,15 @@ name: Update SFM Data
 on:
   schedule:
     - cron: '0 14 * * 1-5'  # 8 AM CDMX (UTC-6) lunes a viernes
-  workflow_dispatch:          # también se puede correr manualmente
+  workflow_dispatch:
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
 
     steps:
       - name: Checkout repo
@@ -30,7 +32,6 @@ jobs:
               parts = fecha_str.split("/")
               if len(parts) == 3:
                   d, m, y = parts
-                  # Año de 2 dígitos (nunca debería pasar, pero por si acaso)
                   if len(y) == 2:
                       y = "20" + y
                   return f"{y}-{m}-{d}"
@@ -51,7 +52,6 @@ jobs:
           start_18m = (date.today() - timedelta(days=548)).strftime("%Y-%m-%d")
           start_3y = (date.today() - timedelta(days=1095)).strftime("%Y-%m-%d")
 
-          # 1. Tipo de cambio FIX (SF43718) — últimos 18 meses
           fx_daily = fetch("SF43718", start_18m)
           fx_monthly = {}
           for x in fx_daily:
@@ -60,7 +60,6 @@ jobs:
               fx_monthly[key] = {"fecha": x["fecha"], "dato": x["dato"]}
           fx_series = sorted(fx_monthly.items())[-18:]
 
-          # 2. Tasa objetivo (SF61745) — cambios únicos últimos 2 años
           tasa_daily = fetch("SF61745", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))
           tasa_changes = []
           prev = None
@@ -69,7 +68,6 @@ jobs:
                   tasa_changes.append(x)
                   prev = x["dato"]
 
-          # 3. Inflación anual calculada del INPC (SP74625)
           inpc_data = fetch("SP74625", (date.today() - timedelta(days=760)).strftime("%Y-%m-%d"))
           infl_anual = []
           for i in range(len(inpc_data)):
@@ -84,7 +82,6 @@ jobs:
                       infl_anual.append({"fecha": d_now, "var_anual": pct})
                       break
 
-          # Build JSON
           data = {
               "ultima_actualizacion": date.today().strftime("%Y-%m-%d"),
               "fuentes": {
@@ -118,14 +115,40 @@ jobs:
           print(f"✅ Inflación: {data['inflacion']['actual']}% ({data['inflacion']['fecha']})")
           PYEOF
 
+      - name: Setup Node (for schema validation)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install app dependencies
+        run: npm ci --prefix app
+
+      - name: Validate schema
+        run: node --experimental-strip-types scripts/validate-schema.mjs
+
       - name: Commit and push if changed
+        id: commit
         run: |
           git config user.name "sfm-monitor-bot"
           git config user.email "sfm-monitor@noreply.github.com"
           git add data/sfm-data.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "data: auto-update Banxico data $(date +%Y-%m-%d)"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+  deploy:
+    needs: update-data
+    if: needs.update-data.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
