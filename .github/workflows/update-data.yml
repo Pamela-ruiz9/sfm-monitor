@@ -23,6 +23,19 @@ jobs:
           import urllib.request, json, os
           from datetime import date, timedelta
 
+          def banxico_to_iso(fecha_str):
+              """Convierte DD/MM/YYYY a YYYY-MM-DD"""
+              if not fecha_str or fecha_str == 'N/E':
+                  return None
+              parts = fecha_str.split("/")
+              if len(parts) == 3:
+                  d, m, y = parts
+                  # Año de 2 dígitos (nunca debería pasar, pero por si acaso)
+                  if len(y) == 2:
+                      y = "20" + y
+                  return f"{y}-{m}-{d}"
+              return fecha_str
+
           TOKEN = os.environ["BANXICO_TOKEN"]
           BASE = "https://www.banxico.org.mx/SieAPIRest/service/v1"
 
@@ -73,7 +86,7 @@ jobs:
 
           # Build JSON
           data = {
-              "ultima_actualizacion": date.today().strftime("%d/%m/%Y"),
+              "ultima_actualizacion": date.today().strftime("%Y-%m-%d"),
               "fuentes": {
                   "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
                   "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
@@ -81,18 +94,18 @@ jobs:
               },
               "tipo_cambio": {
                   "actual": fx_series[-1][1]["dato"],
-                  "fecha": fx_series[-1][1]["fecha"],
+                  "fecha": banxico_to_iso(fx_series[-1][1]["fecha"]),
                   "historico_mensual": [{"mes": k, "valor": round(float(v["dato"]), 4)} for k, v in fx_series]
               },
               "tasa_banxico": {
                   "actual": tasa_changes[-1]["dato"],
-                  "fecha": tasa_changes[-1]["fecha"],
-                  "historico": [{"fecha": x["fecha"], "valor": float(x["dato"])} for x in tasa_changes[-20:]]
+                  "fecha": banxico_to_iso(tasa_changes[-1]["fecha"]),
+                  "historico": [{"fecha": banxico_to_iso(x["fecha"]), "valor": float(x["dato"])} for x in tasa_changes[-20:]]
               },
               "inflacion": {
                   "actual": infl_anual[-1]["var_anual"] if infl_anual else None,
-                  "fecha": infl_anual[-1]["fecha"] if infl_anual else None,
-                  "historico_mensual": [{"mes": x["fecha"][:7], "fecha": x["fecha"], "valor": x["var_anual"]} for x in infl_anual[-24:]]
+                  "fecha": banxico_to_iso(infl_anual[-1]["fecha"]) if infl_anual else None,
+                  "historico_mensual": [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_anual[-24:]]
               }
           }
 
