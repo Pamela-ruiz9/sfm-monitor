@@ -3,8 +3,9 @@ name: deploy
 on:
   push:
     branches: [main]
-    paths: ['app/**', '.github/workflows/deploy.yml']
+    paths: ['app/**', '.github/workflows/deploy.yml', 'data/sfm-data.json']
   workflow_dispatch:
+  workflow_call:  # allows update-data.yml to trigger this after a successful data update
 
 permissions:
   contents: read
