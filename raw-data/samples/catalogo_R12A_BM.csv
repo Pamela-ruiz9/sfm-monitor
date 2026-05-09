@@ -1,0 +1,1332 @@
+"concepto","descripcion","descripcion_identada","orden"
+100000000000,"ACTIVO","ACTIVO",10
+100200001001,"Efectivo y equivalentes de efectivo"," Efectivo y equivalentes de efectivo",20
+100200102001,"Caja","  Caja",30
+100200102002,"Bancos","  Bancos",40
+100200203001,"Depósitos en Banco de México","   Depósitos en Banco de México",50
+100200203002,"Depósitos en otras entidades financieras","   Depósitos en otras entidades financieras",60
+100200203003,"Divisas a entregar","   Divisas a entregar",70
+100200102003,"Documentos de cobro inmediato","  Documentos de cobro inmediato",80
+100200102004,"Metales preciosos amonedados","  Metales preciosos amonedados",90
+100200102005,"Instrumentos financieros de alta liquidez","  Instrumentos financieros de alta liquidez",100
+100200102006,"Efectivo y equivalentes de efectivo restringidos o dados en garantía","  Efectivo y equivalentes de efectivo restringidos o dados en garantía",110
+100200603004,"Banco de México","   Banco de México",120
+100200603005,"Préstamos interbancarios (Call Money)","   Préstamos interbancarios (Call Money)",130
+100200603006,"Divisas a recibir","   Divisas a recibir",140
+100200603007,"Efectivo administrado en fideicomiso","   Efectivo administrado en fideicomiso",150
+100200603008,"Otros","   Otros",160
+100200102007,"Otros","  Otros",170
+100400001001,"Cuentas de margen (instrumentos financieros derivados)"," Cuentas de margen (instrumentos financieros derivados)",180
+100400102001,"Efectivo","  Efectivo",190
+100400102002,"Inversiones en instrumentos financieros","  Inversiones en instrumentos financieros",200
+100400102003,"Otros activos","  Otros activos",210
+100600001001,"Inversiones en instrumentos financieros"," Inversiones en instrumentos financieros",220
+100600102001,"Instrumentos financieros negociables","  Instrumentos financieros negociables",230
+100600103001,"Instrumentos financieros negociables sin restricción","   Instrumentos financieros negociables sin restricción",240
+100600104001,"Deuda gubernamental","    Deuda gubernamental",250
+100600105001,"En posición","     En posición",260
+100600105002,"Por entregar","     Por entregar",270
+100600104002,"Deuda bancaria","    Deuda bancaria",280
+100600205003,"En posición","     En posición",290
+100600205004,"Por entregar","     Por entregar",300
+100600104003,"Otros títulos de deuda","    Otros títulos de deuda",310
+100600305005,"En posición","     En posición",320
+100600305006,"Por entregar","     Por entregar",330
+100600104004,"Instrumentos financieros de capital","    Instrumentos financieros de capital",340
+100600405007,"En posición","     En posición",350
+100600405008,"Por entregar","     Por entregar",360
+100600103002,"Instrumentos financieros negociables restringidos o dados en garantía en operaciones de reporto","   Instrumentos financieros negociables restringidos o dados en garantía en operaciones de reporto",370
+100600204005,"Deuda gubernamental","    Deuda gubernamental",380
+100600204006,"Deuda bancaria","    Deuda bancaria",390
+100600204007,"Otros títulos de deuda","    Otros títulos de deuda",400
+100600103003,"Instrumentos financieros negociables restringidos o dados en garantía en operaciones de préstamo de valores","   Instrumentos financieros negociables restringidos o dados en garantía en operaciones de préstamo de valores",410
+100600304008,"Deuda gubernamental","    Deuda gubernamental",420
+100600304009,"Deuda bancaria","    Deuda bancaria",430
+100600304010,"Otros títulos de deuda","    Otros títulos de deuda",440
+100600304011,"Instrumentos financieros de capital","    Instrumentos financieros de capital",450
+100600103004,"Instrumentos financieros negociables restringidos o dados en garantía (otros)","   Instrumentos financieros negociables restringidos o dados en garantía (otros)",460
+100600404012,"Deuda gubernamental","    Deuda gubernamental",470
+100601205009,"En posición","     En posición",480
+100601205010,"A recibir","     A recibir",490
+100600404013,"Deuda bancaria","    Deuda bancaria",500
+100601305011,"En posición","     En posición",510
+100601305012,"A recibir","     A recibir",520
+100600404014,"Otros títulos de deuda","    Otros títulos de deuda",530
+100601405013,"En posición","     En posición",540
+100601405014,"A recibir","     A recibir",550
+100600404015,"Instrumentos financieros de capital","    Instrumentos financieros de capital",560
+100601505015,"En posición","     En posición",570
+100601505016,"A recibir","     A recibir",580
+100600102002,"Instrumentos financieros para cobrar y vender","  Instrumentos financieros para cobrar y vender",590
+100600203005,"Instrumentos financieros para cobrar y vender sin restricción","   Instrumentos financieros para cobrar y vender sin restricción",600
+100600504016,"Deuda gubernamental","    Deuda gubernamental",610
+100601605017,"En posición","     En posición",620
+100601605018,"Por entregar","     Por entregar",630
+100600504017,"Deuda bancaria","    Deuda bancaria",640
+100601705019,"En posición","     En posición",650
+100601705020,"Por entregar","     Por entregar",660
+100600504018,"Otros títulos de deuda","    Otros títulos de deuda",670
+100601805021,"En posición","     En posición",680
+100601805022,"Por entregar","     Por entregar",690
+100600203006,"Instrumentos financieros para cobrar y vender restringidos o dados en garantía en operaciones de reporto","   Instrumentos financieros para cobrar y vender restringidos o dados en garantía en operaciones de reporto",700
+100600604019,"Deuda gubernamental","    Deuda gubernamental",710
+100600604020,"Deuda bancaria","    Deuda bancaria",720
+100600604021,"Otros títulos de deuda","    Otros títulos de deuda",730
+100600203007,"Instrumentos financieros para cobrar y vender restringidos o dados en garantía en operaciones de préstamo de valores","   Instrumentos financieros para cobrar y vender restringidos o dados en garantía en operaciones de préstamo de valores",740
+100600704022,"Deuda gubernamental","    Deuda gubernamental",750
+100600704023,"Deuda bancaria","    Deuda bancaria",760
+100600704024,"Otros títulos de deuda","    Otros títulos de deuda",770
+100600203008,"Instrumentos financieros para cobrar y vender restringidos o dados en garantía (otros)","   Instrumentos financieros para cobrar y vender restringidos o dados en garantía (otros)",780
+100600804025,"Deuda gubernamental","    Deuda gubernamental",790
+100602505023,"En posición","     En posición",800
+100602505024,"A recibir","     A recibir",810
+100600804026,"Deuda bancaria","    Deuda bancaria",820
+100602605025,"En posición","     En posición",830
+100602605026,"A recibir","     A recibir",840
+100600804027,"Otros títulos de deuda","    Otros títulos de deuda",850
+100602705027,"En posición","     En posición",860
+100602705028,"A recibir","     A recibir",870
+130600102003,"Instrumentos financieros para cobrar principal e interés (valores)(neto)","  Instrumentos financieros para cobrar principal e interés (valores)(neto)",880
+100600303009,"Instrumentos financieros para cobrar principal e interés (valores)","   Instrumentos financieros para cobrar principal e interés (valores)",890
+100600904028,"Instrumentos financieros para cobrar principal e interés sin restricción","    Instrumentos financieros para cobrar principal e interés sin restricción",900
+100602805029,"Deuda gubernamental","     Deuda gubernamental",910
+100602906001,"En posición","      En posición",920
+100602906002,"Por entregar","      Por entregar",930
+100602805030,"Deuda bancaria","     Deuda bancaria",940
+100603006003,"En posición","      En posición",950
+100603006004,"Por entregar","      Por entregar",960
+100602805031,"Otros títulos de deuda","     Otros títulos de deuda",970
+100603106005,"En posición","      En posición",980
+100603106006,"Por entregar","      Por entregar",990
+100600904029,"Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía en operaciones de reporto","    Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía en operaciones de reporto",1000
+100602905032,"Deuda gubernamental","     Deuda gubernamental",1010
+100602905033,"Deuda bancaria","     Deuda bancaria",1020
+100602905034,"Otros títulos de deuda","     Otros títulos de deuda",1030
+100600904030,"Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía en operaciones de préstamo de valores","    Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía en operaciones de préstamo de valores",1040
+100603005035,"Deuda gubernamental","     Deuda gubernamental",1050
+100603005036,"Deuda bancaria","     Deuda bancaria",1060
+100603005037,"Otros títulos de deuda","     Otros títulos de deuda",1070
+100600904031,"Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía (otros)","    Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía (otros)",1080
+100603105038,"Deuda gubernamental","     Deuda gubernamental",1090
+100603806007,"En posición","      En posición",1100
+100603806008,"A recibir","      A recibir",1110
+100603105039,"Deuda bancaria","     Deuda bancaria",1120
+100603906009,"En posición","      En posición",1130
+100603906010,"A recibir","      A recibir",1140
+100603105040,"Otros títulos de deuda","     Otros títulos de deuda",1150
+100604006011,"En posición","      En posición",1160
+100604006012,"A recibir","      A recibir",1170
+100600303010,"Estimación de pérdidas crediticias esperadas para inversiones en instrumentos financieros para cobrar principal e interés (valores)","   Estimación de pérdidas crediticias esperadas para inversiones en instrumentos financieros para cobrar principal e interés (valores)",1180
+100601004032,"Instrumentos financieros para cobrar principal e interés sin restricción","    Instrumentos financieros para cobrar principal e interés sin restricción",1190
+100603205041,"Deuda gubernamental","     Deuda gubernamental",1200
+100604106013,"En posición","      En posición",1210
+100604106014,"Por entregar","      Por entregar",1220
+100603205042,"Deuda bancaria","     Deuda bancaria",1230
+100604206015,"En posición","      En posición",1240
+100604206016,"Por entregar","      Por entregar",1250
+100603205043,"Otros títulos de deuda","     Otros títulos de deuda",1260
+100604306017,"En posición","      En posición",1270
+100604306018,"Por entregar","      Por entregar",1280
+100601004033,"Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía en operaciones de reporto","    Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía en operaciones de reporto",1290
+100603305044,"Deuda gubernamental","     Deuda gubernamental",1300
+100603305045,"Deuda bancaria","     Deuda bancaria",1310
+100603305046,"Otros títulos de deuda","     Otros títulos de deuda",1320
+100601004034,"Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía en operaciones de préstamo de valores","    Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía en operaciones de préstamo de valores",1330
+100603405047,"Deuda gubernamental","     Deuda gubernamental",1340
+100603405048,"Deuda bancaria","     Deuda bancaria",1350
+100603405049,"Otros títulos de deuda","     Otros títulos de deuda",1360
+100601004035,"Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía (otros)","    Instrumentos financieros para cobrar principal e interés restringidos o dados en garantía (otros)",1370
+100603505050,"Deuda gubernamental","     Deuda gubernamental",1380
+100605006019,"En posición","      En posición",1390
+100605006020,"A recibir","      A recibir",1400
+100603505051,"Deuda bancaria","     Deuda bancaria",1410
+100605106021,"En posición","      En posición",1420
+100605106022,"A recibir","      A recibir",1430
+100603505052,"Otros títulos de deuda","     Otros títulos de deuda",1440
+100605206023,"En posición","      En posición",1450
+100605206024,"A recibir","      A recibir",1460
+101000001001,"Deudores por reporto"," Deudores por reporto",1470
+101200001001,"Préstamo de valores"," Préstamo de valores",1480
+101400001001,"Instrumentos financieros derivados"," Instrumentos financieros derivados",1490
+101400102001,"Con fines de negociación","  Con fines de negociación",1500
+101400103001,"Futuros a recibir","   Futuros a recibir",1510
+101400103002,"Contratos adelantados a recibir","   Contratos adelantados a recibir",1520
+101400204001,"Valuación","    Valuación",1530
+101400204002,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1540
+101400103003,"Opciones","   Opciones",1550
+101400304003,"Valuación","    Valuación",1560
+101400304004,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1570
+101400103004,"Swaps","   Swaps",1580
+101400404005,"Valuación","    Valuación",1590
+101400404006,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1600
+101400103005,"Instrumentos financieros derivados crediticios","   Instrumentos financieros derivados crediticios",1610
+101400504007,"Valuación","    Valuación",1620
+101400504008,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1630
+101400103006,"Operaciones estructuradas","   Operaciones estructuradas",1640
+101400604009,"Valuación","    Valuación",1650
+101400604010,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1660
+101400103007,"Paquetes de instrumentos financieros derivados","   Paquetes de instrumentos financieros derivados",1670
+101400704011,"Valuación","    Valuación",1680
+101400704012,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1690
+101400103008,"Ajuste por riesgo de crédito por contraparte","   Ajuste por riesgo de crédito por contraparte",1700
+101400102002,"Con fines de cobertura","  Con fines de cobertura",1710
+101400203009,"Futuros a recibir","   Futuros a recibir",1720
+101400904013,"Valuación","    Valuación",1730
+101400904014,"Valuación de la partida cubierta","    Valuación de la partida cubierta",1740
+101400203010,"Contratos adelantados a recibir","   Contratos adelantados a recibir",1750
+101401004015,"Valuación","    Valuación",1760
+101401004016,"Valuación de la partida cubierta","    Valuación de la partida cubierta",1770
+101401004017,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1780
+101400203011,"Opciones","   Opciones",1790
+101401104018,"Valuación","    Valuación",1800
+101401104019,"Valuación de la partida cubierta","    Valuación de la partida cubierta",1810
+101401104020,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1820
+101400203012,"Swaps","   Swaps",1830
+101401204021,"Valuación","    Valuación",1840
+101401204022,"Valuación de la partida cubierta","    Valuación de la partida cubierta",1850
+101401204023,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1860
+101400203013,"Instrumentos financieros derivados crediticios","   Instrumentos financieros derivados crediticios",1870
+101401304024,"Valuación","    Valuación",1880
+101401304025,"Valuación de la partida cubierta","    Valuación de la partida cubierta",1890
+101401304026,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1900
+101400203014,"Operaciones estructuradas","   Operaciones estructuradas",1910
+101401404027,"Valuación","    Valuación",1920
+101401404028,"Valuación de la partida cubierta","    Valuación de la partida cubierta",1930
+101401404029,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1940
+101400203015,"Paquetes de instrumentos financieros derivados","   Paquetes de instrumentos financieros derivados",1950
+101401504030,"Valuación","    Valuación",1960
+101401504031,"Valuación de la partida cubierta","    Valuación de la partida cubierta",1970
+101401504032,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",1980
+101400203016,"Ajuste por riesgo de crédito por contraparte","   Ajuste por riesgo de crédito por contraparte",1990
+101600001001,"Ajustes de valuación por cobertura de activos financieros"," Ajustes de valuación por cobertura de activos financieros",2000
+101800104001,"Cartera de crédito con riesgo de crédito etapa 1","    Cartera de crédito con riesgo de crédito etapa 1",2010
+101800105001,"Créditos comerciales","     Créditos comerciales",2020
+101800106001,"Créditos comerciales sin restricción","      Créditos comerciales sin restricción",2030
+101800107001,"Actividad empresarial o comercial","       Actividad empresarial o comercial",2040
+101800108001,"Operaciones quirografarias","        Operaciones quirografarias",2050
+101800109001,"Créditos en cuenta corriente","         Créditos en cuenta corriente",2060
+101800109002,"Otros","         Otros",2070
+101800108002,"Operaciones prendarias","        Operaciones prendarias",2080
+101800209003,"Operaciones de habilitación o avío","         Operaciones de habilitación o avío",2090
+101800209004,"Operaciones refaccionarias","         Operaciones refaccionarias",2100
+101800209005,"Otros","         Otros",2110
+101800108003,"Créditos puente","        Créditos puente",2120
+101800309006,"Créditos puente a la vivienda","         Créditos puente a la vivienda",2130
+101800309007,"Otros créditos puente","         Otros créditos puente",2140
+101800108004,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",2150
+101800108005,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",2160
+101800108006,"Operaciones con garantía hipotecaria","        Operaciones con garantía hipotecaria",2170
+101800108007,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",2180
+101800108008,"Otros","        Otros",2190
+101800107002,"Entidades financieras","       Entidades financieras",2200
+101800208009,"Créditos interbancarios","        Créditos interbancarios",2210
+101800909008,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2220
+101800909009,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2230
+101800909010,"Otros","         Otros",2240
+101800208010,"Créditos a entidades financieras no bancarias","        Créditos a entidades financieras no bancarias",2250
+101801009011,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2260
+101801009012,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2270
+101801009013,"Otros","         Otros",2280
+101800107003,"Entidades gubernamentales","       Entidades gubernamentales",2290
+101800308011,"Créditos al gobierno federal","        Créditos al gobierno federal",2300
+101800308012,"Créditos a estados y municipios","        Créditos a estados y municipios",2310
+101801209014,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2320
+101801209015,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",2330
+101801209016,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2340
+101801209017,"Fideicomisos públicos de contratación","         Fideicomisos públicos de contratación",2350
+101801209018,"Otros","         Otros",2360
+101800308013,"Créditos a empresas productivas del Estado","        Créditos a empresas productivas del Estado",2370
+101801309019,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2380
+101801309020,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",2390
+101801309021,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2400
+101801309022,"Otros","         Otros",2410
+101800308014,"Créditos a organismos descentralizados o desconcentrados","        Créditos a organismos descentralizados o desconcentrados",2420
+101801409023,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2430
+101801409024,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",2440
+101801409025,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2450
+101801409026,"Otros","         Otros",2460
+101800106002,"Créditos comerciales restringidos","      Créditos comerciales restringidos",2470
+101800207004,"Actividad empresarial o comercial","       Actividad empresarial o comercial",2480
+101800408015,"Operaciones quirografarias","        Operaciones quirografarias",2490
+101801509027,"Créditos en cuenta corriente","         Créditos en cuenta corriente",2500
+101801509028,"Otros","         Otros",2510
+101800408016,"Operaciones prendarias","        Operaciones prendarias",2520
+101801609029,"Operaciones de habilitación o avío","         Operaciones de habilitación o avío",2530
+101801609030,"Operaciones refaccionarias","         Operaciones refaccionarias",2540
+101801609031,"Otros","         Otros",2550
+101800408017,"Créditos puente","        Créditos puente",2560
+101801709032,"Créditos puente a la vivienda","         Créditos puente a la vivienda",2570
+101801709033,"Otros créditos puente","         Otros créditos puente",2580
+101800408018,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",2590
+101800408019,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",2600
+101800408020,"Operaciones con garantía hipotecaria","        Operaciones con garantía hipotecaria",2610
+101800408021,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",2620
+101800408022,"Otros","        Otros",2630
+101800207005,"Entidades financieras","       Entidades financieras",2640
+101800508023,"Créditos interbancarios","        Créditos interbancarios",2650
+101802309034,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2660
+101802309035,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2670
+101802309036,"Otros","         Otros",2680
+101800508024,"Créditos a entidades financieras no bancarias","        Créditos a entidades financieras no bancarias",2690
+101802409037,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2700
+101802409038,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2710
+101802409039,"Otros","         Otros",2720
+101800207006,"Entidades gubernamentales","       Entidades gubernamentales",2730
+101800608025,"Créditos al gobierno federal","        Créditos al gobierno federal",2740
+101800608026,"Créditos a estados y municipios","        Créditos a estados y municipios",2750
+101802609040,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2760
+101802609041,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",2770
+101802609042,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2780
+101802609043,"Fideicomisos públicos de contratación","         Fideicomisos públicos de contratación",2790
+101802609044,"Otros","         Otros",2800
+101800608027,"Créditos a empresas productivas del Estado","        Créditos a empresas productivas del Estado",2810
+101802709045,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2820
+101802709046,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",2830
+101802709047,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2840
+101802709048,"Otros","         Otros",2850
+101800608028,"Créditos a organismos descentralizados o desconcentrados","        Créditos a organismos descentralizados o desconcentrados",2860
+101802809049,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",2870
+101802809050,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",2880
+101802809051,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",2890
+101802809052,"Otros","         Otros",2900
+101800105002,"Créditos de consumo","     Créditos de consumo",2910
+101800206003,"Créditos de consumo sin restricción","      Créditos de consumo sin restricción",2920
+101800307007,"Tarjeta de crédito","       Tarjeta de crédito",2930
+101800307008,"Personales","       Personales",2940
+101800307009,"Nómina","       Nómina",2950
+101800307010,"Automotriz","       Automotriz",2960
+101800307011,"Adquisición de bienes muebles","       Adquisición de bienes muebles",2970
+101800307012,"Operaciones de arrendamiento financiero","       Operaciones de arrendamiento financiero",2980
+101800307013,"Microcréditos","       Microcréditos",2990
+101800307014,"Otros créditos de consumo","       Otros créditos de consumo",3000
+101800206004,"Créditos de consumo restringidos","      Créditos de consumo restringidos",3010
+101800407015,"Tarjeta de crédito","       Tarjeta de crédito",3020
+101800407016,"Personales","       Personales",3030
+101800407017,"Nómina","       Nómina",3040
+101800407018,"Automotriz","       Automotriz",3050
+101800407019,"Adquisición de bienes muebles","       Adquisición de bienes muebles",3060
+101800407020,"Operaciones de arrendamiento financiero","       Operaciones de arrendamiento financiero",3070
+101800407021,"Microcréditos","       Microcréditos",3080
+101800407022,"Otros créditos de consumo","       Otros créditos de consumo",3090
+101800105003,"Créditos a la vivienda","     Créditos a la vivienda",3100
+101800306005,"Créditos a la vivienda sin restricción","      Créditos a la vivienda sin restricción",3110
+101800507023,"Media y residencial","       Media y residencial",3120
+101800507024,"De interés social","       De interés social",3130
+101800507025,"Créditos adquiridos al INFONAVIT o el FOVISSSTE","       Créditos adquiridos al INFONAVIT o el FOVISSSTE",3140
+101802508029,"Cartera ordinaria","        Cartera ordinaria",3150
+101802508030,"Cartera en prórroga","        Cartera en prórroga",3160
+101802508031,"Régimen especial de amortización","        Régimen especial de amortización",3170
+101800507026,"Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos","       Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos",3180
+101800507027,"Remodelación o mejoramiento con garantía de la subcuenta de vivienda","       Remodelación o mejoramiento con garantía de la subcuenta de vivienda",3190
+101800306006,"Créditos a la vivienda restringidos","      Créditos a la vivienda restringidos",3200
+101800607028,"Media y residencial","       Media y residencial",3210
+101800607029,"De interés social","       De interés social",3220
+101800607030,"Créditos adquiridos al INFONAVIT o el FOVISSSTE","       Créditos adquiridos al INFONAVIT o el FOVISSSTE",3230
+101803008032,"Cartera ordinaria","        Cartera ordinaria",3240
+101803008033,"Cartera en prórroga","        Cartera en prórroga",3250
+101803008034,"Régimen especial de amortización","        Régimen especial de amortización",3260
+101800607031,"Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos","       Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos",3270
+101800607032,"Remodelación o mejoramiento con garantía de la subcuenta de vivienda","       Remodelación o mejoramiento con garantía de la subcuenta de vivienda",3280
+101800104002,"Cartera de crédito con riesgo de crédito etapa 2","    Cartera de crédito con riesgo de crédito etapa 2",3290
+101800205005,"Créditos comerciales","     Créditos comerciales",3300
+101800506007,"Actividad empresarial o comercial","      Actividad empresarial o comercial",3310
+101800707033,"Operaciones quirografarias","       Operaciones quirografarias",3320
+101803308035,"Créditos en cuenta corriente","        Créditos en cuenta corriente",3330
+101803308036,"Otros","        Otros",3340
+101800707034,"Operaciones prendarias","       Operaciones prendarias",3350
+101803408037,"Operaciones de habilitación o avío","        Operaciones de habilitación o avío",3360
+101803408038,"Operaciones refaccionarias","        Operaciones refaccionarias",3370
+101803408039,"Otros","        Otros",3380
+101800707035,"Créditos puente","       Créditos puente",3390
+101803508040,"Créditos puente a la vivienda","        Créditos puente a la vivienda",3400
+101803508041,"Otros créditos puente","        Otros créditos puente",3410
+101800707036,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","       Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",3420
+101800707037,"Operaciones de arrendamiento financiero","       Operaciones de arrendamiento financiero",3430
+101800707038,"Operaciones con garantía hipotecaria","       Operaciones con garantía hipotecaria",3440
+101800707039,"Créditos para proyectos de inversión con fuente de pago propia","       Créditos para proyectos de inversión con fuente de pago propia",3450
+101800707040,"Otros","       Otros",3460
+101800506008,"Entidades financieras","      Entidades financieras",3470
+101800807041,"Créditos interbancarios","       Créditos interbancarios",3480
+101804108042,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",3490
+101804108043,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",3500
+101804108044,"Otros","        Otros",3510
+101800807042,"Créditos a entidades financieras no bancarias","       Créditos a entidades financieras no bancarias",3520
+101804208045,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",3530
+101804208046,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",3540
+101804208047,"Otros","        Otros",3550
+101800506009,"Entidades gubernamentales","      Entidades gubernamentales",3560
+101800907043,"Créditos al gobierno federal","       Créditos al gobierno federal",3570
+101800907044,"Créditos a estados y municipios","       Créditos a estados y municipios",3580
+101804408048,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",3590
+101804408049,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",3600
+101804408050,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",3610
+101804408051,"Fideicomisos públicos de contratación","        Fideicomisos públicos de contratación",3620
+101804408052,"Otros","        Otros",3630
+101800907045,"Créditos a empresas productivas del Estado","       Créditos a empresas productivas del Estado",3640
+101804508053,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",3650
+101804508054,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",3660
+101804508055,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",3670
+101804508056,"Otros","        Otros",3680
+101800907046,"Créditos a organismos descentralizados o desconcentrados","       Créditos a organismos descentralizados o desconcentrados",3690
+101804608057,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",3700
+101804608058,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",3710
+101804608059,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",3720
+101804608060,"Otros","        Otros",3730
+101800205006,"Créditos de consumo","     Créditos de consumo",3740
+101800606010,"Tarjeta de crédito","      Tarjeta de crédito",3750
+101800606011,"Personales","      Personales",3760
+101800606012,"Nómina","      Nómina",3770
+101800606013,"Automotriz","      Automotriz",3780
+101800606014,"Adquisición de bienes muebles","      Adquisición de bienes muebles",3790
+101800606015,"Operaciones de arrendamiento financiero","      Operaciones de arrendamiento financiero",3800
+101800606016,"Microcréditos","      Microcréditos",3810
+101800606017,"Otros créditos de consumo","      Otros créditos de consumo",3820
+101800205007,"Créditos a la vivienda","     Créditos a la vivienda",3830
+101800706018,"Media y residencial","      Media y residencial",3840
+101800706019,"De interés social","      De interés social",3850
+101800706020,"Créditos adquiridos al INFONAVIT o el FOVISSSTE","      Créditos adquiridos al INFONAVIT o el FOVISSSTE",3860
+101802007047,"Cartera ordinaria","       Cartera ordinaria",3870
+101802007048,"Régimen especial de amortización","       Régimen especial de amortización",3880
+101800706021,"Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos","      Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos",3890
+101800706022,"Remodelación o mejoramiento con garantía de la subcuenta de vivienda","      Remodelación o mejoramiento con garantía de la subcuenta de vivienda",3900
+101800104003,"Cartera de crédito con riesgo de crédito etapa 3","    Cartera de crédito con riesgo de crédito etapa 3",3910
+101800305008,"Créditos comerciales","     Créditos comerciales",3920
+101800806023,"Actividad empresarial o comercial","      Actividad empresarial o comercial",3930
+101802307049,"Operaciones quirografarias","       Operaciones quirografarias",3940
+101804908061,"Créditos en cuenta corriente","        Créditos en cuenta corriente",3950
+101804908062,"Otros","        Otros",3960
+101802307050,"Operaciones prendarias","       Operaciones prendarias",3970
+101805008063,"Operaciones de habilitación o avío","        Operaciones de habilitación o avío",3980
+101805008064,"Operaciones refaccionarias","        Operaciones refaccionarias",3990
+101805008065,"Otros","        Otros",4000
+101802307051,"Créditos puente","       Créditos puente",4010
+101805108066,"Créditos puente a la vivienda","        Créditos puente a la vivienda",4020
+101805108067,"Otros créditos puente","        Otros créditos puente",4030
+101802307052,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","       Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",4040
+101802307053,"Operaciones de arrendamiento financiero","       Operaciones de arrendamiento financiero",4050
+101802307054,"Operaciones con garantía hipotecaria","       Operaciones con garantía hipotecaria",4060
+101802307055,"Créditos para proyectos de inversión con fuente de pago propia","       Créditos para proyectos de inversión con fuente de pago propia",4070
+101802307056,"Otros","       Otros",4080
+101800806024,"Entidades financieras","      Entidades financieras",4090
+101802407057,"Créditos interbancarios","       Créditos interbancarios",4100
+101805708068,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4110
+101805708069,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4120
+101805708070,"Otros","        Otros",4130
+101802407058,"Créditos a entidades financieras no bancarias","       Créditos a entidades financieras no bancarias",4140
+101805808071,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4150
+101805808072,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4160
+101805808073,"Otros","        Otros",4170
+101800806025,"Entidades gubernamentales","      Entidades gubernamentales",4180
+101802507059,"Créditos al gobierno federal","       Créditos al gobierno federal",4190
+101802507060,"Créditos a estados y municipios","       Créditos a estados y municipios",4200
+101806008074,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4210
+101806008075,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",4220
+101806008076,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4230
+101806008077,"Fideicomisos públicos de contratación","        Fideicomisos públicos de contratación",4240
+101806008078,"Otros","        Otros",4250
+101802507061,"Créditos a empresas productivas del Estado","       Créditos a empresas productivas del Estado",4260
+101806108079,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4270
+101806108080,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",4280
+101806108081,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4290
+101806108082,"Otros","        Otros",4300
+101802507062,"Créditos a organismos descentralizados o desconcentrados","       Créditos a organismos descentralizados o desconcentrados",4310
+101806208083,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4320
+101806208084,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",4330
+101806208085,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4340
+101806208086,"Otros","        Otros",4350
+101800305009,"Créditos de consumo","     Créditos de consumo",4360
+101800906026,"Tarjeta de crédito","      Tarjeta de crédito",4370
+101800906027,"Personales","      Personales",4380
+101800906028,"Nómina","      Nómina",4390
+101800906029,"Automotriz","      Automotriz",4400
+101800906030,"Adquisición de bienes muebles","      Adquisición de bienes muebles",4410
+101800906031,"Operaciones de arrendamiento financiero","      Operaciones de arrendamiento financiero",4420
+101800906032,"Microcréditos","      Microcréditos",4430
+101800906033,"Otros créditos de consumo","      Otros créditos de consumo",4440
+101800305010,"Créditos a la vivienda","     Créditos a la vivienda",4450
+101801006034,"Media y residencial","      Media y residencial",4460
+101801006035,"De interés social","      De interés social",4470
+101801006036,"Créditos adquiridos al INFONAVIT o el FOVISSSTE","      Créditos adquiridos al INFONAVIT o el FOVISSSTE",4480
+101803607063,"Cartera ordinaria","       Cartera ordinaria",4490
+101803607064,"Régimen especial de amortización","       Régimen especial de amortización",4500
+101801006037,"Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos","      Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos",4510
+101801006038,"Remodelación o mejoramiento con garantía de la subcuenta de vivienda","      Remodelación o mejoramiento con garantía de la subcuenta de vivienda",4520
+101800104004,"Cartera de crédito valuada a valor razonable","    Cartera de crédito valuada a valor razonable",4530
+101800405011,"Créditos comerciales","     Créditos comerciales",4540
+101801106039,"Actividad empresarial o comercial","      Actividad empresarial o comercial",4550
+101803907065,"Operaciones quirografarias","       Operaciones quirografarias",4560
+101806508087,"Créditos en cuenta corriente","        Créditos en cuenta corriente",4570
+101806508088,"Otros","        Otros",4580
+101803907066,"Operaciones prendarias","       Operaciones prendarias",4590
+101806608089,"Operaciones de habilitación o avío","        Operaciones de habilitación o avío",4600
+101806608090,"Operaciones refaccionarias","        Operaciones refaccionarias",4610
+101806608091,"Otros","        Otros",4620
+101803907067,"Créditos puente","       Créditos puente",4630
+101806708092,"Créditos puente a la vivienda","        Créditos puente a la vivienda",4640
+101806708093,"Otros créditos puente","        Otros créditos puente",4650
+101803907068,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","       Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",4660
+101803907069,"Operaciones de arrendamiento financiero","       Operaciones de arrendamiento financiero",4670
+101803907070,"Operaciones con garantía hipotecaria","       Operaciones con garantía hipotecaria",4680
+101803907071,"Créditos para proyectos de inversión con fuente de pago propia","       Créditos para proyectos de inversión con fuente de pago propia",4690
+101803907072,"Otros","       Otros",4700
+101801106040,"Entidades financieras","      Entidades financieras",4710
+101804007073,"Créditos interbancarios","       Créditos interbancarios",4720
+101807308094,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4730
+101807308095,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4740
+101807308096,"Otros","        Otros",4750
+101804007074,"Créditos a entidades financieras no bancarias","       Créditos a entidades financieras no bancarias",4760
+101807408097,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4770
+101807408098,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4780
+101807408099,"Otros","        Otros",4790
+101801106041,"Entidades gubernamentales","      Entidades gubernamentales",4800
+101804107075,"Créditos al gobierno federal","       Créditos al gobierno federal",4810
+101804107076,"Créditos a estados y municipios","       Créditos a estados y municipios",4820
+101807608100,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4830
+101807608101,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",4840
+101807608102,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4850
+101807608103,"Fideicomisos públicos de contratación","        Fideicomisos públicos de contratación",4860
+101807608104,"Otros","        Otros",4870
+101804107077,"Créditos a empresas productivas del Estado","       Créditos a empresas productivas del Estado",4880
+101807708105,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4890
+101807708106,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",4900
+101807708107,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4910
+101807708108,"Otros","        Otros",4920
+101804107078,"Créditos a organismos descentralizados o desconcentrados","       Créditos a organismos descentralizados o desconcentrados",4930
+101807808109,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",4940
+101807808110,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",4950
+101807808111,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",4960
+101807808112,"Otros","        Otros",4970
+101800405012,"Créditos de consumo","     Créditos de consumo",4980
+101801206042,"Tarjeta de crédito","      Tarjeta de crédito",4990
+101801206043,"Personales","      Personales",5000
+101801206044,"Nómina","      Nómina",5010
+101801206045,"Automotriz","      Automotriz",5020
+101801206046,"Adquisición de bienes muebles","      Adquisición de bienes muebles",5030
+101801206047,"Operaciones de arrendamiento financiero","      Operaciones de arrendamiento financiero",5040
+101801206048,"Microcréditos","      Microcréditos",5050
+101801206049,"Otros créditos de consumo","      Otros créditos de consumo",5060
+101800405013,"Créditos a la vivienda","     Créditos a la vivienda",5070
+101801306050,"Media y residencial","      Media y residencial",5080
+101801306051,"De interés social","      De interés social",5090
+101801306052,"Créditos adquiridos al INFONAVIT o el FOVISSSTE","      Créditos adquiridos al INFONAVIT o el FOVISSSTE",5100
+101805207079,"Cartera ordinaria","       Cartera ordinaria",5110
+101805207080,"Cartera en prórroga","       Cartera en prórroga",5120
+101805207081,"Régimen especial de amortización","       Régimen especial de amortización",5130
+101801306053,"Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos","      Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos",5140
+101801306054,"Remodelación o mejoramiento con garantía de la subcuenta de vivienda","      Remodelación o mejoramiento con garantía de la subcuenta de vivienda",5150
+131800103001,"Cartera de crédito","   Cartera de crédito",5160
+131800103002,"Partidas diferidas (2)","   Partidas diferidas (2)",5170
+101800103003,"Estimación preventiva para riesgos crediticios","   Estimación preventiva para riesgos crediticios",5180
+101800304005,"Estimación preventiva para riesgos crediticios derivada de la calificación","    Estimación preventiva para riesgos crediticios derivada de la calificación",5190
+101800505014,"Cartera de crédito con riesgo de crédito etapa 1","     Cartera de crédito con riesgo de crédito etapa 1",5200
+101801406055,"Créditos comerciales","      Créditos comerciales",5210
+101805507082,"Créditos comerciales sin restricción","       Créditos comerciales sin restricción",5220
+101808208113,"Actividad empresarial o comercial","        Actividad empresarial o comercial",5230
+101811309053,"Operaciones quirografarias","         Operaciones quirografarias",5240
+101805310001,"Créditos en cuenta corriente","          Créditos en cuenta corriente",5250
+101805310002,"Otros","          Otros",5260
+101811309054,"Operaciones prendarias","         Operaciones prendarias",5270
+101805410003,"Operaciones de habilitación o avío","          Operaciones de habilitación o avío",5280
+101805410004,"Operaciones refaccionarias","          Operaciones refaccionarias",5290
+101805410005,"Otros","          Otros",5300
+101811309055,"Créditos puente","         Créditos puente",5310
+101805510006,"Créditos puente a la vivienda","          Créditos puente a la vivienda",5320
+101805510007,"Otros créditos puente","          Otros créditos puente",5330
+101811309056,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",5340
+101811309057,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",5350
+101811309058,"Operaciones con garantía hipotecaria","         Operaciones con garantía hipotecaria",5360
+101811309059,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",5370
+101811309060,"Otros","         Otros",5380
+101808208114,"Entidades financieras","        Entidades financieras",5390
+101811409061,"Créditos interbancarios","         Créditos interbancarios",5400
+101806110008,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",5410
+101806110009,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",5420
+101806110010,"Otros","          Otros",5430
+101811409062,"Créditos a entidades financieras no bancarias","         Créditos a entidades financieras no bancarias",5440
+101806210011,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",5450
+101806210012,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",5460
+101806210013,"Otros","          Otros",5470
+101808208115,"Entidades gubernamentales","        Entidades gubernamentales",5480
+101811509063,"Créditos al gobierno federal","         Créditos al gobierno federal",5490
+101811509064,"Créditos a estados y municipios","         Créditos a estados y municipios",5500
+101806410014,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",5510
+101806410015,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","          Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",5520
+101806410016,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",5530
+101806410017,"Fideicomisos públicos de contratación","          Fideicomisos públicos de contratación",5540
+101806410018,"Otros","          Otros",5550
+101811509065,"Créditos a empresas productivas del Estado","         Créditos a empresas productivas del Estado",5560
+101806510019,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",5570
+101806510020,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","          Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",5580
+101806510021,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",5590
+101806510022,"Otros","          Otros",5600
+101811509066,"Créditos a organismos descentralizados o desconcentrados","         Créditos a organismos descentralizados o desconcentrados",5610
+101806610023,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",5620
+101806610024,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","          Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",5630
+101806610025,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",5640
+101806610026,"Otros","          Otros",5650
+101805507083,"Créditos comerciales restringidos","       Créditos comerciales restringidos",5660
+101808308116,"Actividad empresarial o comercial","        Actividad empresarial o comercial",5670
+101811609067,"Operaciones quirografarias","         Operaciones quirografarias",5680
+101806710027,"Créditos en cuenta corriente","          Créditos en cuenta corriente",5690
+101806710028,"Otros","          Otros",5700
+101811609068,"Operaciones prendarias","         Operaciones prendarias",5710
+101806810029,"Operaciones de habilitación o avío","          Operaciones de habilitación o avío",5720
+101806810030,"Operaciones refaccionarias","          Operaciones refaccionarias",5730
+101806810031,"Otros","          Otros",5740
+101811609069,"Créditos puente","         Créditos puente",5750
+101806910032,"Créditos puente a la vivienda","          Créditos puente a la vivienda",5760
+101806910033,"Otros créditos puente","          Otros créditos puente",5770
+101811609070,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",5780
+101811609071,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",5790
+101811609072,"Operaciones con garantía hipotecaria","         Operaciones con garantía hipotecaria",5800
+101811609073,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",5810
+101811609074,"Otros","         Otros",5820
+101808308117,"Entidades financieras","        Entidades financieras",5830
+101811709075,"Créditos interbancarios","         Créditos interbancarios",5840
+101807510034,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",5850
+101807510035,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",5860
+101807510036,"Otros","          Otros",5870
+101811709076,"Créditos a entidades financieras no bancarias","         Créditos a entidades financieras no bancarias",5880
+101807610037,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",5890
+101807610038,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",5900
+101807610039,"Otros","          Otros",5910
+101808308118,"Entidades gubernamentales","        Entidades gubernamentales",5920
+101811809077,"Créditos al gobierno federal","         Créditos al gobierno federal",5930
+101811809078,"Créditos a estados y municipios","         Créditos a estados y municipios",5940
+101807810040,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",5950
+101807810041,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","          Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",5960
+101807810042,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",5970
+101807810043,"Fideicomisos públicos de contratación","          Fideicomisos públicos de contratación",5980
+101807810044,"Otros","          Otros",5990
+101811809079,"Créditos a empresas productivas del Estado","         Créditos a empresas productivas del Estado",6000
+101807910045,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",6010
+101807910046,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","          Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",6020
+101807910047,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",6030
+101807910048,"Otros","          Otros",6040
+101811809080,"Créditos a organismos descentralizados o desconcentrados","         Créditos a organismos descentralizados o desconcentrados",6050
+101808010049,"Créditos para proyectos de inversión con fuente de pago propia","          Créditos para proyectos de inversión con fuente de pago propia",6060
+101808010050,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","          Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",6070
+101808010051,"Operaciones de arrendamiento financiero","          Operaciones de arrendamiento financiero",6080
+101808010052,"Otros","          Otros",6090
+101801406056,"Créditos de consumo","      Créditos de consumo",6100
+101805607084,"Créditos de consumo sin restricción","       Créditos de consumo sin restricción",6110
+101808408119,"Tarjeta de crédito","        Tarjeta de crédito",6120
+101808408120,"Personales","        Personales",6130
+101808408121,"Nómina","        Nómina",6140
+101808408122,"Automotriz","        Automotriz",6150
+101808408123,"Adquisición de bienes muebles","        Adquisición de bienes muebles",6160
+101808408124,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",6170
+101808408125,"Microcréditos","        Microcréditos",6180
+101808408126,"Otros créditos de consumo","        Otros créditos de consumo",6190
+101805607085,"Créditos de consumo restringidos","       Créditos de consumo restringidos",6200
+101808508127,"Tarjeta de crédito","        Tarjeta de crédito",6210
+101808508128,"Personales","        Personales",6220
+101808508129,"Nómina","        Nómina",6230
+101808508130,"Automotriz","        Automotriz",6240
+101808508131,"Adquisición de bienes muebles","        Adquisición de bienes muebles",6250
+101808508132,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",6260
+101808508133,"Microcréditos","        Microcréditos",6270
+101808508134,"Otros créditos de consumo","        Otros créditos de consumo",6280
+101801406057,"Créditos a la vivienda","      Créditos a la vivienda",6290
+101805707086,"Créditos a la vivienda sin restricción","       Créditos a la vivienda sin restricción",6300
+101808608135,"Media y residencial","        Media y residencial",6310
+101808608136,"De interés social","        De interés social",6320
+101808608137,"Créditos adquiridos al INFONAVIT o el FOVISSSTE","        Créditos adquiridos al INFONAVIT o el FOVISSSTE",6330
+101813709081,"Cartera ordinaria","         Cartera ordinaria",6340
+101813709082,"Cartera en prórroga","         Cartera en prórroga",6350
+101813709083,"Régimen especial de amortización","         Régimen especial de amortización",6360
+101808608138,"Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos","        Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos",6370
+101808608139,"Remodelación o mejoramiento con garantía de la subcuenta de vivienda","        Remodelación o mejoramiento con garantía de la subcuenta de vivienda",6380
+101805707087,"Créditos a la vivienda restringidos","       Créditos a la vivienda restringidos",6390
+101808708140,"Media y residencial","        Media y residencial",6400
+101808708141,"De interés social","        De interés social",6410
+101808708142,"Créditos adquiridos al INFONAVIT o el FOVISSSTE","        Créditos adquiridos al INFONAVIT o el FOVISSSTE",6420
+101814209084,"Cartera ordinaria","         Cartera ordinaria",6430
+101814209085,"Cartera en prórroga","         Cartera en prórroga",6440
+101814209086,"Régimen especial de amortización","         Régimen especial de amortización",6450
+101808708143,"Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos","        Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos",6460
+101808708144,"Remodelación o mejoramiento con garantía de la subcuenta de vivienda","        Remodelación o mejoramiento con garantía de la subcuenta de vivienda",6470
+101800505015,"Cartera de crédito con riesgo de crédito etapa 2","     Cartera de crédito con riesgo de crédito etapa 2",6480
+101801506059,"Créditos comerciales","      Créditos comerciales",6490
+101805907088,"Actividad empresarial o comercial","       Actividad empresarial o comercial",6500
+101808808145,"Operaciones quirografarias","        Operaciones quirografarias",6510
+101814509087,"Créditos en cuenta corriente","         Créditos en cuenta corriente",6520
+101814509088,"Otros","         Otros",6530
+101808808146,"Operaciones prendarias","        Operaciones prendarias",6540
+101814609089,"Operaciones de habilitación o avío","         Operaciones de habilitación o avío",6550
+101814609090,"Operaciones refaccionarias","         Operaciones refaccionarias",6560
+101814609091,"Otros","         Otros",6570
+101808808147,"Créditos puente","        Créditos puente",6580
+101814709092,"Créditos puente a la vivienda","         Créditos puente a la vivienda",6590
+101814709093,"Otros créditos puente","         Otros créditos puente",6600
+101808808148,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",6610
+101808808149,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",6620
+101808808150,"Operaciones con garantía hipotecaria","        Operaciones con garantía hipotecaria",6630
+101808808151,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",6640
+101808808152,"Otros","        Otros",6650
+101805907089,"Entidades financieras","       Entidades financieras",6660
+101808908153,"Créditos interbancarios","        Créditos interbancarios",6670
+101815309094,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",6680
+101815309095,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",6690
+101815309096,"Otros","         Otros",6700
+101808908154,"Créditos a entidades financieras no bancarias","        Créditos a entidades financieras no bancarias",6710
+101815409097,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",6720
+101815409098,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",6730
+101815409099,"Otros","         Otros",6740
+101805907090,"Entidades gubernamentales","       Entidades gubernamentales",6750
+101809008155,"Créditos al gobierno federal","        Créditos al gobierno federal",6760
+101809008156,"Créditos a estados y municipios","        Créditos a estados y municipios",6770
+101815609100,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",6780
+101815609101,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",6790
+101815609102,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",6800
+101815609103,"Fideicomisos públicos de contratación","         Fideicomisos públicos de contratación",6810
+101815609104,"Otros","         Otros",6820
+101809008157,"Créditos a empresas productivas del Estado","        Créditos a empresas productivas del Estado",6830
+101815709105,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",6840
+101815709106,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",6850
+101815709107,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",6860
+101815709108,"Otros","         Otros",6870
+101809008158,"Créditos a organismos descentralizados o desconcentrados","        Créditos a organismos descentralizados o desconcentrados",6880
+101815809109,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",6890
+101815809110,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",6900
+101815809111,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",6910
+101815809112,"Otros","         Otros",6920
+101801506060,"Créditos de consumo","      Créditos de consumo",6930
+101806007091,"Tarjeta de crédito","       Tarjeta de crédito",6940
+101806007092,"Personales","       Personales",6950
+101806007093,"Nómina","       Nómina",6960
+101806007094,"Automotriz","       Automotriz",6970
+101806007095,"Adquisición de bienes muebles","       Adquisición de bienes muebles",6980
+101806007096,"Operaciones de arrendamiento financiero","       Operaciones de arrendamiento financiero",6990
+101806007097,"Microcréditos","       Microcréditos",7000
+101806007098,"Otros créditos de consumo","       Otros créditos de consumo",7010
+101801506061,"Créditos a la vivienda","      Créditos a la vivienda",7020
+101806107099,"Media y residencial","       Media y residencial",7030
+101806107100,"De interés social","       De interés social",7040
+101806107101,"Créditos adquiridos al INFONAVIT o el FOVISSSTE","       Créditos adquiridos al INFONAVIT o el FOVISSSTE",7050
+101810108159,"Cartera ordinaria","        Cartera ordinaria",7060
+101810108160,"Régimen especial de amortización","        Régimen especial de amortización",7070
+101806107102,"Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos","       Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos",7080
+101806107103,"Remodelación o mejoramiento con garantía de la subcuenta de vivienda","       Remodelación o mejoramiento con garantía de la subcuenta de vivienda",7090
+101800505016,"Cartera de crédito con riesgo de crédito etapa 3","     Cartera de crédito con riesgo de crédito etapa 3",7100
+101801606062,"Créditos comerciales","      Créditos comerciales",7110
+101806207104,"Actividad empresarial o comercial","       Actividad empresarial o comercial",7120
+101810408161,"Operaciones quirografarias","        Operaciones quirografarias",7130
+101816109113,"Créditos en cuenta corriente","         Créditos en cuenta corriente",7140
+101816109114,"Otros","         Otros",7150
+101810408162,"Operaciones prendarias","        Operaciones prendarias",7160
+101816209115,"Operaciones de habilitación o avío","         Operaciones de habilitación o avío",7170
+101816209116,"Operaciones refaccionarias","         Operaciones refaccionarias",7180
+101816209117,"Otros","         Otros",7190
+101810408163,"Créditos puente","        Créditos puente",7200
+101816309118,"Créditos puente a la vivienda","         Créditos puente a la vivienda",7210
+101816309119,"Otros créditos puente","         Otros créditos puente",7220
+101810408164,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","        Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",7230
+101810408165,"Operaciones de arrendamiento financiero","        Operaciones de arrendamiento financiero",7240
+101810408166,"Operaciones con garantía hipotecaria","        Operaciones con garantía hipotecaria",7250
+101810408167,"Créditos para proyectos de inversión con fuente de pago propia","        Créditos para proyectos de inversión con fuente de pago propia",7260
+101810408168,"Otros","        Otros",7270
+101806207105,"Entidades financieras","       Entidades financieras",7280
+101810508169,"Créditos interbancarios","        Créditos interbancarios",7290
+101816909120,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",7300
+101816909121,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",7310
+101816909122,"Otros","         Otros",7320
+101810508170,"Créditos a entidades financieras no bancarias","        Créditos a entidades financieras no bancarias",7330
+101817009123,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",7340
+101817009124,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",7350
+101817009125,"Otros","         Otros",7360
+101806207106,"Entidades gubernamentales","       Entidades gubernamentales",7370
+101810608171,"Créditos al gobierno federal","        Créditos al gobierno federal",7380
+101810608172,"Créditos a estados y municipios","        Créditos a estados y municipios",7390
+101817209126,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",7400
+101817209127,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",7410
+101817209128,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",7420
+101817209129,"Fideicomisos públicos de contratación","         Fideicomisos públicos de contratación",7430
+101817209130,"Otros","         Otros",7440
+101810608173,"Créditos a empresas productivas del Estado","        Créditos a empresas productivas del Estado",7450
+101817309131,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",7460
+101817309132,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",7470
+101817309133,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",7480
+101817309134,"Otros","         Otros",7490
+101810608174,"Créditos a organismos descentralizados o desconcentrados","        Créditos a organismos descentralizados o desconcentrados",7500
+101817409135,"Créditos para proyectos de inversión con fuente de pago propia","         Créditos para proyectos de inversión con fuente de pago propia",7510
+101817409136,"Operaciones de factoraje financiero, descuento o cesión de derechos de crédito","         Operaciones de factoraje financiero, descuento o cesión de derechos de crédito",7520
+101817409137,"Operaciones de arrendamiento financiero","         Operaciones de arrendamiento financiero",7530
+101817409138,"Otros","         Otros",7540
+101801606063,"Créditos de consumo","      Créditos de consumo",7550
+101806307107,"Tarjeta de crédito","       Tarjeta de crédito",7560
+101806307108,"Personales","       Personales",7570
+101806307109,"Nómina","       Nómina",7580
+101806307110,"Automotriz","       Automotriz",7590
+101806307111,"Adquisición de bienes muebles","       Adquisición de bienes muebles",7600
+101806307112,"Operaciones de arrendamiento financiero","       Operaciones de arrendamiento financiero",7610
+101806307113,"Microcréditos","       Microcréditos",7620
+101806307114,"Otros créditos de consumo","       Otros créditos de consumo",7630
+101801606064,"Créditos a la vivienda","      Créditos a la vivienda",7640
+101806407115,"Media y residencial","       Media y residencial",7650
+101806407116,"De interés social","       De interés social",7660
+101806407117,"Créditos adquiridos al INFONAVIT o el FOVISSSTE","       Créditos adquiridos al INFONAVIT o el FOVISSSTE",7670
+101811708175,"Cartera ordinaria","        Cartera ordinaria",7680
+101811708176,"Régimen especial de amortización","        Régimen especial de amortización",7690
+101806407118,"Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos","       Remodelación o mejoramiento con garantía otorgada por la banca de desarrollo o fideicomisos públicos",7700
+101806407119,"Remodelación o mejoramiento con garantía de la subcuenta de vivienda","       Remodelación o mejoramiento con garantía de la subcuenta de vivienda",7710
+101800505017,"Operaciones contingentes y avales","     Operaciones contingentes y avales",7720
+101800304006,"Estimación preventiva para riesgos crediticios adicional","    Estimación preventiva para riesgos crediticios adicional",7730
+101800605018,"Para cobertura de riesgo sobre cartera de vivienda con riesgo de crédito etapa 3","     Para cobertura de riesgo sobre cartera de vivienda con riesgo de crédito etapa 3",7740
+101800605019,"Por sobretasa en bonos gubernamentales esquema de descuentos en los pagos oportunos y anticipados","     Por sobretasa en bonos gubernamentales esquema de descuentos en los pagos oportunos y anticipados",7750
+101800605020,"Por riesgos operativos (Sociedades de Información Crediticia)","     Por riesgos operativos (Sociedades de Información Crediticia)",7760
+101800605021,"Por intereses devengados sobre créditos con riesgo de crédito etapa 3","     Por intereses devengados sobre créditos con riesgo de crédito etapa 3",7770
+101800605022,"Ordenada por la Comisión Nacional Bancaria y de Valores","     Ordenada por la Comisión Nacional Bancaria y de Valores",7780
+101800605023,"Reconocida por la Comisión Nacional Bancaria y de Valores","     Reconocida por la Comisión Nacional Bancaria y de Valores",7790
+131800102001,"Cartera de crédito (neto)","  Cartera de crédito (neto)",7800
+101800203004,"Derechos de cobro adquiridos (créditos deteriorados)","   Derechos de cobro adquiridos (créditos deteriorados)",7810
+101800203005,"Estimación preventiva para riesgos crediticios derivada de derechos de cobro adquiridos (créditos deteriorados)","   Estimación preventiva para riesgos crediticios derivada de derechos de cobro adquiridos (créditos deteriorados)",7820
+131800102002,"Derechos de cobro adquiridos (neto)","  Derechos de cobro adquiridos (neto)",7830
+131800001001,"Total de cartera de crédito (neto)"," Total de cartera de crédito (neto)",7840
+102000001001,"Activos virtuales"," Activos virtuales",7850
+102000102001,"Activos virtuales restringidos","  Activos virtuales restringidos",7860
+102000102002,"Activos virtuales no restringidos","  Activos virtuales no restringidos",7870
+102200001001,"Beneficios por recibir en operaciones de bursatilización"," Beneficios por recibir en operaciones de bursatilización",7880
+102200102001,"Beneficios sobre el remanente en operaciones de bursatilización","  Beneficios sobre el remanente en operaciones de bursatilización",7890
+102200102002,"Activo por administración de activos financieros transferidos","  Activo por administración de activos financieros transferidos",7900
+102400102001,"Otras cuentas por cobrar","  Otras cuentas por cobrar",7910
+102400103001,"Deudores por liquidación de operaciones","   Deudores por liquidación de operaciones",7920
+102400104001,"Compraventa de divisas","    Compraventa de divisas",7930
+102400104002,"Inversiones en instrumentos financieros","    Inversiones en instrumentos financieros",7940
+102400104003,"Reportos","    Reportos",7950
+102400104004,"Préstamo de valores","    Préstamo de valores",7960
+102400104005,"Instrumentos financieros derivados","    Instrumentos financieros derivados",7970
+102400104006,"Por emisión de títulos","    Por emisión de títulos",7980
+102400104007,"Activos virtuales","    Activos virtuales",7990
+102400103002,"Deudores por cuentas de margen","   Deudores por cuentas de margen",8000
+102400103003,"Deudores por colaterales otorgados en efectivo","   Deudores por colaterales otorgados en efectivo",8010
+102400304008,"Operaciones con instrumentos financieros","    Operaciones con instrumentos financieros",8020
+102400304009,"Operaciones de crédito","    Operaciones de crédito",8030
+102400304010,"Operaciones no realizadas en mercados reconocidos (OTC)","    Operaciones no realizadas en mercados reconocidos (OTC)",8040
+102400304011,"Otros","    Otros",8050
+102400103004,"Derechos de cobro","   Derechos de cobro",8060
+102400404012,"Derechos Fiduciarios","    Derechos Fiduciarios",8070
+102400404013,"Otros derechos de cobro","    Otros derechos de cobro",8080
+102400103005,"Deudores diversos","   Deudores diversos",8090
+102400504014,"Premios, comisiones y derechos por cobrar sobre operaciones vigentes no crediticias","    Premios, comisiones y derechos por cobrar sobre operaciones vigentes no crediticias",8100
+102400504015,"Partidas asociadas a operaciones crediticias","    Partidas asociadas a operaciones crediticias",8110
+102400504016,"Préstamos y otros adeudos del personal","    Préstamos y otros adeudos del personal",8120
+102400504017,"Deudores en trámite de regularización o liquidación","    Deudores en trámite de regularización o liquidación",8130
+102400504018,"Rentas por cobrar","    Rentas por cobrar",8140
+102400504019,"Adeudos vencidos","    Adeudos vencidos",8150
+102400504020,"Otros deudores","    Otros deudores",8160
+102400103006,"Impuestos por recuperar","   Impuestos por recuperar",8170
+102400103007,"Dividendos por cobrar de instrumentos financieros de capital","   Dividendos por cobrar de instrumentos financieros de capital",8180
+102400103008,"Cuentas por cobrar condicionadas","   Cuentas por cobrar condicionadas",8190
+102400103009,"Otras cuentas por cobrar","   Otras cuentas por cobrar",8200
+102400102002,"Estimación de pérdidas crediticias esperadas","  Estimación de pérdidas crediticias esperadas",8210
+102400203010,"Derechos de cobro","   Derechos de cobro",8220
+102400203011,"Deudores diversos","   Deudores diversos",8230
+102400203012,"Cuentas por cobrar condicionadas","   Cuentas por cobrar condicionadas",8240
+102400203013,"Otras cuentas por cobrar","   Otras cuentas por cobrar",8250
+132400001001,"Otras cuentas por cobrar (neto)"," Otras cuentas por cobrar (neto)",8260
+102600102001,"Bienes adjudicados","  Bienes adjudicados",8270
+102600103001,"Bienes muebles, instrumentos financieros y derechos adjudicados","   Bienes muebles, instrumentos financieros y derechos adjudicados",8280
+102600103002,"Muebles adjudicados restringidos","   Muebles adjudicados restringidos",8290
+102600103003,"Inmuebles adjudicados","   Inmuebles adjudicados",8300
+102600103004,"Inmuebles adjudicados restringidos","   Inmuebles adjudicados restringidos",8310
+102600103005,"Incremento por actualización de bienes adjudicados (1)","   Incremento por actualización de bienes adjudicados (1)",8320
+102600102002,"Estimación de bienes adjudicados","  Estimación de bienes adjudicados",8330
+102600203006,"Estimación por arrendamiento de inmuebles adjudicados","   Estimación por arrendamiento de inmuebles adjudicados",8340
+102600203007,"Estimación por pérdida de valor de bienes adjudicados","   Estimación por pérdida de valor de bienes adjudicados",8350
+102600203008,"Incremento por actualización de la estimación por pérdida de valor de bienes adjudicados (1)","   Incremento por actualización de la estimación por pérdida de valor de bienes adjudicados (1)",8360
+132600001001,"Bienes adjudicados (neto)"," Bienes adjudicados (neto)",8370
+102800001001,"Activos de larga duración mantenidos para la venta o para distribuir a los propietarios"," Activos de larga duración mantenidos para la venta o para distribuir a los propietarios",8380
+102800102001,"Subsidiarias","  Subsidiarias",8390
+102800103001,"Pertenecientes al sector financiero","   Pertenecientes al sector financiero",8400
+102800103002,"No pertenecientes al sector financiero","   No pertenecientes al sector financiero",8410
+102800102002,"Asociadas","  Asociadas",8420
+102800203003,"Pertenecientes al sector financiero","   Pertenecientes al sector financiero",8430
+102800203004,"No pertenecientes al sector financiero","   No pertenecientes al sector financiero",8440
+102800102003,"Negocios conjuntos","  Negocios conjuntos",8450
+102800303005,"Pertenecientes al sector financiero","   Pertenecientes al sector financiero",8460
+102800303006,"No pertenecientes al sector financiero","   No pertenecientes al sector financiero",8470
+102800102004,"Otras inversiones permanentes","  Otras inversiones permanentes",8480
+102800403007,"Pertenecientes al sector financiero","   Pertenecientes al sector financiero",8490
+102800403008,"No pertenecientes al sector financiero","   No pertenecientes al sector financiero",8500
+102800102005,"Otros","  Otros",8510
+102800503009,"Pertenecientes al sector financiero","   Pertenecientes al sector financiero",8520
+102800503010,"No pertenecientes al sector financiero","   No pertenecientes al sector financiero",8530
+103000001001,"Activos relacionados con operaciones discontinuadas"," Activos relacionados con operaciones discontinuadas",8540
+103200001001,"Pagos anticipados y otros activos"," Pagos anticipados y otros activos",8550
+103200102001,"Cargos diferidos","  Cargos diferidos",8560
+103200103001,"Diferencial por amortizar en adquisiciones de cartera de crédito","   Diferencial por amortizar en adquisiciones de cartera de crédito",8570
+103200103002,"Costos de transacción asociados con el otorgamiento del crédito","   Costos de transacción asociados con el otorgamiento del crédito",8580
+103200103003,"Efecto por renegociación de cartera de crédito","   Efecto por renegociación de cartera de crédito",8590
+103200103004,"Seguros por amortizar","   Seguros por amortizar",8600
+103200103005,"Otros cargos diferidos","   Otros cargos diferidos",8610
+103200102002,"Pagos anticipados","  Pagos anticipados",8620
+103200203006,"Intereses pagados por anticipado","   Intereses pagados por anticipado",8630
+103200203007,"Comisiones pagadas por anticipado","   Comisiones pagadas por anticipado",8640
+103200203008,"Anticipos o pagos provisionales de impuestos","   Anticipos o pagos provisionales de impuestos",8650
+103200203009,"Rentas pagadas por anticipado","   Rentas pagadas por anticipado",8660
+103200203010,"Otros pagos anticipados","   Otros pagos anticipados",8670
+103200102003,"Depósitos en garantía","  Depósitos en garantía",8680
+103200102004,"Activos por beneficios a los empleados","  Activos por beneficios a los empleados",8690
+103200403011,"Activos del plan para cubrir beneficios a los empleados","   Activos del plan para cubrir beneficios a los empleados",8700
+103201104001,"Beneficios directos a largo plazo","    Beneficios directos a largo plazo",8710
+103201104002,"Beneficios post-empleo","    Beneficios post-empleo",8720
+103200205001,"Pensiones","     Pensiones",8730
+103200205002,"Prima de antigüedad","     Prima de antigüedad",8740
+103200205003,"Otros beneficios post-empleo","     Otros beneficios post-empleo",8750
+103200403012,"Participación de los trabajadores en las utilidades diferida (a favor)","   Participación de los trabajadores en las utilidades diferida (a favor)",8760
+103200403013,"Estimación por PTU diferida no recuperable","   Estimación por PTU diferida no recuperable",8770
+103200102005,"Otros activos a corto y largo plazo","  Otros activos a corto y largo plazo",8780
+103400102001,"Propiedades, mobiliario y equipo","  Propiedades, mobiliario y equipo",8790
+103400103001,"Propiedades, mobiliario y equipo","   Propiedades, mobiliario y equipo",8800
+103400104001,"Terrenos","    Terrenos",8810
+103400104002,"Construcciones","    Construcciones",8820
+103400104003,"Construcciones en proceso","    Construcciones en proceso",8830
+103400104004,"Equipo de transporte","    Equipo de transporte",8840
+103400104005,"Equipo de cómputo","    Equipo de cómputo",8850
+103400104006,"Mobiliario","    Mobiliario",8860
+103400104007,"Adaptaciones y mejoras","    Adaptaciones y mejoras",8870
+103400104008,"Otras propiedades, mobiliario y equipo","    Otras propiedades, mobiliario y equipo",8880
+103400103002,"Revaluación de propiedades, mobiliario y equipo (1)","   Revaluación de propiedades, mobiliario y equipo (1)",8890
+103400204009,"Terrenos","    Terrenos",8900
+103400204010,"Construcciones","    Construcciones",8910
+103400204011,"Construcciones en proceso","    Construcciones en proceso",8920
+103400204012,"Equipo de transporte","    Equipo de transporte",8930
+103400204013,"Equipo de cómputo","    Equipo de cómputo",8940
+103400204014,"Mobiliario","    Mobiliario",8950
+103400204015,"Adaptaciones y mejoras","    Adaptaciones y mejoras",8960
+103400204016,"Otras revaluaciones de propiedades, mobiliario y equipo","    Otras revaluaciones de propiedades, mobiliario y equipo",8970
+103400102002,"Depreciación acumulada de propiedades, mobiliario y equipo","  Depreciación acumulada de propiedades, mobiliario y equipo",8980
+103400203003,"Depreciación acumulada de propiedades, mobiliario y equipo","   Depreciación acumulada de propiedades, mobiliario y equipo",8990
+103400304017,"Construcciones","    Construcciones",9000
+103400304018,"Equipo de transporte","    Equipo de transporte",9010
+103400304019,"Equipo de cómputo","    Equipo de cómputo",9020
+103400304020,"Mobiliario","    Mobiliario",9030
+103400304021,"Adaptaciones y mejoras","    Adaptaciones y mejoras",9040
+103400304022,"Otras depreciaciones acumuladas de propiedades, mobiliario y equipo","    Otras depreciaciones acumuladas de propiedades, mobiliario y equipo",9050
+103400203004,"Revaluación de la depreciación acumulada de propiedades, mobiliario y equipo (1)","   Revaluación de la depreciación acumulada de propiedades, mobiliario y equipo (1)",9060
+103400404023,"Construcciones","    Construcciones",9070
+103400404024,"Equipo de transporte","    Equipo de transporte",9080
+103400404025,"Equipo de cómputo","    Equipo de cómputo",9090
+103400404026,"Mobiliario","    Mobiliario",9100
+103400404027,"Adaptaciones y mejoras","    Adaptaciones y mejoras",9110
+103400404028,"Otras revaluaciones de la depreciación acumulada de propiedades, mobiliario y equipo","    Otras revaluaciones de la depreciación acumulada de propiedades, mobiliario y equipo",9120
+133400001001,"Propiedades, mobiliario y equipo (neto)"," Propiedades, mobiliario y equipo (neto)",9130
+103600102001,"Activos por derechos de uso de propiedades, mobiliario y equipo","  Activos por derechos de uso de propiedades, mobiliario y equipo",9140
+103600103001,"Terrenos","   Terrenos",9150
+103600103002,"Construcciones","   Construcciones",9160
+103600103003,"Equipo de transporte","   Equipo de transporte",9170
+103600103004,"Equipo de cómputo","   Equipo de cómputo",9180
+103600103005,"Mobiliario","   Mobiliario",9190
+103600103006,"Otras propiedades, mobiliario y equipo","   Otras propiedades, mobiliario y equipo",9200
+103600102002,"Depreciación de activos por derechos de uso de propiedades, mobiliario y equipo","  Depreciación de activos por derechos de uso de propiedades, mobiliario y equipo",9210
+103600203007,"Terrenos","   Terrenos",9220
+103600203008,"Construcciones","   Construcciones",9230
+103600203009,"Equipo de transporte","   Equipo de transporte",9240
+103600203010,"Equipo de cómputo","   Equipo de cómputo",9250
+103600203011,"Mobiliario","   Mobiliario",9260
+103600203012,"Otras propiedades, mobiliario y equipo","   Otras propiedades, mobiliario y equipo",9270
+133600001001,"Activos por derechos de uso de propiedades, mobiliario y equipo (neto)"," Activos por derechos de uso de propiedades, mobiliario y equipo (neto)",9280
+103800001001,"Inversiones permanentes"," Inversiones permanentes",9290
+103800102001,"Subsidiarias","  Subsidiarias",9300
+103800103001,"Pertenecientes al sector financiero","   Pertenecientes al sector financiero",9310
+103800103002,"No pertenecientes al sector financiero","   No pertenecientes al sector financiero",9320
+103800102002,"Asociadas","  Asociadas",9330
+103800203003,"Pertenecientes al sector financiero","   Pertenecientes al sector financiero",9340
+103800203004,"No pertenecientes al sector financiero","   No pertenecientes al sector financiero",9350
+103800102003,"Negocios conjuntos","  Negocios conjuntos",9360
+103800303005,"Pertenecientes al sector financiero","   Pertenecientes al sector financiero",9370
+103800303006,"No pertenecientes al sector financiero","   No pertenecientes al sector financiero",9380
+103800102004,"Otras inversiones permanentes","  Otras inversiones permanentes",9390
+103800403007,"Pertenecientes al sector financiero","   Pertenecientes al sector financiero",9400
+103800403008,"No pertenecientes al sector financiero","   No pertenecientes al sector financiero",9410
+104000001001,"Activo por impuestos a la utilidad diferidos"," Activo por impuestos a la utilidad diferidos",9420
+104000102001,"Impuestos a la utilidad diferidos (a favor)","  Impuestos a la utilidad diferidos (a favor)",9430
+104000103001,"Diferencias temporales","   Diferencias temporales",9440
+104000103002,"Pérdidas fiscales","   Pérdidas fiscales",9450
+104000103003,"Créditos fiscales","   Créditos fiscales",9460
+104000102002,"Estimación por impuestos a la utilidad diferidos no recuperables","  Estimación por impuestos a la utilidad diferidos no recuperables",9470
+104000203004,"Diferencias temporales","   Diferencias temporales",9480
+104000203005,"Pérdidas fiscales","   Pérdidas fiscales",9490
+104000203006,"Créditos fiscales","   Créditos fiscales",9500
+104200102001,"Activos intangibles","  Activos intangibles",9510
+104200103001,"Activos intangibles","   Activos intangibles",9520
+104200103002,"Revaluación de activos intangibles (1)","   Revaluación de activos intangibles (1)",9530
+104200102002,"Amortización acumulada de activos intangibles","  Amortización acumulada de activos intangibles",9540
+104200203003,"Amortización acumulada de activos intangibles","   Amortización acumulada de activos intangibles",9550
+104200203004,"Revaluación de la amortización acumulada de activos intangibles (1)","   Revaluación de la amortización acumulada de activos intangibles (1)",9560
+134200001001,"Activos intangibles (neto)"," Activos intangibles (neto)",9570
+104400102001,"Activos por derechos de uso de activos intangibles","  Activos por derechos de uso de activos intangibles",9580
+104400102002,"Amortización de activos por derechos de uso de activos intangibles","  Amortización de activos por derechos de uso de activos intangibles",9590
+134400001001,"Activos por derechos de uso de activos intangibles (neto)"," Activos por derechos de uso de activos intangibles (neto)",9600
+104600001001,"Crédito mercantil"," Crédito mercantil",9610
+104600102001,"Crédito mercantil","  Crédito mercantil",9620
+104600103001,"De subsidiarias","   De subsidiarias",9630
+104600103002,"De asociadas","   De asociadas",9640
+104600103003,"De negocios conjuntos","   De negocios conjuntos",9650
+104600102002,"Revaluación del crédito mercantil (1)","  Revaluación del crédito mercantil (1)",9660
+104600203004,"De subsidiarias","   De subsidiarias",9670
+104600203005,"De asociadas","   De asociadas",9680
+104600203006,"De negocios conjuntos","   De negocios conjuntos",9690
+200000000000,"PASIVO","PASIVO",9700
+200200001001,"Captación tradicional"," Captación tradicional",9710
+200200102001,"Depósitos de exigibilidad inmediata","  Depósitos de exigibilidad inmediata",9720
+200200103001,"Sin interés","   Sin interés",9730
+200200103002,"Con interés","   Con interés",9740
+200200102002,"Depósitos a plazo","  Depósitos a plazo",9750
+200200203003,"Del público en general","   Del público en general",9760
+200200203004,"Mercado de dinero","   Mercado de dinero",9770
+200200102003,"Títulos de crédito emitidos","  Títulos de crédito emitidos",9780
+200200303006,"Bonos bancarios","   Bonos bancarios",9790
+200200604001,"Valor nominal e intereses","    Valor nominal e intereses",9800
+200200604002,"Costos de transacción","    Costos de transacción",9810
+200200604003,"Prima o descuento por colocación","    Prima o descuento por colocación",9820
+200200303007,"Certificados bursátiles","   Certificados bursátiles",9830
+200200704004,"Valor nominal e intereses","    Valor nominal e intereses",9840
+200200704005,"Costos de transacción","    Costos de transacción",9850
+200200704006,"Prima o descuento por colocación","    Prima o descuento por colocación",9860
+200200303008,"Otros","   Otros",9870
+200200804007,"Valor nominal e intereses","    Valor nominal e intereses",9880
+200200804008,"Costos de transacción","    Costos de transacción",9890
+200200804009,"Prima o descuento por colocación","    Prima o descuento por colocación",9900
+200200102004,"Cuenta global de captación sin movimientos","  Cuenta global de captación sin movimientos",9910
+200400001001,"Préstamos interbancarios y de otros organismos"," Préstamos interbancarios y de otros organismos",9920
+200400102001,"De exigibilidad inmediata","  De exigibilidad inmediata",9930
+200400102002,"De corto plazo","  De corto plazo",9940
+200400203001,"Préstamos de Banco de México","   Préstamos de Banco de México",9950
+200400203002,"Préstamos de instituciones de banca múltiple","   Préstamos de instituciones de banca múltiple",9960
+200400203003,"Préstamos de bancos extranjeros","   Préstamos de bancos extranjeros",9970
+200400203004,"Préstamos de instituciones de banca de desarrollo","   Préstamos de instituciones de banca de desarrollo",9980
+200400203005,"Préstamos de fideicomisos públicos","   Préstamos de fideicomisos públicos",9990
+200400203006,"Préstamos de otros organismos","   Préstamos de otros organismos",10000
+200400102003,"De largo plazo","  De largo plazo",10010
+200400303009,"Préstamos de Banco de México","   Préstamos de Banco de México",10020
+200400303010,"Préstamos de instituciones de banca múltiple","   Préstamos de instituciones de banca múltiple",10030
+200400303011,"Préstamos de bancos extranjeros","   Préstamos de bancos extranjeros",10040
+200400303012,"Préstamos de instituciones de banca de desarrollo","   Préstamos de instituciones de banca de desarrollo",10050
+200400303013,"Préstamos de fideicomisos públicos","   Préstamos de fideicomisos públicos",10060
+200400303014,"Préstamos de otros organismos","   Préstamos de otros organismos",10070
+230600001001,"Valores asignados por liquidar"," Valores asignados por liquidar",10080
+200800001001,"Acreedores por reporto"," Acreedores por reporto",10090
+201000001001,"Préstamo de valores"," Préstamo de valores",10100
+201200001001,"Colaterales vendidos o dados en garantía"," Colaterales vendidos o dados en garantía",10110
+201200102001,"Reportos","  Reportos",10120
+201200103001,"Obligación de la reportadora por restitución del colateral a la reportada","   Obligación de la reportadora por restitución del colateral a la reportada",10130
+201200104001,"Colaterales vendidos","    Colaterales vendidos",10140
+201200105001,"Deuda gubernamental","     Deuda gubernamental",10150
+201200105002,"Deuda bancaria","     Deuda bancaria",10160
+201200105003,"Otros títulos de deuda","     Otros títulos de deuda",10170
+201200104002,"Colaterales dados en garantía","    Colaterales dados en garantía",10180
+201200102002,"Préstamo de valores","  Préstamo de valores",10190
+201200203002,"Obligación del prestatario por restitución de valores objeto de la operación al prestamista","   Obligación del prestatario por restitución de valores objeto de la operación al prestamista",10200
+201200204003,"Colaterales vendidos","    Colaterales vendidos",10210
+201200305004,"Deuda gubernamental","     Deuda gubernamental",10220
+201200305005,"Deuda bancaria","     Deuda bancaria",10230
+201200305006,"Otros títulos de deuda","     Otros títulos de deuda",10240
+201200305007,"Instrumentos financieros de capital","     Instrumentos financieros de capital",10250
+201200203003,"Obligación del prestamista por restitución del colateral al prestatario","   Obligación del prestamista por restitución del colateral al prestatario",10260
+201200304004,"Colaterales vendidos","    Colaterales vendidos",10270
+201200405008,"Deuda gubernamental","     Deuda gubernamental",10280
+201200405009,"Deuda bancaria","     Deuda bancaria",10290
+201200405010,"Otros títulos de deuda","     Otros títulos de deuda",10300
+201200405011,"Instrumentos financieros de capital","     Instrumentos financieros de capital",10310
+201200102003,"Instrumentos financieros derivados","  Instrumentos financieros derivados",10320
+201200303004,"Colaterales vendidos","   Colaterales vendidos",10330
+201200404005,"Deuda gubernamental","    Deuda gubernamental",10340
+201200404006,"Deuda bancaria","    Deuda bancaria",10350
+201200404007,"Otros títulos de deuda","    Otros títulos de deuda",10360
+201200404008,"Instrumentos financieros de capital","    Instrumentos financieros de capital",10370
+201200404009,"Otros","    Otros",10380
+201200102004,"Otros colaterales vendidos","  Otros colaterales vendidos",10390
+201400001001,"Instrumentos financieros derivados"," Instrumentos financieros derivados",10400
+201400102001,"Con fines de negociación","  Con fines de negociación",10410
+201400103001,"Futuros a entregar","   Futuros a entregar",10420
+201400103002,"Contratos adelantados a entregar","   Contratos adelantados a entregar",10430
+201400204001,"Valuación","    Valuación",10440
+201400204002,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10450
+201400103003,"Opciones","   Opciones",10460
+201400304003,"Valuación","    Valuación",10470
+201400304004,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10480
+201400103004,"Swaps","   Swaps",10490
+201400404005,"Valuación","    Valuación",10500
+201400404006,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10510
+201400103005,"Instrumentos financieros derivados crediticios","   Instrumentos financieros derivados crediticios",10520
+201400504007,"Valuación","    Valuación",10530
+201400504008,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10540
+201400103006,"Operaciones estructuradas","   Operaciones estructuradas",10550
+201400604009,"Valuación","    Valuación",10560
+201400604010,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10570
+201400103007,"Paquetes de instrumentos financieros derivados","   Paquetes de instrumentos financieros derivados",10580
+201400704011,"Valuación","    Valuación",10590
+201400704012,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10600
+201400103008,"Ajuste por riesgo de crédito por contraparte","   Ajuste por riesgo de crédito por contraparte",10610
+201400102002,"Con fines de cobertura","  Con fines de cobertura",10620
+201400203009,"Futuros a entregar","   Futuros a entregar",10630
+201400904013,"Valuación","    Valuación",10640
+201400904014,"Valuación de la partida cubierta","    Valuación de la partida cubierta",10650
+201400203010,"Contratos adelantados a entregar","   Contratos adelantados a entregar",10660
+201401004015,"Valuación","    Valuación",10670
+201401004016,"Valuación de la partida cubierta","    Valuación de la partida cubierta",10680
+201401004017,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10690
+201400203011,"Opciones","   Opciones",10700
+201401104018,"Valuación","    Valuación",10710
+201401104019,"Valuación de la partida cubierta","    Valuación de la partida cubierta",10720
+201401104020,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10730
+201400203012,"Swaps","   Swaps",10740
+201401204021,"Valuación","    Valuación",10750
+201401204022,"Valuación de la partida cubierta","    Valuación de la partida cubierta",10760
+201401204023,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10770
+201400203013,"Instrumentos financieros derivados crediticios","   Instrumentos financieros derivados crediticios",10780
+201401304024,"Valuación","    Valuación",10790
+201401304025,"Valuación de la partida cubierta","    Valuación de la partida cubierta",10800
+201401304026,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10810
+201400203014,"Operaciones estructuradas","   Operaciones estructuradas",10820
+201401404027,"Valuación","    Valuación",10830
+201401404028,"Valuación de la partida cubierta","    Valuación de la partida cubierta",10840
+201401404029,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10850
+201400203015,"Paquetes de instrumentos financieros derivados","   Paquetes de instrumentos financieros derivados",10860
+201401504030,"Valuación","    Valuación",10870
+201401504031,"Valuación de la partida cubierta","    Valuación de la partida cubierta",10880
+201401504032,"Ajuste por riesgo de crédito","    Ajuste por riesgo de crédito",10890
+201400203016,"Ajuste por riesgo de crédito por contraparte","   Ajuste por riesgo de crédito por contraparte",10900
+201600001001,"Ajustes de valuación por cobertura de pasivos financieros"," Ajustes de valuación por cobertura de pasivos financieros",10910
+201800001001,"Obligaciones en operaciones de bursatilización"," Obligaciones en operaciones de bursatilización",10920
+201800102001,"Pasivos por administración de activos financieros transferidos","  Pasivos por administración de activos financieros transferidos",10930
+202000001001,"Pasivo por arrendamiento"," Pasivo por arrendamiento",10940
+202400001001,"Otras cuentas por pagar"," Otras cuentas por pagar",10950
+202400102001,"Acreedores por liquidación de operaciones","  Acreedores por liquidación de operaciones",10960
+202400103001,"Compraventa de divisas","   Compraventa de divisas",10970
+202400103002,"Inversiones en instrumentos financieros","   Inversiones en instrumentos financieros",10980
+202400103003,"Reportos","   Reportos",10990
+202400103004,"Préstamo de valores","   Préstamo de valores",11000
+202400103005,"Instrumentos financieros derivados","   Instrumentos financieros derivados",11010
+202400103006,"Activos virtuales","   Activos virtuales",11020
+202400102002,"Acreedores por cuentas de margen","  Acreedores por cuentas de margen",11030
+202400102003,"Acreedores por colaterales recibidos en efectivo","  Acreedores por colaterales recibidos en efectivo",11040
+202400303007,"Operaciones con instrumentos financieros","   Operaciones con instrumentos financieros",11050
+202400303008,"Operaciones de crédito","   Operaciones de crédito",11060
+202400303009,"Operaciones no realizadas en mercados reconocidos (OTC)","   Operaciones no realizadas en mercados reconocidos (OTC)",11070
+202400303010,"Depósitos en garantía por operaciones de arrendamiento financiero","   Depósitos en garantía por operaciones de arrendamiento financiero",11080
+202400303011,"Otros","   Otros",11090
+202400102004,"Contribuciones por pagar","  Contribuciones por pagar",11100
+202400403012,"Impuesto al valor agregado","   Impuesto al valor agregado",11110
+202400403013,"Otros impuestos y derechos por pagar","   Otros impuestos y derechos por pagar",11120
+202400403014,"Impuestos y aportaciones de seguridad social retenidos por enterar","   Impuestos y aportaciones de seguridad social retenidos por enterar",11130
+202400102005,"Acreedores diversos y otras cuentas por pagar","  Acreedores diversos y otras cuentas por pagar",11140
+202400503015,"Pasivos derivados de la prestación de servicios bancarios","   Pasivos derivados de la prestación de servicios bancarios",11150
+202401504001,"Cheques de caja","    Cheques de caja",11160
+202401504002,"Cheques certificados","    Cheques certificados",11170
+202401504003,"Cartas de crédito","    Cartas de crédito",11180
+202401504004,"Giros por pagar","    Giros por pagar",11190
+202401504005,"Aceptaciones por cuenta de clientes","    Aceptaciones por cuenta de clientes",11200
+202401504006,"Órdenes de pago","    Órdenes de pago",11210
+202401504007,"Avales","    Avales",11220
+202401504008,"Custodia o administración de bienes","    Custodia o administración de bienes",11230
+202401504009,"Recaudación de aportaciones de seguridad social","    Recaudación de aportaciones de seguridad social",11240
+202401504010,"Otros pasivos derivados de la prestación de servicios bancarios","    Otros pasivos derivados de la prestación de servicios bancarios",11250
+202400503016,"Comisiones por pagar sobre operaciones vigentes","   Comisiones por pagar sobre operaciones vigentes",11260
+202400503017,"Aforo derivado de operaciones de factoraje financiero, descuento o cesión de derechos de crédito","   Aforo derivado de operaciones de factoraje financiero, descuento o cesión de derechos de crédito",11270
+202400503018,"Acreedores por adquisición de activos","   Acreedores por adquisición de activos",11280
+202400503019,"Dividendos por pagar","   Dividendos por pagar",11290
+202400503020,"Acreedores por servicio de mantenimiento","   Acreedores por servicio de mantenimiento",11300
+202400503021,"Provisiones para obligaciones diversas","   Provisiones para obligaciones diversas",11310
+202402104011,"Honorarios y rentas","    Honorarios y rentas",11320
+202402104012,"Gastos de promoción y publicidad","    Gastos de promoción y publicidad",11330
+202402104013,"Aportaciones al IPAB","    Aportaciones al IPAB",11340
+202402104014,"Gastos en tecnología","    Gastos en tecnología",11350
+202402104015,"Ordenadas por la CONDUSEF","    Ordenadas por la CONDUSEF",11360
+202402104016,"Otras provisiones","    Otras provisiones",11370
+202400503022,"Otros acreedores diversos","   Otros acreedores diversos",11380
+202600001001,"Pasivos relacionados con grupos de activos mantenidos para la venta"," Pasivos relacionados con grupos de activos mantenidos para la venta",11390
+202800001001,"Pasivos relacionados con operaciones discontinuadas"," Pasivos relacionados con operaciones discontinuadas",11400
+203000001001,"Instrumentos financieros que califican como pasivo"," Instrumentos financieros que califican como pasivo",11410
+203000102001,"Obligaciones subordinadas en circulación","  Obligaciones subordinadas en circulación",11420
+203000103001,"De conversión forzosa","   De conversión forzosa",11430
+203000104001,"Valor nominal e intereses","    Valor nominal e intereses",11440
+203000104002,"Costos de transacción","    Costos de transacción",11450
+203000104003,"Prima o descuento por colocación","    Prima o descuento por colocación",11460
+203000103002,"De conversión por decisión del tenedor","   De conversión por decisión del tenedor",11470
+203000204004,"Valor nominal e intereses","    Valor nominal e intereses",11480
+203000204005,"Costos de transacción","    Costos de transacción",11490
+203000204006,"Prima o descuento por colocación","    Prima o descuento por colocación",11500
+203000103003,"De conversión por decisión de la entidad emisora","   De conversión por decisión de la entidad emisora",11510
+203000304007,"Valor nominal e intereses","    Valor nominal e intereses",11520
+203000304008,"Costos de transacción","    Costos de transacción",11530
+203000304009,"Prima o descuento por colocación","    Prima o descuento por colocación",11540
+203000103004,"No convertibles","   No convertibles",11550
+203000404010,"Valor nominal e intereses","    Valor nominal e intereses",11560
+203000404011,"Costos de transacción","    Costos de transacción",11570
+203000404012,"Prima o descuento por colocación","    Prima o descuento por colocación",11580
+203000102002,"Aportaciones para futuros aumentos de capital pendientes de formalizar por su órgano de gobierno","  Aportaciones para futuros aumentos de capital pendientes de formalizar por su órgano de gobierno",11590
+203000102003,"Otros","  Otros",11600
+203200001001,"Obligaciones asociadas con el retiro de componentes de propiedades, mobiliario y equipo"," Obligaciones asociadas con el retiro de componentes de propiedades, mobiliario y equipo",11610
+203400001001,"Pasivo por impuestos a la utilidad"," Pasivo por impuestos a la utilidad",11620
+203400102001,"Impuestos causados","  Impuestos causados",11630
+203400103001,"Impuestos a la utilidad (provisión)","   Impuestos a la utilidad (provisión)",11640
+203400103002,"Impuestos a la utilidad (ajuste impuesto definitivo)","   Impuestos a la utilidad (ajuste impuesto definitivo)",11650
+203400102002,"Impuestos diferidos","  Impuestos diferidos",11660
+203400203003,"Diferencias temporales","   Diferencias temporales",11670
+203600001001,"Pasivo por beneficios a los empleados"," Pasivo por beneficios a los empleados",11680
+203600102001,"Beneficios directos a corto plazo","  Beneficios directos a corto plazo",11690
+203600102002,"Beneficios directos a largo plazo","  Beneficios directos a largo plazo",11700
+203600102003,"Beneficios post-empleo","  Beneficios post-empleo",11710
+203600303001,"Pensiones","   Pensiones",11720
+203600303002,"Prima de antigüedad","   Prima de antigüedad",11730
+203600303003,"Otros beneficios post-empleo","   Otros beneficios post-empleo",11740
+203600102004,"Beneficios por terminación","  Beneficios por terminación",11750
+203600403004,"Beneficios por terminación por causas distintas a la reestructuración","   Beneficios por terminación por causas distintas a la reestructuración",11760
+203600403005,"Beneficios por terminación por causa de reestructuración","   Beneficios por terminación por causa de reestructuración",11770
+203600102005,"Participación de los trabajadores en las utilidades causada","  Participación de los trabajadores en las utilidades causada",11780
+203600102006,"Participación de los trabajadores en las utilidades diferida","  Participación de los trabajadores en las utilidades diferida",11790
+203800001001,"Créditos diferidos y cobros anticipados"," Créditos diferidos y cobros anticipados",11800
+203800102001,"Créditos diferidos","  Créditos diferidos",11810
+203800103001,"Comisiones por el otorgamiento del crédito","   Comisiones por el otorgamiento del crédito",11820
+203800103002,"Comisiones por anualidad y subsecuentes de tarjeta de crédito","   Comisiones por anualidad y subsecuentes de tarjeta de crédito",11830
+203800103003,"Efecto por renegociación de cartera de crédito","   Efecto por renegociación de cartera de crédito",11840
+203800103004,"Ingreso financiero por devengar en operaciones de arrendamiento financiero","   Ingreso financiero por devengar en operaciones de arrendamiento financiero",11850
+203800103005,"Ingreso financiero por devengar en operaciones de factoraje financiero, descuento o cesión de derechos de crédito","   Ingreso financiero por devengar en operaciones de factoraje financiero, descuento o cesión de derechos de crédito",11860
+203800103006,"Ingreso por opción de compra a precio reducido en operaciones de arrendamiento financiero","   Ingreso por opción de compra a precio reducido en operaciones de arrendamiento financiero",11870
+203800103007,"Otros ingresos por aplicar","   Otros ingresos por aplicar",11880
+203800103008,"Excedente por amortizar en adquisiciones de cartera de crédito","   Excedente por amortizar en adquisiciones de cartera de crédito",11890
+203800103009,"Otros créditos diferidos","   Otros créditos diferidos",11900
+203800102002,"Cobros anticipados","  Cobros anticipados",11910
+203800203010,"Intereses cobrados por anticipado","   Intereses cobrados por anticipado",11920
+203800203011,"Comisiones cobradas por anticipado","   Comisiones cobradas por anticipado",11930
+203800203012,"Rentas cobradas por anticipado","   Rentas cobradas por anticipado",11940
+203800203013,"Cobros anticipados de bienes prometidos en venta o con reserva de dominio","   Cobros anticipados de bienes prometidos en venta o con reserva de dominio",11950
+203800203014,"Ingresos por aplicar derivados de programas de apoyo a deudores","   Ingresos por aplicar derivados de programas de apoyo a deudores",11960
+203800203015,"Otros cobros anticipados","   Otros cobros anticipados",11970
+400000000000,"CAPITAL CONTABLE","CAPITAL CONTABLE",11980
+440200001001,"Participación controladora"," Participación controladora",11990
+400200102001,"Capital contribuido","  Capital contribuido",12000
+400200103001,"Capital social","   Capital social",12010
+400200103002,"Capital social no exhibido","   Capital social no exhibido",12020
+400200103003,"Incremento por actualización del capital social pagado (1)","   Incremento por actualización del capital social pagado (1)",12030
+400200103004,"Aportaciones para futuros aumentos de capital formalizadas por su órgano de gobierno","   Aportaciones para futuros aumentos de capital formalizadas por su órgano de gobierno",12040
+400200103005,"Incremento por actualización de las aportaciones para futuros aumentos de capital formalizadas por su órgano de gobierno (1)","   Incremento por actualización de las aportaciones para futuros aumentos de capital formalizadas por su órgano de gobierno (1)",12050
+400200103006,"Prima en venta de acciones","   Prima en venta de acciones",12060
+400200103007,"Incremento por actualización de la prima en venta de acciones (1)","   Incremento por actualización de la prima en venta de acciones (1)",12070
+400200103008,"Instrumentos financieros que califican como capital","   Instrumentos financieros que califican como capital",12080
+400200103009,"Incremento por actualización de instrumentos financieros que califican como capital (1)","   Incremento por actualización de instrumentos financieros que califican como capital (1)",12090
+400200102002,"Capital ganado","  Capital ganado",12100
+400200203010,"Reservas de capital","   Reservas de capital",12110
+400201004001,"Reserva legal","    Reserva legal",12120
+400201004002,"Otras reservas","    Otras reservas",12130
+400200203011,"Incremento por actualización de reservas de capital (1)","   Incremento por actualización de reservas de capital (1)",12140
+400200203012,"Resultados acumulados","   Resultados acumulados",12150
+400201204003,"Resultado de ejercicios anteriores","    Resultado de ejercicios anteriores",12160
+400200305001,"Resultado por aplicar","     Resultado por aplicar",12170
+400200305002,"Resultado por cambios contables y correcciones de errores","     Resultado por cambios contables y correcciones de errores",12180
+400201204004,"Incremento por actualización del resultado de ejercicios anteriores (1)","    Incremento por actualización del resultado de ejercicios anteriores (1)",12190
+430201204005,"Resultado neto","    Resultado neto",12200
+400200203013,"Otros resultados integrales","   Otros resultados integrales",12210
+400201304021,"Valuación de instrumentos financieros negociables","    Valuación de instrumentos financieros negociables",12220
+400202105018,"Valuación","     Valuación",12230
+400202105019,"Efecto de impuestos a la utilidad y PTU diferidos","     Efecto de impuestos a la utilidad y PTU diferidos",12240
+400202105020,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","     Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12250
+400201304022,"Incremento por actualización de la valuación de instrumentos financieros negociables (1)","    Incremento por actualización de la valuación de instrumentos financieros negociables (1)",12260
+400201304006,"Valuación de instrumentos financieros para cobrar y vender","    Valuación de instrumentos financieros para cobrar y vender",12270
+400200605003,"Instrumentos financieros (valores)","     Instrumentos financieros (valores)",12280
+400200306001,"Valuación","      Valuación",12290
+400200306002,"Efecto de impuestos a la utilidad y PTU diferidos","      Efecto de impuestos a la utilidad y PTU diferidos",12300
+400200306003,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","      Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12310
+400200605004,"Cartera de crédito valuada a valor razonable","     Cartera de crédito valuada a valor razonable",12320
+400200406004,"Valuación","      Valuación",12330
+400200406005,"Efecto de impuestos a la utilidad y PTU diferidos","      Efecto de impuestos a la utilidad y PTU diferidos",12340
+400200406006,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","      Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12350
+400201304007,"Incremento por actualización de la valuación de instrumentos financieros para cobrar y vender (1)","    Incremento por actualización de la valuación de instrumentos financieros para cobrar y vender (1)",12360
+400201304008,"Valuación de instrumentos financieros de cobertura de flujos de efectivo","    Valuación de instrumentos financieros de cobertura de flujos de efectivo",12370
+400200805005,"Valuación","     Valuación",12380
+400200805006,"Efecto de impuestos a la utilidad y PTU diferidos","     Efecto de impuestos a la utilidad y PTU diferidos",12390
+400200805007,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","     Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12400
+400201304009,"Incremento por actualización de la valuación de instrumentos financieros de cobertura de flujos de efectivo (1)","    Incremento por actualización de la valuación de instrumentos financieros de cobertura de flujos de efectivo (1)",12410
+400201304023,"Valuación de otros instrumentos financieros de cobertura","    Valuación de otros instrumentos financieros de cobertura",12420
+400202305021,"Valuación","     Valuación",12430
+400202305022,"Efecto de impuestos a la utilidad y PTU diferidos","     Efecto de impuestos a la utilidad y PTU diferidos",12440
+400202305023,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","     Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12450
+400201304024,"Incremento por actualización de la valuación de otros instrumentos financieros de cobertura (1)","    Incremento por actualización de la valuación de otros instrumentos financieros de cobertura (1)",12460
+400201304010,"Ingresos y gastos relacionados con activos mantenidos para su disposición","    Ingresos y gastos relacionados con activos mantenidos para su disposición",12470
+400201005008,"Resultado","     Resultado",12480
+400201005009,"Efecto de impuestos a la utilidad y PTU diferidos","     Efecto de impuestos a la utilidad y PTU diferidos",12490
+400201005010,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","     Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12500
+400201304011,"Incremento por actualización de ingresos y gastos relacionados con activos mantenidos para su disposición (1)","    Incremento por actualización de ingresos y gastos relacionados con activos mantenidos para su disposición (1)",12510
+400201304012,"Remedición de beneficios definidos a los empleados","    Remedición de beneficios definidos a los empleados",12520
+400201205011,"Resultados actuariales en obligaciones","     Resultados actuariales en obligaciones",12530
+400201106007,"Valuación","      Valuación",12540
+400201106008,"Efecto de impuestos a la utilidad y PTU diferidos","      Efecto de impuestos a la utilidad y PTU diferidos",12550
+400201106009,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","      Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12560
+400201205012,"Resultado en el retorno de los activos del plan","     Resultado en el retorno de los activos del plan",12570
+400201206010,"Valuación","      Valuación",12580
+400201206011,"Efecto de impuestos a la utilidad y PTU diferidos","      Efecto de impuestos a la utilidad y PTU diferidos",12590
+400201206012,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","      Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12600
+400201304013,"Incremento por actualización de la remedición de beneficios definidos a los empleados (1)","    Incremento por actualización de la remedición de beneficios definidos a los empleados (1)",12610
+400201304014,"Efecto acumulado por conversión","    Efecto acumulado por conversión",12620
+400201405013,"Valuación","     Valuación",12630
+400201405014,"Efecto de impuestos a la utilidad y PTU diferidos","     Efecto de impuestos a la utilidad y PTU diferidos",12640
+400201405015,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","     Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12650
+400201304015,"Incremento por actualización del efecto acumulado por conversión (1)","    Incremento por actualización del efecto acumulado por conversión (1)",12660
+400201304016,"Resultado por tenencia de activos no monetarios","    Resultado por tenencia de activos no monetarios",12670
+400201605016,"Por valuación de activo fijo","     Por valuación de activo fijo",12680
+400201605017,"Por otros activos no monetarios","     Por otros activos no monetarios",12690
+400201304017,"Incremento por actualización del resultado por tenencia de activos no monetarios (1)","    Incremento por actualización del resultado por tenencia de activos no monetarios (1)",12700
+400200203014,"Participación en ORI de otras entidades","   Participación en ORI de otras entidades",12710
+400201404018,"Valuación","    Valuación",12720
+400201404019,"Efecto de impuestos a la utilidad y PTU diferidos","    Efecto de impuestos a la utilidad y PTU diferidos",12730
+400201404020,"Estimación por impuestos a la utilidad y PTU diferidos no recuperables","    Estimación por impuestos a la utilidad y PTU diferidos no recuperables",12740
+400200203015,"Incremento por actualización de la participación en ORI de otras entidades (1)","   Incremento por actualización de la participación en ORI de otras entidades (1)",12750
+440400001001,"Participación no controladora"," Participación no controladora",12760
+440400102001,"Resultado neto correspondiente a la participación no controladora","  Resultado neto correspondiente a la participación no controladora",12770
+440400102002,"Otra participación no controladora","  Otra participación no controladora",12780
+440400102003,"Otros resultados integrales correspondientes a la participación no controladora","  Otros resultados integrales correspondientes a la participación no controladora",12790
+700000000000,"CUENTAS DE ORDEN","CUENTAS DE ORDEN",12800
+700200001001,"Avales otorgados"," Avales otorgados",12810
+700400001001,"Activos y pasivos contingentes"," Activos y pasivos contingentes",12820
+700400102001,"Líneas de crédito irrevocables no ejercidas","  Líneas de crédito irrevocables no ejercidas",12830
+700400103001,"Créditos comerciales","   Créditos comerciales",12840
+700400103002,"Créditos de consumo","   Créditos de consumo",12850
+700400103003,"Créditos a la vivienda","   Créditos a la vivienda",12860
+700400102002,"Líneas de crédito contingentes","  Líneas de crédito contingentes",12870
+700400102003,"Garantías","  Garantías",12880
+700600001001,"Compromisos crediticios"," Compromisos crediticios",12890
+700600102001,"Líneas por cartas de crédito no ejercidas","  Líneas por cartas de crédito no ejercidas",12900
+700600102002,"Líneas de crédito revocables no ejercidas","  Líneas de crédito revocables no ejercidas",12910
+700600203001,"Créditos comerciales","   Créditos comerciales",12920
+700600203002,"Créditos de consumo","   Créditos de consumo",12930
+700600203003,"Créditos a la vivienda","   Créditos a la vivienda",12940
+700600102003,"Otros compromisos crediticios","  Otros compromisos crediticios",12950
+700800001001,"Bienes en fideicomiso o mandato"," Bienes en fideicomiso o mandato",12960
+700800102001,"Fideicomisos","  Fideicomisos",12970
+700800103001,"De garantía, inversión o administración","   De garantía, inversión o administración",12980
+700800103002,"Fideicomisos UDIS","   Fideicomisos UDIS",12990
+700800103003,"Fideicomisos que coloquen instrumentos financieros en el registro nacional de valores","   Fideicomisos que coloquen instrumentos financieros en el registro nacional de valores",13000
+700800103004,"Esquema de rentas fideicomiso inmobiliario","   Esquema de rentas fideicomiso inmobiliario",13010
+700800103005,"Esquema de rentas vehículo de cobro","   Esquema de rentas vehículo de cobro",13020
+700800102002,"Mandatos","  Mandatos",13030
+701200001001,"Bienes en custodia o en administración"," Bienes en custodia o en administración",13040
+701200102001,"Bienes en custodia","  Bienes en custodia",13050
+701200103001,"Instrumentos financieros emitidos por la entidad","   Instrumentos financieros emitidos por la entidad",13060
+701200103002,"Instrumentos financieros","   Instrumentos financieros",13070
+701200103003,"Activos virtuales","   Activos virtuales",13080
+701200103004,"Bienes muebles e inmuebles","   Bienes muebles e inmuebles",13090
+701200103005,"Otros","   Otros",13100
+701200102002,"Bienes en administración","  Bienes en administración",13110
+701200203006,"Operaciones de banca de inversión por cuenta de terceros","   Operaciones de banca de inversión por cuenta de terceros",13120
+701200604001,"Efectivo","    Efectivo",13130
+701200604002,"Instrumentos financieros","    Instrumentos financieros",13140
+701200604003,"Otras inversiones por cuenta de terceros","    Otras inversiones por cuenta de terceros",13150
+701200203007,"Activos virtuales","   Activos virtuales",13160
+701400001001,"Colaterales recibidos por la entidad"," Colaterales recibidos por la entidad",13170
+701400102001,"Efectivo administrado en fideicomiso","  Efectivo administrado en fideicomiso",13180
+701400102002,"Deuda gubernamental","  Deuda gubernamental",13190
+701400102003,"Deuda bancaria","  Deuda bancaria",13200
+701400102004,"Otros títulos de deuda","  Otros títulos de deuda",13210
+701400102005,"Instrumentos financieros de capital","  Instrumentos financieros de capital",13220
+701400102006,"Otros","  Otros",13230
+701600001001,"Colaterales recibidos y vendidos o entregados en garantía por la entidad"," Colaterales recibidos y vendidos o entregados en garantía por la entidad",13240
+701600102001,"Deuda gubernamental","  Deuda gubernamental",13250
+701600102002,"Deuda bancaria","  Deuda bancaria",13260
+701600102003,"Otros títulos de deuda","  Otros títulos de deuda",13270
+701600102004,"Instrumentos financieros de capital","  Instrumentos financieros de capital",13280
+701600102005,"Otros","  Otros",13290
+701800001001,"Intereses devengados no cobrados derivados de cartera de crédito con riesgo de crédito etapa 3"," Intereses devengados no cobrados derivados de cartera de crédito con riesgo de crédito etapa 3",13300
+702000001001,"Otras cuentas de registro"," Otras cuentas de registro",13310
