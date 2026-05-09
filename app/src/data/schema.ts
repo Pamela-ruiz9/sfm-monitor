@@ -208,10 +208,10 @@ export const SfmDataSchema = z.object({
   tipo_cambio: TipoCambioSchema,
   tasa_banxico: TasaBanxicoSchema,
   inflacion: InflacionSchema,
-  historico: HistoricoSchema.optional(),
-  credito: CreditoSchema.optional(),
-  ifrs9: Ifrs9Schema.optional(),
-  sofipos: SofiposSchema.optional(),
+  historico: HistoricoSchema,
+  credito: CreditoSchema,
+  ifrs9: Ifrs9Schema,
+  sofipos: SofiposSchema,
 });
 
 export type SfmData = z.infer<typeof SfmDataSchema>;
