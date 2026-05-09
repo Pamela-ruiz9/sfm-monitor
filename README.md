@@ -113,11 +113,34 @@ Ver roadmap interactivo en [roadmap.html](https://pamela-ruiz9.github.io/sfm-mon
 
 ## 🛠️ Stack técnico
 
-- **Frontend**: HTML/CSS/JS puro — sin frameworks
+### v0.1.0 (producción actual)
+- **Frontend**: HTML/CSS/JS auto-contenido — sin frameworks
 - **Charts**: Chart.js 4 + chartjs-plugin-annotation
 - **Datos**: JSON estático servido con GitHub Pages
-- **CI/CD**: GitHub Actions para actualización automática
+- **CI/CD**: GitHub Actions para actualización automática de Banxico
 - **Hosting**: GitHub Pages (gratuito)
+
+### v0.2.0-dev (en desarrollo — branch `feat/app-redesign-pwa-v0.2.0-dev`)
+- **Framework**: [Astro 5](https://astro.build) + [React 19](https://react.dev) + TypeScript strict
+- **Estilos**: Tailwind CSS 4
+- **Estado**: nanostores + @nanostores/persistent
+- **Charts**: Chart.js 4 + react-chartjs-2 + chartjs-adapter-date-fns
+- **PWA**: @vite-pwa/astro + Workbox
+- **Testing**: Vitest + Playwright + Lighthouse CI
+- **Datos**: JSON estático (`data/sfm-data.json`) — mismo pipeline Banxico
+- **Hosting**: GitHub Pages (objetivo: dominio propio)
+
+### Cómo levantar el entorno de desarrollo (v0.2.0-dev)
+
+```bash
+# Requiere Node.js >= 20.10.0
+cd app
+npm install
+npm run dev          # http://localhost:4321
+npm run build        # build de producción
+npm run test         # unit tests (Vitest)
+npm run test:e2e     # E2E (Playwright)
+```
 
 ---
 
