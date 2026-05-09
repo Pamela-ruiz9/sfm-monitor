@@ -133,7 +133,8 @@ jobs:
 
       - name: Validate JSON schema
         # Fails hard — bad data never reaches prod
-        run: node --experimental-strip-types scripts/validate-schema.mjs
+        # Uses app/scripts/validate-data.ts (migrated in PR #10; closes #12)
+        run: node --experimental-strip-types app/scripts/validate-data.ts
 
       - name: Commit and push if changed
         id: commit
