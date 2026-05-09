@@ -1,0 +1,93 @@
+{
+  "all_periods": [
+    "201601",
+    "201602",
+    "201603",
+    "201604",
+    "201605",
+    "...",
+    "202510",
+    "202511",
+    "202512"
+  ],
+  "result": {
+    "027013": {
+      "202309": {
+        "imora_total": 161599851.78,
+        "imor_vivienda": 1.0,
+        "imor_consumo": 6.62,
+        "imor_total": 6.73,
+        "roe": 19.61,
+        "imor_comercial": 5.59,
+        "roa": 6.43
+      },
+      "202402": {
+        "imor_total": 6.64,
+        "roe": 8.81,
+        "imor_vivienda": 1.0,
+        "imora_total": 159795519.98,
+        "imor_comercial": 5.49,
+        "roa": 3.04,
+        "imor_consumo": 6.98
+      },
+      "202207": {
+        "roa": 5.41,
+        "imor_comercial": 5.29,
+        "roe": 17.29,
+        "imor_total": 6.93,
+        "imor_vivienda": 1.0,
+        "imor_consumo": 5.23,
+        "imora_total": 140265116.85
+      }
+    },
+    "027040": {
+      "202003": {
+        "roa": -5.46,
+        "imor_comercial": 3.46,
+        "imor_total": 3.6,
+        "imora_total": 5985536.0,
+        "roe": -6.35
+      },
+      "201611": {
+        "imor_total": 2.07,
+        "imor_comercial": 2.07
+      },
+      "202209": {
+        "imora_total": 9283366.62,
+        "roa": 9.6,
+        "imor_comercial": 21.05,
+        "imor_total": 22.61,
+        "roe": 10.6
+      }
+    },
+    "027029": {
+      "202202": {
+        "roa": -1.16,
+        "imora_total": 171677630.0,
+        "imor_consumo": 32.18,
+        "imor_comercial": 11.15,
+        "imor_vivienda": 39.56,
+        "imor_total": 14.1,
+        "roe": -7.71
+      },
+      "202311": {
+        "roa": 6.03,
+        "imor_total": 10.15,
+        "imor_comercial": 8.05,
+        "imor_consumo": 20.39,
+        "imora_total": 425319105.0,
+        "roe": 44.29,
+        "imor_vivienda": 72.63
+      },
+      "202104": {
+        "imor_consumo": 37.18,
+        "imor_comercial": 12.39,
+        "imora_total": 171529860.0,
+        "roa": -0.38,
+        "imor_total": 15.72,
+        "imor_vivienda": 36.3,
+        "roe": -2.34
+      }
+    }
+  }
+}
