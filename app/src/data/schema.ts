@@ -200,6 +200,22 @@ const SofiposSchema = z.object({
   historico_por_entidad: SofiposHistoricoEntidadSchema.optional(),
 });
 
+// ---------- mercado (Banxico series: reservas, TIIE Fondeo, Cetes, UDIs, salario mínimo) ----------
+
+const MercadoSerieSchema = z.object({
+  actual: z.number().nullable(),
+  fecha: z.string().nullable(),
+  historico: z.array(z.object({ fecha: z.string(), valor: z.number() })).optional(),
+});
+
+const MercadoSchema = z.object({
+  reservas_internacionales: MercadoSerieSchema.optional(),
+  tiie_fondeo: MercadoSerieSchema.optional(),
+  cetes_28d: MercadoSerieSchema.optional(),
+  udis: z.object({ actual: z.number().nullable(), fecha: z.string().nullable() }).optional(),
+  salario_minimo: MercadoSerieSchema.optional(),
+});
+
 // ---------- root ----------
 
 export const SfmDataSchema = z.object({
@@ -212,6 +228,7 @@ export const SfmDataSchema = z.object({
   credito: CreditoSchema,
   ifrs9: Ifrs9Schema,
   sofipos: SofiposSchema,
+  mercado: MercadoSchema.optional(),
 });
 
 export type SfmData = z.infer<typeof SfmDataSchema>;
