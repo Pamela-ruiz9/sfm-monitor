@@ -131,6 +131,12 @@ jobs:
         working-directory: app
         run: npm ci
 
+      - name: Merge CNBV data into sfm-data.json
+        # Merges data/credito.json + data/sofipos.json + data/ifrs9.json
+        # into the Banxico base. Missing CNBV files are skipped gracefully
+        # (ifrs9 uses empty stub until normalize-ifrs9.py has run).
+        run: python3 scripts/merge-sfm-data.py
+
       - name: Validate JSON schema
         # Fails hard — bad data never reaches prod
         # Uses app/scripts/validate-data.ts (migrated in PR #10; closes #12)
@@ -141,7 +147,7 @@ jobs:
         run: |
           git config user.name "sfm-monitor-bot"
           git config user.email "sfm-monitor@noreply.github.com"
-          git add data/sfm-data.json
+          git add data/sfm-data.json data/credito.json data/sofipos.json data/ifrs9.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
             echo "changed=false" >> $GITHUB_OUTPUT
