@@ -1,0 +1,62 @@
+[
+  {
+    "imor_total": 8.9634,
+    "icor_total": 1.0662,
+    "fecha": "2000-12",
+    "periodo": "200012"
+  },
+  {
+    "imor_total": 9.0715,
+    "icor_total": 1.0565,
+    "fecha": "2001-01",
+    "periodo": "200101"
+  },
+  {
+    "imor_total": 9.1709,
+    "icor_total": 1.0555,
+    "fecha": "2001-02",
+    "periodo": "200102"
+  },
+  {
+    "imor_total": 8.5083,
+    "icor_total": 1.0818,
+    "fecha": "2001-03",
+    "periodo": "200103"
+  },
+  {
+    "imor_total": 8.5185,
+    "icor_total": 1.0789,
+    "fecha": "2001-04",
+    "periodo": "200104"
+  },
+  {
+    "imor_total": 8.413,
+    "icor_total": 1.0788,
+    "fecha": "2001-05",
+    "periodo": "200105"
+  },
+  {
+    "imor_total": 8.0468,
+    "icor_total": 1.1046,
+    "fecha": "2001-06",
+    "periodo": "200106"
+  },
+  {
+    "imor_total": 7.9614,
+    "icor_total": 1.1001,
+    "fecha": "2001-07",
+    "periodo": "200107"
+  },
+  {
+    "imor_total": 7.8803,
+    "icor_total": 1.1134,
+    "fecha": "2001-08",
+    "periodo": "200108"
+  },
+  {
+    "imor_total": 7.8694,
+    "icor_total": 1.1098,
+    "fecha": "2001-09",
+    "periodo": "200109"
+  }
+]
