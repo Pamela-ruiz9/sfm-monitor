@@ -38,16 +38,18 @@ Stage identification strategy:
   | 120   | 100200603004       | Cartera Stage 2 (watch)            |
   | 220   | 100600001001       | Cartera Stage 3 (default/vencida)  |
 
-  Because the instructivo is not publicly machine-readable, we use the
+  ⚠️  The instructivo is not publicly machine-readable, we use the
   concept codes observed in the sample as anchors and fall back to
   positional heuristics for unknown future schema changes.
 
-  ⚠️  VALIDATION REQUIRED: Pame should verify these mappings against
-      the official CNBV Instructivo de Llenado for R12A before using
-      in production. Update STAGE_CONCEPT_MAP below if codes differ.
+  Codes verified against catalogo_R12A_1219_BM.csv (CNBV, Dec 2019):
 
-  Reference: CNBV Catálogos e Instructivos de Llenado
-  https://www.gob.mx/cnbv/documentos/catalogos-instructivos-de-llenado-94064
+  | concepto      | descripcion                                       | orden |
+  |---------------|---------------------------------------------------|-------|
+  | 101800104001  | Cartera de crédito con riesgo de crédito etapa 1  | 2010  |
+  | 101800104002  | Cartera de crédito con riesgo de crédito etapa 2  | 3290  |
+  | 101800104003  | Cartera de crédito con riesgo de crédito etapa 3  | 3910  |
+  | 131800103001  | Cartera de crédito (neto total — denominador)     | 5160  |
 ─────────────────────────────────────────────────────────────────
 """
 
@@ -67,32 +69,36 @@ RAW = os.path.join(ROOT, "raw-data")
 OUT = os.path.join(ROOT, "data")
 
 # ─────────────────────────────────────────────
-# Stage concept map
-# Key: concepto code (str)  Value: stage (1, 2, or 3)
+# Stage concept map — verified against catalogo_R12A_1219_BM.csv
 #
-# These are the top-level aggregate rows for each stage.
-# Sub-level rows (children in the hierarchy) are skipped to avoid
-# double-counting — we only use the parent aggregate per stage.
+# Source: CNBV Catálogo R12A Banca Múltiple (Dec 2019 version)
+# Columns: concepto, descripcion, descripcion_identada, orden
 #
-# ⚠️  VALIDATE THESE AGAINST THE OFFICIAL INSTRUCTIVO BEFORE PROD USE
+# The three stage roots are unambiguous in the descripcion field:
+#   101800104001 → "Cartera de crédito con riesgo de crédito etapa 1"  orden 2010
+#   101800104002 → "Cartera de crédito con riesgo de crédito etapa 2"  orden 3290
+#   101800104003 → "Cartera de crédito con riesgo de crédito etapa 3"  orden 3910
+#
+# Denominator: 131800103001 → "Cartera de crédito" (neto, orden 5160)
+# This is the net total used as denominator for % calculation.
 # ─────────────────────────────────────────────
 STAGE_CONCEPT_MAP: dict[str, int] = {
-    "100200001001": 1,   # Cartera Stage 1 aggregate
-    "100200603004": 2,   # Cartera Stage 2 aggregate  ← VERIFY
-    "100600001001": 3,   # Cartera Stage 3 aggregate  ← VERIFY
+    "101800104001": 1,   # Cartera crédito etapa 1 (orden 2010)
+    "101800104002": 2,   # Cartera crédito etapa 2 (orden 3290)
+    "101800104003": 3,   # Cartera crédito etapa 3 (orden 3910)
 }
 
-# Fallback: if concept map fails, use orden_presentacion ranges
-# These are positional heuristics — less reliable than concept codes
+# Fallback: use orden_presentacion if concept not in map
 STAGE_ORDEN_RANGES: dict[int, tuple[int, int]] = {
-    1: (20, 110),    # Stage 1: órdenes 20–110
-    2: (120, 210),   # Stage 2: órdenes 120–210  ← VERIFY
-    3: (220, 500),   # Stage 3: órdenes 220–500  ← VERIFY
+    1: (2010, 3289),
+    2: (3290, 3909),
+    3: (3910, 4529),
 }
 
 # Concept code for total cartera (denominator for % calculation)
-TOTAL_CARTERA_CONCEPTO = "100000000000"
-TOTAL_CARTERA_ORDEN = 10
+# 131800103001 = "Cartera de crédito" (neto total, orden 5160)
+TOTAL_CARTERA_CONCEPTO = "131800103001"
+TOTAL_CARTERA_ORDEN = 5160
 
 
 def write_json(filename: str, obj: object) -> None:
