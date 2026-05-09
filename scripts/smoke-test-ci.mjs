@@ -46,6 +46,13 @@ const workflowFiles = readdirSync(workflowDir)
 
 console.log(`\n🔍 Smoke-testing ${workflowFiles.length} workflow(s) in .github/workflows/\n`);
 
+// ── canonical step → script mappings ────────────────────────────────────────
+// If a step name is listed here, its run: command MUST call the specified
+// script. This catches refactors that move a script but forget the workflow.
+const CANONICAL_SCRIPTS = {
+  'Validate JSON schema': 'app/scripts/validate-data.ts',
+};
+
 // ── checks ─────────────────────────────────────────────────────────────────
 
 for (const { name, path } of workflowFiles) {
@@ -54,19 +61,32 @@ for (const { name, path } of workflowFiles) {
 
   console.log(`📄 ${name}`);
 
-  // 1. Script paths in `run:` lines  ─────────────────────────────────────
+  // 1. Script paths in `run:` lines + canonical check  ───────────────────
   //    Matches patterns like:
   //      node --experimental-strip-types app/scripts/foo.ts
   //      node --experimental-strip-types scripts/foo.mjs
   //      python3 scripts/normalize-cnbv.py
   const scriptRefRe = /(?:node(?:\s+--[^\s]+)*|python3)\s+((?:app\/|scripts\/)[^\s'"]+)/g;
 
+  // Track current step name while scanning lines
+  let currentStep = '(unnamed)';
+  const stepNameRe = /^\s+- name:\s+(.+)$/;
+
   for (const line of lines) {
+    // Track step names to support canonical check
+    const stepMatch = line.match(stepNameRe);
+    if (stepMatch) currentStep = stepMatch[1].trim();
+
     let m;
     while ((m = scriptRefRe.exec(line)) !== null) {
       const scriptPath = m[1];
       if (exists(scriptPath)) {
         ok(`${scriptPath} exists`);
+        // Canonical check: verify this step calls the expected script
+        const expected = CANONICAL_SCRIPTS[currentStep];
+        if (expected && scriptPath !== expected) {
+          fail(`step "${currentStep}" calls ${scriptPath} but canonical script is ${expected} — stale path?`);
+        }
       } else {
         fail(`${scriptPath} referenced in ${name} but NOT FOUND in repo`);
       }
