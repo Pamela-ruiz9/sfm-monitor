@@ -1,0 +1,274 @@
+name: Update CNBV Data
+
+# Hybrid strategy C:
+#   1. AUTO: runs on day 1 of each month, detects if CNBV published new data,
+#      downloads it automatically if the URL is stable.
+#   2. RETRY: if detection fails, retries every 48h until day 15.
+#   3. ALERT: if data still missing by day 15, opens a GitHub Issue.
+#   4. MANUAL: Pame can upload files and trigger via workflow_dispatch at any time.
+#      Supports uploading via the GitHub UI or pushing to raw-data/ directly.
+#
+# What this workflow does:
+#   - Checks portafolioinfo.cnbv.gob.mx for new monthly file (Sector 40 BM)
+#   - Downloads if found, or uses already-committed raw-data/ files
+#   - Runs normalize-cnbv.py → normalize-ifrs9.py → merge-sfm-data.py
+#   - Validates schema, commits data/ JSONs, triggers deploy
+
+on:
+  schedule:
+    # Day 1 of each month at 15:00 UTC (9 AM CDMX)
+    - cron: '0 15 1 * *'
+    # Retry every 48h from day 3 to day 15 (days 3,5,7,9,11,13,15)
+    - cron: '0 15 3,5,7,9,11,13,15 * *'
+
+  workflow_dispatch:
+    inputs:
+      force_normalize:
+        description: 'Force re-normalize even if raw-data unchanged'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+      skip_download:
+        description: 'Skip CNBV download (use existing raw-data/ files)'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+
+jobs:
+  update-cnbv:
+    name: Fetch CNBV data + normalize + commit
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write   # needed to open alert issues
+
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+      new_month: ${{ steps.detect.outputs.new_month }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Detect + download new CNBV monthly data
+        id: detect
+        if: ${{ github.event.inputs.skip_download != 'true' }}
+        # Note: if this step is skipped, new_month output is empty string → alert_check treats it as 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 << 'PYEOF'
+          import os, re, sys, json
+          from datetime import date, timedelta
+          import urllib.request
+
+          today = date.today()
+          year = today.year
+          month = today.month
+
+          # Current month string: YYYYMM
+          current_period = f"{year}{month:02d}"
+
+          # Check if we already have this month's data
+          credito_path = "data/credito.json"
+          if os.path.exists(credito_path):
+              with open(credito_path) as f:
+                  credito = json.load(f)
+              last_update = credito.get("ultima_actualizacion", "")
+              # ultima_actualizacion is YYYY-MM
+              last_period = last_update.replace("-", "") if last_update else ""
+              if last_period >= current_period:
+                  print(f"✅ Already have data for {current_period} (last: {last_period})")
+                  with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                      f.write("new_month=false\n")
+                  sys.exit(0)
+
+          print(f"🔍 Checking CNBV for period {current_period}...")
+
+          # CNBV Portafolio de Información URL patterns for Sector 40 BM.
+          # CNBV changes filenames without notice — try multiple known patterns.
+          # Format: sh_datos_40_YYYYMM.csv or sh_datos_40.csv (latest)
+          BASE = "https://portafolioinfo.cnbv.gob.mx"
+          candidate_urls = [
+              f"{BASE}/Boletines/sh_datos_40_{current_period}.zip",
+              f"{BASE}/Boletines/sh_datos_40_{current_period}.csv",
+              f"{BASE}/PortafolioInformacion/Documents/BM/sh_datos_40_{current_period}.zip",
+              f"{BASE}/PortafolioInformacion/Documents/BM/sh_datos_40_{current_period}.csv",
+          ]
+
+          found_url = None
+          for url in candidate_urls:
+              try:
+                  req = urllib.request.Request(url, method="HEAD")
+                  req.add_header("User-Agent", "sfm-monitor/1.0 (github.com/Pamela-ruiz9/sfm-monitor)")
+                  with urllib.request.urlopen(req, timeout=15) as r:
+                      if r.status == 200:
+                          found_url = url
+                          print(f"✅ Found: {url}")
+                          break
+              except Exception as e:
+                  print(f"   ✗ {url}: {e}")
+
+          if not found_url:
+              print(f"⚠️  No CNBV file found for {current_period} — will retry or alert")
+              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                  f.write("new_month=false\n")
+              sys.exit(0)
+
+          # Download the file
+          os.makedirs("raw-data", exist_ok=True)
+          dest_ext = "zip" if found_url.endswith(".zip") else "csv"
+          dest = f"raw-data/sh_datos_40_{current_period}.{dest_ext}"
+          print(f"⬇️  Downloading to {dest}...")
+          urllib.request.urlretrieve(found_url, dest)
+          print(f"✅ Downloaded: {dest}")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write("new_month=true\n")
+          PYEOF
+
+      - name: Check if alert is needed (day 15 with no data)
+        id: alert_check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 << 'PYEOF'
+          import os, json
+          from datetime import date
+
+          today = date.today()
+          new_month = os.environ.get("new_month", "false")
+
+          # Only alert on day 15 when still missing data
+          if today.day != 15 or new_month == "true":
+              print("No alert needed")
+              raise SystemExit(0)
+
+          # Check last known data period
+          credito_path = "data/credito.json"
+          current_period = f"{today.year}{today.month:02d}"
+          last_period = ""
+          if os.path.exists(credito_path):
+              with open(credito_path) as f:
+                  credito = json.load(f)
+              last_update = credito.get("ultima_actualizacion", "")
+              last_period = last_update.replace("-", "")
+
+          if last_period >= current_period:
+              print(f"Data is current ({last_period}), no alert needed")
+              raise SystemExit(0)
+
+          # Open GitHub issue via API
+          import urllib.request, urllib.parse
+          token = os.environ["GITHUB_TOKEN"]
+          repo = os.environ["REPO"]
+          url = f"https://api.github.com/repos/{repo}/issues"
+          payload = json.dumps({
+              "title": f"⚠️ CNBV data missing for {today.year}-{today.month:02d}",
+              "body": (
+                  f"El pipeline automático no encontró datos CNBV para "
+                  f"**{today.year}-{today.month:02d}** después de 15 días de reintentos.\n\n"
+                  f"**Acción requerida:** Descargar manualmente desde "
+                  f"[Portafolio de Información CNBV]"
+                  f"(https://portafolioinfo.cnbv.gob.mx) y subir a `raw-data/`, "
+                  f"luego correr el workflow `Update CNBV Data` con "
+                  f"`skip_download=true`.\n\n"
+                  f"Archivos necesarios:\n"
+                  f"- `raw-data/sh_datos_40_YYYYMM.csv` (Sector 40 BM)\n"
+                  f"- `raw-data/ifrs9_bm.zip` (R12A IFRS9, si hay nuevo mes)\n\n"
+                  f"_Abierto automáticamente por el workflow `update-cnbv.yml`_"
+              ),
+              "labels": ["help wanted"],
+          }).encode()
+          req = urllib.request.Request(url, data=payload, method="POST")
+          req.add_header("Authorization", f"Bearer {token}")
+          req.add_header("Content-Type", "application/json")
+          req.add_header("Accept", "application/vnd.github+json")
+          with urllib.request.urlopen(req) as r:
+              issue = json.loads(r.read())
+          print(f"🚨 Alert issue opened: {issue['html_url']}")
+          PYEOF
+        env:
+          new_month: ${{ steps.detect.outputs.new_month || 'false' }}
+
+      - name: Normalize CNBV data
+        id: normalize
+        run: |
+          # Determine if there's anything to normalize
+          CHANGED=false
+
+          # normalize-cnbv.py reads raw-data/cnbv_indicadores.json + sofipos_by_inst.json
+          if [ -f raw-data/cnbv_indicadores.json ] && [ -f raw-data/sofipos_by_inst.json ]; then
+            echo "▶ Running normalize-cnbv.py..."
+            python3 scripts/normalize-cnbv.py
+            CHANGED=true
+          else
+            echo "⚠️  cnbv_indicadores.json or sofipos_by_inst.json not found — skipping credito/sofipos"
+          fi
+
+          # normalize-ifrs9.py reads raw-data/ifrs9_bm.zip or raw-data/ifrs9_040_R12A*.csv
+          if ls raw-data/ifrs9_bm.zip raw-data/ifrs9_040_R12A*.csv 2>/dev/null | head -1 | grep -q .; then
+            echo "▶ Running normalize-ifrs9.py..."
+            python3 scripts/normalize-ifrs9.py
+            CHANGED=true
+          else
+            echo "⚠️  No IFRS9 source found — skipping ifrs9"
+          fi
+
+          echo "normalize_ran=$CHANGED" >> $GITHUB_OUTPUT
+
+      - name: Merge into sfm-data.json
+        if: ${{ steps.normalize.outputs.normalize_ran == 'true' || github.event.inputs.force_normalize == 'true' }}
+        run: |
+          # Re-read existing Banxico data (sfm-data.json already has FX/Tasa/Inflacion)
+          # merge-sfm-data.py adds credito/sofipos/ifrs9 on top
+          python3 scripts/merge-sfm-data.py
+
+      - name: Setup Node.js for schema validation
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install app deps
+        working-directory: app
+        run: npm ci
+
+      - name: Validate JSON schema
+        run: node --experimental-strip-types app/scripts/validate-data.ts
+
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          git config user.name "sfm-monitor-bot"
+          git config user.email "sfm-monitor@noreply.github.com"
+          git add data/sfm-data.json data/credito.json data/sofipos.json data/ifrs9.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            PERIOD=$(python3 -c "import json; d=json.load(open('data/credito.json')); print(d.get('ultima_actualizacion',''))" 2>/dev/null || echo "")
+            git commit -m "data: update CNBV data${PERIOD:+ $PERIOD}"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+  deploy:
+    name: Build + deploy app
+    needs: update-cnbv
+    if: needs.update-cnbv.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+    uses: ./.github/workflows/deploy.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
