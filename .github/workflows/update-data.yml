@@ -86,6 +86,42 @@ jobs:
                       infl_anual.append({"fecha": d_now, "var_anual": pct})
                       break
 
+          # 4. Reservas internacionales (SF43707) — semanal, últimas 52 semanas
+          reservas_data = fetch("SF43707", (date.today() - timedelta(days=365)).strftime("%Y-%m-%d"))
+          reservas_series = [
+              {"fecha": banxico_to_iso(x["fecha"]), "valor": round(float(x["dato"]), 2)}
+              for x in reservas_data if x["dato"] not in ("N/E", None)
+          ]
+
+          # 5. TIIE Fondeo overnight (SF343410) — diaria, últimos 2 años
+          tiie_fondeo = fetch("SF343410", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))
+          tiie_fondeo_changes = []
+          prev = None
+          for x in tiie_fondeo:
+              if x["dato"] != prev:
+                  tiie_fondeo_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": float(x["dato"])})
+                  prev = x["dato"]
+
+          # 6. Cetes 28d subasta primaria (SF60633) — semanal, último año
+          cetes_data = fetch("SF60633", (date.today() - timedelta(days=365)).strftime("%Y-%m-%d"))
+          cetes_series = [
+              {"fecha": banxico_to_iso(x["fecha"]), "valor": round(float(x["dato"]), 4)}
+              for x in cetes_data if x["dato"] not in ("N/E", None)
+          ]
+
+          # 7. UDIs — valor diario (SP68257)
+          udis_data = fetch("SP68257", (date.today() - timedelta(days=7)).strftime("%Y-%m-%d"))
+          udis_actual = next((x for x in reversed(udis_data) if x["dato"] not in ("N/E", None)), None)
+
+          # 8. Salario mínimo general (SF60628) — por cambio
+          salmin_data = fetch("SF60628", "2010-01-01")
+          salmin_changes = []
+          prev = None
+          for x in salmin_data:
+              if x["dato"] != prev:
+                  salmin_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": float(x["dato"])})
+                  prev = x["dato"]
+
           # Build JSON
           data = {
               "ultima_actualizacion": date.today().strftime("%Y-%m-%d"),
@@ -108,6 +144,33 @@ jobs:
                   "actual": infl_anual[-1]["var_anual"] if infl_anual else None,
                   "fecha": banxico_to_iso(infl_anual[-1]["fecha"]) if infl_anual else None,
                   "historico_mensual": [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_anual[-24:]]
+              }
+          }
+
+          data["mercado"] = {
+              "reservas_internacionales": {
+                  "actual": reservas_series[-1]["valor"] if reservas_series else None,
+                  "fecha":  reservas_series[-1]["fecha"] if reservas_series else None,
+                  "historico": reservas_series
+              },
+              "tiie_fondeo": {
+                  "actual": tiie_fondeo_changes[-1]["valor"] if tiie_fondeo_changes else None,
+                  "fecha":  tiie_fondeo_changes[-1]["fecha"] if tiie_fondeo_changes else None,
+                  "historico": tiie_fondeo_changes[-20:]
+              },
+              "cetes_28d": {
+                  "actual": cetes_series[-1]["valor"] if cetes_series else None,
+                  "fecha":  cetes_series[-1]["fecha"] if cetes_series else None,
+                  "historico": cetes_series
+              },
+              "udis": {
+                  "actual": float(udis_actual["dato"]) if udis_actual else None,
+                  "fecha":  banxico_to_iso(udis_actual["fecha"]) if udis_actual else None
+              },
+              "salario_minimo": {
+                  "actual": salmin_changes[-1]["valor"] if salmin_changes else None,
+                  "fecha":  salmin_changes[-1]["fecha"] if salmin_changes else None,
+                  "historico": salmin_changes
               }
           }
 
