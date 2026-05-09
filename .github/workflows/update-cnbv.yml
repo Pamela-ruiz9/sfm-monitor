@@ -57,12 +57,10 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install Python deps
-        run: pip install requests
-
       - name: Detect + download new CNBV monthly data
         id: detect
         if: ${{ github.event.inputs.skip_download != 'true' }}
+        # Note: if this step is skipped, new_month output is empty string → alert_check treats it as 'false'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
@@ -189,7 +187,7 @@ jobs:
                   f"- `raw-data/ifrs9_bm.zip` (R12A IFRS9, si hay nuevo mes)\n\n"
                   f"_Abierto automáticamente por el workflow `update-cnbv.yml`_"
               ),
-              "labels": ["data-pipeline", "help wanted"],
+              "labels": ["help wanted"],
           }).encode()
           req = urllib.request.Request(url, data=payload, method="POST")
           req.add_header("Authorization", f"Bearer {token}")
@@ -200,7 +198,7 @@ jobs:
           print(f"🚨 Alert issue opened: {issue['html_url']}")
           PYEOF
         env:
-          new_month: ${{ steps.detect.outputs.new_month }}
+          new_month: ${{ steps.detect.outputs.new_month || 'false' }}
 
       - name: Normalize CNBV data
         id: normalize
