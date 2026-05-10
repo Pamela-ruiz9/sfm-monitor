@@ -89,7 +89,7 @@ jobs:
           # 4. Reservas internacionales (SF43707) — semanal, últimas 52 semanas
           reservas_data = fetch("SF43707", (date.today() - timedelta(days=365)).strftime("%Y-%m-%d"))
           reservas_series = [
-              {"fecha": banxico_to_iso(x["fecha"]), "valor": round(float(x["dato"]), 2)}
+              {"fecha": banxico_to_iso(x["fecha"]), "valor": round(float(x["dato"].replace(",", "")), 2)}
               for x in reservas_data if x["dato"] not in ("N/E", None)
           ]
 
