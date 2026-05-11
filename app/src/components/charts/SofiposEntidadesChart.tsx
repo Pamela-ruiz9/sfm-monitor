@@ -25,8 +25,9 @@ ChartJS.register(
 );
 
 // Okabe-Ito CVD-safe palette (8 colors, cycled for up to 15 lines)
+// Note: original first color #000000 replaced with #E6194B — black is invisible on dark backgrounds
 const OKABE_ITO = [
-  '#000000',
+  '#E6194B',
   '#E69F00',
   '#56B4E9',
   '#009E73',
