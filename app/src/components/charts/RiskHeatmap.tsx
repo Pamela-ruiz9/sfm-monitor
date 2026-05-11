@@ -153,7 +153,7 @@ function buildCells(data: SfmData): HeatCell[] {
   const infStart = infSeries.length - lastInf;
   for (let i = 0; i < lastInf; i++) {
     const p = infSeries[infStart + i]!;
-    const mes = p.fecha ? p.fecha.slice(0, 7) : p.mes;
+    const mes: string = p.fecha ? p.fecha.slice(0, 7) : (p.mes ?? '');
     cells.push({
       dimension: 'Macro',
       indicador: 'Inflación',
@@ -174,9 +174,8 @@ function buildCells(data: SfmData): HeatCell[] {
     const resByMes = new Map<string, { valor: number; percentil: number }>();
     resSeries.forEach((p, i) => {
       const mes = p.fecha.slice(0, 7);
-      if (!resByMes.has(mes)) {
-        resByMes.set(mes, { valor: p.valor, percentil: resPct[i]! });
-      }
+      // Tomar el último dato del mes (end-of-month) — datos semanales en orden ascendente
+      resByMes.set(mes, { valor: p.valor, percentil: resPct[i]! });
     });
 
     const resMonths = Array.from(resByMes.entries()).slice(-24);
@@ -339,8 +338,7 @@ interface Props {
 
 export function RiskHeatmap({ data }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const chartRef = useRef<any>(null);
+  const chartRef = useRef<import('echarts').ECharts | null>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
