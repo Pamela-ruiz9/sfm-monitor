@@ -1,6 +1,7 @@
 ---
 import '~/styles/global.css';
 import { ClientRouter } from 'astro:transitions';
+import FeedbackFAB from '~/components/common/FeedbackFAB.astro';
 
 interface Props {
   title: string;
@@ -63,5 +64,6 @@ const canonicalUrl =
     <slot name="onboarding" />
     <slot name="gestures" />
     <slot name="bottom-nav" />
+    <FeedbackFAB lang="es" />
   </body>
 </html>

@@ -38,7 +38,7 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3 }: Props) {
     labels,
     datasets: [
       {
-        label: 'Etapa 3',
+        label: 'Stage 3',
         data: etapa3,
         borderColor: '#f85149',
         backgroundColor: 'rgba(248, 81, 73, 0.5)',
@@ -50,7 +50,7 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3 }: Props) {
         order: 1,
       },
       {
-        label: 'Etapa 2',
+        label: 'Stage 2',
         data: etapa2,
         borderColor: '#d29922',
         backgroundColor: 'rgba(210, 153, 34, 0.5)',
@@ -62,7 +62,7 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3 }: Props) {
         order: 2,
       },
       {
-        label: 'Etapa 1',
+        label: 'Stage 1',
         data: etapa1,
         borderColor: '#3fb950',
         backgroundColor: 'rgba(63, 185, 80, 0.5)',
@@ -77,7 +77,7 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3 }: Props) {
   };
 
   return (
-    <ChartErrorBoundary chartName="IFRS 9 Etapas">
+    <ChartErrorBoundary chartName="IFRS 9 Stages">
       <div className="h-64 md:h-72 -mx-1">
         <Line
           data={data}
