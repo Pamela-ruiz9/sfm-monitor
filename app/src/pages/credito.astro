@@ -20,7 +20,6 @@ import { SwipeNav } from '~/components/shell/SwipeNav';
 import { PullToRefresh } from '~/components/shell/PullToRefresh';
 import { loadSfmData } from '~/data/loader';
 import { formatPct } from '~/lib/utils';
-import { Activity, Shield, TrendingUp, Percent } from 'lucide-react';
 
 const data = loadSfmData();
 const hpc = data.credito.historico_por_cartera;
@@ -86,7 +85,7 @@ const pivotProps = {
         label="IMOR"
         value={formatPct(data.credito.imor.actual)}
         asOf={data.credito.imor.fecha}
-        Icon={Activity}
+        iconName="Activity"
         tone="green"
         indicatorId="imor"
         client:visible
@@ -95,7 +94,7 @@ const pivotProps = {
         label="IMORA"
         value={formatPct(data.credito.imora.actual)}
         asOf={data.credito.imora.fecha}
-        Icon={Percent}
+        iconName="Percent"
         tone="yellow"
         indicatorId="imora"
         client:visible
@@ -104,7 +103,7 @@ const pivotProps = {
         label="ICOR"
         value={`${data.credito.icor.actual.toFixed(2)}×`}
         asOf={data.credito.icor.fecha}
-        Icon={Shield}
+        iconName="Shield"
         tone="green"
         indicatorId="icor"
         client:visible
@@ -113,7 +112,7 @@ const pivotProps = {
         label="ROA"
         value={formatPct(data.credito.roa.actual)}
         asOf={data.credito.roa.fecha}
-        Icon={TrendingUp}
+        iconName="TrendingUp"
         tone="green"
         indicatorId="roa"
         client:visible

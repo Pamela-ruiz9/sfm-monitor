@@ -1,4 +1,7 @@
-import { ArrowDownRight, ArrowUpRight, Minus, type LucideIcon } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Minus, Activity, Shield, TrendingUp, Percent, BarChart2, type LucideIcon } from 'lucide-react';
+
+const ICON_MAP = { Activity, Shield, TrendingUp, Percent, BarChart2 } as const;
+type IconName = keyof typeof ICON_MAP;
 import { cn } from '~/lib/utils';
 
 // Will be moved to ~/data/indicators in Task 8 and imported from there.
@@ -10,7 +13,7 @@ interface Props {
   value: string;
   unit?: string;
   asOf?: string;
-  Icon?: LucideIcon;
+  iconName?: IconName;
   tone: Tone;
   delta?:
     | {
@@ -53,7 +56,7 @@ export function KpiCard({
   value,
   unit,
   asOf,
-  Icon,
+  iconName,
   tone,
   delta,
   indicatorId,
@@ -88,12 +91,7 @@ export function KpiCard({
             </div>
           )}
         </div>
-        {Icon && (
-          <Icon
-            className="size-4 text-[--color-text-mute] group-hover:text-[--color-gold] transition-colors"
-            aria-hidden="true"
-          />
-        )}
+        {iconName && ICON_MAP[iconName] && (() => { const Icon = ICON_MAP[iconName]; return <Icon className="size-4 text-[--color-text-mute] group-hover:text-[--color-gold] transition-colors" aria-hidden="true" />; })()}
       </div>
 
       <div className="mt-3 flex items-baseline gap-1.5">
