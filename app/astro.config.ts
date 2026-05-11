@@ -43,6 +43,11 @@ export default defineConfig({
       registerType: 'autoUpdate',
       manifest: false, // we ship manifest.webmanifest manually
       workbox: {
+        // skipWaiting + clientsClaim: el SW nuevo toma control inmediatamente
+        // en cada deploy, evitando el error "Unable to preload CSS for /_assets/X.css"
+        // que ocurre cuando el SW viejo cachea assets con hash diferente al nuevo build.
+        skipWaiting: true,
+        clientsClaim: true,
         globPatterns: ['**/*.{js,css,html,woff2,svg,png,ico}'],
         runtimeCaching: [
           {
