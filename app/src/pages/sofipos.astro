@@ -18,7 +18,7 @@ import { SwipeNav } from '~/components/shell/SwipeNav';
 import { PullToRefresh } from '~/components/shell/PullToRefresh';
 import { loadSfmData } from '~/data/loader';
 import { formatPct } from '~/lib/utils';
-import { Activity, TrendingDown, Percent, TrendingUp } from 'lucide-react';
+
 
 const data = loadSfmData();
 const s = data.sofipos;
@@ -51,7 +51,7 @@ const top15 = [...ents]
         label="IMOR Total"
         value={formatPct(ultima.imor_total)}
         asOf={ultima.fecha}
-        Icon={Activity}
+        iconName="Activity"
         tone="yellow"
         indicatorId="sofipos-imor"
         client:visible
@@ -60,7 +60,7 @@ const top15 = [...ents]
         label="IMOR Vivienda"
         value={formatPct(ultima.imor_vivienda)}
         asOf={ultima.fecha}
-        Icon={TrendingDown}
+        iconName="TrendingDown"
         tone="red"
         indicatorId="sofipos-imor-vivienda"
         client:visible
@@ -69,7 +69,7 @@ const top15 = [...ents]
         label="IMORA"
         value={formatPct(ultima.imora_total)}
         asOf={ultima.fecha}
-        Icon={Percent}
+        iconName="Percent"
         tone="yellow"
         indicatorId="sofipos-imora"
         client:visible
@@ -78,7 +78,7 @@ const top15 = [...ents]
         label="ROA"
         value={formatPct(ultima.roa)}
         asOf={ultima.fecha}
-        Icon={TrendingUp}
+        iconName="TrendingUp"
         tone="red"
         indicatorId="sofipos-roa"
         client:visible

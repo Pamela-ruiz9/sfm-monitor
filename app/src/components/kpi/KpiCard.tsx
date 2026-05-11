@@ -1,6 +1,6 @@
-import { ArrowDownRight, ArrowUpRight, Minus, Activity, Shield, TrendingUp, Percent, BarChart2, type LucideIcon } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Minus, Activity, Shield, TrendingUp, TrendingDown, Percent, BarChart2, DollarSign, type LucideIcon } from 'lucide-react';
 
-const ICON_MAP = { Activity, Shield, TrendingUp, Percent, BarChart2 } as const;
+const ICON_MAP = { Activity, Shield, TrendingUp, TrendingDown, Percent, BarChart2, DollarSign } as const;
 type IconName = keyof typeof ICON_MAP;
 import { cn } from '~/lib/utils';
 

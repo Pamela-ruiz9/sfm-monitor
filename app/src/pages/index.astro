@@ -10,7 +10,7 @@ import { KpiCard } from '~/components/kpi/KpiCard';
 import { FXChart } from '~/components/charts/FXChart';
 import { loadSfmData } from '~/data/loader';
 import { computeDelta, formatMxn, formatPct } from '~/lib/utils';
-import { DollarSign, Percent, TrendingUp, Activity } from 'lucide-react';
+
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
@@ -54,7 +54,7 @@ const imorPlaceholder = 2.2;
         label="MXN/USD FIX"
         value={formatMxn(fxLatest, 4)}
         asOf={data.tipo_cambio.fecha}
-        Icon={DollarSign}
+        iconName="DollarSign"
         tone="gold"
         indicatorId="fx"
         delta={fxDelta && {
@@ -67,7 +67,7 @@ const imorPlaceholder = 2.2;
         label="Tasa Banxico"
         value={formatPct(tasaLatest, 2)}
         asOf={data.tasa_banxico.fecha}
-        Icon={Percent}
+        iconName="Percent"
         tone="red"
         indicatorId="tasa"
         delta={tasaDelta && {
@@ -80,7 +80,7 @@ const imorPlaceholder = 2.2;
         label="Inflación anual"
         value={formatPct(inflacionLatest, 2)}
         asOf={data.inflacion.fecha}
-        Icon={TrendingUp}
+        iconName="TrendingUp"
         tone="yellow"
         indicatorId="inflacion"
         delta={inflacionDelta && {
@@ -93,7 +93,7 @@ const imorPlaceholder = 2.2;
         label="IMOR Banca"
         value={formatPct(imorPlaceholder, 2)}
         asOf="placeholder · CNBV pendiente"
-        Icon={Activity}
+        iconName="Activity"
         tone="green"
         indicatorId="imor"
       />
