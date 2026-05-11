@@ -7,7 +7,8 @@ test.beforeEach(async ({ context }) => {
 });
 
 // ─── Helper ────────────────────────────────────────────────────────────────
-async function collectErrors(page: import('@playwright/test').Page) {
+// NOTE: call BEFORE page.goto() to capture load-time errors
+function watchErrors(page: import('@playwright/test').Page): string[] {
   const errors: string[] = [];
   page.on('console', (msg) => {
     if (msg.type() === 'error') errors.push(msg.text());
@@ -24,7 +25,7 @@ function filterBlocking(errors: string[]): string[] {
 
 // ─── /credito charts ────────────────────────────────────────────────────────
 test('credito: no JS console errors', async ({ page }) => {
-  const errors = await collectErrors(page);
+  const errors = watchErrors(page);
   await page.goto('/credito');
   await page.waitForLoadState('networkidle');
   const blocking = filterBlocking(errors);
@@ -49,7 +50,7 @@ test('credito: IcorChart canvas renders', async ({ page }) => {
 });
 
 test('credito: ImorSegPivotChart pivot responds to SoFiPOs button click', async ({ page }) => {
-  const errors = await collectErrors(page);
+  const errors = watchErrors(page);
   await page.goto('/credito');
   await page.waitForLoadState('networkidle');
 
@@ -69,7 +70,7 @@ test('credito: ImorSegPivotChart pivot responds to SoFiPOs button click', async 
 
 // ─── /sofipos charts ─────────────────────────────────────────────────────────
 test('sofipos: no JS console errors', async ({ page }) => {
-  const errors = await collectErrors(page);
+  const errors = watchErrors(page);
   await page.goto('/sofipos');
   await page.waitForLoadState('networkidle');
   const blocking = filterBlocking(errors);
@@ -85,7 +86,7 @@ test('sofipos: at least one canvas renders', async ({ page }) => {
 
 // ─── /riesgo heatmap ────────────────────────────────────────────────────────
 test('riesgo: no JS console errors', async ({ page }) => {
-  const errors = await collectErrors(page);
+  const errors = watchErrors(page);
   await page.goto('/riesgo');
   await page.waitForLoadState('networkidle');
   const blocking = filterBlocking(errors);

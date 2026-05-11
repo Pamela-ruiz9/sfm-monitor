@@ -58,6 +58,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: E2E tests (excludes visual regression — snapshots are darwin-only)
+        timeout-minutes: 10
         run: npm run test:e2e -- --project=desktop --grep-invert "visual"
 
       - name: Upload Playwright report
