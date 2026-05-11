@@ -8240,7 +8240,7 @@
       ],
       "entidades": {
         "027013": {
-          "nombre": "027013",
+          "nombre": "FORJADORES",
           "id": "027013",
           "imor": [
             6.35,
@@ -8366,7 +8366,7 @@
           ]
         },
         "027040": {
-          "nombre": "027040",
+          "nombre": "CAJA REAL JALISCO",
           "id": "027040",
           "imor": [
             0.92,
@@ -8492,7 +8492,7 @@
           ]
         },
         "027029": {
-          "nombre": "027029",
+          "nombre": "SOFOM ER INTEGRADORA",
           "id": "027029",
           "imor": [
             16.2,
@@ -8618,7 +8618,7 @@
           ]
         },
         "027050": {
-          "nombre": "027050",
+          "nombre": "FONDO ESPERANZA",
           "id": "027050",
           "imor": [
             null,
@@ -8744,7 +8744,7 @@
           ]
         },
         "027032": {
-          "nombre": "027032",
+          "nombre": "CAJA REAL CUAUHTÉMOC",
           "id": "027032",
           "imor": [
             10.63,
@@ -8870,7 +8870,7 @@
           ]
         },
         "027009": {
-          "nombre": "027009",
+          "nombre": "CAJA SURHERMANDAD",
           "id": "027009",
           "imor": [
             8.3,
@@ -8996,7 +8996,7 @@
           ]
         },
         "027035": {
-          "nombre": "027035",
+          "nombre": "CAJA REAL CENTRO NORTE",
           "id": "027035",
           "imor": [
             3.81,
@@ -9122,7 +9122,7 @@
           ]
         },
         "027044": {
-          "nombre": "027044",
+          "nombre": "CAJA REAL GUANAJUATO",
           "id": "027044",
           "imor": [
             5.39,
@@ -9248,7 +9248,7 @@
           ]
         },
         "027045": {
-          "nombre": "027045",
+          "nombre": "CAJA REAL HIDALGO",
           "id": "027045",
           "imor": [
             8.24,
@@ -9374,7 +9374,7 @@
           ]
         },
         "027034": {
-          "nombre": "027034",
+          "nombre": "CAJA REAL NORTE",
           "id": "027034",
           "imor": [
             6.48,
@@ -9500,7 +9500,7 @@
           ]
         },
         "027018": {
-          "nombre": "027018",
+          "nombre": "BIEN PARA BIEN",
           "id": "027018",
           "imor": [
             1.11,
@@ -9626,7 +9626,7 @@
           ]
         },
         "027019": {
-          "nombre": "027019",
+          "nombre": "CAJA REAL NACIONAL",
           "id": "027019",
           "imor": [
             null,
@@ -9752,7 +9752,7 @@
           ]
         },
         "027026": {
-          "nombre": "027026",
+          "nombre": "CAJA REAL CENTRO",
           "id": "027026",
           "imor": [
             10.14,
@@ -9878,7 +9878,7 @@
           ]
         },
         "027028": {
-          "nombre": "027028",
+          "nombre": "CAJA REAL GOLFO",
           "id": "027028",
           "imor": [
             1.0,
@@ -10004,7 +10004,7 @@
           ]
         },
         "027008": {
-          "nombre": "027008",
+          "nombre": "KUBO FINANCIERO",
           "id": "027008",
           "imor": [
             null,
@@ -10130,7 +10130,7 @@
           ]
         },
         "027003": {
-          "nombre": "027003",
+          "nombre": "TE CREEMOS",
           "id": "027003",
           "imor": [
             4.01,
@@ -10256,7 +10256,7 @@
           ]
         },
         "027036": {
-          "nombre": "027036",
+          "nombre": "CAJA REAL PACÍFICO",
           "id": "027036",
           "imor": [
             48.66,
@@ -10382,7 +10382,7 @@
           ]
         },
         "027004": {
-          "nombre": "027004",
+          "nombre": "CAJA POP MEXICANA",
           "id": "027004",
           "imor": [
             8.1,
@@ -10508,7 +10508,7 @@
           ]
         },
         "027038": {
-          "nombre": "027038",
+          "nombre": "CAJA REAL VERACRUZ",
           "id": "027038",
           "imor": [
             4.48,
@@ -10634,7 +10634,7 @@
           ]
         },
         "027016": {
-          "nombre": "027016",
+          "nombre": "CAJA REAL SOLIDARIA",
           "id": "027016",
           "imor": [
             0.98,
@@ -10760,7 +10760,7 @@
           ]
         },
         "027015": {
-          "nombre": "027015",
+          "nombre": "FONDESO",
           "id": "027015",
           "imor": [
             null,
@@ -10886,7 +10886,7 @@
           ]
         },
         "027051": {
-          "nombre": "027051",
+          "nombre": "CAJA REAL GUERRERO",
           "id": "027051",
           "imor": [
             null,
@@ -11012,7 +11012,7 @@
           ]
         },
         "027005": {
-          "nombre": "027005",
+          "nombre": "CAJA REAL MEXICANA",
           "id": "027005",
           "imor": [
             6.53,
@@ -11138,7 +11138,7 @@
           ]
         },
         "027047": {
-          "nombre": "027047",
+          "nombre": "CAJA REAL QUERÉTARO",
           "id": "027047",
           "imor": [
             2.84,
@@ -11264,7 +11264,7 @@
           ]
         },
         "027001": {
-          "nombre": "027001",
+          "nombre": "FICREA",
           "id": "027001",
           "imor": [
             3.97,
@@ -11390,7 +11390,7 @@
           ]
         },
         "20": {
-          "nombre": "20",
+          "nombre": "SISTEMA SOFIPO",
           "id": "20",
           "imor": [
             9.58,
@@ -11516,7 +11516,7 @@
           ]
         },
         "027049": {
-          "nombre": "027049",
+          "nombre": "CAJA REAL SINALOA",
           "id": "027049",
           "imor": [
             null,
@@ -11642,7 +11642,7 @@
           ]
         },
         "027033": {
-          "nombre": "027033",
+          "nombre": "REAL CAPITALIZA",
           "id": "027033",
           "imor": [
             14.41,
@@ -11768,7 +11768,7 @@
           ]
         },
         "027031": {
-          "nombre": "027031",
+          "nombre": "PRESTANDO",
           "id": "027031",
           "imor": [
             8.99,
@@ -11894,7 +11894,7 @@
           ]
         },
         "027046": {
-          "nombre": "027046",
+          "nombre": "CAJA REAL PUEBLA",
           "id": "027046",
           "imor": [
             2.02,
@@ -12020,7 +12020,7 @@
           ]
         },
         "027030": {
-          "nombre": "027030",
+          "nombre": "ACCESO FINANCIERO",
           "id": "027030",
           "imor": [
             15.58,
@@ -12146,7 +12146,7 @@
           ]
         },
         "027012": {
-          "nombre": "027012",
+          "nombre": "CAJA REAL PENINSULAR",
           "id": "027012",
           "imor": [
             12.99,
@@ -12272,7 +12272,7 @@
           ]
         },
         "027020": {
-          "nombre": "027020",
+          "nombre": "CAJA REAL OCCIDENTAL",
           "id": "027020",
           "imor": [
             13.36,
@@ -12398,7 +12398,7 @@
           ]
         },
         "027024": {
-          "nombre": "027024",
+          "nombre": "CAJA REAL NORESTE",
           "id": "027024",
           "imor": [
             7.1,
@@ -12650,7 +12650,7 @@
           ]
         },
         "027022": {
-          "nombre": "027022",
+          "nombre": "CAJA REAL SURESTE",
           "id": "027022",
           "imor": [
             10.28,
@@ -12776,7 +12776,7 @@
           ]
         },
         "027037": {
-          "nombre": "027037",
+          "nombre": "CAJA REAL CENTRO SUR",
           "id": "027037",
           "imor": [
             null,
@@ -12902,7 +12902,7 @@
           ]
         },
         "027025": {
-          "nombre": "027025",
+          "nombre": "CAJA REAL BAJÍO",
           "id": "027025",
           "imor": [
             null,
@@ -13028,7 +13028,7 @@
           ]
         },
         "027014": {
-          "nombre": "027014",
+          "nombre": "CAJA INMACULADA",
           "id": "027014",
           "imor": [
             2.78,
@@ -13154,7 +13154,7 @@
           ]
         },
         "027042": {
-          "nombre": "027042",
+          "nombre": "CAJA REAL OAXACA",
           "id": "027042",
           "imor": [
             9.68,
@@ -13280,7 +13280,7 @@
           ]
         },
         "027048": {
-          "nombre": "027048",
+          "nombre": "CAJA REAL SAN LUIS",
           "id": "027048",
           "imor": [
             1.0,
@@ -13406,7 +13406,7 @@
           ]
         },
         "027007": {
-          "nombre": "027007",
+          "nombre": "CAJA MORELIA VALLADOLID",
           "id": "027007",
           "imor": [
             null,
@@ -13532,7 +13532,7 @@
           ]
         },
         "027010": {
-          "nombre": "027010",
+          "nombre": "CAJA LIBERTAD",
           "id": "027010",
           "imor": [
             3.61,
@@ -13658,7 +13658,7 @@
           ]
         },
         "027021": {
-          "nombre": "027021",
+          "nombre": "CAME FINANCIERO",
           "id": "027021",
           "imor": [
             4.45,
@@ -13784,7 +13784,7 @@
           ]
         },
         "027002": {
-          "nombre": "027002",
+          "nombre": "CAJA REAL DEL POTOSÍ",
           "id": "027002",
           "imor": [
             null,
@@ -13910,7 +13910,7 @@
           ]
         },
         "027023": {
-          "nombre": "027023",
+          "nombre": "FONCE",
           "id": "027023",
           "imor": [
             12.39,
@@ -14036,7 +14036,7 @@
           ]
         },
         "027041": {
-          "nombre": "027041",
+          "nombre": "CAJA REAL MICHOACÁN",
           "id": "027041",
           "imor": [
             1.0,
@@ -14162,7 +14162,7 @@
           ]
         },
         "027006": {
-          "nombre": "027006",
+          "nombre": "FINCOMÚN",
           "id": "027006",
           "imor": [
             21.48,

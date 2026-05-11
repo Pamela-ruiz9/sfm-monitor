@@ -119,13 +119,13 @@ const top15 = [...ents]
     <Section
       id="sofipos-imora-roa"
       eyebrow="Calidad y rentabilidad"
-      title="IMORA + ROA dual"
-      description="IMORA total (eje izquierdo, amarillo) y ROA del sector (eje derecho, rojo). El ROA negativo señala rentabilidad por debajo del costo de capital."
+      title="IMOR + ROA dual"
+      description="IMOR total (eje izquierdo, amarillo) y ROA del sector (eje derecho, rojo). El ROA negativo señala rentabilidad por debajo del costo de capital."
       source="CNBV Sector 50 (SoFiPOs)"
       tone="yellow">
       <SofiposImoraRoaChart
         fechas={s.fechas}
-        imora={s.imora_total}
+        imor={s.imor_total}
         roa={s.roa}
         client:visible
       />

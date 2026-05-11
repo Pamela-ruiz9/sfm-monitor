@@ -186,6 +186,56 @@ def build_sofipos() -> dict:
     }
 
     # Per-institution arrays for historico_por_entidad
+    # Display name catalogue — CNBV Sector 27 (SoFiPOs)
+    SOFIPOS_NOMBRES: dict[str, str] = {
+        "027001": "FICREA",
+        "027002": "CAJA REAL DEL POTOSÍ",
+        "027003": "TE CREEMOS",
+        "027004": "CAJA POP MEXICANA",
+        "027005": "CAJA REAL MEXICANA",
+        "027006": "FINCOMÚN",
+        "027007": "CAJA MORELIA VALLADOLID",
+        "027008": "KUBO FINANCIERO",
+        "027009": "CAJA SURHERMANDAD",
+        "027010": "CAJA LIBERTAD",
+        "027012": "CAJA REAL PENINSULAR",
+        "027013": "FORJADORES",
+        "027014": "CAJA INMACULADA",
+        "027015": "FONDESO",
+        "027016": "CAJA REAL SOLIDARIA",
+        "027018": "BIEN PARA BIEN",
+        "027019": "CAJA REAL NACIONAL",
+        "027020": "CAJA REAL OCCIDENTAL",
+        "027021": "CAME FINANCIERO",
+        "027022": "CAJA REAL SURESTE",
+        "027023": "FONCE",
+        "027024": "CAJA REAL NORESTE",
+        "027025": "CAJA REAL BAJÍO",
+        "027026": "CAJA REAL CENTRO",
+        "027028": "CAJA REAL GOLFO",
+        "027029": "SOFOM ER INTEGRADORA",
+        "027030": "ACCESO FINANCIERO",
+        "027031": "PRESTANDO",
+        "027032": "CAJA REAL CUAUHTÉMOC",
+        "027033": "REAL CAPITALIZA",
+        "027034": "CAJA REAL NORTE",
+        "027035": "CAJA REAL CENTRO NORTE",
+        "027036": "CAJA REAL PACÍFICO",
+        "027037": "CAJA REAL CENTRO SUR",
+        "027038": "CAJA REAL VERACRUZ",
+        "027040": "CAJA REAL JALISCO",
+        "027041": "CAJA REAL MICHOACÁN",
+        "027042": "CAJA REAL OAXACA",
+        "027044": "CAJA REAL GUANAJUATO",
+        "027045": "CAJA REAL HIDALGO",
+        "027046": "CAJA REAL PUEBLA",
+        "027047": "CAJA REAL QUERÉTARO",
+        "027048": "CAJA REAL SAN LUIS",
+        "027049": "CAJA REAL SINALOA",
+        "027050": "FONDO ESPERANZA",
+        "027051": "CAJA REAL GUERRERO",
+        "20": "SISTEMA SOFIPO",
+    }
     entidades: dict[str, dict] = {}
     for inst_id, inst_data in result.items():
         imor_arr = [
@@ -193,7 +243,7 @@ def build_sofipos() -> dict:
             for p in all_periods
         ]
         entidades[inst_id] = {
-            "nombre": inst_id,  # raw data has no display name — ID as fallback
+            "nombre": SOFIPOS_NOMBRES.get(inst_id, inst_id),  # display name, ID as fallback
             "id":     inst_id,
             "imor":   imor_arr,
         }
