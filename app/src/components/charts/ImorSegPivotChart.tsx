@@ -1,30 +1,9 @@
 import { useState, useMemo } from 'react';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  LineElement,
-  PointElement,
-  TimeScale,
-  Tooltip,
-  Legend,
-  Filler,
-} from 'chart.js';
-import 'chartjs-adapter-date-fns';
 import { Line } from 'react-chartjs-2';
 import { ChartErrorBoundary } from './ChartErrorBoundary';
 import { cn } from '~/lib/utils';
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  LineElement,
-  PointElement,
-  TimeScale,
-  Tooltip,
-  Legend,
-  Filler,
-);
+import '~/components/charts/chartSetup';
+import { Chart as ChartJS } from 'chart.js';
 
 type Sector = 'bm' | 'sofipos';
 type Cartera = 'total' | 'comercial' | 'consumo' | 'vivienda' | 'tarjeta' | 'consumo_norev';
