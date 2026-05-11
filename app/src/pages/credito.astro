@@ -163,15 +163,15 @@ const pivotProps = {
     <Section
       id="ifrs9"
       eyebrow="Estándares contables"
-      title="IFRS 9 — Etapas 1/2/3"
-      description="Distribución porcentual de la cartera por etapa de riesgo crediticio bajo IFRS 9. Etapa 1: riesgo bajo; Etapa 2: aumento significativo; Etapa 3: deteriorada."
+      title="IFRS 9 — Stages 1/2/3"
+      description="Distribución porcentual de la cartera por stage de riesgo crediticio bajo IFRS 9. Stage 1: riesgo bajo; Stage 2: aumento significativo; Stage 3: deteriorada."
       source="CNBV Reporte R12A"
       tone="yellow">
       {ifrs.ultima && (
         <div class="grid grid-cols-3 gap-3 mb-4">
           <div class="card-surface p-4 text-center">
             <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">
-              Etapa 1
+              Stage 1
             </div>
             <div class="serif text-2xl font-semibold text-[--color-green]">
               {formatPct(ifrs.ultima.etapa1)}
@@ -179,7 +179,7 @@ const pivotProps = {
           </div>
           <div class="card-surface p-4 text-center">
             <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">
-              Etapa 2
+              Stage 2
             </div>
             <div class="serif text-2xl font-semibold text-[--color-yellow]">
               {formatPct(ifrs.ultima.etapa2)}
@@ -187,7 +187,7 @@ const pivotProps = {
           </div>
           <div class="card-surface p-4 text-center">
             <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">
-              Etapa 3
+              Stage 3
             </div>
             <div class="serif text-2xl font-semibold text-[--color-red]">
               {formatPct(ifrs.ultima.etapa3)}
