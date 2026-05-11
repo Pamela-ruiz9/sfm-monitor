@@ -52,15 +52,25 @@ jobs:
           today = date.today().strftime("%Y-%m-%d")
           start_18m = (date.today() - timedelta(days=548)).strftime("%Y-%m-%d")
           start_3y = (date.today() - timedelta(days=1095)).strftime("%Y-%m-%d")
+          start_1994 = "1994-01-01"
 
-          # 1. Tipo de cambio FIX (SF43718) — últimos 18 meses
-          fx_daily = fetch("SF43718", start_18m)
+          # 1. Tipo de cambio FIX (SF43718) — histórico completo desde 1994
+          # Banxico limita el rango por consulta; dividimos en chunks
+          fx_chunks = [
+              ("1994-01-01", "2002-12-31"),
+              ("2003-01-01", "2012-12-31"),
+              ("2013-01-01", "2020-12-31"),
+              ("2021-01-01", date.today().strftime("%Y-%m-%d")),
+          ]
+          fx_daily = []
+          for c_start, c_end in fx_chunks:
+              fx_daily.extend(fetch("SF43718", c_start, c_end))
           fx_monthly = {}
           for x in fx_daily:
               d, m, y = x["fecha"].split("/")
               key = f"{y}-{m}"
               fx_monthly[key] = {"fecha": x["fecha"], "dato": x["dato"]}
-          fx_series = sorted(fx_monthly.items())[-18:]
+          fx_series = sorted(fx_monthly.items())  # histórico completo
 
           # 2. Tasa objetivo (SF61745) — cambios únicos últimos 2 años
           tasa_daily = fetch("SF61745", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))

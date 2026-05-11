@@ -1,0 +1,40 @@
+name: Backfill FX histórico (one-shot)
+
+on:
+  workflow_dispatch:   # solo manual
+
+jobs:
+  backfill:
+    name: Jalar SF43718 desde 1994 → sfm-data.json
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch histórico completo FX desde 1994
+        env:
+          BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}
+        run: python3 scripts/backfill-fx-historico.py
+
+      - name: Validate schema
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install deps
+        working-directory: app
+        run: npm ci
+
+      - name: Validate JSON schema
+        run: node --experimental-strip-types app/scripts/validate-data.ts
+
+      - name: Commit y push
+        run: |
+          git config user.name "sfm-monitor-bot"
+          git config user.email "sfm-monitor@noreply.github.com"
+          git add data/sfm-data.json
+          git diff --staged --quiet || git commit -m "data: backfill FX histórico SF43718 desde 1994"
+          git push
