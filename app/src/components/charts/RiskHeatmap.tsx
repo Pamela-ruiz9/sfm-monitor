@@ -249,8 +249,9 @@ function buildEChartsOption(cells: HeatCell[]) {
     backgroundColor: 'transparent',
     tooltip: {
       trigger: 'item',
-      formatter: (params: { data: [number, number, number, string, number, string] }) => {
-        const [xi, yi, pct, label, , dim] = params.data;
+      formatter: (params: { data: unknown[] }) => {
+        const d = params.data as [number, number, number, string, number, string];
+        const [xi, yi, pct, label, , dim] = d;
         const mes = meses[xi] ?? '';
         const ind = indicadores[yi] ?? '';
         const pctRound = Math.round(pct);
@@ -294,17 +295,19 @@ function buildEChartsOption(cells: HeatCell[]) {
       axisLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } },
     },
     visualMap: {
+      type: 'continuous',   // explícito — ECharts 5 lo requiere para heatmap
+      dimension: 2,         // colorear por el 3er elemento del array [xi, yi, percentil, ...]
       min: 0,
       max: 100,
       calculable: true,
       orient: 'horizontal',
       left: 'center',
-      bottom: 0,
+      bottom: 4,
+      itemWidth: 200,       // ancho de la barra (horizontal)
+      itemHeight: 14,       // grosor de la barra
       inRange: { color: colorPalette },
       textStyle: { color: 'rgba(255,255,255,0.5)', fontSize: 10 },
-      text: ['Riesgo Alto', 'Riesgo Bajo'],
-      itemWidth: 14,
-      itemHeight: 120,
+      text: ['Riesgo Alto', 'Riesgo Bajo'],  // ECharts: izq=max, der=min en horizontal
     },
     series: [
       {
