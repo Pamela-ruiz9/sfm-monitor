@@ -1,8 +1,9 @@
 ---
-import { Home, LineChart, Activity, Building2, TrendingUp, BookOpen } from 'lucide-react';
+import { Home, LineChart, Activity, Building2, TrendingUp, BookOpen, Thermometer } from 'lucide-react';
 
 const TABS = [
   { href: '/', label: 'Resumen', match: /^\/$/, Icon: Home },
+  { href: '/riesgo', label: 'Riesgo', match: /^\/riesgo/, Icon: Thermometer },
   { href: '/mercado', label: 'Mercado', match: /^\/mercado/, Icon: LineChart },
   { href: '/credito', label: 'Crédito', match: /^\/credito/, Icon: Activity },
   { href: '/sofipos', label: 'SoFiPOs', match: /^\/sofipos/, Icon: Building2 },
