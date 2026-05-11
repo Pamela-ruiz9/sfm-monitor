@@ -110,6 +110,7 @@ export function SofiposImoraRoaChart({ fechas, imora, roa }: Props) {
               },
               y1: {
                 position: 'right',
+                suggestedMin: 0,
                 ticks: { color: '#f85149', callback: (v) => `${v}%` },
                 grid: { drawOnChartArea: false },
                 title: {

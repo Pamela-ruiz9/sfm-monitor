@@ -133,6 +133,7 @@ export function RoaRoeChart({ fechas, roa, roe }: Props) {
               },
               y1: {
                 position: 'right',
+                suggestedMin: 0,
                 ticks: { color: '#c4a35a', callback: (v) => `${v}%` },
                 grid: { drawOnChartArea: false },
                 title: {

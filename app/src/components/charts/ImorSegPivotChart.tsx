@@ -94,7 +94,16 @@ export function ImorSegPivotChart({ bm, sofipos }: Props) {
           yMax: undefined as number | undefined,
         };
       }
-      const banco = bm.bancos.find((b) => b.id === bancoId) ?? bm.bancos[0]!;
+      const banco = bm.bancos.find((b) => b.id === bancoId) ?? bm.bancos[0];
+      if (!banco) {
+        return {
+          fechas: bm.fechas,
+          values: [] as (number | null)[],
+          label: 'Banca Múltiple · (sin datos por banco)',
+          color: '#c4a35a',
+          yMax: undefined as number | undefined,
+        };
+      }
       return {
         fechas: bm.fechas,
         values: banco.imor_total,
@@ -114,7 +123,16 @@ export function ImorSegPivotChart({ bm, sofipos }: Props) {
         yMax: 45,
       };
     }
-    const ent = sofipos.entidades.find((e) => e.id === entidadId) ?? sofipos.entidades[0]!;
+    const ent = sofipos.entidades.find((e) => e.id === entidadId) ?? sofipos.entidades[0];
+    if (!ent) {
+      return {
+        fechas: sofipos.fechas,
+        values: [] as (number | null)[],
+        label: 'SoFiPOs · (sin datos por entidad)',
+        color: '#f85149',
+        yMax: 45 as number | undefined,
+      };
+    }
     return {
       fechas: sofipos.fechas,
       values: ent.imor,

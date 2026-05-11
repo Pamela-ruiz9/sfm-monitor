@@ -38,8 +38,9 @@ const DEFAULT_CRISES = [
 ] as const;
 
 export function ImoraChart({ fechas, values }: Props) {
-  const maxVal = Math.max(...values.filter((v): v is number => v !== null));
-  const yMax = Math.ceil(maxVal * 1.2);
+  const nonNullValues = values.filter((v): v is number => v !== null);
+  const maxVal = nonNullValues.length > 0 ? Math.max(...nonNullValues) : 0;
+  const yMax = maxVal > 0 ? Math.ceil(maxVal * 1.2) : 10;
 
   const data = {
     labels: fechas.map((f) => `${f}-01`),

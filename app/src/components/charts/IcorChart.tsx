@@ -38,8 +38,8 @@ const DEFAULT_CRISES = [
 ] as const;
 
 export function IcorChart({ fechas, values }: Props) {
-  const maxVal = Math.max(...values);
-  const yMax = Math.ceil(maxVal * 1.2 * 10) / 10;
+  const maxVal = values.length > 0 ? Math.max(...values) : 0;
+  const yMax = maxVal > 0 ? Math.ceil(maxVal * 1.2 * 10) / 10 : 2;
 
   const data = {
     labels: fechas.map((f) => `${f}-01`),
