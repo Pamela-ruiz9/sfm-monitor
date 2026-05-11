@@ -1,0 +1,139 @@
+---
+/**
+ * /riesgo — Página de Heatmap de Riesgo Sistémico
+ * Issue #34: Heatmap de riesgo sistémico (ECharts, percentiles rolling, semáforo compuesto)
+ */
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/shell/Header.astro';
+import TabBar from '~/components/shell/TabBar.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import { RiskHeatmap } from '~/components/charts/RiskHeatmap';
+import { loadSfmData } from '~/data/loader';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+
+const data = loadSfmData();
+
+// Compute composite score per dimension for the legend pills
+// Mirrors HeroScore logic but adds Rentabilidad + Solvencia
+const imor = data.credito.imor.actual;
+const roa = data.credito.roa.actual;
+const inflacion = Number(data.inflacion.actual);
+const fx = Number(data.tipo_cambio.actual);
+const tasa = Number(data.tasa_banxico.actual);
+
+type Tone = 'green' | 'yellow' | 'red';
+
+function creditoTone(v: number): Tone {
+  if (v <= 3.0) return 'green';
+  if (v <= 4.5) return 'yellow';
+  return 'red';
+}
+function rentabilidadTone(v: number): Tone {
+  if (v >= 1.5) return 'green';
+  if (v >= 0.8) return 'yellow';
+  return 'red';
+}
+function macroTone(v: number): Tone {
+  if (v >= 2 && v <= 4) return 'green';
+  if (v <= 6) return 'yellow';
+  return 'red';
+}
+function mercadoTone(v: number): Tone {
+  // FX: historical context. >20 = elevated, 17-20 = moderate, <17 = contained
+  if (v < 17.5) return 'green';
+  if (v < 20) return 'yellow';
+  return 'red';
+}
+
+const dimensions = [
+  { label: 'Crédito (IMOR)', tone: creditoTone(imor), value: `${imor.toFixed(2)}%`, detail: 'IMOR banca múltiple · CNBV feb 2026' },
+  { label: 'Rentabilidad', tone: rentabilidadTone(roa), value: `ROA ${roa.toFixed(2)}%`, detail: 'Banca múltiple · CNBV feb 2026' },
+  { label: 'Macro (Inflación)', tone: macroTone(inflacion), value: `${inflacion.toFixed(2)}%`, detail: 'INPC anual · Banxico abr 2026' },
+  { label: 'Mercado (FX)', tone: mercadoTone(fx), value: `$${fx.toFixed(4)}`, detail: 'MXN/USD FIX · Banxico may 2026' },
+  { label: 'Tasa Banxico', tone: tasa >= 8 ? 'yellow' : 'green' as Tone, value: `${tasa.toFixed(2)}%`, detail: 'Tasa objetivo · Banxico mar 2026' },
+] satisfies { label: string; tone: Tone; value: string; detail: string }[];
+
+const PILL_DOT: Record<Tone, string> = {
+  green: 'bg-[--color-green]',
+  yellow: 'bg-[--color-yellow]',
+  red: 'bg-[--color-red]',
+};
+
+const PILL_TEXT: Record<Tone, string> = {
+  green: 'text-[--color-green]',
+  yellow: 'text-[--color-yellow]',
+  red: 'text-[--color-red]',
+};
+---
+
+<Layout
+  title="Heatmap de Riesgo — SFM Monitor"
+  description="Mapa térmico de riesgo sistémico del Sistema Financiero Mexicano. Percentiles rolling por dimensión: crédito, mercado, macro, liquidez.">
+  <Header slot="header" />
+  <TabBar slot="header" />
+
+  <div class="space-y-8">
+    <!-- Page header -->
+    <div class="space-y-2">
+      <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[--color-gold]">
+        Riesgo Sistémico
+      </p>
+      <h1 class="serif font-semibold text-[clamp(1.8rem,4vw,2.8rem)] leading-tight text-[--color-text]">
+        Heatmap del Sistema Financiero
+      </h1>
+      <p class="text-sm text-[--color-text-dim] max-w-3xl leading-relaxed">
+        Mapa térmico multidimensional basado en percentiles históricos rolling.
+        Verde = riesgo bajo, Rojo = riesgo elevado.
+        Metodología inspirada en el Mapa Térmico de Riesgos del
+        <a href="https://www.banxico.org.mx/publicaciones-y-prensa/reportes-sobre-el-sistema-financiero/reportes-sistema-financiero.html"
+           class="text-[--color-gold] hover:underline" target="_blank" rel="noopener">
+          REF Banxico
+        </a> (Recuadro 3, oct 2018) y el ESRB Risk Dashboard.
+      </p>
+    </div>
+
+    <!-- Dimension summary pills -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+      {dimensions.map((d) => (
+        <div class="rounded-lg border border-[--color-border] bg-[--color-bg-elev] p-3 space-y-1.5">
+          <div class="flex items-center gap-1.5">
+            <span class={`size-2 rounded-full ${PILL_DOT[d.tone]}`} aria-hidden="true" />
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-[--color-text-mute]">{d.label}</span>
+          </div>
+          <div class={`serif font-semibold text-xl tabular-nums ${PILL_TEXT[d.tone]}`}>{d.value}</div>
+          <div class="text-[10px] text-[--color-text-mute] leading-snug">{d.detail}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Main heatmap -->
+    <Section
+      eyebrow="Heatmap"
+      title="Percentiles rolling por indicador · últimos 24 meses"
+      description="Cada celda representa el percentil histórico rolling del indicador en ese mes. Las dimensiones cubren crédito, rentabilidad bancaria, solvencia relativa (ICOR), condiciones macro y liquidez externa."
+      source="Banxico SIE · CNBV Portafolio de Información · Metodología: percentil empírico rank-based (CISS BCE 2012)"
+      tone="gold">
+      <RiskHeatmap data={data} client:visible />
+    </Section>
+
+    <!-- Methodology note -->
+    <div class="rounded-lg border border-[--color-border] bg-[--color-bg-elev] p-4 space-y-2">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-[--color-text-dim]">Nota metodológica</h3>
+      <ul class="text-[11px] text-[--color-text-mute] space-y-1 leading-relaxed list-disc list-inside">
+        <li>Percentil calculado con función de distribución empírica rank-based (CDF empírica), siguiendo metodología CISS del BCE (Hollo, Kremer & Lo Duca, 2012).</li>
+        <li>El percentil es <em>rolling</em>: cada mes se calcula sobre todos los datos históricos disponibles hasta ese punto (sin look-ahead bias).</li>
+        <li>Para indicadores donde <strong>mayor valor = menor riesgo</strong> (ROA, ROE, Reservas Internacionales), el percentil se invierte (100 − p).</li>
+        <li>Semáforo: verde ≤ 33°, amarillo 34–66°, rojo ≥ 67°.</li>
+        <li>Este dashboard NO constituye asesoría financiera. Datos de acceso público.</li>
+      </ul>
+    </div>
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <BottomNav slot="bottom-nav" />
+</Layout>
