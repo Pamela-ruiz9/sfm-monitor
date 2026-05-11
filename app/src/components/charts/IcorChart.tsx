@@ -1,30 +1,7 @@
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  LineElement,
-  PointElement,
-  TimeScale,
-  Tooltip,
-  Legend,
-  Filler,
-} from 'chart.js';
-import 'chartjs-adapter-date-fns';
-import annotationPlugin from 'chartjs-plugin-annotation';
 import { Line } from 'react-chartjs-2';
 import { ChartErrorBoundary } from './ChartErrorBoundary';
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  LineElement,
-  PointElement,
-  TimeScale,
-  Tooltip,
-  Legend,
-  Filler,
-  annotationPlugin,
-);
+import '~/components/charts/chartSetup';
+import { Chart as ChartJS } from 'chart.js';
 
 interface Props {
   fechas: string[];  // 'YYYY-MM'
