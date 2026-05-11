@@ -13,10 +13,15 @@ interface Props {
 }
 
 /**
- * DD/MM/YYYY → ISO YYYY-MM-DD for chart's time scale.
+ * Normalize date string to ISO YYYY-MM-DD for chart's time scale.
+ * Accepts: DD/MM/YYYY (legacy) and YYYY-MM-DD (current pipeline).
  * Returns null on malformed input so caller can filter.
  */
-function ddmmyyyyToIso(s: string): string | null {
+function normalizeToIso(s: string): string | null {
+  if (!s) return null;
+  // Already ISO: YYYY-MM-DD
+  if (/^\d{4}-\d{2}-\d{2}/.test(s)) return s.slice(0, 10);
+  // Legacy: DD/MM/YYYY
   const parts = s.split('/');
   if (parts.length !== 3) return null;
   const [d, m, y] = parts;
@@ -27,7 +32,7 @@ function ddmmyyyyToIso(s: string): string | null {
 export function TasaBanxicoChart({ series }: Props) {
   const points = series
     .map((p) => {
-      const iso = ddmmyyyyToIso(p.fecha);
+      const iso = normalizeToIso(p.fecha);
       return iso ? { x: iso, y: p.valor } : null;
     })
     .filter((p): p is { x: string; y: number } => p !== null)
