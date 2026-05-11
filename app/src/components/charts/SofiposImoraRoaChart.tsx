@@ -26,19 +26,21 @@ ChartJS.register(
 
 interface Props {
   fechas: string[];
-  imora: (number | null)[];
+  /** IMOR total (%) — cartera vencida / cartera bruta */
+  imor: (number | null)[];
+  /** ROA anualizado (%) */
   roa: (number | null)[];
 }
 
-export function SofiposImoraRoaChart({ fechas, imora, roa }: Props) {
+export function SofiposImoraRoaChart({ fechas, imor, roa }: Props) {
   const labels = fechas.map((f) => `${f}-15`);
 
   const data = {
     labels,
     datasets: [
       {
-        label: 'IMORA Total',
-        data: imora,
+        label: 'IMOR Total',
+        data: imor,
         borderColor: '#d29922',
         backgroundColor: 'rgba(210, 153, 34, 0.08)',
         fill: false,
@@ -66,7 +68,7 @@ export function SofiposImoraRoaChart({ fechas, imora, roa }: Props) {
   };
 
   return (
-    <ChartErrorBoundary chartName="SoFiPOs IMORA + ROA">
+    <ChartErrorBoundary chartName="SoFiPOs IMOR + ROA">
       <div className="h-64 md:h-72 -mx-1">
         <Line
           data={data}
@@ -99,23 +101,23 @@ export function SofiposImoraRoaChart({ fechas, imora, roa }: Props) {
               },
               y: {
                 position: 'left',
+                min: 0,
                 ticks: { color: '#d29922', callback: (v) => `${v}%` },
                 grid: { color: 'rgba(148, 163, 184, 0.1)' },
                 title: {
                   display: true,
-                  text: 'IMORA',
+                  text: 'IMOR (%)',
                   color: '#d29922',
                   font: { size: 10 },
                 },
               },
               y1: {
                 position: 'right',
-                suggestedMin: 0,
                 ticks: { color: '#f85149', callback: (v) => `${v}%` },
                 grid: { drawOnChartArea: false },
                 title: {
                   display: true,
-                  text: 'ROA',
+                  text: 'ROA (%)',
                   color: '#f85149',
                   font: { size: 10 },
                 },
