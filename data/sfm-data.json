@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-05-11",
+  "ultima_actualizacion": "2026-05-12",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP74625 - INPC variación anual calculada"
   },
   "tipo_cambio": {
-    "actual": "17.2105",
-    "fecha": "2026-05-08",
+    "actual": "17.1908",
+    "fecha": "2026-05-11",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1563,7 +1563,7 @@
       },
       {
         "mes": "2026-05",
-        "valor": 17.2105
+        "valor": 17.1908
       }
     ]
   },
@@ -1572,7 +1572,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-05-11",
+        "fecha": "2024-05-12",
         "valor": 11.0
       },
       {
@@ -1701,8 +1701,8 @@
   },
   "mercado": {
     "reservas_internacionales": {
-      "actual": 256263.9,
-      "fecha": "2026-04-30",
+      "actual": 257029.9,
+      "fecha": "2026-05-08",
       "historico": [
         {
           "fecha": "2025-05-16",
@@ -1907,17 +1907,17 @@
         {
           "fecha": "2026-04-30",
           "valor": 256263.9
+        },
+        {
+          "fecha": "2026-05-08",
+          "valor": 257029.9
         }
       ]
     },
     "tiie_fondeo": {
-      "actual": 17.1934,
-      "fecha": "2026-05-08",
+      "actual": 17.1995,
+      "fecha": "2026-05-11",
       "historico": [
-        {
-          "fecha": "2026-04-10",
-          "valor": 17.3186
-        },
         {
           "fecha": "2026-04-13",
           "valor": 17.2994
@@ -1993,6 +1993,10 @@
         {
           "fecha": "2026-05-08",
           "valor": 17.1934
+        },
+        {
+          "fecha": "2026-05-11",
+          "valor": 17.1995
         }
       ]
     },
@@ -2211,8 +2215,8 @@
       ]
     },
     "udis": {
-      "actual": 8.841247,
-      "fecha": "2026-05-11"
+      "actual": 8.841457,
+      "fecha": "2026-05-12"
     },
     "salario_minimo": {
       "actual": 0.0,
