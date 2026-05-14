@@ -5,10 +5,10 @@ import { cn } from '~/lib/utils';
 import '~/components/charts/chartSetup';
 import { Chart as ChartJS } from 'chart.js';
 
-type Sector = 'bm' | 'sofipos';
 type Cartera = 'total' | 'comercial' | 'consumo' | 'vivienda' | 'tarjeta' | 'consumo_norev';
 
 interface Props {
+  /** Solo banca múltiple — SoFiPOs tiene su propia página /sofipos */
   bm: {
     fechas: string[];
     cartera: {
@@ -21,16 +21,8 @@ interface Props {
     };
     bancos: Array<{ id: string; nombre: string; imor_total: (number | null)[] }>;
   };
-  sofipos: {
-    fechas: string[];
-    cartera: {
-      total: number[];
-      comercial: number[];
-      consumo: number[];
-      vivienda: number[];
-    };
-    entidades: Array<{ id: string; nombre: string; imor: (number | null)[] }>;
-  };
+  /** @deprecated — ignorado, SoFiPOs tiene su propia página */
+  sofipos?: unknown;
 }
 
 const CARTERA_LABELS: Record<Cartera, string> = {
@@ -54,74 +46,40 @@ function pillClass(active: boolean): string {
   );
 }
 
-export function ImorSegPivotChart({ bm, sofipos }: Props) {
-  const [sector, setSector] = useState<Sector>('bm');
-  const [view, setView] = useState<'sistema' | 'banco' | 'entidad'>('sistema');
+export function ImorSegPivotChart({ bm }: Props) {
+  const [view, setView] = useState<'sistema' | 'banco'>('sistema');
   const [cartera, setCartera] = useState<Cartera>('total');
   const [bancoId, setBancoId] = useState<string>(bm.bancos[0]?.id ?? '');
-  const [entidadId, setEntidadId] = useState<string>(sofipos.entidades[0]?.id ?? '');
 
-  const { fechas, values, label, color, yMax } = useMemo(() => {
-    if (sector === 'bm') {
-      if (view === 'sistema') {
-        const v = bm.cartera[cartera] ?? bm.cartera.total;
-        return {
-          fechas: bm.fechas,
-          values: v,
-          label: `Banca Múltiple · ${CARTERA_LABELS[cartera]}`,
-          color: '#c4a35a',
-          yMax: undefined as number | undefined,
-        };
-      }
-      const banco = bm.bancos.find((b) => b.id === bancoId) ?? bm.bancos[0];
-      if (!banco) {
-        return {
-          fechas: bm.fechas,
-          values: [] as (number | null)[],
-          label: 'Banca Múltiple · (sin datos por banco)',
-          color: '#c4a35a',
-          yMax: undefined as number | undefined,
-        };
-      }
+  const { fechas, values, label, color } = useMemo(() => {
+    if (view === 'sistema') {
+      const v = bm.cartera[cartera] ?? bm.cartera.total;
       return {
         fechas: bm.fechas,
-        values: banco.imor_total,
-        label: `Banca Múltiple · ${banco.nombre}`,
-        color: '#c4a35a',
-        yMax: undefined,
-      };
-    }
-    // sofipos
-    if (view === 'sistema') {
-      const v = (sofipos.cartera as Record<string, number[] | undefined>)[cartera] ?? sofipos.cartera.total;
-      return {
-        fechas: sofipos.fechas,
         values: v,
-        label: `SoFiPOs · ${CARTERA_LABELS[cartera]}`,
-        color: '#f85149',
-        yMax: 45,
+        label: `Banca Múltiple · ${CARTERA_LABELS[cartera]}`,
+        color: '#c4a35a',
       };
     }
-    const ent = sofipos.entidades.find((e) => e.id === entidadId) ?? sofipos.entidades[0];
-    if (!ent) {
+    const banco = bm.bancos.find((b) => b.id === bancoId) ?? bm.bancos[0];
+    if (!banco) {
       return {
-        fechas: sofipos.fechas,
+        fechas: bm.fechas,
         values: [] as (number | null)[],
-        label: 'SoFiPOs · (sin datos por entidad)',
-        color: '#f85149',
-        yMax: 45 as number | undefined,
+        label: 'Datos por banco no disponibles en esta versión',
+        color: '#c4a35a',
       };
     }
     return {
-      fechas: sofipos.fechas,
-      values: ent.imor,
-      label: `SoFiPOs · ${ent.nombre}`,
-      color: '#f85149',
-      yMax: 45,
+      fechas: bm.fechas,
+      values: banco.imor_total,
+      label: `Banca Múltiple · ${banco.nombre}`,
+      color: '#c4a35a',
     };
-  }, [sector, view, cartera, bancoId, entidadId, bm, sofipos]);
+  }, [view, cartera, bancoId, bm]);
 
   const latest = values[values.length - 1];
+  const xMin = fechas.length > 0 ? `${fechas[0]}-15` : undefined;
 
   const chartData = {
     labels: fechas.map((f) => `${f}-15`),
@@ -141,55 +99,37 @@ export function ImorSegPivotChart({ bm, sofipos }: Props) {
     ],
   };
 
-  function changeSector(next: Sector) {
-    setSector(next);
-    setView('sistema');
-    setCartera('total');
-  }
-
-  function changeView(next: 'sistema' | 'banco' | 'entidad') {
+  function changeView(next: 'sistema' | 'banco') {
     setView(next);
     if (next !== 'sistema') setCartera('total');
   }
 
-  const carteras = sector === 'bm' ? BM_CARTERAS : SOFI_CARTERAS;
-
   return (
     <ChartErrorBoundary chartName="IMOR pivotable">
       <div className="space-y-3">
-        {/* Sector toggle */}
-        <div className="flex gap-2 flex-wrap">
-          <button onClick={() => changeSector('bm')} className={pillClass(sector === 'bm')}>
-            🏦 Banca Múltiple
-          </button>
-          <button onClick={() => changeSector('sofipos')} className={pillClass(sector === 'sofipos')}>
-            🏘️ SoFiPOs
-          </button>
-        </div>
-
         {/* View toggle */}
         <div className="flex gap-2 flex-wrap">
           <button onClick={() => changeView('sistema')} className={pillClass(view === 'sistema')}>
             Sistema
           </button>
           <button
-            onClick={() => changeView(sector === 'bm' ? 'banco' : 'entidad')}
-            className={pillClass(view !== 'sistema')}>
-            {sector === 'bm' ? 'Por banco' : 'Por entidad'}
+            onClick={() => changeView('banco')}
+            className={pillClass(view === 'banco')}>
+            Por banco
           </button>
         </div>
 
         {/* Sub-selector */}
         {view === 'sistema' && (
           <div className="flex gap-1.5 flex-wrap">
-            {carteras.map((c) => (
+            {BM_CARTERAS.map((c) => (
               <button key={c} onClick={() => setCartera(c)} className={pillClass(cartera === c)}>
                 {CARTERA_LABELS[c]}
               </button>
             ))}
           </div>
         )}
-        {view === 'banco' && (
+        {view === 'banco' && bm.bancos.length > 0 && (
           <div className="flex gap-1.5 flex-wrap">
             {bm.bancos.map((b) => (
               <button key={b.id} onClick={() => setBancoId(b.id)} className={pillClass(bancoId === b.id)}>
@@ -198,14 +138,8 @@ export function ImorSegPivotChart({ bm, sofipos }: Props) {
             ))}
           </div>
         )}
-        {view === 'entidad' && (
-          <div className="flex gap-1.5 overflow-x-auto pb-1 max-h-24 flex-wrap">
-            {sofipos.entidades.map((e) => (
-              <button key={e.id} onClick={() => setEntidadId(e.id)} className={pillClass(entidadId === e.id)}>
-                {e.nombre}
-              </button>
-            ))}
-          </div>
+        {view === 'banco' && bm.bancos.length === 0 && (
+          <p className="text-xs text-[--color-text-mute] italic">Datos por banco no disponibles en esta versión.</p>
         )}
 
         {/* Current value display */}
@@ -239,12 +173,12 @@ export function ImorSegPivotChart({ bm, sofipos }: Props) {
                 x: {
                   type: 'time',
                   time: { unit: 'year' },
+                  min: xMin,
                   ticks: { color: '#94a3b8' },
                   grid: { color: 'rgba(148, 163, 184, 0.1)' },
                 },
                 y: {
                   min: 0,
-                  ...(yMax != null ? { max: yMax } : {}),
                   ticks: { color: '#94a3b8', callback: (v) => `${v}%` },
                   grid: { color: 'rgba(148, 163, 184, 0.1)' },
                 },

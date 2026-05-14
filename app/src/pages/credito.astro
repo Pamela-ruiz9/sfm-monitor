@@ -34,14 +34,7 @@ const bancosArr = hpb
     }))
   : [];
 
-const sofiposEntsArr = data.sofipos.historico_por_entidad
-  ? Object.values(data.sofipos.historico_por_entidad.entidades).map((e) => ({
-      id: e.id,
-      nombre: e.nombre,
-      imor: e.imor,
-    }))
-  : [];
-
+// SoFiPOs se removió de esta página — tiene su propia página /sofipos
 const pivotProps = {
   bm: {
     fechas: hpc.fechas,
@@ -54,16 +47,6 @@ const pivotProps = {
       consumo_norev: hpc.imor_consumo_norev,
     },
     bancos: bancosArr,
-  },
-  sofipos: {
-    fechas: data.sofipos.fechas,
-    cartera: {
-      total: data.sofipos.imor_total,
-      comercial: data.sofipos.imor_comercial,
-      consumo: data.sofipos.imor_consumo,
-      vivienda: data.sofipos.imor_vivienda,
-    },
-    entidades: sofiposEntsArr,
   },
 };
 ---
