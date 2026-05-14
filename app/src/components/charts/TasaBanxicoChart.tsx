@@ -25,7 +25,7 @@ ChartJS.register(
 );
 
 interface RatePoint {
-  fecha: string; // DD/MM/YYYY from legacy pipeline
+  fecha: string; // ISO YYYY-MM-DD (current pipeline) or DD/MM/YYYY (legacy pipeline)
   valor: number;
 }
 
@@ -35,7 +35,9 @@ interface Props {
 
 /**
  * Normalize date string to ISO YYYY-MM-DD for chart's time scale.
- * Accepts: DD/MM/YYYY (legacy) and YYYY-MM-DD (current pipeline).
+ * Handles two formats:
+ *   - YYYY-MM-DD  (ISO — current Banxico pipeline)
+ *   - DD/MM/YYYY (legacy pipeline)
  * Returns null on malformed input so caller can filter.
  */
 function normalizeToIso(s: string): string | null {

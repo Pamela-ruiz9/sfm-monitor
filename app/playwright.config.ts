@@ -10,7 +10,7 @@ export default defineConfig({
   workers: process.env['CI'] ? 1 : undefined,
   reporter: [['html', { open: 'never' }], ['list']],
   use: {
-    baseURL: 'http://localhost:4321',
+    baseURL: 'http://localhost:4321/sfm-monitor',
     trace: 'on-first-retry',
   },
   projects: [
@@ -24,9 +24,15 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'npm run preview',
-    url: 'http://localhost:4321',
+    // In CI: use 'serve' (faster startup than astro preview).
+    // Locally: astro preview for full Astro runtime fidelity.
+    command: process.env['CI']
+      ? 'npx serve dist --listen 4321 --no-clipboard'
+      : 'npm run preview -- --port 4321',
+    url: 'http://localhost:4321/sfm-monitor/',
     reuseExistingServer: !process.env['CI'],
-    timeout: 120_000,
+    stdout: 'pipe',
+    stderr: 'pipe',
+    timeout: 30_000,
   },
 });
