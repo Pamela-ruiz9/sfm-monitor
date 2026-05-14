@@ -17,7 +17,7 @@ const DEFAULT_CRISES = [
 ] as const;
 
 export function FXChart({ series, crises = DEFAULT_CRISES }: Props) {
-  const xMin = series.length > 0 ? `${series[0].mes}-01` : undefined;
+  const xMin = series.length > 0 ? `${series[0]!.mes}-01` : undefined;
   const data = {
     labels: series.map((p) => `${p.mes}-01`),
     datasets: [

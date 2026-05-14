@@ -32,7 +32,7 @@ export function TasaBanxicoChart({ series }: Props) {
     })
     .filter((p): p is { x: string; y: number } => p !== null)
     .sort((a, b) => a.x.localeCompare(b.x));
-  const xMin = points.length > 0 ? points[0].x : undefined;
+  const xMin = points.length > 0 ? points[0]!.x : undefined;
 
   const data = {
     datasets: [
