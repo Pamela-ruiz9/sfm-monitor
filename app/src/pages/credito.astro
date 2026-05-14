@@ -122,11 +122,11 @@ const pivotProps = {
     <Section
       id="imor-pivot"
       eyebrow="Explorador interactivo"
-      title="IMOR por sector / banco / cartera / entidad"
-      description="Pivotea entre Banca Múltiple y SoFiPOs, vista Sistema o por entidad/banco, y selecciona cartera o entidad específica. Réplica del módulo principal del dashboard estable."
-      source="CNBV Sector 40 (Banca Múltiple) + Sector 50 (SoFiPOs)"
+      title="IMOR por banco / cartera"
+      description="Vista Sistema o por banco individual (G-7). Selecciona cartera: total, comercial, consumo, vivienda, tarjeta o consumo no revolvente."
+      source="CNBV Sector 40 (Banca Múltiple)"
       tone="gold">
-      <ImorSegPivotChart {...pivotProps} client:visible />
+      <ImorSegPivotChart {...pivotProps} showSofipos={false} client:visible />
     </Section>
 
     <Section
