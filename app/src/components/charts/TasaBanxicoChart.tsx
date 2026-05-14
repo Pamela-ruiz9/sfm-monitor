@@ -32,6 +32,7 @@ export function TasaBanxicoChart({ series }: Props) {
     })
     .filter((p): p is { x: string; y: number } => p !== null)
     .sort((a, b) => a.x.localeCompare(b.x));
+  const xMin = points.length > 0 ? points[0].x : undefined;
 
   const data = {
     datasets: [
@@ -73,6 +74,7 @@ export function TasaBanxicoChart({ series }: Props) {
               x: {
                 type: 'time',
                 time: { unit: 'year' },
+                ...(xMin ? { min: xMin } : {}),
                 ticks: { color: '#94a3b8' },
                 grid: { color: 'rgba(148, 163, 184, 0.1)' },
               },

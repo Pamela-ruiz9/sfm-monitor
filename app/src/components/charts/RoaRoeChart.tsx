@@ -17,7 +17,8 @@ const DEFAULT_CRISES = [
 
 export function RoaRoeChart({ fechas, roa, roe }: Props) {
   const labels = fechas.map((f) => `${f}-01`);
-
+  // Dynamic x-axis min: start at first available data point, not at crisis annotation dates
+  const xMin = fechas.length > 0 ? `${fechas[0]}-01` : undefined;
   const data = {
     labels,
     datasets: [
@@ -94,6 +95,7 @@ export function RoaRoeChart({ fechas, roa, roe }: Props) {
               x: {
                 type: 'time',
                 time: { unit: 'year' },
+                ...(xMin ? { min: xMin } : {}),
                 ticks: { color: '#94a3b8' },
                 grid: { color: 'rgba(148, 163, 184, 0.1)' },
               },

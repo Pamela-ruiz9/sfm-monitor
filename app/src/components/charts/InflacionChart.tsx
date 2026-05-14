@@ -26,6 +26,7 @@ export function InflacionChart({
     .slice()
     .sort((a, b) => a.mes.localeCompare(b.mes))
     .map((p) => ({ x: `${p.mes}-15`, y: p.valor }));
+  const xMin = points.length > 0 ? points[0].x : undefined;
 
   const data = {
     datasets: [
@@ -94,6 +95,7 @@ export function InflacionChart({
               x: {
                 type: 'time',
                 time: { unit: 'year' },
+                ...(xMin ? { min: xMin } : {}),
                 ticks: { color: '#94a3b8' },
                 grid: { color: 'rgba(148, 163, 184, 0.1)' },
               },
