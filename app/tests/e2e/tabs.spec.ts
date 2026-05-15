@@ -12,6 +12,7 @@ const TABS = [
   { path: '/credito', heading: /Crédito|Banca/i },
   { path: '/sofipos', heading: /SoFiPOs/i },
   { path: '/macro', heading: /INPC|Inflación|Macro/i },
+  { path: '/riesgo', heading: /Riesgo|heatmap|sistémico/i },
   { path: '/metodologia', heading: /Metodología|umbrales|fuentes/i },
 ];
 
@@ -28,7 +29,7 @@ for (const { path, heading } of TABS) {
     // Filter out expected errors (manifest 404 placeholder, font preload, etc.)
     const blocking = errors.filter(
       (e) =>
-        !/manifest|favicon|preload|chunk|sentry|cookies|workbox|sw\.js/i.test(e),
+        !/manifest|favicon|preload|chunk|sentry|cookies/i.test(e),
     );
     expect(blocking, `Console errors on ${path}:\n${blocking.join('\n')}`).toEqual([]);
   });

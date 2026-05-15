@@ -12,8 +12,6 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:4321/sfm-monitor',
     trace: 'on-first-retry',
-    // Disable Service Worker in E2E — prevents stale-hash CSS 404s from workbox precache
-    serviceWorkers: 'block',
   },
   projects: [
     {
@@ -26,15 +24,11 @@ export default defineConfig({
     },
   ],
   webServer: {
-    // In CI: use 'serve' (faster startup than astro preview).
-    // Locally: astro preview for full Astro runtime fidelity.
-    command: process.env['CI']
-      ? 'npx serve dist --listen 4321 --no-clipboard'
-      : 'npm run preview -- --port 4321',
-    url: 'http://localhost:4321/sfm-monitor/',
+    command: 'npm run preview',
+    // Health-check URL must include the Astro `base` path (/sfm-monitor)
+    // so Playwright detects the server as ready (bare / returns 404).
+    url: 'http://localhost:4321/sfm-monitor',
     reuseExistingServer: !process.env['CI'],
-    stdout: 'pipe',
-    stderr: 'pipe',
-    timeout: 30_000,
+    timeout: 180_000,
   },
 });
