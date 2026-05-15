@@ -10,7 +10,7 @@ export default defineConfig({
   workers: process.env['CI'] ? 1 : undefined,
   reporter: [['html', { open: 'never' }], ['list']],
   use: {
-    baseURL: 'http://localhost:4321',
+    baseURL: 'http://localhost:4321/sfm-monitor',
     trace: 'on-first-retry',
   },
   projects: [
@@ -25,8 +25,10 @@ export default defineConfig({
   ],
   webServer: {
     command: 'npm run preview',
-    url: 'http://localhost:4321',
+    // Health-check URL must include the Astro `base` path (/sfm-monitor)
+    // so Playwright detects the server as ready (bare / returns 404).
+    url: 'http://localhost:4321/sfm-monitor',
     reuseExistingServer: !process.env['CI'],
-    timeout: 120_000,
+    timeout: 180_000,
   },
 });
