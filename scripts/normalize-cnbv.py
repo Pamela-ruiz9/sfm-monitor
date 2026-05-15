@@ -277,6 +277,21 @@ if __name__ == "__main__":
         print("DRY-RUN mode — no files will be written\n")
 
     credito = build_credito()
+
+    # Merge historico_por_banco from imor_por_banco.json if available
+    imor_banco_path = os.path.join(OUT, "imor_por_banco.json")
+    if os.path.exists(imor_banco_path):
+        with open(imor_banco_path, encoding="utf-8") as f:
+            imor_banco = json.load(f)
+        credito["historico_por_banco"] = {
+            "fechas": imor_banco["fechas"],
+            "bancos": imor_banco["bancos"],
+        }
+        print(f"historico_por_banco: {len(imor_banco['bancos'])} bancos mergeados")
+    else:
+        print("⚠️  imor_por_banco.json not found — historico_por_banco omitted")
+        print("   Run: python3 scripts/normalize-imor-por-banco.py")
+
     credito = _clean_optional_nones(credito)
     print(f"credito: {len(credito['historico_por_cartera']['fechas'])} periodos, "
           f"latest {credito['ultima_actualizacion']}, "
