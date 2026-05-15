@@ -17,6 +17,7 @@ const DEFAULT_CRISES = [
 ] as const;
 
 export function FXChart({ series, crises = DEFAULT_CRISES }: Props) {
+  const xMin = series.length > 0 ? `${series[0]!.mes}-01` : undefined;
   const data = {
     labels: series.map((p) => `${p.mes}-01`),
     datasets: [
@@ -80,6 +81,7 @@ export function FXChart({ series, crises = DEFAULT_CRISES }: Props) {
               x: {
                 type: 'time',
                 time: { unit: 'year' },
+                ...(xMin ? { min: xMin } : {}),
                 ticks: { color: '#94a3b8' },
                 grid: { color: 'rgba(148, 163, 184, 0.1)' },
               },

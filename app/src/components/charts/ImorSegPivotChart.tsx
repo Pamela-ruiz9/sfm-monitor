@@ -31,6 +31,8 @@ interface Props {
     };
     entidades: Array<{ id: string; nombre: string; imor: (number | null)[] }>;
   };
+  /** When false, hides the SoFiPOs toggle and locks to Banca Múltiple only. Default: true */
+  showSofipos?: boolean;
 }
 
 const CARTERA_LABELS: Record<Cartera, string> = {
@@ -54,7 +56,7 @@ function pillClass(active: boolean): string {
   );
 }
 
-export function ImorSegPivotChart({ bm, sofipos }: Props) {
+export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
   const [sector, setSector] = useState<Sector>('bm');
   const [view, setView] = useState<'sistema' | 'banco' | 'entidad'>('sistema');
   const [cartera, setCartera] = useState<Cartera>('total');
@@ -122,6 +124,7 @@ export function ImorSegPivotChart({ bm, sofipos }: Props) {
   }, [sector, view, cartera, bancoId, entidadId, bm, sofipos]);
 
   const latest = values[values.length - 1];
+  const xMin = fechas.length > 0 ? `${fechas[0]}-15` : undefined;
 
   const chartData = {
     labels: fechas.map((f) => `${f}-15`),
@@ -157,7 +160,8 @@ export function ImorSegPivotChart({ bm, sofipos }: Props) {
   return (
     <ChartErrorBoundary chartName="IMOR pivotable">
       <div className="space-y-3">
-        {/* Sector toggle */}
+        {/* Sector toggle — only shown when SoFiPOs are enabled */}
+        {showSofipos && (
         <div className="flex gap-2 flex-wrap">
           <button onClick={() => changeSector('bm')} className={pillClass(sector === 'bm')}>
             🏦 Banca Múltiple
@@ -166,6 +170,7 @@ export function ImorSegPivotChart({ bm, sofipos }: Props) {
             🏘️ SoFiPOs
           </button>
         </div>
+        )}
 
         {/* View toggle */}
         <div className="flex gap-2 flex-wrap">
@@ -239,6 +244,7 @@ export function ImorSegPivotChart({ bm, sofipos }: Props) {
                 x: {
                   type: 'time',
                   time: { unit: 'year' },
+                  ...(xMin ? { min: xMin } : {}),
                   ticks: { color: '#94a3b8' },
                   grid: { color: 'rgba(148, 163, 184, 0.1)' },
                 },

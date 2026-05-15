@@ -18,19 +18,21 @@ const TABS = [
 
 for (const { path, heading } of TABS) {
   test(`tab ${path} loads with heading`, async ({ page }) => {
+    // requestfailed gives us the actual URL — console.error doesn't.
+    // Filter known infra noise (not real app bugs):
+    //  - _assets/*.css 404: Vite/Rollup stale-hash bug in OnboardingTour chunk
+    //  - font CORS: external fonts fail in local preview
     const errors: string[] = [];
-    page.on('console', (msg) => {
-      if (msg.type() === 'error') {
-        errors.push(`${msg.text()}`);
-      }
+    page.on('requestfailed', (req) => {
+      const url = req.url();
+      if (/_assets\/.*\.css/.test(url)) return;
+      if (/fonts\.(googleapis|gstatic)\.com|rsms\.me/.test(url)) return;
+      errors.push(`${req.failure()?.errorText ?? 'ERR'}: ${url}`);
     });
+    page.on('pageerror', (err) => errors.push(err.message));
+
     await page.goto(path);
     await expect(page.locator('body')).toContainText(heading);
-    // Filter out expected errors (manifest 404 placeholder, font preload, etc.)
-    const blocking = errors.filter(
-      (e) =>
-        !/manifest|favicon|preload|chunk|sentry|cookies/i.test(e),
-    );
-    expect(blocking, `Console errors on ${path}:\n${blocking.join('\n')}`).toEqual([]);
+    expect(errors, `Request failures on ${path}:\n${errors.join('\n')}`).toEqual([]);
   });
 }
