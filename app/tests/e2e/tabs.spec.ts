@@ -29,7 +29,7 @@ for (const { path, heading } of TABS) {
     // Filter out expected errors (manifest 404 placeholder, font preload, etc.)
     const blocking = errors.filter(
       (e) =>
-        !/manifest|favicon|preload|chunk|sentry|cookies|workbox|sw\.js/i.test(e),
+        !/manifest|favicon|preload|chunk|sentry|cookies/i.test(e),
     );
     expect(blocking, `Console errors on ${path}:\n${blocking.join('\n')}`).toEqual([]);
   });
