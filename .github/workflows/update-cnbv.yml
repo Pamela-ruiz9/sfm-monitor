@@ -1,36 +1,35 @@
 name: Update CNBV Data
 
-# Hybrid strategy C:
-#   1. AUTO: runs on day 1 of each month, detects if CNBV published new data,
-#      downloads it automatically if the URL is stable.
-#   2. RETRY: if detection fails, retries every 48h until day 15.
-#   3. ALERT: if data still missing by day 15, opens a GitHub Issue.
-#   4. MANUAL: Pame can upload files and trigger via workflow_dispatch at any time.
-#      Supports uploading via the GitHub UI or pushing to raw-data/ directly.
+# Strategy: manual-first + monthly reminder.
+#
+# The CNBV portal (portafolioinfo.cnbv.gob.mx) uses Cloudflare and does NOT
+# expose stable downloadable URLs — filenames do not include the date and
+# automated HEAD/GET requests are blocked. Auto-download is not feasible.
+#
+# Flow:
+#   1. Day 1 of each month: checks if data for the current month already exists.
+#      If yes → skips everything. If no → waits for manual upload.
+#   2. Day 15: if data still missing → opens a GitHub Issue reminder.
+#   3. MANUAL: Pame downloads from the portal, uploads to raw-data/, then
+#      triggers this workflow via workflow_dispatch with skip_download=true.
 #
 # What this workflow does:
-#   - Checks portafolioinfo.cnbv.gob.mx for new monthly file (Sector 40 BM)
-#   - Downloads if found, or uses already-committed raw-data/ files
+#   - Skips download step entirely (CNBV portal blocks automation)
+#   - Uses already-committed raw-data/ files
 #   - Runs normalize-cnbv.py → normalize-ifrs9.py → merge-sfm-data.py
 #   - Validates schema, commits data/ JSONs, triggers deploy
 
 on:
   schedule:
-    # Day 1 of each month at 15:00 UTC (9 AM CDMX)
+    # Day 1 of each month at 15:00 UTC (9 AM CDMX) — check if data is current
     - cron: '0 15 1 * *'
-    # Retry every 48h from day 3 to day 15 (days 3,5,7,9,11,13,15)
-    - cron: '0 15 3,5,7,9,11,13,15 * *'
+    # Day 15 — open alert if data still missing
+    - cron: '0 15 15 * *'
 
   workflow_dispatch:
     inputs:
       force_normalize:
         description: 'Force re-normalize even if raw-data unchanged'
-        required: false
-        default: 'false'
-        type: choice
-        options: ['false', 'true']
-      skip_download:
-        description: 'Skip CNBV download (use existing raw-data/ files)'
         required: false
         default: 'false'
         type: choice
@@ -57,82 +56,53 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Detect + download new CNBV monthly data
+      - name: Check if current month data already exists
         id: detect
-        if: ${{ github.event.inputs.skip_download != 'true' }}
-        # Note: if this step is skipped, new_month output is empty string → alert_check treats it as 'false'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
+        # Skips the normalize steps if data is already up to date.
+        # new_month=false → already have data, nothing to do.
+        # new_month=true  → raw-data/ has been updated manually, proceed to normalize.
         run: |
           python3 << 'PYEOF'
-          import os, re, sys, json
-          from datetime import date, timedelta
-          import urllib.request
+          import os, json, sys
+          from datetime import date
 
           today = date.today()
-          year = today.year
-          month = today.month
+          current_period = f"{today.year}{today.month:02d}"
 
-          # Current month string: YYYYMM
-          current_period = f"{year}{month:02d}"
-
-          # Check if we already have this month's data
           credito_path = "data/credito.json"
           if os.path.exists(credito_path):
               with open(credito_path) as f:
                   credito = json.load(f)
               last_update = credito.get("ultima_actualizacion", "")
-              # ultima_actualizacion is YYYY-MM
               last_period = last_update.replace("-", "") if last_update else ""
               if last_period >= current_period:
-                  print(f"✅ Already have data for {current_period} (last: {last_period})")
+                  print(f"✅ Data already current for {current_period} (last: {last_period})")
                   with open(os.environ["GITHUB_OUTPUT"], "a") as f:
                       f.write("new_month=false\n")
                   sys.exit(0)
 
-          print(f"🔍 Checking CNBV for period {current_period}...")
+          print(f"📋 No data yet for {current_period} — waiting for manual upload to raw-data/")
+          # Check if raw-data has been recently updated (manual upload happened)
+          import subprocess
+          result = subprocess.run(
+              ["git", "log", "-1", "--format=%ct", "--", "raw-data/"],
+              capture_output=True, text=True
+          )
+          last_rawdata_ts = int(result.stdout.strip() or 0)
+          # If raw-data was committed this month, proceed with normalization
+          from datetime import timezone
+          import datetime
+          if last_rawdata_ts > 0:
+              last_rawdata_date = datetime.datetime.fromtimestamp(last_rawdata_ts, tz=timezone.utc)
+              if last_rawdata_date.year == today.year and last_rawdata_date.month == today.month:
+                  print(f"📦 raw-data/ updated this month ({last_rawdata_date.date()}) — proceeding to normalize")
+                  with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                      f.write("new_month=true\n")
+                  sys.exit(0)
 
-          # CNBV Portafolio de Información URL patterns for Sector 40 BM.
-          # CNBV changes filenames without notice — try multiple known patterns.
-          # Format: sh_datos_40_YYYYMM.csv or sh_datos_40.csv (latest)
-          BASE = "https://portafolioinfo.cnbv.gob.mx"
-          candidate_urls = [
-              f"{BASE}/Boletines/sh_datos_40_{current_period}.zip",
-              f"{BASE}/Boletines/sh_datos_40_{current_period}.csv",
-              f"{BASE}/PortafolioInformacion/Documents/BM/sh_datos_40_{current_period}.zip",
-              f"{BASE}/PortafolioInformacion/Documents/BM/sh_datos_40_{current_period}.csv",
-          ]
-
-          found_url = None
-          for url in candidate_urls:
-              try:
-                  req = urllib.request.Request(url, method="HEAD")
-                  req.add_header("User-Agent", "sfm-monitor/1.0 (github.com/Pamela-ruiz9/sfm-monitor)")
-                  with urllib.request.urlopen(req, timeout=15) as r:
-                      if r.status == 200:
-                          found_url = url
-                          print(f"✅ Found: {url}")
-                          break
-              except Exception as e:
-                  print(f"   ✗ {url}: {e}")
-
-          if not found_url:
-              print(f"⚠️  No CNBV file found for {current_period} — will retry or alert")
-              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-                  f.write("new_month=false\n")
-              sys.exit(0)
-
-          # Download the file
-          os.makedirs("raw-data", exist_ok=True)
-          dest_ext = "zip" if found_url.endswith(".zip") else "csv"
-          dest = f"raw-data/sh_datos_40_{current_period}.{dest_ext}"
-          print(f"⬇️  Downloading to {dest}...")
-          urllib.request.urlretrieve(found_url, dest)
-          print(f"✅ Downloaded: {dest}")
-
+          print("⏳ raw-data/ not updated this month yet — skipping normalize")
           with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-              f.write("new_month=true\n")
+              f.write("new_month=false\n")
           PYEOF
 
       - name: Check if alert is needed (day 15 with no data)
@@ -179,9 +149,9 @@ jobs:
                   f"**{today.year}-{today.month:02d}** después de 15 días de reintentos.\n\n"
                   f"**Acción requerida:** Descargar manualmente desde "
                   f"[Portafolio de Información CNBV]"
-                  f"(https://portafolioinfo.cnbv.gob.mx) y subir a `raw-data/`, "
-                  f"luego correr el workflow `Update CNBV Data` con "
-                  f"`skip_download=true`.\n\n"
+                  f"(https://portafolioinfo.cnbv.gob.mx), subir los archivos a `raw-data/` "
+                  f"con un commit, y luego correr el workflow `Update CNBV Data` "
+                  f"via workflow\_dispatch.\n\n"
                   f"Archivos necesarios:\n"
                   f"- `raw-data/sh_datos_40_YYYYMM.csv` (Sector 40 BM)\n"
                   f"- `raw-data/ifrs9_bm.zip` (R12A IFRS9, si hay nuevo mes)\n\n"
@@ -202,6 +172,7 @@ jobs:
 
       - name: Normalize CNBV data
         id: normalize
+        if: ${{ steps.detect.outputs.new_month == 'true' || github.event.inputs.force_normalize == 'true' }}
         run: |
           # Determine if there's anything to normalize
           CHANGED=false
