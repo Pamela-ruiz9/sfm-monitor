@@ -12,6 +12,8 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:4321/sfm-monitor',
     trace: 'on-first-retry',
+    // Disable Service Worker in E2E — prevents stale-hash CSS 404s from workbox precache
+    serviceWorkers: 'block',
   },
   projects: [
     {
