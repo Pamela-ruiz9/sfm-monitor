@@ -267,7 +267,7 @@ function buildEChartsOption(cells: HeatCell[]) {
     },
     grid: {
       top: 20,
-      bottom: 60,
+      bottom: 80,
       left: 90,
       right: 20,
     },
@@ -295,19 +295,19 @@ function buildEChartsOption(cells: HeatCell[]) {
       axisLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } },
     },
     visualMap: {
-      type: 'continuous',   // explícito — ECharts 5 lo requiere para heatmap
+      type: 'continuous',
       dimension: 2,         // colorear por el 3er elemento del array [xi, yi, percentil, ...]
       min: 0,
       max: 100,
-      calculable: true,
+      calculable: false,    // desactivar el slider arrastrable — evita que el handle flote sobre las celdas
       orient: 'horizontal',
       left: 'center',
-      bottom: 4,
-      itemWidth: 200,       // ancho de la barra (horizontal)
-      itemHeight: 14,       // grosor de la barra
+      bottom: 10,
+      itemWidth: 160,       // ancho de la barra de color
+      itemHeight: 12,       // grosor de la barra
       inRange: { color: colorPalette },
       textStyle: { color: 'rgba(255,255,255,0.5)', fontSize: 10 },
-      text: ['Riesgo Alto', 'Riesgo Bajo'],  // ECharts: izq=max, der=min en horizontal
+      text: ['Riesgo Alto', 'Riesgo Bajo'],
     },
     series: [
       {
@@ -387,6 +387,6 @@ export function RiskHeatmap({ data }: Props) {
   }, [data]);
 
   return (
-    <div ref={containerRef} style={{ width: '100%', height: '340px' }} />
+    <div ref={containerRef} style={{ width: '100%', height: '380px' }} />
   );
 }
