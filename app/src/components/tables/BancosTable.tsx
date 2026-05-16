@@ -24,7 +24,7 @@ interface BancoEntry {
   id: string;
   nombre: string;
   imor_total: (number | null)[];
-  imor_latest?: { valor: number; fecha: string } | null;
+  imor_latest?: { valor: number; fecha: string } | null | undefined;
 }
 
 interface Props {
