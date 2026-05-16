@@ -126,10 +126,12 @@ def build_output(raw_data: dict, catalogue: dict) -> dict:
       "fechas": ["2000-12", ...],
       "bancos": {
         "040002": {
+          "id": "040002",
           "nombre": "Banamex",
           "imor_total":  [float|null, ...],
           "imora_total": [float|null, ...],
           "icor_total":  [float|null, ...],
+          "imor_latest": {"valor": float, "fecha": "YYYY-MM"} | null,
         }
       }
     }
@@ -153,18 +155,21 @@ def build_output(raw_data: dict, catalogue: dict) -> dict:
 
         # Only include banks that have at least some IMOR data
         if any(v is not None for v in imor_total):
-            # imor_latest / imora_latest: last non-None value — convenience field
-            # for the frontend so it doesn't have to iterate the full array
-            imor_latest = next((v for v in reversed(imor_total) if v is not None), None)
-            imora_latest = next((v for v in reversed(imora_total) if v is not None), None)
+            # imor_latest: last non-null IMOR value with its period — avoids full array
+            # iteration in the frontend (used by #36 tabla interactiva)
+            imor_latest = None
+            for fecha, val in zip(reversed(fechas), reversed(imor_total)):
+                if val is not None:
+                    imor_latest = {"valor": val, "fecha": fecha}
+                    break
+
             bancos[entidad_id] = {
                 "id": entidad_id,
                 "nombre": nombre,
-                "imor_latest": imor_latest,
-                "imora_latest": imora_latest,
                 "imor_total": imor_total,
                 "imora_total": imora_total,
                 "icor_total": icor_total,
+                "imor_latest": imor_latest,
             }
 
     return {
