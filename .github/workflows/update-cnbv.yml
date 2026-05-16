@@ -1,30 +1,23 @@
 name: Update CNBV Data
 
-# Strategy: manual-first + monthly reminder.
-#
-# The CNBV portal (portafolioinfo.cnbv.gob.mx) uses Cloudflare and does NOT
-# expose stable downloadable URLs — filenames do not include the date and
-# automated HEAD/GET requests are blocked. Auto-download is not feasible.
+# Trigger: Pame downloads the monthly CSV from portafolioinfo.cnbv.gob.mx manually,
+# commits it to raw-data/ on main, and this workflow runs automatically.
 #
 # Flow:
-#   1. Day 1 of each month: checks if data for the current month already exists.
-#      If yes → skips everything. If no → waits for manual upload.
-#   2. Day 15: if data still missing → opens a GitHub Issue reminder.
-#   3. MANUAL: Pame downloads from the portal, uploads to raw-data/, then
-#      triggers this workflow via workflow_dispatch with skip_download=true.
+#   1. Pame downloads files from the CNBV portal (Cloudflare-protected, no automation possible)
+#   2. Commits raw-data files to main (directly or via PR merge)
+#   3. This workflow detects the push and runs the normalization pipeline
+#   4. Normalized data/ JSONs are committed and the app is deployed
 #
-# What this workflow does:
-#   - Skips download step entirely (CNBV portal blocks automation)
-#   - Uses already-committed raw-data/ files
-#   - Runs normalize-cnbv.py → normalize-ifrs9.py → merge-sfm-data.py
-#   - Validates schema, commits data/ JSONs, triggers deploy
+# Manual trigger (workflow_dispatch) also available for re-runs or forced normalization.
 
 on:
-  schedule:
-    # Day 1 of each month at 15:00 UTC (9 AM CDMX) — check if data is current
-    - cron: '0 15 1 * *'
-    # Day 15 — open alert if data still missing
-    - cron: '0 15 15 * *'
+  push:
+    branches: [main]
+    paths:
+      - 'raw-data/**.csv'
+      - 'raw-data/**.json'
+      - 'raw-data/**.zip'
 
   workflow_dispatch:
     inputs:
@@ -37,15 +30,13 @@ on:
 
 jobs:
   update-cnbv:
-    name: Fetch CNBV data + normalize + commit
+    name: Normalize CNBV data + commit + deploy
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: write   # needed to open alert issues
 
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
-      new_month: ${{ steps.detect.outputs.new_month }}
 
     steps:
       - name: Checkout repo
@@ -56,125 +47,9 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Check if current month data already exists
-        id: detect
-        # Skips the normalize steps if data is already up to date.
-        # new_month=false → already have data, nothing to do.
-        # new_month=true  → raw-data/ has been updated manually, proceed to normalize.
-        run: |
-          python3 << 'PYEOF'
-          import os, json, sys
-          from datetime import date
-
-          today = date.today()
-          current_period = f"{today.year}{today.month:02d}"
-
-          credito_path = "data/credito.json"
-          if os.path.exists(credito_path):
-              with open(credito_path) as f:
-                  credito = json.load(f)
-              last_update = credito.get("ultima_actualizacion", "")
-              last_period = last_update.replace("-", "") if last_update else ""
-              if last_period >= current_period:
-                  print(f"✅ Data already current for {current_period} (last: {last_period})")
-                  with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-                      f.write("new_month=false\n")
-                  sys.exit(0)
-
-          print(f"📋 No data yet for {current_period} — waiting for manual upload to raw-data/")
-          # Check if raw-data has been recently updated (manual upload happened)
-          import subprocess
-          result = subprocess.run(
-              ["git", "log", "-1", "--format=%ct", "--", "raw-data/"],
-              capture_output=True, text=True
-          )
-          last_rawdata_ts = int(result.stdout.strip() or 0)
-          # If raw-data was committed this month, proceed with normalization
-          from datetime import timezone
-          import datetime
-          if last_rawdata_ts > 0:
-              last_rawdata_date = datetime.datetime.fromtimestamp(last_rawdata_ts, tz=timezone.utc)
-              if last_rawdata_date.year == today.year and last_rawdata_date.month == today.month:
-                  print(f"📦 raw-data/ updated this month ({last_rawdata_date.date()}) — proceeding to normalize")
-                  with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-                      f.write("new_month=true\n")
-                  sys.exit(0)
-
-          print("⏳ raw-data/ not updated this month yet — skipping normalize")
-          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-              f.write("new_month=false\n")
-          PYEOF
-
-      - name: Check if alert is needed (day 15 with no data)
-        id: alert_check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-        run: |
-          python3 << 'PYEOF'
-          import os, json
-          from datetime import date
-
-          today = date.today()
-          new_month = os.environ.get("new_month", "false")
-
-          # Only alert on day 15 when still missing data
-          if today.day != 15 or new_month == "true":
-              print("No alert needed")
-              raise SystemExit(0)
-
-          # Check last known data period
-          credito_path = "data/credito.json"
-          current_period = f"{today.year}{today.month:02d}"
-          last_period = ""
-          if os.path.exists(credito_path):
-              with open(credito_path) as f:
-                  credito = json.load(f)
-              last_update = credito.get("ultima_actualizacion", "")
-              last_period = last_update.replace("-", "")
-
-          if last_period >= current_period:
-              print(f"Data is current ({last_period}), no alert needed")
-              raise SystemExit(0)
-
-          # Open GitHub issue via API
-          import urllib.request, urllib.parse
-          token = os.environ["GITHUB_TOKEN"]
-          repo = os.environ["REPO"]
-          url = f"https://api.github.com/repos/{repo}/issues"
-          payload = json.dumps({
-              "title": f"⚠️ CNBV data missing for {today.year}-{today.month:02d}",
-              "body": (
-                  f"El pipeline automático no encontró datos CNBV para "
-                  f"**{today.year}-{today.month:02d}** después de 15 días de reintentos.\n\n"
-                  f"**Acción requerida:** Descargar manualmente desde "
-                  f"[Portafolio de Información CNBV]"
-                  f"(https://portafolioinfo.cnbv.gob.mx), subir los archivos a `raw-data/` "
-                  f"con un commit, y luego correr el workflow `Update CNBV Data` "
-                  f"via workflow\_dispatch.\n\n"
-                  f"Archivos necesarios:\n"
-                  f"- `raw-data/sh_datos_40_YYYYMM.csv` (Sector 40 BM)\n"
-                  f"- `raw-data/ifrs9_bm.zip` (R12A IFRS9, si hay nuevo mes)\n\n"
-                  f"_Abierto automáticamente por el workflow `update-cnbv.yml`_"
-              ),
-              "labels": ["help wanted"],
-          }).encode()
-          req = urllib.request.Request(url, data=payload, method="POST")
-          req.add_header("Authorization", f"Bearer {token}")
-          req.add_header("Content-Type", "application/json")
-          req.add_header("Accept", "application/vnd.github+json")
-          with urllib.request.urlopen(req) as r:
-              issue = json.loads(r.read())
-          print(f"🚨 Alert issue opened: {issue['html_url']}")
-          PYEOF
-        env:
-          new_month: ${{ steps.detect.outputs.new_month || 'false' }}
-
       - name: Normalize CNBV data
         id: normalize
-        if: ${{ steps.detect.outputs.new_month == 'true' || github.event.inputs.force_normalize == 'true' }}
         run: |
-          # Determine if there's anything to normalize
           CHANGED=false
 
           # normalize-cnbv.py reads raw-data/cnbv_indicadores.json + sofipos_by_inst.json
@@ -195,19 +70,29 @@ jobs:
             echo "⚠️  No IFRS9 source found — skipping ifrs9"
           fi
 
+          # normalize-imor-por-banco.py reads raw-data/sh_datos_40.csv (or versioned variant)
+          if ls raw-data/sh_datos_40.csv raw-data/sh_datos_40_*.csv 2>/dev/null | head -1 | grep -q .; then
+            echo "▶ Running normalize-imor-por-banco.py..."
+            LATEST_SH=$(ls raw-data/sh_datos_40_*.csv 2>/dev/null | sort | tail -1)
+            if [ -n "$LATEST_SH" ] && [ ! -f raw-data/sh_datos_40.csv ]; then
+              ln -sf "$(basename $LATEST_SH)" raw-data/sh_datos_40.csv
+            fi
+            python3 scripts/normalize-imor-por-banco.py
+            CHANGED=true
+          else
+            echo "⚠️  sh_datos_40.csv not found — skipping imor por banco"
+          fi
+
           echo "normalize_ran=$CHANGED" >> $GITHUB_OUTPUT
 
       - name: Merge into sfm-data.json
         if: ${{ steps.normalize.outputs.normalize_ran == 'true' || github.event.inputs.force_normalize == 'true' }}
-        run: |
-          # Re-read existing Banxico data (sfm-data.json already has FX/Tasa/Inflacion)
-          # merge-sfm-data.py adds credito/sofipos/ifrs9 on top
-          python3 scripts/merge-sfm-data.py
+        run: python3 scripts/merge-sfm-data.py
 
       - name: Setup Node.js for schema validation
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
           cache: 'npm'
           cache-dependency-path: app/package-lock.json
 
@@ -223,7 +108,7 @@ jobs:
         run: |
           git config user.name "sfm-monitor-bot"
           git config user.email "sfm-monitor@noreply.github.com"
-          git add data/sfm-data.json data/credito.json data/sofipos.json data/ifrs9.json
+          git add data/sfm-data.json data/credito.json data/sofipos.json data/ifrs9.json data/imor_por_banco.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
             echo "changed=false" >> $GITHUB_OUTPUT
