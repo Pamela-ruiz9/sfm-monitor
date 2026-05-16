@@ -153,8 +153,15 @@ def build_output(raw_data: dict, catalogue: dict) -> dict:
 
         # Only include banks that have at least some IMOR data
         if any(v is not None for v in imor_total):
+            # imor_latest / imora_latest: last non-None value — convenience field
+            # for the frontend so it doesn't have to iterate the full array
+            imor_latest = next((v for v in reversed(imor_total) if v is not None), None)
+            imora_latest = next((v for v in reversed(imora_total) if v is not None), None)
             bancos[entidad_id] = {
+                "id": entidad_id,
                 "nombre": nombre,
+                "imor_latest": imor_latest,
+                "imora_latest": imora_latest,
                 "imor_total": imor_total,
                 "imora_total": imora_total,
                 "icor_total": icor_total,
