@@ -142,7 +142,7 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '2026-02';
       {hpb ? (
         <BancosTable
           fechas={hpb.fechas}
-          bancos={hpb.bancos}
+          bancos={hpb.bancos as Record<string, import('../components/tables/BancosTable').BancoEntry>}
           client:visible
         />
       ) : (

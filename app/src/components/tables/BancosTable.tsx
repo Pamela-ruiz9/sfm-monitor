@@ -20,11 +20,12 @@ import { useEffect, useRef, useState } from 'react';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
-interface BancoEntry {
+export interface BancoEntry {
   id: string;
   nombre: string;
   imor_total: (number | null)[];
-  imor_latest?: { valor: number; fecha: string } | null | undefined;
+  imor_latest?: number | null;
+  imora_latest?: number | null;
 }
 
 interface Props {
@@ -64,7 +65,7 @@ function formatDelta(val: number | null): string {
   return `${sign}${val.toFixed(2)}pp`;
 }
 
-function buildRows(fechas: string[], bancos: Record<string, BancoEntry>): RowData[] {
+function buildRows(_fechas: string[], bancos: Record<string, BancoEntry>): RowData[] {
   const rows: RowData[] = [];
 
   for (const banco of Object.values(bancos)) {
