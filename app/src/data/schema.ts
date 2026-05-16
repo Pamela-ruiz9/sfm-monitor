@@ -116,6 +116,9 @@ const HistoricoBancoEntrySchema = z.object({
   nombre: z.string(),
   id: z.string(),
   imor_total: z.array(z.number().nullable()),
+  imora_total: z.array(z.number().nullable()).optional(),
+  icor_total: z.array(z.number().nullable()).optional(),
+  imor_latest: z.object({ valor: z.number(), fecha: z.string() }).nullable().optional(),
 });
 
 const HistoricoBancoCarteraEntrySchema = z.looseObject({
