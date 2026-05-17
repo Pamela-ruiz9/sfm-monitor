@@ -242,10 +242,21 @@ def build_sofipos() -> dict:
             safe_float(inst_data[p].get("imor_total")) if p in inst_data else None
             for p in all_periods
         ]
+        # cartera_total: last non-None imora_total value in pesos — proxy for institution size
+        # Used by the frontend to sort top-15 by cartera (issue #58)
+        imora_arr_pesos = [
+            safe_float(inst_data[p].get("imora_total")) if p in inst_data else None
+            for p in all_periods
+        ]
+        last_imora = next(
+            (v for v in reversed(imora_arr_pesos) if v is not None),
+            None,
+        )
         entidades[inst_id] = {
-            "nombre": SOFIPOS_NOMBRES.get(inst_id, inst_id),  # display name, ID as fallback
-            "id":     inst_id,
-            "imor":   imor_arr,
+            "nombre":        SOFIPOS_NOMBRES.get(inst_id, inst_id),
+            "id":            inst_id,
+            "imor":          imor_arr,
+            "cartera_total": last_imora,  # pesos — latest imora_total; None if unavailable
         }
 
     return {

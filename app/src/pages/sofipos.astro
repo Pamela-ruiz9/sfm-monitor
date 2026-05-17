@@ -27,10 +27,20 @@ const ultima = s.ultima!;
 const ents = Object.values(s.historico_por_entidad?.entidades ?? {}) as Array<{
   nombre: string;
   imor: (number | null)[];
+  cartera_total?: number | null;
 }>;
 const top15 = [...ents]
   .filter((e) => e.imor.length > 0)
-  .sort((a, b) => (b.imor[b.imor.length - 1] ?? 0) - (a.imor[a.imor.length - 1] ?? 0))
+  // Sort by cartera_total (imora_total in pesos) descending — largest portfolios first.
+  // Falls back to last IMOR value if cartera_total is unavailable (issue #58).
+  .sort((a, b) => {
+    const aCart = a.cartera_total ?? null;
+    const bCart = b.cartera_total ?? null;
+    if (aCart !== null && bCart !== null) return bCart - aCart;
+    if (aCart !== null) return -1;
+    if (bCart !== null) return 1;
+    return (b.imor[b.imor.length - 1] ?? 0) - (a.imor[a.imor.length - 1] ?? 0);
+  })
   .slice(0, 15);
 ---
 
