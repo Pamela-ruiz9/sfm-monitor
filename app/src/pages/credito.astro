@@ -11,6 +11,7 @@ import { IcorChart } from '~/components/charts/IcorChart';
 import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
 import { Ifrs9Chart } from '~/components/charts/Ifrs9Chart';
 import { ImorSegPivotChart } from '~/components/charts/ImorSegPivotChart';
+import { BancosTable } from '~/components/tables/BancosTable';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
@@ -66,6 +67,8 @@ const pivotProps = {
     entidades: sofiposEntsArr,
   },
 };
+
+const latest_date = hpb?.fechas?.slice(-1)[0] ?? '2026-02';
 ---
 
 <Layout
@@ -127,6 +130,24 @@ const pivotProps = {
       source="CNBV Sector 40 (Banca Múltiple)"
       tone="gold">
       <ImorSegPivotChart {...pivotProps} showSofipos={false} client:visible />
+    </Section>
+
+    <Section
+      id="bancos-table"
+      eyebrow="Riesgo por institución"
+      title="IMOR por banco — Banca Múltiple"
+      description={`Índice de morosidad por institución. Ordenable por IMOR actual, variación anual o nombre. Datos CNBV Sector 40, 2000–${latest_date}.`}
+      source="CNBV Sector 40 (sh_datos_40.csv)"
+      tone="gold">
+      {hpb ? (
+        <BancosTable
+          fechas={hpb.fechas}
+          bancos={hpb.bancos as Record<string, import('../components/tables/BancosTable').BancoEntry>}
+          client:visible
+        />
+      ) : (
+        <p class="text-sm text-[--color-text-mute]">Sin datos por institución disponibles.</p>
+      )}
     </Section>
 
     <Section

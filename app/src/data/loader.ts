@@ -6,9 +6,10 @@ import { SfmDataSchema, type SfmData } from './schema';
  * Throws at build time if any schema doesn't match — fail loud, fail early.
  *
  * Data sources:
- *   data/sfm-data.json   — Banxico (tipo_cambio, tasa_banxico, inflacion)  ← auto-updated daily
- *   data/credito.json    — CNBV banca múltiple (credito section)           ← updated by normalize-cnbv.py
- *   data/sofipos.json    — CNBV SoFiPOs (sofipos section)                  ← updated by normalize-cnbv.py
+ *   data/sfm-data.json        — Banxico (tipo_cambio, tasa_banxico, inflacion)  ← auto-updated daily
+ *   data/credito.json         — CNBV banca múltiple (credito section)           ← updated by normalize-cnbv.py
+ *   data/sofipos.json         — CNBV SoFiPOs (sofipos section)                  ← updated by normalize-cnbv.py
+ *   data/imor_por_banco.json  — CNBV IMOR per bank (62 banks × 303 periods)     ← updated by normalize-cnbv.py
  */
 let cached: SfmData | null = null;
 
@@ -46,9 +47,11 @@ const DATA_STUBS = {
 async function tryImportCnbv(): Promise<{
   credito: Record<string, unknown> | null;
   sofipos: Record<string, unknown> | null;
+  imorPorBanco: Record<string, unknown> | null;
 }> {
   let credito: Record<string, unknown> | null = null;
   let sofipos: Record<string, unknown> | null = null;
+  let imorPorBanco: Record<string, unknown> | null = null;
 
   try {
     const mod = await import('../../../data/credito.json');
@@ -64,7 +67,14 @@ async function tryImportCnbv(): Promise<{
     // sofipos.json not yet generated — stub will be used
   }
 
-  return { credito, sofipos };
+  try {
+    const mod = await import('../../../data/imor_por_banco.json');
+    imorPorBanco = (mod as { default: Record<string, unknown> }).default;
+  } catch {
+    // imor_por_banco.json not yet generated — stub will be used
+  }
+
+  return { credito, sofipos, imorPorBanco };
 }
 
 const cnbv = await tryImportCnbv();
@@ -90,6 +100,11 @@ export function loadSfmData(): SfmData {
       ...(cnbv.credito ?? {}),
       ...(typeof raw['credito'] === 'object' && raw['credito'] !== null
         ? (raw['credito'] as object)
+        : {}),
+      // imor_por_banco.json provides historico_por_banco (62 banks × 303 periods)
+      // It takes precedence over anything in credito.json for this key
+      ...(cnbv.imorPorBanco !== null
+        ? { historico_por_banco: cnbv.imorPorBanco }
         : {}),
     },
     sofipos: {
