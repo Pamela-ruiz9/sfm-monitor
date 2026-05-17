@@ -30,5 +30,6 @@ export default defineConfig({
     url: 'http://localhost:4321/sfm-monitor',
     reuseExistingServer: !process.env['CI'],
     timeout: 180_000,
+    stdout: 'pipe',
   },
 });
