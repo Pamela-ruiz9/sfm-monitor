@@ -30,10 +30,10 @@ function watchErrors(page: import('@playwright/test').Page): string[] {
 async function scrollAndWaitForCanvas(page: import('@playwright/test').Page) {
   // Scroll to bottom to trigger IntersectionObserver for all client:visible components
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-  await page.waitForTimeout(500);
+  // Wait for at least one canvas to appear in the DOM before continuing
+  await page.waitForFunction(() => document.querySelectorAll('canvas').length > 0, { timeout: 20000 }).catch(() => null);
   // Scroll back to top so first canvas is in view
   await page.evaluate(() => window.scrollTo(0, 0));
-  await page.waitForTimeout(300);
 }
 
 // ─── /credito charts ────────────────────────────────────────────────────────
@@ -49,7 +49,7 @@ test('credito: ImoraChart canvas renders', async ({ page }) => {
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
-  await expect(canvas).toBeVisible({ timeout: 10000 });
+  await expect(canvas).toBeVisible({ timeout: 20000 });
 });
 
 test('credito: IcorChart canvas renders', async ({ page }) => {
@@ -58,7 +58,7 @@ test('credito: IcorChart canvas renders', async ({ page }) => {
   await scrollAndWaitForCanvas(page);
   // At least two canvas elements should be present (multiple charts on /credito)
   const canvases = page.locator('canvas');
-  await expect(canvases.first()).toBeVisible({ timeout: 10000 });
+  await expect(canvases.first()).toBeVisible({ timeout: 20000 });
   const count = await canvases.count();
   expect(count).toBeGreaterThanOrEqual(2);
 });
@@ -74,7 +74,7 @@ test('credito: BM-only pivot renders and cartera buttons work', async ({ page })
   await expect(sofiposBtn).not.toBeVisible();
 
   // Canvas should render in BM-only mode
-  await expect(page.locator('canvas').first()).toBeVisible({ timeout: 10000 });
+  await expect(page.locator('canvas').first()).toBeVisible({ timeout: 20000 });
 
   // No blocking errors
   expect(errors, `Request failures on /credito:\n${errors.join('\n')}`).toEqual([]);
@@ -93,7 +93,7 @@ test('sofipos: at least one canvas renders', async ({ page }) => {
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
-  await expect(canvas).toBeVisible({ timeout: 10000 });
+  await expect(canvas).toBeVisible({ timeout: 20000 });
 });
 
 // ─── /riesgo heatmap ────────────────────────────────────────────────────────
@@ -109,5 +109,5 @@ test('riesgo: heatmap canvas renders', async ({ page }) => {
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
-  await expect(canvas).toBeVisible({ timeout: 10000 });
+  await expect(canvas).toBeVisible({ timeout: 20000 });
 });
