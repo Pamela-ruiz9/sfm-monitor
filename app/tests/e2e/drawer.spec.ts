@@ -8,14 +8,14 @@ test.beforeEach(async ({ context }) => {
 });
 
 test('clicking FX KPI opens drawer with FX content', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('.');
   await page.locator('[data-drawer-trigger="fx"]').first().click();
   await expect(page.locator('[role="dialog"]')).toBeVisible({ timeout: 5000 });
   await expect(page.locator('[role="dialog"]')).toContainText(/Tipo de cambio|MXN/i);
 });
 
 test('drawer can be closed with Escape', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('.');
   await page.locator('[data-drawer-trigger="fx"]').first().click();
   await expect(page.locator('[role="dialog"]')).toBeVisible({ timeout: 5000 });
   await page.keyboard.press('Escape');
@@ -23,6 +23,6 @@ test('drawer can be closed with Escape', async ({ page }) => {
 });
 
 test('deep link ?indicator=fx opens drawer on load', async ({ page }) => {
-  await page.goto('/?indicator=fx');
+  await page.goto('.?indicator=fx');
   await expect(page.locator('[role="dialog"]')).toBeVisible({ timeout: 5000 });
 });

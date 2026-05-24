@@ -6,14 +6,17 @@ test.beforeEach(async ({ context }) => {
   });
 });
 
+// NOTE: Playwright resolves paths starting with '/' against the server root (port 4321),
+// NOT against the configured baseURL (/sfm-monitor). Use relative paths ('.' or './sub')
+// so Playwright appends them to the baseURL correctly.
 const TABS = [
-  { path: '/', heading: /Resumen ejecutivo|SFM Monitor|sistema|Riesgo/i },
-  { path: '/mercado', heading: /MXN\/USD|Tasa objetivo|Mercado/i },
-  { path: '/credito', heading: /Crédito|Banca/i },
-  { path: '/sofipos', heading: /SoFiPOs/i },
-  { path: '/macro', heading: /INPC|Inflación|Macro/i },
-  { path: '/riesgo', heading: /Riesgo|heatmap|sistémico/i },
-  { path: '/metodologia', heading: /Metodología|umbrales|fuentes/i },
+  { path: '.', heading: /Resumen ejecutivo|SFM Monitor|sistema|Riesgo/i },
+  { path: './mercado', heading: /MXN\/USD|Tasa objetivo|Mercado/i },
+  { path: './credito', heading: /Crédito|Banca/i },
+  { path: './sofipos', heading: /SoFiPOs/i },
+  { path: './macro', heading: /INPC|Inflación|Macro/i },
+  { path: './riesgo', heading: /Riesgo|heatmap|sistémico/i },
+  { path: './metodologia', heading: /Metodología|umbrales|fuentes/i },
 ];
 
 for (const { path, heading } of TABS) {
