@@ -7,12 +7,15 @@ interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  /** JSON-LD structured data object(s) to inject in <head> */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title,
   description = 'Monitor de Riesgo del Sistema Financiero Mexicano · Datos de Banxico, CNBV e INEGI',
   canonical,
+  jsonLd,
 } = Astro.props;
 
 const fullTitle = title === 'SFM Monitor' ? title : `${title} · SFM Monitor`;
@@ -46,6 +49,13 @@ const canonicalUrl =
       rel="stylesheet"
     />
 
+    {jsonLd && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(Array.isArray(jsonLd) ? jsonLd : jsonLd)}
+      />
+    )}
     <ClientRouter />
     <title>{fullTitle}</title>
   </head>

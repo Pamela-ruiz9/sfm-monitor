@@ -4,6 +4,7 @@
  * Issue #34: Heatmap de riesgo sistémico (ECharts, percentiles rolling, semáforo compuesto)
  */
 import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
 import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
@@ -71,7 +72,13 @@ const PILL_TEXT: Record<Tone, string> = {
 
 <Layout
   title="Heatmap de Riesgo — SFM Monitor"
-  description="Mapa térmico de riesgo sistémico del Sistema Financiero Mexicano. Percentiles rolling por dimensión: crédito, mercado, macro, liquidez.">
+  description="Mapa térmico de riesgo sistémico del Sistema Financiero Mexicano. Percentiles rolling por dimensión: crédito, mercado, macro, liquidez."
+  jsonLd={datasetJsonLd({
+    name: 'Heatmap de Riesgo Sistémico — Sistema Financiero Mexicano',
+    description: 'Mapa térmico de riesgo sistémico con percentiles rolling por dimensión: crédito, mercado, macro y liquidez. Fuente: Banxico SIE y CNBV.',
+    path: '/riesgo',
+    keywords: ['riesgo sistémico', 'heatmap', 'percentiles', 'Banxico', 'CNBV'],
+  })}>
   <Header slot="header" />
   <TabBar slot="header" />
 

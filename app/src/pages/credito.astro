@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
 import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
@@ -73,7 +74,13 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '2026-02';
 
 <Layout
   title="Crédito"
-  description="Riesgo de crédito Banca Múltiple: IMOR, IMORA, ICOR, IFRS9, ROA/ROE.">
+  description="Riesgo de crédito Banca Múltiple: IMOR, IMORA, ICOR, IFRS9, ROA/ROE."
+  jsonLd={datasetJsonLd({
+    name: 'Riesgo de Crédito — Banca Múltiple México',
+    description: 'IMOR, IMORA, ICOR e IFRS 9 de la Banca Múltiple mexicana. Fuente: CNBV Portafolio de Información.',
+    path: '/credito',
+    keywords: ['IMOR', 'IMORA', 'ICOR', 'IFRS 9', 'banca múltiple', 'crédito', 'CNBV'],
+  })}>
   <Header slot="header" />
   <TabBar slot="header" />
 
