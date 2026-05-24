@@ -1,22 +1,24 @@
 import { expect, test } from '@playwright/test';
 
+const BASE = '/sfm-monitor';
+
 test.beforeEach(async ({ context }) => {
   await context.addInitScript(() => {
     localStorage.setItem('sfm-onboarding-done', 'true');
   });
 });
 
-// NOTE: Playwright resolves paths starting with '/' against the server root (port 4321),
-// NOT against the configured baseURL (/sfm-monitor). Use relative paths ('.' or './sub')
-// so Playwright appends them to the baseURL correctly.
+// NOTE: Playwright resolves page.goto('/path') against the server origin.
+// Since the Astro base is /sfm-monitor, all paths must include that prefix.
+// We use the BASE constant so it's easy to change if the deploy path changes.
 const TABS = [
-  { path: '.', heading: /Resumen ejecutivo|SFM Monitor|sistema|Riesgo/i },
-  { path: './mercado', heading: /MXN\/USD|Tasa objetivo|Mercado/i },
-  { path: './credito', heading: /Crédito|Banca/i },
-  { path: './sofipos', heading: /SoFiPOs/i },
-  { path: './macro', heading: /INPC|Inflación|Macro/i },
-  { path: './riesgo', heading: /Riesgo|heatmap|sistémico/i },
-  { path: './metodologia', heading: /Metodología|umbrales|fuentes/i },
+  { path: `${BASE}/`, heading: /Resumen ejecutivo|SFM Monitor|sistema|Riesgo/i },
+  { path: `${BASE}/mercado`, heading: /MXN\/USD|Tasa objetivo|Mercado/i },
+  { path: `${BASE}/credito`, heading: /Crédito|Banca/i },
+  { path: `${BASE}/sofipos`, heading: /SoFiPOs/i },
+  { path: `${BASE}/macro`, heading: /INPC|Inflación|Macro/i },
+  { path: `${BASE}/riesgo`, heading: /Riesgo|heatmap|sistémico/i },
+  { path: `${BASE}/metodologia`, heading: /Metodología|umbrales|fuentes/i },
 ];
 
 for (const { path, heading } of TABS) {

@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test';
 
+const BASE = '/sfm-monitor';
+
 test.beforeEach(async ({ context }) => {
   await context.addInitScript(() => {
     localStorage.setItem('sfm-onboarding-done', 'true');
@@ -69,14 +71,14 @@ function forceClientVisible(context: import('@playwright/test').BrowserContext) 
 // ─── /credito charts ────────────────────────────────────────────────────────
 test('credito: no JS console errors', async ({ page }) => {
   const errors = watchErrors(page);
-  await page.goto('./credito');
+  await page.goto(`${BASE}/credito`);
   await page.waitForLoadState('networkidle');
   expect(errors, `Request failures on /credito:\n${errors.join('\n')}`).toEqual([]);
 });
 
 test('credito: ImoraChart canvas renders', async ({ page, context }) => {
   await forceClientVisible(context);
-  await page.goto('./credito');
+  await page.goto(`${BASE}/credito`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
@@ -85,7 +87,7 @@ test('credito: ImoraChart canvas renders', async ({ page, context }) => {
 
 test('credito: IcorChart canvas renders', async ({ page, context }) => {
   await forceClientVisible(context);
-  await page.goto('./credito');
+  await page.goto(`${BASE}/credito`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   // At least two canvas elements should be present (multiple charts on /credito)
@@ -98,7 +100,7 @@ test('credito: IcorChart canvas renders', async ({ page, context }) => {
 test('credito: BM-only pivot renders and cartera buttons work', async ({ page, context }) => {
   const errors = watchErrors(page);
   await forceClientVisible(context);
-  await page.goto('./credito');
+  await page.goto(`${BASE}/credito`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
 
@@ -116,14 +118,14 @@ test('credito: BM-only pivot renders and cartera buttons work', async ({ page, c
 // ─── /sofipos charts ─────────────────────────────────────────────────────────
 test('sofipos: no JS console errors', async ({ page }) => {
   const errors = watchErrors(page);
-  await page.goto('./sofipos');
+  await page.goto(`${BASE}/sofipos`);
   await page.waitForLoadState('networkidle');
   expect(errors, `Request failures on /sofipos:\n${errors.join('\n')}`).toEqual([]);
 });
 
 test('sofipos: at least one canvas renders', async ({ page, context }) => {
   await forceClientVisible(context);
-  await page.goto('./sofipos');
+  await page.goto(`${BASE}/sofipos`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
@@ -133,14 +135,14 @@ test('sofipos: at least one canvas renders', async ({ page, context }) => {
 // ─── /riesgo heatmap ────────────────────────────────────────────────────────
 test('riesgo: no JS console errors', async ({ page }) => {
   const errors = watchErrors(page);
-  await page.goto('./riesgo');
+  await page.goto(`${BASE}/riesgo`);
   await page.waitForLoadState('networkidle');
   expect(errors, `Request failures on /riesgo:\n${errors.join('\n')}`).toEqual([]);
 });
 
 test('riesgo: heatmap canvas renders', async ({ page, context }) => {
   await forceClientVisible(context);
-  await page.goto('./riesgo');
+  await page.goto(`${BASE}/riesgo`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
