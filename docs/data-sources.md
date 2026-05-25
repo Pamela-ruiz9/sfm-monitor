@@ -160,11 +160,15 @@ Las series de Banxico se actualizan automáticamente vía el pipeline `update-da
 Estos archivos requieren descarga manual del portal CNBV (protegido por Cloudflare):
 
 ### Boletín de Capitalización (ICAP, CET1)
-**Portal:** portafolioinfo.cnbv.gob.mx
-1. Banca Múltiple → Información Regulatoria → Capitalización
-2. Sección: *Boletín Estadístico*
-3. Guardar como: `raw-data/boletin_capitalizacion.xlsx`
-4. Frecuencia: trimestral (~T+45 días)
+**URL directa:** https://portafolioinfo.cnbv.gob.mx/Paginas/Reporte.aspx?s=40&t=31&st=0&ti=0&sti=0&n=0&tp=0
+
+**Archivos a descargar:**
+- R1 (`040_15b_R1.xls`) — ICAP, CET1 (CCB) y CCF por institución
+- R6 (`040_15b_R6.xls`) — Desglose de capital del sistema (conceptos 4021750, 4021754, 4021755)
+
+**Naming:** cada mes genera un archivo nuevo. El script busca automáticamente `raw-data/040_15b_R1*.xls` y `raw-data/040_15b_R6*.xls` — guardar con el nombre original del portal.
+
+**Frecuencia:** mensual, rezago ~T+45 días
 
 ### Reporte de Liquidez (LCR, NSFR)
 **Portal:** portafolioinfo.cnbv.gob.mx
