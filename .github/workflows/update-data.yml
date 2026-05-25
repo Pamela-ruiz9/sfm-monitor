@@ -21,6 +21,7 @@ jobs:
       - name: Fetch Banxico data
         env:
           BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}
+          INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}
         run: |
           python3 << 'PYEOF'
           import urllib.request, json, os
@@ -132,6 +133,72 @@ jobs:
                   salmin_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": float(x["dato"])})
                   prev = x["dato"]
 
+          # 9 & 10. IGAE + PIB + Desocupación — INEGI BIE API
+          # Series confirmadas (mayo 2026):
+          #   737375 — PIB var. anual trimestral (base 2018, freq=4, unit=302)
+          #   444774 — Tasa de desocupación nacional mensual (ENOE)
+          # Nota: las claves de IGAE mensual cambiaron en dic 2025 (issue #21).
+          # Se usa el PIB trimestral como indicador principal de actividad económica
+          # hasta que INEGI publique la tabla de equivalencias actualizada.
+          INEGI_TOKEN = os.environ.get("INEGI_TOKEN", "")
+          INEGI_BASE = "https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR"
+
+          def fetch_inegi(serie_id):
+              """Consulta una serie del BIE de INEGI. Retorna lista de obs en orden ascendente."""
+              if not INEGI_TOKEN:
+                  print(f"⚠️  INEGI_TOKEN no configurado — saltando serie {serie_id}")
+                  return []
+              url = f"{INEGI_BASE}/{serie_id}/es/00/false/BIE-BISE/2.0/{INEGI_TOKEN}?type=json"
+              try:
+                  req = urllib.request.Request(url)
+                  with urllib.request.urlopen(req, timeout=20) as r:
+                      d = json.loads(r.read())
+                  obs = d["Series"][0]["OBSERVATIONS"]
+                  return list(reversed(obs))  # cronológico ascendente
+              except Exception as e:
+                  print(f"⚠️  INEGI serie {serie_id} error: {e}")
+                  return []
+
+          def inegi_periodo_to_iso(tp):
+              """Convierte TIME_PERIOD INEGI a YYYY-MM o YYYY-QN según formato."""
+              # Trimestral: '2025/04' → '2025-Q4'
+              if "/" in tp and len(tp) == 7:
+                  y, q = tp.split("/")
+                  return f"{y}-Q{int(q)}"
+              # Mensual: '2026/03' → '2026-03'
+              if "/" in tp and len(tp) == 7:
+                  y, m = tp.split("/")
+                  return f"{y}-{m.zfill(2)}"
+              return tp
+
+          # PIB trimestral var. anual — serie 737375
+          pib_obs = fetch_inegi("737375")
+          pib_series = [
+              {"fecha": inegi_periodo_to_iso(o["TIME_PERIOD"]), "valor": round(float(o["OBS_VALUE"]), 4)}
+              for o in pib_obs if o.get("OBS_VALUE") not in (None, "")
+          ]
+          pib_latest = pib_series[-1] if pib_series else None
+
+          # Tasa de desocupación mensual ENOE — serie 444774
+          desoc_obs = fetch_inegi("444774")
+          desoc_series = [
+              {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
+              for o in desoc_obs if o.get("OBS_VALUE") not in (None, "")
+          ]
+          desoc_latest = desoc_series[-1] if desoc_series else None
+
+          # IGAE var. anual mensual — serie 737370
+          # Serie nueva post-dic-2025 confirmada: 737370 = IGAE var. anual mensual
+          # actualizada hasta 2026-03 (verificado 25-may-2026)
+          igae_obs = fetch_inegi("737370")
+          igae_series = [
+              {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
+              for o in igae_obs if o.get("OBS_VALUE") not in (None, "")
+          ]
+          igae_latest = igae_series[-1] if igae_series else None
+          igae_var_anual = igae_latest["valor"] if igae_latest else None
+          pib_var_anual = pib_latest["valor"] if pib_latest else None
+
           # Build JSON
           data = {
               "ultima_actualizacion": date.today().strftime("%Y-%m-%d"),
@@ -183,6 +250,32 @@ jobs:
                   "historico": salmin_changes
               }
           }
+
+          data["macro"] = {
+              "igae": {
+                  "actual": igae_latest["valor"] if igae_latest else None,
+                  "fecha":  igae_latest["fecha"] if igae_latest else None,
+                  "variacion_anual": igae_var_anual,
+                  "historico": igae_series[-36:]  # últimos 3 años, serie 737370
+              },
+              "pib": {
+                  "actual": pib_latest["valor"] if pib_latest else None,
+                  "fecha":  pib_latest["fecha"] if pib_latest else None,
+                  "variacion_anual": pib_var_anual,
+                  "historico": pib_series[-20:]  # últimos 5 años trimestral
+              },
+              "desempleo": {
+                  "actual": desoc_latest["valor"] if desoc_latest else None,
+                  "fecha":  desoc_latest["fecha"] if desoc_latest else None,
+                  "historico": desoc_series[-24:]  # últimos 2 años
+              }
+          }
+
+          print(f"✅ IGAE var. anual: {igae_var_anual}% ({igae_latest['fecha'] if igae_latest else 'N/D'})")
+          print(f"✅ PIB var. anual: {pib_var_anual}% ({pib_latest['fecha'] if pib_latest else 'N/D'})")
+          print(f"✅ Desocupación: {desoc_latest['valor'] if desoc_latest else 'N/D'}% ({desoc_latest['fecha'] if desoc_latest else 'N/D'})")
+          if not igae_series:
+              print("⏭️  IGAE: pendiente clave actualizada INEGI dic-2025")
 
           os.makedirs("data", exist_ok=True)
           with open("data/sfm-data.json", "w") as f:
