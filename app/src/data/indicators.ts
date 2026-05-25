@@ -16,7 +16,9 @@ export type IndicatorId =
   | 'cetes'
   | 'spread-tiie-cetes'
   | 'reservas'
-  | 'udi';
+  | 'udi'
+  | 'igae'
+  | 'pib';
 
 export type Tone = 'gold' | 'green' | 'yellow' | 'red';
 
@@ -270,6 +272,30 @@ export const INDICATORS: readonly Indicator[] = [
     tone: 'yellow',
     upIsGood: false,
     description: 'Unidad de Inversión — unidad de cuenta indexada a la inflación (INPC).',
+  },
+  {
+    id: 'igae',
+    label: 'IGAE',
+    shortLabel: 'IGAE',
+    aliases: ['igae', 'actividad economica', 'indicador mensual', 'inegi actividad'],
+    unit: 'base 2018=100',
+    source: 'INEGI BIE',
+    tab: 'macro',
+    tone: 'gold',
+    upIsGood: true,
+    description: 'Índice General de Actividad Económica — proxy mensual del PIB. Fuente INEGI.',
+  },
+  {
+    id: 'pib',
+    label: 'PIB trimestral',
+    shortLabel: 'PIB',
+    aliases: ['pib', 'producto interno bruto', 'crecimiento economico', 'gdp'],
+    unit: '% var. anual',
+    source: 'INEGI BIE',
+    tab: 'macro',
+    tone: 'green',
+    upIsGood: true,
+    description: 'Producto Interno Bruto real, variación anual. Frecuencia trimestral, base 2018.',
   },
 ];
 
