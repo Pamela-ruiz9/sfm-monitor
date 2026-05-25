@@ -18,6 +18,7 @@ on:
       - 'raw-data/**.csv'
       - 'raw-data/**.json'
       - 'raw-data/**.zip'
+      - 'raw-data/**.xlsx'
 
   workflow_dispatch:
     inputs:
@@ -81,6 +82,16 @@ jobs:
             CHANGED=true
           else
             echo "⚠️  sh_datos_40.csv not found — skipping imor por banco"
+          fi
+
+          # normalize-capitalizacion.py — ICAP, CET1, LCR, NSFR
+          if ls raw-data/boletin_capitalizacion.xlsx raw-data/reporte_liquidez.xlsx 2>/dev/null | head -1 | grep -q .; then
+            echo "▶ Running normalize-capitalizacion.py..."
+            pip3 install -q openpyxl
+            python3 scripts/normalize-capitalizacion.py
+            CHANGED=true
+          else
+            echo "⏭️  boletin_capitalizacion.xlsx / reporte_liquidez.xlsx not found — skipping capitalizacion/liquidez"
           fi
 
           echo "normalize_ran=$CHANGED" >> $GITHUB_OUTPUT

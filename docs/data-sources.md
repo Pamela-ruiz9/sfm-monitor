@@ -136,17 +136,57 @@ Día 1: CNBV publica datos del mes anterior (~día 30 del mes siguiente)
 
 ---
 
-## Datos de Banxico (automatizados)
+## Datos de Banxico + INEGI (automatizados)
 
-Las series de Banxico (TIIE, Cetes, Reservas, UDIs, Salario mínimo) se actualizan automáticamente vía el pipeline `update-banxico.yml` — **no requieren descarga manual**.
+Las siguientes series se actualizan automáticamente vía el pipeline `update-data.yml` — *no requieren descarga manual*.
+
+### Banxico SIE
 
 | Serie | ID Banxico | Campo en `sfm-data.json` |
 |---|---|---|
-| TIIE Fondeo | SF43718 | `mercado.tiie_fondeo` |
-| Cetes 28d | SF60632 | `mercado.cetes_28d` |
-| Reservas internacionales | SF290383 | `mercado.reservas_internacionales` |
-| UDIs | SP74660 | `mercado.udis` |
-| Salario mínimo | SL11298 | `mercado.salario_minimo` |
+| Tipo de cambio FIX | SF43718 | `tipo_cambio` |
+| Tasa objetivo | SF61745 | `tasa_banxico` |
+| INPC inflación | SP74625 | `inflacion` |
+| TIIE Fondeo | SF343410 | `mercado.tiie_fondeo` |
+| Cetes 28d | SF60633 | `mercado.cetes_28d` |
+| Reservas internacionales | SF43707 | `mercado.reservas_internacionales` |
+| UDIs | SP68257 | `mercado.udis` |
+| Salario mínimo | SF60628 | `mercado.salario_minimo` |
+
+### INEGI BIE (series confirmadas mayo 2026)
+
+| Serie | ID INEGI | Campo en `sfm-data.json` | Frecuencia |
+|---|---|---|---|
+| IGAE var. anual | 737370 | `macro.igae` | Mensual |
+| PIB var. anual | 737375 | `macro.pib` | Trimestral |
+| Desocupación ENOE | 444774 | `macro.desempleo` | Mensual |
+
+> Requiere `INEGI_TOKEN` configurado en GitHub Secrets (`Settings → Secrets → INEGI_TOKEN`).
+
+---
+
+## Fuentes manuales pendientes (ICAP/LCR — issue #19)
+
+Estos archivos requieren descarga manual del portal CNBV (protegido por Cloudflare):
+
+### Boletín de Capitalización (ICAP, CET1)
+**URL directa:** https://portafolioinfo.cnbv.gob.mx/Paginas/Reporte.aspx?s=40&t=31&st=0&ti=0&sti=0&n=0&tp=0
+
+**Archivos a descargar:**
+- R1 (`040_15b_R1.xls`) — ICAP, CET1 (CCB) y CCF por institución
+- R6 (`040_15b_R6.xls`) — Desglose de capital del sistema (conceptos 4021750, 4021754, 4021755)
+
+**Naming:** cada mes genera un archivo nuevo. El script busca automáticamente `raw-data/040_15b_R1*.xls` y `raw-data/040_15b_R6*.xls` — guardar con el nombre original del portal.
+
+**Frecuencia:** mensual, rezago ~T+45 días
+
+### Reporte de Liquidez (LCR, NSFR)
+**Portal:** portafolioinfo.cnbv.gob.mx
+1. Banca Múltiple → Información Regulatoria → Liquidez
+2. Guardar como: `raw-data/reporte_liquidez.xlsx`
+3. Frecuencia: mensual (~T+45 días)
+
+Una vez descargados: `git add raw-data/*.xlsx && git push` → el pipeline los procesa automáticamente.
 
 ---
 
