@@ -159,22 +159,22 @@ jobs:
                   print(f"⚠️  INEGI serie {serie_id} error: {e}")
                   return []
 
-          def inegi_periodo_to_iso(tp):
-              """Convierte TIME_PERIOD INEGI a YYYY-MM o YYYY-QN según formato."""
-              # Trimestral: '2025/04' → '2025-Q4'
-              if "/" in tp and len(tp) == 7:
-                  y, q = tp.split("/")
-                  return f"{y}-Q{int(q)}"
-              # Mensual: '2026/03' → '2026-03'
-              if "/" in tp and len(tp) == 7:
+          def inegi_periodo_to_iso(tp, quarterly=False):
+              """Convierte TIME_PERIOD INEGI a YYYY-MM o YYYY-QN según formato.
+              quarterly=True → '2025/04' → '2025-Q4'
+              quarterly=False → '2026/03' → '2026-03'
+              """
+              if "/" in tp:
                   y, m = tp.split("/")
+                  if quarterly:
+                      return f"{y}-Q{int(m)}"
                   return f"{y}-{m.zfill(2)}"
               return tp
 
           # PIB trimestral var. anual — serie 737375
           pib_obs = fetch_inegi("737375")
           pib_series = [
-              {"fecha": inegi_periodo_to_iso(o["TIME_PERIOD"]), "valor": round(float(o["OBS_VALUE"]), 4)}
+              {"fecha": inegi_periodo_to_iso(o["TIME_PERIOD"], quarterly=True), "valor": round(float(o["OBS_VALUE"]), 4)}
               for o in pib_obs if o.get("OBS_VALUE") not in (None, "")
           ]
           pib_latest = pib_series[-1] if pib_series else None

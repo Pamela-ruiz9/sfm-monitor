@@ -136,9 +136,11 @@ Día 1: CNBV publica datos del mes anterior (~día 30 del mes siguiente)
 
 ---
 
-## Datos de Banxico (automatizados)
+## Datos de Banxico + INEGI (automatizados)
 
-Las series de Banxico se actualizan automáticamente vía el pipeline `update-data.yml` — *no requieren descarga manual*.
+Las siguientes series se actualizan automáticamente vía el pipeline `update-data.yml` — *no requieren descarga manual*.
+
+### Banxico SIE
 
 | Serie | ID Banxico | Campo en `sfm-data.json` |
 |---|---|---|
@@ -150,8 +152,16 @@ Las series de Banxico se actualizan automáticamente vía el pipeline `update-da
 | Reservas internacionales | SF43707 | `mercado.reservas_internacionales` |
 | UDIs | SP68257 | `mercado.udis` |
 | Salario mínimo | SF60628 | `mercado.salario_minimo` |
-| IGAE (índice base 2013) | SE49461 | `macro.igae` |
-| PIB trimestral (índice base 2013) | SE49459 | `macro.pib` |
+
+### INEGI BIE (series confirmadas mayo 2026)
+
+| Serie | ID INEGI | Campo en `sfm-data.json` | Frecuencia |
+|---|---|---|---|
+| IGAE var. anual | 737370 | `macro.igae` | Mensual |
+| PIB var. anual | 737375 | `macro.pib` | Trimestral |
+| Desocupación ENOE | 444774 | `macro.desempleo` | Mensual |
+
+> Requiere `INEGI_TOKEN` configurado en GitHub Secrets (`Settings → Secrets → INEGI_TOKEN`).
 
 ---
 
