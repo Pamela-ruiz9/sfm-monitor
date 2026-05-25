@@ -11,7 +11,12 @@ export type IndicatorId =
   | 'ifrs9'
   | 'sofipos-imor'
   | 'sofipos-imora'
-  | 'sofipos-roa';
+  | 'sofipos-roa'
+  | 'tiie'
+  | 'cetes'
+  | 'spread-tiie-cetes'
+  | 'reservas'
+  | 'udi';
 
 export type Tone = 'gold' | 'green' | 'yellow' | 'red';
 
@@ -202,6 +207,69 @@ export const INDICATORS: readonly Indicator[] = [
     tone: 'red',
     upIsGood: true,
     description: 'ROA agregado SoFiPOs. Sector reportó pérdidas en 2025.',
+  },
+  {
+    id: 'tiie',
+    label: 'TIIE Fondeo',
+    shortLabel: 'TIIE',
+    aliases: ['tiie fondeo', 'tasa interbancaria', 'overnight'],
+    unit: '%',
+    source: 'Banco de México, SIE, SF43783',
+    refCode: 'SF43783',
+    tab: 'mercado',
+    tone: 'gold',
+    upIsGood: false,
+    description: 'Tasa de Interés Interbancaria de Equilibrio al Fondeo. Tasa diaria del mercado overnight.',
+  },
+  {
+    id: 'cetes',
+    label: 'Cetes 28 días',
+    shortLabel: 'Cetes 28d',
+    aliases: ['cetes', 'cetes 28d', 'certificados de tesoreria'],
+    unit: '%',
+    source: 'Banco de México, SIE, SF43936',
+    refCode: 'SF43936',
+    tab: 'mercado',
+    tone: 'yellow',
+    upIsGood: false,
+    description: 'Rendimiento de Cetes a 28 días en subasta primaria semanal.',
+  },
+  {
+    id: 'spread-tiie-cetes',
+    label: 'Spread TIIE-Cetes',
+    shortLabel: 'Spread',
+    aliases: ['spread', 'spread interbancario', 'tension interbancaria'],
+    unit: 'pp',
+    source: 'Banco de México, SIE',
+    tab: 'mercado',
+    tone: 'yellow',
+    upIsGood: false,
+    description: 'Diferencial entre TIIE Fondeo y Cetes 28d. Señal de tensión en el mercado interbancario.',
+  },
+  {
+    id: 'reservas',
+    label: 'Reservas Internacionales',
+    shortLabel: 'Reservas',
+    aliases: ['reservas', 'reservas internacionales', 'activos internacionales'],
+    unit: 'B USD',
+    source: 'Banco de México, SIE, SF43707',
+    refCode: 'SF43707',
+    tab: 'mercado',
+    tone: 'green',
+    upIsGood: true,
+    description: 'Activos internacionales netos del Banco de México. Colchón ante choques externos.',
+  },
+  {
+    id: 'udi',
+    label: 'UDI',
+    shortLabel: 'UDI',
+    aliases: ['udi', 'unidad de inversion', 'inflacion acumulada'],
+    unit: 'MXN',
+    source: 'Banco de México, SIE',
+    tab: 'mercado',
+    tone: 'yellow',
+    upIsGood: false,
+    description: 'Unidad de Inversión — unidad de cuenta indexada a la inflación (INPC).',
   },
 ];
 
