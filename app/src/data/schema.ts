@@ -220,6 +220,24 @@ const MercadoSchema = z.object({
   salario_minimo: MercadoSerieSchema.optional(),
 });
 
+// ---------- macro (INEGI: IGAE mensual, PIB trimestral, salario mínimo real) ----------
+// Estos campos son opcionales — el pipeline los emitirá cuando esté listo (#21).
+// El schema está definido ya para que el frontend pueda leer cuando lleguen los datos.
+
+const MacroSerieSchema = z.object({
+  actual: z.number().nullable(),
+  fecha: z.string().nullable(),
+  unidad: z.string().optional(),
+  historico: z.array(z.object({ fecha: z.string(), valor: z.number() })).optional(),
+});
+
+const MacroSchema = z.object({
+  igae: MacroSerieSchema.optional(),       // Índice General de Actividad Económica (mensual)
+  pib: MacroSerieSchema.optional(),        // PIB trimestral (base 2018)
+  salario_minimo_real: MacroSerieSchema.optional(), // Salario mínimo real (poder adquisitivo)
+  imss_salario_promedio: MacroSerieSchema.optional(), // Salario promedio IMSS
+});
+
 // ---------- root ----------
 
 export const SfmDataSchema = z.object({
@@ -233,6 +251,7 @@ export const SfmDataSchema = z.object({
   ifrs9: Ifrs9Schema,
   sofipos: SofiposSchema,
   mercado: MercadoSchema.optional(),
+  macro: MacroSchema.optional(),
 });
 
 export type SfmData = z.infer<typeof SfmDataSchema>;

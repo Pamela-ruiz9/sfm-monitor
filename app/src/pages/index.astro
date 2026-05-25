@@ -38,6 +38,20 @@ const inflacionDelta = computeDelta(
 );
 
 const imorPlaceholder = 2.2;
+
+// ─── Mercado (Reservas + TIIE) ────────────────────────────────────────────────
+const mercado = data.mercado ?? {};
+const reservasActual = mercado.reservas_internacionales?.actual ?? null;
+const reservasB = reservasActual != null ? reservasActual / 1000 : null;
+const reservasFecha = mercado.reservas_internacionales?.fecha ?? null;
+const reservasHist = mercado.reservas_internacionales?.historico ?? [];
+const reservasVar = (reservasHist.length >= 5 && reservasActual != null)
+  ? ((reservasActual - reservasHist[reservasHist.length - 5]!.valor) /
+      reservasHist[reservasHist.length - 5]!.valor) * 100
+  : null;
+
+const tiieActual = mercado.tiie_fondeo?.actual ?? null;
+const tiieFecha  = mercado.tiie_fondeo?.fecha ?? null;
 ---
 
 <Layout
@@ -50,8 +64,8 @@ const imorPlaceholder = 2.2;
   <div class="space-y-8">
     <HeroScore />
 
-    <!-- KPI grid -->
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
+    <!-- KPI grid — 4 cols mobile-2, desktop up to 6 when mercado data available -->
+    <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-3 lg:gap-4">
       <KpiCard
         label="MXN/USD FIX"
         value={formatMxn(fxLatest, 4)}
@@ -99,6 +113,32 @@ const imorPlaceholder = 2.2;
         tone="green"
         indicatorId="imor"
       />
+      {reservasB != null && (
+        <KpiCard
+          label="Reservas Internacionales"
+          value={`${reservasB.toFixed(1)}B`}
+          unit="USD"
+          {...(reservasFecha ? { asOf: reservasFecha } : {})}
+          iconName="Shield"
+          tone="green"
+          indicatorId="reservas"
+          delta={reservasVar != null ? {
+            direction: reservasVar >= 0 ? 'up' : 'down',
+            label: `${reservasVar > 0 ? '+' : ''}${reservasVar.toFixed(2)}%`,
+            upIsGood: true,
+          } : undefined}
+        />
+      )}
+      {tiieActual != null && (
+        <KpiCard
+          label="TIIE Fondeo"
+          value={formatPct(tiieActual, 4)}
+          {...(tiieFecha ? { asOf: tiieFecha } : {})}
+          iconName="Activity"
+          tone="gold"
+          indicatorId="tiie"
+        />
+      )}
     </div>
 
     <!-- Featured chart + alerts -->

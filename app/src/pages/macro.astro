@@ -1,11 +1,15 @@
 ---
 import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
 import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
 import Section from '~/components/chrome/Section.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import { KpiCard } from '~/components/kpi/KpiCard';
 import { InflacionChart } from '~/components/charts/InflacionChart';
 import { loadSfmData } from '~/data/loader';
+import { formatPct } from '~/lib/utils';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
@@ -18,15 +22,69 @@ const data = loadSfmData();
 const inflacionHistorica =
   data.historico.inflacion_mensual_desde_2000 ??
   data.inflacion.historico_mensual;
+
+const inflacionActual = Number(data.inflacion.actual);
+const inflacionFecha  = data.inflacion.fecha;
+
+// IGAE y PIB — disponibles cuando el pipeline #21 los emita
+const macro = data.macro ?? {};
+const igae  = macro.igae  ?? null;
+const pib   = macro.pib   ?? null;
 ---
 
 <Layout
   title="Macro"
-  description="Contexto macro: inflación INPC, banda objetivo Banxico.">
+  description="Contexto macroeconómico: inflación INPC, IGAE, PIB y contexto laboral."
+  jsonLd={datasetJsonLd({
+    name: 'Contexto Macroeconómico — México',
+    description: 'Inflación INPC, IGAE mensual, PIB trimestral. Fuentes: Banxico SIE, INEGI BIE.',
+    path: '/macro',
+    keywords: ['inflación', 'INPC', 'IGAE', 'PIB', 'macro', 'México', 'Banxico', 'INEGI'],
+  })}>
   <Header slot="header" />
   <TabBar slot="header" />
 
   <div class="space-y-6">
+    <EditorialHeadline
+      eyebrow={`Macro · ${new Date().toLocaleDateString('es-MX', { year: 'numeric', month: 'long' })}`}
+      headline="Inflación por encima del objetivo Banxico. Actividad económica pendiente de integración con pipeline INEGI."
+    />
+
+    <!-- ── KPIs ── -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <KpiCard
+        label="Inflación INPC"
+        value={formatPct(inflacionActual, 2)}
+        asOf={inflacionFecha}
+        iconName="TrendingUp"
+        tone={inflacionActual > 4 ? 'red' : inflacionActual > 3 ? 'yellow' : 'green'}
+        indicatorId="inflacion"
+      />
+      {igae?.actual != null && (
+        <KpiCard
+          label="IGAE mensual"
+          value={`${igae.actual.toFixed(1)}`}
+          unit="base 2018=100"
+          {...(igae.fecha ? { asOf: igae.fecha } : {})}
+          iconName="Activity"
+          tone="gold"
+          indicatorId="igae"
+        />
+      )}
+      {pib?.actual != null && (
+        <KpiCard
+          label="PIB trimestral"
+          value={formatPct(pib.actual, 1)}
+          unit="var. anual"
+          {...(pib.fecha ? { asOf: pib.fecha } : {})}
+          iconName="TrendingUp"
+          tone={pib.actual >= 0 ? 'green' : 'red'}
+          indicatorId="pib"
+        />
+      )}
+    </div>
+
+    <!-- ── Inflación histórica ── -->
     <Section
       id="inflacion"
       eyebrow="Inflación"
@@ -37,6 +95,36 @@ const inflacionHistorica =
       tone="yellow">
       <InflacionChart series={inflacionHistorica} client:visible />
     </Section>
+
+    <!-- ── IGAE — próximamente ── -->
+    {igae == null && (
+      <Section
+        id="igae"
+        eyebrow="Actividad económica"
+        title="IGAE — Índice General de Actividad Económica"
+        description="Indicador mensual de actividad económica del INEGI. Proxy del PIB mensual."
+        source="INEGI BIE — pendiente de integración en pipeline"
+        tone="gold">
+        <p class="text-sm text-[--color-text-dim] py-8 text-center">
+          Datos disponibles próximamente — pipeline INEGI en desarrollo (issue #21).
+        </p>
+      </Section>
+    )}
+
+    <!-- ── PIB — próximamente ── -->
+    {pib == null && (
+      <Section
+        id="pib"
+        eyebrow="Producto Interno Bruto"
+        title="PIB trimestral — variación anual"
+        description="Crecimiento real del PIB base 2018. Frecuencia trimestral con rezago T+55 días."
+        source="INEGI BIE — pendiente de integración en pipeline"
+        tone="green">
+        <p class="text-sm text-[--color-text-dim] py-8 text-center">
+          Datos disponibles próximamente — pipeline INEGI en desarrollo (issue #21).
+        </p>
+      </Section>
+    )}
   </div>
 
   <ChartDrawer slot="drawer" client:idle />
