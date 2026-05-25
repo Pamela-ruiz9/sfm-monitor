@@ -63,6 +63,8 @@ if __name__ == "__main__":
     credito = load("credito.json")
     sofipos = load("sofipos.json")
     ifrs9 = load("ifrs9.json")
+    capitalizacion = load("capitalizacion.json")
+    liquidez = load("liquidez.json")
 
     # Merge: CNBV fields added/overwritten into base
     if credito:
@@ -93,6 +95,20 @@ if __name__ == "__main__":
                 "etapa3_pct": [],
             }
             print("⚠️  ifrs9: using empty stub (run normalize-ifrs9.py to populate)")
+
+    if capitalizacion:
+        base["capitalizacion"] = capitalizacion
+        icap = capitalizacion.get("icap_sistema", {})
+        print(f"✅ capitalizacion: ICAP={icap.get('actual')}% ({icap.get('fecha')})")
+    else:
+        print("⏭️  capitalizacion: no data (descargar boletin_capitalizacion.xlsx del portal CNBV)")
+
+    if liquidez:
+        base["liquidez"] = liquidez
+        lcr = liquidez.get("lcr_sistema", {})
+        print(f"✅ liquidez: LCR={lcr.get('actual')}% ({lcr.get('fecha')})")
+    else:
+        print("⏭️  liquidez: no data (descargar reporte_liquidez.xlsx del portal CNBV)")
 
     # historico: empty object satisfies HistoricoSchema (all fields optional)
     if "historico" not in base:

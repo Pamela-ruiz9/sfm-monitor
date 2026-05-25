@@ -204,6 +204,72 @@ const SofiposSchema = z.object({
   historico_por_entidad: SofiposHistoricoEntidadSchema.optional(),
 });
 
+// ---------- macro (IGAE, PIB, desempleo — Banxico SIE / INEGI) ----------
+
+const MacroPuntoMensualSchema = z.object({
+  fecha: z.string(),
+  valor: z.number(),
+});
+
+const MacroPuntoTrimestralSchema = z.object({
+  fecha: z.string(), // YYYY-QN e.g. "2026-Q1"
+  valor: z.number(),
+});
+
+const MacroSchema = z.object({
+  igae: z.object({
+    actual: z.number().nullable(),
+    fecha: z.string().nullable(),
+    variacion_anual: z.number().nullable().optional(),
+    historico: z.array(MacroPuntoMensualSchema).optional(),
+  }).optional(),
+  pib: z.object({
+    actual: z.number().nullable(),
+    fecha: z.string().nullable(),
+    variacion_anual: z.number().nullable().optional(),
+    historico: z.array(MacroPuntoTrimestralSchema).optional(),
+  }).optional(),
+  desempleo: z.object({
+    actual: z.number().nullable(),
+    fecha: z.string().nullable(),
+    historico: z.array(MacroPuntoTrimestralSchema).optional(),
+  }).optional(),
+});
+
+// ---------- capitalizacion y liquidez (CNBV — descarga manual) ----------
+
+const CapitalizacionBancoSchema = z.object({
+  nombre: z.string(),
+  icap_latest: z.number().nullable(),
+  cet1_latest: z.number().nullable().optional(),
+  historico: z.array(z.number().nullable()).optional(),
+});
+
+const CapitalizacionSchema = z.object({
+  ultima_actualizacion: z.string().optional(),
+  fuente: z.string().optional(),
+  icap_sistema: KpiSnapshot,
+  cet1_sistema: KpiSnapshot.optional(),
+  historico: z.array(z.object({
+    fecha: z.string(),
+    icap: z.number(),
+    cet1: z.number().nullable(),
+  })),
+  por_banco: z.record(z.string(), CapitalizacionBancoSchema).optional(),
+});
+
+const LiquidezSchema = z.object({
+  ultima_actualizacion: z.string().optional(),
+  fuente: z.string().optional(),
+  lcr_sistema: KpiSnapshot,
+  nsfr_sistema: KpiSnapshot.optional(),
+  historico: z.array(z.object({
+    fecha: z.string(),
+    lcr: z.number(),
+    nsfr: z.number().nullable(),
+  })),
+});
+
 // ---------- mercado (Banxico series: reservas, TIIE Fondeo, Cetes, UDIs, salario mínimo) ----------
 
 const MercadoSerieSchema = z.object({
@@ -233,6 +299,9 @@ export const SfmDataSchema = z.object({
   ifrs9: Ifrs9Schema,
   sofipos: SofiposSchema,
   mercado: MercadoSchema.optional(),
+  macro: MacroSchema.optional(),
+  capitalizacion: CapitalizacionSchema.optional(),
+  liquidez: LiquidezSchema.optional(),
 });
 
 export type SfmData = z.infer<typeof SfmDataSchema>;

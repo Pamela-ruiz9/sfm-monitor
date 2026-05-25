@@ -138,15 +138,41 @@ Día 1: CNBV publica datos del mes anterior (~día 30 del mes siguiente)
 
 ## Datos de Banxico (automatizados)
 
-Las series de Banxico (TIIE, Cetes, Reservas, UDIs, Salario mínimo) se actualizan automáticamente vía el pipeline `update-banxico.yml` — **no requieren descarga manual**.
+Las series de Banxico se actualizan automáticamente vía el pipeline `update-data.yml` — *no requieren descarga manual*.
 
 | Serie | ID Banxico | Campo en `sfm-data.json` |
 |---|---|---|
-| TIIE Fondeo | SF43718 | `mercado.tiie_fondeo` |
-| Cetes 28d | SF60632 | `mercado.cetes_28d` |
-| Reservas internacionales | SF290383 | `mercado.reservas_internacionales` |
-| UDIs | SP74660 | `mercado.udis` |
-| Salario mínimo | SL11298 | `mercado.salario_minimo` |
+| Tipo de cambio FIX | SF43718 | `tipo_cambio` |
+| Tasa objetivo | SF61745 | `tasa_banxico` |
+| INPC inflación | SP74625 | `inflacion` |
+| TIIE Fondeo | SF343410 | `mercado.tiie_fondeo` |
+| Cetes 28d | SF60633 | `mercado.cetes_28d` |
+| Reservas internacionales | SF43707 | `mercado.reservas_internacionales` |
+| UDIs | SP68257 | `mercado.udis` |
+| Salario mínimo | SF60628 | `mercado.salario_minimo` |
+| IGAE (índice base 2013) | SE49461 | `macro.igae` |
+| PIB trimestral (índice base 2013) | SE49459 | `macro.pib` |
+
+---
+
+## Fuentes manuales pendientes (ICAP/LCR — issue #19)
+
+Estos archivos requieren descarga manual del portal CNBV (protegido por Cloudflare):
+
+### Boletín de Capitalización (ICAP, CET1)
+**Portal:** portafolioinfo.cnbv.gob.mx
+1. Banca Múltiple → Información Regulatoria → Capitalización
+2. Sección: *Boletín Estadístico*
+3. Guardar como: `raw-data/boletin_capitalizacion.xlsx`
+4. Frecuencia: trimestral (~T+45 días)
+
+### Reporte de Liquidez (LCR, NSFR)
+**Portal:** portafolioinfo.cnbv.gob.mx
+1. Banca Múltiple → Información Regulatoria → Liquidez
+2. Guardar como: `raw-data/reporte_liquidez.xlsx`
+3. Frecuencia: mensual (~T+45 días)
+
+Una vez descargados: `git add raw-data/*.xlsx && git push` → el pipeline los procesa automáticamente.
 
 ---
 

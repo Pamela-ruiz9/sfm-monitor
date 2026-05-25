@@ -132,6 +132,37 @@ jobs:
                   salmin_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": float(x["dato"])})
                   prev = x["dato"]
 
+          # 9. IGAE (SE49461) — índice mensual base 2013, últimos 3 años
+          # Variación anual = (idx_t / idx_t-12 - 1) * 100
+          igae_data = fetch("SE49461", (date.today() - timedelta(days=1460)).strftime("%Y-%m-%d"))
+          igae_series = [
+              {"fecha": banxico_to_iso(x["fecha"])[:7], "valor": round(float(x["dato"].replace(",", "")), 4)}
+              for x in igae_data if x["dato"] not in ("N/E", None, "")
+          ]
+          igae_var_anual = None
+          if len(igae_series) >= 13:
+              igae_var_anual = round(
+                  (igae_series[-1]["valor"] / igae_series[-13]["valor"] - 1) * 100, 2
+              )
+
+          # 10. PIB trimestral (SE49459) — índice base 2013, últimos 5 años
+          # Convierte fecha Banxico (ej. 01/01/2026) a trimestre YYYY-QN
+          def fecha_to_trimestre(fecha_mx):
+              d, m, y = fecha_mx.split("/")
+              q = (int(m) - 1) // 3 + 1
+              return f"{y}-Q{q}"
+
+          pib_data = fetch("SE49459", (date.today() - timedelta(days=1825)).strftime("%Y-%m-%d"))
+          pib_series = [
+              {"fecha": fecha_to_trimestre(x["fecha"]), "valor": round(float(x["dato"].replace(",", "")), 4)}
+              for x in pib_data if x["dato"] not in ("N/E", None, "")
+          ]
+          pib_var_anual = None
+          if len(pib_series) >= 5:
+              pib_var_anual = round(
+                  (pib_series[-1]["valor"] / pib_series[-5]["valor"] - 1) * 100, 2
+              )
+
           # Build JSON
           data = {
               "ultima_actualizacion": date.today().strftime("%Y-%m-%d"),
@@ -183,6 +214,24 @@ jobs:
                   "historico": salmin_changes
               }
           }
+
+          data["macro"] = {
+              "igae": {
+                  "actual": igae_series[-1]["valor"] if igae_series else None,
+                  "fecha":  igae_series[-1]["fecha"] if igae_series else None,
+                  "variacion_anual": igae_var_anual,
+                  "historico": igae_series[-36:]  # 3 años
+              },
+              "pib": {
+                  "actual": pib_series[-1]["valor"] if pib_series else None,
+                  "fecha":  pib_series[-1]["fecha"] if pib_series else None,
+                  "variacion_anual": pib_var_anual,
+                  "historico": pib_series[-20:]  # 5 años
+              }
+          }
+
+          print(f"✅ IGAE: {data['macro']['igae']['actual']} var_anual={igae_var_anual}%")
+          print(f"✅ PIB: {data['macro']['pib']['actual']} var_anual={pib_var_anual}%")
 
           os.makedirs("data", exist_ok=True)
           with open("data/sfm-data.json", "w") as f:
