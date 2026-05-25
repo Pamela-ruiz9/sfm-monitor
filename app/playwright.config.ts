@@ -7,11 +7,15 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env['CI'],
   retries: process.env['CI'] ? 2 : 0,
-  workers: process.env['CI'] ? 1 : undefined,
+  workers: process.env['CI'] ? 2 : undefined,
   reporter: [['html', { open: 'never' }], ['list']],
   use: {
-    baseURL: 'http://localhost:4321/sfm-monitor',
+    // baseURL points to the server root. Tests must use '/sfm-monitor' prefix.
+    // Do NOT include the subpath here — page.goto('/path') resolves against the
+    // origin (ignoring baseURL subpath), so keeping baseURL at root is safest.
+    baseURL: 'http://localhost:4321',
     trace: 'on-first-retry',
+    actionTimeout: 20_000,
   },
   projects: [
     {

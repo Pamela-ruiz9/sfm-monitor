@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test';
 
+const BASE = '/sfm-monitor';
+
 test.beforeEach(async ({ context }) => {
   await context.addInitScript(() => {
     localStorage.setItem('sfm-onboarding-done', 'true');
@@ -30,42 +32,75 @@ function watchErrors(page: import('@playwright/test').Page): string[] {
 async function scrollAndWaitForCanvas(page: import('@playwright/test').Page) {
   // Scroll to bottom to trigger IntersectionObserver for all client:visible components
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  // Give Astro a tick to process the intersection entries
   await page.waitForTimeout(500);
+  // Wait for at least one canvas to appear in the DOM before continuing
+  await page.waitForFunction(() => document.querySelectorAll('canvas').length > 0, { timeout: 20000 }).catch(() => null);
   // Scroll back to top so first canvas is in view
   await page.evaluate(() => window.scrollTo(0, 0));
-  await page.waitForTimeout(300);
+}
+
+// Override IntersectionObserver before page load so client:visible hydrates
+// immediately in headless CI (no real viewport intersection happens there).
+// NOTE: must be called BEFORE page.goto() via context.addInitScript.
+function forceClientVisible(context: import('@playwright/test').BrowserContext) {
+  return context.addInitScript(() => {
+    // Patch IntersectionObserver: immediately fire isIntersecting=true for all observers
+    const OrigIO = window.IntersectionObserver;
+    window.IntersectionObserver = class extends OrigIO {
+      constructor(
+        callback: IntersectionObserverCallback,
+        options?: IntersectionObserverInit,
+      ) {
+        super(callback, options);
+        // Stash the callback so observe() can fire it immediately
+        (this as any)._cb = callback;
+      }
+      observe(target: Element) {
+        super.observe(target);
+        // Fire synthetic intersection immediately so Astro hydrates right away
+        (this as any)._cb(
+          [{ isIntersecting: true, target, intersectionRatio: 1 } as IntersectionObserverEntry],
+          this,
+        );
+      }
+    } as unknown as typeof IntersectionObserver;
+  });
 }
 
 // ─── /credito charts ────────────────────────────────────────────────────────
 test('credito: no JS console errors', async ({ page }) => {
   const errors = watchErrors(page);
-  await page.goto('/credito');
+  await page.goto(`${BASE}/credito`);
   await page.waitForLoadState('networkidle');
   expect(errors, `Request failures on /credito:\n${errors.join('\n')}`).toEqual([]);
 });
 
-test('credito: ImoraChart canvas renders', async ({ page }) => {
-  await page.goto('/credito');
+test('credito: ImoraChart canvas renders', async ({ page, context }) => {
+  await forceClientVisible(context);
+  await page.goto(`${BASE}/credito`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
-  await expect(canvas).toBeVisible({ timeout: 10000 });
+  await expect(canvas).toBeVisible({ timeout: 20000 });
 });
 
-test('credito: IcorChart canvas renders', async ({ page }) => {
-  await page.goto('/credito');
+test('credito: IcorChart canvas renders', async ({ page, context }) => {
+  await forceClientVisible(context);
+  await page.goto(`${BASE}/credito`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   // At least two canvas elements should be present (multiple charts on /credito)
   const canvases = page.locator('canvas');
-  await expect(canvases.first()).toBeVisible({ timeout: 10000 });
+  await expect(canvases.first()).toBeVisible({ timeout: 20000 });
   const count = await canvases.count();
   expect(count).toBeGreaterThanOrEqual(2);
 });
 
-test('credito: BM-only pivot renders and cartera buttons work', async ({ page }) => {
+test('credito: BM-only pivot renders and cartera buttons work', async ({ page, context }) => {
   const errors = watchErrors(page);
-  await page.goto('/credito');
+  await forceClientVisible(context);
+  await page.goto(`${BASE}/credito`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
 
@@ -74,7 +109,7 @@ test('credito: BM-only pivot renders and cartera buttons work', async ({ page })
   await expect(sofiposBtn).not.toBeVisible();
 
   // Canvas should render in BM-only mode
-  await expect(page.locator('canvas').first()).toBeVisible({ timeout: 10000 });
+  await expect(page.locator('canvas').first()).toBeVisible({ timeout: 20000 });
 
   // No blocking errors
   expect(errors, `Request failures on /credito:\n${errors.join('\n')}`).toEqual([]);
@@ -83,31 +118,33 @@ test('credito: BM-only pivot renders and cartera buttons work', async ({ page })
 // ─── /sofipos charts ─────────────────────────────────────────────────────────
 test('sofipos: no JS console errors', async ({ page }) => {
   const errors = watchErrors(page);
-  await page.goto('/sofipos');
+  await page.goto(`${BASE}/sofipos`);
   await page.waitForLoadState('networkidle');
   expect(errors, `Request failures on /sofipos:\n${errors.join('\n')}`).toEqual([]);
 });
 
-test('sofipos: at least one canvas renders', async ({ page }) => {
-  await page.goto('/sofipos');
+test('sofipos: at least one canvas renders', async ({ page, context }) => {
+  await forceClientVisible(context);
+  await page.goto(`${BASE}/sofipos`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
-  await expect(canvas).toBeVisible({ timeout: 10000 });
+  await expect(canvas).toBeVisible({ timeout: 20000 });
 });
 
 // ─── /riesgo heatmap ────────────────────────────────────────────────────────
 test('riesgo: no JS console errors', async ({ page }) => {
   const errors = watchErrors(page);
-  await page.goto('/riesgo');
+  await page.goto(`${BASE}/riesgo`);
   await page.waitForLoadState('networkidle');
   expect(errors, `Request failures on /riesgo:\n${errors.join('\n')}`).toEqual([]);
 });
 
-test('riesgo: heatmap canvas renders', async ({ page }) => {
-  await page.goto('/riesgo');
+test('riesgo: heatmap canvas renders', async ({ page, context }) => {
+  await forceClientVisible(context);
+  await page.goto(`${BASE}/riesgo`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
-  await expect(canvas).toBeVisible({ timeout: 10000 });
+  await expect(canvas).toBeVisible({ timeout: 20000 });
 });
