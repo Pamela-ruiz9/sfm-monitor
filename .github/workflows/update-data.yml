@@ -187,9 +187,16 @@ jobs:
           ]
           desoc_latest = desoc_series[-1] if desoc_series else None
 
-          # Placeholder para IGAE mensual — pendiente clave actualizada INEGI
-          igae_series = []
-          igae_var_anual = None
+          # IGAE var. anual mensual — serie 737370
+          # Serie nueva post-dic-2025 confirmada: 737370 = IGAE var. anual mensual
+          # actualizada hasta 2026-03 (verificado 25-may-2026)
+          igae_obs = fetch_inegi("737370")
+          igae_series = [
+              {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
+              for o in igae_obs if o.get("OBS_VALUE") not in (None, "")
+          ]
+          igae_latest = igae_series[-1] if igae_series else None
+          igae_var_anual = igae_latest["valor"] if igae_latest else None
           pib_var_anual = pib_latest["valor"] if pib_latest else None
 
           # Build JSON
@@ -246,10 +253,10 @@ jobs:
 
           data["macro"] = {
               "igae": {
-                  "actual": igae_series[-1]["valor"] if igae_series else None,
-                  "fecha":  igae_series[-1]["fecha"] if igae_series else None,
+                  "actual": igae_latest["valor"] if igae_latest else None,
+                  "fecha":  igae_latest["fecha"] if igae_latest else None,
                   "variacion_anual": igae_var_anual,
-                  "historico": igae_series[-36:]  # pendiente clave actualizada INEGI
+                  "historico": igae_series[-36:]  # últimos 3 años, serie 737370
               },
               "pib": {
                   "actual": pib_latest["valor"] if pib_latest else None,
@@ -264,6 +271,7 @@ jobs:
               }
           }
 
+          print(f"✅ IGAE var. anual: {igae_var_anual}% ({igae_latest['fecha'] if igae_latest else 'N/D'})")
           print(f"✅ PIB var. anual: {pib_var_anual}% ({pib_latest['fecha'] if pib_latest else 'N/D'})")
           print(f"✅ Desocupación: {desoc_latest['valor'] if desoc_latest else 'N/D'}% ({desoc_latest['fecha'] if desoc_latest else 'N/D'})")
           if not igae_series:
