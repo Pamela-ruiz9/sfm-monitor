@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/Layout.astro';
+import { catalogJsonLd } from '~/lib/jsonld';
 import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
@@ -41,7 +42,8 @@ const imorPlaceholder = 2.2;
 
 <Layout
   title="SFM Monitor"
-  description="Resumen ejecutivo del riesgo del Sistema Financiero Mexicano. Datos de Banxico SIE, CNBV e INEGI.">
+  description="Resumen ejecutivo del riesgo del Sistema Financiero Mexicano. Datos de Banxico SIE, CNBV e INEGI."
+  jsonLd={catalogJsonLd()}>
   <Header slot="header" />
   <TabBar slot="header" />
 

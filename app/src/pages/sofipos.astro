@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
 import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
@@ -46,7 +47,13 @@ const top15 = [...ents]
 
 <Layout
   title="SoFiPOs"
-  description="Sociedades Financieras Populares: IMOR top 15 por activo, IMORA, ROA, comparativo vs Banca Múltiple.">
+  description="Sociedades Financieras Populares: IMOR top 15 por activo, IMORA, ROA, comparativo vs Banca Múltiple."
+  jsonLd={datasetJsonLd({
+    name: 'SoFiPOs — Riesgo de Crédito Sociedades Financieras Populares',
+    description: 'IMOR, IMORA y ROA de las 15 principales SoFiPOs de México por tamaño de cartera. Fuente: CNBV Portafolio de Información.',
+    path: '/sofipos',
+    keywords: ['SoFiPOs', 'IMOR', 'IMORA', 'ROA', 'finanzas populares', 'CNBV'],
+  })}>
   <Header slot="header" />
   <TabBar slot="header" />
 

@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
 import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
@@ -51,7 +52,13 @@ const udiFecha   = m.udis?.fecha ?? null;
 
 <Layout
   title="Mercado"
-  description="Mercado de dinero: tipo de cambio, tasas de referencia (TIIE, Cetes, Banxico), reservas internacionales y UDI.">
+  description="Mercado de dinero: tipo de cambio, tasas de referencia (TIIE, Cetes, Banxico), reservas internacionales y UDI."
+  jsonLd={datasetJsonLd({
+    name: 'Mercado de Dinero — México',
+    description: 'Tipo de cambio MXN/USD, TIIE Fondeo, Cetes 28d, Tasa Banxico, Reservas Internacionales, UDI. Fuente: Banxico SIE.',
+    path: '/mercado',
+    keywords: ['tipo de cambio', 'TIIE', 'Cetes', 'Banxico', 'reservas internacionales', 'UDI', 'tasa de interés', 'riesgo de mercado'],
+  })}>
   <Header slot="header" />
   <TabBar slot="header" />
 
