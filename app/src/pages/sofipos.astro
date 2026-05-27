@@ -26,20 +26,48 @@ const s = data.sofipos;
 const ultima = s.ultima!;
 
 const ents = Object.values(s.historico_por_entidad?.entidades ?? {}) as Array<{
+  id: string;
   nombre: string;
   imor: (number | null)[];
   cartera_total?: number | null;
 }>;
+
+// Curated priority order: well-known institutions and strong competitors (issue #81).
+// IDs are CNBV Sector 27 institution codes.
+// Nu Mexico (Nu Financiera) and Fuertes are not yet in the CNBV dataset — add when available.
+const SOFIPOS_PRIORITY: string[] = [
+  '027004', // CAJA POP MEXICANA   — mayor cooperativa de ahorro del país
+  '027010', // CAJA LIBERTAD       — conocida nacional
+  '027006', // FINCOMÚN            — pionera en microfinanzas
+  '027013', // FORJADORES          — microcrédito líder
+  '027003', // TE CREEMOS          — microfinanciera reconocida
+  '027018', // BIEN PARA BIEN      — fintech hipotecaria
+  '027008', // KUBO FINANCIERO     — fintech referencia
+  '027021', // CAME FINANCIERO     — cobertura nacional
+  '027007', // CAJA MORELIA VALLADOLID
+  '027030', // ACCESO FINANCIERO
+  '027033', // REAL CAPITALIZA
+  '027015', // FONDESO
+  '027005', // CAJA REAL MEXICANA  — mayor del sistema Caja Real
+  '027031', // PRESTANDO
+  '027023', // FONCE
+];
+
+const priorityIndex = (id: string) => {
+  const i = SOFIPOS_PRIORITY.indexOf(id);
+  return i === -1 ? SOFIPOS_PRIORITY.length : i;
+};
+
 const top15 = [...ents]
   .filter((e) => e.imor.length > 0)
-  // Sort by cartera_total (imora_total in pesos) descending — largest portfolios first.
-  // Falls back to last IMOR value if cartera_total is unavailable (issue #58).
   .sort((a, b) => {
+    const ai = priorityIndex(a.id);
+    const bi = priorityIndex(b.id);
+    if (ai !== bi) return ai - bi;
+    // Tie-break: larger cartera first, then higher IMOR
     const aCart = a.cartera_total ?? null;
     const bCart = b.cartera_total ?? null;
     if (aCart !== null && bCart !== null) return bCart - aCart;
-    if (aCart !== null) return -1;
-    if (bCart !== null) return 1;
     return (b.imor[b.imor.length - 1] ?? 0) - (a.imor[a.imor.length - 1] ?? 0);
   })
   .slice(0, 15);
@@ -122,8 +150,8 @@ const top15 = [...ents]
     <Section
       id="sofipos-top15"
       eyebrow="Entidades individuales"
-      title="Top 15 entidades por IMOR (último mes)"
-      description="Las 15 SoFiPOs con mayor índice de morosidad en el último mes disponible. Eje Y fijo 0–45%."
+      title="Top 15 entidades más conocidas"
+      description="Las 15 SoFiPOs más reconocidas del sector: cooperativas líderes, fintechs y microfinancieras con mayor presencia nacional. Eje Y fijo 0–45%."
       source="CNBV Sector 50 (SoFiPOs) — histórico por entidad"
       tone="red">
       <SofiposEntidadesChart

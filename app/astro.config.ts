@@ -73,5 +73,12 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      // Prevents "Unable to preload CSS for /_assets/X.css" on GitHub Pages subpath.
+      // Vite emits per-route CSS chunks with content-hashed filenames; when a new build
+      // is deployed the SW preload-helper still holds old hashes and throws. A single
+      // CSS bundle removes the hash-mismatch race condition entirely.
+      cssCodeSplit: false,
+    },
   },
 });

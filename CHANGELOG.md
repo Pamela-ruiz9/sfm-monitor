@@ -12,6 +12,26 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### fix(#80) — Preload CSS en GitHub Pages (2026-05-27)
+- `app/astro.config.ts`: `cssCodeSplit: false` en `vite.build` — elimina el error "Unable to preload CSS for /_assets/X.css" al unificar en un solo bundle CSS (sin race condition entre hashes de build y SW caché)
+
+### feat(#81) — Top 15 SoFiPOs curadas (2026-05-27)
+- `sofipos.astro`: lista priorizada `SOFIPOS_PRIORITY` con las entidades más reconocidas del Sector 27 (CAJA POP MEXICANA, CAJA LIBERTAD, FINCOMÚN, FORJADORES, etc.) en lugar del sort automático por `cartera_total` (que era null)
+- Nu Mexico y Fuertes pendientes de incorporar cuando su ID CNBV esté disponible en el dataset
+
+### feat(#82) — Orden por popularidad en tabla IMOR por banco (2026-05-27)
+- `BancosTable.tsx`: nuevo `SortKey` tipo `'populares'` con lista `BANCOS_POPULARES` (G-7 primero: BBVA, Banamex, Banorte, Santander, HSBC, Scotiabank, Inbursa; luego fintechs y banca de hogares)
+- Sort default cambiado de `imor_actual desc` a `populares`; click en cabecera "Banco" alterna entre popularidad y alfabético; icono ★ indica modo popularidad activo
+
+### fix(#83/#84) — Datos IMOR por banco y cartera (2026-05-27)
+- `scripts/normalize-imor-por-banco.py`: corregido multiplicador ×100 para IMOR/IMORA (los valores raw del CSV están en escala 0–1); ICOR permanece ×1
+- `scripts/normalize-imor-por-banco.py`: `CONCEPTS` migrado a `dict[str, tuple[str, float]]` con campo + multiplicador
+- `raw-data/cnbv_indicadores.json`: regenerado con `imor_comercial` (1.48%), `imor_consumo` (2.27%), `imor_vivienda` (1.34%) — corrige #84 donde aparecían en 0
+- `data/imor_por_banco.json`: generado por primera vez con 62 bancos × 304 periodos — habilita #83 (pivot por banco)
+- `app/src/data/schema.ts`: `HistoricoBancoEntrySchema.imor_latest` actualizado a `{valor, fecha}` para coincidir con el output real del script
+- `app/src/components/tables/BancosTable.tsx`: tipo `imor_latest` actualizado a `{valor, fecha} | null`
+- `data/sfm-data.json`: regenerado (1.32 MB)
+
 ### En curso en branch `feat/app-redesign-pwa-v0.2.0-dev` (PR #1) — 31 commits
 
 #### PASS 1 — Crédito tab + 4 charts (commit 7605892)

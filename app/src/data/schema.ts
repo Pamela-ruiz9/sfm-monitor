@@ -112,14 +112,16 @@ const HistoricoCarteraSchema = z.object({
   roe: z.array(z.number().nullable()),
 });
 
+const BancoLatestSchema = z.object({ valor: z.number(), fecha: z.string() });
+
 const HistoricoBancoEntrySchema = z.object({
   nombre: z.string(),
   id: z.string(),
   imor_total: z.array(z.number().nullable()),
   imora_total: z.array(z.number().nullable()).optional(),
   icor_total: z.array(z.number().nullable()).optional(),
-  imor_latest: z.number().nullable().optional(),
-  imora_latest: z.number().nullable().optional(),
+  imor_latest: BancoLatestSchema.nullable().optional(),
+  imora_latest: BancoLatestSchema.nullable().optional(),
 });
 
 const HistoricoBancoCarteraEntrySchema = z.looseObject({

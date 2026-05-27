@@ -1235,7 +1235,8 @@
           7.16,
           7.07,
           5.54
-        ]
+        ],
+        "cartera_total": 176148197.68
       },
       "027040": {
         "nombre": "CAJA REAL JALISCO",
@@ -1361,7 +1362,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 3111418.84
       },
       "027029": {
         "nombre": "SOFOM ER INTEGRADORA",
@@ -1487,7 +1489,8 @@
           10.36,
           9.9,
           7.48
-        ]
+        ],
+        "cartera_total": 481889889.0
       },
       "027050": {
         "nombre": "FONDO ESPERANZA",
@@ -1613,7 +1616,8 @@
           5.85,
           6.1,
           6.28
-        ]
+        ],
+        "cartera_total": 89835770.41
       },
       "027032": {
         "nombre": "CAJA REAL CUAUHTÉMOC",
@@ -1739,7 +1743,8 @@
           14.45,
           14.24,
           14.69
-        ]
+        ],
+        "cartera_total": 5748021575.35
       },
       "027009": {
         "nombre": "CAJA SURHERMANDAD",
@@ -1865,7 +1870,8 @@
           11.81,
           11.57,
           11.48
-        ]
+        ],
+        "cartera_total": 3733094737.41
       },
       "027035": {
         "nombre": "CAJA REAL CENTRO NORTE",
@@ -1991,7 +1997,8 @@
           34.52,
           36.5,
           null
-        ]
+        ],
+        "cartera_total": 135742547.0
       },
       "027044": {
         "nombre": "CAJA REAL GUANAJUATO",
@@ -2117,7 +2124,8 @@
           9.92,
           10.22,
           10.18
-        ]
+        ],
+        "cartera_total": 91747432.47
       },
       "027045": {
         "nombre": "CAJA REAL HIDALGO",
@@ -2243,7 +2251,8 @@
           14.08,
           13.95,
           11.91
-        ]
+        ],
+        "cartera_total": 469301974.23
       },
       "027034": {
         "nombre": "CAJA REAL NORTE",
@@ -2369,7 +2378,8 @@
           5.61,
           6.13,
           7.15
-        ]
+        ],
+        "cartera_total": 136285210.04
       },
       "027018": {
         "nombre": "BIEN PARA BIEN",
@@ -2495,7 +2505,8 @@
           5.55,
           4.91,
           5.15
-        ]
+        ],
+        "cartera_total": 38564048.7
       },
       "027019": {
         "nombre": "CAJA REAL NACIONAL",
@@ -2621,7 +2632,8 @@
           7.94,
           7.98,
           8.27
-        ]
+        ],
+        "cartera_total": 164349259.3
       },
       "027026": {
         "nombre": "CAJA REAL CENTRO",
@@ -2747,7 +2759,8 @@
           9.82,
           9.93,
           9.68
-        ]
+        ],
+        "cartera_total": 337777947.95
       },
       "027028": {
         "nombre": "CAJA REAL GOLFO",
@@ -2873,7 +2886,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 203532.33
       },
       "027008": {
         "nombre": "KUBO FINANCIERO",
@@ -2999,7 +3013,8 @@
           9.72,
           9.87,
           10.26
-        ]
+        ],
+        "cartera_total": 849545713.61
       },
       "027003": {
         "nombre": "TE CREEMOS",
@@ -3125,7 +3140,8 @@
           3.24,
           3.05,
           3.05
-        ]
+        ],
+        "cartera_total": 163183631.24
       },
       "027036": {
         "nombre": "CAJA REAL PACÍFICO",
@@ -3251,7 +3267,8 @@
           5.12,
           4.64,
           4.3
-        ]
+        ],
+        "cartera_total": 142472419.44
       },
       "027004": {
         "nombre": "CAJA POP MEXICANA",
@@ -3377,7 +3394,8 @@
           3.57,
           4.84,
           2.55
-        ]
+        ],
+        "cartera_total": 431535138.0
       },
       "027038": {
         "nombre": "CAJA REAL VERACRUZ",
@@ -3503,7 +3521,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 592361483.46
       },
       "027016": {
         "nombre": "CAJA REAL SOLIDARIA",
@@ -3629,7 +3648,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 1629446.61
       },
       "027015": {
         "nombre": "FONDESO",
@@ -3755,7 +3775,8 @@
           1.5,
           1.47,
           1.23
-        ]
+        ],
+        "cartera_total": 32864102.37
       },
       "027051": {
         "nombre": "CAJA REAL GUERRERO",
@@ -3881,7 +3902,8 @@
           5.75,
           7.64,
           4.66
-        ]
+        ],
+        "cartera_total": 10863514.47
       },
       "027005": {
         "nombre": "CAJA REAL MEXICANA",
@@ -4007,7 +4029,8 @@
           6.14,
           5.52,
           5.55
-        ]
+        ],
+        "cartera_total": 57665606.0
       },
       "027047": {
         "nombre": "CAJA REAL QUERÉTARO",
@@ -4133,7 +4156,8 @@
           4.14,
           4.45,
           5.08
-        ]
+        ],
+        "cartera_total": 2578160435.54
       },
       "027001": {
         "nombre": "FICREA",
@@ -4259,7 +4283,8 @@
           2.86,
           2.9,
           3.01
-        ]
+        ],
+        "cartera_total": 1344125703.12
       },
       "20": {
         "nombre": "SISTEMA SOFIPO",
@@ -4385,7 +4410,8 @@
           10.1,
           10.06,
           10.15
-        ]
+        ],
+        "cartera_total": 41085359866.42
       },
       "027049": {
         "nombre": "CAJA REAL SINALOA",
@@ -4511,7 +4537,8 @@
           5.69,
           5.57,
           5.03
-        ]
+        ],
+        "cartera_total": 234847.82
       },
       "027033": {
         "nombre": "REAL CAPITALIZA",
@@ -4637,7 +4664,8 @@
           32.85,
           33.17,
           34.96
-        ]
+        ],
+        "cartera_total": 2217231355.54
       },
       "027031": {
         "nombre": "PRESTANDO",
@@ -4763,7 +4791,8 @@
           13.2,
           12.63,
           12.59
-        ]
+        ],
+        "cartera_total": 457018233.95
       },
       "027046": {
         "nombre": "CAJA REAL PUEBLA",
@@ -4889,7 +4918,8 @@
           2.08,
           1.9,
           1.92
-        ]
+        ],
+        "cartera_total": 2868455893.47
       },
       "027030": {
         "nombre": "ACCESO FINANCIERO",
@@ -5015,7 +5045,8 @@
           1.01,
           1.01,
           1.26
-        ]
+        ],
+        "cartera_total": 40230493.71
       },
       "027012": {
         "nombre": "CAJA REAL PENINSULAR",
@@ -5141,7 +5172,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 509242.49
       },
       "027020": {
         "nombre": "CAJA REAL OCCIDENTAL",
@@ -5267,7 +5299,8 @@
           8.11,
           8.22,
           8.22
-        ]
+        ],
+        "cartera_total": 57230377.77
       },
       "027024": {
         "nombre": "CAJA REAL NORESTE",
@@ -5393,7 +5426,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 18155133.94
       },
       "027011": {
         "nombre": "027011",
@@ -5519,7 +5553,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 334210823.19
       },
       "027022": {
         "nombre": "CAJA REAL SURESTE",
@@ -5645,7 +5680,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 55339983.89
       },
       "027037": {
         "nombre": "CAJA REAL CENTRO SUR",
@@ -5771,7 +5807,8 @@
           16.1,
           17.57,
           6.02
-        ]
+        ],
+        "cartera_total": 8001222.27
       },
       "027025": {
         "nombre": "CAJA REAL BAJÍO",
@@ -5897,7 +5934,8 @@
           5.49,
           5.61,
           6.36
-        ]
+        ],
+        "cartera_total": 6862600.6
       },
       "027014": {
         "nombre": "CAJA INMACULADA",
@@ -6023,7 +6061,8 @@
           7.45,
           7.65,
           7.9
-        ]
+        ],
+        "cartera_total": 18193089425.21
       },
       "027042": {
         "nombre": "CAJA REAL OAXACA",
@@ -6149,7 +6188,8 @@
           9.1,
           9.01,
           9.26
-        ]
+        ],
+        "cartera_total": 19180050.68
       },
       "027048": {
         "nombre": "CAJA REAL SAN LUIS",
@@ -6275,7 +6315,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 137312.7
       },
       "027007": {
         "nombre": "CAJA MORELIA VALLADOLID",
@@ -6401,7 +6442,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 0.0
       },
       "027010": {
         "nombre": "CAJA LIBERTAD",
@@ -6527,7 +6569,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 213671737.0
       },
       "027021": {
         "nombre": "CAME FINANCIERO",
@@ -6653,7 +6696,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 113385786.0
       },
       "027002": {
         "nombre": "CAJA REAL DEL POTOSÍ",
@@ -6779,7 +6823,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 0.0
       },
       "027023": {
         "nombre": "FONCE",
@@ -6905,7 +6950,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 7229117.0
       },
       "027041": {
         "nombre": "CAJA REAL MICHOACÁN",
@@ -7031,7 +7077,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": 11569.0
       },
       "027006": {
         "nombre": "FINCOMÚN",
@@ -7157,7 +7204,8 @@
           null,
           null,
           null
-        ]
+        ],
+        "cartera_total": null
       }
     }
   }

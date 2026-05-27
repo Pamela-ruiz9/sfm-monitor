@@ -24,8 +24,8 @@ export interface BancoEntry {
   id: string;
   nombre: string;
   imor_total: (number | null)[];
-  imor_latest?: number | null;
-  imora_latest?: number | null;
+  imor_latest?: { valor: number; fecha: string } | null;
+  imora_latest?: { valor: number; fecha: string } | null;
 }
 
 interface Props {
@@ -33,8 +33,39 @@ interface Props {
   bancos: Record<string, BancoEntry>;
 }
 
-type SortKey = 'nombre' | 'imor_actual' | 'imor_12m' | 'delta_12m';
+type SortKey = 'populares' | 'nombre' | 'imor_actual' | 'imor_12m' | 'delta_12m';
 type SortDir = 'asc' | 'desc';
+
+// Default sort order by consumer recognition (issue #82).
+// G-7 first, then fintechs/neobancos, then Créditos a Hogares, then rest.
+// IDs from CNBV cat_instituciones_40.csv (Sector 40).
+const BANCOS_POPULARES: string[] = [
+  '040012', // BBVA México
+  '040002', // Banamex (Citibanamex)
+  '040072', // Banorte
+  '040014', // Santander
+  '040021', // HSBC
+  '040044', // Scotiabank
+  '040036', // Inbursa
+  '040127', // Banco Azteca
+  '040130', // Compartamos
+  '040137', // Bancoppel
+  '040165', // Banco Bineo
+  '040167', // Hey Banco
+  '040138', // Ualá
+  '040030', // Banco del Bajío
+  '040058', // Banregio
+  '040140', // Consubanco
+  '040149', // Banfeliz (Antes Forjadores)
+  '040062', // Afirme
+  '040042', // Banca Mifel
+  '040132', // Multiva
+];
+
+function popularityIndex(id: string): number {
+  const i = BANCOS_POPULARES.indexOf(id);
+  return i === -1 ? BANCOS_POPULARES.length : i;
+}
 
 interface RowData {
   id: string;
@@ -108,19 +139,22 @@ function buildRows(_fechas: string[], bancos: Record<string, BancoEntry>): RowDa
 
 function sortRows(rows: RowData[], key: SortKey, dir: SortDir): RowData[] {
   const sorted = [...rows].sort((a, b) => {
-    let av: string | number | null;
-    let bv: string | number | null;
-
-    if (key === 'nombre') {
-      av = a.nombre.toLowerCase();
-      bv = b.nombre.toLowerCase();
-      return dir === 'asc'
-        ? (av as string).localeCompare(bv as string)
-        : (bv as string).localeCompare(av as string);
+    if (key === 'populares') {
+      const ai = popularityIndex(a.id);
+      const bi = popularityIndex(b.id);
+      if (ai !== bi) return ai - bi;
+      // Tie-break within unknown banks: alphabetical
+      return a.nombre.localeCompare(b.nombre);
     }
 
-    av = a[key];
-    bv = b[key];
+    if (key === 'nombre') {
+      const av = a.nombre.toLowerCase();
+      const bv = b.nombre.toLowerCase();
+      return dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
+    }
+
+    const av = a[key];
+    const bv = b[key];
 
     // Nulls go last always
     if (av === null && bv === null) return 0;
@@ -187,8 +221,8 @@ function Sparkline({ series, color }: SparklineProps) {
 const DEFAULT_VISIBLE = 20;
 
 export function BancosTable({ fechas, bancos }: Props) {
-  const [sortKey, setSortKey] = useState<SortKey>('imor_actual');
-  const [sortDir, setSortDir] = useState<SortDir>('desc');
+  const [sortKey, setSortKey] = useState<SortKey>('populares');
+  const [sortDir, setSortDir] = useState<SortDir>('asc');
   const [showAll, setShowAll] = useState(false);
 
   const allRows = buildRows(fechas, bancos);
@@ -201,7 +235,7 @@ export function BancosTable({ fechas, bancos }: Props) {
       setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'));
     } else {
       setSortKey(key);
-      setSortDir(key === 'nombre' ? 'asc' : 'desc');
+      setSortDir(key === 'nombre' || key === 'populares' ? 'asc' : 'desc');
     }
   }
 
@@ -254,8 +288,19 @@ export function BancosTable({ fechas, bancos }: Props) {
         <table style={{ width: '100%', borderCollapse: 'collapse', background: 'transparent' }}>
           <thead>
             <tr>
-              <th style={thStyle} onClick={() => handleSort('nombre')}>
-                Banco <SortIcon col="nombre" />
+              <th
+                style={thStyle}
+                onClick={() => handleSort(sortKey === 'nombre' ? 'populares' : 'nombre')}
+                title={sortKey === 'nombre' ? 'Ordenar por popularidad' : 'Ordenar por nombre'}
+              >
+                Banco{' '}
+                {(sortKey === 'populares' || sortKey === 'nombre') ? (
+                  <span style={{ fontSize: 10, color: 'var(--color-gold, #fbbf24)' }}>
+                    {sortKey === 'populares' ? '★' : sortDir === 'asc' ? '↑' : '↓'}
+                  </span>
+                ) : (
+                  <span style={{ opacity: 0.3, fontSize: 10 }}>⇅</span>
+                )}
               </th>
               <th style={thStyleRight} onClick={() => handleSort('imor_actual')}>
                 IMOR actual <SortIcon col="imor_actual" />
@@ -367,7 +412,7 @@ export function BancosTable({ fechas, bancos }: Props) {
           <p style={{ marginTop: 6, fontSize: 11, color: 'var(--color-text-mute, #6b7280)' }}>
             {showAll
               ? `Mostrando ${totalBancos} instituciones`
-              : `Mostrando ${DEFAULT_VISIBLE} de ${totalBancos} instituciones · Ordenado por IMOR actual`}
+              : `Mostrando ${DEFAULT_VISIBLE} de ${totalBancos} instituciones · ${sortKey === 'populares' ? 'Orden: más conocidos primero' : sortKey === 'nombre' ? 'Orden: nombre' : 'Orden: IMOR actual'}`}
           </p>
         </div>
       )}

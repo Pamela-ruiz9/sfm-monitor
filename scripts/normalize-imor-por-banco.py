@@ -31,11 +31,13 @@ SH_DATOS_40 = os.path.join(RAW, "sh_datos_40.csv")
 CAT_INST = os.path.join(DATA, "Raw_data", "cat_instituciones_40.csv")
 OUT_FILE = os.path.join(DATA, "imor_por_banco.json")
 
-# Concepts of interest
-CONCEPTS = {
-    "40200017": "imor_total",
-    "40200033": "imora_total",
-    "40200096": "icor_total",
+# Concepts of interest — (field_name, multiplier)
+# Raw CSV values are ratios (0–1); multiply by 100 to get percentage points.
+# ICOR is already a coverage ratio (e.g. 2.04 = 204% coverage), kept ×1.
+CONCEPTS: dict[str, tuple[str, float]] = {
+    "40200017": ("imor_total",  100.0),
+    "40200033": ("imora_total", 100.0),
+    "40200096": ("icor_total",    1.0),
 }
 
 # Aggregate entity IDs to exclude (sistema, grupos, no individuales)
@@ -98,7 +100,9 @@ def parse_sh_datos_40() -> dict:
             periodo_iso = periodo_to_iso(periodo)
 
             try:
-                valor = float(row.get("valor", "") or 0)
+                raw = float(row.get("valor", "") or 0)
+                _, mult = CONCEPTS[concepto]
+                valor = round(raw * mult, 4) if raw is not None else None
             except (ValueError, TypeError):
                 valor = None
 
@@ -111,7 +115,7 @@ def parse_sh_datos_40() -> dict:
                     "icor_total": None,
                 }
 
-            field = CONCEPTS[concepto]
+            field, _ = CONCEPTS[concepto]
             data[entidad][periodo_iso][field] = valor
             matched_rows += 1
 

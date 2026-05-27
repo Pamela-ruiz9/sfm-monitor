@@ -27,15 +27,15 @@
 **Portal:** [portafolioinfo.cnbv.gob.mx](https://portafolioinfo.cnbv.gob.mx)
 
 **Ruta de navegación:**
-1. Banca Múltiple → Portafolio de Información
-2. Sección **Sector 40** → Exportar
-3. Seleccionar todos los periodos disponibles
-4. Formato: CSV
+1. Banca Múltiple → **Consultas Interactivas**
+2. Seleccionar sector: **Sector 40 (Banca Múltiple)**
+3. Pestaña / sección: **Serie Histórica**
+4. Clic en **Descargar CSV**
 5. Guardar como `raw-data/sh_datos_40.csv`
 
 **Frecuencia de publicación:** mensual, con rezago de ~30 días
 **Codificación:** Latin-1 (el script lo maneja automáticamente)
-**Nota:** El archivo es grande (~515 MB). La descarga puede tardar varios minutos.
+**Nota:** El archivo es grande (~515 MB) — no se sube al repo (ya está en `.gitignore`). Solo se usa localmente para generar los JSONs procesados; una vez corridos los scripts puedes borrarlo. La descarga puede tardar varios minutos.
 
 ---
 
