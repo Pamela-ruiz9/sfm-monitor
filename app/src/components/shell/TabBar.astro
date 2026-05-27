@@ -38,16 +38,18 @@ const path = Astro.url.pathname;
                 ? 'text-[--color-gold] border-[--color-gold]'
                 : 'text-[--color-text-mute] border-transparent hover:text-[--color-text-dim] hover:border-[--color-border]',
             ]}>
-            <Icon className="size-4" aria-hidden="true" />
-            {label}
-            {sub && (
-              <span class:list={[
-                'text-[11px] font-normal',
-                active ? 'text-[--color-gold]/60' : 'text-[--color-text-mute]/60',
-              ]}>
-                · {sub}
-              </span>
-            )}
+            <Icon className="size-4 shrink-0" aria-hidden="true" />
+            <span class="flex flex-col leading-tight">
+              <span>{label}</span>
+              {sub && (
+                <span class:list={[
+                  'text-[10px] font-normal',
+                  active ? 'text-[--color-gold]/60' : 'text-[--color-text-mute]/60',
+                ]}>
+                  {sub}
+                </span>
+              )}
+            </span>
           </a>
         );
       })
