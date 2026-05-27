@@ -56,12 +56,20 @@ function pillClass(active: boolean): string {
   );
 }
 
+function hasData(series: (number | null)[]): boolean {
+  return series.some((v) => v !== null && v !== undefined && v > 0);
+}
+
 export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
   const [sector, setSector] = useState<Sector>('bm');
   const [view, setView] = useState<'sistema' | 'banco' | 'entidad'>('sistema');
   const [cartera, setCartera] = useState<Cartera>('total');
-  const [bancoId, setBancoId] = useState<string>(bm.bancos[0]?.id ?? '');
-  const [entidadId, setEntidadId] = useState<string>(sofipos.entidades[0]?.id ?? '');
+
+  const bancosConDatos = useMemo(() => bm.bancos.filter((b) => hasData(b.imor_total)), [bm.bancos]);
+  const entidadesConDatos = useMemo(() => sofipos.entidades.filter((e) => hasData(e.imor)), [sofipos.entidades]);
+
+  const [bancoId, setBancoId] = useState<string>(bancosConDatos[0]?.id ?? '');
+  const [entidadId, setEntidadId] = useState<string>(entidadesConDatos[0]?.id ?? '');
 
   const { fechas, values, label, color, yMax } = useMemo(() => {
     if (sector === 'bm') {
@@ -75,7 +83,7 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
           yMax: undefined as number | undefined,
         };
       }
-      const banco = bm.bancos.find((b) => b.id === bancoId) ?? bm.bancos[0];
+      const banco = bancosConDatos.find((b) => b.id === bancoId) ?? bancosConDatos[0];
       if (!banco) {
         return {
           fechas: bm.fechas,
@@ -104,7 +112,7 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
         yMax: 45,
       };
     }
-    const ent = sofipos.entidades.find((e) => e.id === entidadId) ?? sofipos.entidades[0];
+    const ent = entidadesConDatos.find((e) => e.id === entidadId) ?? entidadesConDatos[0];
     if (!ent) {
       return {
         fechas: sofipos.fechas,
@@ -196,7 +204,7 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
         )}
         {view === 'banco' && (
           <div className="flex gap-1.5 flex-wrap">
-            {bm.bancos.map((b) => (
+            {bancosConDatos.map((b) => (
               <button key={b.id} onClick={() => setBancoId(b.id)} className={pillClass(bancoId === b.id)}>
                 {b.nombre}
               </button>
@@ -205,7 +213,7 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
         )}
         {view === 'entidad' && (
           <div className="flex gap-1.5 overflow-x-auto pb-1 max-h-24 flex-wrap">
-            {sofipos.entidades.map((e) => (
+            {entidadesConDatos.map((e) => (
               <button key={e.id} onClick={() => setEntidadId(e.id)} className={pillClass(entidadId === e.id)}>
                 {e.nombre}
               </button>

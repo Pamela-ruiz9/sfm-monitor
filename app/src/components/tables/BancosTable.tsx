@@ -103,6 +103,9 @@ function buildRows(_fechas: string[], bancos: Record<string, BancoEntry>): RowDa
     const series = banco.imor_total;
     const len = series.length;
 
+    // Skip banks with no real data (all null or all zero)
+    if (!series.some((v) => v !== null && v !== undefined && v > 0)) continue;
+
     // Latest non-null value
     let imor_actual: number | null = null;
     let actualIdx = -1;

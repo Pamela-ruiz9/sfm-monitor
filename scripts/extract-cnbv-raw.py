@@ -83,10 +83,17 @@ CONCEPT_MAP = {
 }
 
 CONCEPT_MAP_EXTRA = {
-    "imor_comercial": ("40200018", 100.0),
-    "imor_consumo":   ("40200056", 100.0),
-    "imor_vivienda":  ("40200046", 100.0),
+    "imor_comercial":     ("40200018", 100.0),
+    "imor_consumo":       ("40200056", 100.0),
+    "imor_vivienda":      ("40200046", 100.0),
+    "imor_tarjeta":       ("40200019", 100.0),  # tarjeta de crédito
+    "imor_consumo_norev": ("40200020", 100.0),  # consumo no revolvente
 }
+
+# Concepts whose raw value = 1.0 (ratio sentinel) is a CNBV artifact, not real data.
+# imor_consumo (40200056) reports 1.0 throughout 2003 before the series was properly
+# established. Treat any raw ratio >= 0.99 as missing for these concepts.
+ARTIFACT_CONCEPTS = {"40200056"}
 
 
 # ──────────────────────────────────────────────
@@ -138,6 +145,9 @@ def extract_cnbv() -> None:
             p = row["periodo"]
             val = safe_float(row["valor"])
             if val is not None:
+                # Skip sentinel value 1.0 (ratio) = 100% — CNBV artifact in early periods
+                if concept in ARTIFACT_CONCEPTS and val >= 0.99:
+                    continue
                 periodos[p][concept] = val
 
     if not periodos:
