@@ -12,6 +12,10 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### ux(#85) — Rediseño menú de navegación (2026-05-27)
+- `TabBar.astro` (desktop): labels con subtítulo descriptivo — "Riesgo Sistémico · Heatmap", "Mercado · TIIE · Cetes", "Crédito · IMOR · IMORA", "SoFiPOs · Financieras pop.", "Macro · PIB · IGAE"
+- `BottomNav.astro` (mobile): solo label corto sin subtítulo para no saturar el espacio — "Riesgo", "Mercado", "Crédito", etc.
+
 ### fix(#80) — Preload CSS en GitHub Pages (2026-05-27)
 - `app/astro.config.ts`: `cssCodeSplit: false` en `vite.build` — elimina el error "Unable to preload CSS for /_assets/X.css" al unificar en un solo bundle CSS (sin race condition entre hashes de build y SW caché)
 

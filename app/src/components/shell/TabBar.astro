@@ -4,13 +4,13 @@ import { Home, LineChart, Activity, Building2, TrendingUp, BookOpen, Thermometer
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const TABS = [
-  { href: `${base}/`, label: 'Resumen', match: new RegExp(`^${base}\\/?$`), Icon: Home },
-  { href: `${base}/riesgo`, label: 'Riesgo', match: new RegExp(`^${base}/riesgo`), Icon: Thermometer },
-  { href: `${base}/mercado`, label: 'Mercado', match: new RegExp(`^${base}/mercado`), Icon: LineChart },
-  { href: `${base}/credito`, label: 'Crédito', match: new RegExp(`^${base}/credito`), Icon: Activity },
-  { href: `${base}/sofipos`, label: 'SoFiPOs', match: new RegExp(`^${base}/sofipos`), Icon: Building2 },
-  { href: `${base}/macro`, label: 'Macro', match: new RegExp(`^${base}/macro`), Icon: TrendingUp },
-  { href: `${base}/metodologia`, label: 'Metodología', match: new RegExp(`^${base}/metodologia`), Icon: BookOpen },
+  { href: `${base}/`,           label: 'Resumen',           sub: undefined,              match: new RegExp(`^${base}\\/?$`),         Icon: Home },
+  { href: `${base}/riesgo`,     label: 'Riesgo Sistémico',  sub: 'Heatmap',              match: new RegExp(`^${base}/riesgo`),       Icon: Thermometer },
+  { href: `${base}/mercado`,    label: 'Mercado',           sub: 'TIIE · Cetes',         match: new RegExp(`^${base}/mercado`),      Icon: LineChart },
+  { href: `${base}/credito`,    label: 'Crédito',           sub: 'IMOR · IMORA',         match: new RegExp(`^${base}/credito`),      Icon: Activity },
+  { href: `${base}/sofipos`,    label: 'SoFiPOs',           sub: 'Financieras pop.',     match: new RegExp(`^${base}/sofipos`),      Icon: Building2 },
+  { href: `${base}/macro`,      label: 'Macro',             sub: 'PIB · IGAE',           match: new RegExp(`^${base}/macro`),        Icon: TrendingUp },
+  { href: `${base}/metodologia`, label: 'Metodología',      sub: undefined,              match: new RegExp(`^${base}/metodologia`),  Icon: BookOpen },
 ];
 
 const path = Astro.url.pathname;
@@ -23,7 +23,7 @@ const path = Astro.url.pathname;
     class="max-w-7xl mx-auto px-6 flex gap-1 overflow-x-auto"
     role="tablist">
     {
-      TABS.map(({ href, label, match, Icon }) => {
+      TABS.map(({ href, label, sub, match, Icon }) => {
         const active = match.test(path);
         return (
           <a
@@ -40,6 +40,14 @@ const path = Astro.url.pathname;
             ]}>
             <Icon className="size-4" aria-hidden="true" />
             {label}
+            {sub && (
+              <span class:list={[
+                'text-[11px] font-normal',
+                active ? 'text-[--color-gold]/60' : 'text-[--color-text-mute]/60',
+              ]}>
+                · {sub}
+              </span>
+            )}
           </a>
         );
       })
