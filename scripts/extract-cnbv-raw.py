@@ -114,6 +114,10 @@ SOFIPOS_CONCEPT_MAP: dict[str, tuple[str, float]] = {
     "imora_total":    ("27200009", 100.0), # IMORA cartera de crédito
 }
 
+# IMOR concepts where raw value >= 0.99 is a CNBV sentinel (ID transition, not real data).
+# Seen in 027014 (Nu México) from 202001–202106 while the ID was being reassigned.
+SOFIPOS_IMOR_CONCEPTS = {"27200005", "27200006", "27200007", "27200008", "27200009"}
+
 
 # ──────────────────────────────────────────────
 # 1. sh_datos_40.csv → cnbv_indicadores.json
@@ -211,6 +215,8 @@ def extract_sofipos() -> None:
             val = safe_float(row["valor"])
             if val is None:
                 continue
+            if concept in SOFIPOS_IMOR_CONCEPTS and val >= 0.99:
+                continue  # CNBV sentinel during ID-reassignment periods
             mult = concept_mult[concept]
             ind  = concept_to_ind[concept]
             all_periods_set.add(periodo)

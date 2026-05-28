@@ -2485,64 +2485,55 @@
         "roa": -0.0281,
         "roe": -0.1568,
         "imor_total": 18.6846,
-        "imor_comercial": 18.6102,
-        "imor_consumo": 100.0
+        "imor_comercial": 18.6102
       },
       "201606": {
         "roa": -0.0391,
         "roe": -0.2227,
         "imor_total": 21.7839,
-        "imor_comercial": 21.7192,
-        "imor_consumo": 100.0
+        "imor_comercial": 21.7192
       },
       "201607": {
         "roa": -0.0418,
         "roe": -0.2417,
         "imor_total": 23.5003,
-        "imor_comercial": 23.4394,
-        "imor_consumo": 100.0
+        "imor_comercial": 23.4394
       },
       "201608": {
         "roa": -0.0519,
         "roe": -0.3041,
         "imor_total": 26.3331,
-        "imor_comercial": 26.2767,
-        "imor_consumo": 100.0
+        "imor_comercial": 26.2767
       },
       "201609": {
         "roa": -0.067,
         "roe": -0.3961,
         "imor_total": 26.3898,
-        "imor_comercial": 26.3358,
-        "imor_consumo": 100.0
+        "imor_comercial": 26.3358
       },
       "201610": {
         "roa": -0.0885,
         "roe": -0.539,
         "imor_total": 29.4265,
-        "imor_comercial": 29.3756,
-        "imor_consumo": 100.0
+        "imor_comercial": 29.3756
       },
       "201611": {
         "roa": -0.1077,
         "roe": -0.6787,
         "imor_total": 31.9105,
-        "imor_comercial": 31.8592,
-        "imor_consumo": 100.0
+        "imor_comercial": 31.8592
       },
       "201612": {
         "roa": -0.0227,
         "roe": -0.1423,
         "imor_total": 25.5217,
-        "imor_comercial": 25.4596,
-        "imor_consumo": 100.0
+        "imor_comercial": 25.4596
       },
       "201701": {
         "roa": -0.0389,
         "roe": -0.2444,
         "imor_total": 25.2561,
         "imor_comercial": 25.1951,
-        "imor_consumo": 100.0,
         "imora_total": 25.2561
       },
       "201702": {
@@ -2550,7 +2541,6 @@
         "roe": -0.3123,
         "imor_total": 26.1768,
         "imor_comercial": 26.1159,
-        "imor_consumo": 100.0,
         "imora_total": 26.1768
       },
       "201703": {
@@ -2558,7 +2548,6 @@
         "roe": -0.4185,
         "imor_total": 31.5419,
         "imor_comercial": 31.4817,
-        "imor_consumo": 100.0,
         "imora_total": 31.5599
       },
       "201704": {
@@ -2566,7 +2555,6 @@
         "roe": -0.5445,
         "imor_total": 29.9875,
         "imor_comercial": 29.9318,
-        "imor_consumo": 100.0,
         "imora_total": 30.1784
       },
       "201705": {
@@ -4609,21 +4597,18 @@
         "roa": -0.8705,
         "roe": -3.3579,
         "imor_total": 72.0103,
-        "imor_comercial": 99.9795,
         "imor_consumo": 70.1476
       },
       "201606": {
         "roa": -1.0036,
         "roe": -4.4595,
         "imor_total": 80.7098,
-        "imor_comercial": 100.0,
         "imor_consumo": 79.2502
       },
       "201607": {
         "roa": -1.1205,
         "roe": -6.1715,
         "imor_total": 80.7098,
-        "imor_comercial": 100.0,
         "imor_consumo": 79.2502
       }
     },
@@ -5337,7 +5322,6 @@
         "roa": -0.0467,
         "roe": -0.069,
         "imor_total": 7.7426,
-        "imor_comercial": 100.0,
         "imor_consumo": 7.4753,
         "imora_total": 23.2579
       },
@@ -5345,7 +5329,6 @@
         "roa": -0.0275,
         "roe": -0.0407,
         "imor_total": 8.1387,
-        "imor_comercial": 100.0,
         "imor_consumo": 7.8744,
         "imora_total": 23.5204
       },
@@ -5353,7 +5336,6 @@
         "roa": -0.0028,
         "roe": -0.0042,
         "imor_total": 8.5149,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.2545,
         "imora_total": 23.8948
       },
@@ -5361,7 +5343,6 @@
         "roa": 0.0128,
         "roe": 0.0192,
         "imor_total": 8.5994,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.3401,
         "imora_total": 23.9522
       },
@@ -5369,7 +5350,6 @@
         "roa": 0.0252,
         "roe": 0.038,
         "imor_total": 8.6739,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.4173,
         "imora_total": 23.707
       },
@@ -5377,7 +5357,6 @@
         "roa": 0.0302,
         "roe": 0.0458,
         "imor_total": 8.5395,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.29,
         "imora_total": 22.4837
       },
@@ -5385,7 +5364,6 @@
         "roa": 0.0309,
         "roe": 0.0472,
         "imor_total": 8.4042,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.1633,
         "imora_total": 21.727
       },
@@ -5393,7 +5371,6 @@
         "roa": 0.0346,
         "roe": 0.0533,
         "imor_total": 8.1172,
-        "imor_comercial": 100.0,
         "imor_consumo": 7.8813,
         "imora_total": 20.6794
       },
@@ -5401,7 +5378,6 @@
         "roa": 0.0335,
         "roe": 0.052,
         "imor_total": 7.8119,
-        "imor_comercial": 100.0,
         "imor_consumo": 7.5884,
         "imora_total": 20.1114
       },
@@ -5649,7 +5625,6 @@
         "roa": -0.048,
         "roe": -0.1129,
         "imor_total": 10.2066,
-        "imor_comercial": 100.0,
         "imor_consumo": 10.1745,
         "imora_total": 28.0159
       },
@@ -5657,7 +5632,6 @@
         "roa": -0.0432,
         "roe": -0.1037,
         "imor_total": 9.6854,
-        "imor_comercial": 100.0,
         "imor_consumo": 9.6537,
         "imora_total": 27.5071
       },
@@ -5665,7 +5639,6 @@
         "roa": -0.0403,
         "roe": -0.099,
         "imor_total": 8.9032,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.8719,
         "imora_total": 26.7727
       },
@@ -5673,7 +5646,6 @@
         "roa": -0.0344,
         "roe": -0.0862,
         "imor_total": 8.6539,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.623,
         "imora_total": 26.423
       },
@@ -5681,7 +5653,6 @@
         "roa": -0.0231,
         "roe": -0.0592,
         "imor_total": 8.5848,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.5561,
         "imora_total": 26.0381
       },
@@ -5689,7 +5660,6 @@
         "roa": -0.0146,
         "roe": -0.0375,
         "imor_total": 8.6708,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.6444,
         "imora_total": 25.6104
       },
@@ -5697,7 +5667,6 @@
         "roa": -0.0047,
         "roe": -0.0123,
         "imor_total": 8.3679,
-        "imor_comercial": 100.0,
         "imor_consumo": 8.3425,
         "imora_total": 24.8469
       },
@@ -5705,7 +5674,6 @@
         "roa": -0.0006,
         "roe": -0.0015,
         "imor_total": 7.9315,
-        "imor_comercial": 100.0,
         "imor_consumo": 7.907,
         "imora_total": 24.0157
       },
@@ -5713,7 +5681,6 @@
         "roa": 0.0087,
         "roe": 0.0225,
         "imor_total": 7.894,
-        "imor_comercial": 100.0,
         "imor_consumo": 7.8709,
         "imora_total": 23.4728
       },
@@ -7595,8 +7562,7 @@
       },
       "202210": {
         "roa": -0.0015,
-        "roe": -0.0109,
-        "imora_total": 100.0
+        "roe": -0.0109
       }
     },
     "027012": {
@@ -7604,7 +7570,6 @@
         "roa": -0.8759,
         "roe": -2.6411,
         "imor_total": 8.933,
-        "imor_comercial": 100.0,
         "imor_consumo": 0.0
       },
       "201602": {
@@ -8307,17 +8272,11 @@
       },
       "202409": {
         "roa": -1.7673,
-        "roe": -2.7899,
-        "imor_total": 99.3409,
-        "imor_consumo": 99.3409,
-        "imora_total": 99.3409
+        "roe": -2.7899
       },
       "202410": {
         "roa": -2.0913,
-        "roe": -3.1351,
-        "imor_total": 99.4241,
-        "imor_consumo": 99.4241,
-        "imora_total": 99.4241
+        "roe": -3.1351
       },
       "202411": {
         "roa": -2.2835,
@@ -9845,167 +9804,88 @@
       "201911": {
         "roa": 0.0042,
         "roe": 0.0536,
-        "imor_total": 99.6091,
-        "imor_comercial": 100.0,
-        "imor_consumo": 91.4692,
-        "imora_total": 99.612
+        "imor_consumo": 91.4692
       },
       "201912": {
         "roa": -0.0008,
         "roe": -0.0101,
-        "imor_total": 99.6099,
-        "imor_comercial": 100.0,
-        "imor_consumo": 92.2293,
-        "imora_total": 99.6131
+        "imor_consumo": 92.2293
       },
       "202001": {
         "roa": -0.0012,
-        "roe": -0.0139,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.0139
       },
       "202002": {
         "roa": -0.0013,
-        "roe": -0.0146,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.0146
       },
       "202003": {
         "roa": -0.0004,
-        "roe": -0.0041,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.0041
       },
       "202004": {
         "roa": -0.002,
-        "roe": -0.0225,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.0225
       },
       "202005": {
         "roa": -0.004,
-        "roe": -0.0489,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.0489
       },
       "202006": {
         "roa": -0.0048,
-        "roe": -0.0639,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.0639
       },
       "202007": {
         "roa": -0.0047,
-        "roe": -0.069,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.069
       },
       "202008": {
         "roa": -0.0549,
-        "roe": -0.818,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.818
       },
       "202009": {
         "roa": -0.0619,
-        "roe": -0.9279,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.9279
       },
       "202010": {
         "roa": -0.0839,
-        "roe": -1.1357,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -1.1357
       },
       "202011": {
         "roa": -0.1043,
-        "roe": -1.2853,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -1.2853
       },
       "202012": {
         "roa": -0.088,
-        "roe": -0.962,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.962
       },
       "202101": {
         "roa": -0.1023,
-        "roe": -0.9829,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.9829
       },
       "202102": {
         "roa": -0.1211,
-        "roe": -1.0021,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -1.0021
       },
       "202103": {
         "roa": -0.1512,
-        "roe": -1.0652,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -1.0652
       },
       "202104": {
         "roa": -0.1749,
-        "roe": -1.0277,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -1.0277
       },
       "202105": {
         "roa": -0.2221,
-        "roe": -0.9946,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.9946
       },
       "202106": {
         "roa": -0.3036,
-        "roe": -0.973,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.973
       },
       "202107": {
         "roa": -0.4344,
-        "roe": -0.8939,
-        "imora_total": 100.0
+        "roe": -0.8939
       },
       "202108": {
         "roa": -0.0107,
@@ -11763,7 +11643,6 @@
         "roe": 1.2761,
         "imor_total": 98.1401,
         "imor_comercial": 70.059,
-        "imor_consumo": 99.8598,
         "imora_total": 98.1402
       },
       "202112": {
@@ -11771,7 +11650,6 @@
         "roe": 1.1126,
         "imor_total": 97.782,
         "imor_comercial": 62.0472,
-        "imor_consumo": 99.8542,
         "imora_total": 97.7822
       },
       "202201": {
@@ -11779,7 +11657,6 @@
         "roe": 1.2773,
         "imor_total": 97.915,
         "imor_comercial": 63.5007,
-        "imor_consumo": 99.8652,
         "imora_total": 97.9152
       },
       "202202": {
@@ -11787,7 +11664,6 @@
         "roe": 1.4866,
         "imor_total": 98.0537,
         "imor_comercial": 65.0859,
-        "imor_consumo": 99.8766,
         "imora_total": 98.0538
       },
       "202203": {
@@ -11795,7 +11671,6 @@
         "roe": 1.7509,
         "imor_total": 98.1919,
         "imor_comercial": 66.741,
-        "imor_consumo": 99.8881,
         "imora_total": 98.1921
       },
       "202204": {
@@ -11803,7 +11678,6 @@
         "roe": 1.8619,
         "imor_total": 98.3332,
         "imor_comercial": 68.5249,
-        "imor_consumo": 99.8991,
         "imora_total": 98.3333
       },
       "202205": {
@@ -11811,7 +11685,6 @@
         "roe": 3.2193,
         "imor_total": 98.4761,
         "imor_comercial": 70.4251,
-        "imor_consumo": 99.9102,
         "imora_total": 98.4763
       },
       "202206": {
@@ -11819,7 +11692,6 @@
         "roe": 5.2111,
         "imor_total": 98.6225,
         "imor_comercial": 72.4783,
-        "imor_consumo": 99.9213,
         "imora_total": 98.6226
       },
       "202207": {
@@ -14339,7 +14211,6 @@
         "imor_total": 14.8137,
         "imor_comercial": 15.0769,
         "imor_consumo": 14.2232,
-        "imor_vivienda": 100.0,
         "imora_total": 14.8137
       },
       "202101": {
@@ -14375,7 +14246,6 @@
         "imor_total": 15.6162,
         "imor_comercial": 15.664,
         "imor_consumo": 15.4482,
-        "imor_vivienda": 100.0,
         "imora_total": 15.6162
       },
       "202105": {
@@ -14384,7 +14254,6 @@
         "imor_total": 15.1493,
         "imor_comercial": 15.1541,
         "imor_consumo": 15.0755,
-        "imor_vivienda": 100.0,
         "imora_total": 15.1493
       },
       "202106": {
@@ -14393,7 +14262,6 @@
         "imor_total": 14.8126,
         "imor_comercial": 14.7652,
         "imor_consumo": 14.8598,
-        "imor_vivienda": 100.0,
         "imora_total": 14.8126
       },
       "202107": {
@@ -14402,7 +14270,6 @@
         "imor_total": 16.1291,
         "imor_comercial": 16.9498,
         "imor_consumo": 14.1521,
-        "imor_vivienda": 100.0,
         "imora_total": 16.1291
       },
       "202108": {
@@ -14411,7 +14278,6 @@
         "imor_total": 17.3318,
         "imor_comercial": 19.0351,
         "imor_consumo": 13.3775,
-        "imor_vivienda": 100.0,
         "imora_total": 17.3318
       },
       "202109": {
@@ -14420,7 +14286,6 @@
         "imor_total": 17.9205,
         "imor_comercial": 20.0434,
         "imor_consumo": 13.1931,
-        "imor_vivienda": 100.0,
         "imora_total": 17.9205
       },
       "202110": {
@@ -14429,7 +14294,6 @@
         "imor_total": 18.0542,
         "imor_comercial": 20.546,
         "imor_consumo": 12.9426,
-        "imor_vivienda": 100.0,
         "imora_total": 18.0542
       },
       "202111": {
@@ -14438,7 +14302,6 @@
         "imor_total": 18.2342,
         "imor_comercial": 20.8371,
         "imor_consumo": 13.1219,
-        "imor_vivienda": 100.0,
         "imora_total": 18.2342
       },
       "202112": {
@@ -14447,7 +14310,6 @@
         "imor_total": 15.0492,
         "imor_comercial": 16.2536,
         "imor_consumo": 12.7975,
-        "imor_vivienda": 100.0,
         "imora_total": 15.0492
       },
       "202201": {
@@ -14456,7 +14318,6 @@
         "imor_total": 15.326,
         "imor_comercial": 16.257,
         "imor_consumo": 13.6811,
-        "imor_vivienda": 100.0,
         "imora_total": 15.326
       },
       "202202": {
@@ -14465,7 +14326,6 @@
         "imor_total": 16.095,
         "imor_comercial": 16.8695,
         "imor_consumo": 14.7586,
-        "imor_vivienda": 100.0,
         "imora_total": 16.095
       },
       "202203": {
@@ -14474,7 +14334,6 @@
         "imor_total": 17.3333,
         "imor_comercial": 19.0048,
         "imor_consumo": 14.4114,
-        "imor_vivienda": 100.0,
         "imora_total": 17.3333
       },
       "202204": {
@@ -14483,7 +14342,6 @@
         "imor_total": 15.9877,
         "imor_comercial": 17.3482,
         "imor_consumo": 13.7262,
-        "imor_vivienda": 100.0,
         "imora_total": 15.9877
       },
       "202205": {
@@ -14492,7 +14350,6 @@
         "imor_total": 17.9269,
         "imor_comercial": 20.5526,
         "imor_consumo": 13.7876,
-        "imor_vivienda": 100.0,
         "imora_total": 17.9269
       },
       "202206": {
@@ -18451,7 +18308,6 @@
         "roa": -0.704,
         "roe": -4.6522,
         "imor_total": 39.7868,
-        "imor_comercial": 100.0,
         "imor_consumo": 32.5341,
         "imora_total": 39.7868
       },
@@ -18459,7 +18315,6 @@
         "roa": -0.597,
         "roe": -4.0818,
         "imor_total": 29.6087,
-        "imor_comercial": 100.0,
         "imor_consumo": 22.7853,
         "imora_total": 29.6087
       },
@@ -18467,7 +18322,6 @@
         "roa": -0.5101,
         "roe": -3.3005,
         "imor_total": 32.146,
-        "imor_comercial": 100.0,
         "imor_consumo": 29.0712,
         "imora_total": 32.146
       },
@@ -18547,7 +18401,6 @@
         "roa": -0.4927,
         "roe": -2.1426,
         "imor_total": 47.0374,
-        "imor_comercial": 100.0,
         "imor_consumo": 25.2844,
         "imora_total": 47.0374
       },
@@ -20163,10 +20016,7 @@
       },
       "201712": {
         "roa": -0.5245,
-        "roe": -2.2612,
-        "imor_total": 100.0,
-        "imor_comercial": 100.0,
-        "imora_total": 100.0
+        "roe": -2.2612
       },
       "201801": {
         "roa": -0.483,
@@ -22373,71 +22223,61 @@
         "roa": -0.5735,
         "roe": -1.3021,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.9315
+        "imor_consumo": 0.0
       },
       "202309": {
         "roa": -0.7052,
         "roe": -1.2562,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.9224
+        "imor_consumo": 0.0
       },
       "202310": {
         "roa": -0.7847,
         "roe": -1.25,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.934
+        "imor_consumo": 0.0
       },
       "202311": {
         "roa": -0.9156,
         "roe": -1.3754,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.8889
+        "imor_consumo": 0.0
       },
       "202312": {
         "roa": -0.6595,
         "roe": -1.1498,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.8991
+        "imor_consumo": 0.0
       },
       "202401": {
         "roa": -0.5248,
         "roe": -1.2267,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.9094
+        "imor_consumo": 0.0
       },
       "202402": {
         "roa": -0.4218,
         "roe": -1.3024,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.9211
+        "imor_consumo": 0.0
       },
       "202403": {
         "roa": -0.3444,
         "roe": -1.314,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.9138
+        "imor_consumo": 0.0
       },
       "202404": {
         "roa": -0.2508,
         "roe": -1.1515,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.9287
+        "imor_consumo": 0.0
       },
       "202405": {
         "roa": -0.232,
         "roe": -1.275,
         "imor_total": 0.0,
-        "imor_consumo": 0.0,
-        "imora_total": 99.766
+        "imor_consumo": 0.0
       },
       "202406": {
         "roa": -0.2068,
@@ -25676,8 +25516,7 @@
       },
       "202512": {
         "roa": -0.1723,
-        "roe": -0.765,
-        "imora_total": 100.0
+        "roe": -0.765
       },
       "202601": {
         "roa": -0.1648,
@@ -25697,105 +25536,79 @@
         "roa": -0.1138,
         "roe": -0.2212,
         "imor_total": 45.8873,
-        "imor_comercial": 45.5854,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 45.5854
       },
       "201602": {
         "roa": -0.1425,
         "roe": -0.2731,
         "imor_total": 45.4111,
-        "imor_comercial": 45.1085,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 45.1085
       },
       "201603": {
         "roa": -0.1634,
         "roe": -0.31,
         "imor_total": 44.9359,
-        "imor_comercial": 44.6475,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 44.6475
       },
       "201604": {
         "roa": -0.1812,
         "roe": -0.3412,
         "imor_total": 44.3351,
-        "imor_comercial": 44.0452,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 44.0452
       },
       "201605": {
         "roa": -0.1497,
         "roe": -0.2786,
         "imor_total": 43.4041,
-        "imor_comercial": 43.1095,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 43.1095
       },
       "201606": {
         "roa": -0.1276,
         "roe": -0.2346,
         "imor_total": 41.9202,
-        "imor_comercial": 41.6151,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 41.6151
       },
       "201607": {
         "roa": -0.1333,
         "roe": -0.2424,
         "imor_total": 41.5468,
-        "imor_comercial": 41.2429,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 41.2429
       },
       "201608": {
         "roa": -0.1275,
         "roe": -0.2283,
         "imor_total": 40.0193,
-        "imor_comercial": 39.7014,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 39.7014
       },
       "201609": {
         "roa": -0.1179,
         "roe": -0.2069,
         "imor_total": 44.744,
-        "imor_comercial": 44.4115,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 44.4115
       },
       "201610": {
         "roa": -0.0995,
         "roe": -0.171,
         "imor_total": 41.989,
-        "imor_comercial": 41.657,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 41.657
       },
       "201611": {
         "roa": -0.103,
         "roe": -0.1732,
         "imor_total": 55.6177,
-        "imor_comercial": 55.3475,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 55.3475
       },
       "201612": {
         "roa": -0.0915,
         "roe": -0.151,
         "imor_total": 49.0217,
-        "imor_comercial": 48.7485,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0
+        "imor_comercial": 48.7485
       },
       "201701": {
         "roa": -0.0881,
         "roe": -0.141,
         "imor_total": 48.577,
         "imor_comercial": 48.304,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 48.577
       },
       "201702": {
@@ -25803,8 +25616,6 @@
         "roe": -0.1408,
         "imor_total": 48.1812,
         "imor_comercial": 47.9083,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 48.1812
       },
       "201703": {
@@ -25812,8 +25623,6 @@
         "roe": -0.1229,
         "imor_total": 45.4936,
         "imor_comercial": 45.2227,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 45.4936
       },
       "201704": {
@@ -25821,8 +25630,6 @@
         "roe": -0.1127,
         "imor_total": 45.0801,
         "imor_comercial": 44.8096,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 45.0801
       },
       "201705": {
@@ -25830,8 +25637,6 @@
         "roe": -0.1107,
         "imor_total": 43.7043,
         "imor_comercial": 43.4248,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 43.7043
       },
       "201706": {
@@ -25839,8 +25644,6 @@
         "roe": -0.1437,
         "imor_total": 43.3143,
         "imor_comercial": 43.0353,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 43.3143
       },
       "201707": {
@@ -25848,8 +25651,6 @@
         "roe": -0.1323,
         "imor_total": 43.5117,
         "imor_comercial": 43.2321,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 43.5117
       },
       "201708": {
@@ -25857,8 +25658,6 @@
         "roe": -0.1346,
         "imor_total": 49.2661,
         "imor_comercial": 48.9828,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 49.2661
       },
       "201709": {
@@ -25866,8 +25665,6 @@
         "roe": -0.2324,
         "imor_total": 85.9629,
         "imor_comercial": 85.8846,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 85.9629
       },
       "201710": {
@@ -25875,8 +25672,6 @@
         "roe": -0.1775,
         "imor_total": 56.932,
         "imor_comercial": 56.6544,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 56.932
       },
       "201711": {
@@ -25884,8 +25679,6 @@
         "roe": -0.1621,
         "imor_total": 52.9457,
         "imor_comercial": 52.665,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 52.9457
       },
       "201712": {
@@ -25893,8 +25686,6 @@
         "roe": -0.1598,
         "imor_total": 52.6006,
         "imor_comercial": 52.3208,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 52.6006
       },
       "201801": {
@@ -25902,8 +25693,6 @@
         "roe": -0.1633,
         "imor_total": 52.2628,
         "imor_comercial": 51.9841,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 52.2628
       },
       "201802": {
@@ -25911,8 +25700,6 @@
         "roe": -0.1703,
         "imor_total": 51.9638,
         "imor_comercial": 51.686,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 51.9638
       },
       "201803": {
@@ -25920,8 +25707,6 @@
         "roe": -0.1755,
         "imor_total": 51.6394,
         "imor_comercial": 51.3627,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 51.6394
       },
       "201804": {
@@ -25929,8 +25714,6 @@
         "roe": -0.2031,
         "imor_total": 51.3318,
         "imor_comercial": 51.0561,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 51.3318
       },
       "201805": {
@@ -25938,8 +25721,6 @@
         "roe": -0.2139,
         "imor_total": 51.0204,
         "imor_comercial": 50.7458,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 51.0204
       },
       "201806": {
@@ -25947,8 +25728,6 @@
         "roe": -0.2144,
         "imor_total": 50.7518,
         "imor_comercial": 50.4783,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 50.7518
       },
       "201807": {
@@ -25956,8 +25735,6 @@
         "roe": -0.2357,
         "imor_total": 61.0033,
         "imor_comercial": 60.7882,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 61.0033
       },
       "201808": {
@@ -25965,8 +25742,6 @@
         "roe": -0.2509,
         "imor_total": 60.603,
         "imor_comercial": 60.3872,
-        "imor_consumo": 100.0,
-        "imor_vivienda": 100.0,
         "imora_total": 60.603
       },
       "201809": {
@@ -25975,7 +25750,6 @@
         "imor_total": 58.9146,
         "imor_comercial": 60.0303,
         "imor_consumo": 13.2798,
-        "imor_vivienda": 100.0,
         "imora_total": 58.9146
       },
       "201810": {
@@ -25984,23 +25758,19 @@
         "imor_total": 63.4487,
         "imor_comercial": 64.6568,
         "imor_consumo": 13.5097,
-        "imor_vivienda": 100.0,
         "imora_total": 63.4487
       },
       "201811": {
         "roa": -0.1592,
         "roe": -0.2265,
         "imor_total": 95.5701,
-        "imor_comercial": 100.0,
         "imor_consumo": 13.0424,
-        "imor_vivienda": 100.0,
         "imora_total": 95.5701
       },
       "201812": {
         "roa": -0.1782,
         "roe": -0.2558,
         "imor_total": 81.5301,
-        "imor_comercial": 100.0,
         "imor_consumo": 0.0,
         "imora_total": 81.5301
       },
@@ -26008,7 +25778,6 @@
         "roa": -0.1877,
         "roe": -0.269,
         "imor_total": 78.1662,
-        "imor_comercial": 100.0,
         "imor_consumo": 0.0,
         "imora_total": 78.1662
       },
@@ -26016,7 +25785,6 @@
         "roa": -0.1901,
         "roe": -0.2718,
         "imor_total": 54.7401,
-        "imor_comercial": 100.0,
         "imor_consumo": 0.0,
         "imora_total": 54.7401
       },
@@ -26024,7 +25792,6 @@
         "roa": -0.1949,
         "roe": -0.2793,
         "imor_total": 43.6193,
-        "imor_comercial": 100.0,
         "imor_consumo": 0.0,
         "imora_total": 43.6193
       },
@@ -26032,7 +25799,6 @@
         "roa": -0.1816,
         "roe": -0.26,
         "imor_total": 42.1908,
-        "imor_comercial": 100.0,
         "imor_consumo": 0.0,
         "imora_total": 42.1908
       },
@@ -26040,7 +25806,6 @@
         "roa": -0.1802,
         "roe": -0.2591,
         "imor_total": 49.4425,
-        "imor_comercial": 100.0,
         "imor_consumo": 14.9379,
         "imora_total": 49.4425
       },
@@ -26048,7 +25813,6 @@
         "roa": -0.1866,
         "roe": -0.2694,
         "imor_total": 49.8166,
-        "imor_comercial": 100.0,
         "imor_consumo": 15.129,
         "imora_total": 49.8166
       },
@@ -26056,7 +25820,6 @@
         "roa": -0.1803,
         "roe": -0.2595,
         "imor_total": 45.2604,
-        "imor_comercial": 100.0,
         "imor_consumo": 12.928,
         "imora_total": 45.2604
       },
@@ -26064,7 +25827,6 @@
         "roa": -0.1839,
         "roe": -0.2645,
         "imor_total": 47.2572,
-        "imor_comercial": 100.0,
         "imor_consumo": 15.6601,
         "imora_total": 47.2572
       },
@@ -26072,7 +25834,6 @@
         "roa": -0.1772,
         "roe": -0.2547,
         "imor_total": 48.7365,
-        "imor_comercial": 100.0,
         "imor_consumo": 16.6049,
         "imora_total": 48.7365
       },
@@ -26080,7 +25841,6 @@
         "roa": -0.1744,
         "roe": -0.2506,
         "imor_total": 49.6582,
-        "imor_comercial": 100.0,
         "imor_consumo": 17.1809,
         "imora_total": 49.6582
       },
@@ -26088,7 +25848,6 @@
         "roa": -0.2026,
         "roe": -0.2912,
         "imor_total": 49.9401,
-        "imor_comercial": 100.0,
         "imor_consumo": 17.1927,
         "imora_total": 49.9401
       },
@@ -26096,7 +25855,6 @@
         "roa": -0.1958,
         "roe": -0.282,
         "imor_total": 46.1494,
-        "imor_comercial": 100.0,
         "imor_consumo": 15.0101,
         "imora_total": 46.1494
       },
@@ -26104,7 +25862,6 @@
         "roa": -0.1946,
         "roe": -0.2804,
         "imor_total": 46.366,
-        "imor_comercial": 100.0,
         "imor_consumo": 14.66,
         "imora_total": 46.366
       },
@@ -26112,7 +25869,6 @@
         "roa": -0.1996,
         "roe": -0.2874,
         "imor_total": 45.56,
-        "imor_comercial": 100.0,
         "imor_consumo": 14.2586,
         "imora_total": 45.56
       },
@@ -26120,7 +25876,6 @@
         "roa": -0.1991,
         "roe": -0.2913,
         "imor_total": 47.8729,
-        "imor_comercial": 100.0,
         "imor_consumo": 15.433,
         "imora_total": 47.8729
       },
@@ -26128,7 +25883,6 @@
         "roa": -0.2057,
         "roe": -0.302,
         "imor_total": 49.52,
-        "imor_comercial": 100.0,
         "imor_consumo": 16.3132,
         "imora_total": 49.52
       },
@@ -26136,7 +25890,6 @@
         "roa": -0.2261,
         "roe": -0.3319,
         "imor_total": 50.1154,
-        "imor_comercial": 100.0,
         "imor_consumo": 16.641,
         "imora_total": 50.1154
       },
@@ -27310,7 +27063,6 @@
         "roe": -0.1896,
         "imor_total": 3.6582,
         "imor_comercial": 3.2426,
-        "imor_consumo": 100.0,
         "imora_total": 3.6582
       },
       "202408": {
@@ -27318,7 +27070,6 @@
         "roe": -0.1741,
         "imor_total": 4.5955,
         "imor_comercial": 4.1678,
-        "imor_consumo": 100.0,
         "imora_total": 4.5955
       },
       "202409": {
@@ -27326,7 +27077,6 @@
         "roe": -0.2633,
         "imor_total": 1.6196,
         "imor_comercial": 1.4684,
-        "imor_consumo": 100.0,
         "imora_total": 1.6196
       },
       "202410": {
@@ -27334,7 +27084,6 @@
         "roe": -0.2521,
         "imor_total": 4.9817,
         "imor_comercial": 4.8348,
-        "imor_consumo": 100.0,
         "imora_total": 4.9817
       },
       "202411": {
@@ -27342,7 +27091,6 @@
         "roe": -0.2652,
         "imor_total": 6.082,
         "imor_comercial": 5.9428,
-        "imor_consumo": 100.0,
         "imora_total": 6.082
       },
       "202412": {
@@ -27350,7 +27098,6 @@
         "roe": -0.3193,
         "imor_total": 4.4254,
         "imor_comercial": 4.2911,
-        "imor_consumo": 100.0,
         "imora_total": 4.4254
       },
       "202501": {
@@ -34498,17 +34245,11 @@
       },
       "202102": {
         "roa": -0.397,
-        "roe": -0.4045,
-        "imor_total": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.4045
       },
       "202103": {
         "roa": -0.3863,
-        "roe": -0.3931,
-        "imor_total": 100.0,
-        "imor_consumo": 100.0,
-        "imora_total": 100.0
+        "roe": -0.3931
       },
       "202104": {
         "roa": -0.374,
@@ -34965,37 +34706,31 @@
       "202304": {
         "imor_total": 12.8329,
         "imor_comercial": 12.8086,
-        "imor_consumo": 100.0,
         "imora_total": 12.8329
       },
       "202305": {
         "imor_total": 13.2698,
         "imor_comercial": 13.2356,
-        "imor_consumo": 100.0,
         "imora_total": 13.2698
       },
       "202306": {
         "imor_total": 10.8181,
         "imor_comercial": 10.7868,
-        "imor_consumo": 100.0,
         "imora_total": 10.8181
       },
       "202307": {
         "imor_total": 9.6159,
         "imor_comercial": 9.585,
-        "imor_consumo": 100.0,
         "imora_total": 9.6159
       },
       "202308": {
         "imor_total": 8.8737,
         "imor_comercial": 8.8444,
-        "imor_consumo": 100.0,
         "imora_total": 8.8737
       },
       "202309": {
         "imor_total": 8.9413,
         "imor_comercial": 8.9132,
-        "imor_consumo": 100.0,
         "imora_total": 8.9413
       },
       "202310": {
@@ -35003,7 +34738,6 @@
         "roe": 0.155,
         "imor_total": 9.5999,
         "imor_comercial": 9.5715,
-        "imor_consumo": 100.0,
         "imora_total": 9.5999
       },
       "202311": {
@@ -35011,7 +34745,6 @@
         "roe": 0.0392,
         "imor_total": 10.1805,
         "imor_comercial": 10.1524,
-        "imor_consumo": 100.0,
         "imora_total": 10.1805
       },
       "202312": {
@@ -35019,7 +34752,6 @@
         "roe": 0.046,
         "imor_total": 10.5629,
         "imor_comercial": 10.5359,
-        "imor_consumo": 100.0,
         "imora_total": 10.5629
       },
       "202401": {
@@ -35027,7 +34759,6 @@
         "roe": 0.0254,
         "imor_total": 10.9063,
         "imor_comercial": 10.8787,
-        "imor_consumo": 100.0,
         "imora_total": 10.9063
       },
       "202402": {
@@ -35035,7 +34766,6 @@
         "roe": 0.0283,
         "imor_total": 10.9722,
         "imor_comercial": 10.945,
-        "imor_consumo": 100.0,
         "imora_total": 10.9722
       },
       "202403": {
@@ -35043,7 +34773,6 @@
         "roe": 0.0454,
         "imor_total": 9.8536,
         "imor_comercial": 9.8264,
-        "imor_consumo": 100.0,
         "imora_total": 9.8536
       },
       "202404": {
@@ -35051,7 +34780,6 @@
         "roe": 0.0373,
         "imor_total": 17.612,
         "imor_comercial": 17.5877,
-        "imor_consumo": 100.0,
         "imora_total": 17.612
       },
       "202405": {
@@ -35059,7 +34787,6 @@
         "roe": 0.0425,
         "imor_total": 17.6038,
         "imor_comercial": 17.5801,
-        "imor_consumo": 100.0,
         "imora_total": 17.6038
       },
       "202406": {
@@ -35067,7 +34794,6 @@
         "roe": 0.039,
         "imor_total": 12.9674,
         "imor_comercial": 12.943,
-        "imor_consumo": 100.0,
         "imora_total": 13.9897
       },
       "202407": {
@@ -35075,7 +34801,6 @@
         "roe": 0.0409,
         "imor_total": 12.834,
         "imor_comercial": 12.8093,
-        "imor_consumo": 100.0,
         "imora_total": 13.8944
       },
       "202408": {
@@ -35083,7 +34808,6 @@
         "roe": 0.0335,
         "imor_total": 12.4914,
         "imor_comercial": 12.4674,
-        "imor_consumo": 100.0,
         "imora_total": 13.5307
       },
       "202409": {
@@ -35091,7 +34815,6 @@
         "roe": 0.0271,
         "imor_total": 12.1509,
         "imor_comercial": 12.1273,
-        "imor_consumo": 100.0,
         "imora_total": 13.191
       },
       "202410": {
@@ -35099,7 +34822,6 @@
         "roe": 0.0406,
         "imor_total": 13.3112,
         "imor_comercial": 13.2883,
-        "imor_consumo": 100.0,
         "imora_total": 14.3271
       },
       "202411": {
@@ -35107,7 +34829,6 @@
         "roe": 0.0599,
         "imor_total": 12.7979,
         "imor_comercial": 12.7754,
-        "imor_consumo": 100.0,
         "imora_total": 13.8138
       },
       "202412": {
@@ -35115,7 +34836,6 @@
         "roe": 0.0904,
         "imor_total": 10.3751,
         "imor_comercial": 10.3536,
-        "imor_consumo": 100.0,
         "imora_total": 11.3608
       },
       "202501": {
@@ -35123,7 +34843,6 @@
         "roe": 0.0758,
         "imor_total": 11.1737,
         "imor_comercial": 11.1532,
-        "imor_consumo": 100.0,
         "imora_total": 12.12
       },
       "202502": {
@@ -35131,7 +34850,6 @@
         "roe": 0.0655,
         "imor_total": 14.397,
         "imor_comercial": 14.3785,
-        "imor_consumo": 100.0,
         "imora_total": 15.2729
       },
       "202503": {
@@ -35139,7 +34857,6 @@
         "roe": 0.064,
         "imor_total": 13.9634,
         "imor_comercial": 13.9459,
-        "imor_consumo": 100.0,
         "imora_total": 15.4289
       },
       "202504": {
@@ -35147,7 +34864,6 @@
         "roe": 0.0702,
         "imor_total": 14.8311,
         "imor_comercial": 14.814,
-        "imor_consumo": 100.0,
         "imora_total": 16.2571
       },
       "202505": {
@@ -35155,7 +34871,6 @@
         "roe": 0.0665,
         "imor_total": 14.7503,
         "imor_comercial": 14.7333,
-        "imor_consumo": 100.0,
         "imora_total": 16.1684
       },
       "202506": {
@@ -35163,7 +34878,6 @@
         "roe": 0.0749,
         "imor_total": 16.1128,
         "imor_comercial": 16.0955,
-        "imor_consumo": 100.0,
         "imora_total": 16.7447
       },
       "202507": {
@@ -35171,7 +34885,6 @@
         "roe": 0.0776,
         "imor_total": 13.5928,
         "imor_comercial": 13.575,
-        "imor_consumo": 100.0,
         "imora_total": 14.2549
       },
       "202508": {
@@ -35179,7 +34892,6 @@
         "roe": 0.0824,
         "imor_total": 13.9553,
         "imor_comercial": 13.9376,
-        "imor_consumo": 100.0,
         "imora_total": 14.6097
       },
       "202509": {
@@ -35187,7 +34899,6 @@
         "roe": 0.0895,
         "imor_total": 14.1656,
         "imor_comercial": 14.1489,
-        "imor_consumo": 100.0,
         "imora_total": 14.8021
       },
       "202510": {
