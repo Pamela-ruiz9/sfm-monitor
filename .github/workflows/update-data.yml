@@ -322,6 +322,10 @@ jobs:
             git push
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
+          # Ping Healthchecks.io — confirma que el pipeline corrió sin errores
+          if [ -n "${{ secrets.HEALTHCHECKS_URL }}" ]; then
+            curl -fsS --retry 3 "${{ secrets.HEALTHCHECKS_URL }}" > /dev/null || true
+          fi
 
   deploy:
     name: Build + deploy app

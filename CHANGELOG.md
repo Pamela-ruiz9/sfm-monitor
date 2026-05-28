@@ -27,6 +27,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - `BancosTable.tsx`: nuevo `SortKey` tipo `'populares'` con lista `BANCOS_POPULARES` (G-7 primero: BBVA, Banamex, Banorte, Santander, HSBC, Scotiabank, Inbursa; luego fintechs y banca de hogares)
 - Sort default cambiado de `imor_actual desc` a `populares`; click en cabecera "Banco" alterna entre popularidad y alfabético; icono ★ indica modo popularidad activo
 
+### chore: infraestructura pre-escala (2026-05-27)
+- `Layout.astro`: meta tags Highwire Press (`citation_title`, `citation_author` ×2, `citation_doi`, `citation_language`, `citation_abstract_html_url`) + Dublin Core (`DC.title`, `DC.creator`, `DC.identifier`, `DC.language`) — habilita indexación en Google Scholar, Mendeley, Zotero
+- `Layout.astro`: snippet GoatCounter condicional en `PUBLIC_GOATCOUNTER_URL` — analytics sin cookies (activar configurando la variable de entorno)
+- `update-data.yml`: ping Healthchecks.io condicional en secret `HEALTHCHECKS_URL` — monitoreo del pipeline de datos tras cada ejecución exitosa
+- Gates G4 y G5 parcialmente completados en `docs/cutover.md`
+
 ### feat(#89) — Filtros por banco en IMORA e ICOR (2026-05-27)
 - `ImoraChart.tsx`: toggle "Sistema / Por banco" con selector scrollable de los 62 bancos; crisis annotations solo en vista Sistema; valor actual en pill dorado al seleccionar banco
 - `IcorChart.tsx`: mismo patrón de toggle/selector para ICOR, formateado en ×cobertura; crisis annotations solo en vista Sistema

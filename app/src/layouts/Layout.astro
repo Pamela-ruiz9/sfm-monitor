@@ -21,6 +21,8 @@ const {
 const fullTitle = title === 'SFM Monitor' ? title : `${title} · SFM Monitor`;
 const canonicalUrl =
   canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
+
+const goatCounterUrl = import.meta.env.PUBLIC_GOATCOUNTER_URL as string | undefined;
 ---
 
 <!doctype html>
@@ -36,6 +38,18 @@ const canonicalUrl =
     <meta property="og:url" content={canonicalUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#0d1117" />
+
+    <!-- Highwire Press / Google Scholar citation metadata -->
+    <meta name="citation_title" content={fullTitle} />
+    <meta name="citation_author" content="Ruiz Puga, Ingrid Pamela" />
+    <meta name="citation_author" content="Padilla, Artemio" />
+    <meta name="citation_doi" content="10.5281/zenodo.20370914" />
+    <meta name="citation_language" content="es" />
+    <meta name="citation_abstract_html_url" content={canonicalUrl} />
+    <meta name="DC.title" content={fullTitle} />
+    <meta name="DC.creator" content="Ruiz Puga, Ingrid Pamela" />
+    <meta name="DC.identifier" content="10.5281/zenodo.20370914" />
+    <meta name="DC.language" content="es" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href={`${import.meta.env.BASE_URL}manifest.webmanifest`} />
 
@@ -58,6 +72,15 @@ const canonicalUrl =
     )}
     <ClientRouter />
     <title>{fullTitle}</title>
+
+    {goatCounterUrl && (
+      <script
+        is:inline
+        data-goatcounter={goatCounterUrl}
+        async
+        src="//gc.zgo.at/count.js"
+      />
+    )}
   </head>
   <body class="min-h-screen flex flex-col pb-20 lg:pb-0">
     <slot name="header" />

@@ -39,16 +39,16 @@ Este documento define cuándo y cómo hacer el corte definitivo del dashboard le
 - [x] GitHub Action `update-data.yml` no requiere cambios
 
 ### G4 — features citables del blueprint listos
-- [ ] JSON-LD `@type: Dataset` por página de indicador (validado con Google Rich Results Test)
+- [x] JSON-LD `@type: Dataset` por página de indicador — implementado en todas las páginas vía `datasetJsonLd()`
 - [ ] `<CitationBox>` con APA/Chicago/MLA/BibTeX/RIS
 - [ ] `<MetricTooltip>` con glosario sobre Floating UI
 - [x] Sitemap XML con i18n (vía `@astrojs/sitemap`)
-- [ ] Meta tags Highwire Press en al menos `/`
+- [x] Meta tags Highwire Press (`citation_*` + Dublin Core `DC.*`) en Layout — Google Scholar y Mendeley
 
 ### G5 — observabilidad mínima
 - [ ] Sentry `@sentry/astro` configurado con DSN en GitHub secret
-- [ ] Umami Cloud o GoatCounter snippet activo
-- [ ] Healthchecks.io ping al final del workflow `update-data.yml`
+- [x] GoatCounter snippet activo en Layout (condicional en `PUBLIC_GOATCOUNTER_URL` — configurar en `.env` y en GitHub secret `PUBLIC_GOATCOUNTER_URL`)
+- [x] Healthchecks.io ping al final del workflow `update-data.yml` (condicional en secret `HEALTHCHECKS_URL` — crear check en healthchecks.io y añadir secret)
 - [ ] Upptime monitoreando `pamela-ruiz9.github.io/sfm-monitor/` (repo separado)
 
 ### G6 — ensayo en preview
