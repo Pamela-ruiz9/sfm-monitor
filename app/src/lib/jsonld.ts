@@ -47,9 +47,10 @@ export function catalogJsonLd() {
       'open data',
     ],
     dataset: [
+      { '@type': 'Dataset', name: 'Resumen — FX, Tasas, Inflación, Reservas', url: SITE_URL },
       { '@type': 'Dataset', name: 'Instituciones Financieras — Banca Múltiple y SoFiPOs', url: `${SITE_URL}/instituciones` },
-      { '@type': 'Dataset', name: 'Riesgo de Mercado', url: `${SITE_URL}/riesgo` },
-      { '@type': 'Dataset', name: 'Mercado de Dinero', url: `${SITE_URL}/mercado` },
+      { '@type': 'Dataset', name: 'Riesgo Sistémico', url: `${SITE_URL}/riesgo` },
+      { '@type': 'Dataset', name: 'Macro — PIB · IGAE', url: `${SITE_URL}/macro` },
     ],
   };
 }

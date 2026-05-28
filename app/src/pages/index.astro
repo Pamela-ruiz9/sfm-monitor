@@ -5,13 +5,9 @@ import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
 import HeroScore from '~/components/HeroScore.astro';
-import Section from '~/components/chrome/Section.astro';
 import AlertsPanel from '~/components/alerts/AlertsPanel.astro';
 import { KpiCard } from '~/components/kpi/KpiCard';
-import { FXChart } from '~/components/charts/FXChart';
-import { loadSfmData } from '~/data/loader';
-import { computeDelta, formatMxn, formatPct } from '~/lib/utils';
-
+import { ActiveIndicatorChart } from '~/components/charts/ActiveIndicatorChart';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
@@ -19,44 +15,52 @@ import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
 import { OnboardingTour } from '~/components/shell/OnboardingTour';
 import { SwipeNav } from '~/components/shell/SwipeNav';
 import { PullToRefresh } from '~/components/shell/PullToRefresh';
+import { loadSfmData } from '~/data/loader';
+import { computeDelta, formatMxn, formatPct } from '~/lib/utils';
 
 const data = loadSfmData();
+const m = data.mercado ?? {};
 
+// ─── Tipo de cambio ────────────────────────────────────────────────────────────
 const fxLatest = Number(data.tipo_cambio.actual);
-const fxDelta = computeDelta(
-  data.tipo_cambio.historico_mensual.map((p) => p.valor),
-);
+const fxDelta = computeDelta(data.tipo_cambio.historico_mensual.map((p) => p.valor));
 
+// ─── Tasa Banxico ──────────────────────────────────────────────────────────────
 const tasaLatest = Number(data.tasa_banxico.actual);
-const tasaDelta = computeDelta(
-  data.tasa_banxico.historico.map((p) => p.valor),
-);
+const tasaDelta = computeDelta(data.tasa_banxico.historico.map((p) => p.valor));
 
+// ─── Inflación ─────────────────────────────────────────────────────────────────
 const inflacionLatest = Number(data.inflacion.actual);
-const inflacionDelta = computeDelta(
-  data.inflacion.historico_mensual.map((p) => p.valor),
-);
+const inflacionDelta = computeDelta(data.inflacion.historico_mensual.map((p) => p.valor));
 
-const imorPlaceholder = 2.2;
+// ─── Mercado de dinero ─────────────────────────────────────────────────────────
+const tiieActual     = m.tiie_fondeo?.actual ?? null;
+const tiieFecha      = m.tiie_fondeo?.fecha ?? null;
+const tiieHist       = m.tiie_fondeo?.historico ?? [];
+const cetesActual    = m.cetes_28d?.actual ?? null;
+const cetesFecha     = m.cetes_28d?.fecha ?? null;
+const cetesHist      = m.cetes_28d?.historico ?? [];
+const spread         = tiieActual != null && cetesActual != null ? tiieActual - cetesActual : null;
 
-// ─── Mercado (Reservas + TIIE) ────────────────────────────────────────────────
-const mercado = data.mercado ?? {};
-const reservasActual = mercado.reservas_internacionales?.actual ?? null;
-const reservasB = reservasActual != null ? reservasActual / 1000 : null;
-const reservasFecha = mercado.reservas_internacionales?.fecha ?? null;
-const reservasHist = mercado.reservas_internacionales?.historico ?? [];
-const reservasVar = (reservasHist.length >= 5 && reservasActual != null)
+// ─── Reservas internacionales ──────────────────────────────────────────────────
+const reservas       = m.reservas_internacionales ?? null;
+const reservasActual = reservas?.actual ?? null;
+const reservasB      = reservasActual != null ? reservasActual / 1000 : null;
+const reservasFecha  = reservas?.fecha ?? null;
+const reservasHist   = reservas?.historico ?? [];
+const reservasVar    = (reservasHist.length >= 5 && reservasActual != null)
   ? ((reservasActual - reservasHist[reservasHist.length - 5]!.valor) /
       reservasHist[reservasHist.length - 5]!.valor) * 100
   : null;
 
-const tiieActual = mercado.tiie_fondeo?.actual ?? null;
-const tiieFecha  = mercado.tiie_fondeo?.fecha ?? null;
+// ─── UDI ───────────────────────────────────────────────────────────────────────
+const udi      = m.udis?.actual ?? null;
+const udiFecha = m.udis?.fecha ?? null;
 ---
 
 <Layout
   title="SFM Monitor"
-  description="Resumen ejecutivo del riesgo del Sistema Financiero Mexicano. Datos de Banxico SIE, CNBV e INEGI."
+  description="Resumen ejecutivo del riesgo del Sistema Financiero Mexicano. Tipo de cambio, tasas, inflación y reservas internacionales. Datos de Banxico SIE, CNBV e INEGI."
   jsonLd={catalogJsonLd()}>
   <Header slot="header" />
   <TabBar slot="header" />
@@ -64,8 +68,10 @@ const tiieFecha  = mercado.tiie_fondeo?.fecha ?? null;
   <div class="space-y-8">
     <HeroScore />
 
-    <!-- KPI grid — 4 cols mobile-2, desktop up to 6 when mercado data available -->
-    <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-3 lg:gap-4">
+    <!-- KPI grid — click any card to update the chart below -->
+    <div
+      id="kpi-grid"
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-3 lg:gap-4">
       <KpiCard
         label="MXN/USD FIX"
         value={formatMxn(fxLatest, 4)}
@@ -105,17 +111,39 @@ const tiieFecha  = mercado.tiie_fondeo?.fecha ?? null;
           upIsGood: false,
         }}
       />
-      <KpiCard
-        label="IMOR Banca"
-        value={formatPct(imorPlaceholder, 2)}
-        asOf="placeholder · CNBV pendiente"
-        iconName="Activity"
-        tone="green"
-        indicatorId="imor"
-      />
+      {tiieActual != null && (
+        <KpiCard
+          label="TIIE Fondeo"
+          value={formatPct(tiieActual, 4)}
+          {...(tiieFecha ? { asOf: tiieFecha } : {})}
+          iconName="Activity"
+          tone="gold"
+          indicatorId="tiie"
+        />
+      )}
+      {cetesActual != null && (
+        <KpiCard
+          label="Cetes 28d"
+          value={formatPct(cetesActual, 2)}
+          {...(cetesFecha ? { asOf: cetesFecha } : {})}
+          iconName="Percent"
+          tone="yellow"
+          indicatorId="cetes"
+        />
+      )}
+      {spread != null && (
+        <KpiCard
+          label="Spread TIIE-Cetes"
+          value={formatPct(spread, 4)}
+          {...(tiieFecha ? { asOf: tiieFecha } : {})}
+          iconName="TrendingUp"
+          tone={spread > 12 ? 'red' : spread > 10 ? 'yellow' : 'green'}
+          indicatorId="spread-tiie-cetes"
+        />
+      )}
       {reservasB != null && (
         <KpiCard
-          label="Reservas Internacionales"
+          label="Reservas Int."
           value={`${reservasB.toFixed(1)}B`}
           unit="USD"
           {...(reservasFecha ? { asOf: reservasFecha } : {})}
@@ -129,69 +157,43 @@ const tiieFecha  = mercado.tiie_fondeo?.fecha ?? null;
           } : undefined}
         />
       )}
-      {tiieActual != null && (
+      {udi != null && (
         <KpiCard
-          label="TIIE Fondeo"
-          value={formatPct(tiieActual, 4)}
-          {...(tiieFecha ? { asOf: tiieFecha } : {})}
-          iconName="Activity"
-          tone="gold"
-          indicatorId="tiie"
+          label="UDI"
+          value={udi.toFixed(4)}
+          unit="MXN"
+          {...(udiFecha ? { asOf: udiFecha } : {})}
+          iconName="DollarSign"
+          tone="yellow"
         />
       )}
+      <KpiCard
+        label="IMOR Banca"
+        value="2.2%"
+        asOf="pendiente · CNBV pipeline"
+        iconName="BarChart2"
+        tone="green"
+      />
     </div>
 
-    <!-- Featured chart + alerts -->
-    <div class="grid lg:grid-cols-3 gap-4 items-stretch">
+    <!-- Active indicator chart + alerts -->
+    <div class="grid lg:grid-cols-3 gap-4 items-start">
       <div class="lg:col-span-2">
-        <Section
-          eyebrow="Riesgo de mercado"
-          title="Tipo de cambio MXN/USD · histórico"
-          description="Serie mensual desde 1994. Bandas verticales: crisis Tequila (1994-95), Gran Crisis Financiera (2008-09), COVID-19 (2020)."
-          source="Banco de México, SIE, serie SF43718"
-          refCode="SF43718"
-          tone="gold">
-          <FXChart series={data.tipo_cambio.historico_mensual} client:visible />
-        </Section>
+        <ActiveIndicatorChart
+          fxSeries={data.tipo_cambio.historico_mensual}
+          tasaSeries={data.tasa_banxico.historico}
+          inflacionSeries={data.inflacion.historico_mensual}
+          tiieHist={tiieHist}
+          cetesHist={cetesHist}
+          banxicoHist={data.tasa_banxico.historico}
+          reservasHist={reservasHist}
+          client:load
+        />
       </div>
       <div>
         <AlertsPanel />
       </div>
     </div>
-
-    <!-- Liquidez section -->
-    <Section
-      id="liquidez"
-      eyebrow="Liquidez del sistema"
-      title="Depósitos y razón de liquidez"
-      description="Crecimiento anual de la base de depósitos del sistema bancario mexicano. Métrica complementaria al riesgo de crédito."
-      source="CNBV — Boletín Estadístico de Banca Múltiple (datos pendientes en pipeline)"
-      tone="green">
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div class="text-center py-6">
-          <div class="text-[10px] font-medium uppercase tracking-wider text-[--color-text-mute] mb-2">
-            Crecimiento anual depósitos
-          </div>
-          <div class="serif tabular text-4xl font-semibold text-[--color-green]">
-            +7.2<span class="text-lg text-[--color-text-dim]">%</span>
-          </div>
-          <div class="text-[10px] text-[--color-text-mute] mt-1">
-            Estimado · pipeline CNBV pendiente
-          </div>
-        </div>
-        <div class="text-center py-6">
-          <div class="text-[10px] font-medium uppercase tracking-wider text-[--color-text-mute] mb-2">
-            LCR (Liquidity Coverage Ratio)
-          </div>
-          <div class="serif tabular text-4xl font-semibold text-[--color-green]">
-            331<span class="text-lg text-[--color-text-dim]">%</span>
-          </div>
-          <div class="text-[10px] text-[--color-text-mute] mt-1">
-            Mediana 2T 2025 (vs mín. regulatorio 100%)
-          </div>
-        </div>
-      </div>
-    </Section>
   </div>
 
   <ChartDrawer slot="drawer" client:idle />
@@ -203,3 +205,56 @@ const tiieFecha  = mercado.tiie_fondeo?.fecha ?? null;
   <PullToRefresh slot="gestures" client:idle />
   <BottomNav slot="bottom-nav" />
 </Layout>
+
+<style is:global>
+  /* Highlight the active KPI card */
+  #kpi-grid [data-kpi-active] {
+    border-color: var(--color-gold);
+    transform: translateY(-1px);
+  }
+</style>
+
+<script>
+  const CHART_IDS = new Set([
+    'fx', 'tasa', 'inflacion', 'tiie', 'cetes', 'spread-tiie-cetes', 'reservas',
+  ]);
+
+  function getIndicatorFromUrl(): string {
+    return new URLSearchParams(window.location.search).get('indicator') ?? 'fx';
+  }
+
+  function setActiveKpi(indicatorId: string) {
+    document.querySelectorAll<HTMLElement>('#kpi-grid [data-drawer-trigger]').forEach((el) => {
+      el.removeAttribute('data-kpi-active');
+    });
+    const el = document.querySelector<HTMLElement>(
+      `#kpi-grid [data-drawer-trigger="${indicatorId}"]`,
+    );
+    if (el) el.setAttribute('data-kpi-active', 'true');
+  }
+
+  function handleKpiClick(e: MouseEvent) {
+    const anchor = (e.target as Element).closest<HTMLElement>('#kpi-grid [data-drawer-trigger]');
+    if (!anchor) return;
+    const indicatorId = anchor.dataset.drawerTrigger ?? '';
+    if (!CHART_IDS.has(indicatorId)) return;
+    // Prevent Astro ClientRouter from navigating + stop drawer from opening
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    history.pushState({}, '', `?indicator=${indicatorId}`);
+    document.dispatchEvent(
+      new CustomEvent('sfm:kpi-select', { detail: { indicatorId } }),
+    );
+    setActiveKpi(indicatorId);
+  }
+
+  function setup() {
+    setActiveKpi(getIndicatorFromUrl());
+    // capture:true so this runs before Astro's ClientRouter bubble listener
+    document.removeEventListener('click', handleKpiClick, true);
+    document.addEventListener('click', handleKpiClick, true);
+  }
+
+  setup();
+  document.addEventListener('astro:after-swap', setup);
+</script>

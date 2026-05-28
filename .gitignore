@@ -1,5 +1,8 @@
 # Raw data (large source files, regenerated from upstream)
 raw-data/sh_datos_40.csv
+raw-data/sh_datos_27.csv
+raw-data/cat_conceptos_27.csv
+raw-data/cat_instituciones_27.csv
 raw-data/sofipos.xlsm
 raw-data/sofipos2.xlsx
 raw-data/sofipos_catalogo.xlsx

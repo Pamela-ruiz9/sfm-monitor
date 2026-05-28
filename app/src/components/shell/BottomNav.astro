@@ -1,15 +1,14 @@
 ---
-import { Home, LineChart, Building2, TrendingUp, BookOpen, Thermometer } from 'lucide-react';
+import { Home, Building2, TrendingUp, BookOpen, Thermometer } from 'lucide-react';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const TABS = [
-  { href: `${base}/`,              label: 'Resumen',      match: new RegExp(`^${base}\\/?$`),          Icon: Home },
-  { href: `${base}/riesgo`,        label: 'Riesgo',       match: new RegExp(`^${base}/riesgo`),        Icon: Thermometer },
-  { href: `${base}/mercado`,       label: 'Mercado',      match: new RegExp(`^${base}/mercado`),       Icon: LineChart },
+  { href: `${base}/`,              label: 'Resumen',       match: new RegExp(`^${base}\\/?$`),          Icon: Home },
+  { href: `${base}/riesgo`,        label: 'Riesgo',        match: new RegExp(`^${base}/riesgo`),        Icon: Thermometer },
   { href: `${base}/instituciones`, label: 'Instituciones', match: new RegExp(`^${base}/instituciones`), Icon: Building2 },
-  { href: `${base}/macro`,         label: 'Macro',        match: new RegExp(`^${base}/macro`),         Icon: TrendingUp },
-  { href: `${base}/metodologia`,   label: 'Metodol.',     match: new RegExp(`^${base}/metodologia`),   Icon: BookOpen },
+  { href: `${base}/macro`,         label: 'Macro',         match: new RegExp(`^${base}/macro`),         Icon: TrendingUp },
+  { href: `${base}/metodologia`,   label: 'Metodol.',      match: new RegExp(`^${base}/metodologia`),   Icon: BookOpen },
 ];
 
 const path = Astro.url.pathname;

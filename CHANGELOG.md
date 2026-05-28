@@ -12,6 +12,15 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat: fusión Resumen + Mercado — KPIs clicables con gráfica dinámica (2026-05-28)
+- `index.astro`: página Resumen absorbe todos los indicadores de Mercado — 9 KPI cards (FX, Tasa Banxico, Inflación, TIIE Fondeo, Cetes 28d, Spread TIIE-Cetes, Reservas, UDI, IMOR placeholder)
+- `ActiveIndicatorChart.tsx`: componente React nuevo que escucha `sfm:kpi-select` y renderiza la gráfica del indicador seleccionado (FXChart, TasaBanxicoChart, InflacionChart, MercadoDineroChart, ReservasChart) con cabecera de sección dinámica
+- `mercado.astro`: reemplazado por redirect 301 → `/`
+- `TabBar.astro`, `BottomNav.astro`: tab "Mercado" eliminado — Resumen actualizado con subtítulo "FX · Tasas"
+- `activeTab.ts`: tipo `TabId` sin `'mercado'`; `/mercado` mapea a `'resumen'`; `adjacentTab` actualizado
+- `jsonld.ts`: catálogo actualizado — Resumen como dataset, Mercado de Dinero removido
+- Click en KPI card activa la gráfica inline (capture-phase listener + `e.stopImmediatePropagation()` para no disparar ClientRouter); card activo se resalta con borde dorado
+
 ### ux(#85) — Rediseño menú de navegación (2026-05-27)
 - `TabBar.astro` (desktop): labels con subtítulo descriptivo — "Riesgo Sistémico · Heatmap", "Mercado · TIIE · Cetes", "Crédito · IMOR · IMORA", "SoFiPOs · Financieras pop.", "Macro · PIB · IGAE"
 - `BottomNav.astro` (mobile): solo label corto sin subtítulo para no saturar el espacio — "Riesgo", "Mercado", "Crédito", etc.
