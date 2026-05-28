@@ -233,7 +233,7 @@ jobs:
               "tiie_fondeo": {
                   "actual": tiie_fondeo_changes[-1]["valor"] if tiie_fondeo_changes else None,
                   "fecha":  tiie_fondeo_changes[-1]["fecha"] if tiie_fondeo_changes else None,
-                  "historico": tiie_fondeo_changes[-20:]
+                  "historico": tiie_fondeo_changes
               },
               "cetes_28d": {
                   "actual": cetes_series[-1]["valor"] if cetes_series else None,

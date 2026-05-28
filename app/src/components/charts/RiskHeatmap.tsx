@@ -225,17 +225,7 @@ function buildEChartsOption(cells: HeatCell[]) {
     }
   }
 
-  // Visual map: verde → amarillo → rojo
-  // Using CSS custom properties won't work in ECharts — using hardcoded theme colors
-  // that match the SFM Monitor design tokens
-  const colorPalette = [
-    '#22c55e', // green-500 ~ --color-green
-    '#86efac', // green-300
-    '#fde68a', // amber-200
-    '#fbbf24', // amber-400 ~ --color-gold / yellow
-    '#f97316', // orange-500
-    '#ef4444', // red-500 ~ --color-red
-  ];
+  // Cell color mapped via piecewise visualMap: verde ≤ 33, amarillo 34–66, rojo ≥ 67
 
   // Format month label: YYYY-MM → oct'24
   const MONTHS_ES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
@@ -295,19 +285,19 @@ function buildEChartsOption(cells: HeatCell[]) {
       axisLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } },
     },
     visualMap: {
-      type: 'continuous',
-      dimension: 2,         // colorear por el 3er elemento del array [xi, yi, percentil, ...]
-      min: 0,
-      max: 100,
-      calculable: false,    // desactivar el slider arrastrable — evita que el handle flote sobre las celdas
+      type: 'piecewise',
+      dimension: 2,
+      pieces: [
+        { min: 0,  max: 33,  color: '#22c55e', label: 'Bajo  (p < 33)' },
+        { min: 33, max: 66,  color: '#fbbf24', label: 'Moderado' },
+        { min: 66, max: 100, color: '#ef4444', label: 'Elevado  (p > 66)' },
+      ],
       orient: 'horizontal',
       left: 'center',
-      bottom: 10,
-      itemWidth: 160,       // ancho de la barra de color
-      itemHeight: 12,       // grosor de la barra
-      inRange: { color: colorPalette },
+      bottom: 8,
+      itemWidth: 14,
+      itemHeight: 14,
       textStyle: { color: 'rgba(255,255,255,0.5)', fontSize: 10 },
-      text: ['Riesgo Alto', 'Riesgo Bajo'],
     },
     series: [
       {
