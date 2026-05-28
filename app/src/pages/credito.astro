@@ -36,6 +36,18 @@ const bancosArr = hpb
     }))
   : [];
 
+const bancosImoraArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.imora_total && b.imora_total.some((v) => v !== null))
+      .map((b) => ({ id: b.id, nombre: b.nombre, values: b.imora_total ?? [] }))
+  : [];
+
+const bancosIcorArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.icor_total && b.icor_total.some((v) => v !== null))
+      .map((b) => ({ id: b.id, nombre: b.nombre, values: b.icor_total ?? [] }))
+  : [];
+
 const sofiposEntsArr = data.sofipos.historico_por_entidad
   ? Object.values(data.sofipos.historico_por_entidad.entidades).map((e) => ({
       id: e.id,
@@ -164,7 +176,7 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '2026-02';
       description="Incluye cartera vencida más castigos contables acumulados en los últimos 12 meses."
       source="CNBV Sector 40"
       tone="yellow">
-      <ImoraChart fechas={hpc.fechas} values={hpc.imora_total} client:visible />
+      <ImoraChart fechas={hpc.fechas} values={hpc.imora_total} bancos={bancosImoraArr} client:visible />
     </Section>
 
     <Section
@@ -174,7 +186,7 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '2026-02';
       description="Razón entre reservas preventivas y cartera vencida. Un valor > 1 indica cobertura igual o superior al 100%."
       source="CNBV Sector 40"
       tone="green">
-      <IcorChart fechas={hpc.fechas} values={hpc.icor_total} client:visible />
+      <IcorChart fechas={hpc.fechas} values={hpc.icor_total} bancos={bancosIcorArr} client:visible />
     </Section>
 
     <Section

@@ -27,6 +27,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - `BancosTable.tsx`: nuevo `SortKey` tipo `'populares'` con lista `BANCOS_POPULARES` (G-7 primero: BBVA, Banamex, Banorte, Santander, HSBC, Scotiabank, Inbursa; luego fintechs y banca de hogares)
 - Sort default cambiado de `imor_actual desc` a `populares`; click en cabecera "Banco" alterna entre popularidad y alfabético; icono ★ indica modo popularidad activo
 
+### feat(#89) — Filtros por banco en IMORA e ICOR (2026-05-27)
+- `ImoraChart.tsx`: toggle "Sistema / Por banco" con selector scrollable de los 62 bancos; crisis annotations solo en vista Sistema; valor actual en pill dorado al seleccionar banco
+- `IcorChart.tsx`: mismo patrón de toggle/selector para ICOR, formateado en ×cobertura; crisis annotations solo en vista Sistema
+- `credito.astro`: construye `bancosImoraArr` y `bancosIcorArr` y los pasa como prop `bancos` a ambos charts
+- Cartera por banco no disponible para IMORA/ICOR (solo `_total` en CNBV Sector 40); IMOR ya tenía cartera + banco en `ImorSegPivotChart`; ROA/ROE e IFRS9 sin datos por banco
+
 ### fix(#83/#84) — Datos IMOR por banco y cartera (2026-05-27)
 - `scripts/normalize-imor-por-banco.py`: corregido multiplicador ×100 para IMOR/IMORA (los valores raw del CSV están en escala 0–1); ICOR permanece ×1
 - `scripts/normalize-imor-por-banco.py`: `CONCEPTS` migrado a `dict[str, tuple[str, float]]` con campo + multiplicador
