@@ -59,7 +59,7 @@ Este documento define cuándo y cómo hacer el corte definitivo del dashboard le
 
 ### G7 — backups y rollback path
 - [x] Tag `v0.1.0` creado localmente — push manual pendiente
-- [ ] DOI Zenodo de v0.1.0 asignado (requiere paso manual, ver `docs/citability.md`)
+- [x] DOI Zenodo de v0.1.0 asignado: `10.5281/zenodo.20370914`
 - [ ] Branch `legacy/v0.1.0` apuntando al último commit del HTML monolítico (creada en cutover día-D)
 - [ ] `legacy/v0.1.0.html` accesible (creado en cutover día-D)
 - [x] Plan de rollback documentado en este doc (sección abajo)

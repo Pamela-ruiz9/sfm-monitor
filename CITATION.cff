@@ -12,6 +12,7 @@ authors:
     orcid: ""
 version: "0.1.0"
 date-released: "2026-04-27"
+doi: "10.5281/zenodo.20370914"
 repository-code: "https://github.com/Pamela-ruiz9/sfm-monitor"
 url: "https://pamela-ruiz9.github.io/sfm-monitor/"
 license: MIT

@@ -150,7 +150,7 @@ Si usas SFM Monitor en investigación, periodismo o análisis, por favor cita:
 
 ```
 Ruiz Puga, I. P., & Padilla, A. (2026). SFM Monitor — Monitor de Riesgo del
-Sistema Financiero Mexicano (Versión 0.1.0). Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+Sistema Financiero Mexicano (Versión 0.1.0). Zenodo. https://doi.org/10.5281/zenodo.20370914
 ```
 
 GitHub muestra el botón **Cite this repository** (arriba a la derecha) con APA y BibTeX listos para copiar — basado en [`CITATION.cff`](CITATION.cff).
