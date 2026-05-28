@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { Line } from 'react-chartjs-2';
 import { ChartErrorBoundary } from './ChartErrorBoundary';
 import '~/components/charts/chartSetup';
@@ -10,7 +11,6 @@ interface Props {
   valuesSf: (number | null)[];
   labelBm?: string;
   labelSf?: string;
-  /** Si true, el eje Y puede ir por debajo de 0 (e.g. ROA) */
   allowNegative?: boolean;
   tooltipSuffix?: string;
   yTickSuffix?: string;
@@ -27,11 +27,31 @@ export function ComparisonChart({
   tooltipSuffix = '%',
   yTickSuffix = '%',
 }: Props) {
+  // Merge both date ranges into a single sorted label array
+  const allFechas = useMemo(() => {
+    const set = new Set([...fechasBm, ...fechasSf]);
+    return Array.from(set).sort();
+  }, [fechasBm, fechasSf]);
+
+  const bmMap = useMemo(
+    () => new Map(fechasBm.map((f, i) => [f, valuesBm[i] ?? null])),
+    [fechasBm, valuesBm],
+  );
+  const sfMap = useMemo(
+    () => new Map(fechasSf.map((f, i) => [f, valuesSf[i] ?? null])),
+    [fechasSf, valuesSf],
+  );
+
+  const labels = allFechas.map((f) => `${f}-15`);
+  const bmData = allFechas.map((f) => bmMap.get(f) ?? null);
+  const sfData = allFechas.map((f) => sfMap.get(f) ?? null);
+
   const chartData = {
+    labels,
     datasets: [
       {
         label: labelBm,
-        data: fechasBm.map((f, i) => ({ x: `${f}-15`, y: valuesBm[i] ?? null })),
+        data: bmData,
         borderColor: '#c4a35a',
         backgroundColor: 'rgba(196, 163, 90, 0.06)',
         fill: false,
@@ -43,7 +63,7 @@ export function ComparisonChart({
       },
       {
         label: labelSf,
-        data: fechasSf.map((f, i) => ({ x: `${f}-15`, y: valuesSf[i] ?? null })),
+        data: sfData,
         borderColor: '#f85149',
         backgroundColor: 'rgba(248, 81, 73, 0.06)',
         fill: false,
@@ -64,16 +84,11 @@ export function ComparisonChart({
           options={{
             responsive: true,
             maintainAspectRatio: false,
-            parsing: false,
             interaction: { mode: 'index', intersect: false },
             plugins: {
               legend: {
                 display: true,
-                labels: {
-                  color: '#94a3b8',
-                  boxWidth: 12,
-                  font: { size: 11 },
-                },
+                labels: { color: '#94a3b8', boxWidth: 12, font: { size: 11 } },
               },
               tooltip: {
                 callbacks: {
