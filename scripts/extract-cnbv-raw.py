@@ -118,6 +118,16 @@ SOFIPOS_CONCEPT_MAP: dict[str, tuple[str, float]] = {
 # Seen in 027014 (Nu México) from 202001–202106 while the ID was being reassigned.
 SOFIPOS_IMOR_CONCEPTS = {"27200005", "27200006", "27200007", "27200008", "27200009"}
 
+# Institutions where CNBV reused a Sector-27 ID: all data before the periodo below
+# belongs to a previous institution and must be discarded.
+# Evidence: abrupt IMOR drop to 0 or multi-month gap immediately before the start date.
+SOFIPO_EFFECTIVE_START: dict[str, str] = {
+    "027009": "201701",  # Klar: ID previously held by another inst.; Klar data from Jan 2017
+    "027014": "202212",  # Nu México: gap 202107–202211; Nu data from Dec 2022
+    "027030": "202308",  # F Broxel: prev. inst. collapsed (100% IMOR 201712); 68-month gap
+    "027032": "202308",  # Stori: prev. inst. in liquidation; Stori data from Aug 2023
+}
+
 
 # ──────────────────────────────────────────────
 # 1. sh_datos_40.csv → cnbv_indicadores.json
@@ -217,6 +227,9 @@ def extract_sofipos() -> None:
                 continue
             if concept in SOFIPOS_IMOR_CONCEPTS and val >= 0.99:
                 continue  # CNBV sentinel during ID-reassignment periods
+            start = SOFIPO_EFFECTIVE_START.get(inst)
+            if start and periodo < start:
+                continue  # pre-dates this institution's actual operation under this ID
             mult = concept_mult[concept]
             ind  = concept_to_ind[concept]
             all_periods_set.add(periodo)
