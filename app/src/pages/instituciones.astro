@@ -8,6 +8,7 @@ import Section from '~/components/chrome/Section.astro';
 import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
 import { KpiCard } from '~/components/kpi/KpiCard';
 import { SectorToggle } from '~/components/shell/SectorToggle';
+import { ComparisonChart } from '~/components/charts/ComparisonChart';
 import { ImoraChart } from '~/components/charts/ImoraChart';
 import { IcorChart } from '~/components/charts/IcorChart';
 import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
@@ -226,8 +227,44 @@ const top15 = [...ents]
       ))}
     </div>
 
+    <!-- ── Gráficas comparativas ──────────────────────────────────────── -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="card-surface rounded-xl p-4">
+        <div class="text-[10px] font-semibold uppercase tracking-widest text-[--color-text-mute] mb-3">IMOR · histórico</div>
+        <ComparisonChart
+          fechasBm={hpc.fechas}
+          valuesBm={hpc.imor_total}
+          fechasSf={s.fechas}
+          valuesSf={s.imor_total}
+          client:visible
+        />
+      </div>
+      <div class="card-surface rounded-xl p-4">
+        <div class="text-[10px] font-semibold uppercase tracking-widest text-[--color-text-mute] mb-3">IMORA · histórico</div>
+        <ComparisonChart
+          fechasBm={hpc.fechas}
+          valuesBm={hpc.imora_total}
+          fechasSf={s.fechas}
+          valuesSf={s.imora_total}
+          client:visible
+        />
+      </div>
+      <div class="card-surface rounded-xl p-4">
+        <div class="text-[10px] font-semibold uppercase tracking-widest text-[--color-text-mute] mb-3">ROA · histórico</div>
+        <ComparisonChart
+          fechasBm={hpc.fechas}
+          valuesBm={hpc.roa}
+          fechasSf={s.fechas}
+          valuesSf={s.roa}
+          allowNegative={true}
+          client:visible
+        />
+      </div>
+    </div>
+
     <!-- ── Selector de sector ──────────────────────────────────────────── -->
-    <div class="pt-2">
+    <div class="pt-2 border-t border-[--color-border-soft]">
+      <p class="text-xs text-[--color-text-mute] mb-3">Explora en detalle cada sector:</p>
       <SectorToggle client:load />
     </div>
 
