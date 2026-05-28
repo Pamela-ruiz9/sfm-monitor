@@ -79,7 +79,6 @@ export function SofiposEntidadesChart({ fechas, entidades }: Props) {
               },
               y: {
                 min: 0,
-                max: 45,
                 ticks: { color: '#94a3b8', callback: (v) => `${v}%` },
                 grid: { color: 'rgba(148, 163, 184, 0.1)' },
               },

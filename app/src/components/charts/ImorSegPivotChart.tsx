@@ -109,7 +109,7 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
         values: v,
         label: `SoFiPOs · ${CARTERA_LABELS[cartera]}`,
         color: '#f85149',
-        yMax: 45,
+        yMax: undefined as number | undefined,
       };
     }
     const ent = entidadesConDatos.find((e) => e.id === entidadId) ?? entidadesConDatos[0];
@@ -119,7 +119,7 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
         values: [] as (number | null)[],
         label: 'SoFiPOs · (sin datos por entidad)',
         color: '#f85149',
-        yMax: 45 as number | undefined,
+        yMax: undefined as number | undefined,
       };
     }
     return {
@@ -127,7 +127,7 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
       values: ent.imor,
       label: `SoFiPOs · ${ent.nombre}`,
       color: '#f85149',
-      yMax: 45,
+      yMax: undefined as number | undefined,
     };
   }, [sector, view, cartera, bancoId, entidadId, bm, sofipos]);
 
