@@ -47,8 +47,7 @@ export function catalogJsonLd() {
       'open data',
     ],
     dataset: [
-      { '@type': 'Dataset', name: 'Riesgo de Crédito — Banca Múltiple', url: `${SITE_URL}/credito` },
-      { '@type': 'Dataset', name: 'SoFiPOs — Sociedades Financieras', url: `${SITE_URL}/sofipos` },
+      { '@type': 'Dataset', name: 'Instituciones Financieras — Banca Múltiple y SoFiPOs', url: `${SITE_URL}/instituciones` },
       { '@type': 'Dataset', name: 'Riesgo de Mercado', url: `${SITE_URL}/riesgo` },
       { '@type': 'Dataset', name: 'Mercado de Dinero', url: `${SITE_URL}/mercado` },
     ],

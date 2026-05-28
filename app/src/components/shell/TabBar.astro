@@ -1,16 +1,15 @@
 ---
-import { Home, LineChart, Activity, Building2, TrendingUp, BookOpen, Thermometer } from 'lucide-react';
+import { Home, LineChart, Building2, TrendingUp, BookOpen, Thermometer } from 'lucide-react';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const TABS = [
-  { href: `${base}/`,           label: 'Resumen',           sub: undefined,              match: new RegExp(`^${base}\\/?$`),         Icon: Home },
-  { href: `${base}/riesgo`,     label: 'Riesgo Sistémico',  sub: 'Heatmap',              match: new RegExp(`^${base}/riesgo`),       Icon: Thermometer },
-  { href: `${base}/mercado`,    label: 'Mercado',           sub: 'TIIE · Cetes',         match: new RegExp(`^${base}/mercado`),      Icon: LineChart },
-  { href: `${base}/credito`,    label: 'Banca Tradicional', sub: 'IMOR · IMORA',         match: new RegExp(`^${base}/credito`),      Icon: Activity },
-  { href: `${base}/sofipos`,    label: 'SoFiPOs',           sub: 'Crédito Popular',      match: new RegExp(`^${base}/sofipos`),      Icon: Building2 },
-  { href: `${base}/macro`,      label: 'Macro',             sub: 'PIB · IGAE',           match: new RegExp(`^${base}/macro`),        Icon: TrendingUp },
-  { href: `${base}/metodologia`, label: 'Metodología',      sub: undefined,              match: new RegExp(`^${base}/metodologia`),  Icon: BookOpen },
+  { href: `${base}/`,              label: 'Resumen',              sub: undefined,         match: new RegExp(`^${base}\\/?$`),              Icon: Home },
+  { href: `${base}/riesgo`,        label: 'Riesgo Sistémico',     sub: 'Heatmap',         match: new RegExp(`^${base}/riesgo`),            Icon: Thermometer },
+  { href: `${base}/mercado`,       label: 'Mercado',              sub: 'TIIE · Cetes',    match: new RegExp(`^${base}/mercado`),           Icon: LineChart },
+  { href: `${base}/instituciones`, label: 'Instituciones',        sub: 'Banca · SoFiPOs', match: new RegExp(`^${base}/instituciones`),     Icon: Building2 },
+  { href: `${base}/macro`,         label: 'Macro',                sub: 'PIB · IGAE',      match: new RegExp(`^${base}/macro`),             Icon: TrendingUp },
+  { href: `${base}/metodologia`,   label: 'Metodología',          sub: undefined,         match: new RegExp(`^${base}/metodologia`),       Icon: BookOpen },
 ];
 
 const path = Astro.url.pathname;

@@ -1,0 +1,439 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
+import Header from '~/components/shell/Header.astro';
+import TabBar from '~/components/shell/TabBar.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import { KpiCard } from '~/components/kpi/KpiCard';
+import { SectorToggle } from '~/components/shell/SectorToggle';
+import { ImoraChart } from '~/components/charts/ImoraChart';
+import { IcorChart } from '~/components/charts/IcorChart';
+import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
+import { Ifrs9Chart } from '~/components/charts/Ifrs9Chart';
+import { ImorSegPivotChart } from '~/components/charts/ImorSegPivotChart';
+import { SofiposSegmentChart } from '~/components/charts/SofiposSegmentChart';
+import { SofiposEntidadesChart } from '~/components/charts/SofiposEntidadesChart';
+import { SofiposImoraRoaChart } from '~/components/charts/SofiposImoraRoaChart';
+import { BancosTable } from '~/components/tables/BancosTable';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
+import { loadSfmData } from '~/data/loader';
+import { formatPct } from '~/lib/utils';
+
+const data = loadSfmData();
+
+// ── Banca Múltiple ────────────────────────────────────────────────────────────
+const hpc = data.credito.historico_por_cartera;
+const ifrs = data.ifrs9;
+const hpb = data.credito.historico_por_banco;
+
+const bancosArr = hpb
+  ? Object.values(hpb.bancos).map((b) => ({ id: b.id, nombre: b.nombre, imor_total: b.imor_total }))
+  : [];
+
+const bancosImoraArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.imora_total?.some((v) => v !== null))
+      .map((b) => ({ id: b.id, nombre: b.nombre, values: b.imora_total ?? [] }))
+  : [];
+
+const bancosIcorArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.icor_total?.some((v) => v !== null))
+      .map((b) => ({ id: b.id, nombre: b.nombre, values: b.icor_total ?? [] }))
+  : [];
+
+const pivotProps = {
+  bm: {
+    fechas: hpc.fechas,
+    cartera: {
+      total: hpc.imor_total,
+      comercial: hpc.imor_comercial,
+      consumo: hpc.imor_consumo,
+      vivienda: hpc.imor_vivienda,
+      tarjeta: hpc.imor_tarjeta,
+      consumo_norev: hpc.imor_consumo_norev,
+    },
+    bancos: bancosArr,
+  },
+  sofipos: {
+    fechas: data.sofipos.fechas,
+    cartera: {
+      total: data.sofipos.imor_total,
+      comercial: data.sofipos.imor_comercial,
+      consumo: data.sofipos.imor_consumo,
+      vivienda: data.sofipos.imor_vivienda,
+    },
+    entidades: data.sofipos.historico_por_entidad
+      ? Object.values(data.sofipos.historico_por_entidad.entidades).map((e) => ({
+          id: e.id, nombre: e.nombre, imor: e.imor,
+        }))
+      : [],
+  },
+};
+
+const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
+
+// ── SoFiPOs ───────────────────────────────────────────────────────────────────
+const s = data.sofipos;
+const ultima = s.ultima!;
+
+const SOFIPOS_PRIORITY: string[] = [
+  '027014', '027046', '027033', '027032', '027009',
+  '027035', '027047', '027001', '027029', '027036',
+  '027045', '027008', '027026', '027031', '027011',
+];
+const priorityIndex = (id: string) => {
+  const i = SOFIPOS_PRIORITY.indexOf(id);
+  return i === -1 ? SOFIPOS_PRIORITY.length : i;
+};
+
+const ents = Object.values(s.historico_por_entidad?.entidades ?? {}) as Array<{
+  id: string; nombre: string; imor: (number | null)[]; cartera_total?: number | null;
+}>;
+
+const top15 = [...ents]
+  .filter((e) => e.imor.length > 0)
+  .sort((a, b) => {
+    const ai = priorityIndex(a.id);
+    const bi = priorityIndex(b.id);
+    if (ai !== bi) return ai - bi;
+    const aC = a.cartera_total ?? null;
+    const bC = b.cartera_total ?? null;
+    if (aC !== null && bC !== null) return bC - aC;
+    return (b.imor[b.imor.length - 1] ?? 0) - (a.imor[a.imor.length - 1] ?? 0);
+  })
+  .slice(0, 15);
+---
+
+<Layout
+  title="Instituciones Financieras"
+  description="Banca Múltiple y SoFiPOs: IMOR, IMORA, ICOR, IFRS9, ROA/ROE. Comparativa entre sectores."
+  jsonLd={datasetJsonLd({
+    name: 'Instituciones Financieras — Banca Múltiple y SoFiPOs México',
+    description: 'IMOR, IMORA, ICOR, IFRS 9 y rentabilidad de Banca Múltiple y Sociedades Financieras Populares. Fuente: CNBV Portafolio de Información.',
+    path: '/instituciones',
+    keywords: ['IMOR', 'IMORA', 'ICOR', 'IFRS 9', 'banca múltiple', 'SoFiPOs', 'CNBV'],
+  })}>
+  <Header slot="header" />
+  <TabBar slot="header" />
+
+  <div class="space-y-6">
+
+    <!-- ── Comparativa de KPIs ─────────────────────────────────────────── -->
+    <EditorialHeadline
+      eyebrow="Instituciones Financieras · Banca Múltiple vs SoFiPOs"
+      headline="El sistema bancario mantiene IMOR controlado; el sector popular muestra morosidad ~3× mayor con rentabilidad bajo presión."
+    />
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <KpiCard
+        label="IMOR · Banca"
+        value={formatPct(data.credito.imor.actual)}
+        asOf={data.credito.imor.fecha}
+        iconName="Activity"
+        tone="green"
+        indicatorId="imor"
+        client:visible
+      />
+      <KpiCard
+        label="IMOR · SoFiPOs"
+        value={formatPct(ultima.imor_total)}
+        asOf={ultima.fecha}
+        iconName="Activity"
+        tone="yellow"
+        indicatorId="sofipos-imor"
+        client:visible
+      />
+      <KpiCard
+        label="IMORA · Banca"
+        value={formatPct(data.credito.imora.actual)}
+        asOf={data.credito.imora.fecha}
+        iconName="Percent"
+        tone="yellow"
+        indicatorId="imora"
+        client:visible
+      />
+      <KpiCard
+        label="ROA · Banca"
+        value={formatPct(data.credito.roa.actual)}
+        asOf={data.credito.roa.fecha}
+        iconName="TrendingUp"
+        tone="green"
+        indicatorId="roa"
+        client:visible
+      />
+    </div>
+
+    <!-- ── Selector de sector ──────────────────────────────────────────── -->
+    <div class="pt-2">
+      <SectorToggle client:load />
+    </div>
+
+    <!-- ── Banca Múltiple ──────────────────────────────────────────────── -->
+    <div id="sector-bm" class="space-y-6">
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <KpiCard
+          label="ICOR"
+          value={`${data.credito.icor.actual.toFixed(2)}×`}
+          asOf={data.credito.icor.fecha}
+          iconName="Shield"
+          tone="green"
+          indicatorId="icor"
+          client:visible
+        />
+        <KpiCard
+          label="ROE"
+          value={formatPct(data.credito.roe.actual)}
+          asOf={data.credito.roe.fecha}
+          iconName="TrendingUp"
+          tone="green"
+          indicatorId="roe"
+          client:visible
+        />
+        {ifrs.ultima && (
+          <KpiCard
+            label="IFRS9 Stage 2"
+            value={formatPct(ifrs.ultima.etapa2)}
+            asOf={ifrs.ultima.fecha ?? ''}
+            iconName="BarChart2"
+            tone="yellow"
+            indicatorId="ifrs9-stage2"
+            client:visible
+          />
+        )}
+      </div>
+
+      <Section
+        id="imor-pivot"
+        eyebrow="Explorador interactivo"
+        title="IMOR por banco / cartera"
+        description="Vista Sistema o por banco individual. Selecciona cartera: total, comercial, consumo, vivienda, tarjeta o consumo no revolvente."
+        source="CNBV Sector 40 (Banca Múltiple)"
+        tone="gold">
+        <ImorSegPivotChart {...pivotProps} showSofipos={false} client:visible />
+      </Section>
+
+      <Section
+        id="bancos-table"
+        eyebrow="Riesgo por institución"
+        title="IMOR por banco"
+        description={`Índice de morosidad por institución. Ordenable por IMOR actual, variación anual o nombre. CNBV Sector 40, 2000–${latest_date}.`}
+        source="CNBV Sector 40 (sh_datos_40.csv)"
+        tone="gold">
+        {hpb ? (
+          <BancosTable
+            fechas={hpb.fechas}
+            bancos={hpb.bancos as Record<string, import('../components/tables/BancosTable').BancoEntry>}
+            client:visible
+          />
+        ) : (
+          <p class="text-sm text-[--color-text-mute]">Sin datos por institución disponibles.</p>
+        )}
+      </Section>
+
+      <Section
+        id="imora"
+        eyebrow="Morosidad ajustada"
+        title="IMORA — Índice de Morosidad Ajustado"
+        description="Incluye cartera vencida más castigos contables acumulados en los últimos 12 meses."
+        source="CNBV Sector 40"
+        tone="yellow">
+        <ImoraChart fechas={hpc.fechas} values={hpc.imora_total} bancos={bancosImoraArr} client:visible />
+      </Section>
+
+      <Section
+        id="icor"
+        eyebrow="Cobertura de cartera"
+        title="ICOR — Índice de Cobertura"
+        description="Razón entre reservas preventivas y cartera vencida. Un valor > 1 indica cobertura igual o superior al 100%."
+        source="CNBV Sector 40"
+        tone="green">
+        <IcorChart fechas={hpc.fechas} values={hpc.icor_total} bancos={bancosIcorArr} client:visible />
+      </Section>
+
+      <Section
+        id="roa-roe"
+        eyebrow="Rentabilidad"
+        title="ROA y ROE"
+        description="Retorno sobre activos (eje izquierdo) y retorno sobre capital (eje derecho). Banca Múltiple consolidado."
+        source="CNBV Sector 40"
+        tone="green">
+        <RoaRoeChart fechas={hpc.fechas} roa={hpc.roa} roe={hpc.roe} client:visible />
+      </Section>
+
+      <Section
+        id="ifrs9"
+        eyebrow="Estándares contables"
+        title="IFRS 9 — Stages 1/2/3"
+        description="Distribución porcentual de la cartera por stage de riesgo crediticio. Stage 1: riesgo bajo; Stage 2: aumento significativo; Stage 3: deteriorada."
+        source="CNBV Reporte R12A"
+        tone="yellow">
+        {ifrs.ultima && (
+          <div class="grid grid-cols-3 gap-3 mb-4">
+            <div class="card-surface p-4 text-center">
+              <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">Stage 1</div>
+              <div class="serif text-2xl font-semibold text-[--color-green]">{formatPct(ifrs.ultima.etapa1)}</div>
+            </div>
+            <div class="card-surface p-4 text-center">
+              <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">Stage 2</div>
+              <div class="serif text-2xl font-semibold text-[--color-yellow]">{formatPct(ifrs.ultima.etapa2)}</div>
+            </div>
+            <div class="card-surface p-4 text-center">
+              <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">Stage 3</div>
+              <div class="serif text-2xl font-semibold text-[--color-red]">{formatPct(ifrs.ultima.etapa3)}</div>
+            </div>
+          </div>
+        )}
+        <Ifrs9Chart
+          fechas={ifrs.fechas}
+          etapa1={ifrs.etapa1_pct}
+          etapa2={ifrs.etapa2_pct}
+          etapa3={ifrs.etapa3_pct}
+          client:visible
+        />
+      </Section>
+
+    </div>
+
+    <!-- ── SoFiPOs ─────────────────────────────────────────────────────── -->
+    <div id="sector-sofipos" class="space-y-6" style="display:none">
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <KpiCard
+          label="IMOR Total"
+          value={formatPct(ultima.imor_total)}
+          asOf={ultima.fecha}
+          iconName="Activity"
+          tone="yellow"
+          indicatorId="sofipos-imor"
+          client:visible
+        />
+        <KpiCard
+          label="IMOR Vivienda"
+          value={formatPct(ultima.imor_vivienda)}
+          asOf={ultima.fecha}
+          iconName="TrendingDown"
+          tone="red"
+          indicatorId="sofipos-imor-vivienda"
+          client:visible
+        />
+        <KpiCard
+          label="IMORA"
+          value={formatPct(ultima.imora_total)}
+          asOf={ultima.fecha}
+          iconName="Percent"
+          tone="yellow"
+          indicatorId="sofipos-imora"
+          client:visible
+        />
+        <KpiCard
+          label="ROA"
+          value={formatPct(ultima.roa)}
+          asOf={ultima.fecha}
+          iconName="TrendingUp"
+          tone="red"
+          indicatorId="sofipos-roa"
+          client:visible
+        />
+      </div>
+
+      <EditorialHeadline
+        eyebrow={`SoFiPOs · Sociedades Financieras Populares · ${ultima.fecha}`}
+        headline="Morosidad ~3× la de Banca Múltiple. Vivienda supera el 31% y rentabilidad bajo presión."
+      />
+
+      <Section
+        id="sofipos-imor-cartera"
+        eyebrow="Morosidad por cartera"
+        title="IMOR por cartera"
+        description="Índice de Morosidad por tipo de cartera. Vivienda supera sistemáticamente el 25%."
+        source="CNBV Sector 27 (SoFiPOs)"
+        tone="yellow">
+        <SofiposSegmentChart
+          fechas={s.fechas}
+          total={s.imor_total}
+          comercial={s.imor_comercial}
+          consumo={s.imor_consumo}
+          vivienda={s.imor_vivienda}
+          client:visible
+        />
+      </Section>
+
+      <Section
+        id="sofipos-top15"
+        eyebrow="Entidades individuales"
+        title="Top 15 entidades más reconocidas"
+        description="Las 15 SoFiPOs con mayor presencia: cooperativas líderes, fintechs y microfinancieras."
+        source="CNBV Sector 27 — histórico por entidad"
+        tone="red">
+        <SofiposEntidadesChart
+          fechas={s.historico_por_entidad?.fechas ?? s.fechas}
+          entidades={top15}
+          client:visible
+        />
+      </Section>
+
+      <Section
+        id="sofipos-imora-roa"
+        eyebrow="Calidad y rentabilidad"
+        title="IMOR + ROA dual"
+        description="IMOR total (eje izquierdo) y ROA del sector (eje derecho). ROA negativo señala rentabilidad por debajo del costo de capital."
+        source="CNBV Sector 27 (SoFiPOs)"
+        tone="yellow">
+        <SofiposImoraRoaChart
+          fechas={s.fechas}
+          imor={s.imor_total}
+          roa={s.roa}
+          client:visible
+        />
+      </Section>
+
+    </div>
+
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
+  <BottomNav slot="bottom-nav" />
+</Layout>
+
+<script>
+  type Sector = 'bm' | 'sofipos';
+
+  function applySector(sector: Sector) {
+    const bm = document.getElementById('sector-bm');
+    const sofipos = document.getElementById('sector-sofipos');
+    if (!bm || !sofipos) return;
+    bm.style.display = sector === 'bm' ? '' : 'none';
+    sofipos.style.display = sector === 'sofipos' ? '' : 'none';
+  }
+
+  // Initialize from localStorage on page load
+  const saved = (localStorage.getItem('sfm-sector') as Sector | null) ?? 'bm';
+  applySector(saved);
+
+  // Listen for toggle changes dispatched by SectorToggle
+  document.addEventListener('sfm:sector-change', (e) => {
+    applySector((e as CustomEvent<{ sector: Sector }>).detail.sector);
+  });
+
+  // Re-apply after Astro view transitions swap the DOM
+  document.addEventListener('astro:after-swap', () => {
+    const current = (localStorage.getItem('sfm-sector') as Sector | null) ?? 'bm';
+    applySector(current);
+  });
+</script>
