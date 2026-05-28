@@ -17,15 +17,15 @@ Este documento define cuándo y cómo hacer el corte definitivo del dashboard le
 **Todos deben estar ✅ antes de ejecutar el corte.** Sin excepciones — el dashboard tiene tracción y URLs ya pueden estar citadas.
 
 ### G1 — paridad funcional de las 9 charts
-- [ ] FX MXN/USD histórico — ✅ migrado
-- [ ] Tasa Banxico — ✅ migrado
-- [ ] Inflación INPC — ✅ migrado
-- [ ] IMOR Banca Múltiple histórico
-- [ ] IMOR por segmento (comercial/consumo/vivienda/tarjeta)
-- [ ] IMOR por banco G-7 (BBVA/Banamex/Santander/Banorte/HSBC/Scotiabank/Inbursa)
-- [ ] IFRS 9 etapas 1/2/3 (stacked area, desde ene 2022)
-- [ ] SoFiPOs IMOR top 15 por activo (Y axis fijo 45%)
-- [ ] SoFiPOs IMORA + ROA dual-axis
+- [x] FX MXN/USD histórico — `FXChart.tsx`
+- [x] Tasa Banxico — `TasaBanxicoChart.tsx`
+- [x] Inflación INPC — `InflacionChart.tsx`
+- [x] IMOR Banca Múltiple histórico — `ImorSegPivotChart.tsx`
+- [x] IMOR por segmento (comercial/consumo/vivienda/tarjeta) — `ImorSegPivotChart.tsx`
+- [x] IMOR por banco G-7 (BBVA/Banamex/Santander/Banorte/HSBC/Scotiabank/Inbursa) — `ImorSegPivotChart.tsx`
+- [x] IFRS 9 etapas 1/2/3 (stacked area, desde ene 2022) — `Ifrs9Chart.tsx`
+- [x] SoFiPOs IMOR top 15 por activo (Y axis fijo 45%) — `SofiposEntidadesChart.tsx`
+- [x] SoFiPOs IMORA + ROA dual-axis — `SofiposImoraRoaChart.tsx`
 
 ### G2 — paridad visual con Playwright
 - [x] Suite Playwright corriendo en CI con `toHaveScreenshot()` — 5 baselines desktop generadas en v0.2.0-dev.1
