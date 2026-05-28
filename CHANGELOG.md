@@ -19,9 +19,9 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 ### fix(#80) — Preload CSS en GitHub Pages (2026-05-27)
 - `app/astro.config.ts`: `cssCodeSplit: false` en `vite.build` — elimina el error "Unable to preload CSS for /_assets/X.css" al unificar en un solo bundle CSS (sin race condition entre hashes de build y SW caché)
 
-### feat(#81) — Top 15 SoFiPOs curadas (2026-05-27)
-- `sofipos.astro`: lista priorizada `SOFIPOS_PRIORITY` con las entidades más reconocidas del Sector 27 (CAJA POP MEXICANA, CAJA LIBERTAD, FINCOMÚN, FORJADORES, etc.) en lugar del sort automático por `cartera_total` (que era null)
-- Nu Mexico y Fuertes pendientes de incorporar cuando su ID CNBV esté disponible en el dataset
+### feat(#81) — Top 15 SoFiPOs por tamaño de cartera (2026-05-27)
+- `sofipos.astro`: `SOFIPOS_PRIORITY` reordenada por cartera total real (CNBV sh_datos_27.csv, mar 2026) — encabeza CAJA INMACULADA (121B MXN), seguida de CAJA REAL PUEBLA (25B), REAL CAPITALIZA (13B), CAJA REAL CUAUHTÉMOC (12B), etc.
+- SoFiPOs digitales (Nu México, KLAR, Stori) no reportan en el dataset CNBV Sector 27 Portafolio de Información
 
 ### feat(#82) — Orden por popularidad en tabla IMOR por banco (2026-05-27)
 - `BancosTable.tsx`: nuevo `SortKey` tipo `'populares'` con lista `BANCOS_POPULARES` (G-7 primero: BBVA, Banamex, Banorte, Santander, HSBC, Scotiabank, Inbursa; luego fintechs y banca de hogares)

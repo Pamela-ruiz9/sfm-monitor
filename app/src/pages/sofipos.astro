@@ -32,25 +32,24 @@ const ents = Object.values(s.historico_por_entidad?.entidades ?? {}) as Array<{
   cartera_total?: number | null;
 }>;
 
-// Curated priority order: well-known institutions and strong competitors (issue #81).
-// IDs are CNBV Sector 27 institution codes.
-// Nu Mexico (Nu Financiera) and Fuertes are not yet in the CNBV dataset — add when available.
+// Ordered by cartera total (CNBV sh_datos_27.csv, mar 2026).
+// Names from cat_instituciones_27.csv.
 const SOFIPOS_PRIORITY: string[] = [
-  '027004', // CAJA POP MEXICANA   — mayor cooperativa de ahorro del país
-  '027010', // CAJA LIBERTAD       — conocida nacional
-  '027006', // FINCOMÚN            — pionera en microfinanzas
-  '027013', // FORJADORES          — microcrédito líder
-  '027003', // TE CREEMOS          — microfinanciera reconocida
-  '027018', // BIEN PARA BIEN      — fintech hipotecaria
-  '027008', // KUBO FINANCIERO     — fintech referencia
-  '027021', // CAME FINANCIERO     — cobertura nacional
-  '027007', // CAJA MORELIA VALLADOLID
-  '027030', // ACCESO FINANCIERO
-  '027033', // REAL CAPITALIZA
-  '027015', // FONDESO
-  '027005', // CAJA REAL MEXICANA  — mayor del sistema Caja Real
-  '027031', // PRESTANDO
-  '027023', // FONCE
+  '027014', // Nu México               — 122 B MXN
+  '027046', // Financiera Sustentable  —  25 B MXN
+  '027033', // Libertad                —  13 B MXN
+  '027032', // Stori                   —  12 B MXN
+  '027009', // Klar                    —  10 B MXN
+  '027035', // Sofiexpress             —   7 B MXN
+  '027047', // Crediclub               —   6 B MXN
+  '027001', // Fincomún                —   4 B MXN
+  '027029', // Opciones Empresariales  —   3 B MXN
+  '027036', // Fondeadora              —   3 B MXN
+  '027045', // KU-BO                   —   2 B MXN
+  '027008', // Monte de Piedad         —   2 B MXN
+  '027026', // Caja Bienestar          —   2 B MXN
+  '027031', // Progressa               —   1 B MXN
+  '027011', // Te Creemos              —   1 B MXN
 ];
 
 const priorityIndex = (id: string) => {

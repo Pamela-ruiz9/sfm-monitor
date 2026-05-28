@@ -97,22 +97,21 @@ ARTIFACT_CONCEPTS = {"40200056"}
 
 
 # ──────────────────────────────────────────────
-# SoFiPOs concept mapping — 027_datos.csv
-# Sector 27 (SoFiPOs), concept IDs 272*
-# Values are already in percentage (%)
+# SoFiPOs concept mapping — sh_datos_27.csv
+# Sector 27 (SoFiPOs), concept IDs from cat_conceptos_27.csv
+# Values are ratios (0–1); multiply ×100 for percentages
 #
-# Mapped empirically against sofipos_by_inst.json
-# Validated on inst=027013, periodo=202501
+# Validated against cat_conceptos_27.csv (raw-data/cat_conceptos_27.csv)
 # ──────────────────────────────────────────────
 
-SOFIPOS_CONCEPT_MAP = {
-    "roa":            "27200001",
-    "roe":            "27200002",
-    "imor_total":     "27200017",
-    "imor_comercial": "27200018",
-    "imor_consumo":   "27200019",
-    "imor_vivienda":  "27200020",
-    "imora_total":    "27200021",
+SOFIPOS_CONCEPT_MAP: dict[str, tuple[str, float]] = {
+    "roa":            ("27200001", 1.0),   # already in %
+    "roe":            ("27200002", 1.0),   # already in %
+    "imor_total":     ("27200005", 100.0), # IMOR cartera de crédito
+    "imor_comercial": ("27200006", 100.0), # IMOR comercial
+    "imor_consumo":   ("27200007", 100.0), # IMOR consumo
+    "imor_vivienda":  ("27200008", 100.0), # IMOR vivienda
+    "imora_total":    ("27200009", 100.0), # IMORA cartera de crédito
 }
 
 
@@ -178,65 +177,48 @@ def extract_cnbv() -> None:
 
 
 # ──────────────────────────────────────────────
-# 2. sofipos_inst.xlsx (ZIP) → sofipos_by_inst.json
+# 2. sh_datos_27.csv → sofipos_by_inst.json
 # ──────────────────────────────────────────────
 
 def extract_sofipos() -> None:
-    candidates = ["sofipos_inst.xlsx", "sofipos2.xlsx"]
-    src = None
-    for name in candidates:
-        path = os.path.join(RAW, name)
-        if os.path.exists(path):
-            src = path
-            break
-
-    if src is None:
-        print(f"❌ SoFiPOs source not found. Expected one of: {candidates}")
+    src = os.path.join(RAW, "sh_datos_27.csv")
+    if not os.path.exists(src):
+        print(f"❌ Not found: {src}")
+        print("   Download from CNBV Portafolio de Información → Sector 27 → Serie Histórica → Descargar CSV")
         sys.exit(1)
 
+    needed_ids = {concept_id for concept_id, _ in SOFIPOS_CONCEPT_MAP.values()}
+    concept_to_ind = {concept_id: ind for ind, (concept_id, _) in SOFIPOS_CONCEPT_MAP.items()}
+    concept_mult   = {concept_id: mult for _, (concept_id, mult) in SOFIPOS_CONCEPT_MAP.items()}
+
     print(f"📂 Reading {src}  ({os.path.getsize(src) / 1024 / 1024:.1f} MB) ...")
+    print("   Parsing SoFiPOs indicators ...")
 
-    # Extract 027_datos.csv from the ZIP (file has .xlsx extension but is a ZIP)
-    tmpdir = tempfile.mkdtemp(prefix="sofipos_")
-    try:
-        proc = subprocess.run(
-            ["unzip", "-o", "-q", src, "027_datos.csv", "-d", tmpdir],
-            capture_output=True,
-        )
-        csv_path = os.path.join(tmpdir, "027_datos.csv")
-        if not os.path.exists(csv_path):
-            print(f"❌ Could not extract 027_datos.csv from {src}")
-            print(f"   unzip stderr: {proc.stderr.decode()[:300]}")
-            sys.exit(1)
+    # result[inst_id][periodo] = {imor_total, roa, ...}
+    result: dict[str, dict[str, dict[str, float | None]]] = {}
+    all_periods_set: set[str] = set()
 
-        print(f"   Extracted 027_datos.csv ({os.path.getsize(csv_path) / 1024 / 1024:.1f} MB)")
-        print("   Parsing indicators ...")
-
-        concept_to_ind = {v: k for k, v in SOFIPOS_CONCEPT_MAP.items()}
-
-        # result[inst_id][periodo] = {imor_total, roa, ...}
-        result: dict[str, dict[str, dict[str, float | None]]] = {}
-        all_periods_set: set[str] = set()
-
-        with open(csv_path, encoding="latin-1", errors="replace") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                concepto = row["concepto"].strip()
-                ind = concept_to_ind.get(concepto)
-                if ind is None:
-                    continue
-                inst = row["institucion"].strip()
-                fecha = row["fecha"].strip()
-                val = safe_float(row["saldo_se"])
-                all_periods_set.add(fecha)
-                if inst not in result:
-                    result[inst] = {}
-                if fecha not in result[inst]:
-                    result[inst][fecha] = {}
-                result[inst][fecha][ind] = val
-
-    finally:
-        shutil.rmtree(tmpdir, ignore_errors=True)
+    with open(src, encoding="latin-1", errors="replace") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            inst = row["entidad"].strip()
+            if inst == "20":          # skip system aggregate — computed in normalize-cnbv.py
+                continue
+            concept = str(row["idconcepto"]).strip()
+            if concept not in needed_ids:
+                continue
+            periodo = row["periodo"].strip()
+            val = safe_float(row["valor"])
+            if val is None:
+                continue
+            mult = concept_mult[concept]
+            ind  = concept_to_ind[concept]
+            all_periods_set.add(periodo)
+            if inst not in result:
+                result[inst] = {}
+            if periodo not in result[inst]:
+                result[inst][periodo] = {}
+            result[inst][periodo][ind] = round(val * mult, 4)
 
     if not result:
         print("⚠️  No institutions found — concept IDs may have changed")
