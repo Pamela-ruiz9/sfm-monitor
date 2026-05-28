@@ -305,6 +305,44 @@ Fuentes gratuitas priorizadas:
 
 ---
 
+## Observabilidad — Setup manual pendiente
+
+El código ya está en el repo (commit `66798a2`). Requiere configurar dos servicios externos y añadir sus secrets en GitHub.
+
+### Healthchecks.io — monitoreo del pipeline de datos
+
+1. Crear cuenta en [healthchecks.io](https://healthchecks.io) (gratis hasta 20 checks)
+2. Dashboard → **Add Check**
+   - Name: `sfm-monitor pipeline`
+   - Tags: `banxico`, `data`
+   - Period: `1 day`
+   - Grace time: `1 hour`
+   - → **Save**
+3. Copiar la URL de ping generada (formato `https://hc-ping.com/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`)
+4. Repo GitHub → **Settings → Secrets and variables → Actions → New repository secret**
+   - Name: `HEALTHCHECKS_URL`
+   - Value: la URL copiada
+5. Verificar: Actions → `Update SFM Data` → **Run workflow** → el check debe volverse verde en Healthchecks.io
+
+### GoatCounter — analytics sin cookies
+
+1. Crear cuenta en [goatcounter.com](https://www.goatcounter.com) → **Sign up for hosted**
+   - Code (subdominio): `sfm-monitor` → queda como `sfm-monitor.goatcounter.com`
+   - Confirmar email
+2. Settings → **Site** → sección "Allow domains": añadir `pamela-ruiz9.github.io`
+3. La URL del contador es: `https://sfm-monitor.goatcounter.com/count`
+4. Repo GitHub → **Settings → Secrets and variables → Actions → New repository secret**
+   - Name: `PUBLIC_GOATCOUNTER_URL`
+   - Value: `https://sfm-monitor.goatcounter.com/count`
+5. Para desarrollo local: crear `app/.env` (ya está en `.gitignore`):
+   ```
+   PUBLIC_GOATCOUNTER_URL=https://sfm-monitor.goatcounter.com/count
+   ```
+
+> Activar cuando el producto esté nutrido y haya tráfico real que medir.
+
+---
+
 ## Métricas de éxito
 
 | Sprint | Métrica | Target |
