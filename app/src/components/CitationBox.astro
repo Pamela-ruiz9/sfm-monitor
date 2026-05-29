@@ -1,0 +1,161 @@
+---
+interface Props {
+  title?: string | undefined;
+  authors?: string | undefined;
+  url?: string | undefined;
+  doi?: string | undefined;
+  year?: number | undefined;
+  version?: string | undefined;
+}
+
+const {
+  title = 'SFM Monitor — Monitor de Riesgo del Sistema Financiero Mexicano',
+  authors = 'Ruiz Puga, I. P., & Padilla, A.',
+  url = 'https://sfmrisk.mx',
+  doi = '10.5281/zenodo.20370914',
+  year = 2026,
+  version = 'v0.2.0',
+} = Astro.props;
+
+const authorsFullBibtex = 'Ruiz Puga, Ingrid Pamela and Padilla, Artemio';
+const authorRis1 = 'Ruiz Puga, Ingrid Pamela';
+const authorRis2 = 'Padilla, Artemio';
+
+const apa = `${authors} (${year}). ${title} (${version}) [Software]. https://doi.org/${doi}`;
+
+const bibtex = `@software{sfmrisk${year},
+  author    = {${authorsFullBibtex}},
+  title     = {{SFM Monitor} -- Monitor de Riesgo del Sistema Financiero Mexicano},
+  year      = {${year}},
+  version   = {${version}},
+  url       = {${url}},
+  doi       = {${doi}},
+  license   = {MIT (code) / CC-BY 4.0 (content)}
+}`;
+
+const ris = `TY  - COMP
+AU  - ${authorRis1}
+AU  - ${authorRis2}
+TI  - SFM Monitor -- Monitor de Riesgo del Sistema Financiero Mexicano
+PY  - ${year}
+UR  - ${url}
+DO  - ${doi}
+ER  -`;
+
+const tabsData = [
+  { id: 'apa', label: 'APA', content: apa },
+  { id: 'bibtex', label: 'BibTeX', content: bibtex },
+  { id: 'ris', label: 'RIS', content: ris },
+];
+---
+
+<div class="citation-box card-surface p-5 space-y-4" data-citation-box>
+  <h3 class="text-sm font-semibold text-[--color-text]">Cita este recurso</h3>
+
+  <!-- Tab buttons -->
+  <div class="flex gap-1 border-b border-[--color-border-soft]" role="tablist" aria-label="Formato de cita">
+    {tabsData.map((tab, i) => (
+      <button
+        type="button"
+        role="tab"
+        aria-selected={i === 0 ? 'true' : 'false'}
+        aria-controls={`citation-panel-${tab.id}`}
+        id={`citation-tab-${tab.id}`}
+        data-tab={tab.id}
+        class={`citation-tab px-3 py-1.5 text-xs font-medium rounded-t transition-colors ${i === 0 ? 'citation-tab--active' : ''}`}
+      >
+        {tab.label}
+      </button>
+    ))}
+  </div>
+
+  <!-- Tab panels -->
+  {tabsData.map((tab, i) => (
+    <div
+      id={`citation-panel-${tab.id}`}
+      role="tabpanel"
+      aria-labelledby={`citation-tab-${tab.id}`}
+      class={`citation-panel space-y-2 ${i === 0 ? '' : 'hidden'}`}
+      data-panel={tab.id}
+    >
+      <pre
+        class="mono text-xs text-[--color-text-dim] bg-[--color-bg] border border-[--color-border-soft] rounded-lg p-4 overflow-x-auto whitespace-pre-wrap break-words leading-relaxed"
+        data-citation-content={tab.id}
+      >{tab.content}</pre>
+      <button
+        type="button"
+        class="citation-copy-btn text-[11px] px-3 py-1 rounded border border-[--color-border] text-[--color-text-mute] hover:text-[--color-text] hover:border-[--color-gold] transition-colors"
+        data-copy-target={tab.id}
+        aria-label={`Copiar cita en formato ${tab.label}`}
+      >
+        Copiar
+      </button>
+    </div>
+  ))}
+</div>
+
+<style>
+  .citation-tab {
+    color: var(--color-text-mute);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .citation-tab:hover {
+    color: var(--color-text);
+  }
+  .citation-tab--active {
+    color: var(--color-gold);
+    border-bottom-color: var(--color-gold);
+  }
+</style>
+
+<script>
+  function initCitationBox(box: Element) {
+    const tabs = box.querySelectorAll<HTMLButtonElement>('.citation-tab');
+    const panels = box.querySelectorAll<HTMLElement>('.citation-panel');
+    const copyBtns = box.querySelectorAll<HTMLButtonElement>('.citation-copy-btn');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset['tab'];
+        tabs.forEach((t) => {
+          t.setAttribute('aria-selected', 'false');
+          t.classList.remove('citation-tab--active');
+        });
+        panels.forEach((p) => p.classList.add('hidden'));
+        tab.setAttribute('aria-selected', 'true');
+        tab.classList.add('citation-tab--active');
+        const panel = box.querySelector<HTMLElement>(`[data-panel="${target}"]`);
+        if (panel) panel.classList.remove('hidden');
+      });
+    });
+
+    copyBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.dataset['copyTarget'];
+        const pre = box.querySelector<HTMLElement>(`[data-citation-content="${targetId}"]`);
+        if (!pre) return;
+        const text = pre.textContent ?? '';
+        navigator.clipboard.writeText(text).then(() => {
+          const original = btn.textContent ?? 'Copiar';
+          btn.textContent = '¡Copiado!';
+          btn.style.color = 'var(--color-green)';
+          btn.style.borderColor = 'var(--color-green)';
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.style.color = '';
+            btn.style.borderColor = '';
+          }, 2000);
+        }).catch(() => {
+          // clipboard not available (e.g. non-secure context) — silently ignore
+        });
+      });
+    });
+  }
+
+  // Initialize on page load and after Astro view transitions
+  document.querySelectorAll('[data-citation-box]').forEach(initCitationBox);
+  document.addEventListener('astro:after-swap', () => {
+    document.querySelectorAll('[data-citation-box]').forEach(initCitationBox);
+  });
+</script>

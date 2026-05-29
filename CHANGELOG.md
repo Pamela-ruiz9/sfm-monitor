@@ -12,21 +12,21 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(G4): CitationBox + MetricTooltip con glosario (2026-05-28)
+- `app/src/components/CitationBox.astro`: caja de cita con 3 pestañas (APA / BibTeX / RIS), botón Copiar con feedback visual "¡Copiado!" por 2s, dark theme con `--color-gold` para tab activa
+- `app/src/data/glossary.ts`: glosario de 11 términos financieros (IMOR, IMORA, ICOR, ICAP, IFRS9, TIIE, Cetes, FIX, ROA, ROE, SoFiPO) con definición corta para tooltip y descripción completa
+- `app/src/components/MetricTooltip.tsx`: componente React para envolver siglas con tooltip accesible (role="tooltip", aria-describedby), implementado con CSS puro, hover/focus activable por teclado
+- `app/src/pages/metodologia.astro`: `CitationBox` montado en sección "Cita este recurso"
+- `app/src/pages/instituciones.astro`: `MetricTooltip slug="imor"` en sección IMOR por banco/cartera
+
 ### fix(US-105) — IcorChart: escala eje Y y formato × (2026-05-28)
-- `IcorChart.tsx`: reemplaza `max: yMax` (calculado dinámicamente, podía crecer sin cota) por `suggestedMax: 3.5` — deja headroom sobre el máximo histórico (~2.5×) sin aplastar la variación real
-- `IcorChart.tsx`: tick del eje Y cambia de `x` minúscula a símbolo `×` (`×1.2` en lugar de `1.2x`); el tooltip ya usaba `×` correctamente
-- Elimina `nonNullValues`/`maxVal`/`yMax` que ya no se usan
+- `IcorChart.tsx`: reemplaza `max: yMax` dinámico por `suggestedMax: 3.5` — headroom sobre máximo histórico (~2.5×)
+- `IcorChart.tsx`: tick del eje Y cambia de `1.2x` a `×1.2` (símbolo correcto)
 
-### fix(US-106) — IMORA banca: sin bug de multiplicador (2026-05-28)
-- Investigación: `data/credito.json` contiene `imora_total` en escala 0–100 (ej. 4.39 = 4.39%); `ImoraChart.tsx` no multiplica × 100; la visualización es correcta
-- Los valores históricos (2.35%–8.10%) son plausibles para banca múltiple en el período analizado
-- No se requiere cambio en código; issue cerrado como "no bug"
-
-### fix(US-104) — Tab Macro / duplicado TasaBanxico: investigación (2026-05-28)
-- `macro.astro` no monta `TasaBanxicoChart` ni `MercadoDineroChart`; no hay gráfica duplicada en código estático
-- `index.astro` usa `ActiveIndicatorChart` (React island) con `client:load`; se monta solo una vez por página
-- `MercadoDineroChart.tsx`: no aplica multiplicador ×100; los datos de TIIE se pasan directamente de `sfm-data.json`
-- Nota pipeline: los valores de TIIE Fondeo en `sfm-data.json` (serie SF343410, rango ~17–21) no coinciden con la tasa objetivo Banxico (~6.5%). Esto sugiere un bug en el pipeline de datos (`update-data.yml`) — posible serie equivocada o conversión de unidades — fuera del alcance de este fix (la data es immutable para agentes)
+### fix(US-106/US-104) — Investigación IMORA y TIIE (2026-05-28)
+- US-106: `imora_total` en JSON está en escala 0–100 y `ImoraChart` no multiplica ×100; valores 2.35%–8.10% son plausibles — no hay bug
+- US-104: `macro.astro` no monta charts de tasas; no hay duplicado en código estático
+- Anomalía detectada: TIIE Fondeo (SF343410) en `sfm-data.json` muestra ~17–21% vs tasa objetivo ~6.5–9% — posible bug de pipeline en `update-data.yml` (serie equivocada o unidades incorrectas). Registrado para investigación manual.
 
 ### feat: fusión Resumen + Mercado — KPIs clicables con gráfica dinámica (2026-05-28)
 - `index.astro`: página Resumen absorbe todos los indicadores de Mercado — 9 KPI cards (FX, Tasa Banxico, Inflación, TIIE Fondeo, Cetes 28d, Spread TIIE-Cetes, Reservas, UDI, IMOR placeholder)
