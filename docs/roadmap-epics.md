@@ -17,8 +17,8 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 | G1 — 9/9 charts migradas | ✅ Completo |
 | G2 — Playwright visual | 🔶 Desktop OK, mobile/webkit pendiente |
 | G3 — Paridad de datos | ✅ Completo |
-| G4 — CitationBox + MetricTooltip | 🔶 JSON-LD listo, componentes faltantes |
-| G5 — Observabilidad | 🔴 Código listo, servicios pausados (GoatCounter, Healthchecks, Sentry) |
+| G4 — CitationBox + MetricTooltip | ✅ Completo (CitationBox + MetricTooltip + glossary.ts implementados) |
+| G5 — Observabilidad | 🔴 Código listo, servicios pausados (GoatCounter, Healthchecks, Sentry pendiente) |
 | G6 — Deploy preview Cloudflare | 🔴 Pendiente — bloquea el cutover |
 | G7 — Tag v0.1.0 en remoto | 🔴 Existe local, sin push |
 
@@ -72,29 +72,22 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-105 — ICOR: escala del eje Y desproporcionada (#93)
+### US-105 — ICOR: escala del eje Y desproporcionada (#93) ✅
 
 **Como** analista financiero, **quiero** que la gráfica ICOR tenga bounds apropiados en el eje Y, **para** leer tendencias sin distorsión visual.
 
-**Criterios de aceptación:**
-- [ ] `IcorChart.tsx` tiene `suggestedMin: 0` y `suggestedMax` calibrado al máximo histórico + 20% headroom
-- [ ] Los valores del eje Y se formatean como `×1.23` (cobertura, no porcentaje)
-- [ ] La gráfica es legible en el rango histórico ~1×–2.5×
-- [ ] `npm run build` pasa
-
+**Estado:** Corregido. `suggestedMax: 3.5`, tick formateado como `×1.23`.  
 **Esfuerzo:** S · **Labels:** bug, charts
 
 ---
 
-### US-106 — IMORA banca: verificar multiplicador ×100 duplicado (#92)
+### US-106 — IMORA banca: verificar multiplicador ×100 duplicado (#92) ✅ (no-bug)
 
-**Como** analista financiero, **quiero** confirmar si IMORA en ~100% es un bug de pipeline o datos reales, y corregir si aplica, **para** que la gráfica refleje la realidad crediticia.
+**Como** analista financiero, **quiero** confirmar si IMORA en ~100% es un bug de pipeline o datos reales.
 
-**Criterios de aceptación:**
-- [ ] Se verifica valor raw en `raw-data/cnbv_indicadores.json` para BBVA, Banamex y Banorte
-- [ ] Si hay doble multiplicador, se corrige en el script y se regenera `data/sfm-data.json`
-- [ ] IMORA en Instituciones muestra valores plausibles (<10% para banca múltiple)
-- [ ] Comentario en el script documenta la escala esperada de `imora_total`
+**Estado:** Investigado. `imora_total` está en escala 0–100 (ej. 4.39 = 4.39%); `ImoraChart` no aplica multiplicador adicional; valores históricos 2.35%–8.10% son plausibles. **No hay bug.** Issue cerrado.
+
+**Anomalía encontrada:** TIIE Fondeo (SF343410) en `sfm-data.json` muestra ~17–21% vs tasa objetivo Banxico ~6.5–9%. Posible bug de pipeline — serie equivocada o unidades incorrectas en `update-data.yml`. Requiere investigación manual del pipeline.
 
 **Esfuerzo:** M · **Labels:** bug, data-integrity, pipeline
 
@@ -122,7 +115,7 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-202 — Componente `<CitationBox>` con APA / BibTeX / RIS [G4]
+### US-202 — Componente `<CitationBox>` con APA / BibTeX / RIS [G4] ✅
 
 **Como** periodista/ciudadano, **quiero** un cuadro de citación con formatos listos para copiar, **para** poder citar el dashboard correctamente en artículos o trabajos académicos.
 
@@ -137,7 +130,7 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-203 — Componente `<MetricTooltip>` con glosario hover [G4]
+### US-203 — Componente `<MetricTooltip>` con glosario hover [G4] ✅
 
 **Como** periodista/ciudadano, **quiero** que los acrónimos financieros muestren una definición en tooltip al hacer hover, **para** entender los indicadores sin navegar a Metodología.
 
@@ -322,7 +315,7 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-401 — Botón "seleccionar todas / ninguna" en entidades SoFiPOs (#95)
+### US-401 — Botón "seleccionar todas / ninguna" en entidades SoFiPOs (#95) ✅
 
 **Como** analista financiero, **quiero** seleccionar o deseleccionar todas las 45 entidades SoFiPOs con un clic, **para** no hacer clic individual al comparar sistema vs subconjunto.
 
@@ -365,7 +358,7 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-404 — Selector de rango de fechas con botones (1A / 3A / 5A / Máx)
+### US-404 — Selector de rango de fechas con botones (1A / 3A / 5A / Máx) ✅ (FX, Tasa, Inflación)
 
 **Como** analista financiero, **quiero** filtrar el rango temporal de una gráfica con botones, **para** cambiar rápidamente entre perspectivas de corto y largo plazo.
 
