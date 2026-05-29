@@ -1,7 +1,7 @@
 // app/src/stores/activeTab.ts
 import { atom } from 'nanostores';
 
-export type TabId = 'resumen' | 'instituciones' | 'macro' | 'metodologia';
+export type TabId = 'resumen' | 'riesgo' | 'instituciones' | 'macro' | 'metodologia';
 
 const PATH_TO_TAB: Record<string, TabId> = {
   '/': 'resumen',
@@ -9,12 +9,14 @@ const PATH_TO_TAB: Record<string, TabId> = {
   '/instituciones': 'instituciones',
   '/credito': 'instituciones',   // redirect legacy
   '/sofipos': 'instituciones',   // redirect legacy
+  '/riesgo': 'riesgo',
   '/macro': 'macro',
   '/metodologia': 'metodologia',
 };
 
 const TAB_TO_PATH: Record<TabId, string> = {
   resumen: '/',
+  riesgo: '/riesgo',
   instituciones: '/instituciones',
   macro: '/macro',
   metodologia: '/metodologia',
@@ -33,7 +35,7 @@ export function tabPath(t: TabId): string {
 }
 
 export function adjacentTab(current: TabId, dir: 'next' | 'prev'): TabId | null {
-  const order: TabId[] = ['resumen', 'instituciones', 'macro', 'metodologia'];
+  const order: TabId[] = ['resumen', 'riesgo', 'instituciones', 'macro', 'metodologia'];
   const idx = order.indexOf(current);
   const target = dir === 'next' ? idx + 1 : idx - 1;
   return order[target] ?? null;
