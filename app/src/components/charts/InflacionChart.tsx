@@ -1,7 +1,17 @@
+import { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { ChartErrorBoundary } from './ChartErrorBoundary';
 import '~/components/charts/chartSetup';
 import { Chart as ChartJS } from 'chart.js';
+
+type RangeValue = '1y' | '3y' | '5y' | 'all';
+
+const RANGES: ReadonlyArray<{ label: string; value: RangeValue }> = [
+  { label: '1A', value: '1y' },
+  { label: '3A', value: '3y' },
+  { label: '5A', value: '5y' },
+  { label: 'Máx', value: 'all' },
+];
 
 interface InflacionPoint {
   fecha: string;
@@ -17,12 +27,29 @@ interface Props {
   band?: number;
 }
 
+function filterInflacionByRange(
+  series: InflacionPoint[],
+  range: RangeValue,
+): InflacionPoint[] {
+  if (range === 'all' || series.length === 0) return series;
+  const sorted = series.slice().sort((a, b) => a.mes.localeCompare(b.mes));
+  const last = sorted[sorted.length - 1]!;
+  const lastDate = new Date(`${last.mes}-15`);
+  const years = range === '1y' ? 1 : range === '3y' ? 3 : 5;
+  const cutoff = new Date(lastDate);
+  cutoff.setFullYear(cutoff.getFullYear() - years);
+  return sorted.filter((p) => new Date(`${p.mes}-15`) >= cutoff);
+}
+
 export function InflacionChart({
   series,
   target = 3.0,
   band = 1.0,
 }: Props) {
-  const points = series
+  const [range, setRange] = useState<RangeValue>('all');
+
+  const filtered = filterInflacionByRange(series, range);
+  const points = filtered
     .slice()
     .sort((a, b) => a.mes.localeCompare(b.mes))
     .map((p) => ({ x: `${p.mes}-15`, y: p.valor }));
@@ -46,6 +73,21 @@ export function InflacionChart({
 
   return (
     <ChartErrorBoundary chartName="Inflación INPC">
+      <div className="flex items-center justify-end gap-1 mb-2">
+        {RANGES.map((r) => (
+          <button
+            key={r.value}
+            onClick={() => setRange(r.value)}
+            style={{
+              color: range === r.value ? 'var(--color-gold)' : 'var(--color-text-mute)',
+              borderColor: range === r.value ? 'var(--color-gold)' : 'var(--color-border)',
+            }}
+            className="px-2 py-0.5 text-[10px] font-semibold border rounded transition-colors"
+          >
+            {r.label}
+          </button>
+        ))}
+      </div>
       <div className="h-64 md:h-72 -mx-1">
         <Line
           data={data}

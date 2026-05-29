@@ -12,6 +12,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(ux): selector Todas/Ninguna SoFiPOs + rango de fechas en FX/Tasa/Inflación (2026-05-28)
+- `SofiposEntidadesChart.tsx` (US-401): botones "Todas" / "Ninguna" para activar/desactivar todas las entidades; chips Okabe-Ito por entidad; botón activo resaltado con `--color-gold`
+- `FXChart.tsx` (US-404): botones 1A / 3A / 5A / Máx encima del canvas; filtrado por fecha desde el último dato del array
+- `TasaBanxicoChart.tsx` (US-404): mismo patrón; filtrado sobre puntos normalizados post `normalizeToIso`
+- `InflacionChart.tsx` (US-404): mismo patrón; filtrado por campo `mes` (YYYY-MM)
+
 ### feat(G4): CitationBox + MetricTooltip con glosario (2026-05-28)
 - `app/src/components/CitationBox.astro`: caja de cita con 3 pestañas (APA / BibTeX / RIS), botón Copiar con feedback visual "¡Copiado!" por 2s, dark theme con `--color-gold` para tab activa
 - `app/src/data/glossary.ts`: glosario de 11 términos financieros (IMOR, IMORA, ICOR, ICAP, IFRS9, TIIE, Cetes, FIX, ROA, ROE, SoFiPO) con definición corta para tooltip y descripción completa
@@ -26,7 +32,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 ### fix(US-106/US-104) — Investigación IMORA y TIIE (2026-05-28)
 - US-106: `imora_total` en JSON está en escala 0–100 y `ImoraChart` no multiplica ×100; valores 2.35%–8.10% son plausibles — no hay bug
 - US-104: `macro.astro` no monta charts de tasas; no hay duplicado en código estático
-- Anomalía detectada: TIIE Fondeo (SF343410) en `sfm-data.json` muestra ~17–21% vs tasa objetivo ~6.5–9% — posible bug de pipeline en `update-data.yml` (serie equivocada o unidades incorrectas). Registrado para investigación manual.
+- Anomalía detectada: TIIE Fondeo (SF343410) en `sfm-data.json` muestra ~17–21% vs tasa objetivo ~6.5–9% — posible bug de pipeline en `update-data.yml` (serie equivocada o unidades incorrectas). Requiere investigación manual.
 
 ### feat: fusión Resumen + Mercado — KPIs clicables con gráfica dinámica (2026-05-28)
 - `index.astro`: página Resumen absorbe todos los indicadores de Mercado — 9 KPI cards (FX, Tasa Banxico, Inflación, TIIE Fondeo, Cetes 28d, Spread TIIE-Cetes, Reservas, UDI, IMOR placeholder)

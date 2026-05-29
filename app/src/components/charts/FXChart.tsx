@@ -1,8 +1,28 @@
+import { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import type { MonthlyPointT } from '~/data/schema';
 import { ChartErrorBoundary } from './ChartErrorBoundary';
 import '~/components/charts/chartSetup';
 import { Chart as ChartJS } from 'chart.js';
+
+type RangeValue = '1y' | '3y' | '5y' | 'all';
+
+const RANGES: ReadonlyArray<{ label: string; value: RangeValue }> = [
+  { label: '1A', value: '1y' },
+  { label: '3A', value: '3y' },
+  { label: '5A', value: '5y' },
+  { label: 'Máx', value: 'all' },
+];
+
+function filterByRange(series: MonthlyPointT[], range: RangeValue): MonthlyPointT[] {
+  if (range === 'all' || series.length === 0) return series;
+  const last = series[series.length - 1]!;
+  const lastDate = new Date(`${last.mes}-01`);
+  const years = range === '1y' ? 1 : range === '3y' ? 3 : 5;
+  const cutoff = new Date(lastDate);
+  cutoff.setFullYear(cutoff.getFullYear() - years);
+  return series.filter((p) => new Date(`${p.mes}-01`) >= cutoff);
+}
 
 interface Props {
   series: MonthlyPointT[];
@@ -17,13 +37,15 @@ const DEFAULT_CRISES = [
 ] as const;
 
 export function FXChart({ series, crises = DEFAULT_CRISES }: Props) {
-  const xMin = series.length > 0 ? `${series[0]!.mes}-01` : undefined;
+  const [range, setRange] = useState<RangeValue>('all');
+  const filtered = filterByRange(series, range);
+  const xMin = filtered.length > 0 ? `${filtered[0]!.mes}-01` : undefined;
   const data = {
-    labels: series.map((p) => `${p.mes}-01`),
+    labels: filtered.map((p) => `${p.mes}-01`),
     datasets: [
       {
         label: 'MXN/USD (FIX, fin de mes)',
-        data: series.map((p) => p.valor),
+        data: filtered.map((p) => p.valor),
         borderColor: '#3b82f6',
         backgroundColor: 'rgba(59, 130, 246, 0.1)',
         fill: true,
@@ -37,6 +59,21 @@ export function FXChart({ series, crises = DEFAULT_CRISES }: Props) {
 
   return (
     <ChartErrorBoundary chartName="MXN/USD FIX">
+      <div className="flex items-center justify-end gap-1 mb-2">
+        {RANGES.map((r) => (
+          <button
+            key={r.value}
+            onClick={() => setRange(r.value)}
+            style={{
+              color: range === r.value ? 'var(--color-gold)' : 'var(--color-text-mute)',
+              borderColor: range === r.value ? 'var(--color-gold)' : 'var(--color-border)',
+            }}
+            className="px-2 py-0.5 text-[10px] font-semibold border rounded transition-colors"
+          >
+            {r.label}
+          </button>
+        ))}
+      </div>
       <div className="h-64 md:h-72 -mx-1">
         <Line
           data={data}
