@@ -4,6 +4,7 @@ import Header from '~/components/shell/Header.astro';
 import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
 import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import CitationBox from '~/components/CitationBox.astro';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
@@ -73,6 +74,8 @@ const SEMAFORO_DOT = {
         </div>
       </div>
     </details>
+
+    <CitationBox />
 
     <details class="card-surface p-5 group">
       <summary class="cursor-pointer text-base font-semibold text-[--color-text] flex items-center justify-between">

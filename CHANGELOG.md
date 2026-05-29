@@ -12,6 +12,13 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(G4): CitationBox + MetricTooltip con glosario (2026-05-28)
+- `app/src/components/CitationBox.astro`: caja de cita con 3 pestañas (APA / BibTeX / RIS), boton Copiar con feedback visual "Copiado!" por 2s via `navigator.clipboard`, dark theme con `--color-gold` para tab activa
+- `app/src/data/glossary.ts`: glosario de 11 terminos financieros (IMOR, IMORA, ICOR, ICAP, IFRS9, TIIE, Cetes, FIX, ROA, ROE, SoFiPO) con definicion corta para tooltip y descripcion completa para uso futuro
+- `app/src/components/MetricTooltip.tsx`: componente React para envolver siglas con tooltip accesible (role="tooltip", aria-describedby), implementado con CSS puro (sin @floating-ui), hover/focus con delay visual
+- `app/src/pages/metodologia.astro`: `CitationBox` montado despues del primer bloque `<details>` (umbrales de semaforos)
+- `app/src/pages/instituciones.astro`: `MetricTooltip slug="imor"` usado en la seccion IMOR por banco / cartera
+
 ### feat: fusión Resumen + Mercado — KPIs clicables con gráfica dinámica (2026-05-28)
 - `index.astro`: página Resumen absorbe todos los indicadores de Mercado — 9 KPI cards (FX, Tasa Banxico, Inflación, TIIE Fondeo, Cetes 28d, Spread TIIE-Cetes, Reservas, UDI, IMOR placeholder)
 - `ActiveIndicatorChart.tsx`: componente React nuevo que escucha `sfm:kpi-select` y renderiza la gráfica del indicador seleccionado (FXChart, TasaBanxicoChart, InflacionChart, MercadoDineroChart, ReservasChart) con cabecera de sección dinámica
