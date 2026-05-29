@@ -12,6 +12,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(ux): selector Todas/Ninguna SoFiPOs + rango de fechas en FX/Tasa/Inflación (2026-05-28)
+- `SofiposEntidadesChart.tsx` (US-401): botones "Todas" / "Ninguna" para activar/desactivar todas las entidades de un clic; selector por entidad individual con chips de color Okabe-Ito; leyenda interna del chart desactivada (reemplazada por los chips); botón activo resaltado con `--color-gold`
+- `FXChart.tsx` (US-404): botones de rango 1A / 3A / 5A / Máx encima del canvas; filtrado por fecha desde el último dato disponible (no desde `new Date()`); botón activo en `--color-gold`
+- `TasaBanxicoChart.tsx` (US-404): mismo patrón de rango; el filtrado opera sobre los puntos normalizados post `normalizeToIso`
+- `InflacionChart.tsx` (US-404): mismo patrón de rango; filtrado por campo `mes` (YYYY-MM) antes del mapeo a puntos
+
 ### feat: fusión Resumen + Mercado — KPIs clicables con gráfica dinámica (2026-05-28)
 - `index.astro`: página Resumen absorbe todos los indicadores de Mercado — 9 KPI cards (FX, Tasa Banxico, Inflación, TIIE Fondeo, Cetes 28d, Spread TIIE-Cetes, Reservas, UDI, IMOR placeholder)
 - `ActiveIndicatorChart.tsx`: componente React nuevo que escucha `sfm:kpi-select` y renderiza la gráfica del indicador seleccionado (FXChart, TasaBanxicoChart, InflacionChart, MercadoDineroChart, ReservasChart) con cabecera de sección dinámica
