@@ -53,9 +53,6 @@ export function IcorChart({ fechas, values, bancos }: Props) {
     return { activeValues: values, activeLabel: 'ICOR Total' };
   }, [view, bancoId, bancosConDatos, values]);
 
-  const nonNullValues = activeValues.filter((v): v is number => v !== null);
-  const maxVal = nonNullValues.length > 0 ? Math.max(...nonNullValues) : 0;
-  const yMax = maxVal > 0 ? Math.ceil(maxVal * 1.2 * 10) / 10 : 2;
   const xMin = fechas.length > 0 ? `${fechas[0]}-01` : undefined;
 
   const chartData = {
@@ -169,10 +166,10 @@ export function IcorChart({ fechas, values, bancos }: Props) {
                 },
                 y: {
                   min: 0,
-                  max: yMax,
+                  suggestedMax: 3.5,
                   ticks: {
                     color: '#94a3b8',
-                    callback: (v) => `${Number(v).toFixed(1)}x`,
+                    callback: (v) => `×${Number(v).toFixed(1)}`,
                   },
                   grid: { color: 'rgba(148, 163, 184, 0.1)' },
                 },
