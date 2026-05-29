@@ -12,6 +12,22 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### fix(US-105) — IcorChart: escala eje Y y formato × (2026-05-28)
+- `IcorChart.tsx`: reemplaza `max: yMax` (calculado dinámicamente, podía crecer sin cota) por `suggestedMax: 3.5` — deja headroom sobre el máximo histórico (~2.5×) sin aplastar la variación real
+- `IcorChart.tsx`: tick del eje Y cambia de `x` minúscula a símbolo `×` (`×1.2` en lugar de `1.2x`); el tooltip ya usaba `×` correctamente
+- Elimina `nonNullValues`/`maxVal`/`yMax` que ya no se usan
+
+### fix(US-106) — IMORA banca: sin bug de multiplicador (2026-05-28)
+- Investigación: `data/credito.json` contiene `imora_total` en escala 0–100 (ej. 4.39 = 4.39%); `ImoraChart.tsx` no multiplica × 100; la visualización es correcta
+- Los valores históricos (2.35%–8.10%) son plausibles para banca múltiple en el período analizado
+- No se requiere cambio en código; issue cerrado como "no bug"
+
+### fix(US-104) — Tab Macro / duplicado TasaBanxico: investigación (2026-05-28)
+- `macro.astro` no monta `TasaBanxicoChart` ni `MercadoDineroChart`; no hay gráfica duplicada en código estático
+- `index.astro` usa `ActiveIndicatorChart` (React island) con `client:load`; se monta solo una vez por página
+- `MercadoDineroChart.tsx`: no aplica multiplicador ×100; los datos de TIIE se pasan directamente de `sfm-data.json`
+- Nota pipeline: los valores de TIIE Fondeo en `sfm-data.json` (serie SF343410, rango ~17–21) no coinciden con la tasa objetivo Banxico (~6.5%). Esto sugiere un bug en el pipeline de datos (`update-data.yml`) — posible serie equivocada o conversión de unidades — fuera del alcance de este fix (la data es immutable para agentes)
+
 ### feat: fusión Resumen + Mercado — KPIs clicables con gráfica dinámica (2026-05-28)
 - `index.astro`: página Resumen absorbe todos los indicadores de Mercado — 9 KPI cards (FX, Tasa Banxico, Inflación, TIIE Fondeo, Cetes 28d, Spread TIIE-Cetes, Reservas, UDI, IMOR placeholder)
 - `ActiveIndicatorChart.tsx`: componente React nuevo que escucha `sfm:kpi-select` y renderiza la gráfica del indicador seleccionado (FXChart, TasaBanxicoChart, InflacionChart, MercadoDineroChart, ReservasChart) con cabecera de sección dinámica
