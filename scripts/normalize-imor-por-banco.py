@@ -9,11 +9,10 @@ Source: raw-data/sh_datos_40.csv  (~515 MB, Latin-1 encoded)
 
 Concepts extracted:
   40200017 → imor_total (%)       IMOR cartera total
-  40200033 → imora_total (%)      IMORA cartera total
-    NOTE: extract-cnbv-raw.py uses 40200084 for imora_total at system level.
-    Both concepts are extracted; downstream consumers should prefer 40200084
-    once validated against the CSV (issue #96).
-  40200084 → imora_total_alt (%)  IMORA alternativo — validar vs 40200033
+  40200033 → imora_total (%)      IMORA cartera total — validado: promedio bancos ~4.25% ≈ sistema 4.4%
+    NOTE: extract-cnbv-raw.py usa 40200084 para imora_total a nivel sistema (entidad='5').
+    40200084 por banco NO es IMORA — crece acumulativamente (Banamex llega a 70% en 2026),
+    posiblemente castigos acumulados históricos. 40200033 es el concepto correcto por banco.
   40200096 → icor_total (×)       ICOR (ratio, kept ×1)
   40200018 → imor_comercial (%)   IMOR cartera comercial
   40200056 → imor_consumo (%)     IMOR cartera consumo
@@ -46,20 +45,19 @@ OUT_FILE = os.path.join(DATA, "imor_por_banco.json")
 # ICOR is already a coverage ratio (e.g. 2.04 = 204% coverage), kept ×1.
 # ROA/ROE: raw values are ratios; ×100 → percentage points.
 CONCEPTS: dict[str, tuple[str, float]] = {
-    "40200017": ("imor_total",      100.0),
-    "40200033": ("imora_total",     100.0),  # see NOTE in docstring re: 40200084
-    "40200084": ("imora_total_alt", 100.0),  # alternative IMORA — compare with 40200033
-    "40200096": ("icor_total",        1.0),
-    "40200018": ("imor_comercial",  100.0),
-    "40200056": ("imor_consumo",    100.0),
-    "40200046": ("imor_vivienda",   100.0),
-    "40200019": ("imor_tarjeta",    100.0),
-    "40200034": ("roa",             100.0),
-    "40200002": ("roe",             100.0),
+    "40200017": ("imor_total",     100.0),
+    "40200033": ("imora_total",    100.0),
+    "40200096": ("icor_total",       1.0),
+    "40200018": ("imor_comercial", 100.0),
+    "40200056": ("imor_consumo",   100.0),
+    "40200046": ("imor_vivienda",  100.0),
+    "40200019": ("imor_tarjeta",   100.0),
+    "40200034": ("roa",            100.0),
+    "40200002": ("roe",            100.0),
 }
 
 # IMOR/IMORA fields bounded [0, 100%]; sentinel detection applies to all.
-IMOR_FIELDS = {"imor_total", "imora_total", "imora_total_alt",
+IMOR_FIELDS = {"imor_total", "imora_total",
                "imor_comercial", "imor_consumo", "imor_vivienda", "imor_tarjeta"}
 
 # Aggregate entity IDs to exclude (sistema, grupos, no individuales)
@@ -136,7 +134,7 @@ def parse_sh_datos_40() -> dict:
                 data[entidad] = {}
             if periodo_iso not in data[entidad]:
                 data[entidad][periodo_iso] = {f: None for f in (
-                    "imor_total", "imora_total", "imora_total_alt", "icor_total",
+                    "imor_total", "imora_total", "icor_total",
                     "imor_comercial", "imor_consumo", "imor_vivienda", "imor_tarjeta",
                     "roa", "roe",
                 )}
@@ -191,7 +189,6 @@ def build_output(raw_data: dict, catalogue: dict) -> dict:
 
         imor_total      = arr(periodos, "imor_total")
         imora_total     = arr(periodos, "imora_total")
-        imora_total_alt = arr(periodos, "imora_total_alt")
         icor_total      = arr(periodos, "icor_total")
         imor_comercial  = arr(periodos, "imor_comercial")
         imor_consumo    = arr(periodos, "imor_consumo")
@@ -223,10 +220,6 @@ def build_output(raw_data: dict, catalogue: dict) -> dict:
             entry["imor_vivienda"] = imor_vivienda
         if any(v is not None for v in imor_tarjeta):
             entry["imor_tarjeta"] = imor_tarjeta
-
-        # IMORA alternative concept (40200084) — only emit if different from 40200033
-        if any(v is not None for v in imora_total_alt):
-            entry["imora_total_alt"] = imora_total_alt
 
         # Rentabilidad
         if any(v is not None for v in roa):

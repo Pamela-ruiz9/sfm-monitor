@@ -119,7 +119,6 @@ const HistoricoBancoEntrySchema = z.object({
   id: z.string(),
   imor_total:      z.array(z.number().nullable()),
   imora_total:     z.array(z.number().nullable()).optional(),
-  imora_total_alt: z.array(z.number().nullable()).optional(),
   icor_total:      z.array(z.number().nullable()).optional(),
   // Cartera breakdown — present only for banks that report segment data
   imor_comercial:  z.array(z.number().nullable()).optional(),
