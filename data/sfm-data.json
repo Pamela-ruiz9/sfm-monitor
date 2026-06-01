@@ -4238,6 +4238,136 @@
           "valor": 2.4588
         }
       ]
+    },
+    "remesas": {
+      "actual": null,
+      "fecha": null,
+      "historico": []
+    },
+    "informalidad": {
+      "actual": 33.5394,
+      "fecha": "2026-04",
+      "historico": [
+        {
+          "fecha": "2024-05",
+          "valor": 29.8174
+        },
+        {
+          "fecha": "2024-06",
+          "valor": 30.3396
+        },
+        {
+          "fecha": "2024-07",
+          "valor": 28.5241
+        },
+        {
+          "fecha": "2024-08",
+          "valor": 29.0865
+        },
+        {
+          "fecha": "2024-09",
+          "valor": 27.4062
+        },
+        {
+          "fecha": "2024-10",
+          "valor": 27.4096
+        },
+        {
+          "fecha": "2024-11",
+          "valor": 26.4876
+        },
+        {
+          "fecha": "2024-12",
+          "valor": 27.9462
+        },
+        {
+          "fecha": "2025-01",
+          "valor": 29.4499
+        },
+        {
+          "fecha": "2025-02",
+          "valor": 31.2608
+        },
+        {
+          "fecha": "2025-03",
+          "valor": 30.0941
+        },
+        {
+          "fecha": "2025-04",
+          "valor": 28.8104
+        },
+        {
+          "fecha": "2025-05",
+          "valor": 28.0619
+        },
+        {
+          "fecha": "2025-06",
+          "valor": 29.3409
+        },
+        {
+          "fecha": "2025-07",
+          "valor": 29.4476
+        },
+        {
+          "fecha": "2025-08",
+          "valor": 29.5594
+        },
+        {
+          "fecha": "2025-09",
+          "valor": 30.3179
+        },
+        {
+          "fecha": "2025-10",
+          "valor": 30.3269
+        },
+        {
+          "fecha": "2025-11",
+          "valor": 30.3522
+        },
+        {
+          "fecha": "2025-12",
+          "valor": 31.6498
+        },
+        {
+          "fecha": "2026-01",
+          "valor": 35.5282
+        },
+        {
+          "fecha": "2026-02",
+          "valor": 34.7658
+        },
+        {
+          "fecha": "2026-03",
+          "valor": 36.1544
+        },
+        {
+          "fecha": "2026-04",
+          "valor": 33.5394
+        }
+      ]
+    },
+    "exportaciones": {
+      "actual": null,
+      "fecha": null,
+      "historico": []
+    },
+    "importaciones": {
+      "actual": null,
+      "fecha": null,
+      "historico": []
+    },
+    "inversion_fija": {
+      "actual": null,
+      "fecha": null,
+      "historico": []
+    },
+    "tasa_real_banxico": {
+      "actual": 2.05,
+      "fecha": "2026-05-08"
+    },
+    "tasa_real_cetes": {
+      "actual": 1.93,
+      "fecha": "2026-05-26"
     }
   },
   "credito": {
