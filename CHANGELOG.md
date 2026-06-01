@@ -12,6 +12,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(#98): MetricInfo — acordeón colapsable con fórmula e interpretación por métrica (2026-05-31)
+- `app/src/components/chrome/MetricInfo.astro`: componente `<details>/<summary>` HTML nativo (sin JS); muestra definición, fórmula, rango de referencia y fuente; colapsado por defecto; compatible mobile
+- `app/src/components/chrome/Section.astro`: nueva prop `metricSlug?: string` que monta `MetricInfo` entre el encabezado y la tarjeta de la gráfica
+- `app/src/data/glossary.ts`: se añaden campos `formula`, `threshold`, `source` a `GlossaryEntry`; entradas expandidas para IMOR, IMORA, ICOR, ICAP, IFRS 9, TIIE, Cetes, FIX, ROA, ROE, SoFiPO con fórmulas exactas y referencias regulatorias (CUB, CNBV, IASB)
+- `instituciones.astro`: `metricSlug` añadido a las secciones IMOR, IMORA, ICOR, ROA/ROE, IFRS 9 y SoFiPOs IMOR
+
 ### fix(#93/#101/#102): ICOR escala por banco + Tasa Banxico unificada + Cetes 2 años (2026-05-31)
 - `IcorChart.tsx` (#93): vista "por banco" ahora limita display a ×20 (cap duro en Y-axis); tooltip muestra valor real con nota "escala limitada a ×20" cuando el banco tiene cobertura extrema (ej. Accendo 5M×, Revolut 1572×); vista Sistema mantiene `suggestedMax: 3.5`
 - `ActiveIndicatorChart.tsx` (#101): clic en KpiCard "Tasa Banxico" ahora muestra `MercadoDineroChart` (TIIE + Cetes + Banxico juntas) en lugar del `TasaBanxicoChart` standalone — elimina la duplicación reportada

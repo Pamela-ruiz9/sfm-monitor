@@ -278,6 +278,7 @@ const top15 = [...ents]
         title="IMOR por banco / cartera"
         description="Vista Sistema o por banco individual. Selecciona cartera: total, comercial, consumo, vivienda, tarjeta o consumo no revolvente."
         source="CNBV Sector 40 (Banca Múltiple)"
+        metricSlug="imor"
         tone="gold">
         <p class="text-xs text-[--color-text-mute] mb-3">
           <MetricTooltip slug="imor" client:visible>IMOR</MetricTooltip>: indice de morosidad — cartera vencida / cartera total.
@@ -309,6 +310,7 @@ const top15 = [...ents]
         title="IMORA — Índice de Morosidad Ajustado"
         description="Incluye cartera vencida más castigos contables acumulados en los últimos 12 meses."
         source="CNBV Sector 40"
+        metricSlug="imora"
         tone="yellow">
         <ImoraChart fechas={hpc.fechas} values={hpc.imora_total} bancos={bancosImoraArr} client:visible />
       </Section>
@@ -319,6 +321,7 @@ const top15 = [...ents]
         title="ICOR — Índice de Cobertura"
         description="Razón entre reservas preventivas y cartera vencida. Un valor > 1 indica cobertura igual o superior al 100%."
         source="CNBV Sector 40"
+        metricSlug="icor"
         tone="green">
         <IcorChart fechas={hpc.fechas} values={hpc.icor_total} bancos={bancosIcorArr} client:visible />
       </Section>
@@ -329,6 +332,7 @@ const top15 = [...ents]
         title="ROA y ROE"
         description="Retorno sobre activos (eje izquierdo) y retorno sobre capital (eje derecho). Banca Múltiple consolidado."
         source="CNBV Sector 40"
+        metricSlug="roa"
         tone="green">
         <RoaRoeChart fechas={hpc.fechas} roa={hpc.roa} roe={hpc.roe} client:visible />
       </Section>
@@ -339,6 +343,7 @@ const top15 = [...ents]
         title="IFRS 9 — Stages 1/2/3"
         description="Distribución porcentual de la cartera por stage de riesgo crediticio. Stage 1: riesgo bajo; Stage 2: aumento significativo; Stage 3: deteriorada."
         source="CNBV Reporte R12A"
+        metricSlug="ifrs9"
         tone="yellow">
         {ifrs.ultima && (
           <div class="grid grid-cols-3 gap-3 mb-4">
@@ -420,6 +425,7 @@ const top15 = [...ents]
         title="IMOR por cartera"
         description="Índice de Morosidad por tipo de cartera. Vivienda supera sistemáticamente el 25%."
         source="CNBV Sector 27 (SoFiPOs)"
+        metricSlug="imor"
         tone="yellow">
         <SofiposSegmentChart
           fechas={s.fechas}
