@@ -63,8 +63,7 @@ jobs:
               if dato_str in ("N/E", "N/A", "", None):
                   return None
               try:
-                  val = float(str(dato_str).replace(",", ""))
-                  return val if val != 0 else None
+                  return float(str(dato_str).replace(",", ""))
               except (ValueError, TypeError):
                   return None
 
@@ -151,7 +150,10 @@ jobs:
           udis_actual = next((x for x in reversed(udis_data) if x["dato"] not in ("N/E", None)), None)
 
           # 8. Salario mínimo general (SF60628) — por cambio
+          # DIAGNÓSTICO: si actual sigue en None/0 verificar la serie en BIE
+          # Alternativas conocidas: SR16734, SL11298
           salmin_data = safe_fetch("SF60628", "2010-01-01")
+          print(f"  SF60628 raw entries: {len(salmin_data)}, muestra: {salmin_data[:3] if salmin_data else 'vacío'}")
           salmin_changes = []
           prev = None
           for x in salmin_data:
@@ -161,6 +163,7 @@ jobs:
               if x["dato"] != prev:
                   salmin_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": val})
                   prev = x["dato"]
+          print(f"{'✅' if salmin_changes else '⚠️ '} Salario mínimo: {salmin_changes[-1]['valor'] if salmin_changes else 'N/D'} ({salmin_changes[-1]['fecha'] if salmin_changes else 'serie SF60628 sin datos válidos — verificar ID'})")
 
           # 9. Remesas familiares (SE67516 — USD millones, mensual)
           # Si falla: buscar "Ingresos por remesas" en Banxico SIE y actualizar clave
