@@ -246,15 +246,29 @@ const MercadoSchema = z.object({
 const MacroSerieSchema = z.object({
   actual: z.number().nullable(),
   fecha: z.string().nullable(),
+  variacion_anual: z.number().nullable().optional(),
   unidad: z.string().optional(),
   historico: z.array(z.object({ fecha: z.string(), valor: z.number() })).optional(),
 });
 
+const MacroKpiSchema = z.object({
+  actual: z.number().nullable(),
+  fecha: z.string().nullable(),
+});
+
 const MacroSchema = z.object({
-  igae: MacroSerieSchema.optional(),       // Índice General de Actividad Económica (mensual)
-  pib: MacroSerieSchema.optional(),        // PIB trimestral (base 2018)
-  salario_minimo_real: MacroSerieSchema.optional(), // Salario mínimo real (poder adquisitivo)
-  imss_salario_promedio: MacroSerieSchema.optional(), // Salario promedio IMSS
+  igae: MacroSerieSchema.optional(),
+  pib: MacroSerieSchema.optional(),
+  desempleo: MacroSerieSchema.optional(),
+  remesas: MacroSerieSchema.optional(),           // Banxico SE67516 — USD millones mensual
+  informalidad: MacroSerieSchema.optional(),      // INEGI ENOE 444779 — % informalidad laboral
+  exportaciones: MacroSerieSchema.optional(),     // INEGI 471584 — exportaciones totales
+  importaciones: MacroSerieSchema.optional(),     // INEGI 471588 — importaciones totales
+  inversion_fija: MacroSerieSchema.optional(),    // INEGI 462219 — IFB var. anual
+  tasa_real_banxico: MacroKpiSchema.optional(),   // derivada: tasa objetivo − inflación general
+  tasa_real_cetes: MacroKpiSchema.optional(),     // derivada: cetes 28d − inflación general
+  salario_minimo_real: MacroSerieSchema.optional(),
+  imss_salario_promedio: MacroSerieSchema.optional(),
 });
 
 // ---------- root ----------

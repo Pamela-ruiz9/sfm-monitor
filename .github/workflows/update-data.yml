@@ -50,6 +50,24 @@ jobs:
                   d = json.loads(r.read())
               return d["bmx"]["series"][0]["datos"]
 
+          def safe_fetch(series_id, start, end=None):
+              """Como fetch() pero retorna [] en lugar de lanzar excepción."""
+              try:
+                  return fetch(series_id, start, end)
+              except Exception as e:
+                  print(f"⚠️  Banxico serie {series_id} error: {e}")
+                  return []
+
+          def parse_dato(dato_str):
+              """Convierte string Banxico a float; retorna None si es N/E o inválido."""
+              if dato_str in ("N/E", "N/A", "", None):
+                  return None
+              try:
+                  val = float(str(dato_str).replace(",", ""))
+                  return val if val != 0 else None
+              except (ValueError, TypeError):
+                  return None
+
           today = date.today().strftime("%Y-%m-%d")
           start_18m = (date.today() - timedelta(days=548)).strftime("%Y-%m-%d")
           start_3y = (date.today() - timedelta(days=1095)).strftime("%Y-%m-%d")
@@ -133,13 +151,33 @@ jobs:
           udis_actual = next((x for x in reversed(udis_data) if x["dato"] not in ("N/E", None)), None)
 
           # 8. Salario mínimo general (SF60628) — por cambio
-          salmin_data = fetch("SF60628", "2010-01-01")
+          salmin_data = safe_fetch("SF60628", "2010-01-01")
           salmin_changes = []
           prev = None
           for x in salmin_data:
+              val = parse_dato(x.get("dato"))
+              if val is None:
+                  continue
               if x["dato"] != prev:
-                  salmin_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": float(x["dato"])})
+                  salmin_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": val})
                   prev = x["dato"]
+
+          # 9. Remesas familiares (SE67516 — USD millones, mensual)
+          # Si falla: buscar "Ingresos por remesas" en Banxico SIE y actualizar clave
+          remesas_raw = safe_fetch("SE67516", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))
+          remesas_macro = []
+          for x in remesas_raw:
+              val = parse_dato(x.get("dato"))
+              fecha = banxico_to_iso(x.get("fecha", ""))
+              if val is not None and fecha:
+                  remesas_macro.append({"fecha": fecha[:7], "valor": val})
+
+          # 10. Tasas reales (derivadas — sin llamada a API adicional)
+          tasa_actual  = float(tasa_changes[-1]["dato"]) if tasa_changes else None
+          cetes_actual = cetes_series[-1]["valor"]       if cetes_series else None
+          infl_actual  = infl_anual[-1]["var_anual"]     if infl_anual  else None
+          tasa_real_banxico_val = round(tasa_actual  - infl_actual, 4) if tasa_actual  is not None and infl_actual is not None else None
+          tasa_real_cetes_val   = round(cetes_actual - infl_actual, 4) if cetes_actual is not None and infl_actual is not None else None
 
           # 9 & 10. IGAE + PIB + Desocupación — INEGI BIE API
           # Series confirmadas (mayo 2026):
@@ -207,6 +245,42 @@ jobs:
           igae_var_anual = igae_latest["valor"] if igae_latest else None
           pib_var_anual = pib_latest["valor"] if pib_latest else None
 
+          # Tasa de informalidad laboral — ENOE (444779)
+          # TODO: verificar clave BIE si retorna vacío
+          informalidad_obs = fetch_inegi("444779")
+          informalidad_series = [
+              {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
+              for o in informalidad_obs if o.get("OBS_VALUE") not in (None, "")
+          ]
+          informalidad_latest = informalidad_series[-1] if informalidad_series else None
+
+          # Exportaciones totales FOB — INEGI (471584)
+          # TODO: verificar clave BIE si retorna vacío
+          export_obs = fetch_inegi("471584")
+          export_series = [
+              {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
+              for o in export_obs if o.get("OBS_VALUE") not in (None, "")
+          ]
+          export_latest = export_series[-1] if export_series else None
+
+          # Importaciones totales CIF — INEGI (471588)
+          # TODO: verificar clave BIE si retorna vacío
+          import_obs = fetch_inegi("471588")
+          import_series = [
+              {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
+              for o in import_obs if o.get("OBS_VALUE") not in (None, "")
+          ]
+          import_latest = import_series[-1] if import_series else None
+
+          # Inversión Fija Bruta var. anual — INEGI (462219)
+          # TODO: verificar clave BIE si retorna vacío
+          ifb_obs = fetch_inegi("462219")
+          ifb_series = [
+              {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
+              for o in ifb_obs if o.get("OBS_VALUE") not in (None, "")
+          ]
+          ifb_latest = ifb_series[-1] if ifb_series else None
+
           # Build JSON
           data = {
               "ultima_actualizacion": date.today().strftime("%Y-%m-%d"),
@@ -266,26 +340,63 @@ jobs:
                   "actual": igae_latest["valor"] if igae_latest else None,
                   "fecha":  igae_latest["fecha"] if igae_latest else None,
                   "variacion_anual": igae_var_anual,
-                  "historico": igae_series[-36:]  # últimos 3 años, serie 737370
+                  "historico": igae_series[-36:]
               },
               "pib": {
                   "actual": pib_latest["valor"] if pib_latest else None,
                   "fecha":  pib_latest["fecha"] if pib_latest else None,
                   "variacion_anual": pib_var_anual,
-                  "historico": pib_series[-20:]  # últimos 5 años trimestral
+                  "historico": pib_series[-20:]
               },
               "desempleo": {
                   "actual": desoc_latest["valor"] if desoc_latest else None,
                   "fecha":  desoc_latest["fecha"] if desoc_latest else None,
-                  "historico": desoc_series[-24:]  # últimos 2 años
-              }
+                  "historico": desoc_series[-24:]
+              },
+              "remesas": {
+                  "actual": remesas_macro[-1]["valor"] if remesas_macro else None,
+                  "fecha":  remesas_macro[-1]["fecha"] if remesas_macro else None,
+                  "historico": remesas_macro[-24:]
+              },
+              "informalidad": {
+                  "actual": informalidad_latest["valor"] if informalidad_latest else None,
+                  "fecha":  informalidad_latest["fecha"] if informalidad_latest else None,
+                  "historico": informalidad_series[-24:]
+              },
+              "exportaciones": {
+                  "actual": export_latest["valor"] if export_latest else None,
+                  "fecha":  export_latest["fecha"] if export_latest else None,
+                  "historico": export_series[-24:]
+              },
+              "importaciones": {
+                  "actual": import_latest["valor"] if import_latest else None,
+                  "fecha":  import_latest["fecha"] if import_latest else None,
+                  "historico": import_series[-24:]
+              },
+              "inversion_fija": {
+                  "actual": ifb_latest["valor"] if ifb_latest else None,
+                  "fecha":  ifb_latest["fecha"] if ifb_latest else None,
+                  "historico": ifb_series[-24:]
+              },
+              "tasa_real_banxico": {
+                  "actual": tasa_real_banxico_val,
+                  "fecha":  banxico_to_iso(tasa_changes[-1]["fecha"]) if tasa_changes else None,
+              },
+              "tasa_real_cetes": {
+                  "actual": tasa_real_cetes_val,
+                  "fecha":  cetes_series[-1]["fecha"] if cetes_series else None,
+              },
           }
 
           print(f"✅ IGAE var. anual: {igae_var_anual}% ({igae_latest['fecha'] if igae_latest else 'N/D'})")
           print(f"✅ PIB var. anual: {pib_var_anual}% ({pib_latest['fecha'] if pib_latest else 'N/D'})")
           print(f"✅ Desocupación: {desoc_latest['valor'] if desoc_latest else 'N/D'}% ({desoc_latest['fecha'] if desoc_latest else 'N/D'})")
-          if not igae_series:
-              print("⏭️  IGAE: pendiente clave actualizada INEGI dic-2025")
+          print(f"{'✅' if remesas_macro else '⚠️ '} Remesas: {remesas_macro[-1]['valor'] if remesas_macro else 'N/D'} MUSD ({remesas_macro[-1]['fecha'] if remesas_macro else 'verificar SE67516'})")
+          print(f"{'✅' if informalidad_latest else '⚠️ '} Informalidad: {informalidad_latest['valor'] if informalidad_latest else 'N/D'}% (verificar clave 444779)")
+          print(f"{'✅' if export_latest else '⚠️ '} Exportaciones: {export_latest['valor'] if export_latest else 'N/D'} (verificar clave 471584)")
+          print(f"{'✅' if import_latest else '⚠️ '} Importaciones: {import_latest['valor'] if import_latest else 'N/D'} (verificar clave 471588)")
+          print(f"{'✅' if ifb_latest else '⚠️ '} IFB: {ifb_latest['valor'] if ifb_latest else 'N/D'} (verificar clave 462219)")
+          print(f"✅ Tasa real Banxico: {tasa_real_banxico_val}pp | Tasa real Cetes: {tasa_real_cetes_val}pp")
 
           os.makedirs("data", exist_ok=True)
           with open("data/sfm-data.json", "w") as f:
