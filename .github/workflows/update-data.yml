@@ -82,20 +82,27 @@ jobs:
                   tasa_changes.append(x)
                   prev = x["dato"]
 
-          # 3. Inflación anual calculada del INPC (SP74625)
-          inpc_data = fetch("SP74625", (date.today() - timedelta(days=760)).strftime("%Y-%m-%d"))
-          infl_anual = []
-          for i in range(len(inpc_data)):
-              d_now = inpc_data[i]["fecha"]
-              parts = d_now.split("/")
-              fecha_prev = f"{parts[0]}/{parts[1]}/{int(parts[2])-1}"
-              for j in range(len(inpc_data)):
-                  if inpc_data[j]["fecha"] == fecha_prev:
-                      v = float(inpc_data[i]["dato"])
-                      vp = float(inpc_data[j]["dato"])
-                      pct = round((v - vp) / vp * 100, 2)
-                      infl_anual.append({"fecha": d_now, "var_anual": pct})
-                      break
+          # Helper: year-over-year % change from monthly price index (DD/MM/YYYY dates)
+          def calc_yoy(index_data):
+              yoy = []
+              for i in range(len(index_data)):
+                  d_now = index_data[i]["fecha"]
+                  parts = d_now.split("/")
+                  fecha_prev = f"{parts[0]}/{parts[1]}/{int(parts[2])-1}"
+                  for j in range(len(index_data)):
+                      if index_data[j]["fecha"] == fecha_prev:
+                          v  = float(index_data[i]["dato"])
+                          vp = float(index_data[j]["dato"])
+                          yoy.append({"fecha": d_now, "var_anual": round((v - vp) / vp * 100, 2)})
+                          break
+              return yoy
+
+          # 3. Inflación: general SP1, subyacente SP74625, no subyacente SP74627
+          # Nota: SP74625 era incorrecto como proxy del INPC general — se corrige a SP1
+          infl_window = (date.today() - timedelta(days=760)).strftime("%Y-%m-%d")
+          infl_anual   = calc_yoy(fetch("SP1",     infl_window))
+          infl_sub     = calc_yoy(fetch("SP74625", infl_window))
+          infl_nosub   = calc_yoy(fetch("SP74627", infl_window))
 
           # 4. Reservas internacionales (SF43707) — semanal, últimas 52 semanas
           reservas_data = fetch("SF43707", (date.today() - timedelta(days=365)).strftime("%Y-%m-%d"))
@@ -206,7 +213,7 @@ jobs:
               "fuentes": {
                   "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
                   "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
-                  "inflacion": "Banxico SIE SP74625 - INPC variación anual calculada"
+                  "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
               },
               "tipo_cambio": {
                   "actual": fx_series[-1][1]["dato"],
@@ -221,7 +228,9 @@ jobs:
               "inflacion": {
                   "actual": infl_anual[-1]["var_anual"] if infl_anual else None,
                   "fecha": banxico_to_iso(infl_anual[-1]["fecha"]) if infl_anual else None,
-                  "historico_mensual": [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_anual[-24:]]
+                  "historico_mensual":      [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_anual[-24:]],
+                  "subyacente_mensual":     [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_sub[-24:]],
+                  "no_subyacente_mensual":  [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_nosub[-24:]]
               }
           }
 
@@ -284,7 +293,11 @@ jobs:
 
           print(f"✅ FX: {data['tipo_cambio']['actual']} ({data['tipo_cambio']['fecha']})")
           print(f"✅ Tasa: {data['tasa_banxico']['actual']}% ({data['tasa_banxico']['fecha']})")
-          print(f"✅ Inflación: {data['inflacion']['actual']}% ({data['inflacion']['fecha']})")
+          print(f"✅ Inflación general: {data['inflacion']['actual']}% ({data['inflacion']['fecha']})")
+          if infl_sub:
+              print(f"✅ Inflación subyacente: {infl_sub[-1]['var_anual']}% ({banxico_to_iso(infl_sub[-1]['fecha'])})")
+          if infl_nosub:
+              print(f"✅ Inflación no subyacente: {infl_nosub[-1]['var_anual']}% ({banxico_to_iso(infl_nosub[-1]['fecha'])})")
           PYEOF
 
       - name: Setup Node.js for schema validation

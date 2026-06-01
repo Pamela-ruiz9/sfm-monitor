@@ -12,6 +12,14 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(inflacion): desagregación subyacente/no subyacente + fix serie general (2026-06-01)
+- `update-data.yml`: corrige bug — la inflación "general" usaba SP74625 (subyacente); ahora usa SP1 (INPC general, base 2018). Agrega subyacente (SP74625) y no subyacente (SP74627) como series paralelas con helper `calc_yoy()`. Ambas se emiten en `inflacion.subyacente_mensual` y `inflacion.no_subyacente_mensual` (últimos 24 meses). Actualiza `fuentes.inflacion` y prints de diagnóstico.
+- `app/src/data/schema.ts`: `InflacionSchema` extiende con `subyacente_mensual` y `no_subyacente_mensual` opcionales (backward-compatible).
+- `InflacionChart.tsx`: props opcionales `subyacente` y `noSubyacente`; cuando presentes muestra 3 líneas — general (ámbar sólido), subyacente (azul Okabe punteado), no subyacente (naranja punteado).
+- `ActiveIndicatorChart.tsx`: pasa `inflacionSubyacente` e `inflacionNoSubyacente` al chart.
+- `index.astro`: pasa `data.inflacion.subyacente_mensual` y `data.inflacion.no_subyacente_mensual` al componente.
+- `astro.config.ts`: `maximumFileSizeToCacheInBytes` sube a 5 MiB — `instituciones/index.html` supera el límite por defecto (2 MiB) con los datos CNBV inlineados.
+
 ### feat(#96 paso-2): UI cartera × banco/entidad — pivot en gráficas (2026-06-01)
 - `ImorSegPivotChart.tsx`: vista "por banco" usa los nuevos campos `imor_comercial`, `imor_consumo`, `imor_vivienda`, `imor_tarjeta`; muestra `"(sin datos)"` en el label cuando el banco no reporta esa cartera; `changeView('entidad')` ya no resetea cartera innecesariamente
 - `RoaRoeChart.tsx`: añade prop `bancos?: BancoPivot[]`; pills "Sistema" / "Por banco" + selector de banco cuando hay datos; datasets ROA/ROE etiquetados con `· Sistema` o `· NombreBanco`

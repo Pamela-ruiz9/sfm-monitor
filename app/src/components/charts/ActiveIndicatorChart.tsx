@@ -30,6 +30,8 @@ export interface ActiveIndicatorChartProps {
   fxSeries: MonthlyPointT[];
   tasaSeries: RatePoint[];
   inflacionSeries: InflPt[];
+  inflacionSubyacente?: InflPt[] | undefined;
+  inflacionNoSubyacente?: InflPt[] | undefined;
   tiieHist: RatePoint[];
   cetesHist: RatePoint[];
   banxicoHist: RatePoint[];
@@ -118,6 +120,8 @@ export function ActiveIndicatorChart({
   fxSeries,
   tasaSeries,
   inflacionSeries,
+  inflacionSubyacente,
+  inflacionNoSubyacente,
   tiieHist,
   cetesHist,
   banxicoHist,
@@ -150,7 +154,7 @@ export function ActiveIndicatorChart({
       case 'tasa':
         return <MercadoDineroChart tiie={tiieHist} cetes={cetesHist} banxico={banxicoHist} />;
       case 'inflacion':
-        return <InflacionChart series={inflacionSeries} />;
+        return <InflacionChart series={inflacionSeries} subyacente={inflacionSubyacente} noSubyacente={inflacionNoSubyacente} />;
       case 'tiie':
       case 'cetes':
       case 'spread-tiie-cetes':

@@ -68,6 +68,8 @@ const InflacionSchema = z.object({
   actual: NumericString,
   fecha: LooseDate,
   historico_mensual: z.array(InflacionPoint),
+  subyacente_mensual: z.array(InflacionPoint).optional(),
+  no_subyacente_mensual: z.array(InflacionPoint).optional(),
 });
 
 const CrisisPoint = z.looseObject({

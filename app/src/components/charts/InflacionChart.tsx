@@ -21,6 +21,8 @@ interface InflacionPoint {
 
 interface Props {
   series: InflacionPoint[];
+  subyacente?: InflacionPoint[] | undefined;
+  noSubyacente?: InflacionPoint[] | undefined;
   /** Banxico target inflation (default 3.0%). */
   target?: number;
   /** Tolerance band around target (default ±1pp = 2-4%). */
@@ -41,35 +43,66 @@ function filterInflacionByRange(
   return sorted.filter((p) => new Date(`${p.mes}-15`) >= cutoff);
 }
 
+function toPoints(pts: InflacionPoint[], range: RangeValue) {
+  return filterInflacionByRange(pts, range)
+    .slice()
+    .sort((a, b) => a.mes.localeCompare(b.mes))
+    .map((p) => ({ x: `${p.mes}-15`, y: p.valor }));
+}
+
 export function InflacionChart({
   series,
+  subyacente,
+  noSubyacente,
   target = 3.0,
   band = 1.0,
 }: Props) {
   const [range, setRange] = useState<RangeValue>('all');
 
-  const filtered = filterInflacionByRange(series, range);
-  const points = filtered
-    .slice()
-    .sort((a, b) => a.mes.localeCompare(b.mes))
-    .map((p) => ({ x: `${p.mes}-15`, y: p.valor }));
+  const points      = toPoints(series, range);
+  const ptsSub      = subyacente    ? toPoints(subyacente, range)    : null;
+  const ptsNoSub    = noSubyacente  ? toPoints(noSubyacente, range)  : null;
   const xMin = points.length > 0 ? points[0]!.x : undefined;
 
-  const data = {
-    datasets: [
-      {
-        label: 'Inflación anual (INPC)',
-        data: points,
-        borderColor: '#f59e0b',
-        backgroundColor: 'rgba(245, 158, 11, 0.1)',
-        fill: false,
-        tension: 0.2,
-        pointRadius: 0,
-        pointHoverRadius: 4,
-        borderWidth: 2,
-      },
-    ],
-  };
+  const datasets = [
+    {
+      label: 'INPC general',
+      data: points,
+      borderColor: '#f59e0b',
+      backgroundColor: 'rgba(245, 158, 11, 0.1)',
+      fill: false,
+      tension: 0.2,
+      pointRadius: 0,
+      pointHoverRadius: 4,
+      borderWidth: 2,
+    },
+    ...(ptsSub ? [{
+      label: 'Subyacente',
+      data: ptsSub,
+      borderColor: '#56B4E9',
+      backgroundColor: 'rgba(86, 180, 233, 0.08)',
+      fill: false,
+      tension: 0.2,
+      pointRadius: 0,
+      pointHoverRadius: 4,
+      borderWidth: 1.5,
+      borderDash: [4, 3] as number[],
+    }] : []),
+    ...(ptsNoSub ? [{
+      label: 'No subyacente',
+      data: ptsNoSub,
+      borderColor: '#E69F00',
+      backgroundColor: 'rgba(230, 159, 0, 0.08)',
+      fill: false,
+      tension: 0.2,
+      pointRadius: 0,
+      pointHoverRadius: 4,
+      borderWidth: 1.5,
+      borderDash: [2, 4] as number[],
+    }] : []),
+  ];
+
+  const data = { datasets };
 
   return (
     <ChartErrorBoundary chartName="Inflación INPC">
