@@ -11,6 +11,7 @@ import { InflacionChart } from '~/components/charts/InflacionChart';
 import { IgaeChart } from '~/components/charts/IgaeChart';
 import { PibChart } from '~/components/charts/PibChart';
 import { DesempleoChart } from '~/components/charts/DesempleoChart';
+import { InformalidadChart } from '~/components/charts/InformalidadChart';
 import { loadSfmData } from '~/data/loader';
 import { formatPct } from '~/lib/utils';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
@@ -30,11 +31,13 @@ const inflacionHistorica =
 const inflacionActual = Number(data.inflacion.actual);
 const inflacionFecha  = data.inflacion.fecha;
 
-const macro      = data.macro ?? {};
-const igae       = macro.igae       ?? null;
-const pib        = macro.pib        ?? null;
-const desempleo  = macro.desempleo  ?? null;
-const tasaReal   = macro.tasa_real_banxico ?? null;
+const macro          = data.macro ?? {};
+const igae           = macro.igae              ?? null;
+const pib            = macro.pib               ?? null;
+const desempleo      = macro.desempleo         ?? null;
+const informalidad   = macro.informalidad      ?? null;
+const tasaReal       = macro.tasa_real_banxico ?? null;
+const tasaRealCetes  = macro.tasa_real_cetes   ?? null;
 ---
 
 <Layout
@@ -107,6 +110,17 @@ const tasaReal   = macro.tasa_real_banxico ?? null;
           iconName="Percent"
           tone={tasaReal.actual >= 2 ? 'green' : tasaReal.actual >= 0 ? 'yellow' : 'red'}
           indicatorId="tasa_real_banxico"
+          client:visible
+        />
+      )}
+      {tasaRealCetes?.actual != null && (
+        <KpiCard
+          label="Tasa real Cetes 28d"
+          value={`${tasaRealCetes.actual >= 0 ? '+' : ''}${tasaRealCetes.actual.toFixed(2)}pp`}
+          {...(tasaRealCetes.fecha ? { asOf: tasaRealCetes.fecha } : {})}
+          iconName="Percent"
+          tone={tasaRealCetes.actual >= 2 ? 'green' : tasaRealCetes.actual >= 0 ? 'yellow' : 'red'}
+          indicatorId="tasa_real_cetes"
           client:visible
         />
       )}
@@ -193,6 +207,20 @@ const tasaReal   = macro.tasa_real_banxico ?? null;
         refCode="444774"
         tone="gold">
         <DesempleoChart series={desempleo.historico} client:visible />
+      </Section>
+    ) : null}
+
+    <!-- ── Informalidad ── -->
+    {informalidad?.historico?.length ? (
+      <Section
+        id="informalidad"
+        eyebrow="Mercado laboral"
+        title="Tasa de informalidad laboral"
+        description="Porcentaje de la PEA en empleo informal (ENOE, mensual). Nota: pendiente de verificar sub-índice exacto de la serie 444779 (issue #106)."
+        source="INEGI ENOE, serie 444779"
+        refCode="444779"
+        tone="gold">
+        <InformalidadChart series={informalidad.historico} client:visible />
       </Section>
     ) : null}
   </div>
