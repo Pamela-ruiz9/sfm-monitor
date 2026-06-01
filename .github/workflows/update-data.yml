@@ -114,8 +114,8 @@ jobs:
                   tiie_fondeo_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": float(x["dato"])})
                   prev = x["dato"]
 
-          # 6. Cetes 28d subasta primaria (SF60633) — semanal, último año
-          cetes_data = fetch("SF60633", (date.today() - timedelta(days=365)).strftime("%Y-%m-%d"))
+          # 6. Cetes 28d subasta primaria (SF60633) — semanal, últimos 2 años (mismo rango que TIIE/Banxico)
+          cetes_data = fetch("SF60633", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))
           cetes_series = [
               {"fecha": banxico_to_iso(x["fecha"]), "valor": round(float(x["dato"]), 4)}
               for x in cetes_data if x["dato"] not in ("N/E", None)

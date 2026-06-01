@@ -12,6 +12,11 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### fix(#93/#101/#102): ICOR escala por banco + Tasa Banxico unificada + Cetes 2 años (2026-05-31)
+- `IcorChart.tsx` (#93): vista "por banco" ahora limita display a ×20 (cap duro en Y-axis); tooltip muestra valor real con nota "escala limitada a ×20" cuando el banco tiene cobertura extrema (ej. Accendo 5M×, Revolut 1572×); vista Sistema mantiene `suggestedMax: 3.5`
+- `ActiveIndicatorChart.tsx` (#101): clic en KpiCard "Tasa Banxico" ahora muestra `MercadoDineroChart` (TIIE + Cetes + Banxico juntas) en lugar del `TasaBanxicoChart` standalone — elimina la duplicación reportada
+- `update-data.yml` (#101/#102): Cetes 28d extendido de 365d a 730d de historial (mismo rango que TIIE y Banxico); el eje temporal en `MercadoDineroChart` quedará homologado en la siguiente corrida del action
+
 ### fix(data): TIIE serie SF343410 → SF43783 + IMOR/IMORA sentinelas ≥100% → null (2026-05-31)
 - `update-data.yml`: cambia serie TIIE de SF343410 (retornaba ~17%, serie incorrecta) a SF43783 (TIIE 28d establecida); el dato en JSON se corregirá en la siguiente corrida del action
 - `scripts/normalize-imor-por-banco.py`: si `imor_total` o `imora_total` ≥ 100.0 después del multiplicador ×100, se guarda como `null`; el CNBV codifica periodos sin datos como raw=1.0, lo que producía valores centinela de exactamente 100% (afectaba HSBC, Scotiabank y ~15 bancos pequeños en 2003)

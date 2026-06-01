@@ -59,10 +59,10 @@ const META: Record<ChartIndicator, ChartMeta> = {
     tone: 'gold',
   },
   tasa: {
-    eyebrow: 'Política monetaria',
-    title: 'Tasa objetivo Banxico',
-    description: 'Decisiones de política monetaria — stepped, mantiene valor hasta la siguiente reunión de Junta de Gobierno.',
-    source: 'Banco de México, SIE, serie SF61745',
+    eyebrow: 'Tasas de referencia',
+    title: 'TIIE 28d · Cetes 28d · Tasa Banxico',
+    description: 'Tasa objetivo Banxico (stepped) junto con TIIE 28d y Cetes 28d — contexto completo de la política monetaria y el mercado de dinero.',
+    source: 'Banco de México, SIE · SF43783 (TIIE) · SF60633 (Cetes) · SF61745 (Banxico)',
     refCode: 'SF61745',
     tone: 'red',
   },
@@ -148,7 +148,7 @@ export function ActiveIndicatorChart({
       case 'fx':
         return <FXChart series={fxSeries} />;
       case 'tasa':
-        return <TasaBanxicoChart series={tasaSeries} />;
+        return <MercadoDineroChart tiie={tiieHist} cetes={cetesHist} banxico={banxicoHist} />;
       case 'inflacion':
         return <InflacionChart series={inflacionSeries} />;
       case 'tiie':

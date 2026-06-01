@@ -53,6 +53,13 @@ export function IcorChart({ fechas, values, bancos }: Props) {
     return { activeValues: values, activeLabel: 'ICOR Total' };
   }, [view, bancoId, bancosConDatos, values]);
 
+  // Banks with small non-performing portfolios produce extreme ICOR (e.g. 5M×).
+  // Cap display at 20× — still "extremely well covered"; tooltip shows real value.
+  const ICOR_CAP = 20;
+  const displayValues = view === 'banco'
+    ? activeValues.map((v) => (v !== null && v > ICOR_CAP ? ICOR_CAP : v))
+    : activeValues;
+
   const xMin = fechas.length > 0 ? `${fechas[0]}-01` : undefined;
 
   const chartData = {
@@ -60,7 +67,7 @@ export function IcorChart({ fechas, values, bancos }: Props) {
     datasets: [
       {
         label: activeLabel,
-        data: activeValues,
+        data: displayValues,
         borderColor: '#3fb950',
         backgroundColor: 'rgba(63, 185, 80, 0.1)',
         fill: true,
@@ -74,6 +81,7 @@ export function IcorChart({ fechas, values, bancos }: Props) {
   };
 
   const latest = activeValues[activeValues.length - 1];
+  const latestDisplay = displayValues[displayValues.length - 1];
 
   return (
     <ChartErrorBoundary chartName="ICOR">
@@ -110,6 +118,9 @@ export function IcorChart({ fechas, values, bancos }: Props) {
             </div>
             <div className="serif tabular text-2xl font-semibold text-[--color-green]">
               {latest != null ? `${(latest as number).toFixed(2)}×` : '—'}
+              {latest != null && (latest as number) > ICOR_CAP && (
+                <span className="text-xs text-[--color-text-mute] ml-1">(fuera de escala)</span>
+              )}
             </div>
           </div>
         )}
@@ -126,8 +137,14 @@ export function IcorChart({ fechas, values, bancos }: Props) {
                 tooltip: {
                   callbacks: {
                     label: (ctx) => {
-                      const y = ctx.parsed.y;
-                      return y == null ? '—' : `${y.toFixed(2)}× cobertura`;
+                      const displayY = ctx.parsed.y;
+                      if (displayY == null) return '—';
+                      const realY = activeValues[ctx.dataIndex];
+                      const clipped = realY != null && (realY as number) > ICOR_CAP;
+                      const val = clipped ? (realY as number) : displayY;
+                      return clipped
+                        ? `${val.toFixed(2)}× cobertura (escala limitada a ×${ICOR_CAP})`
+                        : `${val.toFixed(2)}× cobertura`;
                     },
                   },
                 },
@@ -167,6 +184,7 @@ export function IcorChart({ fechas, values, bancos }: Props) {
                 y: {
                   min: 0,
                   suggestedMax: 3.5,
+                  ...(view === 'banco' ? { max: ICOR_CAP } : {}),
                   ticks: {
                     color: '#94a3b8',
                     callback: (v) => `×${Number(v).toFixed(1)}`,
