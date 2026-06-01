@@ -3,7 +3,7 @@
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
-    "inflacion": "Banxico SIE SP74625 - INPC variación anual calculada"
+    "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
     "actual": "17.3780",
@@ -1638,9 +1638,66 @@
     ]
   },
   "inflacion": {
-    "actual": 4.26,
+    "actual": 4.45,
     "fecha": "2026-04-01",
     "historico_mensual": [
+      {
+        "mes": "2025-06",
+        "fecha": "2025-06-01",
+        "valor": 4.32
+      },
+      {
+        "mes": "2025-07",
+        "fecha": "2025-07-01",
+        "valor": 3.51
+      },
+      {
+        "mes": "2025-08",
+        "fecha": "2025-08-01",
+        "valor": 3.57
+      },
+      {
+        "mes": "2025-09",
+        "fecha": "2025-09-01",
+        "valor": 3.76
+      },
+      {
+        "mes": "2025-10",
+        "fecha": "2025-10-01",
+        "valor": 3.57
+      },
+      {
+        "mes": "2025-11",
+        "fecha": "2025-11-01",
+        "valor": 3.8
+      },
+      {
+        "mes": "2025-12",
+        "fecha": "2025-12-01",
+        "valor": 3.69
+      },
+      {
+        "mes": "2026-01",
+        "fecha": "2026-01-01",
+        "valor": 3.79
+      },
+      {
+        "mes": "2026-02",
+        "fecha": "2026-02-01",
+        "valor": 4.02
+      },
+      {
+        "mes": "2026-03",
+        "fecha": "2026-03-01",
+        "valor": 4.59
+      },
+      {
+        "mes": "2026-04",
+        "fecha": "2026-04-01",
+        "valor": 4.45
+      }
+    ],
+    "subyacente_mensual": [
       {
         "mes": "2025-06",
         "fecha": "2025-06-01",
@@ -1695,6 +1752,63 @@
         "mes": "2026-04",
         "fecha": "2026-04-01",
         "valor": 4.26
+      }
+    ],
+    "no_subyacente_mensual": [
+      {
+        "mes": "2025-06",
+        "fecha": "2025-06-01",
+        "valor": 3.03
+      },
+      {
+        "mes": "2025-07",
+        "fecha": "2025-07-01",
+        "valor": 3.06
+      },
+      {
+        "mes": "2025-08",
+        "fecha": "2025-08-01",
+        "valor": 3.11
+      },
+      {
+        "mes": "2025-09",
+        "fecha": "2025-09-01",
+        "valor": 3.21
+      },
+      {
+        "mes": "2025-10",
+        "fecha": "2025-10-01",
+        "valor": 3.15
+      },
+      {
+        "mes": "2025-11",
+        "fecha": "2025-11-01",
+        "valor": 3.77
+      },
+      {
+        "mes": "2025-12",
+        "fecha": "2025-12-01",
+        "valor": 3.51
+      },
+      {
+        "mes": "2026-01",
+        "fecha": "2026-01-01",
+        "valor": 3.22
+      },
+      {
+        "mes": "2026-02",
+        "fecha": "2026-02-01",
+        "valor": 3.13
+      },
+      {
+        "mes": "2026-03",
+        "fecha": "2026-03-01",
+        "valor": 3.18
+      },
+      {
+        "mes": "2026-04",
+        "fecha": "2026-04-01",
+        "valor": 2.82
       }
     ]
   },
