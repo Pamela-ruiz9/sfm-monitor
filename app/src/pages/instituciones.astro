@@ -37,7 +37,21 @@ const ifrs = data.ifrs9;
 const hpb = data.credito.historico_por_banco;
 
 const bancosArr = hpb
-  ? Object.values(hpb.bancos).map((b) => ({ id: b.id, nombre: b.nombre, imor_total: b.imor_total }))
+  ? Object.values(hpb.bancos).map((b) => ({
+      id: b.id,
+      nombre: b.nombre,
+      imor_total: b.imor_total,
+      ...(b.imor_comercial != null ? { imor_comercial: b.imor_comercial } : {}),
+      ...(b.imor_consumo   != null ? { imor_consumo:   b.imor_consumo   } : {}),
+      ...(b.imor_vivienda  != null ? { imor_vivienda:  b.imor_vivienda  } : {}),
+      ...(b.imor_tarjeta   != null ? { imor_tarjeta:   b.imor_tarjeta   } : {}),
+    }))
+  : [];
+
+const bancosRoaArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.roa?.some((v) => v !== null))
+      .map((b) => ({ id: b.id, nombre: b.nombre, roa: b.roa ?? [], roe: b.roe ?? [] }))
   : [];
 
 const bancosImoraArr = hpb
@@ -76,6 +90,10 @@ const pivotProps = {
     entidades: data.sofipos.historico_por_entidad
       ? Object.values(data.sofipos.historico_por_entidad.entidades).map((e) => ({
           id: e.id, nombre: e.nombre, imor: e.imor,
+          imora:          e.imora,
+          imor_comercial: e.imor_comercial,
+          imor_consumo:   e.imor_consumo,
+          imor_vivienda:  e.imor_vivienda,
         }))
       : [],
   },
@@ -115,7 +133,10 @@ const priorityIndex = (id: string) => {
 };
 
 const ents = Object.values(s.historico_por_entidad?.entidades ?? {}) as Array<{
-  id: string; nombre: string; imor: (number | null)[]; cartera_total?: number | null;
+  id: string; nombre: string; imor: (number | null)[];
+  imora?: (number | null)[];
+  imor_comercial?: (number | null)[]; imor_consumo?: (number | null)[]; imor_vivienda?: (number | null)[];
+  cartera_total?: number | null;
 }>;
 
 const top15 = [...ents]
@@ -334,7 +355,7 @@ const top15 = [...ents]
         source="CNBV Sector 40"
         metricSlug="roa"
         tone="green">
-        <RoaRoeChart fechas={hpc.fechas} roa={hpc.roa} roe={hpc.roe} client:visible />
+        <RoaRoeChart fechas={hpc.fechas} roa={hpc.roa} roe={hpc.roe} bancos={bancosRoaArr} client:visible />
       </Section>
 
       <Section

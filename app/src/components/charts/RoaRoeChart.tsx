@@ -1,12 +1,31 @@
+import { useState, useMemo } from 'react';
 import { Line } from 'react-chartjs-2';
 import { ChartErrorBoundary } from './ChartErrorBoundary';
+import { cn } from '~/lib/utils';
 import '~/components/charts/chartSetup';
 import { Chart as ChartJS } from 'chart.js';
 
+interface BancoPivot {
+  id: string;
+  nombre: string;
+  roa: (number | null)[];
+  roe: (number | null)[];
+}
+
 interface Props {
   fechas: string[];              // 'YYYY-MM'
-  roa: (number | null)[];        // %
-  roe: (number | null)[];        // %
+  roa: (number | null)[];        // % sistema
+  roe: (number | null)[];        // % sistema
+  bancos?: BancoPivot[];
+}
+
+function pillClass(active: boolean): string {
+  return cn(
+    'px-3 py-1 text-xs font-medium rounded-md border transition-colors whitespace-nowrap',
+    active
+      ? 'bg-[--color-gold-soft] text-[--color-gold] border-[--color-gold]/40'
+      : 'text-[--color-text-mute] border-[--color-border] hover:text-[--color-text-dim] hover:border-[--color-border-soft]',
+  );
 }
 
 const DEFAULT_CRISES = [
@@ -15,16 +34,32 @@ const DEFAULT_CRISES = [
   { start: '2020-03', end: '2020-06', label: 'COVID' },
 ] as const;
 
-export function RoaRoeChart({ fechas, roa, roe }: Props) {
+export function RoaRoeChart({ fechas, roa, roe, bancos }: Props) {
+  const bancosConDatos = useMemo(
+    () => (bancos ?? []).filter((b) => b.roa.some((v) => v !== null) || b.roe.some((v) => v !== null)),
+    [bancos],
+  );
+
+  const [view, setView] = useState<'sistema' | 'banco'>('sistema');
+  const [bancoId, setBancoId] = useState<string>(bancosConDatos[0]?.id ?? '');
+
+  const { activeRoa, activeRoe, activeLabel } = useMemo(() => {
+    if (view === 'banco' && bancosConDatos.length > 0) {
+      const banco = bancosConDatos.find((b) => b.id === bancoId) ?? bancosConDatos[0]!;
+      return { activeRoa: banco.roa, activeRoe: banco.roe, activeLabel: banco.nombre };
+    }
+    return { activeRoa: roa, activeRoe: roe, activeLabel: 'Sistema' };
+  }, [view, bancoId, bancosConDatos, roa, roe]);
+
   const labels = fechas.map((f) => `${f}-01`);
-  // Dynamic x-axis min: start at first available data point, not at crisis annotation dates
   const xMin = fechas.length > 0 ? `${fechas[0]}-01` : undefined;
+
   const data = {
     labels,
     datasets: [
       {
-        label: 'ROA',
-        data: roa,
+        label: `ROA · ${activeLabel}`,
+        data: activeRoa,
         borderColor: '#3fb950',
         backgroundColor: 'rgba(63, 185, 80, 0.08)',
         fill: false,
@@ -35,8 +70,8 @@ export function RoaRoeChart({ fechas, roa, roe }: Props) {
         yAxisID: 'y',
       },
       {
-        label: 'ROE',
-        data: roe,
+        label: `ROE · ${activeLabel}`,
+        data: activeRoe,
         borderColor: '#c4a35a',
         backgroundColor: 'rgba(196, 163, 90, 0.08)',
         fill: false,
@@ -51,6 +86,26 @@ export function RoaRoeChart({ fechas, roa, roe }: Props) {
 
   return (
     <ChartErrorBoundary chartName="ROA/ROE">
+      <div className="space-y-3">
+      {bancosConDatos.length > 0 && (
+        <div className="flex gap-2 flex-wrap">
+          <button onClick={() => setView('sistema')} className={pillClass(view === 'sistema')}>
+            Sistema
+          </button>
+          <button onClick={() => setView('banco')} className={pillClass(view === 'banco')}>
+            Por banco
+          </button>
+        </div>
+      )}
+      {view === 'banco' && bancosConDatos.length > 0 && (
+        <div className="flex gap-1.5 flex-wrap max-h-24 overflow-y-auto pb-1">
+          {bancosConDatos.map((b) => (
+            <button key={b.id} onClick={() => setBancoId(b.id)} className={pillClass(bancoId === b.id)}>
+              {b.nombre}
+            </button>
+          ))}
+        </div>
+      )}
       <div className="h-64 md:h-72 -mx-1">
         <Line
           data={data}
@@ -69,7 +124,7 @@ export function RoaRoeChart({ fechas, roa, roe }: Props) {
                 },
               },
               annotation: {
-                annotations: Object.fromEntries(
+                annotations: view === 'sistema' ? Object.fromEntries(
                   DEFAULT_CRISES.map((c, i) => [
                     `crisis-${i}`,
                     {
@@ -88,7 +143,7 @@ export function RoaRoeChart({ fechas, roa, roe }: Props) {
                       },
                     },
                   ]),
-                ),
+                ) : {},
               },
             },
             scales: {
@@ -125,6 +180,7 @@ export function RoaRoeChart({ fechas, roa, roe }: Props) {
             },
           }}
         />
+      </div>
       </div>
     </ChartErrorBoundary>
   );

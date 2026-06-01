@@ -20,6 +20,10 @@ const OKABE_ITO = [
 interface Entidad {
   nombre: string;
   imor: (number | null)[];
+  imora?: (number | null)[];
+  imor_comercial?: (number | null)[];
+  imor_consumo?: (number | null)[];
+  imor_vivienda?: (number | null)[];
 }
 
 interface Props {
@@ -27,10 +31,24 @@ interface Props {
   entidades: Entidad[]; // pre-filtered to top 15 by caller
 }
 
+const CARTERA_COLORS: Record<string, string> = {
+  imor_comercial: '#E69F00',
+  imor_consumo:   '#56B4E9',
+  imor_vivienda:  '#009E73',
+  imora:          '#CC79A7',
+};
+const CARTERA_LABELS: Record<string, string> = {
+  imor_comercial: 'Comercial',
+  imor_consumo:   'Consumo',
+  imor_vivienda:  'Vivienda',
+  imora:          'IMORA',
+};
+
 export function SofiposEntidadesChart({ fechas, entidades }: Props) {
   const [activeNames, setActiveNames] = useState<ReadonlySet<string>>(
     () => new Set(entidades.map((e) => e.nombre)),
   );
+  const [carteraMode, setCarteraMode] = useState(false);
 
   const allSelected = activeNames.size === entidades.length;
   const noneSelected = activeNames.size === 0;
@@ -53,28 +71,71 @@ export function SofiposEntidadesChart({ fechas, entidades }: Props) {
       }
       return next;
     });
+    setCarteraMode(false); // reset when changing selection
   }
+
+  // Solo mode: exactly 1 entity selected → enable cartera breakdown option
+  const soloEntidad = activeNames.size === 1
+    ? entidades.find((e) => activeNames.has(e.nombre))
+    : undefined;
+  const hasCarteraData = soloEntidad
+    ? (soloEntidad.imor_comercial != null || soloEntidad.imor_consumo != null || soloEntidad.imor_vivienda != null)
+    : false;
 
   const labels = fechas.map((f) => `${f}-15`);
 
-  const data = {
-    labels,
-    datasets: entidades.map((e, i) => ({
-      label: e.nombre,
-      data: activeNames.has(e.nombre) ? e.imor : [],
-      borderColor: OKABE_ITO[i % OKABE_ITO.length],
-      backgroundColor: 'transparent',
-      fill: false,
-      tension: 0.2,
-      pointRadius: 0,
-      pointHoverRadius: 4,
-      borderWidth: 1.5,
-      spanGaps: true,
-    })),
-  };
+  // Build datasets — cartera mode shows breakdown for the solo entity
+  const datasets = carteraMode && soloEntidad
+    ? (['imor_comercial', 'imor_consumo', 'imor_vivienda', 'imora'] as const)
+        .filter((k) => soloEntidad[k] != null)
+        .map((k) => ({
+          label: CARTERA_LABELS[k],
+          data: soloEntidad[k] as (number | null)[],
+          borderColor: CARTERA_COLORS[k],
+          backgroundColor: 'transparent',
+          fill: false,
+          tension: 0.2,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          borderWidth: 2,
+          spanGaps: true,
+        }))
+    : entidades.map((e, i) => ({
+        label: e.nombre,
+        data: activeNames.has(e.nombre) ? e.imor : [],
+        borderColor: OKABE_ITO[i % OKABE_ITO.length],
+        backgroundColor: 'transparent',
+        fill: false,
+        tension: 0.2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+        borderWidth: 1.5,
+        spanGaps: true,
+      }));
+
+  const data = { labels, datasets };
 
   return (
     <ChartErrorBoundary chartName="SoFiPOs IMOR por entidad">
+      {/* Cartera breakdown toggle — only when 1 entity selected and has cartera data */}
+      {soloEntidad && hasCarteraData && (
+        <div className="mb-2 flex items-center gap-2">
+          <span className="text-[10px] text-[--color-text-mute]">
+            {soloEntidad.nombre}
+          </span>
+          <button
+            onClick={() => setCarteraMode((v) => !v)}
+            className="ml-auto px-2 py-0.5 text-[10px] font-semibold border rounded transition-colors"
+            style={{
+              color: carteraMode ? 'var(--color-gold)' : 'var(--color-text-mute)',
+              borderColor: carteraMode ? 'var(--color-gold)' : 'var(--color-border)',
+              backgroundColor: carteraMode ? 'rgba(196,163,90,0.1)' : 'transparent',
+            }}
+          >
+            Ver por cartera
+          </button>
+        </div>
+      )}
       {/* Selector de entidades */}
       <div className="mb-3 space-y-2">
         <div className="flex items-center gap-2">

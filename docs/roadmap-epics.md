@@ -225,6 +225,8 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 **Objetivo:** Completar la cobertura de indicadores prioritarios: reservas, IGAE/PIB, ICAP y datos adicionales del CSV CNBV ya disponible.
 
+**Avance anticipado (#96 paso-2, 2026-06-01):** Pipeline CNBV Sector 40 ya incluye IMOR por cartera (comercial/consumo/vivienda/tarjeta) y ROA/ROE por banco; UI conectada en `ImorSegPivotChart`, `RoaRoeChart` y `SofiposEntidadesChart`.
+
 ---
 
 ### US-301 — Reservas internacionales al pipeline Banxico (SF43707)
@@ -343,16 +345,19 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-403 — Panel colapsable de explicación e interpretación por métrica (#98)
+### US-403 — Panel colapsable de explicación e interpretación por métrica (#98) ✅ (parcial)
 
 **Como** periodista/ciudadano, **quiero** expandir una explicación bajo cada gráfica, **para** entender qué significa el indicador y cuándo es preocupante.
 
+**Estado:** Implementación base completa en `instituciones.astro`. Pendiente: extender a FX/Tasa/Inflación en `index.astro` y migrar contenido a Astro Content Collection.
+
 **Criterios de aceptación:**
-- [ ] `<details>` colapsado por defecto con "¿Qué significa este indicador?"
-- [ ] Al expandir: pregunta en lenguaje humano, fórmula en KaTeX, interpretación del valor actual, umbrales, diferencia con estándar internacional
-- [ ] Contenido en Astro Content Collection (no hardcodeado)
-- [ ] Accesible por teclado (Enter/Space); WCAG 2.1 AA
-- [ ] Implementado para IMOR, IMORA, ICOR, ICAP, FX, Tasa Banxico, Inflación
+- [x] `<details>` colapsado por defecto con "¿Qué significa este indicador?"
+- [x] Al expandir: fórmula, interpretación del valor actual, umbrales, fuente regulatoria (CUB/CNBV/IASB)
+- [ ] Contenido en Astro Content Collection (actualmente en `glossary.ts` — TypeScript hardcodeado)
+- [x] Accesible por teclado (Enter/Space nativo del navegador); WCAG compatible
+- [x] Implementado para IMOR, IMORA, ICOR, ICAP, ROA, ROE, IFRS 9, SoFiPO (en `instituciones.astro`)
+- [ ] Pendiente: FX, Tasa Banxico, Inflación (en `index.astro`)
 
 **Esfuerzo:** M · **Labels:** enhancement, docs, UX
 
@@ -450,14 +455,16 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-505 — Filtros por institución en IFRS9 y Rentabilidad (#94)
+### US-505 — Filtros por institución en IFRS9 y Rentabilidad (#94) ✅ (ROA/ROE completado; IFRS9 pendiente)
 
 **Como** analista financiero, **quiero** ver IFRS9 y ROA/ROE por banco individual, **para** identificar qué instituciones concentran el deterioro.
 
+**Estado:** `RoaRoeChart` tiene toggle "Sistema / Por banco" con selector de banco y datos desde `imor_por_banco.json` (conceptos 40200034/40200002). `Ifrs9Chart` por banco sigue bloqueado — R12A (CNBV) no tiene granularidad por institución en el CSV público.
+
 **Criterios de aceptación:**
-- [ ] Verificar disponibilidad del CSV R12A por institución en CNBV (bloqueante)
-- [ ] Si disponible: `Ifrs9Chart` y `RoaRoeChart` con toggle "Sistema / Por banco" como en `ImoraChart`
-- [ ] Si no disponible: issue de seguimiento con estado "bloqueado por CNBV"
+- [x] ROA/ROE por banco: disponibles en CNBV Sector 40 (conceptos 40200034, 40200002)
+- [x] `RoaRoeChart` con toggle "Sistema / Por banco" + selector de banco
+- [ ] `Ifrs9Chart` por banco — bloqueado por CNBV (R12A no granular por institución)
 
 **Esfuerzo:** L · **Labels:** data, enhancement · **Dependencias:** disponibilidad CSV R12A por banco
 

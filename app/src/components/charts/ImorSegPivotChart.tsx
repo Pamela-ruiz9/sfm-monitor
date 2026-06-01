@@ -19,7 +19,15 @@ interface Props {
       tarjeta: number[];
       consumo_norev: number[];
     };
-    bancos: Array<{ id: string; nombre: string; imor_total: (number | null)[] }>;
+    bancos: Array<{
+      id: string;
+      nombre: string;
+      imor_total: (number | null)[];
+      imor_comercial?: (number | null)[];
+      imor_consumo?: (number | null)[];
+      imor_vivienda?: (number | null)[];
+      imor_tarjeta?: (number | null)[];
+    }>;
   };
   sofipos: {
     fechas: string[];
@@ -93,10 +101,21 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
           yMax: undefined as number | undefined,
         };
       }
+      // Per-banco cartera breakdown — fall back to total when unavailable
+      const carteraArr: Record<Cartera, (number | null)[] | undefined> = {
+        total:       banco.imor_total,
+        comercial:   banco.imor_comercial,
+        consumo:     banco.imor_consumo,
+        vivienda:    banco.imor_vivienda,
+        tarjeta:     banco.imor_tarjeta,
+        consumo_norev: undefined,
+      };
+      const bancoValues = carteraArr[cartera] ?? banco.imor_total;
+      const carteraLabel = carteraArr[cartera] ? CARTERA_LABELS[cartera] : `${CARTERA_LABELS[cartera]} (sin datos)`;
       return {
         fechas: bm.fechas,
-        values: banco.imor_total,
-        label: `Banca Múltiple · ${banco.nombre}`,
+        values: bancoValues,
+        label: `${banco.nombre} · ${carteraLabel}`,
         color: '#c4a35a',
         yMax: undefined,
       };
@@ -160,7 +179,8 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
 
   function changeView(next: 'sistema' | 'banco' | 'entidad') {
     setView(next);
-    if (next !== 'sistema') setCartera('total');
+    // Reset cartera for entidad (SoFiPOs don't have consumo_norev/tarjeta)
+    if (next === 'entidad') setCartera('total');
   }
 
   const carteras = sector === 'bm' ? BM_CARTERAS : SOFI_CARTERAS;
