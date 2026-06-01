@@ -12,6 +12,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(#96 paso-1): pipeline cartera × banco/entidad — scripts + schema (2026-05-31)
+- `scripts/normalize-imor-por-banco.py`: agrega 6 conceptos CNBV nuevos por banco — IMOR comercial (40200018), IMOR consumo (40200056), IMOR vivienda (40200046), IMOR tarjeta (40200019), ROA (40200034), ROE (40200002). También extrae IMORA alternativa (40200084) para resolver discrepancia con concepto 40200033 ya existente. Solo emite arrays por cartera/rentabilidad cuando el banco realmente reporta esos datos.
+- `scripts/normalize-cnbv.py`: `build_sofipos()` ahora incluye por entidad: `imor_comercial`, `imor_consumo`, `imor_vivienda`, `imora` (ya estaban en `sofipos_by_inst.json` intermedio, no se emitían al JSON final).
+- `app/src/data/schema.ts`: `HistoricoBancoEntrySchema` amplía con campos opcionales `imor_comercial`, `imor_consumo`, `imor_vivienda`, `imor_tarjeta`, `roa`, `roe`, `imora_total_alt`. `SofiposEntidadSchema` amplía con `imora`, `imor_comercial`, `imor_consumo`, `imor_vivienda`. Los cambios son backward-compatible (todo `.optional()`).
+- Los nuevos campos aparecerán en el JSON la próxima vez que se regenere con el CSV de CNBV (proceso manual mensual).
+
 ### feat(#98): MetricInfo — acordeón colapsable con fórmula e interpretación por métrica (2026-05-31)
 - `app/src/components/chrome/MetricInfo.astro`: componente `<details>/<summary>` HTML nativo (sin JS); muestra definición, fórmula, rango de referencia y fuente; colapsado por defecto; compatible mobile
 - `app/src/components/chrome/Section.astro`: nueva prop `metricSlug?: string` que monta `MetricInfo` entre el encabezado y la tarjeta de la gráfica

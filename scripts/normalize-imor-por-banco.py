@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
 """
 normalize-imor-por-banco.py
-Extracts IMOR, IMORA, and ICOR per bank from the CNBV Portafolio sh_datos_40.csv
+Extracts per-bank indicators from CNBV Portafolio sh_datos_40.csv
 and writes data/imor_por_banco.json.
 
 Source: raw-data/sh_datos_40.csv  (~515 MB, Latin-1 encoded)
         data/Raw_data/cat_instituciones_40.csv  (bank catalogue)
 
 Concepts extracted:
-  40200017 → IMOR cartera total (%)
-  40200033 → IMORA cartera total (%)
-  40200096 → ICOR cartera total (%)
+  40200017 → imor_total (%)       IMOR cartera total
+  40200033 → imora_total (%)      IMORA cartera total
+    NOTE: extract-cnbv-raw.py uses 40200084 for imora_total at system level.
+    Both concepts are extracted; downstream consumers should prefer 40200084
+    once validated against the CSV (issue #96).
+  40200084 → imora_total_alt (%)  IMORA alternativo — validar vs 40200033
+  40200096 → icor_total (×)       ICOR (ratio, kept ×1)
+  40200018 → imor_comercial (%)   IMOR cartera comercial
+  40200056 → imor_consumo (%)     IMOR cartera consumo
+  40200046 → imor_vivienda (%)    IMOR cartera vivienda
+  40200019 → imor_tarjeta (%)     IMOR tarjeta de crédito
+  40200034 → roa (%)              Retorno sobre activos
+  40200002 → roe (%)              Retorno sobre capital
 
 Run: python3 scripts/normalize-imor-por-banco.py
      python3 scripts/normalize-imor-por-banco.py --dry-run
@@ -31,14 +41,26 @@ SH_DATOS_40 = os.path.join(RAW, "sh_datos_40.csv")
 CAT_INST = os.path.join(DATA, "Raw_data", "cat_instituciones_40.csv")
 OUT_FILE = os.path.join(DATA, "imor_por_banco.json")
 
-# Concepts of interest — (field_name, multiplier)
+# Concepts of interest — {concept_id: (field_name, multiplier)}
 # Raw CSV values are ratios (0–1); multiply by 100 to get percentage points.
 # ICOR is already a coverage ratio (e.g. 2.04 = 204% coverage), kept ×1.
+# ROA/ROE: raw values are ratios; ×100 → percentage points.
 CONCEPTS: dict[str, tuple[str, float]] = {
-    "40200017": ("imor_total",  100.0),
-    "40200033": ("imora_total", 100.0),
-    "40200096": ("icor_total",    1.0),
+    "40200017": ("imor_total",      100.0),
+    "40200033": ("imora_total",     100.0),  # see NOTE in docstring re: 40200084
+    "40200084": ("imora_total_alt", 100.0),  # alternative IMORA — compare with 40200033
+    "40200096": ("icor_total",        1.0),
+    "40200018": ("imor_comercial",  100.0),
+    "40200056": ("imor_consumo",    100.0),
+    "40200046": ("imor_vivienda",   100.0),
+    "40200019": ("imor_tarjeta",    100.0),
+    "40200034": ("roa",             100.0),
+    "40200002": ("roe",             100.0),
 }
+
+# IMOR/IMORA fields bounded [0, 100%]; sentinel detection applies to all.
+IMOR_FIELDS = {"imor_total", "imora_total", "imora_total_alt",
+               "imor_comercial", "imor_consumo", "imor_vivienda", "imor_tarjeta"}
 
 # Aggregate entity IDs to exclude (sistema, grupos, no individuales)
 EXCLUIR_ENTIDADES = {"5", "59", "60", "61", "62", "63", "64"}
@@ -105,7 +127,7 @@ def parse_sh_datos_40() -> dict:
                 valor = round(raw * mult, 4) if raw is not None else None
                 # IMOR/IMORA are bounded [0,100]; raw=1.0 (exactly 100%) is a
                 # CNBV sentinel for missing/unreported periods — treat as null.
-                if valor is not None and field_name in ("imor_total", "imora_total") and valor >= 100.0:
+                if valor is not None and field_name in IMOR_FIELDS and valor >= 100.0:
                     valor = None
             except (ValueError, TypeError):
                 valor = None
@@ -113,11 +135,11 @@ def parse_sh_datos_40() -> dict:
             if entidad not in data:
                 data[entidad] = {}
             if periodo_iso not in data[entidad]:
-                data[entidad][periodo_iso] = {
-                    "imor_total": None,
-                    "imora_total": None,
-                    "icor_total": None,
-                }
+                data[entidad][periodo_iso] = {f: None for f in (
+                    "imor_total", "imora_total", "imora_total_alt", "icor_total",
+                    "imor_comercial", "imor_consumo", "imor_vivienda", "imor_tarjeta",
+                    "roa", "roe",
+                )}
 
             field, _ = CONCEPTS[concepto]
             data[entidad][periodo_iso][field] = valor
@@ -152,33 +174,67 @@ def build_output(raw_data: dict, catalogue: dict) -> dict:
         all_periods.update(periodos.keys())
     fechas = sorted(all_periods)
 
+    def arr(periodos: dict, field: str) -> list:
+        return [periodos.get(p, {}).get(field) for p in fechas]
+
+    def latest(series: list, fechas: list) -> dict | None:
+        for fecha, val in zip(reversed(fechas), reversed(series)):
+            if val is not None:
+                return {"valor": val, "fecha": fecha}
+        return None
+
     bancos: dict[str, dict] = {}
     for entidad_id, periodos in raw_data.items():
         if entidad_id not in catalogue:
             continue  # skip aggregates or unknown
         nombre = catalogue[entidad_id]
-        imor_total = [periodos.get(p, {}).get("imor_total") for p in fechas]
-        imora_total = [periodos.get(p, {}).get("imora_total") for p in fechas]
-        icor_total = [periodos.get(p, {}).get("icor_total") for p in fechas]
+
+        imor_total      = arr(periodos, "imor_total")
+        imora_total     = arr(periodos, "imora_total")
+        imora_total_alt = arr(periodos, "imora_total_alt")
+        icor_total      = arr(periodos, "icor_total")
+        imor_comercial  = arr(periodos, "imor_comercial")
+        imor_consumo    = arr(periodos, "imor_consumo")
+        imor_vivienda   = arr(periodos, "imor_vivienda")
+        imor_tarjeta    = arr(periodos, "imor_tarjeta")
+        roa             = arr(periodos, "roa")
+        roe             = arr(periodos, "roe")
 
         # Only include banks that have at least some IMOR data
-        if any(v is not None for v in imor_total):
-            # imor_latest: last non-null IMOR value with its period — avoids full array
-            # iteration in the frontend (used by #36 tabla interactiva)
-            imor_latest = None
-            for fecha, val in zip(reversed(fechas), reversed(imor_total)):
-                if val is not None:
-                    imor_latest = {"valor": val, "fecha": fecha}
-                    break
+        if not any(v is not None for v in imor_total):
+            continue
 
-            bancos[entidad_id] = {
-                "id": entidad_id,
-                "nombre": nombre,
-                "imor_total": imor_total,
-                "imora_total": imora_total,
-                "icor_total": icor_total,
-                "imor_latest": imor_latest,
-            }
+        entry: dict = {
+            "id": entidad_id,
+            "nombre": nombre,
+            "imor_total": imor_total,
+            "imora_total": imora_total,
+            "icor_total": icor_total,
+            "imor_latest": latest(imor_total, fechas),
+            "imora_latest": latest(imora_total, fechas),
+        }
+
+        # Cartera breakdown — only emit if the bank actually reported these
+        if any(v is not None for v in imor_comercial):
+            entry["imor_comercial"] = imor_comercial
+        if any(v is not None for v in imor_consumo):
+            entry["imor_consumo"] = imor_consumo
+        if any(v is not None for v in imor_vivienda):
+            entry["imor_vivienda"] = imor_vivienda
+        if any(v is not None for v in imor_tarjeta):
+            entry["imor_tarjeta"] = imor_tarjeta
+
+        # IMORA alternative concept (40200084) — only emit if different from 40200033
+        if any(v is not None for v in imora_total_alt):
+            entry["imora_total_alt"] = imora_total_alt
+
+        # Rentabilidad
+        if any(v is not None for v in roa):
+            entry["roa"] = roa
+        if any(v is not None for v in roe):
+            entry["roe"] = roe
+
+        bancos[entidad_id] = entry
 
     return {
         "ultima_actualizacion": fechas[-1] if fechas else None,

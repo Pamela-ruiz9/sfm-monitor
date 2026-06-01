@@ -241,28 +241,41 @@ def build_sofipos() -> dict:
         "027052": "TRAFALGAR",
         "20":     "Sistema SoFiPOs",
     }
+    def inst_arr(inst_data: dict, field: str) -> list:
+        return [
+            safe_float(inst_data[p].get(field)) if p in inst_data else None
+            for p in all_periods
+        ]
+
     entidades: dict[str, dict] = {}
     for inst_id, inst_data in result.items():
-        imor_arr = [
-            safe_float(inst_data[p].get("imor_total")) if p in inst_data else None
-            for p in all_periods
-        ]
-        # cartera_total: last non-None imora_total value in pesos — proxy for institution size
-        # Used by the frontend to sort top-15 by cartera (issue #58)
-        imora_arr_pesos = [
-            safe_float(inst_data[p].get("imora_total")) if p in inst_data else None
-            for p in all_periods
-        ]
-        last_imora = next(
-            (v for v in reversed(imora_arr_pesos) if v is not None),
-            None,
-        )
-        entidades[inst_id] = {
+        imor_arr          = inst_arr(inst_data, "imor_total")
+        imor_comercial    = inst_arr(inst_data, "imor_comercial")
+        imor_consumo      = inst_arr(inst_data, "imor_consumo")
+        imor_vivienda     = inst_arr(inst_data, "imor_vivienda")
+        imora_arr         = inst_arr(inst_data, "imora_total")
+
+        # cartera_total: proxy for institution size (latest non-None imora value)
+        last_imora = next((v for v in reversed(imora_arr) if v is not None), None)
+
+        entry: dict = {
             "nombre":        SOFIPOS_NOMBRES.get(inst_id, inst_id),
             "id":            inst_id,
             "imor":          imor_arr,
-            "cartera_total": last_imora,  # pesos — latest imora_total; None if unavailable
+            "cartera_total": last_imora,
         }
+
+        # Cartera breakdown — only emit if the institution actually reported these
+        if any(v is not None for v in imor_comercial):
+            entry["imor_comercial"] = imor_comercial
+        if any(v is not None for v in imor_consumo):
+            entry["imor_consumo"] = imor_consumo
+        if any(v is not None for v in imor_vivienda):
+            entry["imor_vivienda"] = imor_vivienda
+        if any(v is not None for v in imora_arr):
+            entry["imora"] = imora_arr
+
+        entidades[inst_id] = entry
 
     return {
         "ultima_actualizacion": latest_fecha,

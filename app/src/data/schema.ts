@@ -117,13 +117,24 @@ const BancoLatestSchema = z.object({ valor: z.number(), fecha: z.string() });
 const HistoricoBancoEntrySchema = z.object({
   nombre: z.string(),
   id: z.string(),
-  imor_total: z.array(z.number().nullable()),
-  imora_total: z.array(z.number().nullable()).optional(),
-  icor_total: z.array(z.number().nullable()).optional(),
-  imor_latest: BancoLatestSchema.nullable().optional(),
-  imora_latest: BancoLatestSchema.nullable().optional(),
+  imor_total:      z.array(z.number().nullable()),
+  imora_total:     z.array(z.number().nullable()).optional(),
+  imora_total_alt: z.array(z.number().nullable()).optional(),
+  icor_total:      z.array(z.number().nullable()).optional(),
+  // Cartera breakdown — present only for banks that report segment data
+  imor_comercial:  z.array(z.number().nullable()).optional(),
+  imor_consumo:    z.array(z.number().nullable()).optional(),
+  imor_vivienda:   z.array(z.number().nullable()).optional(),
+  imor_tarjeta:    z.array(z.number().nullable()).optional(),
+  // Rentabilidad por banco
+  roa:             z.array(z.number().nullable()).optional(),
+  roe:             z.array(z.number().nullable()).optional(),
+  imor_latest:     BancoLatestSchema.nullable().optional(),
+  imora_latest:    BancoLatestSchema.nullable().optional(),
 });
 
+// Deprecated: cartera breakdown moved into HistoricoBancoEntrySchema directly (issue #96).
+// Kept for backwards-compatibility while bancos_x_cartera is still in HistoricoBancoSchema.
 const HistoricoBancoCarteraEntrySchema = z.looseObject({
   nombre: z.string(),
   id: z.string(),
@@ -172,7 +183,12 @@ const Ifrs9Schema = z.object({
 const SofiposEntidadSchema = z.looseObject({
   nombre: z.string(),
   id: z.string(),
-  imor: z.array(z.number().nullable()),
+  imor:           z.array(z.number().nullable()),
+  imora:          z.array(z.number().nullable()).optional(),
+  imor_comercial: z.array(z.number().nullable()).optional(),
+  imor_consumo:   z.array(z.number().nullable()).optional(),
+  imor_vivienda:  z.array(z.number().nullable()).optional(),
+  cartera_total:  z.number().nullable().optional(),
 });
 
 const SofiposHistoricoEntidadSchema = z.object({
