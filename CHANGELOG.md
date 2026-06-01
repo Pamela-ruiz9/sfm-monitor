@@ -12,6 +12,16 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(macro): tab Macro con IGAE, PIB y Desocupación (2026-06-01)
+- `IgaeChart.tsx`: gráfica de línea mensual para IGAE variación anual (INEGI BIE serie 737370); línea de referencia en 0%; histórico de 36 meses.
+- `PibChart.tsx`: gráfica de barras trimestral para PIB variación anual (INEGI BIE serie 737375); barras verdes/rojas según signo; línea en 0.
+- `DesempleoChart.tsx`: gráfica de línea mensual para tasa de desocupación ENOE (serie 444774); línea de referencia pre-pandemia 3.4%; últimos 24 meses.
+- `macro.astro`: reemplaza placeholders "próximamente" con las 3 secciones de gráficas reales; añade KpiCard Desocupación y KpiCard Tasa Real Banxico (cuando datos disponibles); actualiza `EditorialHeadline`; la sección Inflación pasa subyacente/no-subyacente cuando estén en el JSON.
+
+### feat(macro/pipeline): safe_fetch + remesas + fix salario_minimo + MacroSchema (2026-06-01)
+- `update-data.yml`: añade `safe_fetch()` y `parse_dato()` helpers; fix `salario_minimo` SF60628 que retornaba 0.0 por valores "N/E"; agrega remesas familiares SE67516 (USD millones, mensual, 24 meses); placeholders para informalidad (444779), exportaciones (471584), importaciones (471588) e inversión fija (462219).
+- `app/src/data/schema.ts`: `MacroSchema` expandido con `desempleo`, `remesas`, `informalidad`, `exportaciones`, `importaciones`, `inversion_fija`, `tasa_real_banxico`, `tasa_real_cetes`; nuevo `MacroKpiSchema`; `MacroSerieSchema` agrega `variacion_anual`.
+
 ### feat(inflacion): desagregación subyacente/no subyacente + fix serie general (2026-06-01)
 - `update-data.yml`: corrige bug — la inflación "general" usaba SP74625 (subyacente); ahora usa SP1 (INPC general, base 2018). Agrega subyacente (SP74625) y no subyacente (SP74627) como series paralelas con helper `calc_yoy()`. Ambas se emiten en `inflacion.subyacente_mensual` y `inflacion.no_subyacente_mensual` (últimos 24 meses). Actualiza `fuentes.inflacion` y prints de diagnóstico.
 - `app/src/data/schema.ts`: `InflacionSchema` extiende con `subyacente_mensual` y `no_subyacente_mensual` opcionales (backward-compatible).

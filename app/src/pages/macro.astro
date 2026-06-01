@@ -8,6 +8,9 @@ import Section from '~/components/chrome/Section.astro';
 import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
 import { KpiCard } from '~/components/kpi/KpiCard';
 import { InflacionChart } from '~/components/charts/InflacionChart';
+import { IgaeChart } from '~/components/charts/IgaeChart';
+import { PibChart } from '~/components/charts/PibChart';
+import { DesempleoChart } from '~/components/charts/DesempleoChart';
 import { loadSfmData } from '~/data/loader';
 import { formatPct } from '~/lib/utils';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
@@ -19,6 +22,7 @@ import { SwipeNav } from '~/components/shell/SwipeNav';
 import { PullToRefresh } from '~/components/shell/PullToRefresh';
 
 const data = loadSfmData();
+
 const inflacionHistorica =
   data.historico.inflacion_mensual_desde_2000 ??
   data.inflacion.historico_mensual;
@@ -26,20 +30,21 @@ const inflacionHistorica =
 const inflacionActual = Number(data.inflacion.actual);
 const inflacionFecha  = data.inflacion.fecha;
 
-// IGAE y PIB — disponibles cuando el pipeline #21 los emita
-const macro = data.macro ?? {};
-const igae  = macro.igae  ?? null;
-const pib   = macro.pib   ?? null;
+const macro      = data.macro ?? {};
+const igae       = macro.igae       ?? null;
+const pib        = macro.pib        ?? null;
+const desempleo  = macro.desempleo  ?? null;
+const tasaReal   = macro.tasa_real_banxico ?? null;
 ---
 
 <Layout
   title="Macro"
-  description="Contexto macroeconómico: inflación INPC, IGAE, PIB y contexto laboral."
+  description="Contexto macroeconómico: inflación INPC, actividad económica IGAE, PIB trimestral y mercado laboral."
   jsonLd={datasetJsonLd({
     name: 'Contexto Macroeconómico — México',
-    description: 'Inflación INPC, IGAE mensual, PIB trimestral. Fuentes: Banxico SIE, INEGI BIE.',
+    description: 'Inflación INPC, IGAE mensual, PIB trimestral, tasa de desocupación ENOE. Fuentes: Banxico SIE, INEGI BIE.',
     path: '/macro',
-    keywords: ['inflación', 'INPC', 'IGAE', 'PIB', 'macro', 'México', 'Banxico', 'INEGI'],
+    keywords: ['inflación', 'INPC', 'IGAE', 'PIB', 'desempleo', 'ENOE', 'macro', 'México', 'Banxico', 'INEGI'],
   })}>
   <Header slot="header" />
   <TabBar slot="header" />
@@ -47,7 +52,7 @@ const pib   = macro.pib   ?? null;
   <div class="space-y-6">
     <EditorialHeadline
       eyebrow={`Macro · ${new Date().toLocaleDateString('es-MX', { year: 'numeric', month: 'long' })}`}
-      headline="Inflación por encima del objetivo Banxico. Actividad económica pendiente de integración con pipeline INEGI."
+      headline="Actividad económica en desaceleración. Inflación sobre objetivo Banxico."
     />
 
     <!-- ── KPIs ── -->
@@ -59,27 +64,50 @@ const pib   = macro.pib   ?? null;
         iconName="TrendingUp"
         tone={inflacionActual > 4 ? 'red' : inflacionActual > 3 ? 'yellow' : 'green'}
         indicatorId="inflacion"
+        client:visible
       />
       {igae?.actual != null && (
         <KpiCard
-          label="IGAE mensual"
-          value={`${igae.actual.toFixed(1)}`}
-          unit="base 2018=100"
+          label="IGAE var. anual"
+          value={formatPct(igae.actual, 2)}
           {...(igae.fecha ? { asOf: igae.fecha } : {})}
           iconName="Activity"
-          tone="gold"
+          tone={igae.actual >= 2 ? 'green' : igae.actual >= 0 ? 'yellow' : 'red'}
           indicatorId="igae"
+          client:visible
         />
       )}
       {pib?.actual != null && (
         <KpiCard
-          label="PIB trimestral"
-          value={formatPct(pib.actual, 1)}
-          unit="var. anual"
+          label="PIB var. anual"
+          value={formatPct(pib.actual, 2)}
           {...(pib.fecha ? { asOf: pib.fecha } : {})}
           iconName="TrendingUp"
-          tone={pib.actual >= 0 ? 'green' : 'red'}
+          tone={pib.actual >= 2 ? 'green' : pib.actual >= 0 ? 'yellow' : 'red'}
           indicatorId="pib"
+          client:visible
+        />
+      )}
+      {desempleo?.actual != null && (
+        <KpiCard
+          label="Desocupación ENOE"
+          value={formatPct(desempleo.actual, 2)}
+          {...(desempleo.fecha ? { asOf: desempleo.fecha } : {})}
+          iconName="Activity"
+          tone={desempleo.actual > 4.5 ? 'red' : desempleo.actual > 3.5 ? 'yellow' : 'green'}
+          indicatorId="desempleo"
+          client:visible
+        />
+      )}
+      {tasaReal?.actual != null && (
+        <KpiCard
+          label="Tasa real Banxico"
+          value={`${tasaReal.actual >= 0 ? '+' : ''}${tasaReal.actual.toFixed(2)}pp`}
+          {...(tasaReal.fecha ? { asOf: tasaReal.fecha } : {})}
+          iconName="Percent"
+          tone={tasaReal.actual >= 2 ? 'green' : tasaReal.actual >= 0 ? 'yellow' : 'red'}
+          indicatorId="tasa_real_banxico"
+          client:visible
         />
       )}
     </div>
@@ -90,41 +118,83 @@ const pib   = macro.pib   ?? null;
       eyebrow="Inflación"
       title="INPC anual"
       description="Variación anual del Índice Nacional de Precios al Consumidor. Banda verde: objetivo Banxico 3% ±1pp."
-      source="Banco de México, SIE, serie SP74625"
-      refCode="SP74625"
-      tone="yellow">
-      <InflacionChart series={inflacionHistorica} client:visible />
+      source="Banco de México, SIE, series SP1 · SP74625 · SP74627"
+      refCode="SP1"
+      tone="yellow"
+      metricSlug="inflacion">
+      <InflacionChart
+        series={inflacionHistorica}
+        subyacente={data.inflacion.subyacente_mensual?.length ? data.inflacion.subyacente_mensual : undefined}
+        noSubyacente={data.inflacion.no_subyacente_mensual?.length ? data.inflacion.no_subyacente_mensual : undefined}
+        client:visible
+      />
     </Section>
 
-    <!-- ── IGAE — próximamente ── -->
-    {igae == null && (
+    <!-- ── IGAE ── -->
+    {igae?.historico?.length ? (
+      <Section
+        id="igae"
+        eyebrow="Actividad económica"
+        title="IGAE — variación anual mensual"
+        description="Índice General de Actividad Económica del INEGI. Proxy mensual del PIB. Variación respecto al mismo mes del año anterior."
+        source="INEGI BIE, serie 737370"
+        refCode="737370"
+        tone="green">
+        <IgaeChart series={igae.historico} client:visible />
+      </Section>
+    ) : (
       <Section
         id="igae"
         eyebrow="Actividad económica"
         title="IGAE — Índice General de Actividad Económica"
         description="Indicador mensual de actividad económica del INEGI. Proxy del PIB mensual."
-        source="INEGI BIE — pendiente de integración en pipeline"
-        tone="gold">
+        source="INEGI BIE — datos pendientes"
+        tone="green">
         <p class="text-sm text-[--color-text-dim] py-8 text-center">
-          Datos disponibles próximamente — pipeline INEGI en desarrollo (issue #21).
+          Datos disponibles próximamente.
         </p>
       </Section>
     )}
 
-    <!-- ── PIB — próximamente ── -->
-    {pib == null && (
+    <!-- ── PIB ── -->
+    {pib?.historico?.length ? (
+      <Section
+        id="pib"
+        eyebrow="Producto Interno Bruto"
+        title="PIB trimestral — variación anual"
+        description="Crecimiento real del PIB base 2018. Frecuencia trimestral con rezago T+55 días. Verde: expansión, rojo: contracción."
+        source="INEGI BIE, serie 737375"
+        refCode="737375"
+        tone="green">
+        <PibChart series={pib.historico} client:visible />
+      </Section>
+    ) : (
       <Section
         id="pib"
         eyebrow="Producto Interno Bruto"
         title="PIB trimestral — variación anual"
         description="Crecimiento real del PIB base 2018. Frecuencia trimestral con rezago T+55 días."
-        source="INEGI BIE — pendiente de integración en pipeline"
+        source="INEGI BIE — datos pendientes"
         tone="green">
         <p class="text-sm text-[--color-text-dim] py-8 text-center">
-          Datos disponibles próximamente — pipeline INEGI en desarrollo (issue #21).
+          Datos disponibles próximamente.
         </p>
       </Section>
     )}
+
+    <!-- ── Desocupación ── -->
+    {desempleo?.historico?.length ? (
+      <Section
+        id="desempleo"
+        eyebrow="Mercado laboral"
+        title="Tasa de desocupación nacional"
+        description="Porcentaje de la PEA sin empleo (ENOE, mensual). Línea punteada: referencia pre-pandemia ~3.4%."
+        source="INEGI ENOE, serie 444774"
+        refCode="444774"
+        tone="gold">
+        <DesempleoChart series={desempleo.historico} client:visible />
+      </Section>
+    ) : null}
   </div>
 
   <ChartDrawer slot="drawer" client:idle />
