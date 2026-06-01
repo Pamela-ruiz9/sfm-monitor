@@ -53,7 +53,10 @@ export function ImoraChart({ fechas, values, bancos }: Props) {
     return { activeValues: values, activeLabel: 'IMORA Total' };
   }, [view, bancoId, bancosConDatos, values]);
 
-  const nonNullValues = activeValues.filter((v): v is number => v !== null);
+  // Filter sentinel values: CNBV encodes unreported periods as raw 1.0 → 100% after ×100.
+  // Real extreme values come as graduated decimals (e.g. 91.38); exactly 100 = missing data.
+  const cleanValues = activeValues.map((v) => (v !== null && v >= 100 ? null : v));
+  const nonNullValues = cleanValues.filter((v): v is number => v !== null);
   const maxVal = nonNullValues.length > 0 ? Math.max(...nonNullValues) : 0;
   const yMax = maxVal > 0 ? Math.ceil(maxVal * 1.2) : 10;
   const xMin = fechas.length > 0 ? `${fechas[0]}-01` : undefined;
@@ -63,7 +66,7 @@ export function ImoraChart({ fechas, values, bancos }: Props) {
     datasets: [
       {
         label: activeLabel,
-        data: activeValues,
+        data: cleanValues,
         borderColor: '#c4a35a',
         backgroundColor: 'rgba(196, 163, 90, 0.1)',
         fill: true,
@@ -76,7 +79,7 @@ export function ImoraChart({ fechas, values, bancos }: Props) {
     ],
   };
 
-  const latest = activeValues[activeValues.length - 1];
+  const latest = cleanValues[cleanValues.length - 1];
 
   return (
     <ChartErrorBoundary chartName="IMORA">

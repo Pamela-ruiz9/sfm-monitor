@@ -104,8 +104,9 @@ jobs:
               for x in reservas_data if x["dato"] not in ("N/E", None)
           ]
 
-          # 5. TIIE Fondeo overnight (SF343410) — diaria, últimos 2 años
-          tiie_fondeo = fetch("SF343410", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))
+          # 5. TIIE 28d (SF43783) — diaria, últimos 2 años
+          # SF343410 devolvía ~17% (serie incorrecta); SF43783 es la TIIE 28d establecida
+          tiie_fondeo = fetch("SF43783", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))
           tiie_fondeo_changes = []
           prev = None
           for x in tiie_fondeo:

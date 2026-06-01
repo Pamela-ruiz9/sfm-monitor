@@ -12,6 +12,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### fix(data): TIIE serie SF343410 → SF43783 + IMOR/IMORA sentinelas ≥100% → null (2026-05-31)
+- `update-data.yml`: cambia serie TIIE de SF343410 (retornaba ~17%, serie incorrecta) a SF43783 (TIIE 28d establecida); el dato en JSON se corregirá en la siguiente corrida del action
+- `scripts/normalize-imor-por-banco.py`: si `imor_total` o `imora_total` ≥ 100.0 después del multiplicador ×100, se guarda como `null`; el CNBV codifica periodos sin datos como raw=1.0, lo que producía valores centinela de exactamente 100% (afectaba HSBC, Scotiabank y ~15 bancos pequeños en 2003)
+- `ImoraChart.tsx`: filtro de display que convierte valores ≥100 a null, corrige el JSON actual sin necesidad de regenerar datos
+- `MercadoDineroChart.tsx`, `ActiveIndicatorChart.tsx`, `index.astro`: labels "TIIE Fondeo" → "TIIE 28d" en UI
+
 ### feat(ux): selector Todas/Ninguna SoFiPOs + rango de fechas en FX/Tasa/Inflación (2026-05-28)
 - `SofiposEntidadesChart.tsx` (US-401): botones "Todas" / "Ninguna" para activar/desactivar todas las entidades; chips Okabe-Ito por entidad; botón activo resaltado con `--color-gold`
 - `FXChart.tsx` (US-404): botones 1A / 3A / 5A / Máx encima del canvas; filtrado por fecha desde el último dato del array

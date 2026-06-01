@@ -76,7 +76,7 @@ const META: Record<ChartIndicator, ChartMeta> = {
   },
   tiie: {
     eyebrow: 'Tasas de referencia',
-    title: 'TIIE Fondeo · Cetes 28d · Tasa Banxico',
+    title: 'TIIE 28d · Cetes 28d · Tasa Banxico',
     description: 'Superposición de las tres tasas del mercado de dinero. El spread TIIE-Cetes refleja la tensión interbancaria.',
     source: 'Banco de México, SIE · SF43783 (TIIE) · SF43936 (Cetes) · SF61745 (Banxico)',
     refCode: 'SF43783',
@@ -84,7 +84,7 @@ const META: Record<ChartIndicator, ChartMeta> = {
   },
   cetes: {
     eyebrow: 'Tasas de referencia',
-    title: 'TIIE Fondeo · Cetes 28d · Tasa Banxico',
+    title: 'TIIE 28d · Cetes 28d · Tasa Banxico',
     description: 'Superposición de las tres tasas del mercado de dinero. Cetes 28d como referencia de renta fija de corto plazo.',
     source: 'Banco de México, SIE · SF43783 (TIIE) · SF43936 (Cetes) · SF61745 (Banxico)',
     refCode: 'SF43936',
@@ -92,7 +92,7 @@ const META: Record<ChartIndicator, ChartMeta> = {
   },
   'spread-tiie-cetes': {
     eyebrow: 'Tasas de referencia',
-    title: 'TIIE Fondeo · Cetes 28d · Tasa Banxico',
+    title: 'TIIE 28d · Cetes 28d · Tasa Banxico',
     description: 'Spread TIIE-Cetes como indicador de tensión interbancaria. Refleja la transmisión de la política monetaria.',
     source: 'Banco de México, SIE · SF43783 (TIIE) · SF43936 (Cetes) · SF61745 (Banxico)',
     refCode: 'SF43783',

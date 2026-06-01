@@ -34,7 +34,7 @@ export function MercadoDineroChart({ tiie, cetes, banxico }: Props) {
   const data = {
     datasets: [
       {
-        label: 'TIIE Fondeo (diaria)',
+        label: 'TIIE 28d (diaria)',
         data: tiiePoints,
         borderColor: '#E69F00',
         backgroundColor: 'transparent',

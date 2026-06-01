@@ -101,8 +101,12 @@ def parse_sh_datos_40() -> dict:
 
             try:
                 raw = float(row.get("valor", "") or 0)
-                _, mult = CONCEPTS[concepto]
+                field_name, mult = CONCEPTS[concepto]
                 valor = round(raw * mult, 4) if raw is not None else None
+                # IMOR/IMORA are bounded [0,100]; raw=1.0 (exactly 100%) is a
+                # CNBV sentinel for missing/unreported periods — treat as null.
+                if valor is not None and field_name in ("imor_total", "imora_total") and valor >= 100.0:
+                    valor = None
             except (ValueError, TypeError):
                 valor = None
 
