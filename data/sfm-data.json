@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-06-03",
+  "ultima_actualizacion": "2026-06-04",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
@@ -1576,7 +1576,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-06-03",
+        "fecha": "2024-06-04",
         "valor": 11.0
       },
       {
@@ -2028,13 +2028,9 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7358,
-      "fecha": "2026-06-03",
+      "actual": 6.7257,
+      "fecha": "2026-06-04",
       "historico": [
-        {
-          "fecha": "2024-06-03",
-          "valor": 11.2465
-        },
         {
           "fecha": "2024-06-04",
           "valor": 11.245
@@ -3470,6 +3466,10 @@
         {
           "fecha": "2026-06-03",
           "valor": 6.7358
+        },
+        {
+          "fecha": "2026-06-04",
+          "valor": 6.7257
         }
       ]
     },
@@ -3900,8 +3900,8 @@
       ]
     },
     "udis": {
-      "actual": 8.836172,
-      "fecha": "2026-06-03"
+      "actual": 8.835281,
+      "fecha": "2026-06-04"
     },
     "salario_minimo": {
       "actual": 0.0,
