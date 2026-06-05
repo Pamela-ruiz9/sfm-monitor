@@ -12,6 +12,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(credito): IFRS9 por segmento — comercial/consumo/vivienda (2026-06-04)
+- `scripts/normalize-ifrs9.py`: añade `SEGMENT_CONCEPT_MAP` con 7 conceptos R12A validados contra `catalogo_R12A_1219_BM.csv` (E1 comercial 101800105001, E1/E2/E3 consumo y vivienda). Comercial en E2/E3 se calcula como residual (total − consumo − vivienda). Actualiza `find_input_files()` para buscar el zip en `raw-data/transfers/` además de `raw-data/`. Emite campo opcional `por_segmento` con series E2/E3 por cartera (dic 2019 – feb 2026, 50 períodos).
+- `app/src/data/schema.ts`: `Ifrs9Schema` extiende con `por_segmento` opcional (`Ifrs9SegmentoSchema` por comercial/consumo/vivienda); backward-compatible.
+- `app/src/components/charts/Ifrs9Chart.tsx`: añade pills "Sistema / Comercial / Consumo / Vivienda"; vista Sistema mantiene stacked area original; vistas por segmento muestran E2/E3 % de esa cartera con fill no apilado.
+- `data/ifrs9.json`, `data/sfm-data.json`: regenerados — E3 consumo 3.35%, vivienda 3.06%, comercial 1.49% (feb 2026).
+
 ### feat(credito): MifChart — Margen de Intermediación Financiera (2026-06-04)
 - `scripts/extract-cnbv-raw.py`: añade 4 conceptos sistema-nivel (entidad='5') al extractor CNBV: tasa activa implícita (40200162), tasa pasiva implícita (40200037), MIF (40200218), TDA (40200074). Todos son ratios 0–1 × 100 para puntos porcentuales.
 - `scripts/normalize-cnbv.py`: emite los 4 campos nuevos en `historico_por_cartera` como arrays nullable (disponibles desde ~2008; null en periodos anteriores).

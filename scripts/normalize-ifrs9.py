@@ -88,6 +88,19 @@ STAGE_CONCEPT_MAP: dict[str, int] = {
     "101800104003": 3,   # Cartera crédito etapa 3 (orden 3910)
 }
 
+# Segment concepts within each stage — validated against catalogo_R12A_1219_BM.csv
+# Etapa 1 has explicit comercial/consumo/vivienda; E2/E3 have consumo and vivienda only.
+# Comercial in E2/E3 is derived as: etapa_total - consumo - vivienda (residual).
+SEGMENT_CONCEPT_MAP: dict[str, tuple[int, str]] = {
+    "101800105001": (1, "comercial"),  # E1 comercial (orden 2020)
+    "101800105002": (1, "consumo"),    # E1 consumo   (orden 2910)
+    "101800105003": (1, "vivienda"),   # E1 vivienda  (orden 3100)
+    "101800205006": (2, "consumo"),    # E2 consumo   (orden 3740)
+    "101800205007": (2, "vivienda"),   # E2 vivienda  (orden 3830)
+    "101800305009": (3, "consumo"),    # E3 consumo   (orden 4360)
+    "101800305010": (3, "vivienda"),   # E3 vivienda  (orden 4450)
+}
+
 # Fallback: use orden_presentacion if concept not in map
 STAGE_ORDEN_RANGES: dict[int, tuple[int, int]] = {
     1: (2010, 3289),
@@ -160,14 +173,17 @@ def find_input_files() -> list[tuple[str, list[dict]]]:
     """
     results = []
 
-    zip_path = os.path.join(RAW, "ifrs9_bm.zip")
-    if os.path.exists(zip_path):
-        print(f"📦 Reading from {zip_path}")
-        for name, rows in iter_csv_from_zip(zip_path):
-            if rows:
-                print(f"   ↳ {name}: {len(rows):,} rows")
-                results.append((name, rows))
-        return results
+    for zip_candidate in [
+        os.path.join(RAW, "ifrs9_bm.zip"),
+        os.path.join(RAW, "transfers", "ifrs9_bm.zip"),
+    ]:
+        if os.path.exists(zip_candidate):
+            print(f"📦 Reading from {zip_candidate}")
+            for name, rows in iter_csv_from_zip(zip_candidate):
+                if rows:
+                    print(f"   ↳ {name}: {len(rows):,} rows")
+                    results.append((name, rows))
+            return results
 
     # Direct CSV files
     patterns = [
@@ -223,6 +239,8 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
     per_periodo: dict[str, dict[int, float]] = defaultdict(lambda: defaultdict(float))
     # total cartera per periodo
     totals: dict[str, float] = defaultdict(float)
+    # segments[periodo][(stage, segmento)] = sum importe_pesos
+    segments: dict[str, dict[tuple[int, str], float]] = defaultdict(lambda: defaultdict(float))
 
     use_concepto_map = bool(STAGE_CONCEPT_MAP)
     unmatched_sample: list[str] = []
@@ -243,6 +261,12 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
         # Total cartera row
         if concepto == TOTAL_CARTERA_CONCEPTO:
             totals[periodo] += importe
+            continue
+
+        # Segment-level classification (más específica que stage root)
+        if concepto in SEGMENT_CONCEPT_MAP:
+            stage, seg = SEGMENT_CONCEPT_MAP[concepto]
+            segments[periodo][(stage, seg)] += importe
             continue
 
         # Stage classification
@@ -274,9 +298,15 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
     etapa2_pct = []
     etapa3_pct = []
 
+    # Segment series: for each cartera type, what % of that segment is in E2/E3
+    # Keys: comercial, consumo, vivienda
+    seg_e2_pct: dict[str, list[float | None]] = {"comercial": [], "consumo": [], "vivienda": []}
+    seg_e3_pct: dict[str, list[float | None]] = {"comercial": [], "consumo": [], "vivienda": []}
+
     for p in sorted_periodos:
         total = totals.get(p, 0.0)
         stages = per_periodo[p]
+        segs = segments.get(p, {})
 
         def pct(stage: int) -> float:
             if total <= 0:
@@ -286,6 +316,26 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
         etapa1_pct.append(pct(1))
         etapa2_pct.append(pct(2))
         etapa3_pct.append(pct(3))
+
+        # Per-segment stage % = E_stage_seg / (E1_seg + E2_seg + E3_seg) × 100
+        for seg in ("comercial", "consumo", "vivienda"):
+            if seg == "comercial":
+                # Residual: comercial E1 explicit; E2/E3 derived as total_stage - consumo - vivienda
+                e1_seg = segs.get((1, "comercial"), 0.0)
+                e2_seg = max(0.0, stages.get(2, 0.0) - segs.get((2, "consumo"), 0.0) - segs.get((2, "vivienda"), 0.0))
+                e3_seg = max(0.0, stages.get(3, 0.0) - segs.get((3, "consumo"), 0.0) - segs.get((3, "vivienda"), 0.0))
+            else:
+                e1_seg = segs.get((1, seg), 0.0)
+                e2_seg = segs.get((2, seg), 0.0)
+                e3_seg = segs.get((3, seg), 0.0)
+
+            seg_total = e1_seg + e2_seg + e3_seg
+            if seg_total > 0 and (e2_seg > 0 or e3_seg > 0):
+                seg_e2_pct[seg].append(round(e2_seg / seg_total * 100, 4))
+                seg_e3_pct[seg].append(round(e3_seg / seg_total * 100, 4))
+            else:
+                seg_e2_pct[seg].append(None)
+                seg_e3_pct[seg].append(None)
 
     # Última lectura
     ultima = None
@@ -298,6 +348,9 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
             "etapa3": etapa3_pct[-1] if etapa3_pct else 0.0,
         }
 
+    # Check if segment data is actually present (not all None)
+    has_segs = any(v is not None for v in seg_e3_pct["consumo"])
+
     return {
         "ultima_actualizacion": periodo_to_iso_month(sorted_periodos[-1]) if sorted_periodos else None,
         "fuente": "CNBV - Reporte R12A IFRS9 Banca Múltiple Sector 40",
@@ -306,7 +359,13 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
         "etapa2_pct": etapa2_pct,
         "etapa3_pct": etapa3_pct,
         "ultima": ultima,
-        "_concept_map_version": "v1 — validate against CNBV Instructivo R12A before prod",
+        # Por segmento: % de cada cartera en etapa 2 y 3 (opcional — depende de R12A)
+        **({"por_segmento": {
+            "comercial": {"etapa2_pct": seg_e2_pct["comercial"], "etapa3_pct": seg_e3_pct["comercial"]},
+            "consumo":   {"etapa2_pct": seg_e2_pct["consumo"],   "etapa3_pct": seg_e3_pct["consumo"]},
+            "vivienda":  {"etapa2_pct": seg_e2_pct["vivienda"],  "etapa3_pct": seg_e3_pct["vivienda"]},
+        }} if has_segs else {}),
+        "_concept_map_version": "v2 — segment concepts validated against catalogo_R12A_1219_BM.csv",
     }
 
 

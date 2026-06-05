@@ -407,6 +407,7 @@ const top15 = [...ents]
           etapa1={ifrs.etapa1_pct}
           etapa2={ifrs.etapa2_pct}
           etapa3={ifrs.etapa3_pct}
+          {...(ifrs.por_segmento ? { porSegmento: ifrs.por_segmento } : {})}
           client:visible
         />
       </Section>
