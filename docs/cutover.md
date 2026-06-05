@@ -30,8 +30,11 @@ Este documento define cuándo y cómo hacer el corte definitivo del dashboard le
 ### G2 — paridad visual con Playwright
 - [x] Suite Playwright corriendo en CI con `toHaveScreenshot()` — 5 baselines desktop generadas en v0.2.0-dev.1
 - [x] Threshold de diferencia ≤ 0.5% por chart (`maxDiffPixelRatio: 0.005`)
-- [ ] Screenshots mobile (375×667) — webkit pendiente de instalar en CI
-- [ ] Verificar: paridad pixel-perfect contra legacy (no solo baselines del Astro app); requiere comparar lado-a-lado tras M2-M3 charts
+- [x] 26/26 tests desktop pasan en local (snap Chromium, ubuntu26.04-x64) — 2026-06-05
+- [x] Snapshots desktop regenerados con nuevas secciones (Quitas, EPRC, TDA, IFRS9 segmento) — 2026-06-05
+- [x] Config webkit mobile (375×667 iPhone SE 3rd) añadida — solo corre en CI (ubuntu-24.04 soportado)
+- [ ] Baselines webkit pendientes: se generan en primer push CI con `--update-snapshots`
+- [ ] Verificar: paridad pixel-perfect contra legacy (no solo baselines del Astro app)
 
 ### G3 — paridad de datos
 - [x] Mismo `data/sfm-data.json` consumido por ambos (Astro `loader.ts` + legacy `index.html` leen el mismo path)
@@ -53,12 +56,14 @@ Este documento define cuándo y cómo hacer el corte definitivo del dashboard le
 
 ### G6 — ensayo en preview
 - [x] Branch dedicada `feat/app-redesign-pwa-v0.2.0-dev` creada con todo el redesign (PR #1)
-- [ ] Deploy preview de la branch a Cloudflare Pages o GitHub Pages alterno
-- [ ] Verificar carga de assets sin 404 con `base: '/'` + custom domain
+- [x] `.github/workflows/deploy-cloudflare.yml` creado — trigger en push a main (paths: app/**, data/sfm-data.json) — 2026-06-05
+- [ ] Secrets a configurar en GitHub: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_PROJECT_NAME`
+- [ ] Crear proyecto en Cloudflare Pages (dashboard.cloudflare.com) y conectar repo
+- [ ] Verificar carga de assets sin 404 con `base: '/'` + custom domain `sfmrisk.mx`
 - [x] Lighthouse 90+ en Performance (0.97-1.00) / Accessibility (1.00) / Best Practices (0.96) / SEO (1.00) en las 5 rutas
 
 ### G7 — backups y rollback path
-- [x] Tag `v0.1.0` creado localmente — push manual pendiente
+- [x] Tag `v0.1.0` creado y pusheado a origin — 2026-06-05
 - [x] DOI Zenodo de v0.1.0 asignado: `10.5281/zenodo.20370914`
 - [ ] Branch `legacy/v0.1.0` apuntando al último commit del HTML monolítico (creada en cutover día-D)
 - [ ] `legacy/v0.1.0.html` accesible (creado en cutover día-D)
