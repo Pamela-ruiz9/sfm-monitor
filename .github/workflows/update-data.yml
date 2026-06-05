@@ -149,11 +149,11 @@ jobs:
           udis_data = fetch("SP68257", (date.today() - timedelta(days=7)).strftime("%Y-%m-%d"))
           udis_actual = next((x for x in reversed(udis_data) if x["dato"] not in ("N/E", None)), None)
 
-          # 8. Salario mínimo general (SF60628) — por cambio
-          # DIAGNÓSTICO: si actual sigue en None/0 verificar la serie en BIE
-          # Alternativas conocidas: SR16734, SL11298
-          salmin_data = safe_fetch("SF60628", "2010-01-01")
-          print(f"  SF60628 raw entries: {len(salmin_data)}, muestra: {salmin_data[:3] if salmin_data else 'vacío'}")
+          # 8. Salario mínimo general diario — SR17358
+          # SF60628 descartada (retorna 96 entradas todas en '0.00' — issue #106)
+          # SR17358: Salario mínimo general México (familia SR = Salarios/Remuneraciones)
+          salmin_data = safe_fetch("SR17358", "2010-01-01")
+          print(f"  SR17358 raw entries: {len(salmin_data)}, muestra: {salmin_data[:3] if salmin_data else 'vacío'}")
           salmin_changes = []
           prev = None
           for x in salmin_data:
@@ -163,7 +163,7 @@ jobs:
               if x["dato"] != prev:
                   salmin_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": val})
                   prev = x["dato"]
-          print(f"{'✅' if salmin_changes else '⚠️ '} Salario mínimo: {salmin_changes[-1]['valor'] if salmin_changes else 'N/D'} ({salmin_changes[-1]['fecha'] if salmin_changes else 'serie SF60628 sin datos válidos — verificar ID'})")
+          print(f"{'✅' if salmin_changes else '⚠️ '} Salario mínimo: {salmin_changes[-1]['valor'] if salmin_changes else 'N/D'} ({salmin_changes[-1]['fecha'] if salmin_changes else 'serie SR17358 sin datos válidos — verificar ID en BIE'})")
 
           # 9. Remesas familiares (SE67516 — USD millones, mensual)
           # Si falla: buscar "Ingresos por remesas" en Banxico SIE y actualizar clave
@@ -237,12 +237,15 @@ jobs:
           desoc_latest = desoc_series[-1] if desoc_series else None
 
           # IGAE var. anual mensual — serie 737370
-          # Serie nueva post-dic-2025 confirmada: 737370 = IGAE var. anual mensual
-          # actualizada hasta 2026-03 (verificado 25-may-2026)
+          # Serie confirmada post-dic-2025. Los datos pre-2025-12 son de otra cobertura/metodología
+          # y muestran valores anómalos (~0.2-0.6% cuando el real era ~3-5%) — issue #105.
+          # Solución: truncar al corte de migración BIE (dic 2025).
           igae_obs = fetch_inegi("737370")
+          IGAE_CUTOFF = "2025-12"
           igae_series = [
               {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
-              for o in igae_obs if o.get("OBS_VALUE") not in (None, "")
+              for o in igae_obs
+              if o.get("OBS_VALUE") not in (None, "") and o["TIME_PERIOD"].replace("/", "-") >= IGAE_CUTOFF
           ]
           igae_latest = igae_series[-1] if igae_series else None
           igae_var_anual = igae_latest["valor"] if igae_latest else None
@@ -257,8 +260,9 @@ jobs:
           ]
           informalidad_latest = informalidad_series[-1] if informalidad_series else None
 
-          # Exportaciones totales FOB — INEGI (471584)
-          # TODO: verificar clave BIE si retorna vacío
+          # Exportaciones totales FOB — INEGI (471584) — ROTA post-BIE dic 2025 (HTTP 400)
+          # issue #106: buscar nuevo ID en https://www.inegi.org.mx/app/indicadores/
+          # hasta resolver, safe_fetch devuelve [] y el campo queda null en el JSON
           export_obs = fetch_inegi("471584")
           export_series = [
               {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
@@ -266,8 +270,8 @@ jobs:
           ]
           export_latest = export_series[-1] if export_series else None
 
-          # Importaciones totales CIF — INEGI (471588)
-          # TODO: verificar clave BIE si retorna vacío
+          # Importaciones totales CIF — INEGI (471588) — ROTA post-BIE dic 2025 (HTTP 400)
+          # issue #106: buscar nuevo ID en https://www.inegi.org.mx/app/indicadores/
           import_obs = fetch_inegi("471588")
           import_series = [
               {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
@@ -275,8 +279,8 @@ jobs:
           ]
           import_latest = import_series[-1] if import_series else None
 
-          # Inversión Fija Bruta var. anual — INEGI (462219)
-          # TODO: verificar clave BIE si retorna vacío
+          # Inversión Fija Bruta var. anual — INEGI (462219) — ROTA post-BIE dic 2025 (HTTP 400)
+          # issue #106: buscar nuevo ID en https://www.inegi.org.mx/app/indicadores/
           ifb_obs = fetch_inegi("462219")
           ifb_series = [
               {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}

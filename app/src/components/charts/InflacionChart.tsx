@@ -123,6 +123,7 @@ export function InflacionChart({
       </div>
       <div className="h-64 md:h-72 -mx-1">
         <Line
+          key={range}
           data={data}
           options={{
             responsive: true,
