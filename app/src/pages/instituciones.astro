@@ -12,6 +12,7 @@ import { ComparisonChart } from '~/components/charts/ComparisonChart';
 import { ImoraChart } from '~/components/charts/ImoraChart';
 import { IcorChart } from '~/components/charts/IcorChart';
 import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
+import { MifChart } from '~/components/charts/MifChart';
 import { Ifrs9Chart } from '~/components/charts/Ifrs9Chart';
 import { ImorSegPivotChart } from '~/components/charts/ImorSegPivotChart';
 import { SofiposSegmentChart } from '~/components/charts/SofiposSegmentChart';
@@ -357,6 +358,25 @@ const top15 = [...ents]
         tone="green">
         <RoaRoeChart fechas={hpc.fechas} roa={hpc.roa} roe={hpc.roe} bancos={bancosRoaArr} client:visible />
       </Section>
+
+      {hpc.mif && hpc.tasa_activa && hpc.tasa_pasiva && (
+        <Section
+          id="mif"
+          eyebrow="Intermediación financiera"
+          title="MIF — Margen de Intermediación"
+          description="Diferencia entre la tasa activa implícita (rendimiento de la cartera) y la tasa pasiva implícita (costo de fondeo). El MIF mide la rentabilidad estructural del negocio bancario."
+          source="CNBV Sector 40 — conceptos 40200162, 40200037, 40200218"
+          tone="green">
+          <MifChart
+            fechas={hpc.fechas}
+            tasaActiva={hpc.tasa_activa}
+            tasaPasiva={hpc.tasa_pasiva}
+            mif={hpc.mif}
+            tasaBanxico={data.tasa_banxico?.historico}
+            client:visible
+          />
+        </Section>
+      )}
 
       <Section
         id="ifrs9"

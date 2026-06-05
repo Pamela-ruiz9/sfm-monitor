@@ -127,6 +127,11 @@ def build_credito() -> dict:
             "imora_total":        arr("imora_total",  nullable=True),
             "roa":                arr("roa",          nullable=True),
             "roe":                arr("roe",          nullable=True),
+            # Rentabilidad e intermediación — nullable: series disponibles desde ~2008
+            "tasa_activa":        arr("tasa_activa",  nullable=True),
+            "tasa_pasiva":        arr("tasa_pasiva",  nullable=True),
+            "mif":                arr("mif",          nullable=True),
+            "tda":                arr("tda",          nullable=True),
         },
         "historico_por_banco": historico_por_banco or None,
     }

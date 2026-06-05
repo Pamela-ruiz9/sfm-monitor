@@ -12,6 +12,14 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(credito): MifChart — Margen de Intermediación Financiera (2026-06-04)
+- `scripts/extract-cnbv-raw.py`: añade 4 conceptos sistema-nivel (entidad='5') al extractor CNBV: tasa activa implícita (40200162), tasa pasiva implícita (40200037), MIF (40200218), TDA (40200074). Todos son ratios 0–1 × 100 para puntos porcentuales.
+- `scripts/normalize-cnbv.py`: emite los 4 campos nuevos en `historico_por_cartera` como arrays nullable (disponibles desde ~2008; null en periodos anteriores).
+- `app/src/data/schema.ts`: `HistoricoCarteraSchema` extiende con `tasa_activa`, `tasa_pasiva`, `mif`, `tda` opcionales y nullable; backward-compatible.
+- `app/src/components/charts/MifChart.tsx`: gráfica de línea con 4 series — tasa activa (ámbar), tasa pasiva (azul), MIF con área (verde), tasa Banxico como step-line de referencia (mauve punteado). Colores Okabe-Ito. Tooltip con 2 decimales.
+- `app/src/pages/instituciones.astro`: sección "Intermediación financiera / MIF" entre ROA/ROE e IFRS9; condicional a que los 3 campos principales existan en el JSON.
+- `data/credito.json`, `data/sfm-data.json`: regenerados — tasa_activa 14.1%, tasa_pasiva 6.8%, MIF 7.3%, TDA 4.6% (dato mar 2026).
+
 ### feat(macro): tab Macro con IGAE, PIB y Desocupación (2026-06-01)
 - `IgaeChart.tsx`: gráfica de línea mensual para IGAE variación anual (INEGI BIE serie 737370); línea de referencia en 0%; histórico de 36 meses.
 - `PibChart.tsx`: gráfica de barras trimestral para PIB variación anual (INEGI BIE serie 737375); barras verdes/rojas según signo; línea en 0.

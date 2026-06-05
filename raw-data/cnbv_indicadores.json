@@ -6,7 +6,8 @@
     "icor_total": 1.0662,
     "imor_comercial": 7.1757,
     "imor_tarjeta": 11.1172,
-    "imor_consumo_norev": 18.5458
+    "imor_consumo_norev": 18.5458,
+    "mif": 0.0
   },
   {
     "fecha": "2001-01",
@@ -15,7 +16,9 @@
     "icor_total": 1.0565,
     "imor_comercial": 7.2912,
     "imor_tarjeta": 11.6293,
-    "imor_consumo_norev": 18.4907
+    "imor_consumo_norev": 18.4907,
+    "tasa_activa": 17.799,
+    "mif": 0.0
   },
   {
     "fecha": "2001-02",
@@ -24,7 +27,9 @@
     "icor_total": 1.0555,
     "imor_comercial": 7.3822,
     "imor_tarjeta": 11.5171,
-    "imor_consumo_norev": 18.465
+    "imor_consumo_norev": 18.465,
+    "tasa_activa": 15.954,
+    "mif": 0.0
   },
   {
     "fecha": "2001-03",
@@ -33,7 +38,9 @@
     "icor_total": 1.0818,
     "imor_comercial": 7.0287,
     "imor_tarjeta": 11.0706,
-    "imor_consumo_norev": 16.2848
+    "imor_consumo_norev": 16.2848,
+    "tasa_activa": 17.0381,
+    "mif": 0.0
   },
   {
     "fecha": "2001-04",
@@ -42,7 +49,9 @@
     "icor_total": 1.0789,
     "imor_comercial": 7.1059,
     "imor_tarjeta": 10.7047,
-    "imor_consumo_norev": 15.9794
+    "imor_consumo_norev": 15.9794,
+    "tasa_activa": 15.2019,
+    "mif": 0.0
   },
   {
     "fecha": "2001-05",
@@ -51,7 +60,9 @@
     "icor_total": 1.0788,
     "imor_comercial": 7.0378,
     "imor_tarjeta": 10.3798,
-    "imor_consumo_norev": 15.8042
+    "imor_consumo_norev": 15.8042,
+    "tasa_activa": 14.9859,
+    "mif": 0.0
   },
   {
     "fecha": "2001-06",
@@ -60,7 +71,9 @@
     "icor_total": 1.1046,
     "imor_comercial": 6.5992,
     "imor_tarjeta": 10.3042,
-    "imor_consumo_norev": 15.6496
+    "imor_consumo_norev": 15.6496,
+    "tasa_activa": 12.2691,
+    "mif": 0.0
   },
   {
     "fecha": "2001-07",
@@ -69,7 +82,9 @@
     "icor_total": 1.1001,
     "imor_comercial": 6.6107,
     "imor_tarjeta": 10.3479,
-    "imor_consumo_norev": 15.1053
+    "imor_consumo_norev": 15.1053,
+    "tasa_activa": 12.226,
+    "mif": 0.0
   },
   {
     "fecha": "2001-08",
@@ -78,7 +93,9 @@
     "icor_total": 1.1134,
     "imor_comercial": 6.5312,
     "imor_tarjeta": 10.0395,
-    "imor_consumo_norev": 15.0984
+    "imor_consumo_norev": 15.0984,
+    "tasa_activa": 11.8967,
+    "mif": 0.0
   },
   {
     "fecha": "2001-09",
@@ -87,7 +104,9 @@
     "icor_total": 1.1098,
     "imor_comercial": 6.5062,
     "imor_tarjeta": 9.7336,
-    "imor_consumo_norev": 15.2734
+    "imor_consumo_norev": 15.2734,
+    "tasa_activa": 11.9253,
+    "mif": 0.0
   },
   {
     "fecha": "2001-10",
@@ -96,7 +115,9 @@
     "icor_total": 1.0882,
     "imor_comercial": 6.5706,
     "imor_tarjeta": 9.6133,
-    "imor_consumo_norev": 15.3909
+    "imor_consumo_norev": 15.3909,
+    "tasa_activa": 11.6795,
+    "mif": 0.0
   },
   {
     "fecha": "2001-11",
@@ -105,7 +126,9 @@
     "icor_total": 1.1227,
     "imor_comercial": 5.8013,
     "imor_tarjeta": 9.5396,
-    "imor_consumo_norev": 13.8901
+    "imor_consumo_norev": 13.8901,
+    "tasa_activa": 7.4983,
+    "mif": 0.0
   },
   {
     "fecha": "2001-12",
@@ -115,7 +138,10 @@
     "roe": 7.598,
     "imor_comercial": 3.3626,
     "imor_tarjeta": 8.6835,
-    "imor_consumo_norev": 12.076
+    "imor_consumo_norev": 12.076,
+    "tasa_activa": 10.3609,
+    "tasa_pasiva": 9.0576,
+    "mif": 4.2062
   },
   {
     "fecha": "2002-01",
@@ -125,7 +151,10 @@
     "roe": 8.0309,
     "imor_comercial": 3.6031,
     "imor_tarjeta": 6.0469,
-    "imor_consumo_norev": 12.6942
+    "imor_consumo_norev": 12.6942,
+    "tasa_activa": 9.7601,
+    "tasa_pasiva": 8.4066,
+    "mif": 4.1895
   },
   {
     "fecha": "2002-02",
@@ -135,7 +164,10 @@
     "roe": 8.3948,
     "imor_comercial": 3.4399,
     "imor_tarjeta": 8.6627,
-    "imor_consumo_norev": 12.564
+    "imor_consumo_norev": 12.564,
+    "tasa_activa": 9.3781,
+    "tasa_pasiva": 7.8554,
+    "mif": 4.1917
   },
   {
     "fecha": "2002-03",
@@ -145,7 +177,10 @@
     "roe": 8.6659,
     "imor_comercial": 3.4528,
     "imor_tarjeta": 7.8284,
-    "imor_consumo_norev": 12.5053
+    "imor_consumo_norev": 12.5053,
+    "tasa_activa": 9.9185,
+    "tasa_pasiva": 7.31,
+    "mif": 4.1384
   },
   {
     "fecha": "2002-04",
@@ -155,7 +190,10 @@
     "roe": 9.1394,
     "imor_comercial": 3.6358,
     "imor_tarjeta": 7.4905,
-    "imor_consumo_norev": 12.7833
+    "imor_consumo_norev": 12.7833,
+    "tasa_activa": 8.9409,
+    "tasa_pasiva": 6.8518,
+    "mif": 4.0694
   },
   {
     "fecha": "2002-05",
@@ -165,7 +203,10 @@
     "roe": 8.2147,
     "imor_comercial": 3.8482,
     "imor_tarjeta": 7.2878,
-    "imor_consumo_norev": 12.6761
+    "imor_consumo_norev": 12.6761,
+    "tasa_activa": 9.4455,
+    "tasa_pasiva": 6.4244,
+    "mif": 4.0326
   },
   {
     "fecha": "2002-06",
@@ -175,7 +216,10 @@
     "roe": 8.2193,
     "imor_comercial": 3.6186,
     "imor_tarjeta": 6.997,
-    "imor_consumo_norev": 12.3729
+    "imor_consumo_norev": 12.3729,
+    "tasa_activa": 9.6782,
+    "tasa_pasiva": 6.1861,
+    "mif": 4.05
   },
   {
     "fecha": "2002-07",
@@ -185,7 +229,10 @@
     "roe": 9.8336,
     "imor_comercial": 3.7493,
     "imor_tarjeta": 6.4703,
-    "imor_consumo_norev": 12.5515
+    "imor_consumo_norev": 12.5515,
+    "tasa_activa": 10.3001,
+    "tasa_pasiva": 6.0326,
+    "mif": 4.044
   },
   {
     "fecha": "2002-08",
@@ -195,7 +242,10 @@
     "roe": 10.5236,
     "imor_comercial": 3.7015,
     "imor_tarjeta": 6.4422,
-    "imor_consumo_norev": 12.0058
+    "imor_consumo_norev": 12.0058,
+    "tasa_activa": 9.7648,
+    "tasa_pasiva": 5.9207,
+    "mif": 3.9748
   },
   {
     "fecha": "2002-09",
@@ -205,7 +255,10 @@
     "roe": 11.3145,
     "imor_comercial": 3.4863,
     "imor_tarjeta": 6.3661,
-    "imor_consumo_norev": 11.641
+    "imor_consumo_norev": 11.641,
+    "tasa_activa": 9.883,
+    "tasa_pasiva": 5.7696,
+    "mif": 3.9547
   },
   {
     "fecha": "2002-10",
@@ -215,7 +268,10 @@
     "roe": 12.6311,
     "imor_comercial": 3.367,
     "imor_tarjeta": 6.3844,
-    "imor_consumo_norev": 11.4404
+    "imor_consumo_norev": 11.4404,
+    "tasa_activa": 12.0514,
+    "tasa_pasiva": 5.6267,
+    "mif": 4.1206
   },
   {
     "fecha": "2002-11",
@@ -225,7 +281,10 @@
     "roe": 7.3328,
     "imor_comercial": 3.363,
     "imor_tarjeta": 6.4202,
-    "imor_consumo_norev": 11.5916
+    "imor_consumo_norev": 11.5916,
+    "tasa_activa": 9.9665,
+    "tasa_pasiva": 5.9128,
+    "mif": 4.0413
   },
   {
     "fecha": "2002-12",
@@ -235,7 +294,10 @@
     "roe": 7.4981,
     "imor_comercial": 3.3403,
     "imor_tarjeta": 5.9481,
-    "imor_consumo_norev": 11.2416
+    "imor_consumo_norev": 11.2416,
+    "tasa_activa": 10.526,
+    "tasa_pasiva": 5.963,
+    "mif": 4.0007
   },
   {
     "fecha": "2003-01",
@@ -246,7 +308,11 @@
     "roe": 7.9756,
     "imor_comercial": 3.4234,
     "imor_tarjeta": 6.0443,
-    "imor_consumo_norev": 13.4048
+    "imor_consumo_norev": 13.4048,
+    "tasa_activa": 10.869,
+    "tasa_pasiva": 6.0087,
+    "mif": 4.0447,
+    "tda": 100.0
   },
   {
     "fecha": "2003-02",
@@ -257,7 +323,11 @@
     "roe": 8.3592,
     "imor_comercial": 3.3035,
     "imor_tarjeta": 5.915,
-    "imor_consumo_norev": 12.6228
+    "imor_consumo_norev": 12.6228,
+    "tasa_activa": 9.7434,
+    "tasa_pasiva": 6.0525,
+    "mif": 4.0274,
+    "tda": 100.0
   },
   {
     "fecha": "2003-03",
@@ -268,7 +338,11 @@
     "roe": 7.8444,
     "imor_comercial": 3.2585,
     "imor_tarjeta": 5.7529,
-    "imor_consumo_norev": 12.4247
+    "imor_consumo_norev": 12.4247,
+    "tasa_activa": 11.1534,
+    "tasa_pasiva": 6.1414,
+    "mif": 4.0436,
+    "tda": 100.0
   },
   {
     "fecha": "2003-04",
@@ -279,7 +353,11 @@
     "roe": 8.6523,
     "imor_comercial": 3.7623,
     "imor_tarjeta": 5.8358,
-    "imor_consumo_norev": 12.531
+    "imor_consumo_norev": 12.531,
+    "tasa_activa": 10.4346,
+    "tasa_pasiva": 6.2232,
+    "mif": 4.0939,
+    "tda": 100.0
   },
   {
     "fecha": "2003-05",
@@ -290,7 +368,11 @@
     "roe": 9.5672,
     "imor_comercial": 3.2436,
     "imor_tarjeta": 3.868,
-    "imor_consumo_norev": 12.6832
+    "imor_consumo_norev": 12.6832,
+    "tasa_activa": 9.4128,
+    "tasa_pasiva": 6.1702,
+    "mif": 4.1356,
+    "tda": 100.0
   },
   {
     "fecha": "2003-06",
@@ -301,7 +383,11 @@
     "roe": 9.1003,
     "imor_comercial": 2.9945,
     "imor_tarjeta": 3.7811,
-    "imor_consumo_norev": 11.8976
+    "imor_consumo_norev": 11.8976,
+    "tasa_activa": 8.8325,
+    "tasa_pasiva": 6.0542,
+    "mif": 4.1835,
+    "tda": 100.0
   },
   {
     "fecha": "2003-07",
@@ -312,7 +398,11 @@
     "roe": 9.0694,
     "imor_comercial": 2.9022,
     "imor_tarjeta": 3.7431,
-    "imor_consumo_norev": 11.702
+    "imor_consumo_norev": 11.702,
+    "tasa_activa": 8.7972,
+    "tasa_pasiva": 5.8908,
+    "mif": 4.2272,
+    "tda": 100.0
   },
   {
     "fecha": "2003-08",
@@ -323,7 +413,11 @@
     "roe": 8.8627,
     "imor_comercial": 2.9178,
     "imor_tarjeta": 3.5797,
-    "imor_consumo_norev": 11.523
+    "imor_consumo_norev": 11.523,
+    "tasa_activa": 8.765,
+    "tasa_pasiva": 5.7419,
+    "mif": 4.2906,
+    "tda": 100.0
   },
   {
     "fecha": "2003-09",
@@ -334,7 +428,11 @@
     "roe": 9.5819,
     "imor_comercial": 2.5275,
     "imor_tarjeta": 3.4039,
-    "imor_consumo_norev": 11.4111
+    "imor_consumo_norev": 11.4111,
+    "tasa_activa": 8.2786,
+    "tasa_pasiva": 5.6018,
+    "mif": 4.2951,
+    "tda": 100.0
   },
   {
     "fecha": "2003-10",
@@ -345,7 +443,11 @@
     "roe": 10.2437,
     "imor_comercial": 2.5607,
     "imor_tarjeta": 3.5059,
-    "imor_consumo_norev": 10.2978
+    "imor_consumo_norev": 10.2978,
+    "tasa_activa": 9.236,
+    "tasa_pasiva": 5.4533,
+    "mif": 4.2152,
+    "tda": 100.0
   },
   {
     "fecha": "2003-11",
@@ -356,7 +458,11 @@
     "roe": 14.3396,
     "imor_comercial": 2.5828,
     "imor_tarjeta": 3.539,
-    "imor_consumo_norev": 9.9656
+    "imor_consumo_norev": 9.9656,
+    "tasa_activa": 9.0828,
+    "tasa_pasiva": 5.2989,
+    "mif": 4.2932,
+    "tda": 100.0
   },
   {
     "fecha": "2003-12",
@@ -369,7 +475,11 @@
     "imor_comercial": 2.2983,
     "imor_consumo": 7.4558,
     "imor_tarjeta": 3.1525,
-    "imor_consumo_norev": 8.6055
+    "imor_consumo_norev": 8.6055,
+    "tasa_activa": 9.8595,
+    "tasa_pasiva": 5.177,
+    "mif": 4.36,
+    "tda": 5.9113
   },
   {
     "fecha": "2004-01",
@@ -382,7 +492,11 @@
     "imor_comercial": 2.6356,
     "imor_consumo": 8.3559,
     "imor_tarjeta": 3.2019,
-    "imor_consumo_norev": 7.8643
+    "imor_consumo_norev": 7.8643,
+    "tasa_activa": 9.4421,
+    "tasa_pasiva": 4.9984,
+    "mif": 4.4186,
+    "tda": 5.8019
   },
   {
     "fecha": "2004-02",
@@ -395,7 +509,11 @@
     "imor_comercial": 2.6111,
     "imor_consumo": 8.2845,
     "imor_tarjeta": 3.2,
-    "imor_consumo_norev": 7.7106
+    "imor_consumo_norev": 7.7106,
+    "tasa_activa": 9.2072,
+    "tasa_pasiva": 4.81,
+    "mif": 4.5624,
+    "tda": 5.6816
   },
   {
     "fecha": "2004-03",
@@ -408,7 +526,11 @@
     "imor_comercial": 2.5448,
     "imor_consumo": 8.1924,
     "imor_tarjeta": 2.8536,
-    "imor_consumo_norev": 7.6267
+    "imor_consumo_norev": 7.6267,
+    "tasa_activa": 10.034,
+    "tasa_pasiva": 4.6207,
+    "mif": 4.6526,
+    "tda": 5.6282
   },
   {
     "fecha": "2004-04",
@@ -421,7 +543,11 @@
     "imor_comercial": 2.542,
     "imor_consumo": 8.1631,
     "imor_tarjeta": 2.9161,
-    "imor_consumo_norev": 7.4868
+    "imor_consumo_norev": 7.4868,
+    "tasa_activa": 9.9089,
+    "tasa_pasiva": 4.4852,
+    "mif": 4.7377,
+    "tda": 5.5012
   },
   {
     "fecha": "2004-05",
@@ -434,7 +560,11 @@
     "imor_comercial": 2.3954,
     "imor_consumo": 7.1551,
     "imor_tarjeta": 2.8659,
-    "imor_consumo_norev": 7.5413
+    "imor_consumo_norev": 7.5413,
+    "tasa_activa": 9.9374,
+    "tasa_pasiva": 4.4721,
+    "mif": 4.7976,
+    "tda": 5.0274
   },
   {
     "fecha": "2004-06",
@@ -447,7 +577,11 @@
     "imor_comercial": 2.318,
     "imor_consumo": 6.7723,
     "imor_tarjeta": 2.9319,
-    "imor_consumo_norev": 7.3361
+    "imor_consumo_norev": 7.3361,
+    "tasa_activa": 10.4565,
+    "tasa_pasiva": 4.4985,
+    "mif": 4.9042,
+    "tda": 4.8448
   },
   {
     "fecha": "2004-07",
@@ -460,7 +594,11 @@
     "imor_comercial": 2.2289,
     "imor_consumo": 6.3879,
     "imor_tarjeta": 3.0116,
-    "imor_consumo_norev": 7.1569
+    "imor_consumo_norev": 7.1569,
+    "tasa_activa": 9.9281,
+    "tasa_pasiva": 4.5431,
+    "mif": 4.9473,
+    "tda": 4.683
   },
   {
     "fecha": "2004-08",
@@ -473,7 +611,11 @@
     "imor_comercial": 2.1921,
     "imor_consumo": 6.3252,
     "imor_tarjeta": 2.9947,
-    "imor_consumo_norev": 7.1279
+    "imor_consumo_norev": 7.1279,
+    "tasa_activa": 11.2478,
+    "tasa_pasiva": 4.6356,
+    "mif": 5.064,
+    "tda": 4.5891
   },
   {
     "fecha": "2004-09",
@@ -486,7 +628,11 @@
     "imor_comercial": 2.0057,
     "imor_consumo": 5.7957,
     "imor_tarjeta": 2.9306,
-    "imor_consumo_norev": 6.9473
+    "imor_consumo_norev": 6.9473,
+    "tasa_activa": 10.9157,
+    "tasa_pasiva": 4.6184,
+    "mif": 5.2946,
+    "tda": 4.5649
   },
   {
     "fecha": "2004-10",
@@ -499,7 +645,11 @@
     "imor_comercial": 2.0239,
     "imor_consumo": 5.5449,
     "imor_tarjeta": 3.0031,
-    "imor_consumo_norev": 6.6885
+    "imor_consumo_norev": 6.6885,
+    "tasa_activa": 11.5658,
+    "tasa_pasiva": 4.7121,
+    "mif": 5.3873,
+    "tda": 4.478
   },
   {
     "fecha": "2004-11",
@@ -512,7 +662,11 @@
     "imor_comercial": 1.9528,
     "imor_consumo": 5.3512,
     "imor_tarjeta": 3.1214,
-    "imor_consumo_norev": 6.4927
+    "imor_consumo_norev": 6.4927,
+    "tasa_activa": 11.7608,
+    "tasa_pasiva": 4.8535,
+    "mif": 5.4753,
+    "tda": 4.3829
   },
   {
     "fecha": "2004-12",
@@ -525,7 +679,11 @@
     "imor_comercial": 1.8699,
     "imor_consumo": 4.8605,
     "imor_tarjeta": 2.8257,
-    "imor_consumo_norev": 6.0931
+    "imor_consumo_norev": 6.0931,
+    "tasa_activa": 12.6299,
+    "tasa_pasiva": 4.9623,
+    "mif": 5.6163,
+    "tda": 4.295
   },
   {
     "fecha": "2005-01",
@@ -538,7 +696,11 @@
     "imor_comercial": 1.8756,
     "imor_consumo": 4.8137,
     "imor_tarjeta": 2.887,
-    "imor_consumo_norev": 5.7445
+    "imor_consumo_norev": 5.7445,
+    "tasa_activa": 12.6036,
+    "tasa_pasiva": 5.1074,
+    "mif": 5.7319,
+    "tda": 4.1936
   },
   {
     "fecha": "2005-02",
@@ -551,7 +713,11 @@
     "imor_comercial": 1.9184,
     "imor_consumo": 4.8769,
     "imor_tarjeta": 2.9064,
-    "imor_consumo_norev": 5.4234
+    "imor_consumo_norev": 5.4234,
+    "tasa_activa": 12.1952,
+    "tasa_pasiva": 5.2207,
+    "mif": 5.8607,
+    "tda": 4.1277
   },
   {
     "fecha": "2005-03",
@@ -564,7 +730,11 @@
     "imor_comercial": 1.8251,
     "imor_consumo": 4.6992,
     "imor_tarjeta": 2.9174,
-    "imor_consumo_norev": 5.2504
+    "imor_consumo_norev": 5.2504,
+    "tasa_activa": 13.315,
+    "tasa_pasiva": 5.3565,
+    "mif": 5.9995,
+    "tda": 4.0187
   },
   {
     "fecha": "2005-04",
@@ -577,7 +747,11 @@
     "imor_comercial": 1.8239,
     "imor_consumo": 4.5834,
     "imor_tarjeta": 3.0456,
-    "imor_consumo_norev": 4.9907
+    "imor_consumo_norev": 4.9907,
+    "tasa_activa": 13.2973,
+    "tasa_pasiva": 5.5133,
+    "mif": 6.1184,
+    "tda": 3.9323
   },
   {
     "fecha": "2005-05",
@@ -590,7 +764,11 @@
     "imor_comercial": 2.0965,
     "imor_consumo": 4.7345,
     "imor_tarjeta": 3.1928,
-    "imor_consumo_norev": 4.9052
+    "imor_consumo_norev": 4.9052,
+    "tasa_activa": 13.7194,
+    "tasa_pasiva": 5.6952,
+    "mif": 6.2656,
+    "tda": 3.8067
   },
   {
     "fecha": "2005-06",
@@ -603,7 +781,11 @@
     "imor_comercial": 1.5899,
     "imor_consumo": 3.8857,
     "imor_tarjeta": 3.2412,
-    "imor_consumo_norev": 4.7608
+    "imor_consumo_norev": 4.7608,
+    "tasa_activa": 13.5472,
+    "tasa_pasiva": 5.8549,
+    "mif": 6.344,
+    "tda": 3.7206
   },
   {
     "fecha": "2005-07",
@@ -616,7 +798,11 @@
     "imor_comercial": 1.5377,
     "imor_consumo": 3.6783,
     "imor_tarjeta": 3.3949,
-    "imor_consumo_norev": 4.6071
+    "imor_consumo_norev": 4.6071,
+    "tasa_activa": 13.8256,
+    "tasa_pasiva": 6.0202,
+    "mif": 6.4943,
+    "tda": 3.6397
   },
   {
     "fecha": "2005-08",
@@ -629,7 +815,11 @@
     "imor_comercial": 0.9999,
     "imor_consumo": 2.5778,
     "imor_tarjeta": 3.4957,
-    "imor_consumo_norev": 4.6498
+    "imor_consumo_norev": 4.6498,
+    "tasa_activa": 13.7943,
+    "tasa_pasiva": 6.1861,
+    "mif": 6.5482,
+    "tda": 3.5602
   },
   {
     "fecha": "2005-09",
@@ -642,7 +832,11 @@
     "imor_comercial": 1.0382,
     "imor_consumo": 2.2735,
     "imor_tarjeta": 3.5538,
-    "imor_consumo_norev": 4.215
+    "imor_consumo_norev": 4.215,
+    "tasa_activa": 13.8294,
+    "tasa_pasiva": 6.3792,
+    "mif": 6.6117,
+    "tda": 3.3853
   },
   {
     "fecha": "2005-10",
@@ -655,7 +849,11 @@
     "imor_comercial": 1.0111,
     "imor_consumo": 2.1759,
     "imor_tarjeta": 3.4823,
-    "imor_consumo_norev": 4.0264
+    "imor_consumo_norev": 4.0264,
+    "tasa_activa": 14.1642,
+    "tasa_pasiva": 6.4848,
+    "mif": 6.7268,
+    "tda": 3.3714
   },
   {
     "fecha": "2005-11",
@@ -668,7 +866,11 @@
     "imor_comercial": 1.0146,
     "imor_consumo": 2.0499,
     "imor_tarjeta": 3.5018,
-    "imor_consumo_norev": 3.848
+    "imor_consumo_norev": 3.848,
+    "tasa_activa": 13.978,
+    "tasa_pasiva": 6.5504,
+    "mif": 6.8395,
+    "tda": 3.3072
   },
   {
     "fecha": "2005-12",
@@ -681,7 +883,11 @@
     "imor_comercial": 0.9925,
     "imor_consumo": 1.8693,
     "imor_tarjeta": 3.1293,
-    "imor_consumo_norev": 3.2288
+    "imor_consumo_norev": 3.2288,
+    "tasa_activa": 14.2032,
+    "tasa_pasiva": 6.5613,
+    "mif": 6.9461,
+    "tda": 3.1546
   },
   {
     "fecha": "2006-01",
@@ -694,7 +900,11 @@
     "imor_comercial": 0.9681,
     "imor_consumo": 1.9196,
     "imor_tarjeta": 3.1824,
-    "imor_consumo_norev": 3.201
+    "imor_consumo_norev": 3.201,
+    "tasa_activa": 13.9749,
+    "tasa_pasiva": 6.5526,
+    "mif": 7.0651,
+    "tda": 3.1347
   },
   {
     "fecha": "2006-02",
@@ -707,7 +917,11 @@
     "imor_comercial": 0.9832,
     "imor_consumo": 1.8982,
     "imor_tarjeta": 3.2044,
-    "imor_consumo_norev": 3.2151
+    "imor_consumo_norev": 3.2151,
+    "tasa_activa": 13.1278,
+    "tasa_pasiva": 6.5174,
+    "mif": 7.1674,
+    "tda": 3.1064
   },
   {
     "fecha": "2006-03",
@@ -720,7 +934,11 @@
     "imor_comercial": 0.686,
     "imor_consumo": 1.5106,
     "imor_tarjeta": 3.3278,
-    "imor_consumo_norev": 2.9758
+    "imor_consumo_norev": 2.9758,
+    "tasa_activa": 13.6274,
+    "tasa_pasiva": 6.4203,
+    "mif": 7.2802,
+    "tda": 3.0972
   },
   {
     "fecha": "2006-04",
@@ -733,7 +951,11 @@
     "imor_comercial": 0.664,
     "imor_consumo": 1.4369,
     "imor_tarjeta": 3.5293,
-    "imor_consumo_norev": 2.9092
+    "imor_consumo_norev": 2.9092,
+    "tasa_activa": 13.2824,
+    "tasa_pasiva": 6.3041,
+    "mif": 7.3898,
+    "tda": 3.0636
   },
   {
     "fecha": "2006-05",
@@ -746,7 +968,11 @@
     "imor_comercial": 0.6618,
     "imor_consumo": 1.4187,
     "imor_tarjeta": 3.8087,
-    "imor_consumo_norev": 2.9619
+    "imor_consumo_norev": 2.9619,
+    "tasa_activa": 13.4829,
+    "tasa_pasiva": 6.1521,
+    "mif": 7.5038,
+    "tda": 3.0079
   },
   {
     "fecha": "2006-06",
@@ -759,7 +985,11 @@
     "imor_comercial": 0.6273,
     "imor_consumo": 1.355,
     "imor_tarjeta": 3.9131,
-    "imor_consumo_norev": 2.8632
+    "imor_consumo_norev": 2.8632,
+    "tasa_activa": 14.2882,
+    "tasa_pasiva": 6.0215,
+    "mif": 7.7153,
+    "tda": 2.9991
   },
   {
     "fecha": "2006-07",
@@ -772,7 +1002,11 @@
     "imor_comercial": 0.6323,
     "imor_consumo": 1.3097,
     "imor_tarjeta": 3.9747,
-    "imor_consumo_norev": 2.8577
+    "imor_consumo_norev": 2.8577,
+    "tasa_activa": 13.7653,
+    "tasa_pasiva": 5.8985,
+    "mif": 7.8327,
+    "tda": 2.9748
   },
   {
     "fecha": "2006-08",
@@ -785,7 +1019,11 @@
     "imor_comercial": 0.6583,
     "imor_consumo": 1.3136,
     "imor_tarjeta": 4.0453,
-    "imor_consumo_norev": 2.841
+    "imor_consumo_norev": 2.841,
+    "tasa_activa": 14.3439,
+    "tasa_pasiva": 5.725,
+    "mif": 8.0497,
+    "tda": 2.9815
   },
   {
     "fecha": "2006-09",
@@ -798,7 +1036,11 @@
     "imor_comercial": 0.6665,
     "imor_consumo": 1.2658,
     "imor_tarjeta": 4.1486,
-    "imor_consumo_norev": 2.7631
+    "imor_consumo_norev": 2.7631,
+    "tasa_activa": 14.2837,
+    "tasa_pasiva": 5.6243,
+    "mif": 8.166,
+    "tda": 2.9585
   },
   {
     "fecha": "2006-10",
@@ -811,7 +1053,11 @@
     "imor_comercial": 0.6468,
     "imor_consumo": 1.213,
     "imor_tarjeta": 4.3163,
-    "imor_consumo_norev": 2.7838
+    "imor_consumo_norev": 2.7838,
+    "tasa_activa": 14.4979,
+    "tasa_pasiva": 5.5362,
+    "mif": 8.2867,
+    "tda": 2.9308
   },
   {
     "fecha": "2006-11",
@@ -824,7 +1070,11 @@
     "imor_comercial": 0.6468,
     "imor_consumo": 1.1962,
     "imor_tarjeta": 4.5183,
-    "imor_consumo_norev": 2.8616
+    "imor_consumo_norev": 2.8616,
+    "tasa_activa": 14.3059,
+    "tasa_pasiva": 5.4078,
+    "mif": 8.4377,
+    "tda": 2.946
   },
   {
     "fecha": "2006-12",
@@ -837,7 +1087,11 @@
     "imor_comercial": 0.5768,
     "imor_consumo": 1.1088,
     "imor_tarjeta": 4.4465,
-    "imor_consumo_norev": 2.7124
+    "imor_consumo_norev": 2.7124,
+    "tasa_activa": 14.5162,
+    "tasa_pasiva": 5.325,
+    "mif": 8.5438,
+    "tda": 2.981
   },
   {
     "fecha": "2007-01",
@@ -850,7 +1104,11 @@
     "imor_comercial": 0.654,
     "imor_consumo": 1.2409,
     "imor_tarjeta": 4.5966,
-    "imor_consumo_norev": 2.9946
+    "imor_consumo_norev": 2.9946,
+    "tasa_activa": 14.5804,
+    "tasa_pasiva": 5.2605,
+    "mif": 8.6666,
+    "tda": 3.0938
   },
   {
     "fecha": "2007-02",
@@ -863,7 +1121,11 @@
     "imor_comercial": 0.684,
     "imor_consumo": 1.2838,
     "imor_tarjeta": 4.7672,
-    "imor_consumo_norev": 3.0097
+    "imor_consumo_norev": 3.0097,
+    "tasa_activa": 13.8502,
+    "tasa_pasiva": 5.2148,
+    "mif": 8.7611,
+    "tda": 3.2136
   },
   {
     "fecha": "2007-03",
@@ -876,7 +1138,11 @@
     "imor_comercial": 0.6959,
     "imor_consumo": 1.1984,
     "imor_tarjeta": 4.6376,
-    "imor_consumo_norev": 2.9871
+    "imor_consumo_norev": 2.9871,
+    "tasa_activa": 14.7383,
+    "tasa_pasiva": 5.1961,
+    "mif": 8.8853,
+    "tda": 3.4189
   },
   {
     "fecha": "2007-04",
@@ -889,7 +1155,11 @@
     "imor_comercial": 0.7644,
     "imor_consumo": 1.2936,
     "imor_tarjeta": 4.84,
-    "imor_consumo_norev": 3.0463
+    "imor_consumo_norev": 3.0463,
+    "tasa_activa": 14.4729,
+    "tasa_pasiva": 5.1737,
+    "mif": 9.0051,
+    "tda": 3.5736
   },
   {
     "fecha": "2007-05",
@@ -902,7 +1172,11 @@
     "imor_comercial": 0.7257,
     "imor_consumo": 1.3093,
     "imor_tarjeta": 5.0018,
-    "imor_consumo_norev": 3.2052
+    "imor_consumo_norev": 3.2052,
+    "tasa_activa": 14.9679,
+    "tasa_pasiva": 5.1667,
+    "mif": 9.1329,
+    "tda": 3.7866
   },
   {
     "fecha": "2007-06",
@@ -915,7 +1189,11 @@
     "imor_comercial": 0.717,
     "imor_consumo": 1.2813,
     "imor_tarjeta": 5.0882,
-    "imor_consumo_norev": 3.116
+    "imor_consumo_norev": 3.116,
+    "tasa_activa": 14.4279,
+    "tasa_pasiva": 5.1631,
+    "mif": 9.1345,
+    "tda": 3.9479
   },
   {
     "fecha": "2007-07",
@@ -928,7 +1206,11 @@
     "imor_comercial": 0.839,
     "imor_consumo": 1.4353,
     "imor_tarjeta": 5.3328,
-    "imor_consumo_norev": 3.1812
+    "imor_consumo_norev": 3.1812,
+    "tasa_activa": 15.3574,
+    "tasa_pasiva": 5.1714,
+    "mif": 9.2551,
+    "tda": 4.1118
   },
   {
     "fecha": "2007-08",
@@ -941,7 +1223,11 @@
     "imor_comercial": 0.7464,
     "imor_consumo": 1.3331,
     "imor_tarjeta": 5.4477,
-    "imor_consumo_norev": 3.1492
+    "imor_consumo_norev": 3.1492,
+    "tasa_activa": 14.9637,
+    "tasa_pasiva": 5.217,
+    "mif": 9.2457,
+    "tda": 4.2982
   },
   {
     "fecha": "2007-09",
@@ -954,7 +1240,11 @@
     "imor_comercial": 0.7482,
     "imor_consumo": 1.3227,
     "imor_tarjeta": 5.5999,
-    "imor_consumo_norev": 3.0582
+    "imor_consumo_norev": 3.0582,
+    "tasa_activa": 14.8094,
+    "tasa_pasiva": 5.2224,
+    "mif": 9.2832,
+    "tda": 4.4661
   },
   {
     "fecha": "2007-10",
@@ -967,7 +1257,11 @@
     "imor_comercial": 0.7345,
     "imor_consumo": 1.2984,
     "imor_tarjeta": 5.8077,
-    "imor_consumo_norev": 3.2038
+    "imor_consumo_norev": 3.2038,
+    "tasa_activa": 14.9031,
+    "tasa_pasiva": 5.2157,
+    "mif": 9.3178,
+    "tda": 4.6641
   },
   {
     "fecha": "2007-11",
@@ -980,7 +1274,11 @@
     "imor_comercial": 0.6943,
     "imor_consumo": 1.2771,
     "imor_tarjeta": 5.8491,
-    "imor_consumo_norev": 3.1774
+    "imor_consumo_norev": 3.1774,
+    "tasa_activa": 14.5798,
+    "tasa_pasiva": 5.257,
+    "mif": 9.2982,
+    "tda": 4.8547
   },
   {
     "fecha": "2007-12",
@@ -993,7 +1291,11 @@
     "imor_comercial": 0.737,
     "imor_consumo": 1.326,
     "imor_tarjeta": 5.8584,
-    "imor_consumo_norev": 3.1154
+    "imor_consumo_norev": 3.1154,
+    "tasa_activa": 14.8252,
+    "tasa_pasiva": 5.2801,
+    "mif": 9.3133,
+    "tda": 5.1229
   },
   {
     "fecha": "2008-01",
@@ -1006,7 +1308,11 @@
     "imor_comercial": 0.7577,
     "imor_consumo": 1.3476,
     "imor_tarjeta": 5.8879,
-    "imor_consumo_norev": 3.1312
+    "imor_consumo_norev": 3.1312,
+    "tasa_activa": 14.7311,
+    "tasa_pasiva": 5.2965,
+    "mif": 9.303,
+    "tda": 5.2586
   },
   {
     "fecha": "2008-02",
@@ -1019,7 +1325,11 @@
     "imor_comercial": 0.7484,
     "imor_consumo": 1.3591,
     "imor_tarjeta": 5.9793,
-    "imor_consumo_norev": 2.8132
+    "imor_consumo_norev": 2.8132,
+    "tasa_activa": 14.422,
+    "tasa_pasiva": 5.3262,
+    "mif": 9.3157,
+    "tda": 5.4324
   },
   {
     "fecha": "2008-03",
@@ -1032,7 +1342,11 @@
     "imor_comercial": 0.7646,
     "imor_consumo": 1.3955,
     "imor_tarjeta": 5.7466,
-    "imor_consumo_norev": 2.9246
+    "imor_consumo_norev": 2.9246,
+    "tasa_activa": 15.2281,
+    "tasa_pasiva": 5.34,
+    "mif": 9.3413,
+    "tda": 5.4635
   },
   {
     "fecha": "2008-04",
@@ -1045,7 +1359,11 @@
     "imor_comercial": 1.0029,
     "imor_consumo": 1.7233,
     "imor_tarjeta": 6.2096,
-    "imor_consumo_norev": 2.9951
+    "imor_consumo_norev": 2.9951,
+    "tasa_activa": 14.9201,
+    "tasa_pasiva": 5.3595,
+    "mif": 9.3621,
+    "tda": 5.4923
   },
   {
     "fecha": "2008-05",
@@ -1058,7 +1376,11 @@
     "imor_comercial": 1.0124,
     "imor_consumo": 1.703,
     "imor_tarjeta": 6.7878,
-    "imor_consumo_norev": 3.0156
+    "imor_consumo_norev": 3.0156,
+    "tasa_activa": 15.0941,
+    "tasa_pasiva": 5.375,
+    "mif": 9.3581,
+    "tda": 5.5409
   },
   {
     "fecha": "2008-06",
@@ -1071,7 +1393,11 @@
     "imor_comercial": 0.797,
     "imor_consumo": 1.4225,
     "imor_tarjeta": 6.9527,
-    "imor_consumo_norev": 3.0997
+    "imor_consumo_norev": 3.0997,
+    "tasa_activa": 15.1834,
+    "tasa_pasiva": 5.3964,
+    "mif": 9.412,
+    "tda": 5.649
   },
   {
     "fecha": "2008-07",
@@ -1084,7 +1410,11 @@
     "imor_comercial": 0.8137,
     "imor_consumo": 1.4676,
     "imor_tarjeta": 7.303,
-    "imor_consumo_norev": 3.1444
+    "imor_consumo_norev": 3.1444,
+    "tasa_activa": 15.2325,
+    "tasa_pasiva": 5.4147,
+    "mif": 9.3953,
+    "tda": 5.7334
   },
   {
     "fecha": "2008-08",
@@ -1097,7 +1427,11 @@
     "imor_comercial": 0.8084,
     "imor_consumo": 1.4629,
     "imor_tarjeta": 7.5098,
-    "imor_consumo_norev": 3.232
+    "imor_consumo_norev": 3.232,
+    "tasa_activa": 15.3402,
+    "tasa_pasiva": 5.4358,
+    "mif": 9.4168,
+    "tda": 5.8482
   },
   {
     "fecha": "2008-09",
@@ -1110,7 +1444,11 @@
     "imor_comercial": 0.8424,
     "imor_consumo": 1.5011,
     "imor_tarjeta": 7.7162,
-    "imor_consumo_norev": 3.3775
+    "imor_consumo_norev": 3.3775,
+    "tasa_activa": 15.435,
+    "tasa_pasiva": 5.4633,
+    "mif": 9.4495,
+    "tda": 6.0487
   },
   {
     "fecha": "2008-10",
@@ -1123,7 +1461,11 @@
     "imor_comercial": 1.2127,
     "imor_consumo": 1.9782,
     "imor_tarjeta": 8.128,
-    "imor_consumo_norev": 3.4442
+    "imor_consumo_norev": 3.4442,
+    "tasa_activa": 15.6734,
+    "tasa_pasiva": 5.742,
+    "mif": 9.2396,
+    "tda": 6.2242
   },
   {
     "fecha": "2008-11",
@@ -1136,7 +1478,11 @@
     "imor_comercial": 1.3895,
     "imor_consumo": 2.1263,
     "imor_tarjeta": 8.521,
-    "imor_consumo_norev": 3.5152
+    "imor_consumo_norev": 3.5152,
+    "tasa_activa": 15.3431,
+    "tasa_pasiva": 5.8276,
+    "mif": 9.2236,
+    "tda": 6.3923
   },
   {
     "fecha": "2008-12",
@@ -1149,7 +1495,11 @@
     "imor_comercial": 1.0935,
     "imor_consumo": 1.8634,
     "imor_tarjeta": 8.0495,
-    "imor_consumo_norev": 3.5244
+    "imor_consumo_norev": 3.5244,
+    "tasa_activa": 15.5141,
+    "tasa_pasiva": 5.694,
+    "mif": 9.4288,
+    "tda": 6.7275
   },
   {
     "fecha": "2009-01",
@@ -1162,7 +1512,11 @@
     "imor_comercial": 1.2693,
     "imor_consumo": 2.0808,
     "imor_tarjeta": 8.3274,
-    "imor_consumo_norev": 3.6203
+    "imor_consumo_norev": 3.6203,
+    "tasa_activa": 15.2969,
+    "tasa_pasiva": 5.7715,
+    "mif": 9.3994,
+    "tda": 6.8748
   },
   {
     "fecha": "2009-02",
@@ -1175,7 +1529,11 @@
     "imor_comercial": 1.3401,
     "imor_consumo": 2.1908,
     "imor_tarjeta": 8.6285,
-    "imor_consumo_norev": 3.6547
+    "imor_consumo_norev": 3.6547,
+    "tasa_activa": 13.9619,
+    "tasa_pasiva": 5.7509,
+    "mif": 9.3807,
+    "tda": 7.0412
   },
   {
     "fecha": "2009-03",
@@ -1188,7 +1546,11 @@
     "imor_comercial": 1.2902,
     "imor_consumo": 2.2883,
     "imor_tarjeta": 8.6652,
-    "imor_consumo_norev": 3.7968
+    "imor_consumo_norev": 3.7968,
+    "tasa_activa": 14.5839,
+    "tasa_pasiva": 5.7301,
+    "mif": 9.3657,
+    "tda": 7.3203
   },
   {
     "fecha": "2009-04",
@@ -1201,7 +1563,11 @@
     "imor_comercial": 1.455,
     "imor_consumo": 2.5076,
     "imor_tarjeta": 9.0798,
-    "imor_consumo_norev": 3.9418
+    "imor_consumo_norev": 3.9418,
+    "tasa_activa": 13.9724,
+    "tasa_pasiva": 5.6701,
+    "mif": 9.3569,
+    "tda": 7.5823
   },
   {
     "fecha": "2009-05",
@@ -1215,7 +1581,11 @@
     "imor_consumo": 2.6819,
     "imor_vivienda": 4.0364,
     "imor_tarjeta": 9.655,
-    "imor_consumo_norev": 4.1552
+    "imor_consumo_norev": 4.1552,
+    "tasa_activa": 14.021,
+    "tasa_pasiva": 5.6961,
+    "mif": 9.2594,
+    "tda": 7.8247
   },
   {
     "fecha": "2009-06",
@@ -1229,7 +1599,11 @@
     "imor_consumo": 2.7368,
     "imor_vivienda": 4.1905,
     "imor_tarjeta": 9.4892,
-    "imor_consumo_norev": 4.3124
+    "imor_consumo_norev": 4.3124,
+    "tasa_activa": 13.2569,
+    "tasa_pasiva": 5.5838,
+    "mif": 9.215,
+    "tda": 8.0994
   },
   {
     "fecha": "2009-07",
@@ -1243,7 +1617,11 @@
     "imor_consumo": 2.7511,
     "imor_vivienda": 4.2587,
     "imor_tarjeta": 9.2795,
-    "imor_consumo_norev": 4.3502
+    "imor_consumo_norev": 4.3502,
+    "tasa_activa": 13.1804,
+    "tasa_pasiva": 5.3698,
+    "mif": 9.2615,
+    "tda": 8.3222
   },
   {
     "fecha": "2009-08",
@@ -1257,7 +1635,11 @@
     "imor_consumo": 2.8653,
     "imor_vivienda": 4.5757,
     "imor_tarjeta": 8.4228,
-    "imor_consumo_norev": 4.4972
+    "imor_consumo_norev": 4.4972,
+    "tasa_activa": 13.0825,
+    "tasa_pasiva": 5.1615,
+    "mif": 9.2962,
+    "tda": 8.6573
   },
   {
     "fecha": "2009-09",
@@ -1271,7 +1653,11 @@
     "imor_consumo": 2.9021,
     "imor_vivienda": 4.3378,
     "imor_tarjeta": 7.8586,
-    "imor_consumo_norev": 4.5488
+    "imor_consumo_norev": 4.5488,
+    "tasa_activa": 12.8817,
+    "tasa_pasiva": 4.9226,
+    "mif": 9.3145,
+    "tda": 8.7915
   },
   {
     "fecha": "2009-10",
@@ -1285,7 +1671,11 @@
     "imor_consumo": 2.8656,
     "imor_vivienda": 4.2666,
     "imor_tarjeta": 7.7593,
-    "imor_consumo_norev": 4.6806
+    "imor_consumo_norev": 4.6806,
+    "tasa_activa": 12.85,
+    "tasa_pasiva": 4.5211,
+    "mif": 9.4861,
+    "tda": 8.839
   },
   {
     "fecha": "2009-11",
@@ -1299,7 +1689,11 @@
     "imor_consumo": 2.8516,
     "imor_vivienda": 3.9841,
     "imor_tarjeta": 7.5737,
-    "imor_consumo_norev": 4.8206
+    "imor_consumo_norev": 4.8206,
+    "tasa_activa": 12.6105,
+    "tasa_pasiva": 4.313,
+    "mif": 9.4594,
+    "tda": 8.886
   },
   {
     "fecha": "2009-12",
@@ -1313,7 +1707,11 @@
     "imor_consumo": 2.6532,
     "imor_vivienda": 4.0321,
     "imor_tarjeta": 7.1385,
-    "imor_consumo_norev": 4.6276
+    "imor_consumo_norev": 4.6276,
+    "tasa_activa": 13.2708,
+    "tasa_pasiva": 4.2409,
+    "mif": 9.3179,
+    "tda": 8.7093
   },
   {
     "fecha": "2010-01",
@@ -1327,7 +1725,11 @@
     "imor_consumo": 2.7195,
     "imor_vivienda": 3.6793,
     "imor_tarjeta": 6.8971,
-    "imor_consumo_norev": 4.643
+    "imor_consumo_norev": 4.643,
+    "tasa_activa": 12.5046,
+    "tasa_pasiva": 4.0153,
+    "mif": 9.3111,
+    "tda": 8.6139
   },
   {
     "fecha": "2010-02",
@@ -1341,7 +1743,11 @@
     "imor_consumo": 2.6054,
     "imor_vivienda": 3.5408,
     "imor_tarjeta": 6.465,
-    "imor_consumo_norev": 4.7334
+    "imor_consumo_norev": 4.7334,
+    "tasa_activa": 11.7506,
+    "tasa_pasiva": 3.8551,
+    "mif": 9.2817,
+    "tda": 8.5134
   },
   {
     "fecha": "2010-03",
@@ -1355,7 +1761,11 @@
     "imor_consumo": 2.4315,
     "imor_vivienda": 3.3739,
     "imor_tarjeta": 5.8842,
-    "imor_consumo_norev": 4.5621
+    "imor_consumo_norev": 4.5621,
+    "tasa_activa": 12.4137,
+    "tasa_pasiva": 3.6953,
+    "mif": 9.2509,
+    "tda": 8.3771
   },
   {
     "fecha": "2010-04",
@@ -1369,7 +1779,11 @@
     "imor_consumo": 2.7271,
     "imor_vivienda": 3.3178,
     "imor_tarjeta": 5.8455,
-    "imor_consumo_norev": 4.5283
+    "imor_consumo_norev": 4.5283,
+    "tasa_activa": 12.3237,
+    "tasa_pasiva": 3.5789,
+    "mif": 9.2262,
+    "tda": 8.2462
   },
   {
     "fecha": "2010-05",
@@ -1383,7 +1797,11 @@
     "imor_consumo": 2.7853,
     "imor_vivienda": 3.2855,
     "imor_tarjeta": 5.9089,
-    "imor_consumo_norev": 4.5443
+    "imor_consumo_norev": 4.5443,
+    "tasa_activa": 12.586,
+    "tasa_pasiva": 3.3862,
+    "mif": 9.2869,
+    "tda": 8.0258
   },
   {
     "fecha": "2010-06",
@@ -1397,7 +1815,11 @@
     "imor_consumo": 2.6716,
     "imor_vivienda": 2.9211,
     "imor_tarjeta": 5.472,
-    "imor_consumo_norev": 4.3451
+    "imor_consumo_norev": 4.3451,
+    "tasa_activa": 12.1945,
+    "tasa_pasiva": 3.329,
+    "mif": 9.2536,
+    "tda": 7.7871
   },
   {
     "fecha": "2010-07",
@@ -1411,7 +1833,11 @@
     "imor_consumo": 2.8926,
     "imor_vivienda": 2.6139,
     "imor_tarjeta": 5.223,
-    "imor_consumo_norev": 4.2833
+    "imor_consumo_norev": 4.2833,
+    "tasa_activa": 12.3457,
+    "tasa_pasiva": 3.3408,
+    "mif": 9.1738,
+    "tda": 7.5505
   },
   {
     "fecha": "2010-08",
@@ -1425,7 +1851,11 @@
     "imor_consumo": 2.7439,
     "imor_vivienda": 2.6745,
     "imor_tarjeta": 5.07,
-    "imor_consumo_norev": 4.2556
+    "imor_consumo_norev": 4.2556,
+    "tasa_activa": 12.402,
+    "tasa_pasiva": 3.3561,
+    "mif": 9.0956,
+    "tda": 7.1496
   },
   {
     "fecha": "2010-09",
@@ -1439,7 +1869,11 @@
     "imor_consumo": 2.5375,
     "imor_vivienda": 2.5641,
     "imor_tarjeta": 4.8441,
-    "imor_consumo_norev": 4.1761
+    "imor_consumo_norev": 4.1761,
+    "tasa_activa": 12.1195,
+    "tasa_pasiva": 3.3695,
+    "mif": 9.0248,
+    "tda": 6.8504
   },
   {
     "fecha": "2010-10",
@@ -1453,7 +1887,11 @@
     "imor_consumo": 2.5493,
     "imor_vivienda": 2.3454,
     "imor_tarjeta": 4.742,
-    "imor_consumo_norev": 4.0869
+    "imor_consumo_norev": 4.0869,
+    "tasa_activa": 12.2827,
+    "tasa_pasiva": 3.3288,
+    "mif": 9.0179,
+    "tda": 6.6093
   },
   {
     "fecha": "2010-11",
@@ -1467,7 +1905,11 @@
     "imor_consumo": 2.623,
     "imor_vivienda": 2.3833,
     "imor_tarjeta": 4.7344,
-    "imor_consumo_norev": 3.9928
+    "imor_consumo_norev": 3.9928,
+    "tasa_activa": 12.1987,
+    "tasa_pasiva": 3.2758,
+    "mif": 9.0353,
+    "tda": 6.355
   },
   {
     "fecha": "2010-12",
@@ -1481,7 +1923,11 @@
     "imor_consumo": 2.6876,
     "imor_vivienda": 2.239,
     "imor_tarjeta": 4.3576,
-    "imor_consumo_norev": 3.6278
+    "imor_consumo_norev": 3.6278,
+    "tasa_activa": 12.1789,
+    "tasa_pasiva": 3.2896,
+    "mif": 8.9409,
+    "tda": 6.2303
   },
   {
     "fecha": "2011-01",
@@ -1495,7 +1941,11 @@
     "imor_consumo": 2.7466,
     "imor_vivienda": 1.9913,
     "imor_tarjeta": 4.1653,
-    "imor_consumo_norev": 3.6786
+    "imor_consumo_norev": 3.6786,
+    "tasa_activa": 12.2533,
+    "tasa_pasiva": 3.2902,
+    "mif": 8.9174,
+    "tda": 6.2251
   },
   {
     "fecha": "2011-02",
@@ -1509,7 +1959,11 @@
     "imor_consumo": 2.6551,
     "imor_vivienda": 1.7328,
     "imor_tarjeta": 3.9434,
-    "imor_consumo_norev": 3.5582
+    "imor_consumo_norev": 3.5582,
+    "tasa_activa": 11.7351,
+    "tasa_pasiva": 3.3073,
+    "mif": 8.8845,
+    "tda": 6.0019
   },
   {
     "fecha": "2011-03",
@@ -1523,7 +1977,11 @@
     "imor_consumo": 2.708,
     "imor_vivienda": 1.5512,
     "imor_tarjeta": 3.7562,
-    "imor_consumo_norev": 3.4831
+    "imor_consumo_norev": 3.4831,
+    "tasa_activa": 12.2023,
+    "tasa_pasiva": 3.3197,
+    "mif": 8.8513,
+    "tda": 5.7558
   },
   {
     "fecha": "2011-04",
@@ -1537,7 +1995,11 @@
     "imor_consumo": 2.7561,
     "imor_vivienda": 1.5426,
     "imor_tarjeta": 3.8175,
-    "imor_consumo_norev": 3.4817
+    "imor_consumo_norev": 3.4817,
+    "tasa_activa": 12.0853,
+    "tasa_pasiva": 3.3349,
+    "mif": 8.8057,
+    "tda": 5.5566
   },
   {
     "fecha": "2011-05",
@@ -1551,7 +2013,11 @@
     "imor_consumo": 2.8252,
     "imor_vivienda": 1.758,
     "imor_tarjeta": 4.2507,
-    "imor_consumo_norev": 4.2362
+    "imor_consumo_norev": 4.2362,
+    "tasa_activa": 12.3577,
+    "tasa_pasiva": 3.3439,
+    "mif": 8.7892,
+    "tda": 5.3806
   },
   {
     "fecha": "2011-06",
@@ -1565,7 +2031,11 @@
     "imor_consumo": 2.871,
     "imor_vivienda": 1.6404,
     "imor_tarjeta": 4.3137,
-    "imor_consumo_norev": 4.2455
+    "imor_consumo_norev": 4.2455,
+    "tasa_activa": 12.404,
+    "tasa_pasiva": 3.3405,
+    "mif": 8.8158,
+    "tda": 5.2049
   },
   {
     "fecha": "2011-07",
@@ -1579,7 +2049,11 @@
     "imor_consumo": 2.8667,
     "imor_vivienda": 1.714,
     "imor_tarjeta": 4.3337,
-    "imor_consumo_norev": 4.365
+    "imor_consumo_norev": 4.365,
+    "tasa_activa": 12.6252,
+    "tasa_pasiva": 3.3513,
+    "mif": 8.8278,
+    "tda": 5.115
   },
   {
     "fecha": "2011-08",
@@ -1593,7 +2067,11 @@
     "imor_consumo": 2.7974,
     "imor_vivienda": 1.8367,
     "imor_tarjeta": 4.3309,
-    "imor_consumo_norev": 4.4356
+    "imor_consumo_norev": 4.4356,
+    "tasa_activa": 12.7246,
+    "tasa_pasiva": 3.3539,
+    "mif": 8.8543,
+    "tda": 5.048
   },
   {
     "fecha": "2011-09",
@@ -1607,7 +2085,11 @@
     "imor_consumo": 2.7149,
     "imor_vivienda": 1.9365,
     "imor_tarjeta": 4.343,
-    "imor_consumo_norev": 4.0864
+    "imor_consumo_norev": 4.0864,
+    "tasa_activa": 12.897,
+    "tasa_pasiva": 3.3633,
+    "mif": 8.9044,
+    "tda": 5.0585
   },
   {
     "fecha": "2011-10",
@@ -1621,7 +2103,11 @@
     "imor_consumo": 2.8212,
     "imor_vivienda": 1.9553,
     "imor_tarjeta": 4.4425,
-    "imor_consumo_norev": 4.1639
+    "imor_consumo_norev": 4.1639,
+    "tasa_activa": 12.9874,
+    "tasa_pasiva": 3.3803,
+    "mif": 8.9553,
+    "tda": 5.0388
   },
   {
     "fecha": "2011-11",
@@ -1635,7 +2121,11 @@
     "imor_consumo": 2.8239,
     "imor_vivienda": 1.8311,
     "imor_tarjeta": 4.3431,
-    "imor_consumo_norev": 4.2374
+    "imor_consumo_norev": 4.2374,
+    "tasa_activa": 12.5744,
+    "tasa_pasiva": 3.3773,
+    "mif": 8.984,
+    "tda": 5.0396
   },
   {
     "fecha": "2011-12",
@@ -1649,7 +2139,11 @@
     "imor_consumo": 2.6934,
     "imor_vivienda": 1.6609,
     "imor_tarjeta": 4.1292,
-    "imor_consumo_norev": 3.6507
+    "imor_consumo_norev": 3.6507,
+    "tasa_activa": 12.47,
+    "tasa_pasiva": 3.3775,
+    "mif": 8.9973,
+    "tda": 4.9406
   },
   {
     "fecha": "2012-01",
@@ -1663,7 +2157,11 @@
     "imor_consumo": 2.6554,
     "imor_vivienda": 1.673,
     "imor_tarjeta": 4.1135,
-    "imor_consumo_norev": 3.7559
+    "imor_consumo_norev": 3.7559,
+    "tasa_activa": 12.837,
+    "tasa_pasiva": 3.3966,
+    "mif": 9.0336,
+    "tda": 4.7946
   },
   {
     "fecha": "2012-02",
@@ -1677,7 +2175,11 @@
     "imor_consumo": 2.7289,
     "imor_vivienda": 1.5038,
     "imor_tarjeta": 3.9948,
-    "imor_consumo_norev": 3.7265
+    "imor_consumo_norev": 3.7265,
+    "tasa_activa": 12.5386,
+    "tasa_pasiva": 3.3966,
+    "mif": 9.1058,
+    "tda": 4.8071
   },
   {
     "fecha": "2012-03",
@@ -1691,7 +2193,11 @@
     "imor_consumo": 2.8106,
     "imor_vivienda": 1.5264,
     "imor_tarjeta": 4.0023,
-    "imor_consumo_norev": 3.6582
+    "imor_consumo_norev": 3.6582,
+    "tasa_activa": 13.162,
+    "tasa_pasiva": 3.388,
+    "mif": 9.1898,
+    "tda": 4.8063
   },
   {
     "fecha": "2012-04",
@@ -1705,7 +2211,11 @@
     "imor_consumo": 2.8541,
     "imor_vivienda": 1.5793,
     "imor_tarjeta": 4.1485,
-    "imor_consumo_norev": 3.688
+    "imor_consumo_norev": 3.688,
+    "tasa_activa": 12.4298,
+    "tasa_pasiva": 3.3841,
+    "mif": 9.226,
+    "tda": 4.7979
   },
   {
     "fecha": "2012-05",
@@ -1719,7 +2229,11 @@
     "imor_consumo": 2.8546,
     "imor_vivienda": 1.7486,
     "imor_tarjeta": 4.3928,
-    "imor_consumo_norev": 3.5295
+    "imor_consumo_norev": 3.5295,
+    "tasa_activa": 12.9997,
+    "tasa_pasiva": 3.3815,
+    "mif": 9.2709,
+    "tda": 4.8515
   },
   {
     "fecha": "2012-06",
@@ -1733,7 +2247,11 @@
     "imor_consumo": 2.883,
     "imor_vivienda": 1.6183,
     "imor_tarjeta": 4.2698,
-    "imor_consumo_norev": 3.4988
+    "imor_consumo_norev": 3.4988,
+    "tasa_activa": 12.7311,
+    "tasa_pasiva": 3.3786,
+    "mif": 9.2937,
+    "tda": 4.8933
   },
   {
     "fecha": "2012-07",
@@ -1747,7 +2265,11 @@
     "imor_consumo": 2.8308,
     "imor_vivienda": 1.679,
     "imor_tarjeta": 4.3932,
-    "imor_consumo_norev": 3.6045
+    "imor_consumo_norev": 3.6045,
+    "tasa_activa": 12.9987,
+    "tasa_pasiva": 3.3726,
+    "mif": 9.3354,
+    "tda": 4.8809
   },
   {
     "fecha": "2012-08",
@@ -1761,7 +2283,11 @@
     "imor_consumo": 2.9497,
     "imor_vivienda": 1.6457,
     "imor_tarjeta": 4.3893,
-    "imor_consumo_norev": 3.6656
+    "imor_consumo_norev": 3.6656,
+    "tasa_activa": 13.1399,
+    "tasa_pasiva": 3.3624,
+    "mif": 9.3835,
+    "tda": 4.8675
   },
   {
     "fecha": "2012-09",
@@ -1775,7 +2301,11 @@
     "imor_consumo": 2.8169,
     "imor_vivienda": 1.6187,
     "imor_tarjeta": 4.3155,
-    "imor_consumo_norev": 3.6857
+    "imor_consumo_norev": 3.6857,
+    "tasa_activa": 12.9269,
+    "tasa_pasiva": 3.3674,
+    "mif": 9.388,
+    "tda": 4.8271
   },
   {
     "fecha": "2012-10",
@@ -1789,7 +2319,11 @@
     "imor_consumo": 2.7415,
     "imor_vivienda": 1.7419,
     "imor_tarjeta": 4.5229,
-    "imor_consumo_norev": 3.3531
+    "imor_consumo_norev": 3.3531,
+    "tasa_activa": 13.3695,
+    "tasa_pasiva": 3.3487,
+    "mif": 9.4389,
+    "tda": 4.8495
   },
   {
     "fecha": "2012-11",
@@ -1803,7 +2337,11 @@
     "imor_consumo": 2.7589,
     "imor_vivienda": 1.696,
     "imor_tarjeta": 4.479,
-    "imor_consumo_norev": 3.3818
+    "imor_consumo_norev": 3.3818,
+    "tasa_activa": 13.0716,
+    "tasa_pasiva": 3.363,
+    "mif": 9.4668,
+    "tda": 4.8244
   },
   {
     "fecha": "2012-12",
@@ -1817,7 +2355,11 @@
     "imor_consumo": 2.7002,
     "imor_vivienda": 1.7987,
     "imor_tarjeta": 4.6609,
-    "imor_consumo_norev": 3.4406
+    "imor_consumo_norev": 3.4406,
+    "tasa_activa": 13.4263,
+    "tasa_pasiva": 3.3684,
+    "mif": 9.5464,
+    "tda": 4.8134
   },
   {
     "fecha": "2013-01",
@@ -1831,7 +2373,11 @@
     "imor_consumo": 2.8123,
     "imor_vivienda": 1.7694,
     "imor_tarjeta": 4.77,
-    "imor_consumo_norev": 3.4478
+    "imor_consumo_norev": 3.4478,
+    "tasa_activa": 13.1922,
+    "tasa_pasiva": 3.3551,
+    "mif": 9.5889,
+    "tda": 4.8329
   },
   {
     "fecha": "2013-02",
@@ -1845,7 +2391,11 @@
     "imor_consumo": 2.8057,
     "imor_vivienda": 1.6822,
     "imor_tarjeta": 4.7827,
-    "imor_consumo_norev": 3.5151
+    "imor_consumo_norev": 3.5151,
+    "tasa_activa": 12.3748,
+    "tasa_pasiva": 3.3392,
+    "mif": 9.5843,
+    "tda": 4.8668
   },
   {
     "fecha": "2013-03",
@@ -1859,7 +2409,11 @@
     "imor_consumo": 2.858,
     "imor_vivienda": 1.7212,
     "imor_tarjeta": 4.8959,
-    "imor_consumo_norev": 3.5075
+    "imor_consumo_norev": 3.5075,
+    "tasa_activa": 13.1153,
+    "tasa_pasiva": 3.334,
+    "mif": 9.5941,
+    "tda": 4.9354
   },
   {
     "fecha": "2013-04",
@@ -1873,7 +2427,11 @@
     "imor_consumo": 3.0557,
     "imor_vivienda": 1.7557,
     "imor_tarjeta": 4.9774,
-    "imor_consumo_norev": 3.5475
+    "imor_consumo_norev": 3.5475,
+    "tasa_activa": 12.8542,
+    "tasa_pasiva": 3.3099,
+    "mif": 9.6505,
+    "tda": 5.0196
   },
   {
     "fecha": "2013-05",
@@ -1887,7 +2445,11 @@
     "imor_consumo": 3.7085,
     "imor_vivienda": 1.931,
     "imor_tarjeta": 5.1833,
-    "imor_consumo_norev": 3.6981
+    "imor_consumo_norev": 3.6981,
+    "tasa_activa": 13.5855,
+    "tasa_pasiva": 3.339,
+    "mif": 9.6777,
+    "tda": 5.1299
   },
   {
     "fecha": "2013-06",
@@ -1901,7 +2463,11 @@
     "imor_consumo": 3.6923,
     "imor_vivienda": 1.8496,
     "imor_tarjeta": 4.9331,
-    "imor_consumo_norev": 3.7515
+    "imor_consumo_norev": 3.7515,
+    "tasa_activa": 12.8096,
+    "tasa_pasiva": 3.3221,
+    "mif": 9.6981,
+    "tda": 5.2606
   },
   {
     "fecha": "2013-07",
@@ -1915,7 +2481,11 @@
     "imor_consumo": 4.1318,
     "imor_vivienda": 2.0067,
     "imor_tarjeta": 5.044,
-    "imor_consumo_norev": 3.7806
+    "imor_consumo_norev": 3.7806,
+    "tasa_activa": 13.1406,
+    "tasa_pasiva": 3.3044,
+    "mif": 9.7286,
+    "tda": 5.3651
   },
   {
     "fecha": "2013-08",
@@ -1929,7 +2499,11 @@
     "imor_consumo": 4.2448,
     "imor_vivienda": 1.8475,
     "imor_tarjeta": 4.9541,
-    "imor_consumo_norev": 3.7736
+    "imor_consumo_norev": 3.7736,
+    "tasa_activa": 13.1123,
+    "tasa_pasiva": 3.2821,
+    "mif": 9.7438,
+    "tda": 5.4685
   },
   {
     "fecha": "2013-09",
@@ -1943,7 +2517,11 @@
     "imor_consumo": 4.4929,
     "imor_vivienda": 2.0422,
     "imor_tarjeta": 5.0698,
-    "imor_consumo_norev": 3.8329
+    "imor_consumo_norev": 3.8329,
+    "tasa_activa": 12.7541,
+    "tasa_pasiva": 3.2583,
+    "mif": 9.7583,
+    "tda": 5.568
   },
   {
     "fecha": "2013-10",
@@ -1957,7 +2535,11 @@
     "imor_consumo": 4.5258,
     "imor_vivienda": 2.0503,
     "imor_tarjeta": 5.1906,
-    "imor_consumo_norev": 3.9708
+    "imor_consumo_norev": 3.9708,
+    "tasa_activa": 13.0189,
+    "tasa_pasiva": 3.2484,
+    "mif": 9.7358,
+    "tda": 5.6598
   },
   {
     "fecha": "2013-11",
@@ -1971,7 +2553,11 @@
     "imor_consumo": 4.4966,
     "imor_vivienda": 1.8826,
     "imor_tarjeta": 4.9597,
-    "imor_consumo_norev": 3.9698
+    "imor_consumo_norev": 3.9698,
+    "tasa_activa": 12.5414,
+    "tasa_pasiva": 3.1961,
+    "mif": 9.7432,
+    "tda": 5.8039
   },
   {
     "fecha": "2013-12",
@@ -1985,7 +2571,11 @@
     "imor_consumo": 4.4801,
     "imor_vivienda": 1.9973,
     "imor_tarjeta": 4.9581,
-    "imor_consumo_norev": 4.0175
+    "imor_consumo_norev": 4.0175,
+    "tasa_activa": 13.4711,
+    "tasa_pasiva": 3.1791,
+    "mif": 9.7709,
+    "tda": 5.9036
   },
   {
     "fecha": "2014-01",
@@ -1999,7 +2589,11 @@
     "imor_consumo": 4.5825,
     "imor_vivienda": 1.917,
     "imor_tarjeta": 5.0835,
-    "imor_consumo_norev": 4.04
+    "imor_consumo_norev": 4.04,
+    "tasa_activa": 12.5423,
+    "tasa_pasiva": 3.1533,
+    "mif": 9.7432,
+    "tda": 5.9999
   },
   {
     "fecha": "2014-02",
@@ -2013,7 +2607,11 @@
     "imor_consumo": 4.5664,
     "imor_vivienda": 1.7736,
     "imor_tarjeta": 4.9712,
-    "imor_consumo_norev": 3.9322
+    "imor_consumo_norev": 3.9322,
+    "tasa_activa": 11.8469,
+    "tasa_pasiva": 3.1168,
+    "mif": 9.7329,
+    "tda": 6.0921
   },
   {
     "fecha": "2014-03",
@@ -2027,7 +2625,11 @@
     "imor_consumo": 4.6254,
     "imor_vivienda": 1.7655,
     "imor_tarjeta": 5.0782,
-    "imor_consumo_norev": 3.907
+    "imor_consumo_norev": 3.907,
+    "tasa_activa": 12.6226,
+    "tasa_pasiva": 3.0797,
+    "mif": 9.7288,
+    "tda": 6.2203
   },
   {
     "fecha": "2014-04",
@@ -2041,7 +2643,11 @@
     "imor_consumo": 4.5403,
     "imor_vivienda": 1.8143,
     "imor_tarjeta": 5.2163,
-    "imor_consumo_norev": 3.8681
+    "imor_consumo_norev": 3.8681,
+    "tasa_activa": 12.41,
+    "tasa_pasiva": 3.043,
+    "mif": 9.7291,
+    "tda": 6.2867
   },
   {
     "fecha": "2014-05",
@@ -2055,7 +2661,11 @@
     "imor_consumo": 4.3781,
     "imor_vivienda": 1.8799,
     "imor_tarjeta": 5.2052,
-    "imor_consumo_norev": 3.975
+    "imor_consumo_norev": 3.975,
+    "tasa_activa": 12.6285,
+    "tasa_pasiva": 2.9672,
+    "mif": 9.7232,
+    "tda": 6.3154
   },
   {
     "fecha": "2014-06",
@@ -2069,7 +2679,11 @@
     "imor_consumo": 4.3747,
     "imor_vivienda": 1.973,
     "imor_tarjeta": 5.2184,
-    "imor_consumo_norev": 3.9817
+    "imor_consumo_norev": 3.9817,
+    "tasa_activa": 12.4443,
+    "tasa_pasiva": 2.9203,
+    "mif": 9.7434,
+    "tda": 6.3507
   },
   {
     "fecha": "2014-07",
@@ -2083,7 +2697,11 @@
     "imor_consumo": 4.4514,
     "imor_vivienda": 2.014,
     "imor_tarjeta": 5.1951,
-    "imor_consumo_norev": 4.0223
+    "imor_consumo_norev": 4.0223,
+    "tasa_activa": 12.279,
+    "tasa_pasiva": 2.858,
+    "mif": 9.7323,
+    "tda": 6.3701
   },
   {
     "fecha": "2014-08",
@@ -2097,7 +2715,11 @@
     "imor_consumo": 4.4749,
     "imor_vivienda": 1.9804,
     "imor_tarjeta": 5.0883,
-    "imor_consumo_norev": 3.9954
+    "imor_consumo_norev": 3.9954,
+    "tasa_activa": 12.2925,
+    "tasa_pasiva": 2.8101,
+    "mif": 9.7174,
+    "tda": 6.394
   },
   {
     "fecha": "2014-09",
@@ -2111,7 +2733,11 @@
     "imor_consumo": 4.5453,
     "imor_vivienda": 2.0293,
     "imor_tarjeta": 5.2171,
-    "imor_consumo_norev": 3.9775
+    "imor_consumo_norev": 3.9775,
+    "tasa_activa": 12.0918,
+    "tasa_pasiva": 2.7769,
+    "mif": 9.6929,
+    "tda": 6.4048
   },
   {
     "fecha": "2014-10",
@@ -2125,7 +2751,11 @@
     "imor_consumo": 4.4932,
     "imor_vivienda": 1.9723,
     "imor_tarjeta": 5.2814,
-    "imor_consumo_norev": 3.9825
+    "imor_consumo_norev": 3.9825,
+    "tasa_activa": 12.2694,
+    "tasa_pasiva": 2.7333,
+    "mif": 9.6766,
+    "tda": 6.4172
   },
   {
     "fecha": "2014-11",
@@ -2139,7 +2769,11 @@
     "imor_consumo": 4.4003,
     "imor_vivienda": 1.9171,
     "imor_tarjeta": 5.3285,
-    "imor_consumo_norev": 3.8763
+    "imor_consumo_norev": 3.8763,
+    "tasa_activa": 11.8346,
+    "tasa_pasiva": 2.7383,
+    "mif": 9.604,
+    "tda": 6.3867
   },
   {
     "fecha": "2014-12",
@@ -2153,7 +2787,11 @@
     "imor_consumo": 4.2707,
     "imor_vivienda": 1.8318,
     "imor_tarjeta": 5.2042,
-    "imor_consumo_norev": 3.8744
+    "imor_consumo_norev": 3.8744,
+    "tasa_activa": 12.1148,
+    "tasa_pasiva": 2.7372,
+    "mif": 9.4882,
+    "tda": 6.4227
   },
   {
     "fecha": "2015-01",
@@ -2167,7 +2805,11 @@
     "imor_consumo": 4.3089,
     "imor_vivienda": 1.7361,
     "imor_tarjeta": 5.1093,
-    "imor_consumo_norev": 3.8883
+    "imor_consumo_norev": 3.8883,
+    "tasa_activa": 11.7679,
+    "tasa_pasiva": 2.7202,
+    "mif": 9.4322,
+    "tda": 6.4107
   },
   {
     "fecha": "2015-02",
@@ -2181,7 +2823,11 @@
     "imor_consumo": 4.3588,
     "imor_vivienda": 1.6927,
     "imor_tarjeta": 5.1039,
-    "imor_consumo_norev": 3.879
+    "imor_consumo_norev": 3.879,
+    "tasa_activa": 11.0753,
+    "tasa_pasiva": 2.7446,
+    "mif": 9.3387,
+    "tda": 6.3819
   },
   {
     "fecha": "2015-03",
@@ -2195,7 +2841,11 @@
     "imor_consumo": 4.1031,
     "imor_vivienda": 1.6579,
     "imor_tarjeta": 5.0046,
-    "imor_consumo_norev": 3.7033
+    "imor_consumo_norev": 3.7033,
+    "tasa_activa": 11.7774,
+    "tasa_pasiva": 2.6587,
+    "mif": 9.3519,
+    "tda": 6.314
   },
   {
     "fecha": "2015-04",
@@ -2209,7 +2859,11 @@
     "imor_consumo": 4.1288,
     "imor_vivienda": 1.6746,
     "imor_tarjeta": 4.9811,
-    "imor_consumo_norev": 3.663
+    "imor_consumo_norev": 3.663,
+    "tasa_activa": 11.4388,
+    "tasa_pasiva": 2.6459,
+    "mif": 9.2782,
+    "tda": 6.2687
   },
   {
     "fecha": "2015-05",
@@ -2223,7 +2877,11 @@
     "imor_consumo": 4.1712,
     "imor_vivienda": 1.6531,
     "imor_tarjeta": 4.9677,
-    "imor_consumo_norev": 3.6634
+    "imor_consumo_norev": 3.6634,
+    "tasa_activa": 11.609,
+    "tasa_pasiva": 2.6174,
+    "mif": 9.2243,
+    "tda": 6.211
   },
   {
     "fecha": "2015-06",
@@ -2237,7 +2895,11 @@
     "imor_consumo": 4.0272,
     "imor_vivienda": 1.679,
     "imor_tarjeta": 4.8708,
-    "imor_consumo_norev": 3.6343
+    "imor_consumo_norev": 3.6343,
+    "tasa_activa": 11.6785,
+    "tasa_pasiva": 2.6213,
+    "mif": 9.1597,
+    "tda": 6.1157
   },
   {
     "fecha": "2015-07",
@@ -2251,7 +2913,11 @@
     "imor_consumo": 3.996,
     "imor_vivienda": 1.6586,
     "imor_tarjeta": 4.737,
-    "imor_consumo_norev": 3.4581
+    "imor_consumo_norev": 3.4581,
+    "tasa_activa": 11.6271,
+    "tasa_pasiva": 2.6308,
+    "mif": 9.0949,
+    "tda": 6.0828
   },
   {
     "fecha": "2015-08",
@@ -2265,7 +2931,11 @@
     "imor_consumo": 4.0484,
     "imor_vivienda": 1.6689,
     "imor_tarjeta": 4.6389,
-    "imor_consumo_norev": 3.4326
+    "imor_consumo_norev": 3.4326,
+    "tasa_activa": 11.6367,
+    "tasa_pasiva": 2.6396,
+    "mif": 9.031,
+    "tda": 6.0097
   },
   {
     "fecha": "2015-09",
@@ -2279,7 +2949,11 @@
     "imor_consumo": 3.8533,
     "imor_vivienda": 1.6801,
     "imor_tarjeta": 4.5774,
-    "imor_consumo_norev": 3.4167
+    "imor_consumo_norev": 3.4167,
+    "tasa_activa": 11.2699,
+    "tasa_pasiva": 2.6385,
+    "mif": 8.957,
+    "tda": 5.9177
   },
   {
     "fecha": "2015-10",
@@ -2293,7 +2967,11 @@
     "imor_consumo": 3.8408,
     "imor_vivienda": 1.6282,
     "imor_tarjeta": 4.4764,
-    "imor_consumo_norev": 3.4214
+    "imor_consumo_norev": 3.4214,
+    "tasa_activa": 11.6208,
+    "tasa_pasiva": 2.6344,
+    "mif": 8.9159,
+    "tda": 5.8179
   },
   {
     "fecha": "2015-11",
@@ -2307,7 +2985,11 @@
     "imor_consumo": 3.8239,
     "imor_vivienda": 1.6585,
     "imor_tarjeta": 4.4285,
-    "imor_consumo_norev": 3.4788
+    "imor_consumo_norev": 3.4788,
+    "tasa_activa": 11.3359,
+    "tasa_pasiva": 2.6075,
+    "mif": 8.9054,
+    "tda": 5.7657
   },
   {
     "fecha": "2015-12",
@@ -2321,7 +3003,11 @@
     "imor_consumo": 3.4835,
     "imor_vivienda": 1.5662,
     "imor_tarjeta": 4.2778,
-    "imor_consumo_norev": 3.3626
+    "imor_consumo_norev": 3.3626,
+    "tasa_activa": 11.6828,
+    "tasa_pasiva": 2.5283,
+    "mif": 8.9459,
+    "tda": 5.6511
   },
   {
     "fecha": "2016-01",
@@ -2335,7 +3021,11 @@
     "imor_consumo": 3.4682,
     "imor_vivienda": 1.4728,
     "imor_tarjeta": 4.1753,
-    "imor_consumo_norev": 3.3641
+    "imor_consumo_norev": 3.3641,
+    "tasa_activa": 11.3051,
+    "tasa_pasiva": 2.5463,
+    "mif": 8.8879,
+    "tda": 5.5547
   },
   {
     "fecha": "2016-02",
@@ -2349,7 +3039,11 @@
     "imor_consumo": 3.4559,
     "imor_vivienda": 1.4529,
     "imor_tarjeta": 4.1604,
-    "imor_consumo_norev": 3.3328
+    "imor_consumo_norev": 3.3328,
+    "tasa_activa": 11.2382,
+    "tasa_pasiva": 2.5332,
+    "mif": 8.9104,
+    "tda": 5.4753
   },
   {
     "fecha": "2016-03",
@@ -2363,7 +3057,11 @@
     "imor_consumo": 3.4718,
     "imor_vivienda": 1.3991,
     "imor_tarjeta": 4.0627,
-    "imor_consumo_norev": 3.2892
+    "imor_consumo_norev": 3.2892,
+    "tasa_activa": 11.5674,
+    "tasa_pasiva": 2.639,
+    "mif": 8.7948,
+    "tda": 5.4031
   },
   {
     "fecha": "2016-04",
@@ -2377,7 +3075,11 @@
     "imor_consumo": 3.5292,
     "imor_vivienda": 1.3917,
     "imor_tarjeta": 4.0802,
-    "imor_consumo_norev": 3.2654
+    "imor_consumo_norev": 3.2654,
+    "tasa_activa": 11.3859,
+    "tasa_pasiva": 2.6642,
+    "mif": 8.7673,
+    "tda": 5.3926
   },
   {
     "fecha": "2016-05",
@@ -2391,7 +3093,11 @@
     "imor_consumo": 3.4034,
     "imor_vivienda": 1.4695,
     "imor_tarjeta": 4.1813,
-    "imor_consumo_norev": 3.2569
+    "imor_consumo_norev": 3.2569,
+    "tasa_activa": 11.7257,
+    "tasa_pasiva": 2.6908,
+    "mif": 8.7536,
+    "tda": 5.3116
   },
   {
     "fecha": "2016-06",
@@ -2405,7 +3111,11 @@
     "imor_consumo": 3.309,
     "imor_vivienda": 1.4283,
     "imor_tarjeta": 4.1155,
-    "imor_consumo_norev": 3.2021
+    "imor_consumo_norev": 3.2021,
+    "tasa_activa": 11.3629,
+    "tasa_pasiva": 2.7194,
+    "mif": 8.6887,
+    "tda": 5.2532
   },
   {
     "fecha": "2016-07",
@@ -2419,7 +3129,11 @@
     "imor_consumo": 3.2022,
     "imor_vivienda": 1.4518,
     "imor_tarjeta": 4.1677,
-    "imor_consumo_norev": 3.0386
+    "imor_consumo_norev": 3.0386,
+    "tasa_activa": 11.6765,
+    "tasa_pasiva": 2.7966,
+    "mif": 8.6191,
+    "tda": 5.1543
   },
   {
     "fecha": "2016-08",
@@ -2433,7 +3147,11 @@
     "imor_consumo": 3.1936,
     "imor_vivienda": 1.4811,
     "imor_tarjeta": 4.1594,
-    "imor_consumo_norev": 3.0069
+    "imor_consumo_norev": 3.0069,
+    "tasa_activa": 11.8698,
+    "tasa_pasiva": 2.8794,
+    "mif": 8.5646,
+    "tda": 5.1013
   },
   {
     "fecha": "2016-09",
@@ -2447,7 +3165,11 @@
     "imor_consumo": 3.099,
     "imor_vivienda": 1.4808,
     "imor_tarjeta": 4.2102,
-    "imor_consumo_norev": 2.9892
+    "imor_consumo_norev": 2.9892,
+    "tasa_activa": 11.6669,
+    "tasa_pasiva": 2.9737,
+    "mif": 8.5015,
+    "tda": 5.065
   },
   {
     "fecha": "2016-10",
@@ -2461,7 +3183,11 @@
     "imor_consumo": 3.009,
     "imor_vivienda": 1.529,
     "imor_tarjeta": 4.3041,
-    "imor_consumo_norev": 2.9871
+    "imor_consumo_norev": 2.9871,
+    "tasa_activa": 11.9942,
+    "tasa_pasiva": 3.0617,
+    "mif": 8.4472,
+    "tda": 5.0647
   },
   {
     "fecha": "2016-11",
@@ -2475,7 +3201,11 @@
     "imor_consumo": 2.8512,
     "imor_vivienda": 1.538,
     "imor_tarjeta": 4.3417,
-    "imor_consumo_norev": 2.956
+    "imor_consumo_norev": 2.956,
+    "tasa_activa": 11.9889,
+    "tasa_pasiva": 3.2238,
+    "mif": 8.3359,
+    "tda": 4.9901
   },
   {
     "fecha": "2016-12",
@@ -2489,7 +3219,11 @@
     "imor_consumo": 2.7577,
     "imor_vivienda": 1.476,
     "imor_tarjeta": 4.2206,
-    "imor_consumo_norev": 2.7907
+    "imor_consumo_norev": 2.7907,
+    "tasa_activa": 12.2689,
+    "tasa_pasiva": 3.3604,
+    "mif": 8.2586,
+    "tda": 4.9487
   },
   {
     "fecha": "2017-01",
@@ -2503,7 +3237,11 @@
     "imor_consumo": 2.8286,
     "imor_vivienda": 1.4873,
     "imor_tarjeta": 4.2582,
-    "imor_consumo_norev": 2.7689
+    "imor_consumo_norev": 2.7689,
+    "tasa_activa": 12.4704,
+    "tasa_pasiva": 3.4152,
+    "mif": 8.3092,
+    "tda": 4.9162
   },
   {
     "fecha": "2017-02",
@@ -2517,7 +3255,11 @@
     "imor_consumo": 2.8903,
     "imor_vivienda": 1.4551,
     "imor_tarjeta": 4.2611,
-    "imor_consumo_norev": 2.6394
+    "imor_consumo_norev": 2.6394,
+    "tasa_activa": 11.8122,
+    "tasa_pasiva": 3.4836,
+    "mif": 8.286,
+    "tda": 4.8847
   },
   {
     "fecha": "2017-03",
@@ -2531,7 +3273,11 @@
     "imor_consumo": 2.841,
     "imor_vivienda": 1.4257,
     "imor_tarjeta": 4.2128,
-    "imor_consumo_norev": 2.5767
+    "imor_consumo_norev": 2.5767,
+    "tasa_activa": 12.852,
+    "tasa_pasiva": 3.5692,
+    "mif": 8.3091,
+    "tda": 4.8457
   },
   {
     "fecha": "2017-04",
@@ -2545,7 +3291,11 @@
     "imor_consumo": 2.6866,
     "imor_vivienda": 1.4859,
     "imor_tarjeta": 4.1532,
-    "imor_consumo_norev": 2.6027
+    "imor_consumo_norev": 2.6027,
+    "tasa_activa": 12.6347,
+    "tasa_pasiva": 3.6596,
+    "mif": 8.3175,
+    "tda": 4.7865
   },
   {
     "fecha": "2017-05",
@@ -2559,7 +3309,11 @@
     "imor_consumo": 2.7035,
     "imor_vivienda": 1.6013,
     "imor_tarjeta": 4.3321,
-    "imor_consumo_norev": 2.6318
+    "imor_consumo_norev": 2.6318,
+    "tasa_activa": 13.0266,
+    "tasa_pasiva": 3.775,
+    "mif": 8.3177,
+    "tda": 4.7917
   },
   {
     "fecha": "2017-06",
@@ -2573,7 +3327,11 @@
     "imor_consumo": 2.567,
     "imor_vivienda": 1.5264,
     "imor_tarjeta": 4.3654,
-    "imor_consumo_norev": 2.6465
+    "imor_consumo_norev": 2.6465,
+    "tasa_activa": 12.7112,
+    "tasa_pasiva": 3.888,
+    "mif": 8.3198,
+    "tda": 4.7919
   },
   {
     "fecha": "2017-07",
@@ -2587,7 +3345,11 @@
     "imor_consumo": 2.5852,
     "imor_vivienda": 1.5744,
     "imor_tarjeta": 4.4092,
-    "imor_consumo_norev": 2.6729
+    "imor_consumo_norev": 2.6729,
+    "tasa_activa": 13.3326,
+    "tasa_pasiva": 3.969,
+    "mif": 8.3796,
+    "tda": 4.7998
   },
   {
     "fecha": "2017-08",
@@ -2601,7 +3363,11 @@
     "imor_consumo": 2.5456,
     "imor_vivienda": 1.5435,
     "imor_tarjeta": 4.4259,
-    "imor_consumo_norev": 2.6976
+    "imor_consumo_norev": 2.6976,
+    "tasa_activa": 13.2661,
+    "tasa_pasiva": 4.0331,
+    "mif": 8.4266,
+    "tda": 4.8022
   },
   {
     "fecha": "2017-09",
@@ -2615,7 +3381,11 @@
     "imor_consumo": 2.5193,
     "imor_vivienda": 1.534,
     "imor_tarjeta": 4.443,
-    "imor_consumo_norev": 2.63
+    "imor_consumo_norev": 2.63,
+    "tasa_activa": 12.9557,
+    "tasa_pasiva": 4.0812,
+    "mif": 8.4877,
+    "tda": 4.7948
   },
   {
     "fecha": "2017-10",
@@ -2629,7 +3399,11 @@
     "imor_consumo": 2.4699,
     "imor_vivienda": 1.6162,
     "imor_tarjeta": 4.6218,
-    "imor_consumo_norev": 2.646
+    "imor_consumo_norev": 2.646,
+    "tasa_activa": 13.1566,
+    "tasa_pasiva": 4.1377,
+    "mif": 8.5254,
+    "tda": 4.7539
   },
   {
     "fecha": "2017-11",
@@ -2643,7 +3417,11 @@
     "imor_consumo": 2.5285,
     "imor_vivienda": 1.6561,
     "imor_tarjeta": 4.6156,
-    "imor_consumo_norev": 2.7007
+    "imor_consumo_norev": 2.7007,
+    "tasa_activa": 12.9126,
+    "tasa_pasiva": 4.1395,
+    "mif": 8.6047,
+    "tda": 4.7852
   },
   {
     "fecha": "2017-12",
@@ -2657,7 +3435,11 @@
     "imor_consumo": 2.4761,
     "imor_vivienda": 1.6569,
     "imor_tarjeta": 4.5086,
-    "imor_consumo_norev": 2.6764
+    "imor_consumo_norev": 2.6764,
+    "tasa_activa": 12.555,
+    "tasa_pasiva": 4.1524,
+    "mif": 8.6104,
+    "tda": 4.7913
   },
   {
     "fecha": "2018-01",
@@ -2671,7 +3453,11 @@
     "imor_consumo": 2.5595,
     "imor_vivienda": 1.7096,
     "imor_tarjeta": 4.529,
-    "imor_consumo_norev": 2.7048
+    "imor_consumo_norev": 2.7048,
+    "tasa_activa": 13.1238,
+    "tasa_pasiva": 4.2511,
+    "mif": 8.5663,
+    "tda": 4.8123
   },
   {
     "fecha": "2018-02",
@@ -2685,7 +3471,11 @@
     "imor_consumo": 2.5741,
     "imor_vivienda": 1.724,
     "imor_tarjeta": 4.5079,
-    "imor_consumo_norev": 2.7382
+    "imor_consumo_norev": 2.7382,
+    "tasa_activa": 12.3972,
+    "tasa_pasiva": 4.2906,
+    "mif": 8.569,
+    "tda": 4.8174
   },
   {
     "fecha": "2018-03",
@@ -2699,7 +3489,11 @@
     "imor_consumo": 2.5469,
     "imor_vivienda": 1.6961,
     "imor_tarjeta": 4.4961,
-    "imor_consumo_norev": 2.7211
+    "imor_consumo_norev": 2.7211,
+    "tasa_activa": 13.3946,
+    "tasa_pasiva": 4.3508,
+    "mif": 8.5555,
+    "tda": 4.8039
   },
   {
     "fecha": "2018-04",
@@ -2713,7 +3507,11 @@
     "imor_consumo": 2.5366,
     "imor_vivienda": 1.7594,
     "imor_tarjeta": 4.5578,
-    "imor_consumo_norev": 2.7128
+    "imor_consumo_norev": 2.7128,
+    "tasa_activa": 13.1168,
+    "tasa_pasiva": 4.4124,
+    "mif": 8.5344,
+    "tda": 4.7751
   },
   {
     "fecha": "2018-05",
@@ -2727,7 +3525,11 @@
     "imor_consumo": 2.4332,
     "imor_vivienda": 1.8041,
     "imor_tarjeta": 4.6528,
-    "imor_consumo_norev": 2.8079
+    "imor_consumo_norev": 2.8079,
+    "tasa_activa": 13.3887,
+    "tasa_pasiva": 4.482,
+    "mif": 8.4867,
+    "tda": 4.7444
   },
   {
     "fecha": "2018-06",
@@ -2741,7 +3543,11 @@
     "imor_consumo": 2.3471,
     "imor_vivienda": 1.7493,
     "imor_tarjeta": 4.5891,
-    "imor_consumo_norev": 2.612
+    "imor_consumo_norev": 2.612,
+    "tasa_activa": 12.9615,
+    "tasa_pasiva": 4.536,
+    "mif": 8.4505,
+    "tda": 4.7021
   },
   {
     "fecha": "2018-07",
@@ -2755,7 +3561,11 @@
     "imor_consumo": 2.3814,
     "imor_vivienda": 1.8583,
     "imor_tarjeta": 4.6073,
-    "imor_consumo_norev": 2.7049
+    "imor_consumo_norev": 2.7049,
+    "tasa_activa": 12.0651,
+    "tasa_pasiva": 4.4286,
+    "mif": 8.4549,
+    "tda": 4.6918
   },
   {
     "fecha": "2018-08",
@@ -2769,7 +3579,11 @@
     "imor_consumo": 2.378,
     "imor_vivienda": 1.8984,
     "imor_tarjeta": 4.5692,
-    "imor_consumo_norev": 2.6696
+    "imor_consumo_norev": 2.6696,
+    "tasa_activa": 13.5308,
+    "tasa_pasiva": 4.4837,
+    "mif": 8.4258,
+    "tda": 4.6759
   },
   {
     "fecha": "2018-09",
@@ -2783,7 +3597,11 @@
     "imor_consumo": 2.349,
     "imor_vivienda": 1.8844,
     "imor_tarjeta": 4.5984,
-    "imor_consumo_norev": 2.6016
+    "imor_consumo_norev": 2.6016,
+    "tasa_activa": 13.1962,
+    "tasa_pasiva": 4.5352,
+    "mif": 8.3972,
+    "tda": 4.639
   },
   {
     "fecha": "2018-10",
@@ -2797,7 +3615,11 @@
     "imor_consumo": 2.3723,
     "imor_vivienda": 1.9615,
     "imor_tarjeta": 4.6161,
-    "imor_consumo_norev": 2.5848
+    "imor_consumo_norev": 2.5848,
+    "tasa_activa": 13.5354,
+    "tasa_pasiva": 4.5822,
+    "mif": 8.3803,
+    "tda": 4.6314
   },
   {
     "fecha": "2018-11",
@@ -2811,7 +3633,11 @@
     "imor_consumo": 2.3067,
     "imor_vivienda": 2.0156,
     "imor_tarjeta": 4.5084,
-    "imor_consumo_norev": 2.6354
+    "imor_consumo_norev": 2.6354,
+    "tasa_activa": 13.0651,
+    "tasa_pasiva": 4.6206,
+    "mif": 8.3555,
+    "tda": 4.5986
   },
   {
     "fecha": "2018-12",
@@ -2825,7 +3651,11 @@
     "imor_consumo": 2.2233,
     "imor_vivienda": 2.0306,
     "imor_tarjeta": 4.4215,
-    "imor_consumo_norev": 2.6334
+    "imor_consumo_norev": 2.6334,
+    "tasa_activa": 14.1616,
+    "tasa_pasiva": 4.7436,
+    "mif": 8.3748,
+    "tda": 4.5655
   },
   {
     "fecha": "2019-01",
@@ -2839,7 +3669,11 @@
     "imor_consumo": 2.2681,
     "imor_vivienda": 1.9714,
     "imor_tarjeta": 4.3609,
-    "imor_consumo_norev": 2.5739
+    "imor_consumo_norev": 2.5739,
+    "tasa_activa": 13.5657,
+    "tasa_pasiva": 4.7967,
+    "mif": 8.3597,
+    "tda": 4.5569
   },
   {
     "fecha": "2019-02",
@@ -2853,7 +3687,11 @@
     "imor_consumo": 2.2729,
     "imor_vivienda": 1.949,
     "imor_tarjeta": 4.4044,
-    "imor_consumo_norev": 2.6292
+    "imor_consumo_norev": 2.6292,
+    "tasa_activa": 12.7009,
+    "tasa_pasiva": 4.8511,
+    "mif": 8.3249,
+    "tda": 4.5442
   },
   {
     "fecha": "2019-03",
@@ -2867,7 +3705,11 @@
     "imor_consumo": 2.2242,
     "imor_vivienda": 2.0108,
     "imor_tarjeta": 4.3458,
-    "imor_consumo_norev": 2.5501
+    "imor_consumo_norev": 2.5501,
+    "tasa_activa": 13.7562,
+    "tasa_pasiva": 4.9018,
+    "mif": 8.3034,
+    "tda": 4.5133
   },
   {
     "fecha": "2019-04",
@@ -2881,7 +3723,11 @@
     "imor_consumo": 2.2651,
     "imor_vivienda": 2.0779,
     "imor_tarjeta": 4.3783,
-    "imor_consumo_norev": 2.6301
+    "imor_consumo_norev": 2.6301,
+    "tasa_activa": 13.4066,
+    "tasa_pasiva": 4.952,
+    "mif": 8.2799,
+    "tda": 4.504
   },
   {
     "fecha": "2019-05",
@@ -2895,7 +3741,11 @@
     "imor_consumo": 2.3104,
     "imor_vivienda": 2.1004,
     "imor_tarjeta": 4.4182,
-    "imor_consumo_norev": 2.646
+    "imor_consumo_norev": 2.646,
+    "tasa_activa": 13.7238,
+    "tasa_pasiva": 4.9776,
+    "mif": 8.2897,
+    "tda": 4.4968
   },
   {
     "fecha": "2019-06",
@@ -2909,7 +3759,11 @@
     "imor_consumo": 2.2807,
     "imor_vivienda": 2.0211,
     "imor_tarjeta": 4.3965,
-    "imor_consumo_norev": 2.6541
+    "imor_consumo_norev": 2.6541,
+    "tasa_activa": 13.3165,
+    "tasa_pasiva": 5.0002,
+    "mif": 8.2997,
+    "tda": 4.4848
   },
   {
     "fecha": "2019-07",
@@ -2923,7 +3777,11 @@
     "imor_consumo": 2.3746,
     "imor_vivienda": 2.0667,
     "imor_tarjeta": 4.393,
-    "imor_consumo_norev": 2.7229
+    "imor_consumo_norev": 2.7229,
+    "tasa_activa": 13.6505,
+    "tasa_pasiva": 5.1769,
+    "mif": 8.2516,
+    "tda": 4.4938
   },
   {
     "fecha": "2019-08",
@@ -2937,7 +3795,11 @@
     "imor_consumo": 2.3619,
     "imor_vivienda": 2.0758,
     "imor_tarjeta": 4.3636,
-    "imor_consumo_norev": 2.6692
+    "imor_consumo_norev": 2.6692,
+    "tasa_activa": 13.6731,
+    "tasa_pasiva": 5.1887,
+    "mif": 8.2499,
+    "tda": 4.4919
   },
   {
     "fecha": "2019-09",
@@ -2951,7 +3813,11 @@
     "imor_consumo": 2.4486,
     "imor_vivienda": 2.1465,
     "imor_tarjeta": 4.4383,
-    "imor_consumo_norev": 2.7699
+    "imor_consumo_norev": 2.7699,
+    "tasa_activa": 13.2746,
+    "tasa_pasiva": 5.2003,
+    "mif": 8.2552,
+    "tda": 4.5333
   },
   {
     "fecha": "2019-10",
@@ -2965,7 +3831,11 @@
     "imor_consumo": 2.5126,
     "imor_vivienda": 2.1919,
     "imor_tarjeta": 4.4873,
-    "imor_consumo_norev": 2.8207
+    "imor_consumo_norev": 2.8207,
+    "tasa_activa": 13.6295,
+    "tasa_pasiva": 5.2173,
+    "mif": 8.2559,
+    "tda": 4.5388
   },
   {
     "fecha": "2019-11",
@@ -2979,7 +3849,11 @@
     "imor_consumo": 2.4949,
     "imor_vivienda": 2.1979,
     "imor_tarjeta": 4.4263,
-    "imor_consumo_norev": 2.772
+    "imor_consumo_norev": 2.772,
+    "tasa_activa": 13.2198,
+    "tasa_pasiva": 5.209,
+    "mif": 8.2714,
+    "tda": 4.5516
   },
   {
     "fecha": "2019-12",
@@ -2993,7 +3867,11 @@
     "imor_consumo": 2.5085,
     "imor_vivienda": 2.2189,
     "imor_tarjeta": 4.3489,
-    "imor_consumo_norev": 2.8799
+    "imor_consumo_norev": 2.8799,
+    "tasa_activa": 13.4985,
+    "tasa_pasiva": 5.1639,
+    "mif": 8.2654,
+    "tda": 4.5844
   },
   {
     "fecha": "2020-01",
@@ -3007,7 +3885,11 @@
     "imor_consumo": 2.5682,
     "imor_vivienda": 2.1797,
     "imor_tarjeta": 4.3621,
-    "imor_consumo_norev": 2.9772
+    "imor_consumo_norev": 2.9772,
+    "tasa_activa": 13.2805,
+    "tasa_pasiva": 5.1064,
+    "mif": 8.3003,
+    "tda": 4.5976
   },
   {
     "fecha": "2020-02",
@@ -3021,7 +3903,11 @@
     "imor_consumo": 2.5068,
     "imor_vivienda": 2.1952,
     "imor_tarjeta": 4.3762,
-    "imor_consumo_norev": 2.9135
+    "imor_consumo_norev": 2.9135,
+    "tasa_activa": 13.2658,
+    "tasa_pasiva": 5.0638,
+    "mif": 8.3862,
+    "tda": 4.5929
   },
   {
     "fecha": "2020-03",
@@ -3035,7 +3921,11 @@
     "imor_consumo": 2.5774,
     "imor_vivienda": 2.2411,
     "imor_tarjeta": 4.46,
-    "imor_consumo_norev": 3.1245
+    "imor_consumo_norev": 3.1245,
+    "tasa_activa": 12.9172,
+    "tasa_pasiva": 4.9559,
+    "mif": 8.3937,
+    "tda": 4.62
   },
   {
     "fecha": "2020-04",
@@ -3049,7 +3939,11 @@
     "imor_consumo": 2.5682,
     "imor_vivienda": 2.3399,
     "imor_tarjeta": 4.6541,
-    "imor_consumo_norev": 3.1253
+    "imor_consumo_norev": 3.1253,
+    "tasa_activa": 11.6486,
+    "tasa_pasiva": 4.8097,
+    "mif": 8.3801,
+    "tda": 4.6405
   },
   {
     "fecha": "2020-05",
@@ -3063,7 +3957,11 @@
     "imor_consumo": 2.669,
     "imor_vivienda": 2.4594,
     "imor_tarjeta": 4.863,
-    "imor_consumo_norev": 3.1655
+    "imor_consumo_norev": 3.1655,
+    "tasa_activa": 11.5479,
+    "tasa_pasiva": 4.6686,
+    "mif": 8.3491,
+    "tda": 4.6609
   },
   {
     "fecha": "2020-06",
@@ -3077,7 +3975,11 @@
     "imor_consumo": 2.4586,
     "imor_vivienda": 2.5941,
     "imor_tarjeta": 4.38,
-    "imor_consumo_norev": 3.1339
+    "imor_consumo_norev": 3.1339,
+    "tasa_activa": 10.5289,
+    "tasa_pasiva": 4.4742,
+    "mif": 8.3155,
+    "tda": 4.7788
   },
   {
     "fecha": "2020-07",
@@ -3091,7 +3993,11 @@
     "imor_consumo": 2.5251,
     "imor_vivienda": 2.5696,
     "imor_tarjeta": 4.0769,
-    "imor_consumo_norev": 3.156
+    "imor_consumo_norev": 3.156,
+    "tasa_activa": 11.0237,
+    "tasa_pasiva": 4.2922,
+    "mif": 8.2828,
+    "tda": 4.7693
   },
   {
     "fecha": "2020-08",
@@ -3105,7 +4011,11 @@
     "imor_consumo": 2.5367,
     "imor_vivienda": 2.4714,
     "imor_tarjeta": 3.6645,
-    "imor_consumo_norev": 3.2856
+    "imor_consumo_norev": 3.2856,
+    "tasa_activa": 11.3856,
+    "tasa_pasiva": 4.1106,
+    "mif": 8.2882,
+    "tda": 4.7635
   },
   {
     "fecha": "2020-09",
@@ -3119,7 +4029,11 @@
     "imor_consumo": 2.5625,
     "imor_vivienda": 2.3713,
     "imor_tarjeta": 3.6134,
-    "imor_consumo_norev": 3.2467
+    "imor_consumo_norev": 3.2467,
+    "tasa_activa": 10.9545,
+    "tasa_pasiva": 3.9353,
+    "mif": 8.2684,
+    "tda": 4.7333
   },
   {
     "fecha": "2020-10",
@@ -3133,7 +4047,11 @@
     "imor_consumo": 2.6425,
     "imor_vivienda": 2.2736,
     "imor_tarjeta": 4.0146,
-    "imor_consumo_norev": 3.09
+    "imor_consumo_norev": 3.09,
+    "tasa_activa": 11.1441,
+    "tasa_pasiva": 3.7539,
+    "mif": 8.2539,
+    "tda": 4.6953
   },
   {
     "fecha": "2020-11",
@@ -3147,7 +4065,11 @@
     "imor_consumo": 2.8304,
     "imor_vivienda": 2.6204,
     "imor_tarjeta": 4.9959,
-    "imor_consumo_norev": 3.2317
+    "imor_consumo_norev": 3.2317,
+    "tasa_activa": 10.9175,
+    "tasa_pasiva": 3.5927,
+    "mif": 8.2446,
+    "tda": 4.6763
   },
   {
     "fecha": "2020-12",
@@ -3161,7 +4083,11 @@
     "imor_consumo": 3.024,
     "imor_vivienda": 3.0369,
     "imor_tarjeta": 5.3616,
-    "imor_consumo_norev": 3.3465
+    "imor_consumo_norev": 3.3465,
+    "tasa_activa": 11.2065,
+    "tasa_pasiva": 3.4226,
+    "mif": 8.2354,
+    "tda": 4.7817
   },
   {
     "fecha": "2021-01",
@@ -3175,7 +4101,11 @@
     "imor_consumo": 3.171,
     "imor_vivienda": 3.346,
     "imor_tarjeta": 5.6804,
-    "imor_consumo_norev": 3.4196
+    "imor_consumo_norev": 3.4196,
+    "tasa_activa": 11.1855,
+    "tasa_pasiva": 3.2712,
+    "mif": 8.2131,
+    "tda": 4.806
   },
   {
     "fecha": "2021-02",
@@ -3189,7 +4119,11 @@
     "imor_consumo": 3.1754,
     "imor_vivienda": 3.545,
     "imor_tarjeta": 5.5,
-    "imor_consumo_norev": 3.4997
+    "imor_consumo_norev": 3.4997,
+    "tasa_activa": 10.2835,
+    "tasa_pasiva": 3.1417,
+    "mif": 8.1038,
+    "tda": 4.8969
   },
   {
     "fecha": "2021-03",
@@ -3203,7 +4137,11 @@
     "imor_consumo": 3.1942,
     "imor_vivienda": 3.4325,
     "imor_tarjeta": 4.8736,
-    "imor_consumo_norev": 3.6127
+    "imor_consumo_norev": 3.6127,
+    "tasa_activa": 10.9648,
+    "tasa_pasiva": 3.0201,
+    "mif": 8.0881,
+    "tda": 5.0292
   },
   {
     "fecha": "2021-04",
@@ -3217,7 +4155,11 @@
     "imor_consumo": 3.2872,
     "imor_vivienda": 3.1933,
     "imor_tarjeta": 4.4833,
-    "imor_consumo_norev": 3.6246
+    "imor_consumo_norev": 3.6246,
+    "tasa_activa": 10.8124,
+    "tasa_pasiva": 2.9299,
+    "mif": 8.1125,
+    "tda": 5.1056
   },
   {
     "fecha": "2021-05",
@@ -3231,7 +4173,11 @@
     "imor_consumo": 3.335,
     "imor_vivienda": 3.0644,
     "imor_tarjeta": 4.249,
-    "imor_consumo_norev": 3.6398
+    "imor_consumo_norev": 3.6398,
+    "tasa_activa": 11.0782,
+    "tasa_pasiva": 2.8471,
+    "mif": 8.1444,
+    "tda": 5.1453
   },
   {
     "fecha": "2021-06",
@@ -3245,7 +4191,11 @@
     "imor_consumo": 3.1314,
     "imor_vivienda": 2.7922,
     "imor_tarjeta": 3.9348,
-    "imor_consumo_norev": 3.5982
+    "imor_consumo_norev": 3.5982,
+    "tasa_activa": 10.8038,
+    "tasa_pasiva": 2.8243,
+    "mif": 8.1858,
+    "tda": 5.0595
   },
   {
     "fecha": "2021-07",
@@ -3259,7 +4209,11 @@
     "imor_consumo": 3.0828,
     "imor_vivienda": 2.6543,
     "imor_tarjeta": 3.6847,
-    "imor_consumo_norev": 3.5019
+    "imor_consumo_norev": 3.5019,
+    "tasa_activa": 11.2019,
+    "tasa_pasiva": 2.7969,
+    "mif": 8.2197,
+    "tda": 5.0626
   },
   {
     "fecha": "2021-08",
@@ -3273,7 +4227,11 @@
     "imor_consumo": 3.1224,
     "imor_vivienda": 2.555,
     "imor_tarjeta": 3.5193,
-    "imor_consumo_norev": 3.473
+    "imor_consumo_norev": 3.473,
+    "tasa_activa": 11.2654,
+    "tasa_pasiva": 2.7839,
+    "mif": 8.2172,
+    "tda": 5.0931
   },
   {
     "fecha": "2021-09",
@@ -3287,7 +4245,11 @@
     "imor_consumo": 3.1611,
     "imor_vivienda": 2.4757,
     "imor_tarjeta": 3.4194,
-    "imor_consumo_norev": 3.4249
+    "imor_consumo_norev": 3.4249,
+    "tasa_activa": 11.1588,
+    "tasa_pasiva": 2.7813,
+    "mif": 8.2312,
+    "tda": 5.1084
   },
   {
     "fecha": "2021-10",
@@ -3301,7 +4263,11 @@
     "imor_consumo": 3.04,
     "imor_vivienda": 2.4195,
     "imor_tarjeta": 3.3928,
-    "imor_consumo_norev": 3.3371
+    "imor_consumo_norev": 3.3371,
+    "tasa_activa": 11.3948,
+    "tasa_pasiva": 2.8056,
+    "mif": 8.2175,
+    "tda": 5.1076
   },
   {
     "fecha": "2021-11",
@@ -3315,7 +4281,11 @@
     "imor_consumo": 2.9373,
     "imor_vivienda": 2.3488,
     "imor_tarjeta": 3.2788,
-    "imor_consumo_norev": 3.3251
+    "imor_consumo_norev": 3.3251,
+    "tasa_activa": 11.2544,
+    "tasa_pasiva": 2.8373,
+    "mif": 8.1987,
+    "tda": 5.0695
   },
   {
     "fecha": "2021-12",
@@ -3329,7 +4299,11 @@
     "imor_consumo": 2.6981,
     "imor_vivienda": 2.2076,
     "imor_tarjeta": 3.2593,
-    "imor_consumo_norev": 3.1517
+    "imor_consumo_norev": 3.1517,
+    "tasa_activa": 11.6192,
+    "tasa_pasiva": 2.8914,
+    "mif": 8.1729,
+    "tda": 4.8922
   },
   {
     "fecha": "2022-01",
@@ -3343,7 +4317,11 @@
     "imor_consumo": 3.8825,
     "imor_vivienda": 2.2266,
     "imor_tarjeta": 3.1045,
-    "imor_consumo_norev": 3.2303
+    "imor_consumo_norev": 3.2303,
+    "tasa_activa": 11.7373,
+    "tasa_pasiva": 3.0119,
+    "mif": 8.1025,
+    "tda": 4.8255
   },
   {
     "fecha": "2022-02",
@@ -3357,7 +4335,11 @@
     "imor_consumo": 3.8101,
     "imor_vivienda": 2.0475,
     "imor_tarjeta": 3.0236,
-    "imor_consumo_norev": 3.1642
+    "imor_consumo_norev": 3.1642,
+    "tasa_activa": 11.0376,
+    "tasa_pasiva": 3.1325,
+    "mif": 8.0408,
+    "tda": 4.7151
   },
   {
     "fecha": "2022-03",
@@ -3371,7 +4353,11 @@
     "imor_consumo": 3.6254,
     "imor_vivienda": 1.9347,
     "imor_tarjeta": 2.9185,
-    "imor_consumo_norev": 3.0528
+    "imor_consumo_norev": 3.0528,
+    "tasa_activa": 12.0418,
+    "tasa_pasiva": 3.3203,
+    "mif": 7.9402,
+    "tda": 4.5769
   },
   {
     "fecha": "2022-04",
@@ -3385,7 +4371,11 @@
     "imor_consumo": 3.5356,
     "imor_vivienda": 1.8331,
     "imor_tarjeta": 2.8868,
-    "imor_consumo_norev": 2.947
+    "imor_consumo_norev": 2.947,
+    "tasa_activa": 12.2439,
+    "tasa_pasiva": 3.4564,
+    "mif": 7.9181,
+    "tda": 4.4595
   },
   {
     "fecha": "2022-05",
@@ -3399,7 +4389,11 @@
     "imor_consumo": 3.4449,
     "imor_vivienda": 1.8675,
     "imor_tarjeta": 3.0238,
-    "imor_consumo_norev": 2.9358
+    "imor_consumo_norev": 2.9358,
+    "tasa_activa": 12.1867,
+    "tasa_pasiva": 3.6955,
+    "mif": 7.7672,
+    "tda": 4.3849
   },
   {
     "fecha": "2022-06",
@@ -3413,7 +4407,11 @@
     "imor_consumo": 3.3002,
     "imor_vivienda": 1.8164,
     "imor_tarjeta": 2.8967,
-    "imor_consumo_norev": 2.8974
+    "imor_consumo_norev": 2.8974,
+    "tasa_activa": 12.4179,
+    "tasa_pasiva": 3.8672,
+    "mif": 7.7252,
+    "tda": 4.3198
   },
   {
     "fecha": "2022-07",
@@ -3427,7 +4425,11 @@
     "imor_consumo": 3.2047,
     "imor_vivienda": 1.6916,
     "imor_tarjeta": 2.8295,
-    "imor_consumo_norev": 2.9118
+    "imor_consumo_norev": 2.9118,
+    "tasa_activa": 13.0247,
+    "tasa_pasiva": 4.0843,
+    "mif": 7.6634,
+    "tda": 4.285
   },
   {
     "fecha": "2022-08",
@@ -3441,7 +4443,11 @@
     "imor_consumo": 2.8948,
     "imor_vivienda": 1.6997,
     "imor_tarjeta": 2.912,
-    "imor_consumo_norev": 2.8683
+    "imor_consumo_norev": 2.8683,
+    "tasa_activa": 13.3637,
+    "tasa_pasiva": 4.3569,
+    "mif": 7.5675,
+    "tda": 4.2222
   },
   {
     "fecha": "2022-09",
@@ -3455,7 +4461,11 @@
     "imor_consumo": 2.622,
     "imor_vivienda": 1.6793,
     "imor_tarjeta": 2.9116,
-    "imor_consumo_norev": 2.822
+    "imor_consumo_norev": 2.822,
+    "tasa_activa": 13.2818,
+    "tasa_pasiva": 4.6215,
+    "mif": 7.4775,
+    "tda": 4.1573
   },
   {
     "fecha": "2022-10",
@@ -3469,7 +4479,11 @@
     "imor_consumo": 2.6034,
     "imor_vivienda": 1.6439,
     "imor_tarjeta": 3.0225,
-    "imor_consumo_norev": 2.7681
+    "imor_consumo_norev": 2.7681,
+    "tasa_activa": 13.9804,
+    "tasa_pasiva": 4.9402,
+    "mif": 7.3731,
+    "tda": 4.1344
   },
   {
     "fecha": "2022-11",
@@ -3483,7 +4497,11 @@
     "imor_consumo": 2.593,
     "imor_vivienda": 1.4674,
     "imor_tarjeta": 2.8904,
-    "imor_consumo_norev": 2.6918
+    "imor_consumo_norev": 2.6918,
+    "tasa_activa": 13.8406,
+    "tasa_pasiva": 5.2739,
+    "mif": 7.2603,
+    "tda": 4.1185
   },
   {
     "fecha": "2022-12",
@@ -3497,7 +4515,11 @@
     "imor_consumo": 2.5307,
     "imor_vivienda": 1.3986,
     "imor_tarjeta": 2.9457,
-    "imor_consumo_norev": 2.6403
+    "imor_consumo_norev": 2.6403,
+    "tasa_activa": 14.7215,
+    "tasa_pasiva": 5.5515,
+    "mif": 7.2445,
+    "tda": 4.1142
   },
   {
     "fecha": "2023-01",
@@ -3511,7 +4533,11 @@
     "imor_consumo": 2.574,
     "imor_vivienda": 1.3527,
     "imor_tarjeta": 3.0191,
-    "imor_consumo_norev": 2.609
+    "imor_consumo_norev": 2.609,
+    "tasa_activa": 14.8788,
+    "tasa_pasiva": 5.8478,
+    "mif": 7.2133,
+    "tda": 4.0855
   },
   {
     "fecha": "2023-02",
@@ -3525,7 +4551,11 @@
     "imor_consumo": 2.5428,
     "imor_vivienda": 1.3457,
     "imor_tarjeta": 3.0049,
-    "imor_consumo_norev": 2.5831
+    "imor_consumo_norev": 2.5831,
+    "tasa_activa": 13.8353,
+    "tasa_pasiva": 6.1117,
+    "mif": 7.1729,
+    "tda": 4.0521
   },
   {
     "fecha": "2023-03",
@@ -3539,7 +4569,11 @@
     "imor_consumo": 2.5464,
     "imor_vivienda": 1.268,
     "imor_tarjeta": 2.9444,
-    "imor_consumo_norev": 2.5596
+    "imor_consumo_norev": 2.5596,
+    "tasa_activa": 15.0944,
+    "tasa_pasiva": 6.3874,
+    "mif": 7.1503,
+    "tda": 4.0256
   },
   {
     "fecha": "2023-04",
@@ -3553,7 +4587,11 @@
     "imor_consumo": 2.5569,
     "imor_vivienda": 1.243,
     "imor_tarjeta": 2.9564,
-    "imor_consumo_norev": 2.5521
+    "imor_consumo_norev": 2.5521,
+    "tasa_activa": 14.924,
+    "tasa_pasiva": 6.6963,
+    "mif": 7.0654,
+    "tda": 4.0058
   },
   {
     "fecha": "2023-05",
@@ -3567,7 +4605,11 @@
     "imor_consumo": 2.5961,
     "imor_vivienda": 1.2527,
     "imor_tarjeta": 3.067,
-    "imor_consumo_norev": 2.6
+    "imor_consumo_norev": 2.6,
+    "tasa_activa": 15.3417,
+    "tasa_pasiva": 6.9803,
+    "mif": 7.0464,
+    "tda": 4.0046
   },
   {
     "fecha": "2023-06",
@@ -3581,7 +4623,11 @@
     "imor_consumo": 2.616,
     "imor_vivienda": 1.1729,
     "imor_tarjeta": 3.0691,
-    "imor_consumo_norev": 2.6012
+    "imor_consumo_norev": 2.6012,
+    "tasa_activa": 15.1476,
+    "tasa_pasiva": 7.2947,
+    "mif": 6.9598,
+    "tda": 4.0134
   },
   {
     "fecha": "2023-07",
@@ -3595,7 +4641,11 @@
     "imor_consumo": 2.5515,
     "imor_vivienda": 1.192,
     "imor_tarjeta": 3.1486,
-    "imor_consumo_norev": 2.6092
+    "imor_consumo_norev": 2.6092,
+    "tasa_activa": 15.5239,
+    "tasa_pasiva": 7.5591,
+    "mif": 6.8956,
+    "tda": 4.0084
   },
   {
     "fecha": "2023-08",
@@ -3609,7 +4659,11 @@
     "imor_consumo": 2.445,
     "imor_vivienda": 1.1974,
     "imor_tarjeta": 3.1674,
-    "imor_consumo_norev": 2.6015
+    "imor_consumo_norev": 2.6015,
+    "tasa_activa": 15.5953,
+    "tasa_pasiva": 7.7445,
+    "mif": 6.8918,
+    "tda": 4.025
   },
   {
     "fecha": "2023-09",
@@ -3623,7 +4677,11 @@
     "imor_consumo": 2.4474,
     "imor_vivienda": 1.1585,
     "imor_tarjeta": 3.2128,
-    "imor_consumo_norev": 2.6379
+    "imor_consumo_norev": 2.6379,
+    "tasa_activa": 15.3543,
+    "tasa_pasiva": 7.9252,
+    "mif": 6.8784,
+    "tda": 4.0451
   },
   {
     "fecha": "2023-10",
@@ -3637,7 +4695,11 @@
     "imor_consumo": 2.4676,
     "imor_vivienda": 1.1895,
     "imor_tarjeta": 3.318,
-    "imor_consumo_norev": 2.5986
+    "imor_consumo_norev": 2.5986,
+    "tasa_activa": 15.6152,
+    "tasa_pasiva": 8.0317,
+    "mif": 6.9123,
+    "tda": 4.0736
   },
   {
     "fecha": "2023-11",
@@ -3651,7 +4713,11 @@
     "imor_consumo": 2.5008,
     "imor_vivienda": 1.1533,
     "imor_tarjeta": 3.3086,
-    "imor_consumo_norev": 2.6147
+    "imor_consumo_norev": 2.6147,
+    "tasa_activa": 15.1898,
+    "tasa_pasiva": 8.1928,
+    "mif": 6.8578,
+    "tda": 4.1288
   },
   {
     "fecha": "2023-12",
@@ -3665,7 +4731,11 @@
     "imor_consumo": 2.3058,
     "imor_vivienda": 1.1414,
     "imor_tarjeta": 3.4027,
-    "imor_consumo_norev": 2.6238
+    "imor_consumo_norev": 2.6238,
+    "tasa_activa": 15.5756,
+    "tasa_pasiva": 8.3839,
+    "mif": 6.7436,
+    "tda": 4.2015
   },
   {
     "fecha": "2024-01",
@@ -3679,7 +4749,11 @@
     "imor_consumo": 2.3383,
     "imor_vivienda": 1.142,
     "imor_tarjeta": 3.4033,
-    "imor_consumo_norev": 2.6825
+    "imor_consumo_norev": 2.6825,
+    "tasa_activa": 15.5739,
+    "tasa_pasiva": 8.4438,
+    "mif": 6.7445,
+    "tda": 4.2346
   },
   {
     "fecha": "2024-02",
@@ -3693,7 +4767,11 @@
     "imor_consumo": 2.3966,
     "imor_vivienda": 1.1298,
     "imor_tarjeta": 3.3116,
-    "imor_consumo_norev": 2.69
+    "imor_consumo_norev": 2.69,
+    "tasa_activa": 14.8702,
+    "tasa_pasiva": 8.5053,
+    "mif": 6.7641,
+    "tda": 4.2968
   },
   {
     "fecha": "2024-03",
@@ -3707,7 +4785,11 @@
     "imor_consumo": 2.3559,
     "imor_vivienda": 1.0523,
     "imor_tarjeta": 3.0763,
-    "imor_consumo_norev": 2.6527
+    "imor_consumo_norev": 2.6527,
+    "tasa_activa": 15.5423,
+    "tasa_pasiva": 8.5376,
+    "mif": 6.7641,
+    "tda": 4.3257
   },
   {
     "fecha": "2024-04",
@@ -3721,7 +4803,11 @@
     "imor_consumo": 2.3997,
     "imor_vivienda": 1.0004,
     "imor_tarjeta": 2.9724,
-    "imor_consumo_norev": 2.6923
+    "imor_consumo_norev": 2.6923,
+    "tasa_activa": 15.1395,
+    "tasa_pasiva": 8.561,
+    "mif": 6.7561,
+    "tda": 4.3538
   },
   {
     "fecha": "2024-05",
@@ -3735,7 +4821,11 @@
     "imor_consumo": 2.4196,
     "imor_vivienda": 1.02,
     "imor_tarjeta": 2.955,
-    "imor_consumo_norev": 2.6863
+    "imor_consumo_norev": 2.6863,
+    "tasa_activa": 15.553,
+    "tasa_pasiva": 8.5477,
+    "mif": 6.7817,
+    "tda": 4.3506
   },
   {
     "fecha": "2024-06",
@@ -3749,7 +4839,11 @@
     "imor_consumo": 2.344,
     "imor_vivienda": 1.0083,
     "imor_tarjeta": 2.9519,
-    "imor_consumo_norev": 2.6429
+    "imor_consumo_norev": 2.6429,
+    "tasa_activa": 15.212,
+    "tasa_pasiva": 8.5227,
+    "mif": 6.8002,
+    "tda": 4.3514
   },
   {
     "fecha": "2024-07",
@@ -3763,7 +4857,11 @@
     "imor_consumo": 2.3664,
     "imor_vivienda": 1.0114,
     "imor_tarjeta": 2.9782,
-    "imor_consumo_norev": 2.6992
+    "imor_consumo_norev": 2.6992,
+    "tasa_activa": 15.5015,
+    "tasa_pasiva": 8.5192,
+    "mif": 6.807,
+    "tda": 4.3519
   },
   {
     "fecha": "2024-08",
@@ -3777,7 +4875,11 @@
     "imor_consumo": 2.3976,
     "imor_vivienda": 1.0043,
     "imor_tarjeta": 2.9725,
-    "imor_consumo_norev": 2.7214
+    "imor_consumo_norev": 2.7214,
+    "tasa_activa": 15.5081,
+    "tasa_pasiva": 8.5529,
+    "mif": 6.7614,
+    "tda": 4.3332
   },
   {
     "fecha": "2024-09",
@@ -3791,7 +4893,11 @@
     "imor_consumo": 2.4021,
     "imor_vivienda": 1.0456,
     "imor_tarjeta": 3.0716,
-    "imor_consumo_norev": 2.7323
+    "imor_consumo_norev": 2.7323,
+    "tasa_activa": 15.0858,
+    "tasa_pasiva": 8.5503,
+    "mif": 6.7497,
+    "tda": 4.3369
   },
   {
     "fecha": "2024-10",
@@ -3805,7 +4911,11 @@
     "imor_consumo": 2.4072,
     "imor_vivienda": 1.081,
     "imor_tarjeta": 3.1099,
-    "imor_consumo_norev": 2.7479
+    "imor_consumo_norev": 2.7479,
+    "tasa_activa": 15.4026,
+    "tasa_pasiva": 8.5858,
+    "mif": 6.6967,
+    "tda": 4.3339
   },
   {
     "fecha": "2024-11",
@@ -3819,7 +4929,11 @@
     "imor_consumo": 2.3673,
     "imor_vivienda": 0.9439,
     "imor_tarjeta": 3.0365,
-    "imor_consumo_norev": 2.8154
+    "imor_consumo_norev": 2.8154,
+    "tasa_activa": 14.9101,
+    "tasa_pasiva": 8.5355,
+    "mif": 6.7137,
+    "tda": 4.318
   },
   {
     "fecha": "2024-12",
@@ -3833,7 +4947,11 @@
     "imor_consumo": 2.2318,
     "imor_vivienda": 0.9843,
     "imor_tarjeta": 3.1025,
-    "imor_consumo_norev": 2.7912
+    "imor_consumo_norev": 2.7912,
+    "tasa_activa": 15.1647,
+    "tasa_pasiva": 8.4904,
+    "mif": 6.719,
+    "tda": 4.2909
   },
   {
     "fecha": "2025-01",
@@ -3847,7 +4965,11 @@
     "imor_consumo": 2.2443,
     "imor_vivienda": 1.012,
     "imor_tarjeta": 3.1108,
-    "imor_consumo_norev": 2.8289
+    "imor_consumo_norev": 2.8289,
+    "tasa_activa": 15.025,
+    "tasa_pasiva": 8.503,
+    "mif": 6.6575,
+    "tda": 4.2976
   },
   {
     "fecha": "2025-02",
@@ -3861,7 +4983,11 @@
     "imor_consumo": 2.2097,
     "imor_vivienda": 1.0264,
     "imor_tarjeta": 3.0804,
-    "imor_consumo_norev": 2.8675
+    "imor_consumo_norev": 2.8675,
+    "tasa_activa": 13.864,
+    "tasa_pasiva": 8.4635,
+    "mif": 6.6061,
+    "tda": 4.2597
   },
   {
     "fecha": "2025-03",
@@ -3875,7 +5001,11 @@
     "imor_consumo": 2.1861,
     "imor_vivienda": 1.038,
     "imor_tarjeta": 2.8887,
-    "imor_consumo_norev": 2.9015
+    "imor_consumo_norev": 2.9015,
+    "tasa_activa": 14.7946,
+    "tasa_pasiva": 8.4067,
+    "mif": 6.6073,
+    "tda": 4.2586
   },
   {
     "fecha": "2025-04",
@@ -3889,7 +5019,11 @@
     "imor_consumo": 2.2297,
     "imor_vivienda": 1.063,
     "imor_tarjeta": 2.9322,
-    "imor_consumo_norev": 2.96
+    "imor_consumo_norev": 2.96,
+    "tasa_activa": 14.3987,
+    "tasa_pasiva": 8.3845,
+    "mif": 6.5711,
+    "tda": 4.2445
   },
   {
     "fecha": "2025-05",
@@ -3903,7 +5037,11 @@
     "imor_consumo": 2.2416,
     "imor_vivienda": 1.1159,
     "imor_tarjeta": 3.0013,
-    "imor_consumo_norev": 3.0139
+    "imor_consumo_norev": 3.0139,
+    "tasa_activa": 14.6579,
+    "tasa_pasiva": 8.3008,
+    "mif": 6.5847,
+    "tda": 4.2581
   },
   {
     "fecha": "2025-06",
@@ -3917,7 +5055,11 @@
     "imor_consumo": 2.2637,
     "imor_vivienda": 1.1383,
     "imor_tarjeta": 3.0167,
-    "imor_consumo_norev": 3.0006
+    "imor_consumo_norev": 3.0006,
+    "tasa_activa": 14.1666,
+    "tasa_pasiva": 8.2223,
+    "mif": 6.5892,
+    "tda": 4.2859
   },
   {
     "fecha": "2025-07",
@@ -3931,7 +5073,11 @@
     "imor_consumo": 2.2799,
     "imor_vivienda": 1.192,
     "imor_tarjeta": 3.0176,
-    "imor_consumo_norev": 3.0338
+    "imor_consumo_norev": 3.0338,
+    "tasa_activa": 14.4775,
+    "tasa_pasiva": 8.1052,
+    "mif": 6.6258,
+    "tda": 4.3073
   },
   {
     "fecha": "2025-08",
@@ -3945,7 +5091,11 @@
     "imor_consumo": 2.3086,
     "imor_vivienda": 1.1481,
     "imor_tarjeta": 2.987,
-    "imor_consumo_norev": 3.0897
+    "imor_consumo_norev": 3.0897,
+    "tasa_activa": 14.3998,
+    "tasa_pasiva": 7.9573,
+    "mif": 6.6924,
+    "tda": 4.3376
   },
   {
     "fecha": "2025-09",
@@ -3959,7 +5109,11 @@
     "imor_consumo": 2.4306,
     "imor_vivienda": 1.211,
     "imor_tarjeta": 3.0586,
-    "imor_consumo_norev": 3.1063
+    "imor_consumo_norev": 3.1063,
+    "tasa_activa": 13.8175,
+    "tasa_pasiva": 7.7902,
+    "mif": 6.7544,
+    "tda": 4.3694
   },
   {
     "fecha": "2025-10",
@@ -3973,7 +5127,11 @@
     "imor_consumo": 2.417,
     "imor_vivienda": 1.2245,
     "imor_tarjeta": 3.1848,
-    "imor_consumo_norev": 3.1013
+    "imor_consumo_norev": 3.1013,
+    "tasa_activa": 14.396,
+    "tasa_pasiva": 7.6407,
+    "mif": 6.8232,
+    "tda": 4.4085
   },
   {
     "fecha": "2025-11",
@@ -3987,7 +5145,11 @@
     "imor_consumo": 2.3964,
     "imor_vivienda": 1.2634,
     "imor_tarjeta": 3.2377,
-    "imor_consumo_norev": 3.0092
+    "imor_consumo_norev": 3.0092,
+    "tasa_activa": 13.9253,
+    "tasa_pasiva": 7.4738,
+    "mif": 6.9126,
+    "tda": 4.4533
   },
   {
     "fecha": "2025-12",
@@ -4001,7 +5163,11 @@
     "imor_consumo": 2.2352,
     "imor_vivienda": 1.2967,
     "imor_tarjeta": 3.4033,
-    "imor_consumo_norev": 3.0413
+    "imor_consumo_norev": 3.0413,
+    "tasa_activa": 14.1127,
+    "tasa_pasiva": 7.3028,
+    "mif": 6.9948,
+    "tda": 4.5094
   },
   {
     "fecha": "2026-01",
@@ -4015,7 +5181,11 @@
     "imor_consumo": 2.2609,
     "imor_vivienda": 1.3634,
     "imor_tarjeta": 3.3962,
-    "imor_consumo_norev": 3.1126
+    "imor_consumo_norev": 3.1126,
+    "tasa_activa": 13.8737,
+    "tasa_pasiva": 7.1119,
+    "mif": 7.0942,
+    "tda": 4.5261
   },
   {
     "fecha": "2026-02",
@@ -4029,7 +5199,11 @@
     "imor_consumo": 2.293,
     "imor_vivienda": 1.3871,
     "imor_tarjeta": 3.3492,
-    "imor_consumo_norev": 3.0629
+    "imor_consumo_norev": 3.0629,
+    "tasa_activa": 12.9411,
+    "tasa_pasiva": 6.9403,
+    "mif": 7.1867,
+    "tda": 4.5709
   },
   {
     "fecha": "2026-03",
@@ -4043,6 +5217,10 @@
     "imor_consumo": 2.272,
     "imor_vivienda": 1.3444,
     "imor_tarjeta": 3.2635,
-    "imor_consumo_norev": 3.1065
+    "imor_consumo_norev": 3.1065,
+    "tasa_activa": 14.1355,
+    "tasa_pasiva": 6.8136,
+    "mif": 7.2565,
+    "tda": 4.5931
   }
 ]

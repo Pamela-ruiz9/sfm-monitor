@@ -88,6 +88,11 @@ CONCEPT_MAP_EXTRA = {
     "imor_vivienda":      ("40200046", 100.0),
     "imor_tarjeta":       ("40200019", 100.0),  # tarjeta de crédito
     "imor_consumo_norev": ("40200020", 100.0),  # consumo no revolvente
+    # Rentabilidad / intermediación — valores 0–1 → ×100 para puntos porcentuales
+    "tasa_activa":        ("40200162", 100.0),  # tasa implícita activa (rendimiento cartera)
+    "tasa_pasiva":        ("40200037", 100.0),  # tasa implícita pasiva (costo de fondeo)
+    "mif":                ("40200218", 100.0),  # margen de intermediación financiera
+    "tda":                ("40200074", 100.0),  # tasa de deterioro ajustada
 }
 
 # Concepts whose raw value = 1.0 (ratio sentinel) is a CNBV artifact, not real data.

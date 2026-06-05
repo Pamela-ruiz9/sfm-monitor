@@ -112,6 +112,11 @@ const HistoricoCarteraSchema = z.object({
   icor_total: z.array(z.number()),
   roa: z.array(z.number().nullable()),
   roe: z.array(z.number().nullable()),
+  // Intermediación financiera — disponibles desde ~2008, nullable en periodos anteriores
+  tasa_activa: z.array(z.number().nullable()).optional(),
+  tasa_pasiva: z.array(z.number().nullable()).optional(),
+  mif: z.array(z.number().nullable()).optional(),
+  tda: z.array(z.number().nullable()).optional(),
 });
 
 const BancoLatestSchema = z.object({ valor: z.number(), fecha: z.string() });
