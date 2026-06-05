@@ -55,11 +55,11 @@ jobs:
 
       - name: Install Playwright browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium webkit
 
-      - name: E2E tests (excludes visual regression — snapshots are darwin-only)
+      - name: E2E tests (excludes visual regression — snapshots require local baseline generation)
         timeout-minutes: 15
-        run: npm run test:e2e -- --project=desktop --grep-invert "visual" --workers=2
+        run: npm run test:e2e -- --project=desktop --project=mobile-webkit --grep-invert "visual" --workers=2
 
       - name: Upload Playwright report
         if: always()

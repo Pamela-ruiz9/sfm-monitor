@@ -10,6 +10,15 @@ test.beforeEach(async ({ context }) => {
 
 const PATHS = ['/', '/mercado', '/credito', '/sofipos', '/macro'];
 
+// Visual regression tests run in all configured projects (desktop + mobile-webkit).
+// Playwright names snapshots automatically using the project name and OS, e.g.:
+//   visual-spec-ts-snapshots/visual--1-desktop-linux.png
+//   visual-spec-ts-snapshots/visual--1-mobile-webkit-linux.png
+//
+// Baselines for mobile-webkit (gate G2) are NOT committed yet.
+// Generate them by running:
+//   npx playwright install webkit
+//   npx playwright test --project=mobile-webkit --update-snapshots
 for (const path of PATHS) {
   test(`visual ${path}`, async ({ page }) => {
     await page.goto(`${BASE}${path}`);

@@ -2,8 +2,12 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests/e2e',
-  // Visual regression snapshots are platform-specific (darwin baselines).
+  // Visual regression snapshots are platform-specific.
   // CI excludes them via `--grep-invert "visual"`. Run locally with full suite.
+  //
+  // To generate webkit mobile baselines for gate G2, run locally:
+  //   npx playwright install webkit
+  //   npx playwright test --project=mobile-webkit --update-snapshots
   fullyParallel: true,
   forbidOnly: !!process.env['CI'],
   retries: process.env['CI'] ? 2 : 0,
@@ -22,9 +26,13 @@ export default defineConfig({
       name: 'desktop',
       use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 720 } },
     },
+    // webkit mobile — iPhone SE 3rd gen (375×667) matches gate G2 requirement.
+    // Baselines are NOT committed yet. To generate them:
+    //   npx playwright install webkit
+    //   npx playwright test --project=mobile-webkit --update-snapshots
     {
-      name: 'mobile',
-      use: { ...devices['iPhone 13'] },
+      name: 'mobile-webkit',
+      use: { ...devices['iPhone SE (3rd gen)'] },
     },
   ],
   webServer: {
