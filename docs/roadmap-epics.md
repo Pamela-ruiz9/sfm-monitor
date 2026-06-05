@@ -1,7 +1,7 @@
 # Roadmap SFM Monitor — Epics y Historias de Usuario
 
-**Fecha:** 2026-05-28  
-**Versión objetivo próxima:** v0.2.0 (cutover target: **martes 10 de junio de 2026**)  
+**Fecha:** 2026-06-04 (actualizado desde 2026-05-28)  
+**Versión objetivo próxima:** v0.2.0 (cutover target: **martes 10 de junio de 2026 — 6 días**)  
 **Autora:** Ingrid Pamela Ruiz Puga · Co-autor blueprint: Artemio Padilla
 
 ---
@@ -58,15 +58,11 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-104 — Gráfica Tasa Banxico duplicada en tab Macro + eje TIIE incorrecto (#101)
+### US-104 — Gráfica Tasa Banxico duplicada en tab Macro + eje TIIE incorrecto (#101) ✅
 
 **Como** analista financiero, **quiero** ver una sola gráfica de tasas en el tab Macro con el eje TIIE correctamente escalado, **para** que la lectura de política monetaria no sea ambigua.
 
-**Criterios de aceptación:**
-- [ ] En `/macro`, no hay gráfica de Tasa Banxico duplicada respecto a Resumen
-- [ ] El eje Y de TIIE refleja el valor real en % (ej. ~8.5%, no 850%)
-- [ ] Las tres líneas (TIIE, Cetes, Banxico) son legibles en la misma escala
-- [ ] `npm run build` pasa
+**Estado:** Corregido. Clic en KpiCard "Tasa Banxico" ahora abre `MercadoDineroChart` (TIIE + Cetes + Banxico juntas) — elimina la duplicación. Labels UI actualizados a "TIIE 28d". TIIE serie corregida SF343410 → SF43783.
 
 **Esfuerzo:** S · **Labels:** bug, charts
 
@@ -229,6 +225,13 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
+**Avance adicional 2026-06-01 — Pipeline Banxico:**
+- Salario mínimo: SF60628 descartada (retornaba todo `0.00`) → migrada a SR17358 (fix #106)
+- IGAE: truncado a datos ≥ 2025-12 (pre-migración BIE anómalos, fix #105); nota visual en `IgaeChart.tsx`
+- Exportaciones (471584), importaciones (471588), inversión fija (462219): series INEGI rotas post-BIE dic 2025 — HTTP 400; pendiente encontrar nuevos IDs (#106)
+
+---
+
 ### US-301 — Reservas internacionales al pipeline Banxico (SF43707)
 
 **Como** sistema, **quiero** la serie SF43707 en `update-data.yml`, **para** que `ReservasChart.tsx` muestre datos reales. El chart ya existe, solo falta el dato.
@@ -243,29 +246,29 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-302 — Parser INEGI BIE para IGAE mensual y PIB trimestral (#99 / issue #21)
+### US-302 — Parser INEGI BIE para IGAE mensual y PIB trimestral (#99 / issue #21) ✅ (parcial)
 
 **Como** desarrolladora, **quiero** un parser para la API INEGI BIE (claves 736181 e IGAE+381016), **para** traer IGAE y PIB al pipeline de forma automatizada.
 
+**Estado:** `update-data.yml` ya consulta INEGI BIE para IGAE (737370), PIB (381016), ENOE desocupación (444774) e informalidad (444779). Schema Zod estricto en `MacroSchema`. Pendiente: validación Pandera.
+
 **Criterios de aceptación:**
-- [ ] Script Python en `/scripts/` consulta INEGI BIE post-migración dic 2025
+- [x] `update-data.yml` consulta INEGI BIE post-migración dic 2025 (IGAE, PIB, desempleo, informalidad)
 - [ ] Validación con Pandera antes de escribir al JSON
-- [ ] Campos `igae` y `pib_trimestral` en `data/sfm-data.json` con schema Zod estricto
-- [ ] `npm run build` pasa sin errores
+- [x] Campos `igae`, `pib_trimestral`, `desempleo`, `informalidad` en `sfm-data.json` con schema Zod estricto
+- [x] `npm run build` pasa sin errores
 
 **Esfuerzo:** M · **Labels:** data
 
 ---
 
-### US-303 — Completar tab Macro con gráficas IGAE y PIB
+### US-303 — Completar tab Macro con gráficas IGAE, PIB y Desocupación ✅
 
-**Como** analista financiero, **quiero** ver IGAE y PIB en el tab Macro, **para** tener contexto de actividad económica junto a los indicadores financieros. Hoy el tab tiene dos secciones "próximamente" vacías.
+**Como** analista financiero, **quiero** ver IGAE y PIB en el tab Macro, **para** tener contexto de actividad económica junto a los indicadores financieros.
 
-**Criterios de aceptación:**
-- [ ] `IgaeChart.tsx` implementado con variación anual, anotaciones de crisis y KPI card
-- [ ] `macro.astro` reemplaza ambos placeholders con contenido real
-- [ ] El headline editorial de `macro.astro` pasa a ser dinámico (no hardcodeado)
-- [ ] KPI card PIB con lag explícito: "Dato con rezago ~55 días"
+**Estado:** Completo (commit `13e02e1`, 2026-06-01). `IgaeChart.tsx`, `PibChart.tsx`, `DesempleoChart.tsx` implementados; `macro.astro` reemplaza todos los placeholders; KpiCard Desocupación + Tasa Real Banxico/Cetes añadidos.
+
+**Nota IGAE:** Serie 737370 truncada a datos ≥ 2025-12 por migración BIE (datos pre-migración anómalos). Nota visual en el chart.
 
 **Esfuerzo:** S · **Labels:** enhancement · **Dependencias:** US-302
 
@@ -298,16 +301,28 @@ SFM Monitor está en `v0.2.0-dev` con el stack Astro 5 + React 19 listo para cut
 
 ---
 
-### US-306 — Inflación desagregada: subyacente y no subyacente
+### US-306 — Inflación desagregada: subyacente y no subyacente ✅
 
 **Como** analista financiero, **quiero** ver inflación subyacente (SP74625) y no subyacente (SP74627) por separado, **para** distinguir presiones inflacionarias estructurales de volatilidad transitoria.
 
+**Estado:** Completo (commit `c28a067`, 2026-06-01). SP1 corregida (antes usaba SP74625 por error), subyacente y no subyacente como series paralelas. `InflacionChart.tsx` muestra 3 líneas (general ámbar, subyacente azul punteado, no subyacente naranja punteado).
+
 **Criterios de aceptación:**
-- [ ] `update-data.yml` consulta SP74625 y SP74627 junto a SP1 (INPC general)
-- [ ] `InflacionChart.tsx` muestra las tres series con toggle visible/oculto
-- [ ] La alerta de inflación en `alerts.ts` puede evaluar subyacente
+- [x] `update-data.yml` consulta SP74625 y SP74627 junto a SP1 (INPC general)
+- [x] `InflacionChart.tsx` muestra las tres series
+- [ ] La alerta de inflación en `alerts.ts` puede evaluar subyacente (pendiente)
 
 **Esfuerzo:** S · **Labels:** data, enhancement
+
+---
+
+### US-307 — InformalidadChart y KPIs tasa real Banxico/Cetes ✅
+
+**Como** analista financiero, **quiero** ver la tasa de informalidad laboral y las tasas reales (Banxico y Cetes) en el tab Macro, **para** completar el panorama de condiciones financieras y mercado laboral.
+
+**Estado:** Completo (commit `b879338`, 2026-06-04). `InformalidadChart.tsx` con serie ENOE 444779; KpiCards tasa real calculadas como `tasa_nominal − inflacion_anual` con serie Banxico y Cetes 28d.
+
+**Esfuerzo:** S · **Labels:** enhancement
 
 ---
 

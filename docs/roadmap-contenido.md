@@ -21,9 +21,10 @@ El repo ya tiene `data/sfm-data.json` con la siguiente cobertura:
 - ICAP / Capital Neto (solvencia) — no está en el JSON actual
 - LCR / CCL y NSFR / CFEN (liquidez) — no están
 - Reservas internacionales (SF43707) — no está
-- Subyacente / no-subyacente — no están
+- ~~Subyacente / no-subyacente — no están~~ ✅ Completo: SP74625 + SP74627 en pipeline y en `InflacionChart.tsx` (2026-06-01)
 - Desglose IFRS9 automático desde CNBV (hoy es carga manual)
 - `index.json` con hash + timestamp por archivo (cache busting)
+- **[nuevo #106]** Exportaciones (471584), importaciones (471588), inversión fija (462219) — series INEGI rotas post-BIE dic 2025 (HTTP 400); buscar nuevos IDs en `inegi.org.mx/app/indicadores/`
 
 **El pipeline de Banxico funciona bien.** El cuello de botella real es CNBV: CSVs en encoding Latin-1, headers multinivel de 3-5 filas, formato que cambia con cada ciclo regulatorio. Eso requiere un parser robusto con validación Pandera antes de automatizarlo.
 
@@ -299,13 +300,15 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 
 ### Banxico SIE API (token activo — solo falta agregar al JSON y al dashboard)
 
-| Métrica | Serie | Frecuencia |
-|---|---|---|
-| Reservas internacionales brutas | SF43707 | Semanal |
-| TIIE de Fondeo (nueva referencia) | SF343410 | Diaria |
-| PIB trimestral / IGAE proxy mensual | INEGI BIE 736181 | T+53 días |
-| INPC subyacente | SP74625 | Mensual |
-| INPC no subyacente | SP74627 | Mensual |
+| Métrica | Serie | Frecuencia | Estado |
+|---|---|---|---|
+| Reservas internacionales brutas | SF43707 | Semanal | ⏳ Pendiente |
+| ~~TIIE de Fondeo (SF343410)~~ → TIIE 28d | SF43783 | Diaria | ✅ Corregida (fix 2026-05-31) |
+| IGAE var. anual mensual | INEGI BIE 737370 | T+53 días | ✅ En pipeline (truncado a ≥2025-12, #105) |
+| PIB trimestral | INEGI BIE 381016 | T+55 días | ✅ En pipeline |
+| INPC subyacente | SP74625 | Mensual | ✅ En pipeline y dashboard |
+| INPC no subyacente | SP74627 | Mensual | ✅ En pipeline y dashboard |
+| Salario mínimo general | SR17358 | Anual (cambios) | ✅ Migrado desde SF60628 (#106) |
 
 ---
 

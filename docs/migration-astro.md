@@ -59,26 +59,27 @@ Ver `docs/superpowers/specs/2026-04-27-app-like-redesign-pwa-design.md` y CHANGE
 - [x] 4 nanostores (activeTab, drawerState, terminalMode, onboarding)
 - [x] 24 vitest tests + 15 Playwright desktop tests + Lighthouse CI
 
-### Sprint M2 — charts CNBV (cartera + bancos)
+### Sprint M2 — charts CNBV (cartera + bancos) ✅ (parcial)
 
 Tightear `CreditoSchema` en `schema.ts` con shapes reales (quitar `passthrough`):
 
 - [ ] `ImorHistoricoChart.tsx` — IMOR Banca Múltiple desde 2000
-- [ ] `ImorSegmentoChart.tsx` — comercial/consumo/vivienda/tarjeta (multi-line)
-- [ ] `ImorBancoG7Chart.tsx` — BBVA/Banamex/Santander/Banorte/HSBC/Scotiabank/Inbursa
+- [x] `ImorSegPivotChart.tsx` — IMOR por segmento (comercial/consumo/vivienda/tarjeta) + toggle por banco G-7 (US-96 paso-2, 2026-06-01)
+- [x] `RoaRoeChart.tsx` — ROA/ROE por sistema y por banco G-7 con pills toggle (US-96 paso-2, 2026-06-01)
 - [ ] Tabla `<BancosTable>` con TanStack Table v8 virtualizada
 
-### Sprint M3 — IFRS 9 + SoFiPOs
+### Sprint M3 — IFRS 9 + SoFiPOs ✅ (parcial)
 
 - [ ] `Ifrs9StagesChart.tsx` — stacked area etapa 1/2/3
-- [ ] `SofiposImorChart.tsx` — top 15 por activo, Y axis fijo en 45%
-- [ ] `SofiposImoraRoaChart.tsx` — IMORA + ROA dual-axis
+- [x] `SofiposEntidadesChart.tsx` — top 15 por activo con chips Okabe-Ito, toggle Todas/Ninguna, vista por cartera cuando 1 entidad seleccionada (US-401, US-96 paso-2, 2026-06-01)
+- [ ] `SofiposImoraRoaChart.tsx` — IMORA + ROA dual-axis (ROA/ROE cubiertos en RoaRoeChart por banco; pendiente vista SoFiPOs dedicada)
 
-### Sprint M4 — features citables del blueprint
+### Sprint M4 — features citables del blueprint ✅ (parcial)
 
 - [ ] Content Collection `indicators` con MDX (ficha por IMOR/IMORA/ICOR/etc.)
-- [ ] `<MetricTooltip>` con Floating UI (glosario hover)
-- [ ] `<CitationBox>` con APA/Chicago/MLA/BibTeX/RIS
+- [x] `<MetricTooltip>` con CSS puro accesible (hover/focus, role="tooltip") + glosario en `glossary.ts` (US-203, 2026-05-28)
+- [x] `<CitationBox>` con tabs APA/BibTeX/RIS + botón Copiar (US-202, 2026-05-28)
+- [x] `<MetricInfo>` acordeón `<details>/<summary>` colapsable con fórmula, umbral y fuente regulatoria (US-403, 2026-05-31)
 - [ ] JSON-LD `@type: Dataset` por página de indicador
 - [ ] OG dinámico con Satori
 - [ ] `nuqs` para URL state (filtros)
