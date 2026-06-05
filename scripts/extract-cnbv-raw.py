@@ -93,6 +93,10 @@ CONCEPT_MAP_EXTRA = {
     "tasa_pasiva":        ("40200037", 100.0),  # tasa implícita pasiva (costo de fondeo)
     "mif":                ("40200218", 100.0),  # margen de intermediación financiera
     "tda":                ("40200074", 100.0),  # tasa de deterioro ajustada
+    # Flujo monetario — valor en pesos → almacenar en miles de millones (mmdp)
+    "quitas_castigos":    ("40200193", 1e-9),   # quitas y castigos flujo 12m (mmdp)
+    # Cobertura — ratio 0–1 → ×100 para puntos porcentuales
+    "eprc_cartera":       ("40200118", 100.0),  # EPRC / cartera total (tasa de cobertura)
 }
 
 # Concepts whose raw value = 1.0 (ratio sentinel) is a CNBV artifact, not real data.

@@ -128,10 +128,14 @@ def build_credito() -> dict:
             "roa":                arr("roa",          nullable=True),
             "roe":                arr("roe",          nullable=True),
             # Rentabilidad e intermediación — nullable: series disponibles desde ~2008
-            "tasa_activa":        arr("tasa_activa",  nullable=True),
-            "tasa_pasiva":        arr("tasa_pasiva",  nullable=True),
-            "mif":                arr("mif",          nullable=True),
-            "tda":                arr("tda",          nullable=True),
+            "tasa_activa":        arr("tasa_activa",    nullable=True),
+            "tasa_pasiva":        arr("tasa_pasiva",    nullable=True),
+            "mif":                arr("mif",            nullable=True),
+            "tda":                arr("tda",            nullable=True),
+            # Flujo acumulado 12 meses de quitas y castigos — en miles de millones de pesos
+            "quitas_castigos":    arr("quitas_castigos", nullable=True),
+            # EPRC / cartera total — tasa de cobertura sobre cartera completa (no solo vencida)
+            "eprc_cartera":       arr("eprc_cartera",    nullable=True),
         },
         "historico_por_banco": historico_por_banco or None,
     }

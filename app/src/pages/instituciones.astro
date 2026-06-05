@@ -13,6 +13,8 @@ import { ImoraChart } from '~/components/charts/ImoraChart';
 import { IcorChart } from '~/components/charts/IcorChart';
 import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
 import { MifChart } from '~/components/charts/MifChart';
+import { QuitasChart } from '~/components/charts/QuitasChart';
+import { EprcChart } from '~/components/charts/EprcChart';
 import { Ifrs9Chart } from '~/components/charts/Ifrs9Chart';
 import { ImorSegPivotChart } from '~/components/charts/ImorSegPivotChart';
 import { SofiposSegmentChart } from '~/components/charts/SofiposSegmentChart';
@@ -334,8 +336,30 @@ const top15 = [...ents]
         source="CNBV Sector 40"
         metricSlug="imora"
         tone="yellow">
-        <ImoraChart fechas={hpc.fechas} values={hpc.imora_total} bancos={bancosImoraArr} client:visible />
+        <ImoraChart
+          fechas={hpc.fechas}
+          values={hpc.imora_total}
+          bancos={bancosImoraArr}
+          {...(hpc.tda ? { tda: hpc.tda } : {})}
+          client:visible
+        />
       </Section>
+
+      {hpc.quitas_castigos && (
+        <Section
+          id="quitas"
+          eyebrow="Flujo de deterioro"
+          title="Quitas y castigos"
+          description="Flujo acumulado de los últimos 12 meses de quitas y castigos contables de la cartera de Banca Múltiple. Las quitas son el componente adicional que diferencia IMORA de IMOR: la morosidad ajustada incorpora estos castigos para reflejar el deterioro real de la cartera."
+          source="CNBV Sector 40 — concepto 40200193"
+          tone="yellow">
+          <QuitasChart
+            fechas={hpc.fechas}
+            valores={hpc.quitas_castigos}
+            client:visible
+          />
+        </Section>
+      )}
 
       <Section
         id="icor"
@@ -347,6 +371,22 @@ const top15 = [...ents]
         tone="green">
         <IcorChart fechas={hpc.fechas} values={hpc.icor_total} bancos={bancosIcorArr} client:visible />
       </Section>
+
+      {hpc.eprc_cartera && (
+        <Section
+          id="eprc"
+          eyebrow="Cobertura de cartera"
+          title="EPRC / Cartera total"
+          description="Estimaciones Preventivas para Riesgos Crediticios como porcentaje de la cartera total. Complementa el ICOR: mientras el ICOR mide cuántas veces las reservas cubren la cartera vencida, esta métrica muestra la carga de reservas sobre el portafolio completo."
+          source="CNBV Sector 40 — concepto 40200118"
+          tone="green">
+          <EprcChart
+            fechas={hpc.fechas}
+            eprcCartera={hpc.eprc_cartera}
+            client:visible
+          />
+        </Section>
+      )}
 
       <Section
         id="roa-roe"

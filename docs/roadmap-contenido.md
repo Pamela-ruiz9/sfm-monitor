@@ -268,20 +268,20 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 | IMORA por banco G-7 | 40200033 × entidad | Sistema, por banco | Alta |
 | ICOR por banco G-7 | 40200096 × entidad | Sistema, por banco | Alta |
 | ROA y ROE por banco G-7 | 40200001/002 × entidad | Sistema, por banco | Alta |
-| Tasa de interés implícita activa | 40200162 | Sistema, por cartera | Alta |
-| Tasa de interés implícita pasiva | 40200037 | Sistema | Alta |
-| Margen de intermediación financiera (MIF) | 40200218 | Sistema | Alta |
-| Tasa de deterioro ajustada (TDA) | 40200074 | Sistema, por cartera | Media |
-| EPRC / Cartera IFRS9 (E1+E2+E3) | 40200118 | Sistema, por cartera | Media |
-| Quitas y castigos — flujo 12 meses | 40200193 | Sistema, por cartera | Media |
+| ~~Tasa de interés implícita activa~~ | ~~40200162~~ | ~~Sistema~~ | ~~Alta~~ | ✅ MifChart (2026-06-04) |
+| ~~Tasa de interés implícita pasiva~~ | ~~40200037~~ | ~~Sistema~~ | ~~Alta~~ | ✅ MifChart (2026-06-04) |
+| ~~Margen de intermediación financiera (MIF)~~ | ~~40200218~~ | ~~Sistema~~ | ~~Alta~~ | ✅ MifChart (2026-06-04) |
+| ~~Tasa de deterioro ajustada (TDA)~~ | ~~40200074~~ | ~~Sistema~~ | ~~Media~~ | ✅ ImoraChart línea TDA (2026-06-05) |
+| ~~EPRC / Cartera IFRS9 (E1+E2+E3)~~ | ~~40200118~~ | ~~Sistema~~ | ~~Media~~ | ✅ EprcChart (2026-06-05) |
+| ~~Quitas y castigos — flujo 12 meses~~ | ~~40200193~~ | ~~Sistema~~ | ~~Media~~ | ✅ QuitasChart (2026-06-04) |
 | Crecimiento de cartera total (flujo anual) | Balance conceptos | Sistema, por cartera | Media |
 
 ### Del R12A IFRS9 (ya descargado — dic 2019 – feb 2026)
 
 | Métrica | Disponibilidad | Prioridad |
 |---|---|---|
-| IFRS9 etapas 1/2/3 por banco G-7 | Por entidad | Alta |
-| IFRS9 etapas por segmento de cartera | Comercial/Consumo/Vivienda | Alta |
+| ~~IFRS9 etapas 1/2/3 por banco G-7~~ | ~~Por entidad~~ | ~~Alta~~ | ✅ Ifrs9Chart dropdown 48 bancos (2026-06-04) |
+| ~~IFRS9 etapas por segmento de cartera~~ | ~~Comercial/Consumo/Vivienda~~ | ~~Alta~~ | ✅ Ifrs9Chart pills segmento (2026-06-04) |
 
 ### SoFiPOs (requiere CSV R11 por institución — pendiente descarga)
 
@@ -302,7 +302,7 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 
 | Métrica | Serie | Frecuencia | Estado |
 |---|---|---|---|
-| Reservas internacionales brutas | SF43707 | Semanal | ⏳ Pendiente |
+| ~~Reservas internacionales brutas~~ | ~~SF43707~~ | ~~Semanal~~ | ✅ KpiCard + ReservasChart |
 | ~~TIIE de Fondeo (SF343410)~~ → TIIE 28d | SF43783 | Diaria | ✅ Corregida (fix 2026-05-31) |
 | IGAE var. anual mensual | INEGI BIE 737370 | T+53 días | ✅ En pipeline (truncado a ≥2025-12, #105) |
 | PIB trimestral | INEGI BIE 381016 | T+55 días | ✅ En pipeline |

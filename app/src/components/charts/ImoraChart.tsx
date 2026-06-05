@@ -14,6 +14,7 @@ interface BancoPivot {
 interface Props {
   fechas: string[];
   values: (number | null)[];
+  tda?: (number | null)[];
   bancos?: BancoPivot[];
 }
 
@@ -36,7 +37,7 @@ function hasData(series: (number | null)[]): boolean {
   return series.some((v) => v !== null && v !== undefined && v > 0);
 }
 
-export function ImoraChart({ fechas, values, bancos }: Props) {
+export function ImoraChart({ fechas, values, tda, bancos }: Props) {
   const bancosConDatos = useMemo(
     () => (bancos ?? []).filter((b) => hasData(b.values)),
     [bancos],
@@ -76,6 +77,21 @@ export function ImoraChart({ fechas, values, bancos }: Props) {
         borderWidth: 2,
         spanGaps: true,
       },
+      ...(tda && view === 'sistema'
+        ? [{
+            label: 'TDA',
+            data: tda,
+            borderColor: '#56B4E9',
+            backgroundColor: 'transparent',
+            borderDash: [5, 3],
+            borderWidth: 1.5,
+            fill: false,
+            tension: 0.2,
+            pointRadius: 0,
+            pointHoverRadius: 4,
+            spanGaps: true,
+          }]
+        : []),
     ],
   };
 

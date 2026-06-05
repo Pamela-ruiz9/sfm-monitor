@@ -7,7 +7,8 @@
     "imor_comercial": 7.1757,
     "imor_tarjeta": 11.1172,
     "imor_consumo_norev": 18.5458,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 9.5564
   },
   {
     "fecha": "2001-01",
@@ -18,7 +19,8 @@
     "imor_tarjeta": 11.6293,
     "imor_consumo_norev": 18.4907,
     "tasa_activa": 17.799,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 9.5841
   },
   {
     "fecha": "2001-02",
@@ -29,7 +31,8 @@
     "imor_tarjeta": 11.5171,
     "imor_consumo_norev": 18.465,
     "tasa_activa": 15.954,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 9.6797
   },
   {
     "fecha": "2001-03",
@@ -40,7 +43,8 @@
     "imor_tarjeta": 11.0706,
     "imor_consumo_norev": 16.2848,
     "tasa_activa": 17.0381,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 9.2043
   },
   {
     "fecha": "2001-04",
@@ -51,7 +55,8 @@
     "imor_tarjeta": 10.7047,
     "imor_consumo_norev": 15.9794,
     "tasa_activa": 15.2019,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 9.1905
   },
   {
     "fecha": "2001-05",
@@ -62,7 +67,8 @@
     "imor_tarjeta": 10.3798,
     "imor_consumo_norev": 15.8042,
     "tasa_activa": 14.9859,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 9.0758
   },
   {
     "fecha": "2001-06",
@@ -73,7 +79,8 @@
     "imor_tarjeta": 10.3042,
     "imor_consumo_norev": 15.6496,
     "tasa_activa": 12.2691,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 8.8888
   },
   {
     "fecha": "2001-07",
@@ -84,7 +91,8 @@
     "imor_tarjeta": 10.3479,
     "imor_consumo_norev": 15.1053,
     "tasa_activa": 12.226,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 8.758
   },
   {
     "fecha": "2001-08",
@@ -95,7 +103,8 @@
     "imor_tarjeta": 10.0395,
     "imor_consumo_norev": 15.0984,
     "tasa_activa": 11.8967,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 8.7741
   },
   {
     "fecha": "2001-09",
@@ -106,7 +115,8 @@
     "imor_tarjeta": 9.7336,
     "imor_consumo_norev": 15.2734,
     "tasa_activa": 11.9253,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 8.7333
   },
   {
     "fecha": "2001-10",
@@ -117,7 +127,8 @@
     "imor_tarjeta": 9.6133,
     "imor_consumo_norev": 15.3909,
     "tasa_activa": 11.6795,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 8.7102
   },
   {
     "fecha": "2001-11",
@@ -128,7 +139,8 @@
     "imor_tarjeta": 9.5396,
     "imor_consumo_norev": 13.8901,
     "tasa_activa": 7.4983,
-    "mif": 0.0
+    "mif": 0.0,
+    "eprc_cartera": 7.9756
   },
   {
     "fecha": "2001-12",
@@ -141,7 +153,8 @@
     "imor_consumo_norev": 12.076,
     "tasa_activa": 10.3609,
     "tasa_pasiva": 9.0576,
-    "mif": 4.2062
+    "mif": 4.2062,
+    "eprc_cartera": 6.0785
   },
   {
     "fecha": "2002-01",
@@ -154,7 +167,8 @@
     "imor_consumo_norev": 12.6942,
     "tasa_activa": 9.7601,
     "tasa_pasiva": 8.4066,
-    "mif": 4.1895
+    "mif": 4.1895,
+    "eprc_cartera": 6.1223
   },
   {
     "fecha": "2002-02",
@@ -167,7 +181,8 @@
     "imor_consumo_norev": 12.564,
     "tasa_activa": 9.3781,
     "tasa_pasiva": 7.8554,
-    "mif": 4.1917
+    "mif": 4.1917,
+    "eprc_cartera": 6.1534
   },
   {
     "fecha": "2002-03",
@@ -180,7 +195,8 @@
     "imor_consumo_norev": 12.5053,
     "tasa_activa": 9.9185,
     "tasa_pasiva": 7.31,
-    "mif": 4.1384
+    "mif": 4.1384,
+    "eprc_cartera": 6.3923
   },
   {
     "fecha": "2002-04",
@@ -193,7 +209,8 @@
     "imor_consumo_norev": 12.7833,
     "tasa_activa": 8.9409,
     "tasa_pasiva": 6.8518,
-    "mif": 4.0694
+    "mif": 4.0694,
+    "eprc_cartera": 6.7316
   },
   {
     "fecha": "2002-05",
@@ -206,7 +223,8 @@
     "imor_consumo_norev": 12.6761,
     "tasa_activa": 9.4455,
     "tasa_pasiva": 6.4244,
-    "mif": 4.0326
+    "mif": 4.0326,
+    "eprc_cartera": 6.7413
   },
   {
     "fecha": "2002-06",
@@ -219,7 +237,8 @@
     "imor_consumo_norev": 12.3729,
     "tasa_activa": 9.6782,
     "tasa_pasiva": 6.1861,
-    "mif": 4.05
+    "mif": 4.05,
+    "eprc_cartera": 6.7398
   },
   {
     "fecha": "2002-07",
@@ -232,7 +251,8 @@
     "imor_consumo_norev": 12.5515,
     "tasa_activa": 10.3001,
     "tasa_pasiva": 6.0326,
-    "mif": 4.044
+    "mif": 4.044,
+    "eprc_cartera": 6.7205
   },
   {
     "fecha": "2002-08",
@@ -245,7 +265,8 @@
     "imor_consumo_norev": 12.0058,
     "tasa_activa": 9.7648,
     "tasa_pasiva": 5.9207,
-    "mif": 3.9748
+    "mif": 3.9748,
+    "eprc_cartera": 6.5989
   },
   {
     "fecha": "2002-09",
@@ -258,7 +279,8 @@
     "imor_consumo_norev": 11.641,
     "tasa_activa": 9.883,
     "tasa_pasiva": 5.7696,
-    "mif": 3.9547
+    "mif": 3.9547,
+    "eprc_cartera": 6.5134
   },
   {
     "fecha": "2002-10",
@@ -271,7 +293,8 @@
     "imor_consumo_norev": 11.4404,
     "tasa_activa": 12.0514,
     "tasa_pasiva": 5.6267,
-    "mif": 4.1206
+    "mif": 4.1206,
+    "eprc_cartera": 6.2667
   },
   {
     "fecha": "2002-11",
@@ -284,7 +307,8 @@
     "imor_consumo_norev": 11.5916,
     "tasa_activa": 9.9665,
     "tasa_pasiva": 5.9128,
-    "mif": 4.0413
+    "mif": 4.0413,
+    "eprc_cartera": 6.3544
   },
   {
     "fecha": "2002-12",
@@ -297,7 +321,8 @@
     "imor_consumo_norev": 11.2416,
     "tasa_activa": 10.526,
     "tasa_pasiva": 5.963,
-    "mif": 4.0007
+    "mif": 4.0007,
+    "eprc_cartera": 6.2912
   },
   {
     "fecha": "2003-01",
@@ -312,7 +337,9 @@
     "tasa_activa": 10.869,
     "tasa_pasiva": 6.0087,
     "mif": 4.0447,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 0.5263,
+    "eprc_cartera": 6.3062
   },
   {
     "fecha": "2003-02",
@@ -327,7 +354,9 @@
     "tasa_activa": 9.7434,
     "tasa_pasiva": 6.0525,
     "mif": 4.0274,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 1.0874,
+    "eprc_cartera": 6.172
   },
   {
     "fecha": "2003-03",
@@ -342,7 +371,9 @@
     "tasa_activa": 11.1534,
     "tasa_pasiva": 6.1414,
     "mif": 4.0436,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 1.7537,
+    "eprc_cartera": 6.1941
   },
   {
     "fecha": "2003-04",
@@ -357,7 +388,9 @@
     "tasa_activa": 10.4346,
     "tasa_pasiva": 6.2232,
     "mif": 4.0939,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 2.2271,
+    "eprc_cartera": 6.3114
   },
   {
     "fecha": "2003-05",
@@ -372,7 +405,9 @@
     "tasa_activa": 9.4128,
     "tasa_pasiva": 6.1702,
     "mif": 4.1356,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 7.483,
+    "eprc_cartera": 5.7882
   },
   {
     "fecha": "2003-06",
@@ -387,7 +422,9 @@
     "tasa_activa": 8.8325,
     "tasa_pasiva": 6.0542,
     "mif": 4.1835,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 9.1432,
+    "eprc_cartera": 5.9776
   },
   {
     "fecha": "2003-07",
@@ -402,7 +439,9 @@
     "tasa_activa": 8.7972,
     "tasa_pasiva": 5.8908,
     "mif": 4.2272,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 10.791,
+    "eprc_cartera": 5.9395
   },
   {
     "fecha": "2003-08",
@@ -417,7 +456,9 @@
     "tasa_activa": 8.765,
     "tasa_pasiva": 5.7419,
     "mif": 4.2906,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 11.3505,
+    "eprc_cartera": 5.9428
   },
   {
     "fecha": "2003-09",
@@ -432,7 +473,9 @@
     "tasa_activa": 8.2786,
     "tasa_pasiva": 5.6018,
     "mif": 4.2951,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 13.4058,
+    "eprc_cartera": 5.7605
   },
   {
     "fecha": "2003-10",
@@ -447,7 +490,9 @@
     "tasa_activa": 9.236,
     "tasa_pasiva": 5.4533,
     "mif": 4.2152,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 14.2864,
+    "eprc_cartera": 5.6502
   },
   {
     "fecha": "2003-11",
@@ -462,7 +507,9 @@
     "tasa_activa": 9.0828,
     "tasa_pasiva": 5.2989,
     "mif": 4.2932,
-    "tda": 100.0
+    "tda": 100.0,
+    "quitas_castigos": 15.3926,
+    "eprc_cartera": 5.6227
   },
   {
     "fecha": "2003-12",
@@ -479,7 +526,9 @@
     "tasa_activa": 9.8595,
     "tasa_pasiva": 5.177,
     "mif": 4.36,
-    "tda": 5.9113
+    "tda": 5.9113,
+    "quitas_castigos": 17.8611,
+    "eprc_cartera": 5.266
   },
   {
     "fecha": "2004-01",
@@ -496,7 +545,9 @@
     "tasa_activa": 9.4421,
     "tasa_pasiva": 4.9984,
     "mif": 4.4186,
-    "tda": 5.8019
+    "tda": 5.8019,
+    "quitas_castigos": 18.0736,
+    "eprc_cartera": 5.279
   },
   {
     "fecha": "2004-02",
@@ -513,7 +564,9 @@
     "tasa_activa": 9.2072,
     "tasa_pasiva": 4.81,
     "mif": 4.5624,
-    "tda": 5.6816
+    "tda": 5.6816,
+    "quitas_castigos": 18.0157,
+    "eprc_cartera": 5.3116
   },
   {
     "fecha": "2004-03",
@@ -530,7 +583,9 @@
     "tasa_activa": 10.034,
     "tasa_pasiva": 4.6207,
     "mif": 4.6526,
-    "tda": 5.6282
+    "tda": 5.6282,
+    "quitas_castigos": 18.7257,
+    "eprc_cartera": 5.3376
   },
   {
     "fecha": "2004-04",
@@ -547,7 +602,9 @@
     "tasa_activa": 9.9089,
     "tasa_pasiva": 4.4852,
     "mif": 4.7377,
-    "tda": 5.5012
+    "tda": 5.5012,
+    "quitas_castigos": 19.0755,
+    "eprc_cartera": 5.3111
   },
   {
     "fecha": "2004-05",
@@ -564,7 +621,9 @@
     "tasa_activa": 9.9374,
     "tasa_pasiva": 4.4721,
     "mif": 4.7976,
-    "tda": 5.0274
+    "tda": 5.0274,
+    "quitas_castigos": 15.3995,
+    "eprc_cartera": 5.1302
   },
   {
     "fecha": "2004-06",
@@ -581,7 +640,9 @@
     "tasa_activa": 10.4565,
     "tasa_pasiva": 4.4985,
     "mif": 4.9042,
-    "tda": 4.8448
+    "tda": 4.8448,
+    "quitas_castigos": 14.5917,
+    "eprc_cartera": 5.2248
   },
   {
     "fecha": "2004-07",
@@ -598,7 +659,9 @@
     "tasa_activa": 9.9281,
     "tasa_pasiva": 4.5431,
     "mif": 4.9473,
-    "tda": 4.683
+    "tda": 4.683,
+    "quitas_castigos": 13.9842,
+    "eprc_cartera": 5.157
   },
   {
     "fecha": "2004-08",
@@ -615,7 +678,9 @@
     "tasa_activa": 11.2478,
     "tasa_pasiva": 4.6356,
     "mif": 5.064,
-    "tda": 4.5891
+    "tda": 4.5891,
+    "quitas_castigos": 14.0838,
+    "eprc_cartera": 5.6227
   },
   {
     "fecha": "2004-09",
@@ -632,7 +697,9 @@
     "tasa_activa": 10.9157,
     "tasa_pasiva": 4.6184,
     "mif": 5.2946,
-    "tda": 4.5649
+    "tda": 4.5649,
+    "quitas_castigos": 14.8148,
+    "eprc_cartera": 5.3687
   },
   {
     "fecha": "2004-10",
@@ -649,7 +716,9 @@
     "tasa_activa": 11.5658,
     "tasa_pasiva": 4.7121,
     "mif": 5.3873,
-    "tda": 4.478
+    "tda": 4.478,
+    "quitas_castigos": 14.8437,
+    "eprc_cartera": 5.202
   },
   {
     "fecha": "2004-11",
@@ -666,7 +735,9 @@
     "tasa_activa": 11.7608,
     "tasa_pasiva": 4.8535,
     "mif": 5.4753,
-    "tda": 4.3829
+    "tda": 4.3829,
+    "quitas_castigos": 14.7832,
+    "eprc_cartera": 5.1025
   },
   {
     "fecha": "2004-12",
@@ -683,7 +754,9 @@
     "tasa_activa": 12.6299,
     "tasa_pasiva": 4.9623,
     "mif": 5.6163,
-    "tda": 4.295
+    "tda": 4.295,
+    "quitas_castigos": 14.5171,
+    "eprc_cartera": 5.0644
   },
   {
     "fecha": "2005-01",
@@ -700,7 +773,9 @@
     "tasa_activa": 12.6036,
     "tasa_pasiva": 5.1074,
     "mif": 5.7319,
-    "tda": 4.1936
+    "tda": 4.1936,
+    "quitas_castigos": 14.2771,
+    "eprc_cartera": 5.0009
   },
   {
     "fecha": "2005-02",
@@ -717,7 +792,9 @@
     "tasa_activa": 12.1952,
     "tasa_pasiva": 5.2207,
     "mif": 5.8607,
-    "tda": 4.1277
+    "tda": 4.1277,
+    "quitas_castigos": 14.3898,
+    "eprc_cartera": 4.8749
   },
   {
     "fecha": "2005-03",
@@ -734,7 +811,9 @@
     "tasa_activa": 13.315,
     "tasa_pasiva": 5.3565,
     "mif": 5.9995,
-    "tda": 4.0187
+    "tda": 4.0187,
+    "quitas_castigos": 14.0056,
+    "eprc_cartera": 4.8232
   },
   {
     "fecha": "2005-04",
@@ -751,7 +830,9 @@
     "tasa_activa": 13.2973,
     "tasa_pasiva": 5.5133,
     "mif": 6.1184,
-    "tda": 3.9323
+    "tda": 3.9323,
+    "quitas_castigos": 13.8802,
+    "eprc_cartera": 4.7359
   },
   {
     "fecha": "2005-05",
@@ -768,7 +849,9 @@
     "tasa_activa": 13.7194,
     "tasa_pasiva": 5.6952,
     "mif": 6.2656,
-    "tda": 3.8067
+    "tda": 3.8067,
+    "quitas_castigos": 12.9305,
+    "eprc_cartera": 4.8796
   },
   {
     "fecha": "2005-06",
@@ -785,7 +868,9 @@
     "tasa_activa": 13.5472,
     "tasa_pasiva": 5.8549,
     "mif": 6.344,
-    "tda": 3.7206
+    "tda": 3.7206,
+    "quitas_castigos": 12.7526,
+    "eprc_cartera": 4.5112
   },
   {
     "fecha": "2005-07",
@@ -802,7 +887,9 @@
     "tasa_activa": 13.8256,
     "tasa_pasiva": 6.0202,
     "mif": 6.4943,
-    "tda": 3.6397
+    "tda": 3.6397,
+    "quitas_castigos": 12.5749,
+    "eprc_cartera": 4.4568
   },
   {
     "fecha": "2005-08",
@@ -819,7 +906,9 @@
     "tasa_activa": 13.7943,
     "tasa_pasiva": 6.1861,
     "mif": 6.5482,
-    "tda": 3.5602
+    "tda": 3.5602,
+    "quitas_castigos": 12.6598,
+    "eprc_cartera": 4.1867
   },
   {
     "fecha": "2005-09",
@@ -836,7 +925,9 @@
     "tasa_activa": 13.8294,
     "tasa_pasiva": 6.3792,
     "mif": 6.6117,
-    "tda": 3.3853
+    "tda": 3.3853,
+    "quitas_castigos": 11.3805,
+    "eprc_cartera": 4.5973
   },
   {
     "fecha": "2005-10",
@@ -853,7 +944,9 @@
     "tasa_activa": 14.1642,
     "tasa_pasiva": 6.4848,
     "mif": 6.7268,
-    "tda": 3.3714
+    "tda": 3.3714,
+    "quitas_castigos": 11.9627,
+    "eprc_cartera": 4.5429
   },
   {
     "fecha": "2005-11",
@@ -870,7 +963,9 @@
     "tasa_activa": 13.978,
     "tasa_pasiva": 6.5504,
     "mif": 6.8395,
-    "tda": 3.3072
+    "tda": 3.3072,
+    "quitas_castigos": 11.9243,
+    "eprc_cartera": 4.4977
   },
   {
     "fecha": "2005-12",
@@ -887,7 +982,9 @@
     "tasa_activa": 14.2032,
     "tasa_pasiva": 6.5613,
     "mif": 6.9461,
-    "tda": 3.1546
+    "tda": 3.1546,
+    "quitas_castigos": 10.8792,
+    "eprc_cartera": 4.3834
   },
   {
     "fecha": "2006-01",
@@ -904,7 +1001,9 @@
     "tasa_activa": 13.9749,
     "tasa_pasiva": 6.5526,
     "mif": 7.0651,
-    "tda": 3.1347
+    "tda": 3.1347,
+    "quitas_castigos": 11.3569,
+    "eprc_cartera": 4.3753
   },
   {
     "fecha": "2006-02",
@@ -921,7 +1020,9 @@
     "tasa_activa": 13.1278,
     "tasa_pasiva": 6.5174,
     "mif": 7.1674,
-    "tda": 3.1064
+    "tda": 3.1064,
+    "quitas_castigos": 11.7141,
+    "eprc_cartera": 4.4629
   },
   {
     "fecha": "2006-03",
@@ -938,7 +1039,9 @@
     "tasa_activa": 13.6274,
     "tasa_pasiva": 6.4203,
     "mif": 7.2802,
-    "tda": 3.0972
+    "tda": 3.0972,
+    "quitas_castigos": 12.4413,
+    "eprc_cartera": 4.2096
   },
   {
     "fecha": "2006-04",
@@ -955,7 +1058,9 @@
     "tasa_activa": 13.2824,
     "tasa_pasiva": 6.3041,
     "mif": 7.3898,
-    "tda": 3.0636
+    "tda": 3.0636,
+    "quitas_castigos": 12.8345,
+    "eprc_cartera": 4.1874
   },
   {
     "fecha": "2006-05",
@@ -972,7 +1077,9 @@
     "tasa_activa": 13.4829,
     "tasa_pasiva": 6.1521,
     "mif": 7.5038,
-    "tda": 3.0079
+    "tda": 3.0079,
+    "quitas_castigos": 13.1028,
+    "eprc_cartera": 4.1479
   },
   {
     "fecha": "2006-06",
@@ -989,7 +1096,9 @@
     "tasa_activa": 14.2882,
     "tasa_pasiva": 6.0215,
     "mif": 7.7153,
-    "tda": 2.9991
+    "tda": 2.9991,
+    "quitas_castigos": 13.5533,
+    "eprc_cartera": 4.1774
   },
   {
     "fecha": "2006-07",
@@ -1006,7 +1115,9 @@
     "tasa_activa": 13.7653,
     "tasa_pasiva": 5.8985,
     "mif": 7.8327,
-    "tda": 2.9748
+    "tda": 2.9748,
+    "quitas_castigos": 13.757,
+    "eprc_cartera": 4.1612
   },
   {
     "fecha": "2006-08",
@@ -1023,7 +1134,9 @@
     "tasa_activa": 14.3439,
     "tasa_pasiva": 5.725,
     "mif": 8.0497,
-    "tda": 2.9815
+    "tda": 2.9815,
+    "quitas_castigos": 13.9758,
+    "eprc_cartera": 4.2256
   },
   {
     "fecha": "2006-09",
@@ -1040,7 +1153,9 @@
     "tasa_activa": 14.2837,
     "tasa_pasiva": 5.6243,
     "mif": 8.166,
-    "tda": 2.9585
+    "tda": 2.9585,
+    "quitas_castigos": 13.8607,
+    "eprc_cartera": 4.2078
   },
   {
     "fecha": "2006-10",
@@ -1057,7 +1172,9 @@
     "tasa_activa": 14.4979,
     "tasa_pasiva": 5.5362,
     "mif": 8.2867,
-    "tda": 2.9308
+    "tda": 2.9308,
+    "quitas_castigos": 13.6049,
+    "eprc_cartera": 4.2212
   },
   {
     "fecha": "2006-11",
@@ -1074,7 +1191,9 @@
     "tasa_activa": 14.3059,
     "tasa_pasiva": 5.4078,
     "mif": 8.4377,
-    "tda": 2.946
+    "tda": 2.946,
+    "quitas_castigos": 13.8217,
+    "eprc_cartera": 4.2696
   },
   {
     "fecha": "2006-12",
@@ -1091,7 +1210,9 @@
     "tasa_activa": 14.5162,
     "tasa_pasiva": 5.325,
     "mif": 8.5438,
-    "tda": 2.981
+    "tda": 2.981,
+    "quitas_castigos": 14.2956,
+    "eprc_cartera": 4.1877
   },
   {
     "fecha": "2007-01",
@@ -1108,7 +1229,9 @@
     "tasa_activa": 14.5804,
     "tasa_pasiva": 5.2605,
     "mif": 8.6666,
-    "tda": 3.0938
+    "tda": 3.0938,
+    "quitas_castigos": 15.7068,
+    "eprc_cartera": 4.2159
   },
   {
     "fecha": "2007-02",
@@ -1125,7 +1248,9 @@
     "tasa_activa": 13.8502,
     "tasa_pasiva": 5.2148,
     "mif": 8.7611,
-    "tda": 3.2136
+    "tda": 3.2136,
+    "quitas_castigos": 17.2152,
+    "eprc_cartera": 4.2578
   },
   {
     "fecha": "2007-03",
@@ -1142,7 +1267,9 @@
     "tasa_activa": 14.7383,
     "tasa_pasiva": 5.1961,
     "mif": 8.8853,
-    "tda": 3.4189
+    "tda": 3.4189,
+    "quitas_castigos": 19.7443,
+    "eprc_cartera": 4.2205
   },
   {
     "fecha": "2007-04",
@@ -1159,7 +1286,9 @@
     "tasa_activa": 14.4729,
     "tasa_pasiva": 5.1737,
     "mif": 9.0051,
-    "tda": 3.5736
+    "tda": 3.5736,
+    "quitas_castigos": 21.5358,
+    "eprc_cartera": 4.2466
   },
   {
     "fecha": "2007-05",
@@ -1176,7 +1305,9 @@
     "tasa_activa": 14.9679,
     "tasa_pasiva": 5.1667,
     "mif": 9.1329,
-    "tda": 3.7866
+    "tda": 3.7866,
+    "quitas_castigos": 24.2568,
+    "eprc_cartera": 4.3072
   },
   {
     "fecha": "2007-06",
@@ -1193,7 +1324,9 @@
     "tasa_activa": 14.4279,
     "tasa_pasiva": 5.1631,
     "mif": 9.1345,
-    "tda": 3.9479
+    "tda": 3.9479,
+    "quitas_castigos": 26.3764,
+    "eprc_cartera": 4.2786
   },
   {
     "fecha": "2007-07",
@@ -1210,7 +1343,9 @@
     "tasa_activa": 15.3574,
     "tasa_pasiva": 5.1714,
     "mif": 9.2551,
-    "tda": 4.1118
+    "tda": 4.1118,
+    "quitas_castigos": 28.4672,
+    "eprc_cartera": 4.3202
   },
   {
     "fecha": "2007-08",
@@ -1227,7 +1362,9 @@
     "tasa_activa": 14.9637,
     "tasa_pasiva": 5.217,
     "mif": 9.2457,
-    "tda": 4.2982
+    "tda": 4.2982,
+    "quitas_castigos": 31.1696,
+    "eprc_cartera": 4.3043
   },
   {
     "fecha": "2007-09",
@@ -1244,7 +1381,9 @@
     "tasa_activa": 14.8094,
     "tasa_pasiva": 5.2224,
     "mif": 9.2832,
-    "tda": 4.4661
+    "tda": 4.4661,
+    "quitas_castigos": 33.704,
+    "eprc_cartera": 4.3579
   },
   {
     "fecha": "2007-10",
@@ -1261,7 +1400,9 @@
     "tasa_activa": 14.9031,
     "tasa_pasiva": 5.2157,
     "mif": 9.3178,
-    "tda": 4.6641
+    "tda": 4.6641,
+    "quitas_castigos": 36.8427,
+    "eprc_cartera": 4.318
   },
   {
     "fecha": "2007-11",
@@ -1278,7 +1419,9 @@
     "tasa_activa": 14.5798,
     "tasa_pasiva": 5.257,
     "mif": 9.2982,
-    "tda": 4.8547
+    "tda": 4.8547,
+    "quitas_castigos": 40.0655,
+    "eprc_cartera": 4.3699
   },
   {
     "fecha": "2007-12",
@@ -1295,7 +1438,9 @@
     "tasa_activa": 14.8252,
     "tasa_pasiva": 5.2801,
     "mif": 9.3133,
-    "tda": 5.1229
+    "tda": 5.1229,
+    "quitas_castigos": 44.4943,
+    "eprc_cartera": 4.292
   },
   {
     "fecha": "2008-01",
@@ -1312,7 +1457,9 @@
     "tasa_activa": 14.7311,
     "tasa_pasiva": 5.2965,
     "mif": 9.303,
-    "tda": 5.2586
+    "tda": 5.2586,
+    "quitas_castigos": 46.9962,
+    "eprc_cartera": 4.2671
   },
   {
     "fecha": "2008-02",
@@ -1329,7 +1476,9 @@
     "tasa_activa": 14.422,
     "tasa_pasiva": 5.3262,
     "mif": 9.3157,
-    "tda": 5.4324
+    "tda": 5.4324,
+    "quitas_castigos": 50.3454,
+    "eprc_cartera": 4.2468
   },
   {
     "fecha": "2008-03",
@@ -1346,7 +1495,9 @@
     "tasa_activa": 15.2281,
     "tasa_pasiva": 5.34,
     "mif": 9.3413,
-    "tda": 5.4635
+    "tda": 5.4635,
+    "quitas_castigos": 51.3887,
+    "eprc_cartera": 4.2832
   },
   {
     "fecha": "2008-04",
@@ -1363,7 +1514,9 @@
     "tasa_activa": 14.9201,
     "tasa_pasiva": 5.3595,
     "mif": 9.3621,
-    "tda": 5.4923
+    "tda": 5.4923,
+    "quitas_castigos": 52.1086,
+    "eprc_cartera": 4.3656
   },
   {
     "fecha": "2008-05",
@@ -1380,7 +1533,9 @@
     "tasa_activa": 15.0941,
     "tasa_pasiva": 5.375,
     "mif": 9.3581,
-    "tda": 5.5409
+    "tda": 5.5409,
+    "quitas_castigos": 53.0698,
+    "eprc_cartera": 4.4313
   },
   {
     "fecha": "2008-06",
@@ -1397,7 +1552,9 @@
     "tasa_activa": 15.1834,
     "tasa_pasiva": 5.3964,
     "mif": 9.412,
-    "tda": 5.649
+    "tda": 5.649,
+    "quitas_castigos": 55.1443,
+    "eprc_cartera": 4.545
   },
   {
     "fecha": "2008-07",
@@ -1414,7 +1571,9 @@
     "tasa_activa": 15.2325,
     "tasa_pasiva": 5.4147,
     "mif": 9.3953,
-    "tda": 5.7334
+    "tda": 5.7334,
+    "quitas_castigos": 56.858,
+    "eprc_cartera": 4.5871
   },
   {
     "fecha": "2008-08",
@@ -1431,7 +1590,9 @@
     "tasa_activa": 15.3402,
     "tasa_pasiva": 5.4358,
     "mif": 9.4168,
-    "tda": 5.8482
+    "tda": 5.8482,
+    "quitas_castigos": 59.0188,
+    "eprc_cartera": 4.6037
   },
   {
     "fecha": "2008-09",
@@ -1448,7 +1609,9 @@
     "tasa_activa": 15.435,
     "tasa_pasiva": 5.4633,
     "mif": 9.4495,
-    "tda": 6.0487
+    "tda": 6.0487,
+    "quitas_castigos": 62.7585,
+    "eprc_cartera": 4.8246
   },
   {
     "fecha": "2008-10",
@@ -1465,7 +1628,9 @@
     "tasa_activa": 15.6734,
     "tasa_pasiva": 5.742,
     "mif": 9.2396,
-    "tda": 6.2242
+    "tda": 6.2242,
+    "quitas_castigos": 65.6878,
+    "eprc_cartera": 5.0017
   },
   {
     "fecha": "2008-11",
@@ -1482,7 +1647,9 @@
     "tasa_activa": 15.3431,
     "tasa_pasiva": 5.8276,
     "mif": 9.2236,
-    "tda": 6.3923
+    "tda": 6.3923,
+    "quitas_castigos": 68.1451,
+    "eprc_cartera": 5.1176
   },
   {
     "fecha": "2008-12",
@@ -1499,7 +1666,9 @@
     "tasa_activa": 15.5141,
     "tasa_pasiva": 5.694,
     "mif": 9.4288,
-    "tda": 6.7275
+    "tda": 6.7275,
+    "quitas_castigos": 74.4957,
+    "eprc_cartera": 5.1707
   },
   {
     "fecha": "2009-01",
@@ -1516,7 +1685,9 @@
     "tasa_activa": 15.2969,
     "tasa_pasiva": 5.7715,
     "mif": 9.3994,
-    "tda": 6.8748
+    "tda": 6.8748,
+    "quitas_castigos": 76.8622,
+    "eprc_cartera": 5.253
   },
   {
     "fecha": "2009-02",
@@ -1533,7 +1704,9 @@
     "tasa_activa": 13.9619,
     "tasa_pasiva": 5.7509,
     "mif": 9.3807,
-    "tda": 7.0412
+    "tda": 7.0412,
+    "quitas_castigos": 79.4687,
+    "eprc_cartera": 5.3386
   },
   {
     "fecha": "2009-03",
@@ -1550,7 +1723,9 @@
     "tasa_activa": 14.5839,
     "tasa_pasiva": 5.7301,
     "mif": 9.3657,
-    "tda": 7.3203
+    "tda": 7.3203,
+    "quitas_castigos": 84.2089,
+    "eprc_cartera": 5.4386
   },
   {
     "fecha": "2009-04",
@@ -1567,7 +1742,9 @@
     "tasa_activa": 13.9724,
     "tasa_pasiva": 5.6701,
     "mif": 9.3569,
-    "tda": 7.5823
+    "tda": 7.5823,
+    "quitas_castigos": 88.6268,
+    "eprc_cartera": 5.5098
   },
   {
     "fecha": "2009-05",
@@ -1585,7 +1762,9 @@
     "tasa_activa": 14.021,
     "tasa_pasiva": 5.6961,
     "mif": 9.2594,
-    "tda": 7.8247
+    "tda": 7.8247,
+    "quitas_castigos": 92.3388,
+    "eprc_cartera": 5.6171
   },
   {
     "fecha": "2009-06",
@@ -1603,7 +1782,9 @@
     "tasa_activa": 13.2569,
     "tasa_pasiva": 5.5838,
     "mif": 9.215,
-    "tda": 8.0994
+    "tda": 8.0994,
+    "quitas_castigos": 96.715,
+    "eprc_cartera": 5.5224
   },
   {
     "fecha": "2009-07",
@@ -1621,7 +1802,9 @@
     "tasa_activa": 13.1804,
     "tasa_pasiva": 5.3698,
     "mif": 9.2615,
-    "tda": 8.3222
+    "tda": 8.3222,
+    "quitas_castigos": 100.2657,
+    "eprc_cartera": 5.4539
   },
   {
     "fecha": "2009-08",
@@ -1639,7 +1822,9 @@
     "tasa_activa": 13.0825,
     "tasa_pasiva": 5.1615,
     "mif": 9.2962,
-    "tda": 8.6573
+    "tda": 8.6573,
+    "quitas_castigos": 106.4294,
+    "eprc_cartera": 5.6269
   },
   {
     "fecha": "2009-09",
@@ -1657,7 +1842,9 @@
     "tasa_activa": 12.8817,
     "tasa_pasiva": 4.9226,
     "mif": 9.3145,
-    "tda": 8.7915
+    "tda": 8.7915,
+    "quitas_castigos": 108.7842,
+    "eprc_cartera": 5.6178
   },
   {
     "fecha": "2009-10",
@@ -1675,7 +1862,9 @@
     "tasa_activa": 12.85,
     "tasa_pasiva": 4.5211,
     "mif": 9.4861,
-    "tda": 8.839
+    "tda": 8.839,
+    "quitas_castigos": 109.6734,
+    "eprc_cartera": 5.542
   },
   {
     "fecha": "2009-11",
@@ -1693,7 +1882,9 @@
     "tasa_activa": 12.6105,
     "tasa_pasiva": 4.313,
     "mif": 9.4594,
-    "tda": 8.886
+    "tda": 8.886,
+    "quitas_castigos": 111.0099,
+    "eprc_cartera": 5.5011
   },
   {
     "fecha": "2009-12",
@@ -1711,7 +1902,9 @@
     "tasa_activa": 13.2708,
     "tasa_pasiva": 4.2409,
     "mif": 9.3179,
-    "tda": 8.7093
+    "tda": 8.7093,
+    "quitas_castigos": 107.7685,
+    "eprc_cartera": 5.3183
   },
   {
     "fecha": "2010-01",
@@ -1729,7 +1922,9 @@
     "tasa_activa": 12.5046,
     "tasa_pasiva": 4.0153,
     "mif": 9.3111,
-    "tda": 8.6139
+    "tda": 8.6139,
+    "quitas_castigos": 106.4948,
+    "eprc_cartera": 5.328
   },
   {
     "fecha": "2010-02",
@@ -1747,7 +1942,9 @@
     "tasa_activa": 11.7506,
     "tasa_pasiva": 3.8551,
     "mif": 9.2817,
-    "tda": 8.5134
+    "tda": 8.5134,
+    "quitas_castigos": 105.383,
+    "eprc_cartera": 5.2714
   },
   {
     "fecha": "2010-03",
@@ -1765,7 +1962,9 @@
     "tasa_activa": 12.4137,
     "tasa_pasiva": 3.6953,
     "mif": 9.2509,
-    "tda": 8.3771
+    "tda": 8.3771,
+    "quitas_castigos": 103.9218,
+    "eprc_cartera": 5.0949
   },
   {
     "fecha": "2010-04",
@@ -1783,7 +1982,9 @@
     "tasa_activa": 12.3237,
     "tasa_pasiva": 3.5789,
     "mif": 9.2262,
-    "tda": 8.2462
+    "tda": 8.2462,
+    "quitas_castigos": 102.8019,
+    "eprc_cartera": 5.0489
   },
   {
     "fecha": "2010-05",
@@ -1801,7 +2002,9 @@
     "tasa_activa": 12.586,
     "tasa_pasiva": 3.3862,
     "mif": 9.2869,
-    "tda": 8.0258
+    "tda": 8.0258,
+    "quitas_castigos": 100.2799,
+    "eprc_cartera": 4.9833
   },
   {
     "fecha": "2010-06",
@@ -1819,7 +2022,9 @@
     "tasa_activa": 12.1945,
     "tasa_pasiva": 3.329,
     "mif": 9.2536,
-    "tda": 7.7871
+    "tda": 7.7871,
+    "quitas_castigos": 97.6781,
+    "eprc_cartera": 4.9537
   },
   {
     "fecha": "2010-07",
@@ -1837,7 +2042,9 @@
     "tasa_activa": 12.3457,
     "tasa_pasiva": 3.3408,
     "mif": 9.1738,
-    "tda": 7.5505
+    "tda": 7.5505,
+    "quitas_castigos": 94.9133,
+    "eprc_cartera": 4.9255
   },
   {
     "fecha": "2010-08",
@@ -1855,7 +2062,9 @@
     "tasa_activa": 12.402,
     "tasa_pasiva": 3.3561,
     "mif": 9.0956,
-    "tda": 7.1496
+    "tda": 7.1496,
+    "quitas_castigos": 88.507,
+    "eprc_cartera": 4.8608
   },
   {
     "fecha": "2010-09",
@@ -1873,7 +2082,9 @@
     "tasa_activa": 12.1195,
     "tasa_pasiva": 3.3695,
     "mif": 9.0248,
-    "tda": 6.8504
+    "tda": 6.8504,
+    "quitas_castigos": 84.1771,
+    "eprc_cartera": 4.8646
   },
   {
     "fecha": "2010-10",
@@ -1891,7 +2102,9 @@
     "tasa_activa": 12.2827,
     "tasa_pasiva": 3.3288,
     "mif": 9.0179,
-    "tda": 6.6093
+    "tda": 6.6093,
+    "quitas_castigos": 81.0748,
+    "eprc_cartera": 4.8391
   },
   {
     "fecha": "2010-11",
@@ -1909,7 +2122,9 @@
     "tasa_activa": 12.1987,
     "tasa_pasiva": 3.2758,
     "mif": 9.0353,
-    "tda": 6.355
+    "tda": 6.355,
+    "quitas_castigos": 77.5805,
+    "eprc_cartera": 4.8312
   },
   {
     "fecha": "2010-12",
@@ -1927,7 +2142,9 @@
     "tasa_activa": 12.1789,
     "tasa_pasiva": 3.2896,
     "mif": 8.9409,
-    "tda": 6.2303
+    "tda": 6.2303,
+    "quitas_castigos": 76.6422,
+    "eprc_cartera": 4.6577
   },
   {
     "fecha": "2011-01",
@@ -1945,7 +2162,9 @@
     "tasa_activa": 12.2533,
     "tasa_pasiva": 3.2902,
     "mif": 8.9174,
-    "tda": 6.2251
+    "tda": 6.2251,
+    "quitas_castigos": 78.3743,
+    "eprc_cartera": 4.4929
   },
   {
     "fecha": "2011-02",
@@ -1963,7 +2182,9 @@
     "tasa_activa": 11.7351,
     "tasa_pasiva": 3.3073,
     "mif": 8.8845,
-    "tda": 6.0019
+    "tda": 6.0019,
+    "quitas_castigos": 75.3151,
+    "eprc_cartera": 4.4507
   },
   {
     "fecha": "2011-03",
@@ -1981,7 +2202,9 @@
     "tasa_activa": 12.2023,
     "tasa_pasiva": 3.3197,
     "mif": 8.8513,
-    "tda": 5.7558
+    "tda": 5.7558,
+    "quitas_castigos": 71.4109,
+    "eprc_cartera": 4.6782
   },
   {
     "fecha": "2011-04",
@@ -1999,7 +2222,9 @@
     "tasa_activa": 12.0853,
     "tasa_pasiva": 3.3349,
     "mif": 8.8057,
-    "tda": 5.5566
+    "tda": 5.5566,
+    "quitas_castigos": 68.7467,
+    "eprc_cartera": 4.6112
   },
   {
     "fecha": "2011-05",
@@ -2017,7 +2242,9 @@
     "tasa_activa": 12.3577,
     "tasa_pasiva": 3.3439,
     "mif": 8.7892,
-    "tda": 5.3806
+    "tda": 5.3806,
+    "quitas_castigos": 65.9207,
+    "eprc_cartera": 4.7477
   },
   {
     "fecha": "2011-06",
@@ -2035,7 +2262,9 @@
     "tasa_activa": 12.404,
     "tasa_pasiva": 3.3405,
     "mif": 8.8158,
-    "tda": 5.2049
+    "tda": 5.2049,
+    "quitas_castigos": 62.4862,
+    "eprc_cartera": 4.8263
   },
   {
     "fecha": "2011-07",
@@ -2053,7 +2282,9 @@
     "tasa_activa": 12.6252,
     "tasa_pasiva": 3.3513,
     "mif": 8.8278,
-    "tda": 5.115
+    "tda": 5.115,
+    "quitas_castigos": 60.9842,
+    "eprc_cartera": 4.8437
   },
   {
     "fecha": "2011-08",
@@ -2071,7 +2302,9 @@
     "tasa_activa": 12.7246,
     "tasa_pasiva": 3.3539,
     "mif": 8.8543,
-    "tda": 5.048
+    "tda": 5.048,
+    "quitas_castigos": 59.8155,
+    "eprc_cartera": 4.9039
   },
   {
     "fecha": "2011-09",
@@ -2089,7 +2322,9 @@
     "tasa_activa": 12.897,
     "tasa_pasiva": 3.3633,
     "mif": 8.9044,
-    "tda": 5.0585
+    "tda": 5.0585,
+    "quitas_castigos": 60.0442,
+    "eprc_cartera": 4.8107
   },
   {
     "fecha": "2011-10",
@@ -2107,7 +2342,9 @@
     "tasa_activa": 12.9874,
     "tasa_pasiva": 3.3803,
     "mif": 8.9553,
-    "tda": 5.0388
+    "tda": 5.0388,
+    "quitas_castigos": 59.1341,
+    "eprc_cartera": 4.9005
   },
   {
     "fecha": "2011-11",
@@ -2125,7 +2362,9 @@
     "tasa_activa": 12.5744,
     "tasa_pasiva": 3.3773,
     "mif": 8.984,
-    "tda": 5.0396
+    "tda": 5.0396,
+    "quitas_castigos": 58.7621,
+    "eprc_cartera": 4.8973
   },
   {
     "fecha": "2011-12",
@@ -2143,7 +2382,9 @@
     "tasa_activa": 12.47,
     "tasa_pasiva": 3.3775,
     "mif": 8.9973,
-    "tda": 4.9406
+    "tda": 4.9406,
+    "quitas_castigos": 56.8738,
+    "eprc_cartera": 4.677
   },
   {
     "fecha": "2012-01",
@@ -2161,7 +2402,9 @@
     "tasa_activa": 12.837,
     "tasa_pasiva": 3.3966,
     "mif": 9.0336,
-    "tda": 4.7946
+    "tda": 4.7946,
+    "quitas_castigos": 53.739,
+    "eprc_cartera": 4.6368
   },
   {
     "fecha": "2012-02",
@@ -2179,7 +2422,9 @@
     "tasa_activa": 12.5386,
     "tasa_pasiva": 3.3966,
     "mif": 9.1058,
-    "tda": 4.8071
+    "tda": 4.8071,
+    "quitas_castigos": 54.2056,
+    "eprc_cartera": 4.7054
   },
   {
     "fecha": "2012-03",
@@ -2197,7 +2442,9 @@
     "tasa_activa": 13.162,
     "tasa_pasiva": 3.388,
     "mif": 9.1898,
-    "tda": 4.8063
+    "tda": 4.8063,
+    "quitas_castigos": 54.4045,
+    "eprc_cartera": 4.6988
   },
   {
     "fecha": "2012-04",
@@ -2215,7 +2462,9 @@
     "tasa_activa": 12.4298,
     "tasa_pasiva": 3.3841,
     "mif": 9.226,
-    "tda": 4.7979
+    "tda": 4.7979,
+    "quitas_castigos": 54.2159,
+    "eprc_cartera": 4.7964
   },
   {
     "fecha": "2012-05",
@@ -2233,7 +2482,9 @@
     "tasa_activa": 12.9997,
     "tasa_pasiva": 3.3815,
     "mif": 9.2709,
-    "tda": 4.8515
+    "tda": 4.8515,
+    "quitas_castigos": 56.2265,
+    "eprc_cartera": 4.7651
   },
   {
     "fecha": "2012-06",
@@ -2251,7 +2502,9 @@
     "tasa_activa": 12.7311,
     "tasa_pasiva": 3.3786,
     "mif": 9.2937,
-    "tda": 4.8933
+    "tda": 4.8933,
+    "quitas_castigos": 58.3147,
+    "eprc_cartera": 4.6566
   },
   {
     "fecha": "2012-07",
@@ -2269,7 +2522,9 @@
     "tasa_activa": 12.9987,
     "tasa_pasiva": 3.3726,
     "mif": 9.3354,
-    "tda": 4.8809
+    "tda": 4.8809,
+    "quitas_castigos": 58.9876,
+    "eprc_cartera": 4.6997
   },
   {
     "fecha": "2012-08",
@@ -2287,7 +2542,9 @@
     "tasa_activa": 13.1399,
     "tasa_pasiva": 3.3624,
     "mif": 9.3835,
-    "tda": 4.8675
+    "tda": 4.8675,
+    "quitas_castigos": 59.4649,
+    "eprc_cartera": 4.7409
   },
   {
     "fecha": "2012-09",
@@ -2305,7 +2562,9 @@
     "tasa_activa": 12.9269,
     "tasa_pasiva": 3.3674,
     "mif": 9.388,
-    "tda": 4.8271
+    "tda": 4.8271,
+    "quitas_castigos": 59.5348,
+    "eprc_cartera": 4.7261
   },
   {
     "fecha": "2012-10",
@@ -2323,7 +2582,9 @@
     "tasa_activa": 13.3695,
     "tasa_pasiva": 3.3487,
     "mif": 9.4389,
-    "tda": 4.8495
+    "tda": 4.8495,
+    "quitas_castigos": 61.7389,
+    "eprc_cartera": 4.7078
   },
   {
     "fecha": "2012-11",
@@ -2341,7 +2602,9 @@
     "tasa_activa": 13.0716,
     "tasa_pasiva": 3.363,
     "mif": 9.4668,
-    "tda": 4.8244
+    "tda": 4.8244,
+    "quitas_castigos": 62.6059,
+    "eprc_cartera": 4.7212
   },
   {
     "fecha": "2012-12",
@@ -2359,7 +2622,9 @@
     "tasa_activa": 13.4263,
     "tasa_pasiva": 3.3684,
     "mif": 9.5464,
-    "tda": 4.8134
+    "tda": 4.8134,
+    "quitas_castigos": 62.7151,
+    "eprc_cartera": 4.6919
   },
   {
     "fecha": "2013-01",
@@ -2377,7 +2642,9 @@
     "tasa_activa": 13.1922,
     "tasa_pasiva": 3.3551,
     "mif": 9.5889,
-    "tda": 4.8329
+    "tda": 4.8329,
+    "quitas_castigos": 63.48,
+    "eprc_cartera": 4.7643
   },
   {
     "fecha": "2013-02",
@@ -2395,7 +2662,9 @@
     "tasa_activa": 12.3748,
     "tasa_pasiva": 3.3392,
     "mif": 9.5843,
-    "tda": 4.8668
+    "tda": 4.8668,
+    "quitas_castigos": 64.6884,
+    "eprc_cartera": 4.767
   },
   {
     "fecha": "2013-03",
@@ -2413,7 +2682,9 @@
     "tasa_activa": 13.1153,
     "tasa_pasiva": 3.334,
     "mif": 9.5941,
-    "tda": 4.9354
+    "tda": 4.9354,
+    "quitas_castigos": 66.7829,
+    "eprc_cartera": 4.8152
   },
   {
     "fecha": "2013-04",
@@ -2431,7 +2702,9 @@
     "tasa_activa": 12.8542,
     "tasa_pasiva": 3.3099,
     "mif": 9.6505,
-    "tda": 5.0196
+    "tda": 5.0196,
+    "quitas_castigos": 69.2295,
+    "eprc_cartera": 4.8731
   },
   {
     "fecha": "2013-05",
@@ -2449,7 +2722,9 @@
     "tasa_activa": 13.5855,
     "tasa_pasiva": 3.339,
     "mif": 9.6777,
-    "tda": 5.1299
+    "tda": 5.1299,
+    "quitas_castigos": 71.7182,
+    "eprc_cartera": 4.8804
   },
   {
     "fecha": "2013-06",
@@ -2467,7 +2742,9 @@
     "tasa_activa": 12.8096,
     "tasa_pasiva": 3.3221,
     "mif": 9.6981,
-    "tda": 5.2606
+    "tda": 5.2606,
+    "quitas_castigos": 74.9371,
+    "eprc_cartera": 5.2366
   },
   {
     "fecha": "2013-07",
@@ -2485,7 +2762,9 @@
     "tasa_activa": 13.1406,
     "tasa_pasiva": 3.3044,
     "mif": 9.7286,
-    "tda": 5.3651
+    "tda": 5.3651,
+    "quitas_castigos": 76.8836,
+    "eprc_cartera": 5.2416
   },
   {
     "fecha": "2013-08",
@@ -2503,7 +2782,9 @@
     "tasa_activa": 13.1123,
     "tasa_pasiva": 3.2821,
     "mif": 9.7438,
-    "tda": 5.4685
+    "tda": 5.4685,
+    "quitas_castigos": 79.043,
+    "eprc_cartera": 5.2179
   },
   {
     "fecha": "2013-09",
@@ -2521,7 +2802,9 @@
     "tasa_activa": 12.7541,
     "tasa_pasiva": 3.2583,
     "mif": 9.7583,
-    "tda": 5.568
+    "tda": 5.568,
+    "quitas_castigos": 80.5465,
+    "eprc_cartera": 5.2287
   },
   {
     "fecha": "2013-10",
@@ -2539,7 +2822,9 @@
     "tasa_activa": 13.0189,
     "tasa_pasiva": 3.2484,
     "mif": 9.7358,
-    "tda": 5.6598
+    "tda": 5.6598,
+    "quitas_castigos": 81.688,
+    "eprc_cartera": 5.1956
   },
   {
     "fecha": "2013-11",
@@ -2557,7 +2842,9 @@
     "tasa_activa": 12.5414,
     "tasa_pasiva": 3.1961,
     "mif": 9.7432,
-    "tda": 5.8039
+    "tda": 5.8039,
+    "quitas_castigos": 84.7394,
+    "eprc_cartera": 5.0305
   },
   {
     "fecha": "2013-12",
@@ -2575,7 +2862,9 @@
     "tasa_activa": 13.4711,
     "tasa_pasiva": 3.1791,
     "mif": 9.7709,
-    "tda": 5.9036
+    "tda": 5.9036,
+    "quitas_castigos": 86.455,
+    "eprc_cartera": 4.9629
   },
   {
     "fecha": "2014-01",
@@ -2593,7 +2882,9 @@
     "tasa_activa": 12.5423,
     "tasa_pasiva": 3.1533,
     "mif": 9.7432,
-    "tda": 5.9999
+    "tda": 5.9999,
+    "quitas_castigos": 88.1087,
+    "eprc_cartera": 4.9919
   },
   {
     "fecha": "2014-02",
@@ -2611,7 +2902,9 @@
     "tasa_activa": 11.8469,
     "tasa_pasiva": 3.1168,
     "mif": 9.7329,
-    "tda": 6.0921
+    "tda": 6.0921,
+    "quitas_castigos": 89.7697,
+    "eprc_cartera": 4.9731
   },
   {
     "fecha": "2014-03",
@@ -2629,7 +2922,9 @@
     "tasa_activa": 12.6226,
     "tasa_pasiva": 3.0797,
     "mif": 9.7288,
-    "tda": 6.2203
+    "tda": 6.2203,
+    "quitas_castigos": 92.743,
+    "eprc_cartera": 4.9191
   },
   {
     "fecha": "2014-04",
@@ -2647,7 +2942,9 @@
     "tasa_activa": 12.41,
     "tasa_pasiva": 3.043,
     "mif": 9.7291,
-    "tda": 6.2867
+    "tda": 6.2867,
+    "quitas_castigos": 94.0068,
+    "eprc_cartera": 4.9476
   },
   {
     "fecha": "2014-05",
@@ -2665,7 +2962,9 @@
     "tasa_activa": 12.6285,
     "tasa_pasiva": 2.9672,
     "mif": 9.7232,
-    "tda": 6.3154
+    "tda": 6.3154,
+    "quitas_castigos": 94.9759,
+    "eprc_cartera": 4.8703
   },
   {
     "fecha": "2014-06",
@@ -2683,7 +2982,9 @@
     "tasa_activa": 12.4443,
     "tasa_pasiva": 2.9203,
     "mif": 9.7434,
-    "tda": 6.3507
+    "tda": 6.3507,
+    "quitas_castigos": 96.0147,
+    "eprc_cartera": 4.7259
   },
   {
     "fecha": "2014-07",
@@ -2701,7 +3002,9 @@
     "tasa_activa": 12.279,
     "tasa_pasiva": 2.858,
     "mif": 9.7323,
-    "tda": 6.3701
+    "tda": 6.3701,
+    "quitas_castigos": 97.091,
+    "eprc_cartera": 4.6533
   },
   {
     "fecha": "2014-08",
@@ -2719,7 +3022,9 @@
     "tasa_activa": 12.2925,
     "tasa_pasiva": 2.8101,
     "mif": 9.7174,
-    "tda": 6.394
+    "tda": 6.394,
+    "quitas_castigos": 98.2904,
+    "eprc_cartera": 4.5843
   },
   {
     "fecha": "2014-09",
@@ -2737,7 +3042,9 @@
     "tasa_activa": 12.0918,
     "tasa_pasiva": 2.7769,
     "mif": 9.6929,
-    "tda": 6.4048
+    "tda": 6.4048,
+    "quitas_castigos": 99.3251,
+    "eprc_cartera": 4.5718
   },
   {
     "fecha": "2014-10",
@@ -2755,7 +3062,9 @@
     "tasa_activa": 12.2694,
     "tasa_pasiva": 2.7333,
     "mif": 9.6766,
-    "tda": 6.4172
+    "tda": 6.4172,
+    "quitas_castigos": 100.579,
+    "eprc_cartera": 4.5643
   },
   {
     "fecha": "2014-11",
@@ -2773,7 +3082,9 @@
     "tasa_activa": 11.8346,
     "tasa_pasiva": 2.7383,
     "mif": 9.604,
-    "tda": 6.3867
+    "tda": 6.3867,
+    "quitas_castigos": 100.4332,
+    "eprc_cartera": 4.4094
   },
   {
     "fecha": "2014-12",
@@ -2791,7 +3102,9 @@
     "tasa_activa": 12.1148,
     "tasa_pasiva": 2.7372,
     "mif": 9.4882,
-    "tda": 6.4227
+    "tda": 6.4227,
+    "quitas_castigos": 103.206,
+    "eprc_cartera": 4.1577
   },
   {
     "fecha": "2015-01",
@@ -2809,7 +3122,9 @@
     "tasa_activa": 11.7679,
     "tasa_pasiva": 2.7202,
     "mif": 9.4322,
-    "tda": 6.4107
+    "tda": 6.4107,
+    "quitas_castigos": 104.6358,
+    "eprc_cartera": 4.0725
   },
   {
     "fecha": "2015-02",
@@ -2827,7 +3142,9 @@
     "tasa_activa": 11.0753,
     "tasa_pasiva": 2.7446,
     "mif": 9.3387,
-    "tda": 6.3819
+    "tda": 6.3819,
+    "quitas_castigos": 105.2498,
+    "eprc_cartera": 4.1272
   },
   {
     "fecha": "2015-03",
@@ -2845,7 +3162,9 @@
     "tasa_activa": 11.7774,
     "tasa_pasiva": 2.6587,
     "mif": 9.3519,
-    "tda": 6.314
+    "tda": 6.314,
+    "quitas_castigos": 104.8315,
+    "eprc_cartera": 4.0341
   },
   {
     "fecha": "2015-04",
@@ -2863,7 +3182,9 @@
     "tasa_activa": 11.4388,
     "tasa_pasiva": 2.6459,
     "mif": 9.2782,
-    "tda": 6.2687
+    "tda": 6.2687,
+    "quitas_castigos": 105.2655,
+    "eprc_cartera": 4.0238
   },
   {
     "fecha": "2015-05",
@@ -2881,7 +3202,9 @@
     "tasa_activa": 11.609,
     "tasa_pasiva": 2.6174,
     "mif": 9.2243,
-    "tda": 6.211
+    "tda": 6.211,
+    "quitas_castigos": 105.1488,
+    "eprc_cartera": 3.9451
   },
   {
     "fecha": "2015-06",
@@ -2899,7 +3222,9 @@
     "tasa_activa": 11.6785,
     "tasa_pasiva": 2.6213,
     "mif": 9.1597,
-    "tda": 6.1157
+    "tda": 6.1157,
+    "quitas_castigos": 103.5573,
+    "eprc_cartera": 3.9621
   },
   {
     "fecha": "2015-07",
@@ -2917,7 +3242,9 @@
     "tasa_activa": 11.6271,
     "tasa_pasiva": 2.6308,
     "mif": 9.0949,
-    "tda": 6.0828
+    "tda": 6.0828,
+    "quitas_castigos": 104.6428,
+    "eprc_cartera": 3.903
   },
   {
     "fecha": "2015-08",
@@ -2935,7 +3262,9 @@
     "tasa_activa": 11.6367,
     "tasa_pasiva": 2.6396,
     "mif": 9.031,
-    "tda": 6.0097
+    "tda": 6.0097,
+    "quitas_castigos": 104.2625,
+    "eprc_cartera": 3.9193
   },
   {
     "fecha": "2015-09",
@@ -2953,7 +3282,9 @@
     "tasa_activa": 11.2699,
     "tasa_pasiva": 2.6385,
     "mif": 8.957,
-    "tda": 5.9177
+    "tda": 5.9177,
+    "quitas_castigos": 103.7081,
+    "eprc_cartera": 3.8334
   },
   {
     "fecha": "2015-10",
@@ -2971,7 +3302,9 @@
     "tasa_activa": 11.6208,
     "tasa_pasiva": 2.6344,
     "mif": 8.9159,
-    "tda": 5.8179
+    "tda": 5.8179,
+    "quitas_castigos": 102.7072,
+    "eprc_cartera": 3.8587
   },
   {
     "fecha": "2015-11",
@@ -2989,7 +3322,9 @@
     "tasa_activa": 11.3359,
     "tasa_pasiva": 2.6075,
     "mif": 8.9054,
-    "tda": 5.7657
+    "tda": 5.7657,
+    "quitas_castigos": 103.3895,
+    "eprc_cartera": 3.8227
   },
   {
     "fecha": "2015-12",
@@ -3007,7 +3342,9 @@
     "tasa_activa": 11.6828,
     "tasa_pasiva": 2.5283,
     "mif": 8.9459,
-    "tda": 5.6511
+    "tda": 5.6511,
+    "quitas_castigos": 101.8795,
+    "eprc_cartera": 3.6493
   },
   {
     "fecha": "2016-01",
@@ -3025,7 +3362,9 @@
     "tasa_activa": 11.3051,
     "tasa_pasiva": 2.5463,
     "mif": 8.8879,
-    "tda": 5.5547
+    "tda": 5.5547,
+    "quitas_castigos": 101.0395,
+    "eprc_cartera": 3.6404
   },
   {
     "fecha": "2016-02",
@@ -3043,7 +3382,9 @@
     "tasa_activa": 11.2382,
     "tasa_pasiva": 2.5332,
     "mif": 8.9104,
-    "tda": 5.4753
+    "tda": 5.4753,
+    "quitas_castigos": 100.8755,
+    "eprc_cartera": 3.6256
   },
   {
     "fecha": "2016-03",
@@ -3061,7 +3402,9 @@
     "tasa_activa": 11.5674,
     "tasa_pasiva": 2.639,
     "mif": 8.7948,
-    "tda": 5.4031
+    "tda": 5.4031,
+    "quitas_castigos": 100.6606,
+    "eprc_cartera": 3.616
   },
   {
     "fecha": "2016-04",
@@ -3079,7 +3422,9 @@
     "tasa_activa": 11.3859,
     "tasa_pasiva": 2.6642,
     "mif": 8.7673,
-    "tda": 5.3926
+    "tda": 5.3926,
+    "quitas_castigos": 102.9723,
+    "eprc_cartera": 3.6184
   },
   {
     "fecha": "2016-05",
@@ -3097,7 +3442,9 @@
     "tasa_activa": 11.7257,
     "tasa_pasiva": 2.6908,
     "mif": 8.7536,
-    "tda": 5.3116
+    "tda": 5.3116,
+    "quitas_castigos": 102.435,
+    "eprc_cartera": 3.6157
   },
   {
     "fecha": "2016-06",
@@ -3115,7 +3462,9 @@
     "tasa_activa": 11.3629,
     "tasa_pasiva": 2.7194,
     "mif": 8.6887,
-    "tda": 5.2532
+    "tda": 5.2532,
+    "quitas_castigos": 103.217,
+    "eprc_cartera": 3.5448
   },
   {
     "fecha": "2016-07",
@@ -3133,7 +3482,9 @@
     "tasa_activa": 11.6765,
     "tasa_pasiva": 2.7966,
     "mif": 8.6191,
-    "tda": 5.1543
+    "tda": 5.1543,
+    "quitas_castigos": 102.0812,
+    "eprc_cartera": 3.5676
   },
   {
     "fecha": "2016-08",
@@ -3151,7 +3502,9 @@
     "tasa_activa": 11.8698,
     "tasa_pasiva": 2.8794,
     "mif": 8.5646,
-    "tda": 5.1013
+    "tda": 5.1013,
+    "quitas_castigos": 102.7087,
+    "eprc_cartera": 3.5833
   },
   {
     "fecha": "2016-09",
@@ -3169,7 +3522,9 @@
     "tasa_activa": 11.6669,
     "tasa_pasiva": 2.9737,
     "mif": 8.5015,
-    "tda": 5.065
+    "tda": 5.065,
+    "quitas_castigos": 103.9555,
+    "eprc_cartera": 3.552
   },
   {
     "fecha": "2016-10",
@@ -3187,7 +3542,9 @@
     "tasa_activa": 11.9942,
     "tasa_pasiva": 3.0617,
     "mif": 8.4472,
-    "tda": 5.0647
+    "tda": 5.0647,
+    "quitas_castigos": 106.9352,
+    "eprc_cartera": 3.5283
   },
   {
     "fecha": "2016-11",
@@ -3205,7 +3562,9 @@
     "tasa_activa": 11.9889,
     "tasa_pasiva": 3.2238,
     "mif": 8.3359,
-    "tda": 4.9901
+    "tda": 4.9901,
+    "quitas_castigos": 106.7636,
+    "eprc_cartera": 3.4889
   },
   {
     "fecha": "2016-12",
@@ -3223,7 +3582,9 @@
     "tasa_activa": 12.2689,
     "tasa_pasiva": 3.3604,
     "mif": 8.2586,
-    "tda": 4.9487
+    "tda": 4.9487,
+    "quitas_castigos": 107.729,
+    "eprc_cartera": 3.3716
   },
   {
     "fecha": "2017-01",
@@ -3241,7 +3602,9 @@
     "tasa_activa": 12.4704,
     "tasa_pasiva": 3.4152,
     "mif": 8.3092,
-    "tda": 4.9162
+    "tda": 4.9162,
+    "quitas_castigos": 108.8296,
+    "eprc_cartera": 3.3762
   },
   {
     "fecha": "2017-02",
@@ -3259,7 +3622,9 @@
     "tasa_activa": 11.8122,
     "tasa_pasiva": 3.4836,
     "mif": 8.286,
-    "tda": 4.8847
+    "tda": 4.8847,
+    "quitas_castigos": 109.9067,
+    "eprc_cartera": 3.3875
   },
   {
     "fecha": "2017-03",
@@ -3277,7 +3642,9 @@
     "tasa_activa": 12.852,
     "tasa_pasiva": 3.5692,
     "mif": 8.3091,
-    "tda": 4.8457
+    "tda": 4.8457,
+    "quitas_castigos": 110.5576,
+    "eprc_cartera": 3.3933
   },
   {
     "fecha": "2017-04",
@@ -3295,7 +3662,9 @@
     "tasa_activa": 12.6347,
     "tasa_pasiva": 3.6596,
     "mif": 8.3175,
-    "tda": 4.7865
+    "tda": 4.7865,
+    "quitas_castigos": 110.3586,
+    "eprc_cartera": 3.3608
   },
   {
     "fecha": "2017-05",
@@ -3313,7 +3682,9 @@
     "tasa_activa": 13.0266,
     "tasa_pasiva": 3.775,
     "mif": 8.3177,
-    "tda": 4.7917
+    "tda": 4.7917,
+    "quitas_castigos": 112.799,
+    "eprc_cartera": 3.3877
   },
   {
     "fecha": "2017-06",
@@ -3331,7 +3702,9 @@
     "tasa_activa": 12.7112,
     "tasa_pasiva": 3.888,
     "mif": 8.3198,
-    "tda": 4.7919
+    "tda": 4.7919,
+    "quitas_castigos": 114.9599,
+    "eprc_cartera": 3.3693
   },
   {
     "fecha": "2017-07",
@@ -3349,7 +3722,9 @@
     "tasa_activa": 13.3326,
     "tasa_pasiva": 3.969,
     "mif": 8.3796,
-    "tda": 4.7998
+    "tda": 4.7998,
+    "quitas_castigos": 117.2771,
+    "eprc_cartera": 3.3958
   },
   {
     "fecha": "2017-08",
@@ -3367,7 +3742,9 @@
     "tasa_activa": 13.2661,
     "tasa_pasiva": 4.0331,
     "mif": 8.4266,
-    "tda": 4.8022
+    "tda": 4.8022,
+    "quitas_castigos": 119.5085,
+    "eprc_cartera": 3.376
   },
   {
     "fecha": "2017-09",
@@ -3385,7 +3762,9 @@
     "tasa_activa": 12.9557,
     "tasa_pasiva": 4.0812,
     "mif": 8.4877,
-    "tda": 4.7948
+    "tda": 4.7948,
+    "quitas_castigos": 121.1417,
+    "eprc_cartera": 3.3714
   },
   {
     "fecha": "2017-10",
@@ -3403,7 +3782,9 @@
     "tasa_activa": 13.1566,
     "tasa_pasiva": 4.1377,
     "mif": 8.5254,
-    "tda": 4.7539
+    "tda": 4.7539,
+    "quitas_castigos": 120.6326,
+    "eprc_cartera": 3.4301
   },
   {
     "fecha": "2017-11",
@@ -3421,7 +3802,9 @@
     "tasa_activa": 12.9126,
     "tasa_pasiva": 4.1395,
     "mif": 8.6047,
-    "tda": 4.7852
+    "tda": 4.7852,
+    "quitas_castigos": 123.2487,
+    "eprc_cartera": 3.4158
   },
   {
     "fecha": "2017-12",
@@ -3439,7 +3822,9 @@
     "tasa_activa": 12.555,
     "tasa_pasiva": 4.1524,
     "mif": 8.6104,
-    "tda": 4.7913
+    "tda": 4.7913,
+    "quitas_castigos": 124.4852,
+    "eprc_cartera": 3.3245
   },
   {
     "fecha": "2018-01",
@@ -3457,7 +3842,9 @@
     "tasa_activa": 13.1238,
     "tasa_pasiva": 4.2511,
     "mif": 8.5663,
-    "tda": 4.8123
+    "tda": 4.8123,
+    "quitas_castigos": 126.4254,
+    "eprc_cartera": 3.3089
   },
   {
     "fecha": "2018-02",
@@ -3475,7 +3862,9 @@
     "tasa_activa": 12.3972,
     "tasa_pasiva": 4.2906,
     "mif": 8.569,
-    "tda": 4.8174
+    "tda": 4.8174,
+    "quitas_castigos": 127.5746,
+    "eprc_cartera": 3.3257
   },
   {
     "fecha": "2018-03",
@@ -3493,7 +3882,9 @@
     "tasa_activa": 13.3946,
     "tasa_pasiva": 4.3508,
     "mif": 8.5555,
-    "tda": 4.8039
+    "tda": 4.8039,
+    "quitas_castigos": 127.8218,
+    "eprc_cartera": 3.3392
   },
   {
     "fecha": "2018-04",
@@ -3511,7 +3902,9 @@
     "tasa_activa": 13.1168,
     "tasa_pasiva": 4.4124,
     "mif": 8.5344,
-    "tda": 4.7751
+    "tda": 4.7751,
+    "quitas_castigos": 127.0747,
+    "eprc_cartera": 3.3476
   },
   {
     "fecha": "2018-05",
@@ -3529,7 +3922,9 @@
     "tasa_activa": 13.3887,
     "tasa_pasiva": 4.482,
     "mif": 8.4867,
-    "tda": 4.7444
+    "tda": 4.7444,
+    "quitas_castigos": 126.6143,
+    "eprc_cartera": 3.3271
   },
   {
     "fecha": "2018-06",
@@ -3547,7 +3942,9 @@
     "tasa_activa": 12.9615,
     "tasa_pasiva": 4.536,
     "mif": 8.4505,
-    "tda": 4.7021
+    "tda": 4.7021,
+    "quitas_castigos": 125.4706,
+    "eprc_cartera": 3.2871
   },
   {
     "fecha": "2018-07",
@@ -3565,7 +3962,9 @@
     "tasa_activa": 12.0651,
     "tasa_pasiva": 4.4286,
     "mif": 8.4549,
-    "tda": 4.6918
+    "tda": 4.6918,
+    "quitas_castigos": 125.743,
+    "eprc_cartera": 3.3053
   },
   {
     "fecha": "2018-08",
@@ -3583,7 +3982,9 @@
     "tasa_activa": 13.5308,
     "tasa_pasiva": 4.4837,
     "mif": 8.4258,
-    "tda": 4.6759
+    "tda": 4.6759,
+    "quitas_castigos": 125.72,
+    "eprc_cartera": 3.2852
   },
   {
     "fecha": "2018-09",
@@ -3601,7 +4002,9 @@
     "tasa_activa": 13.1962,
     "tasa_pasiva": 4.5352,
     "mif": 8.3972,
-    "tda": 4.639
+    "tda": 4.639,
+    "quitas_castigos": 124.4539,
+    "eprc_cartera": 3.2895
   },
   {
     "fecha": "2018-10",
@@ -3619,7 +4022,9 @@
     "tasa_activa": 13.5354,
     "tasa_pasiva": 4.5822,
     "mif": 8.3803,
-    "tda": 4.6314
+    "tda": 4.6314,
+    "quitas_castigos": 125.0627,
+    "eprc_cartera": 3.2894
   },
   {
     "fecha": "2018-11",
@@ -3637,7 +4042,9 @@
     "tasa_activa": 13.0651,
     "tasa_pasiva": 4.6206,
     "mif": 8.3555,
-    "tda": 4.5986
+    "tda": 4.5986,
+    "quitas_castigos": 124.4871,
+    "eprc_cartera": 3.2754
   },
   {
     "fecha": "2018-12",
@@ -3655,7 +4062,9 @@
     "tasa_activa": 14.1616,
     "tasa_pasiva": 4.7436,
     "mif": 8.3748,
-    "tda": 4.5655
+    "tda": 4.5655,
+    "quitas_castigos": 123.8395,
+    "eprc_cartera": 3.2114
   },
   {
     "fecha": "2019-01",
@@ -3673,7 +4082,9 @@
     "tasa_activa": 13.5657,
     "tasa_pasiva": 4.7967,
     "mif": 8.3597,
-    "tda": 4.5569
+    "tda": 4.5569,
+    "quitas_castigos": 124.6362,
+    "eprc_cartera": 3.2078
   },
   {
     "fecha": "2019-02",
@@ -3691,7 +4102,9 @@
     "tasa_activa": 12.7009,
     "tasa_pasiva": 4.8511,
     "mif": 8.3249,
-    "tda": 4.5442
+    "tda": 4.5442,
+    "quitas_castigos": 125.2546,
+    "eprc_cartera": 3.2038
   },
   {
     "fecha": "2019-03",
@@ -3709,7 +4122,9 @@
     "tasa_activa": 13.7562,
     "tasa_pasiva": 4.9018,
     "mif": 8.3034,
-    "tda": 4.5133
+    "tda": 4.5133,
+    "quitas_castigos": 125.0104,
+    "eprc_cartera": 3.2065
   },
   {
     "fecha": "2019-04",
@@ -3727,7 +4142,9 @@
     "tasa_activa": 13.4066,
     "tasa_pasiva": 4.952,
     "mif": 8.2799,
-    "tda": 4.504
+    "tda": 4.504,
+    "quitas_castigos": 125.8532,
+    "eprc_cartera": 3.2038
   },
   {
     "fecha": "2019-05",
@@ -3745,7 +4162,9 @@
     "tasa_activa": 13.7238,
     "tasa_pasiva": 4.9776,
     "mif": 8.2897,
-    "tda": 4.4968
+    "tda": 4.4968,
+    "quitas_castigos": 126.4916,
+    "eprc_cartera": 3.1982
   },
   {
     "fecha": "2019-06",
@@ -3763,7 +4182,9 @@
     "tasa_activa": 13.3165,
     "tasa_pasiva": 5.0002,
     "mif": 8.2997,
-    "tda": 4.4848
+    "tda": 4.4848,
+    "quitas_castigos": 126.641,
+    "eprc_cartera": 3.1935
   },
   {
     "fecha": "2019-07",
@@ -3781,7 +4202,9 @@
     "tasa_activa": 13.6505,
     "tasa_pasiva": 5.1769,
     "mif": 8.2516,
-    "tda": 4.4938
+    "tda": 4.4938,
+    "quitas_castigos": 127.8567,
+    "eprc_cartera": 3.2077
   },
   {
     "fecha": "2019-08",
@@ -3799,7 +4222,9 @@
     "tasa_activa": 13.6731,
     "tasa_pasiva": 5.1887,
     "mif": 8.2499,
-    "tda": 4.4919
+    "tda": 4.4919,
+    "quitas_castigos": 128.5927,
+    "eprc_cartera": 3.1906
   },
   {
     "fecha": "2019-09",
@@ -3817,7 +4242,9 @@
     "tasa_activa": 13.2746,
     "tasa_pasiva": 5.2003,
     "mif": 8.2552,
-    "tda": 4.5333
+    "tda": 4.5333,
+    "quitas_castigos": 131.2496,
+    "eprc_cartera": 3.2519
   },
   {
     "fecha": "2019-10",
@@ -3835,7 +4262,9 @@
     "tasa_activa": 13.6295,
     "tasa_pasiva": 5.2173,
     "mif": 8.2559,
-    "tda": 4.5388
+    "tda": 4.5388,
+    "quitas_castigos": 131.5796,
+    "eprc_cartera": 3.3002
   },
   {
     "fecha": "2019-11",
@@ -3853,7 +4282,9 @@
     "tasa_activa": 13.2198,
     "tasa_pasiva": 5.209,
     "mif": 8.2714,
-    "tda": 4.5516
+    "tda": 4.5516,
+    "quitas_castigos": 132.521,
+    "eprc_cartera": 3.2813
   },
   {
     "fecha": "2019-12",
@@ -3871,7 +4302,9 @@
     "tasa_activa": 13.4985,
     "tasa_pasiva": 5.1639,
     "mif": 8.2654,
-    "tda": 4.5844
+    "tda": 4.5844,
+    "quitas_castigos": 134.421,
+    "eprc_cartera": 3.2184
   },
   {
     "fecha": "2020-01",
@@ -3889,7 +4322,9 @@
     "tasa_activa": 13.2805,
     "tasa_pasiva": 5.1064,
     "mif": 8.3003,
-    "tda": 4.5976
+    "tda": 4.5976,
+    "quitas_castigos": 134.9872,
+    "eprc_cartera": 3.2361
   },
   {
     "fecha": "2020-02",
@@ -3907,7 +4342,9 @@
     "tasa_activa": 13.2658,
     "tasa_pasiva": 5.0638,
     "mif": 8.3862,
-    "tda": 4.5929
+    "tda": 4.5929,
+    "quitas_castigos": 134.6883,
+    "eprc_cartera": 3.2995
   },
   {
     "fecha": "2020-03",
@@ -3925,7 +4362,9 @@
     "tasa_activa": 12.9172,
     "tasa_pasiva": 4.9559,
     "mif": 8.3937,
-    "tda": 4.62
+    "tda": 4.62,
+    "quitas_castigos": 136.2835,
+    "eprc_cartera": 3.4829
   },
   {
     "fecha": "2020-04",
@@ -3943,7 +4382,9 @@
     "tasa_activa": 11.6486,
     "tasa_pasiva": 4.8097,
     "mif": 8.3801,
-    "tda": 4.6405
+    "tda": 4.6405,
+    "quitas_castigos": 137.6631,
+    "eprc_cartera": 3.5275
   },
   {
     "fecha": "2020-05",
@@ -3961,7 +4402,9 @@
     "tasa_activa": 11.5479,
     "tasa_pasiva": 4.6686,
     "mif": 8.3491,
-    "tda": 4.6609
+    "tda": 4.6609,
+    "quitas_castigos": 138.491,
+    "eprc_cartera": 3.6096
   },
   {
     "fecha": "2020-06",
@@ -3979,7 +4422,9 @@
     "tasa_activa": 10.5289,
     "tasa_pasiva": 4.4742,
     "mif": 8.3155,
-    "tda": 4.7788
+    "tda": 4.7788,
+    "quitas_castigos": 146.2216,
+    "eprc_cartera": 3.4944
   },
   {
     "fecha": "2020-07",
@@ -3997,7 +4442,9 @@
     "tasa_activa": 11.0237,
     "tasa_pasiva": 4.2922,
     "mif": 8.2828,
-    "tda": 4.7693
+    "tda": 4.7693,
+    "quitas_castigos": 146.7145,
+    "eprc_cartera": 3.5346
   },
   {
     "fecha": "2020-08",
@@ -4015,7 +4462,9 @@
     "tasa_activa": 11.3856,
     "tasa_pasiva": 4.1106,
     "mif": 8.2882,
-    "tda": 4.7635
+    "tda": 4.7635,
+    "quitas_castigos": 147.1674,
+    "eprc_cartera": 3.5681
   },
   {
     "fecha": "2020-09",
@@ -4033,7 +4482,9 @@
     "tasa_activa": 10.9545,
     "tasa_pasiva": 3.9353,
     "mif": 8.2684,
-    "tda": 4.7333
+    "tda": 4.7333,
+    "quitas_castigos": 146.5865,
+    "eprc_cartera": 3.6919
   },
   {
     "fecha": "2020-10",
@@ -4051,7 +4502,9 @@
     "tasa_activa": 11.1441,
     "tasa_pasiva": 3.7539,
     "mif": 8.2539,
-    "tda": 4.6953
+    "tda": 4.6953,
+    "quitas_castigos": 145.2212,
+    "eprc_cartera": 3.7989
   },
   {
     "fecha": "2020-11",
@@ -4069,7 +4522,9 @@
     "tasa_activa": 10.9175,
     "tasa_pasiva": 3.5927,
     "mif": 8.2446,
-    "tda": 4.6763
+    "tda": 4.6763,
+    "quitas_castigos": 142.9824,
+    "eprc_cartera": 4.0098
   },
   {
     "fecha": "2020-12",
@@ -4087,7 +4542,9 @@
     "tasa_activa": 11.2065,
     "tasa_pasiva": 3.4226,
     "mif": 8.2354,
-    "tda": 4.7817
+    "tda": 4.7817,
+    "quitas_castigos": 147.3683,
+    "eprc_cartera": 4.105
   },
   {
     "fecha": "2021-01",
@@ -4105,7 +4562,9 @@
     "tasa_activa": 11.1855,
     "tasa_pasiva": 3.2712,
     "mif": 8.2131,
-    "tda": 4.806
+    "tda": 4.806,
+    "quitas_castigos": 146.6018,
+    "eprc_cartera": 4.104
   },
   {
     "fecha": "2021-02",
@@ -4123,7 +4582,9 @@
     "tasa_activa": 10.2835,
     "tasa_pasiva": 3.1417,
     "mif": 8.1038,
-    "tda": 4.8969
+    "tda": 4.8969,
+    "quitas_castigos": 149.737,
+    "eprc_cartera": 4.0889
   },
   {
     "fecha": "2021-03",
@@ -4141,7 +4602,9 @@
     "tasa_activa": 10.9648,
     "tasa_pasiva": 3.0201,
     "mif": 8.0881,
-    "tda": 5.0292
+    "tda": 5.0292,
+    "quitas_castigos": 155.4386,
+    "eprc_cartera": 3.9663
   },
   {
     "fecha": "2021-04",
@@ -4159,7 +4622,9 @@
     "tasa_activa": 10.8124,
     "tasa_pasiva": 2.9299,
     "mif": 8.1125,
-    "tda": 5.1056
+    "tda": 5.1056,
+    "quitas_castigos": 157.7524,
+    "eprc_cartera": 3.8676
   },
   {
     "fecha": "2021-05",
@@ -4177,7 +4642,9 @@
     "tasa_activa": 11.0782,
     "tasa_pasiva": 2.8471,
     "mif": 8.1444,
-    "tda": 5.1453
+    "tda": 5.1453,
+    "quitas_castigos": 158.6186,
+    "eprc_cartera": 3.7666
   },
   {
     "fecha": "2021-06",
@@ -4195,7 +4662,9 @@
     "tasa_activa": 10.8038,
     "tasa_pasiva": 2.8243,
     "mif": 8.1858,
-    "tda": 5.0595
+    "tda": 5.0595,
+    "quitas_castigos": 151.198,
+    "eprc_cartera": 3.7473
   },
   {
     "fecha": "2021-07",
@@ -4213,7 +4682,9 @@
     "tasa_activa": 11.2019,
     "tasa_pasiva": 2.7969,
     "mif": 8.2197,
-    "tda": 5.0626
+    "tda": 5.0626,
+    "quitas_castigos": 149.5302,
+    "eprc_cartera": 3.6537
   },
   {
     "fecha": "2021-08",
@@ -4231,7 +4702,9 @@
     "tasa_activa": 11.2654,
     "tasa_pasiva": 2.7839,
     "mif": 8.2172,
-    "tda": 5.0931
+    "tda": 5.0931,
+    "quitas_castigos": 149.5874,
+    "eprc_cartera": 3.6131
   },
   {
     "fecha": "2021-09",
@@ -4249,7 +4722,9 @@
     "tasa_activa": 11.1588,
     "tasa_pasiva": 2.7813,
     "mif": 8.2312,
-    "tda": 5.1084
+    "tda": 5.1084,
+    "quitas_castigos": 149.0325,
+    "eprc_cartera": 3.5348
   },
   {
     "fecha": "2021-10",
@@ -4267,7 +4742,9 @@
     "tasa_activa": 11.3948,
     "tasa_pasiva": 2.8056,
     "mif": 8.2175,
-    "tda": 5.1076
+    "tda": 5.1076,
+    "quitas_castigos": 148.6597,
+    "eprc_cartera": 3.4727
   },
   {
     "fecha": "2021-11",
@@ -4285,7 +4762,9 @@
     "tasa_activa": 11.2544,
     "tasa_pasiva": 2.8373,
     "mif": 8.1987,
-    "tda": 5.0695
+    "tda": 5.0695,
+    "quitas_castigos": 148.3338,
+    "eprc_cartera": 3.4376
   },
   {
     "fecha": "2021-12",
@@ -4303,7 +4782,9 @@
     "tasa_activa": 11.6192,
     "tasa_pasiva": 2.8914,
     "mif": 8.1729,
-    "tda": 4.8922
+    "tda": 4.8922,
+    "quitas_castigos": 141.0585,
+    "eprc_cartera": 3.2921
   },
   {
     "fecha": "2022-01",
@@ -4321,7 +4802,9 @@
     "tasa_activa": 11.7373,
     "tasa_pasiva": 3.0119,
     "mif": 8.1025,
-    "tda": 4.8255
+    "tda": 4.8255,
+    "quitas_castigos": 138.1063,
+    "eprc_cartera": 3.4985
   },
   {
     "fecha": "2022-02",
@@ -4339,7 +4822,9 @@
     "tasa_activa": 11.0376,
     "tasa_pasiva": 3.1325,
     "mif": 8.0408,
-    "tda": 4.7151
+    "tda": 4.7151,
+    "quitas_castigos": 132.8165,
+    "eprc_cartera": 3.4656
   },
   {
     "fecha": "2022-03",
@@ -4357,7 +4842,9 @@
     "tasa_activa": 12.0418,
     "tasa_pasiva": 3.3203,
     "mif": 7.9402,
-    "tda": 4.5769
+    "tda": 4.5769,
+    "quitas_castigos": 125.8983,
+    "eprc_cartera": 3.4337
   },
   {
     "fecha": "2022-04",
@@ -4375,7 +4862,9 @@
     "tasa_activa": 12.2439,
     "tasa_pasiva": 3.4564,
     "mif": 7.9181,
-    "tda": 4.4595
+    "tda": 4.4595,
+    "quitas_castigos": 120.413,
+    "eprc_cartera": 3.4001
   },
   {
     "fecha": "2022-05",
@@ -4393,7 +4882,9 @@
     "tasa_activa": 12.1867,
     "tasa_pasiva": 3.6955,
     "mif": 7.7672,
-    "tda": 4.3849
+    "tda": 4.3849,
+    "quitas_castigos": 117.4005,
+    "eprc_cartera": 3.3757
   },
   {
     "fecha": "2022-06",
@@ -4411,7 +4902,9 @@
     "tasa_activa": 12.4179,
     "tasa_pasiva": 3.8672,
     "mif": 7.7252,
-    "tda": 4.3198
+    "tda": 4.3198,
+    "quitas_castigos": 115.1252,
+    "eprc_cartera": 3.3326
   },
   {
     "fecha": "2022-07",
@@ -4429,7 +4922,9 @@
     "tasa_activa": 13.0247,
     "tasa_pasiva": 4.0843,
     "mif": 7.6634,
-    "tda": 4.285
+    "tda": 4.285,
+    "quitas_castigos": 114.1535,
+    "eprc_cartera": 3.358
   },
   {
     "fecha": "2022-08",
@@ -4447,7 +4942,9 @@
     "tasa_activa": 13.3637,
     "tasa_pasiva": 4.3569,
     "mif": 7.5675,
-    "tda": 4.2222
+    "tda": 4.2222,
+    "quitas_castigos": 111.8949,
+    "eprc_cartera": 3.3083
   },
   {
     "fecha": "2022-09",
@@ -4465,7 +4962,9 @@
     "tasa_activa": 13.2818,
     "tasa_pasiva": 4.6215,
     "mif": 7.4775,
-    "tda": 4.1573
+    "tda": 4.1573,
+    "quitas_castigos": 109.9526,
+    "eprc_cartera": 3.2205
   },
   {
     "fecha": "2022-10",
@@ -4483,7 +4982,9 @@
     "tasa_activa": 13.9804,
     "tasa_pasiva": 4.9402,
     "mif": 7.3731,
-    "tda": 4.1344
+    "tda": 4.1344,
+    "quitas_castigos": 110.1634,
+    "eprc_cartera": 3.246
   },
   {
     "fecha": "2022-11",
@@ -4501,7 +5002,9 @@
     "tasa_activa": 13.8406,
     "tasa_pasiva": 5.2739,
     "mif": 7.2603,
-    "tda": 4.1185
+    "tda": 4.1185,
+    "quitas_castigos": 110.5266,
+    "eprc_cartera": 3.3083
   },
   {
     "fecha": "2022-12",
@@ -4519,7 +5022,9 @@
     "tasa_activa": 14.7215,
     "tasa_pasiva": 5.5515,
     "mif": 7.2445,
-    "tda": 4.1142
+    "tda": 4.1142,
+    "quitas_castigos": 111.2854,
+    "eprc_cartera": 3.2988
   },
   {
     "fecha": "2023-01",
@@ -4537,7 +5042,9 @@
     "tasa_activa": 14.8788,
     "tasa_pasiva": 5.8478,
     "mif": 7.2133,
-    "tda": 4.0855
+    "tda": 4.0855,
+    "quitas_castigos": 112.9639,
+    "eprc_cartera": 3.2919
   },
   {
     "fecha": "2023-02",
@@ -4555,7 +5062,9 @@
     "tasa_activa": 13.8353,
     "tasa_pasiva": 6.1117,
     "mif": 7.1729,
-    "tda": 4.0521
+    "tda": 4.0521,
+    "quitas_castigos": 114.1608,
+    "eprc_cartera": 3.3107
   },
   {
     "fecha": "2023-03",
@@ -4573,7 +5082,9 @@
     "tasa_activa": 15.0944,
     "tasa_pasiva": 6.3874,
     "mif": 7.1503,
-    "tda": 4.0256
+    "tda": 4.0256,
+    "quitas_castigos": 115.3816,
+    "eprc_cartera": 3.2905
   },
   {
     "fecha": "2023-04",
@@ -4591,7 +5102,9 @@
     "tasa_activa": 14.924,
     "tasa_pasiva": 6.6963,
     "mif": 7.0654,
-    "tda": 4.0058
+    "tda": 4.0058,
+    "quitas_castigos": 116.6498,
+    "eprc_cartera": 3.2879
   },
   {
     "fecha": "2023-05",
@@ -4609,7 +5122,9 @@
     "tasa_activa": 15.3417,
     "tasa_pasiva": 6.9803,
     "mif": 7.0464,
-    "tda": 4.0046
+    "tda": 4.0046,
+    "quitas_castigos": 118.7311,
+    "eprc_cartera": 3.324
   },
   {
     "fecha": "2023-06",
@@ -4627,7 +5142,9 @@
     "tasa_activa": 15.1476,
     "tasa_pasiva": 7.2947,
     "mif": 6.9598,
-    "tda": 4.0134
+    "tda": 4.0134,
+    "quitas_castigos": 120.866,
+    "eprc_cartera": 3.315
   },
   {
     "fecha": "2023-07",
@@ -4645,7 +5162,9 @@
     "tasa_activa": 15.5239,
     "tasa_pasiva": 7.5591,
     "mif": 6.8956,
-    "tda": 4.0084
+    "tda": 4.0084,
+    "quitas_castigos": 122.2561,
+    "eprc_cartera": 3.3392
   },
   {
     "fecha": "2023-08",
@@ -4663,7 +5182,9 @@
     "tasa_activa": 15.5953,
     "tasa_pasiva": 7.7445,
     "mif": 6.8918,
-    "tda": 4.025
+    "tda": 4.025,
+    "quitas_castigos": 124.7979,
+    "eprc_cartera": 3.3236
   },
   {
     "fecha": "2023-09",
@@ -4681,7 +5202,9 @@
     "tasa_activa": 15.3543,
     "tasa_pasiva": 7.9252,
     "mif": 6.8784,
-    "tda": 4.0451
+    "tda": 4.0451,
+    "quitas_castigos": 126.9888,
+    "eprc_cartera": 3.2442
   },
   {
     "fecha": "2023-10",
@@ -4699,7 +5222,9 @@
     "tasa_activa": 15.6152,
     "tasa_pasiva": 8.0317,
     "mif": 6.9123,
-    "tda": 4.0736
+    "tda": 4.0736,
+    "quitas_castigos": 129.5255,
+    "eprc_cartera": 3.2819
   },
   {
     "fecha": "2023-11",
@@ -4717,7 +5242,9 @@
     "tasa_activa": 15.1898,
     "tasa_pasiva": 8.1928,
     "mif": 6.8578,
-    "tda": 4.1288
+    "tda": 4.1288,
+    "quitas_castigos": 133.8167,
+    "eprc_cartera": 3.2954
   },
   {
     "fecha": "2023-12",
@@ -4735,7 +5262,9 @@
     "tasa_activa": 15.5756,
     "tasa_pasiva": 8.3839,
     "mif": 6.7436,
-    "tda": 4.2015
+    "tda": 4.2015,
+    "quitas_castigos": 139.8981,
+    "eprc_cartera": 3.2079
   },
   {
     "fecha": "2024-01",
@@ -4753,7 +5282,9 @@
     "tasa_activa": 15.5739,
     "tasa_pasiva": 8.4438,
     "mif": 6.7445,
-    "tda": 4.2346
+    "tda": 4.2346,
+    "quitas_castigos": 143.2003,
+    "eprc_cartera": 3.2214
   },
   {
     "fecha": "2024-02",
@@ -4771,7 +5302,9 @@
     "tasa_activa": 14.8702,
     "tasa_pasiva": 8.5053,
     "mif": 6.7641,
-    "tda": 4.2968
+    "tda": 4.2968,
+    "quitas_castigos": 148.5825,
+    "eprc_cartera": 3.2013
   },
   {
     "fecha": "2024-03",
@@ -4789,7 +5322,9 @@
     "tasa_activa": 15.5423,
     "tasa_pasiva": 8.5376,
     "mif": 6.7641,
-    "tda": 4.3257
+    "tda": 4.3257,
+    "quitas_castigos": 152.2468,
+    "eprc_cartera": 3.1705
   },
   {
     "fecha": "2024-04",
@@ -4807,7 +5342,9 @@
     "tasa_activa": 15.1395,
     "tasa_pasiva": 8.561,
     "mif": 6.7561,
-    "tda": 4.3538
+    "tda": 4.3538,
+    "quitas_castigos": 155.868,
+    "eprc_cartera": 3.1656
   },
   {
     "fecha": "2024-05",
@@ -4825,7 +5362,9 @@
     "tasa_activa": 15.553,
     "tasa_pasiva": 8.5477,
     "mif": 6.7817,
-    "tda": 4.3506
+    "tda": 4.3506,
+    "quitas_castigos": 157.6292,
+    "eprc_cartera": 3.1647
   },
   {
     "fecha": "2024-06",
@@ -4843,7 +5382,9 @@
     "tasa_activa": 15.212,
     "tasa_pasiva": 8.5227,
     "mif": 6.8002,
-    "tda": 4.3514
+    "tda": 4.3514,
+    "quitas_castigos": 160.3339,
+    "eprc_cartera": 3.1303
   },
   {
     "fecha": "2024-07",
@@ -4861,7 +5402,9 @@
     "tasa_activa": 15.5015,
     "tasa_pasiva": 8.5192,
     "mif": 6.807,
-    "tda": 4.3519
+    "tda": 4.3519,
+    "quitas_castigos": 162.8307,
+    "eprc_cartera": 3.1522
   },
   {
     "fecha": "2024-08",
@@ -4879,7 +5422,9 @@
     "tasa_activa": 15.5081,
     "tasa_pasiva": 8.5529,
     "mif": 6.7614,
-    "tda": 4.3332
+    "tda": 4.3332,
+    "quitas_castigos": 163.6393,
+    "eprc_cartera": 3.1745
   },
   {
     "fecha": "2024-09",
@@ -4897,7 +5442,9 @@
     "tasa_activa": 15.0858,
     "tasa_pasiva": 8.5503,
     "mif": 6.7497,
-    "tda": 4.3369
+    "tda": 4.3369,
+    "quitas_castigos": 165.8144,
+    "eprc_cartera": 3.2115
   },
   {
     "fecha": "2024-10",
@@ -4915,7 +5462,9 @@
     "tasa_activa": 15.4026,
     "tasa_pasiva": 8.5858,
     "mif": 6.6967,
-    "tda": 4.3339
+    "tda": 4.3339,
+    "quitas_castigos": 167.6784,
+    "eprc_cartera": 3.2274
   },
   {
     "fecha": "2024-11",
@@ -4933,7 +5482,9 @@
     "tasa_activa": 14.9101,
     "tasa_pasiva": 8.5355,
     "mif": 6.7137,
-    "tda": 4.318
+    "tda": 4.318,
+    "quitas_castigos": 168.9203,
+    "eprc_cartera": 3.1934
   },
   {
     "fecha": "2024-12",
@@ -4951,7 +5502,9 @@
     "tasa_activa": 15.1647,
     "tasa_pasiva": 8.4904,
     "mif": 6.719,
-    "tda": 4.2909
+    "tda": 4.2909,
+    "quitas_castigos": 168.9339,
+    "eprc_cartera": 3.1606
   },
   {
     "fecha": "2025-01",
@@ -4969,7 +5522,9 @@
     "tasa_activa": 15.025,
     "tasa_pasiva": 8.503,
     "mif": 6.6575,
-    "tda": 4.2976
+    "tda": 4.2976,
+    "quitas_castigos": 171.8116,
+    "eprc_cartera": 3.1526
   },
   {
     "fecha": "2025-02",
@@ -4987,7 +5542,9 @@
     "tasa_activa": 13.864,
     "tasa_pasiva": 8.4635,
     "mif": 6.6061,
-    "tda": 4.2597
+    "tda": 4.2597,
+    "quitas_castigos": 171.017,
+    "eprc_cartera": 3.1659
   },
   {
     "fecha": "2025-03",
@@ -5005,7 +5562,9 @@
     "tasa_activa": 14.7946,
     "tasa_pasiva": 8.4067,
     "mif": 6.6073,
-    "tda": 4.2586
+    "tda": 4.2586,
+    "quitas_castigos": 172.6111,
+    "eprc_cartera": 3.1608
   },
   {
     "fecha": "2025-04",
@@ -5023,7 +5582,9 @@
     "tasa_activa": 14.3987,
     "tasa_pasiva": 8.3845,
     "mif": 6.5711,
-    "tda": 4.2445
+    "tda": 4.2445,
+    "quitas_castigos": 172.8702,
+    "eprc_cartera": 3.1815
   },
   {
     "fecha": "2025-05",
@@ -5041,7 +5602,9 @@
     "tasa_activa": 14.6579,
     "tasa_pasiva": 8.3008,
     "mif": 6.5847,
-    "tda": 4.2581
+    "tda": 4.2581,
+    "quitas_castigos": 175.1965,
+    "eprc_cartera": 3.2019
   },
   {
     "fecha": "2025-06",
@@ -5059,7 +5622,9 @@
     "tasa_activa": 14.1666,
     "tasa_pasiva": 8.2223,
     "mif": 6.5892,
-    "tda": 4.2859
+    "tda": 4.2859,
+    "quitas_castigos": 177.9007,
+    "eprc_cartera": 3.2001
   },
   {
     "fecha": "2025-07",
@@ -5077,7 +5642,9 @@
     "tasa_activa": 14.4775,
     "tasa_pasiva": 8.1052,
     "mif": 6.6258,
-    "tda": 4.3073
+    "tda": 4.3073,
+    "quitas_castigos": 180.0487,
+    "eprc_cartera": 3.2149
   },
   {
     "fecha": "2025-08",
@@ -5095,7 +5662,9 @@
     "tasa_activa": 14.3998,
     "tasa_pasiva": 7.9573,
     "mif": 6.6924,
-    "tda": 4.3376
+    "tda": 4.3376,
+    "quitas_castigos": 182.6737,
+    "eprc_cartera": 3.243
   },
   {
     "fecha": "2025-09",
@@ -5113,7 +5682,9 @@
     "tasa_activa": 13.8175,
     "tasa_pasiva": 7.7902,
     "mif": 6.7544,
-    "tda": 4.3694
+    "tda": 4.3694,
+    "quitas_castigos": 185.0292,
+    "eprc_cartera": 3.31
   },
   {
     "fecha": "2025-10",
@@ -5131,7 +5702,9 @@
     "tasa_activa": 14.396,
     "tasa_pasiva": 7.6407,
     "mif": 6.8232,
-    "tda": 4.4085
+    "tda": 4.4085,
+    "quitas_castigos": 187.9687,
+    "eprc_cartera": 3.3224
   },
   {
     "fecha": "2025-11",
@@ -5149,7 +5722,9 @@
     "tasa_activa": 13.9253,
     "tasa_pasiva": 7.4738,
     "mif": 6.9126,
-    "tda": 4.4533
+    "tda": 4.4533,
+    "quitas_castigos": 191.2609,
+    "eprc_cartera": 3.2884
   },
   {
     "fecha": "2025-12",
@@ -5167,7 +5742,9 @@
     "tasa_activa": 14.1127,
     "tasa_pasiva": 7.3028,
     "mif": 6.9948,
-    "tda": 4.5094
+    "tda": 4.5094,
+    "quitas_castigos": 195.8946,
+    "eprc_cartera": 3.2299
   },
   {
     "fecha": "2026-01",
@@ -5185,7 +5762,9 @@
     "tasa_activa": 13.8737,
     "tasa_pasiva": 7.1119,
     "mif": 7.0942,
-    "tda": 4.5261
+    "tda": 4.5261,
+    "quitas_castigos": 196.7909,
+    "eprc_cartera": 3.2547
   },
   {
     "fecha": "2026-02",
@@ -5203,7 +5782,9 @@
     "tasa_activa": 12.9411,
     "tasa_pasiva": 6.9403,
     "mif": 7.1867,
-    "tda": 4.5709
+    "tda": 4.5709,
+    "quitas_castigos": 200.1318,
+    "eprc_cartera": 3.3144
   },
   {
     "fecha": "2026-03",
@@ -5221,6 +5802,8 @@
     "tasa_activa": 14.1355,
     "tasa_pasiva": 6.8136,
     "mif": 7.2565,
-    "tda": 4.5931
+    "tda": 4.5931,
+    "quitas_castigos": 201.6557,
+    "eprc_cartera": 3.3133
   }
 ]

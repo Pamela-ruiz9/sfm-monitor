@@ -12,6 +12,23 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(credito): TDA + EprcChart — tasa de deterioro y cobertura de cartera (2026-06-05)
+- `scripts/extract-cnbv-raw.py`: añade concepto `40200118` (EPRC / cartera total) con escala ×100 (ratio → %). TDA (40200074) ya existía en extractor.
+- `scripts/normalize-cnbv.py`: emite `eprc_cartera` en `historico_por_cartera` como array nullable.
+- `app/src/data/schema.ts`: `HistoricoCarteraSchema` extiende con `eprc_cartera: z.array(z.number().nullable()).optional()`; backward-compatible.
+- `app/src/components/charts/ImoraChart.tsx`: prop opcional `tda?: (number | null)[]`; cuando presente añade línea punteada sky-blue (Okabe-Ito) sobre la vista Sistema. TDA = tasa de deterioro ajustada; muestra el flujo de nuevo deterioro neto, distinto del stock IMORA.
+- `app/src/components/charts/EprcChart.tsx`: gráfica de línea con área — EPRC/cartera total en % (sky-blue Okabe-Ito). Incluye nota contextual que distingue de ICOR. Condicional a que el campo exista en el JSON.
+- `app/src/pages/instituciones.astro`: TDA pasa a ImoraChart vía conditional spread; sección "EPRC / Cartera total" entre ICOR y ROA/ROE.
+- `data/credito.json`, `data/sfm-data.json`: regenerados — TDA 4.59%, EPRC/cartera 3.31% (mar 2026).
+
+### feat(credito): QuitasChart — quitas y castigos flujo 12m (2026-06-04)
+- `scripts/extract-cnbv-raw.py`: añade concepto `40200193` (quitas y castigos acumulados 12 meses) con escala `1e-9` — almacena en miles de millones de pesos (mmdp). Usa el mismo saldo=133 que captura el pipeline por defecto (consistente con IMOR y IMORA del sistema).
+- `scripts/normalize-cnbv.py`: emite `quitas_castigos` en `historico_por_cartera` como array nullable.
+- `app/src/data/schema.ts`: `HistoricoCarteraSchema` extiende con `quitas_castigos: z.array(z.number().nullable()).optional()`; backward-compatible.
+- `app/src/components/charts/QuitasChart.tsx`: gráfica de barras mensual — flujo acumulado 12m en mmdp. Color vermillion (Okabe-Ito). Leyenda omitida; tooltip con 1 decimal. Condicional a que el campo esté presente en el JSON.
+- `app/src/pages/instituciones.astro`: sección "Quitas y castigos" entre IMORA e ICOR; la descripción contextualiza la relación con IMORA.
+- `data/credito.json`, `data/sfm-data.json`: regenerados — quitas_castigos 201.7 mmdp (flujo 12m, mar 2026).
+
 ### feat(credito): IFRS9 por segmento — comercial/consumo/vivienda (2026-06-04)
 - `scripts/normalize-ifrs9.py`: añade `SEGMENT_CONCEPT_MAP` con 7 conceptos R12A validados contra `catalogo_R12A_1219_BM.csv` (E1 comercial 101800105001, E1/E2/E3 consumo y vivienda). Comercial en E2/E3 se calcula como residual (total − consumo − vivienda). Actualiza `find_input_files()` para buscar el zip en `raw-data/transfers/` además de `raw-data/`. Emite campo opcional `por_segmento` con series E2/E3 por cartera (dic 2019 – feb 2026, 50 períodos).
 - `app/src/data/schema.ts`: `Ifrs9Schema` extiende con `por_segmento` opcional (`Ifrs9SegmentoSchema` por comercial/consumo/vivienda); backward-compatible.

@@ -117,6 +117,10 @@ const HistoricoCarteraSchema = z.object({
   tasa_pasiva: z.array(z.number().nullable()).optional(),
   mif: z.array(z.number().nullable()).optional(),
   tda: z.array(z.number().nullable()).optional(),
+  // Flujo acumulado 12 meses de quitas y castigos — en miles de millones de pesos (mmdp)
+  quitas_castigos: z.array(z.number().nullable()).optional(),
+  // EPRC / cartera total — tasa de cobertura de reservas sobre la cartera completa (%)
+  eprc_cartera: z.array(z.number().nullable()).optional(),
 });
 
 const BancoLatestSchema = z.object({ valor: z.number(), fecha: z.string() });
