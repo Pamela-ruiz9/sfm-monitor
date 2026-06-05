@@ -67,6 +67,25 @@ DRY_RUN = "--dry-run" in sys.argv
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(ROOT, "raw-data")
 OUT = os.path.join(ROOT, "data")
+CAT_INST = os.path.join(ROOT, "data", "Raw_data", "cat_instituciones_40.csv")
+
+# Aggregate entity IDs to exclude from per-bank output
+EXCLUIR_ENTIDADES = {"5", "59", "60", "61", "62", "63", "64"}
+
+
+def load_catalogue() -> dict[str, str]:
+    """Returns {entidad_id: nombre} from cat_instituciones_40.csv."""
+    cat: dict[str, str] = {}
+    if not os.path.exists(CAT_INST):
+        return cat
+    with open(CAT_INST, encoding="latin-1") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            eid = row.get("entidad", "").strip().strip('"')
+            nombre = row.get("nombre_entidad", "").strip().strip('"')
+            if eid and eid not in EXCLUIR_ENTIDADES:
+                cat[eid] = nombre
+    return cat
 
 # ─────────────────────────────────────────────
 # Stage concept map — verified against catalogo_R12A_1219_BM.csv
@@ -235,12 +254,16 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
       ultima: { fecha, etapa1, etapa2, etapa3 }
     }
     """
-    # per_periodo[periodo][stage] = sum of importe_pesos
+    # per_periodo[periodo][stage] = sum of importe_pesos (sistema)
     per_periodo: dict[str, dict[int, float]] = defaultdict(lambda: defaultdict(float))
-    # total cartera per periodo
+    # total cartera per periodo (sistema)
     totals: dict[str, float] = defaultdict(float)
-    # segments[periodo][(stage, segmento)] = sum importe_pesos
+    # segments[periodo][(stage, segmento)] = sum importe_pesos (sistema)
     segments: dict[str, dict[tuple[int, str], float]] = defaultdict(lambda: defaultdict(float))
+    # per-bank: banco_stages[inst][periodo][stage] = importe
+    banco_stages: dict[str, dict[str, dict[int, float]]] = defaultdict(lambda: defaultdict(lambda: defaultdict(float)))
+    # per-bank totals: banco_totals[inst][periodo] = total_cartera
+    banco_totals: dict[str, dict[str, float]] = defaultdict(lambda: defaultdict(float))
 
     use_concepto_map = bool(STAGE_CONCEPT_MAP)
     unmatched_sample: list[str] = []
@@ -258,9 +281,14 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
         if not periodo or len(periodo) != 6:
             continue
 
+        inst = str(row.get("institucion", "")).strip()
+        is_aggregate = inst in EXCLUIR_ENTIDADES
+
         # Total cartera row
         if concepto == TOTAL_CARTERA_CONCEPTO:
             totals[periodo] += importe
+            if not is_aggregate:
+                banco_totals[inst][periodo] += importe
             continue
 
         # Segment-level classification (más específica que stage root)
@@ -281,6 +309,8 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
 
         if stage is not None:
             per_periodo[periodo][stage] += importe
+            if not is_aggregate:
+                banco_stages[inst][periodo][stage] += importe
         elif len(unmatched_sample) < 5:
             unmatched_sample.append(concepto)
 
@@ -351,6 +381,44 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
     # Check if segment data is actually present (not all None)
     has_segs = any(v is not None for v in seg_e3_pct["consumo"])
 
+    # Build per-bank series aligned to the same sorted_periodos axis
+    catalogo = load_catalogue()
+    por_banco: list[dict] = []
+    MIN_PERIODS = 6  # excluir bancos con historial muy corto
+
+    for inst, inst_stages in sorted(banco_stages.items()):
+        inst_totals = banco_totals.get(inst, {})
+        e1_arr: list[float | None] = []
+        e2_arr: list[float | None] = []
+        e3_arr: list[float | None] = []
+
+        for p in sorted_periodos:
+            total = inst_totals.get(p, 0.0)
+            stages = inst_stages.get(p, {})
+            if total > 0 and stages:
+                e1_arr.append(round(stages.get(1, 0.0) / total * 100, 4))
+                e2_arr.append(round(stages.get(2, 0.0) / total * 100, 4))
+                e3_arr.append(round(stages.get(3, 0.0) / total * 100, 4))
+            else:
+                e1_arr.append(None)
+                e2_arr.append(None)
+                e3_arr.append(None)
+
+        nonnull = sum(1 for v in e3_arr if v is not None)
+        if nonnull < MIN_PERIODS:
+            continue
+
+        nombre = catalogo.get(inst, inst)
+        por_banco.append({
+            "id": inst,
+            "nombre": nombre,
+            "etapa1_pct": e1_arr,
+            "etapa2_pct": e2_arr,
+            "etapa3_pct": e3_arr,
+        })
+
+    print(f"   por_banco: {len(por_banco)} bancos con ≥{MIN_PERIODS} períodos de datos")
+
     return {
         "ultima_actualizacion": periodo_to_iso_month(sorted_periodos[-1]) if sorted_periodos else None,
         "fuente": "CNBV - Reporte R12A IFRS9 Banca Múltiple Sector 40",
@@ -365,7 +433,9 @@ def build_ifrs9(all_rows: list[dict]) -> dict:
             "consumo":   {"etapa2_pct": seg_e2_pct["consumo"],   "etapa3_pct": seg_e3_pct["consumo"]},
             "vivienda":  {"etapa2_pct": seg_e2_pct["vivienda"],  "etapa3_pct": seg_e3_pct["vivienda"]},
         }} if has_segs else {}),
-        "_concept_map_version": "v2 — segment concepts validated against catalogo_R12A_1219_BM.csv",
+        # Por banco: series individuales alineadas al mismo eje de fechas
+        **({"por_banco": por_banco} if por_banco else {}),
+        "_concept_map_version": "v3 — segments + per-bank validated against catalogo_R12A_1219_BM.csv",
     }
 
 

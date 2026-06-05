@@ -9,6 +9,14 @@ interface SegmentoSeries {
   etapa3_pct: (number | null)[];
 }
 
+interface BancoSeries {
+  id: string;
+  nombre: string;
+  etapa1_pct: (number | null)[];
+  etapa2_pct: (number | null)[];
+  etapa3_pct: (number | null)[];
+}
+
 interface Props {
   fechas: string[];
   etapa1: number[];
@@ -19,11 +27,12 @@ interface Props {
     consumo:   SegmentoSeries;
     vivienda:  SegmentoSeries;
   };
+  porBanco?: BancoSeries[];
 }
 
-type Vista = 'sistema' | 'comercial' | 'consumo' | 'vivienda';
+type VistaSegmento = 'sistema' | 'comercial' | 'consumo' | 'vivienda';
 
-const PILLS: { id: Vista; label: string }[] = [
+const SEG_PILLS: { id: VistaSegmento; label: string }[] = [
   { id: 'sistema',   label: 'Sistema' },
   { id: 'comercial', label: 'Comercial' },
   { id: 'consumo',   label: 'Consumo' },
@@ -39,47 +48,56 @@ function pillClass(active: boolean) {
   );
 }
 
-export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3, porSegmento }: Props) {
-  const [vista, setVista] = useState<Vista>('sistema');
+export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3, porSegmento, porBanco }: Props) {
+  const [vistaSegmento, setVistaSegmento] = useState<VistaSegmento>('sistema');
+  const [bancoId, setBancoId] = useState<string>('sistema');
 
   const labels = fechas.map((f) => `${f}-01`);
-  const hasSeg = Boolean(porSegmento);
+  const hasSeg  = Boolean(porSegmento);
+  const hasBancos = Boolean(porBanco?.length);
+
+  const bancoSeleccionado = bancoId !== 'sistema'
+    ? (porBanco ?? []).find((b) => b.id === bancoId)
+    : null;
+
+  // datos activos
+  const activeE1 = bancoSeleccionado ? bancoSeleccionado.etapa1_pct : etapa1;
+  const activeE2 = bancoSeleccionado ? bancoSeleccionado.etapa2_pct : etapa2;
+  const activeE3 = bancoSeleccionado ? bancoSeleccionado.etapa3_pct : etapa3;
 
   let datasets;
   let yStacked = true;
-  let yMin = 0;
   let yMax = 100;
-  let yLabel = (v: number | string) => `${v}%`;
 
-  if (vista === 'sistema' || !porSegmento) {
+  if (vistaSegmento === 'sistema' || !porSegmento || bancoSeleccionado) {
+    // Vista sistema o banco individual — stacked area E1/E2/E3
     datasets = [
       {
         label: 'Stage 3',
-        data: etapa3,
+        data: activeE3,
         borderColor: '#f85149',
         backgroundColor: 'rgba(248, 81, 73, 0.5)',
-        fill: true, tension: 0.1, pointRadius: 0, pointHoverRadius: 4, borderWidth: 1.5, order: 1,
+        fill: true, tension: 0.1, pointRadius: 0, pointHoverRadius: 4, borderWidth: 1.5, order: 1, spanGaps: true,
       },
       {
         label: 'Stage 2',
-        data: etapa2,
+        data: activeE2,
         borderColor: '#d29922',
         backgroundColor: 'rgba(210, 153, 34, 0.5)',
-        fill: true, tension: 0.1, pointRadius: 0, pointHoverRadius: 4, borderWidth: 1.5, order: 2,
+        fill: true, tension: 0.1, pointRadius: 0, pointHoverRadius: 4, borderWidth: 1.5, order: 2, spanGaps: true,
       },
       {
         label: 'Stage 1',
-        data: etapa1,
+        data: activeE1,
         borderColor: '#3fb950',
         backgroundColor: 'rgba(63, 185, 80, 0.5)',
-        fill: true, tension: 0.1, pointRadius: 0, pointHoverRadius: 4, borderWidth: 1.5, order: 3,
+        fill: true, tension: 0.1, pointRadius: 0, pointHoverRadius: 4, borderWidth: 1.5, order: 3, spanGaps: true,
       },
     ];
   } else {
-    // Vista por segmento: muestra % en E2 y E3 de esa cartera (no apilado)
-    const seg = porSegmento[vista];
+    // Vista por segmento — E2/E3 % de esa cartera (no apilado)
+    const seg = porSegmento[vistaSegmento];
     yStacked = false;
-    yMin = 0;
     yMax = 15;
     datasets = [
       {
@@ -87,40 +105,56 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3, porSegmento }: Prop
         data: labels.map((_, i) => seg.etapa3_pct[i] ?? null),
         borderColor: '#f85149',
         backgroundColor: 'rgba(248, 81, 73, 0.15)',
-        fill: true, tension: 0.2, pointRadius: 0, pointHoverRadius: 4, borderWidth: 2, order: 1,
-        spanGaps: true,
+        fill: true, tension: 0.2, pointRadius: 0, pointHoverRadius: 4, borderWidth: 2, order: 1, spanGaps: true,
       },
       {
         label: 'Stage 2',
         data: labels.map((_, i) => seg.etapa2_pct[i] ?? null),
         borderColor: '#d29922',
         backgroundColor: 'rgba(210, 153, 34, 0.15)',
-        fill: true, tension: 0.2, pointRadius: 0, pointHoverRadius: 4, borderWidth: 2, order: 2,
-        spanGaps: true,
+        fill: true, tension: 0.2, pointRadius: 0, pointHoverRadius: 4, borderWidth: 2, order: 2, spanGaps: true,
       },
     ];
-    yLabel = (v) => `${Number(v).toFixed(1)}%`;
   }
 
   return (
     <ChartErrorBoundary chartName="IFRS 9 Stages">
-      {hasSeg && (
-        <div className="flex gap-1.5 mb-3 flex-wrap">
-          {PILLS.map((p) => (
-            <button key={p.id} className={pillClass(vista === p.id)} onClick={() => setVista(p.id)}>
-              {p.label}
-            </button>
-          ))}
-        </div>
-      )}
-      {vista !== 'sistema' && (
+      <div className="flex flex-wrap gap-3 mb-3 items-center">
+        {/* Selector de banco */}
+        {hasBancos && (
+          <select
+            value={bancoId}
+            onChange={(e) => { setBancoId(e.target.value); setVistaSegmento('sistema'); }}
+            className="text-xs px-2 py-1 rounded-md border border-[--color-border] bg-[--color-surface] text-[--color-text-dim] focus:outline-none focus:border-[--color-gold]/60"
+          >
+            <option value="sistema">Sistema</option>
+            {(porBanco ?? []).map((b) => (
+              <option key={b.id} value={b.id}>{b.nombre}</option>
+            ))}
+          </select>
+        )}
+
+        {/* Pills de segmento — solo en vista sistema */}
+        {hasSeg && !bancoSeleccionado && (
+          <div className="flex gap-1.5 flex-wrap">
+            {SEG_PILLS.map((p) => (
+              <button key={p.id} className={pillClass(vistaSegmento === p.id)} onClick={() => setVistaSegmento(p.id)}>
+                {p.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {vistaSegmento !== 'sistema' && !bancoSeleccionado && (
         <p className="text-[10px] text-[--color-text-mute] mb-2">
-          % de la cartera {vista} en cada Stage (Stage 1 = 100% − E2 − E3)
+          % de la cartera {vistaSegmento} en cada Stage (Stage 1 = 100% − E2 − E3)
         </p>
       )}
+
       <div className="h-64 md:h-72 -mx-1">
         <Line
-          key={vista}
+          key={`${bancoId}-${vistaSegmento}`}
           data={{ labels, datasets }}
           options={{
             responsive: true,
@@ -146,9 +180,9 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3, porSegmento }: Prop
               },
               y: {
                 stacked: yStacked,
-                min: yMin,
+                min: 0,
                 suggestedMax: yMax,
-                ticks: { color: '#94a3b8', callback: yLabel },
+                ticks: { color: '#94a3b8', callback: (v) => `${Number(v).toFixed(1)}%` },
                 grid: { color: 'rgba(148, 163, 184, 0.1)' },
               },
             },

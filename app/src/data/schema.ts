@@ -182,6 +182,14 @@ const Ifrs9SegmentoSchema = z.object({
   etapa3_pct: z.array(z.number().nullable()),
 });
 
+const Ifrs9BancoSchema = z.object({
+  id: z.string(),
+  nombre: z.string(),
+  etapa1_pct: z.array(z.number().nullable()),
+  etapa2_pct: z.array(z.number().nullable()),
+  etapa3_pct: z.array(z.number().nullable()),
+});
+
 const Ifrs9Schema = z.object({
   ultima_actualizacion: z.string().optional(),
   fechas: z.array(z.string()),
@@ -194,6 +202,7 @@ const Ifrs9Schema = z.object({
     consumo:   Ifrs9SegmentoSchema,
     vivienda:  Ifrs9SegmentoSchema,
   }).optional(),
+  por_banco: z.array(Ifrs9BancoSchema).optional(),
 });
 
 const SofiposEntidadSchema = z.looseObject({
