@@ -97,22 +97,19 @@ test('credito: IcorChart canvas renders', async ({ page, context }) => {
   expect(count).toBeGreaterThanOrEqual(2);
 });
 
-test('credito: BM-only pivot renders and cartera buttons work', async ({ page, context }) => {
+test('instituciones: pivot renders and sector toggle works', async ({ page, context }) => {
   const errors = watchErrors(page);
   await forceClientVisible(context);
-  await page.goto(`${BASE}/credito`);
+  // /credito redirects to /instituciones (BM + SoFiPOs unified)
+  await page.goto(`${BASE}/instituciones`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
 
-  // SoFiPOs toggle must NOT appear on /credito (moved to /sofipos page)
-  const sofiposBtn = page.getByRole('button', { name: /SoFiPOs/i }).first();
-  await expect(sofiposBtn).not.toBeVisible();
-
-  // Canvas should render in BM-only mode
+  // Canvas should render
   await expect(page.locator('canvas').first()).toBeVisible({ timeout: 20000 });
 
   // No blocking errors
-  expect(errors, `Request failures on /credito:\n${errors.join('\n')}`).toEqual([]);
+  expect(errors, `Request failures on /instituciones:\n${errors.join('\n')}`).toEqual([]);
 });
 
 // ─── /sofipos charts ─────────────────────────────────────────────────────────

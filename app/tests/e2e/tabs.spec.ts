@@ -13,9 +13,11 @@ test.beforeEach(async ({ context }) => {
 // We use the BASE constant so it's easy to change if the deploy path changes.
 const TABS = [
   { path: `${BASE}/`, heading: /Resumen ejecutivo|SFM Monitor|sistema|Riesgo/i },
-  { path: `${BASE}/mercado`, heading: /MXN\/USD|Tasa objetivo|Mercado/i },
-  { path: `${BASE}/credito`, heading: /Crédito|Banca/i },
-  { path: `${BASE}/sofipos`, heading: /SoFiPOs/i },
+  // /mercado y /credito y /sofipos son 301 → rutas actuales
+  { path: `${BASE}/mercado`, heading: /Resumen ejecutivo|SFM Monitor|sistema|Riesgo|MXN\/USD|Tasa/i },
+  { path: `${BASE}/credito`, heading: /Instituciones|Banca|SoFiPOs/i },
+  { path: `${BASE}/sofipos`, heading: /Instituciones|Banca|SoFiPOs/i },
+  { path: `${BASE}/instituciones`, heading: /Instituciones|Banca|SoFiPOs/i },
   { path: `${BASE}/macro`, heading: /INPC|Inflación|Macro/i },
   { path: `${BASE}/riesgo`, heading: /Riesgo|heatmap|sistémico/i },
   { path: `${BASE}/metodologia`, heading: /Metodología|umbrales|fuentes/i },

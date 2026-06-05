@@ -24,16 +24,30 @@ export default defineConfig({
   projects: [
     {
       name: 'desktop',
-      use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 720 } },
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1280, height: 720 },
+        // Use system Chromium (snap) on Ubuntu 26.04 where Playwright's
+        // prebuilt headless-shell binary is not yet available.
+        ...(process.env['CI']
+          ? {}
+          : {
+              launchOptions: {
+                executablePath: '/snap/bin/chromium',
+                args: ['--no-sandbox', '--disable-dev-shm-usage'],
+              },
+            }),
+      },
     },
-    // webkit mobile — iPhone SE 3rd gen (375×667) matches gate G2 requirement.
-    // Baselines are NOT committed yet. To generate them:
-    //   npx playwright install webkit
-    //   npx playwright test --project=mobile-webkit --update-snapshots
-    {
-      name: 'mobile-webkit',
-      use: { ...devices['iPhone SE (3rd gen)'] },
-    },
+    // webkit mobile — iPhone SE 3rd gen (375×667) — gate G2 cutover.
+    // Only runs in CI (webkit binary unsupported on Ubuntu 26.04 WSL).
+    // Baselines generated in CI via `--update-snapshots` on first green run.
+    ...(process.env['CI']
+      ? [{
+          name: 'mobile-webkit',
+          use: { ...devices['iPhone SE (3rd gen)'] },
+        }]
+      : []),
   ],
   webServer: {
     command: 'npm run preview',
