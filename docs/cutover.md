@@ -40,8 +40,8 @@ Este documento define cuándo y cómo hacer el corte definitivo del dashboard le
 
 ### G4 — features citables del blueprint listos
 - [x] JSON-LD `@type: Dataset` por página de indicador — implementado en todas las páginas vía `datasetJsonLd()`
-- [ ] `<CitationBox>` con APA/Chicago/MLA/BibTeX/RIS
-- [ ] `<MetricTooltip>` con glosario sobre Floating UI
+- [x] `<CitationBox>` con APA/BibTeX/RIS + botón Copiar (US-202, 2026-05-28)
+- [x] `<MetricTooltip>` con CSS puro accesible + glosario en `glossary.ts` (US-203, 2026-05-28)
 - [x] Sitemap XML con i18n (vía `@astrojs/sitemap`)
 - [x] Meta tags Highwire Press (`citation_*` + Dublin Core `DC.*`) en Layout — Google Scholar y Mendeley
 

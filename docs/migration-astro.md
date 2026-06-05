@@ -59,20 +59,26 @@ Ver `docs/superpowers/specs/2026-04-27-app-like-redesign-pwa-design.md` y CHANGE
 - [x] 4 nanostores (activeTab, drawerState, terminalMode, onboarding)
 - [x] 24 vitest tests + 15 Playwright desktop tests + Lighthouse CI
 
-### Sprint M2 — charts CNBV (cartera + bancos) ✅ (parcial)
+### Sprint M2 — charts CNBV (cartera + bancos) ✅
 
 Tightear `CreditoSchema` en `schema.ts` con shapes reales (quitar `passthrough`):
 
-- [ ] `ImorHistoricoChart.tsx` — IMOR Banca Múltiple desde 2000
+- [x] `ImorHistoricoChart.tsx` — cubierto por `ImorSegPivotChart.tsx` (IMOR desde 2000, vista Sistema)
 - [x] `ImorSegPivotChart.tsx` — IMOR por segmento (comercial/consumo/vivienda/tarjeta) + toggle por banco G-7 (US-96 paso-2, 2026-06-01)
 - [x] `RoaRoeChart.tsx` — ROA/ROE por sistema y por banco G-7 con pills toggle (US-96 paso-2, 2026-06-01)
-- [ ] Tabla `<BancosTable>` con TanStack Table v8 virtualizada
+- [x] `BancosTable` — tabla ordenable por IMOR/variación anual/nombre (2026-06-01)
+- [x] `ImoraChart.tsx` — IMORA por sistema y por banco + línea TDA punteada (2026-06-05)
+- [x] `IcorChart.tsx` — ICOR por sistema y por banco con cap ×20 (2026-06-01)
+- [x] `MifChart.tsx` — tasa activa / tasa pasiva / MIF con fill / tasa Banxico step-line (2026-06-04)
+- [x] `QuitasChart.tsx` — quitas y castigos flujo 12m en mmdp · barra mensual (2026-06-04)
+- [x] `EprcChart.tsx` — EPRC / cartera total en % · línea con área (2026-06-05)
 
-### Sprint M3 — IFRS 9 + SoFiPOs ✅ (parcial)
+### Sprint M3 — IFRS 9 + SoFiPOs ✅
 
-- [ ] `Ifrs9StagesChart.tsx` — stacked area etapa 1/2/3
+- [x] `Ifrs9Chart.tsx` — stacked area E1/E2/E3 + pills por segmento (comercial/consumo/vivienda) + selector de 48 bancos (2026-06-04)
 - [x] `SofiposEntidadesChart.tsx` — top 15 por activo con chips Okabe-Ito, toggle Todas/Ninguna, vista por cartera cuando 1 entidad seleccionada (US-401, US-96 paso-2, 2026-06-01)
-- [ ] `SofiposImoraRoaChart.tsx` — IMORA + ROA dual-axis (ROA/ROE cubiertos en RoaRoeChart por banco; pendiente vista SoFiPOs dedicada)
+- [x] `SofiposImoraRoaChart.tsx` — IMORA + ROA dual-axis SoFiPOs (2026-06-01)
+- [x] `SofiposSegmentChart.tsx` — IMOR por cartera SoFiPOs (2026-06-01)
 
 ### Sprint M4 — features citables del blueprint ✅ (parcial)
 
@@ -80,7 +86,7 @@ Tightear `CreditoSchema` en `schema.ts` con shapes reales (quitar `passthrough`)
 - [x] `<MetricTooltip>` con CSS puro accesible (hover/focus, role="tooltip") + glosario en `glossary.ts` (US-203, 2026-05-28)
 - [x] `<CitationBox>` con tabs APA/BibTeX/RIS + botón Copiar (US-202, 2026-05-28)
 - [x] `<MetricInfo>` acordeón `<details>/<summary>` colapsable con fórmula, umbral y fuente regulatoria (US-403, 2026-05-31)
-- [ ] JSON-LD `@type: Dataset` por página de indicador
+- [x] JSON-LD `@type: Dataset` por página de indicador — `datasetJsonLd()` en todas las páginas
 - [ ] OG dinámico con Satori
 - [ ] `nuqs` para URL state (filtros)
 - [ ] `<ExportMenu>` PNG/SVG/CSV/PDF con metadata embebida
