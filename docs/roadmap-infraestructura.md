@@ -44,23 +44,11 @@
 
 **Por qué ahora y no después:** si migramos en Fase 2, todo el trabajo de fichas metodológicas, JSON-LD, citation generator y heatmap se hace dos veces. Hacerlo en el stack correcto desde el inicio ahorra 4-6 semanas.
 
-```bash
-# Bootstrap
-npm create astro@latest sfm-astro -- --template minimal
-cd sfm-astro
-npx astro add react tailwind
-npx shadcn@latest init
-
-# Deploy inmediato a Cloudflare Pages (gratis, bandwidth ilimitado)
-# Conectar repo en dash.cloudflare.com → Pages → Connect to Git
-```
-
 **Stack final:**
 - Astro 5 + React 19 + TypeScript strict
 - Tailwind CSS v4 (motor Rust, 100x más rápido en HMR)
-- shadcn/ui para componentes base
-- Cloudflare Pages (reemplaza GitHub Pages — sin límite de bandwidth)
-- GitHub Pages se mantiene como mirror de respaldo
+- GitHub Pages + GitHub Actions (deploy automático via `deploy.yml`)
+- URL canónica: `pamela-ruiz9.github.io/sfm-monitor/`
 
 **Qué se migra del frontend actual:**
 - `index.html` → layout Astro + páginas por sección
@@ -167,7 +155,7 @@ GitHub Actions (cron)
                                            │
                                      git commit & push
                                            │
-                             Cloudflare Pages sirve los JSONs
+                             GitHub Pages sirve los JSONs
                              con brotli (~50-150KB en wire)
 ```
 
@@ -348,7 +336,7 @@ El código ya está en el repo (commit `66798a2`). Requiere configurar dos servi
 | Sprint | Métrica | Target |
 |---|---|---|
 | 0 | DOI asignado | Zenodo `10.5281/zenodo.XXXXX` |
-| 0 | Astro en Cloudflare Pages | Lighthouse 90+ todas las categorías |
+| 0 | Astro en GitHub Pages | Lighthouse 90+ todas las categorías |
 | 0 | JSON-LD validado | Google Rich Results Test ✅ |
 | 1 | Pipeline Banxico | 100% series core automatizadas |
 | 1 | Automatización CNBV | Detección automática de nuevo mes |

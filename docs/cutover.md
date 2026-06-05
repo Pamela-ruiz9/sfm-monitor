@@ -56,10 +56,9 @@ Este documento define cuándo y cómo hacer el corte definitivo del dashboard le
 
 ### G6 — ensayo en preview
 - [x] Branch dedicada `feat/app-redesign-pwa-v0.2.0-dev` creada con todo el redesign (PR #1)
-- [x] `.github/workflows/deploy-cloudflare.yml` creado — trigger en push a main (paths: app/**, data/sfm-data.json) — 2026-06-05
-- [ ] Secrets a configurar en GitHub: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_PROJECT_NAME`
-- [ ] Crear proyecto en Cloudflare Pages (dashboard.cloudflare.com) y conectar repo
-- [ ] Verificar carga de assets sin 404 con `base: '/'` + custom domain `sfmrisk.mx`
+- [x] `.github/workflows/deploy.yml` — build Astro + deploy a GitHub Pages en push a main (paths: app/**, data/sfm-data.json) — ya funcional
+- [ ] Cambiar GitHub Pages source: Settings → Pages → Source → **GitHub Actions** (en lugar de "Deploy from branch")
+- [ ] Verificar carga de assets sin 404 con base `/sfm-monitor/` tras primer deploy
 - [x] Lighthouse 90+ en Performance (0.97-1.00) / Accessibility (1.00) / Best Practices (0.96) / SEO (1.00) en las 5 rutas
 
 ### G7 — backups y rollback path

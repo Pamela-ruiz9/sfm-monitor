@@ -105,8 +105,8 @@ Solo cuando M1–M4 estén completos y Playwright valide paridad pixel-perfect e
 | Zod v4 (no Valibot) | Integración nativa con Astro Content Collections |
 | Tailwind v4 (no v3) | Engine Oxide 3-5× más rápido, sin `tailwind.config.js` |
 | Chart.js mantenido (transición) | Paridad visual durante migración; reemplazar después chart por chart |
-| ~~Subpath `/sfm-monitor/app/`~~ → `base: '/'` + custom domain | Cambio en v0.2.0-dev: app target `sfmrisk.mx` con CNAME, no subpath GitHub Pages |
-| GitHub Pages legacy + Cloudflare Pages target | Legacy sigue en `pamela-ruiz9.github.io/sfm-monitor/`; Astro app va a custom domain |
+| GitHub Pages como plataforma única | Cloudflare Pages evaluado y descartado — GitHub Pages con GitHub Actions cubre todos los requisitos a costo cero sin dependencias externas |
+| `base: '/sfm-monitor'` mantenido | La URL canónica sigue siendo `pamela-ruiz9.github.io/sfm-monitor/`; cutover reemplaza `index.html` con el build Astro via `deploy.yml` |
 
 ## Patrones a respetar
 
