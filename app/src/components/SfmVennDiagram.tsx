@@ -417,7 +417,7 @@ export function SfmVennDiagram() {
         {/* SVG Venn */}
         <div className="flex-1 min-w-0">
           <svg
-            viewBox="0 0 660 560"
+            viewBox="0 0 660 548"
             xmlns="http://www.w3.org/2000/svg"
             className="w-full h-auto block"
             aria-label="Diagrama de Venn del Sistema Financiero Mexicano"
@@ -440,8 +440,8 @@ export function SfmVennDiagram() {
             {/* B: OTORGA CRÉDITO — upper-right */}
             <circle cx={395} cy={228} r={168} fill="#4ecdc4" stroke="#4ecdc4" strokeWidth={1.5} fillOpacity={0.12} />
 
-            {/* C: MERCADO VALORES — bottom-center */}
-            <circle cx={312} cy={374} r={128} fill="#ffd93d" stroke="#ffd93d" strokeWidth={1.5} fillOpacity={0.12} />
+            {/* C: MERCADO VALORES — bottom-center (cy=400 → top edge at y=270, below A∩B nodes) */}
+            <circle cx={312} cy={400} r={130} fill="#ffd93d" stroke="#ffd93d" strokeWidth={1.5} fillOpacity={0.12} />
 
             {/* ── Zone labels: positioned in uncluttered areas ── */}
 
@@ -455,13 +455,13 @@ export function SfmVennDiagram() {
             <text x={546} y={324} textAnchor="middle" fill="#4ecdc4" fontSize={12} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.85} {...HALO}>CRÉDITO</text>
             <text x={546} y={336} textAnchor="middle" fill="#4ecdc4" fontSize={8} fontFamily="monospace" fillOpacity={0.5}>préstamos y financiamiento</text>
 
-            {/* Zone C label — below circle */}
-            <text x={312} y={494} textAnchor="middle" fill="#ffd93d" fontSize={12} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.85} {...HALO}>MERCADO DE VALORES</text>
-            <text x={312} y={507} textAnchor="middle" fill="#ffd93d" fontSize={8} fontFamily="monospace" fillOpacity={0.5}>inversión · bolsa · fondos</text>
+            {/* Zone C label — below circle (cy=400+r=130 → bottom at y=530) */}
+            <text x={312} y={522} textAnchor="middle" fill="#ffd93d" fontSize={12} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.85} {...HALO}>MERCADO DE VALORES</text>
+            <text x={312} y={535} textAnchor="middle" fill="#ffd93d" fontSize={8} fontFamily="monospace" fillOpacity={0.5}>inversión · bolsa · fondos</text>
 
             {/* ── Nodes ── */}
 
-            {/* BANCO — center of all three, glow effect */}
+            {/* BANCO — center of all three zones (cy=290: in A∩B∩C), glow effect */}
             <g
               onClick={() => handleSelect('banco')}
               className="cursor-pointer"
@@ -470,12 +470,12 @@ export function SfmVennDiagram() {
               aria-label="Banco Múltiple"
             >
               <circle
-                cx={312} cy={240} r={selected === 'banco' ? 17 : 15}
+                cx={312} cy={290} r={selected === 'banco' ? 17 : 15}
                 fill="#ff9f43" stroke="#ffcc80"
                 strokeWidth={selected === 'banco' ? 2.5 : 1.5}
                 style={{ transition: 'r 0.15s' }}
               />
-              <text x={312} y={244} textAnchor="middle" fill="#fff" fontSize={8} fontWeight="bold" fontFamily="monospace" {...HALO}>
+              <text x={312} y={294} textAnchor="middle" fill="#fff" fontSize={8} fontWeight="bold" fontFamily="monospace" {...HALO}>
                 BANCO
               </text>
             </g>
@@ -485,13 +485,13 @@ export function SfmVennDiagram() {
               fill="#ff9f43" stroke="#ffcc80"
               lines={['BANCA', 'DESARROLLO']} labelDir="above" />
 
-            {/* SOFIPO — A∩B overlap, left of BANCO */}
-            <Node cx={272} cy={266} nodeId="sofipo" selected={selected === 'sofipo'} onSelect={handleSelect}
+            {/* SOFIPO — A∩B overlap, above zone-C edge (cy=248 < 270=top of C) */}
+            <Node cx={265} cy={248} nodeId="sofipo" selected={selected === 'sofipo'} onSelect={handleSelect}
               fill="#ff6b6b" stroke="#ffaaaa"
               lines={['SOFIPO']} labelDir="left" />
 
-            {/* SOCAP — A∩B overlap, below SOFIPO */}
-            <Node cx={266} cy={308} nodeId="socap" selected={selected === 'socap'} onSelect={handleSelect}
+            {/* SOCAP — A∩B overlap, above zone-C edge (cy=266 < 270=top of C) */}
+            <Node cx={248} cy={266} nodeId="socap" selected={selected === 'socap'} onSelect={handleSelect}
               fill="#ff6b6b" stroke="#ffaaaa"
               lines={['SOCAP']} labelDir="left" />
 
@@ -515,13 +515,13 @@ export function SfmVennDiagram() {
               fill="#a29bfe" stroke="#d0c8ff"
               lines={['IFPE']} labelDir="below" sub="(Fintech)" subColor="#a29bfe" />
 
-            {/* Casa de Bolsa — C only, lower-left */}
-            <Node cx={258} cy={434} nodeId="casabolsa" selected={selected === 'casabolsa'} onSelect={handleSelect}
+            {/* Casa de Bolsa — C only, lower-left (circle C cy=400,r=130 → bottom at 530) */}
+            <Node cx={258} cy={452} nodeId="casabolsa" selected={selected === 'casabolsa'} onSelect={handleSelect}
               fill="#ffd93d" stroke="#ffe98a"
               lines={['CASA', 'BOLSA']} labelDir="left" />
 
             {/* Sociedad de Inversión — C only, lower-right */}
-            <Node cx={366} cy={440} nodeId="socinversion" selected={selected === 'socinversion'} onSelect={handleSelect}
+            <Node cx={366} cy={458} nodeId="socinversion" selected={selected === 'socinversion'} onSelect={handleSelect}
               fill="#ffd93d" stroke="#ffe98a"
               lines={['SOC.', 'INVERSIÓN']} labelDir="right" />
 
