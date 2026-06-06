@@ -162,18 +162,17 @@ const CARDS: Record<string, CardData> = {
   },
 };
 
-// ── Panel ────────────────────────────────────────────────────────────────────
+// ── Panel ─────────────────────────────────────────────────────────────────────
 
 function Pill({ yes, label }: { yes: boolean; label: string }) {
   const color = yes ? '#3fb950' : '#f85149';
-  const text = yes ? '✓ SÍ' : '✗ NO';
   return (
     <div className="flex items-center gap-2 mb-1.5">
       <span
         className="inline-block font-mono text-[10px] px-2 py-0.5 rounded-full shrink-0"
         style={{ background: `${color}22`, border: `1px solid ${color}`, color }}
       >
-        {text}
+        {yes ? '✓ SÍ' : '✗ NO'}
       </span>
       <span className="text-[11px] text-[--color-text-mute]">{label}</span>
     </div>
@@ -243,46 +242,122 @@ function DetailPanel({ id, onClose }: { id: string; onClose: () => void }) {
   );
 }
 
-// ── SVG Venn ─────────────────────────────────────────────────────────────────
+// ── Helpers ───────────────────────────────────────────────────────────────────
 
-function NodeDot({
-  cx, cy, r = 10, fill, stroke, label, label2, labelColor, labelDark = false, nodeId, selected, onSelect,
-}: {
-  cx: number; cy: number; r?: number;
-  fill: string; stroke: string;
-  label: string; label2?: string;
-  labelColor?: string; labelDark?: boolean;
-  nodeId: string; selected: boolean;
+// SVG text with a dark stroke "halo" so labels are readable on colored zones
+const HALO: React.SVGProps<SVGTextElement> = {
+  stroke: '#0d1117',
+  strokeWidth: 3,
+  strokeLinejoin: 'round',
+  paintOrder: 'stroke',
+};
+
+// Node with precisely-controlled label placement
+interface NodeProps {
+  cx: number;
+  cy: number;
+  r?: number;
+  fill: string;
+  stroke: string;
+  /** Lines of label text */
+  lines: string[];
+  /** 'above' | 'below' | 'left' | 'right' | 'inside' */
+  labelDir: 'above' | 'below' | 'left' | 'right' | 'inside';
+  /** Secondary small text (e.g. "(Fintech)") shown after main lines */
+  sub?: string;
+  subColor?: string;
+  nodeId: string;
+  selected: boolean;
   onSelect: (id: string) => void;
-}) {
-  const textFill = labelDark ? '#1a1a1a' : '#e6edf3';
-  const labelY = cy - r - (label2 ? 18 : 12);
+}
+
+function Node({
+  cx, cy, r = 10, fill, stroke,
+  lines, labelDir, sub, subColor,
+  nodeId, selected, onSelect,
+}: NodeProps) {
+  const rr = selected ? r + 2 : r;
+  const GAP = 4;
+  const LINE_H = 10;
+
+  let textX = cx;
+  let textAnchor: 'start' | 'middle' | 'end' = 'middle';
+  let firstY = cy;
+
+  if (labelDir === 'above') {
+    firstY = cy - rr - GAP - (lines.length - 1) * LINE_H;
+    textAnchor = 'middle';
+  } else if (labelDir === 'below') {
+    firstY = cy + rr + GAP + LINE_H;
+    textAnchor = 'middle';
+  } else if (labelDir === 'left') {
+    textX = cx - rr - GAP;
+    firstY = cy + 3 - ((lines.length - 1) * LINE_H) / 2;
+    textAnchor = 'end';
+  } else if (labelDir === 'right') {
+    textX = cx + rr + GAP;
+    firstY = cy + 3 - ((lines.length - 1) * LINE_H) / 2;
+    textAnchor = 'start';
+  }
+  // 'inside': text centered inside the circle (handled separately)
+
   return (
     <g
       onClick={() => onSelect(nodeId)}
       className="cursor-pointer"
       role="button"
-      aria-label={label}
+      aria-label={lines.join(' ')}
     >
       <circle
-        cx={cx} cy={cy} r={selected ? r + 2 : r}
+        cx={cx} cy={cy} r={rr}
         fill={fill} stroke={stroke}
         strokeWidth={selected ? 2.5 : 1.5}
-        fillOpacity={selected ? 1 : 0.85}
         style={{ transition: 'r 0.15s, stroke-width 0.15s' }}
       />
-      {label2 ? (
-        <>
-          <text x={cx} y={labelY}       textAnchor="middle" fill={textFill} fontSize={8} fontFamily="monospace">{label}</text>
-          <text x={cx} y={labelY + 10} textAnchor="middle" fill={textFill} fontSize={8} fontFamily="monospace">{label2}</text>
-        </>
+      {labelDir === 'inside' ? (
+        lines.map((line, i) => (
+          <text
+            key={i}
+            x={cx} y={cy + 3 + (i - (lines.length - 1) / 2) * LINE_H}
+            textAnchor="middle"
+            fill="#fff"
+            fontSize={8}
+            fontWeight="bold"
+            fontFamily="monospace"
+            {...HALO}
+          >
+            {line}
+          </text>
+        ))
       ) : (
-        <text x={cx} y={labelY} textAnchor="middle" fill={textFill} fontSize={8} fontFamily="monospace">{label}</text>
-      )}
-      {labelColor && (
-        <text x={cx} y={labelY + (label2 ? 20 : 10)} textAnchor="middle" fill={labelColor} fontSize={7} fontFamily="monospace">
-          {label2 ? '(Fintech)' : ''}
-        </text>
+        <>
+          {lines.map((line, i) => (
+            <text
+              key={i}
+              x={textX} y={firstY + i * LINE_H}
+              textAnchor={textAnchor}
+              fill="#e6edf3"
+              fontSize={8}
+              fontFamily="monospace"
+              {...HALO}
+            >
+              {line}
+            </text>
+          ))}
+          {sub && (
+            <text
+              x={textX}
+              y={firstY + lines.length * LINE_H}
+              textAnchor={textAnchor}
+              fill={subColor ?? '#a29bfe'}
+              fontSize={7}
+              fontFamily="monospace"
+              {...HALO}
+            >
+              {sub}
+            </text>
+          )}
+        </>
       )}
     </g>
   );
@@ -299,19 +374,56 @@ export function SfmVennDiagram() {
 
   return (
     <div className="space-y-4">
-      {/* Main layout: SVG + panel */}
+
+      {/* ── Intro ─────────────────────────────────────────────────────── */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[11px]">
+        {[
+          {
+            color: '#ff6b6b',
+            icon: '🏛️',
+            title: '¿Capta ahorro?',
+            body: 'Solo las instituciones autorizadas pueden recibir depósitos del público: bancos, SOFIPO, SOCAP y banca de desarrollo.',
+          },
+          {
+            color: '#4ecdc4',
+            icon: '💳',
+            title: '¿Otorga crédito?',
+            body: 'Pueden dar préstamos: bancos, SOFOM, IFC (crowdfunding), SOFIPO, SOCAP y banca de desarrollo.',
+          },
+          {
+            color: '#ffd93d',
+            icon: '📈',
+            title: '¿Opera en bolsa?',
+            body: 'Las casas de bolsa y sociedades de inversión intermedian en mercados de valores. Los bancos también pueden.',
+          },
+        ].map(({ color, icon, title, body }) => (
+          <div
+            key={title}
+            className="card-surface rounded-lg p-3 flex gap-2.5"
+            style={{ borderColor: `${color}44` }}
+          >
+            <span className="text-base shrink-0 mt-0.5">{icon}</span>
+            <div>
+              <div className="font-semibold text-[--color-text] mb-1" style={{ color }}>{title}</div>
+              <p className="text-[--color-text-mute] leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* ── SVG + Panel ───────────────────────────────────────────────── */}
       <div className="flex flex-col md:flex-row gap-4 items-start">
 
         {/* SVG Venn */}
         <div className="flex-1 min-w-0">
           <svg
-            viewBox="0 0 620 520"
+            viewBox="0 0 660 560"
             xmlns="http://www.w3.org/2000/svg"
             className="w-full h-auto block"
             aria-label="Diagrama de Venn del Sistema Financiero Mexicano"
           >
             <defs>
-              <filter id="sfm-glow">
+              <filter id="sfm-glow" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="4" result="blur" />
                 <feMerge>
                   <feMergeNode in="blur" />
@@ -320,107 +432,119 @@ export function SfmVennDiagram() {
               </filter>
             </defs>
 
-            {/* Zone A: Capta Ahorro */}
-            <g>
-              <circle cx={230} cy={230} r={170} fill="#ff6b6b" stroke="#ff6b6b" strokeWidth={1.5} fillOpacity={0.13} />
-              <text fill="#ff6b6b" x={100} y={120} textAnchor="middle" fontSize={13} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.9}>CAPTA</text>
-              <text fill="#ff6b6b" x={100} y={137} textAnchor="middle" fontSize={13} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.9}>AHORRO</text>
-              <text fill="#ff6b6b" x={100} y={152} textAnchor="middle" fontSize={9} fontFamily="monospace" fillOpacity={0.55}>depósitos del público</text>
+            {/* ── Zone circles ── */}
+
+            {/* A: CAPTA AHORRO — upper-left */}
+            <circle cx={235} cy={228} r={168} fill="#ff6b6b" stroke="#ff6b6b" strokeWidth={1.5} fillOpacity={0.12} />
+
+            {/* B: OTORGA CRÉDITO — upper-right */}
+            <circle cx={395} cy={228} r={168} fill="#4ecdc4" stroke="#4ecdc4" strokeWidth={1.5} fillOpacity={0.12} />
+
+            {/* C: MERCADO VALORES — bottom-center */}
+            <circle cx={312} cy={374} r={128} fill="#ffd93d" stroke="#ffd93d" strokeWidth={1.5} fillOpacity={0.12} />
+
+            {/* ── Zone labels: positioned in uncluttered areas ── */}
+
+            {/* Zone A label — left side of circle, between SOCAP (y≈312) and AFORE (y≈418) */}
+            <text x={78} y={348} textAnchor="middle" fill="#ff6b6b" fontSize={12} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.85} {...HALO}>CAPTA</text>
+            <text x={78} y={362} textAnchor="middle" fill="#ff6b6b" fontSize={12} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.85} {...HALO}>AHORRO</text>
+            <text x={78} y={374} textAnchor="middle" fill="#ff6b6b" fontSize={8} fontFamily="monospace" fillOpacity={0.5}>depósitos del público</text>
+
+            {/* Zone B label — right side of circle, below SOFOM ENR (y≈244) */}
+            <text x={546} y={310} textAnchor="middle" fill="#4ecdc4" fontSize={12} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.85} {...HALO}>OTORGA</text>
+            <text x={546} y={324} textAnchor="middle" fill="#4ecdc4" fontSize={12} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.85} {...HALO}>CRÉDITO</text>
+            <text x={546} y={336} textAnchor="middle" fill="#4ecdc4" fontSize={8} fontFamily="monospace" fillOpacity={0.5}>préstamos y financiamiento</text>
+
+            {/* Zone C label — below circle */}
+            <text x={312} y={494} textAnchor="middle" fill="#ffd93d" fontSize={12} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.85} {...HALO}>MERCADO DE VALORES</text>
+            <text x={312} y={507} textAnchor="middle" fill="#ffd93d" fontSize={8} fontFamily="monospace" fillOpacity={0.5}>inversión · bolsa · fondos</text>
+
+            {/* ── Nodes ── */}
+
+            {/* BANCO — center of all three, glow effect */}
+            <g
+              onClick={() => handleSelect('banco')}
+              className="cursor-pointer"
+              filter="url(#sfm-glow)"
+              role="button"
+              aria-label="Banco Múltiple"
+            >
+              <circle
+                cx={312} cy={240} r={selected === 'banco' ? 17 : 15}
+                fill="#ff9f43" stroke="#ffcc80"
+                strokeWidth={selected === 'banco' ? 2.5 : 1.5}
+                style={{ transition: 'r 0.15s' }}
+              />
+              <text x={312} y={244} textAnchor="middle" fill="#fff" fontSize={8} fontWeight="bold" fontFamily="monospace" {...HALO}>
+                BANCO
+              </text>
             </g>
 
-            {/* Zone B: Otorga Crédito */}
-            <g>
-              <circle cx={390} cy={230} r={170} fill="#4ecdc4" stroke="#4ecdc4" strokeWidth={1.5} fillOpacity={0.13} />
-              <text fill="#4ecdc4" x={530} y={120} textAnchor="middle" fontSize={13} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.9}>OTORGA</text>
-              <text fill="#4ecdc4" x={530} y={137} textAnchor="middle" fontSize={13} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.9}>CRÉDITO</text>
-              <text fill="#4ecdc4" x={530} y={152} textAnchor="middle" fontSize={9} fontFamily="monospace" fillOpacity={0.55}>préstamos y financiamiento</text>
-            </g>
+            {/* BANCA DESARROLLO — A∩B overlap, above BANCO */}
+            <Node cx={312} cy={186} nodeId="bancadesarrollo" selected={selected === 'bancadesarrollo'} onSelect={handleSelect}
+              fill="#ff9f43" stroke="#ffcc80"
+              lines={['BANCA', 'DESARROLLO']} labelDir="above" />
 
-            {/* Zone C: Mercado de Valores */}
-            <g>
-              <circle cx={310} cy={370} r={130} fill="#ffd93d" stroke="#ffd93d" strokeWidth={1.5} fillOpacity={0.13} />
-              <text fill="#ffd93d" x={310} y={490} textAnchor="middle" fontSize={13} fontWeight={700} fontFamily="sans-serif" fillOpacity={0.9}>MERCADO DE VALORES</text>
-              <text fill="#ffd93d" x={310} y={505} textAnchor="middle" fontSize={9} fontFamily="monospace" fillOpacity={0.55}>inversión · bolsa · fondos</text>
-            </g>
+            {/* SOFIPO — A∩B overlap, left of BANCO */}
+            <Node cx={272} cy={266} nodeId="sofipo" selected={selected === 'sofipo'} onSelect={handleSelect}
+              fill="#ff6b6b" stroke="#ffaaaa"
+              lines={['SOFIPO']} labelDir="left" />
 
-            {/* Banco Múltiple — center, all 3 zones */}
-            <g onClick={() => handleSelect('banco')} className="cursor-pointer" filter="url(#sfm-glow)" role="button" aria-label="Banco Múltiple">
-              <circle cx={310} cy={230} r={selected === 'banco' ? 16 : 14} fill="#ff9f43" stroke="#ffcc80" strokeWidth={selected === 'banco' ? 2.5 : 1.5} style={{ transition: 'r 0.15s' }} />
-              <text fill="#fff" x={310} y={234} textAnchor="middle" fontSize={8} fontWeight="bold" fontFamily="monospace">BANCO</text>
-            </g>
+            {/* SOCAP — A∩B overlap, below SOFIPO */}
+            <Node cx={266} cy={308} nodeId="socap" selected={selected === 'socap'} onSelect={handleSelect}
+              fill="#ff6b6b" stroke="#ffaaaa"
+              lines={['SOCAP']} labelDir="left" />
 
-            {/* Banca Desarrollo — capta + crédito */}
-            <NodeDot cx={310} cy={195} nodeId="bancadesarrollo" selected={selected === 'bancadesarrollo'} onSelect={handleSelect}
-              fill="#ff9f43" stroke="#ffcc80" label="BANCA" label2="DESARROLLO" />
+            {/* SOFOM ER — B only, right side */}
+            <Node cx={454} cy={192} nodeId="sofomer" selected={selected === 'sofomer'} onSelect={handleSelect}
+              fill="#4ecdc4" stroke="#80eeea"
+              lines={['SOFOM ER']} labelDir="right" />
 
-            {/* SOFIPO — capta + crédito */}
-            <NodeDot cx={278} cy={260} nodeId="sofipo" selected={selected === 'sofipo'} onSelect={handleSelect}
-              fill="#ff6b6b" stroke="#ffaaaa" label="SOFIPO" />
+            {/* SOFOM ENR — B only, right side below ER */}
+            <Node cx={476} cy={244} nodeId="sofomenr" selected={selected === 'sofomenr'} onSelect={handleSelect}
+              fill="#4ecdc4" stroke="#80eeea"
+              lines={['SOFOM ENR']} labelDir="right" />
 
-            {/* SOCAP — capta + crédito */}
-            <NodeDot cx={278} cy={295} nodeId="socap" selected={selected === 'socap'} onSelect={handleSelect}
-              fill="#ff6b6b" stroke="#ffaaaa" label="SOCAP" />
+            {/* IFC — B fintech, upper right of circle */}
+            <Node cx={456} cy={144} nodeId="ifc" selected={selected === 'ifc'} onSelect={handleSelect}
+              fill="#a29bfe" stroke="#d0c8ff"
+              lines={['IFC']} labelDir="above" sub="(Fintech)" subColor="#a29bfe" />
 
-            {/* SOFOM ER — solo crédito */}
-            <NodeDot cx={430} cy={210} nodeId="sofomer" selected={selected === 'sofomer'} onSelect={handleSelect}
-              fill="#4ecdc4" stroke="#80eeea" label="SOFOM ER" />
+            {/* IFPE — outside all zones, upper right corner */}
+            <Node cx={576} cy={96} nodeId="ifpe" selected={selected === 'ifpe'} onSelect={handleSelect}
+              fill="#a29bfe" stroke="#d0c8ff"
+              lines={['IFPE']} labelDir="below" sub="(Fintech)" subColor="#a29bfe" />
 
-            {/* SOFOM ENR — solo crédito */}
-            <NodeDot cx={458} cy={240} nodeId="sofomenr" selected={selected === 'sofomenr'} onSelect={handleSelect}
-              fill="#4ecdc4" stroke="#80eeea" label="SOFOM ENR" />
+            {/* Casa de Bolsa — C only, lower-left */}
+            <Node cx={258} cy={434} nodeId="casabolsa" selected={selected === 'casabolsa'} onSelect={handleSelect}
+              fill="#ffd93d" stroke="#ffe98a"
+              lines={['CASA', 'BOLSA']} labelDir="left" />
 
-            {/* IFC Fintech — crédito */}
-            <g onClick={() => handleSelect('ifc')} className="cursor-pointer" role="button" aria-label="IFC Fintech">
-              <circle cx={445} cy={170} r={selected === 'ifc' ? 12 : 10} fill="#a29bfe" stroke="#d0c8ff" strokeWidth={selected === 'ifc' ? 2.5 : 1.5} style={{ transition: 'r 0.15s' }} />
-              <text fill="#e6edf3" x={460} y={158} textAnchor="middle" fontSize={8} fontFamily="monospace">IFC</text>
-              <text fill="#a29bfe" x={460} y={148} textAnchor="middle" fontSize={7} fontFamily="monospace">(Fintech)</text>
-            </g>
+            {/* Sociedad de Inversión — C only, lower-right */}
+            <Node cx={366} cy={440} nodeId="socinversion" selected={selected === 'socinversion'} onSelect={handleSelect}
+              fill="#ffd93d" stroke="#ffe98a"
+              lines={['SOC.', 'INVERSIÓN']} labelDir="right" />
 
-            {/* IFPE Fintech — fuera */}
-            <g onClick={() => handleSelect('ifpe')} className="cursor-pointer" role="button" aria-label="IFPE Fintech">
-              <circle cx={520} cy={130} r={selected === 'ifpe' ? 12 : 10} fill="#a29bfe" stroke="#d0c8ff" strokeWidth={selected === 'ifpe' ? 2.5 : 1.5} style={{ transition: 'r 0.15s' }} />
-              <text fill="#e6edf3" x={535} y={118} textAnchor="middle" fontSize={8} fontFamily="monospace">IFPE</text>
-              <text fill="#a29bfe" x={535} y={108} textAnchor="middle" fontSize={7} fontFamily="monospace">(Fintech)</text>
-            </g>
+            {/* AFORE — outside, lower-left corner */}
+            <Node cx={52} cy={416} nodeId="afore" selected={selected === 'afore'} onSelect={handleSelect}
+              fill="#fd79a8" stroke="#ffb3cc"
+              lines={['AFORE']} labelDir="above" sub="(retiro)" subColor="#fd79a8" />
 
-            {/* Casa de Bolsa — mercado */}
-            <g onClick={() => handleSelect('casabolsa')} className="cursor-pointer" role="button" aria-label="Casa de Bolsa">
-              <circle cx={270} cy={420} r={selected === 'casabolsa' ? 12 : 10} fill="#ffd93d" stroke="#ffe98a" strokeWidth={selected === 'casabolsa' ? 2.5 : 1.5} style={{ transition: 'r 0.15s' }} />
-              <text fill="#1a1a1a" x={258} y={408} textAnchor="middle" fontSize={8} fontFamily="monospace">CASA</text>
-              <text fill="#1a1a1a" x={258} y={398} textAnchor="middle" fontSize={8} fontFamily="monospace">BOLSA</text>
-            </g>
+            {/* Aseguradora — outside, upper-left (far from zone A label) */}
+            <Node cx={52} cy={116} nodeId="aseguradora" selected={selected === 'aseguradora'} onSelect={handleSelect}
+              fill="#6c5ce7" stroke="#b2a4ff"
+              lines={['ASEGURADORA']} labelDir="below" />
 
-            {/* Sociedad de Inversión — mercado */}
-            <g onClick={() => handleSelect('socinversion')} className="cursor-pointer" role="button" aria-label="Sociedad de Inversión">
-              <circle cx={350} cy={430} r={selected === 'socinversion' ? 12 : 10} fill="#ffd93d" stroke="#ffe98a" strokeWidth={selected === 'socinversion' ? 2.5 : 1.5} style={{ transition: 'r 0.15s' }} />
-              <text fill="#1a1a1a" x={365} y={418} textAnchor="middle" fontSize={8} fontFamily="monospace">SOC.</text>
-              <text fill="#1a1a1a" x={365} y={408} textAnchor="middle" fontSize={8} fontFamily="monospace">INVERSIÓN</text>
-            </g>
+            {/* Centro Cambiario — outside, right side */}
+            <Node cx={622} cy={374} nodeId="cambiario" selected={selected === 'cambiario'} onSelect={handleSelect}
+              fill="#00b894" stroke="#55efc4"
+              lines={['CENTRO', 'CAMBIARIO']} labelDir="above" />
 
-            {/* AFORE — fuera */}
-            <g onClick={() => handleSelect('afore')} className="cursor-pointer" role="button" aria-label="AFORE">
-              <circle cx={80} cy={390} r={selected === 'afore' ? 12 : 10} fill="#fd79a8" stroke="#ffb3cc" strokeWidth={selected === 'afore' ? 2.5 : 1.5} style={{ transition: 'r 0.15s' }} />
-              <text fill="#e6edf3" x={80} y={378} textAnchor="middle" fontSize={8} fontFamily="monospace">AFORE</text>
-              <text fill="#fd79a8" x={80} y={368} textAnchor="middle" fontSize={7} fontFamily="monospace">(retiro)</text>
-            </g>
-
-            {/* Aseguradora — fuera */}
-            <g onClick={() => handleSelect('aseguradora')} className="cursor-pointer" role="button" aria-label="Aseguradora">
-              <circle cx={80} cy={130} r={selected === 'aseguradora' ? 12 : 10} fill="#6c5ce7" stroke="#b2a4ff" strokeWidth={selected === 'aseguradora' ? 2.5 : 1.5} style={{ transition: 'r 0.15s' }} />
-              <text fill="#e6edf3" x={80} y={118} textAnchor="middle" fontSize={8} fontFamily="monospace">ASEGURADORA</text>
-            </g>
-
-            {/* Centro Cambiario — fuera */}
-            <g onClick={() => handleSelect('cambiario')} className="cursor-pointer" role="button" aria-label="Centro Cambiario">
-              <circle cx={545} cy={370} r={selected === 'cambiario' ? 12 : 10} fill="#00b894" stroke="#55efc4" strokeWidth={selected === 'cambiario' ? 2.5 : 1.5} style={{ transition: 'r 0.15s' }} />
-              <text fill="#e6edf3" x={545} y={358} textAnchor="middle" fontSize={8} fontFamily="monospace">CENTRO</text>
-              <text fill="#e6edf3" x={545} y={348} textAnchor="middle" fontSize={8} fontFamily="monospace">CAMBIARIO</text>
-            </g>
           </svg>
         </div>
 
         {/* Detail panel */}
-        <div className="w-full md:w-[280px] shrink-0">
+        <div className="w-full md:w-[272px] shrink-0">
           <div className="card-surface rounded-xl p-4 min-h-[200px] md:sticky md:top-4">
             {selected ? (
               <DetailPanel id={selected} onClose={() => setSelected(null)} />
@@ -436,8 +560,8 @@ export function SfmVennDiagram() {
         </div>
       </div>
 
-      {/* Legend */}
-      <div className="flex flex-wrap gap-x-5 gap-y-2 justify-center pt-2">
+      {/* ── Legend ─────────────────────────────────────────────────────── */}
+      <div className="flex flex-wrap gap-x-5 gap-y-2 justify-center pt-1">
         {[
           { color: '#ff6b6b', label: 'Capta ahorro del público' },
           { color: '#4ecdc4', label: 'Otorga crédito' },
@@ -457,7 +581,7 @@ export function SfmVennDiagram() {
         ))}
       </div>
 
-      {/* Regulators bar */}
+      {/* ── Regulators bar ─────────────────────────────────────────────── */}
       <div className="flex flex-wrap gap-2 justify-center pt-1">
         {[
           { key: 'SHCP',     desc: 'política financiera' },
