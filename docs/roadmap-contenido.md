@@ -127,10 +127,21 @@ Visualización: series temporales con anotaciones de crisis canónicas (Tequila 
 
 **EJE 5 — ESTRUCTURAL** *(fuente: CNBV + Banxico)*
 
-- Concentración del sistema: HHI por activos, cartera y depósitos
-- Participación D-SIBs en activos totales
-- Penetración financiera: crédito/PIB
-- Banca de desarrollo: IMOR, ICAP (básico en Fase 1)
+| Indicador | Pregunta en lenguaje humano | Fórmula | Umbral alerta | Fuente |
+|-----------|----------------------------|---------|---------------|--------|
+| HHI activos | ¿Controlan pocos bancos la mayor parte del sistema? | Σ(participación_i)² × 10,000 sobre activos totales | <1,000 competitivo · 1,000–1,800 moderado · >1,800 concentrado | CNBV Sector 40, cálculo propio |
+| HHI cartera | ¿La cartera de crédito está en pocas manos? | Σ(participación_i)² × 10,000 sobre cartera total | Mismos umbrales | CNBV Sector 40 |
+| HHI depósitos | ¿Y el fondeo? | Σ(participación_i)² × 10,000 sobre depósitos totales | Mismos umbrales | CNBV Sector 40 |
+| Participación D-SIBs | ¿Qué parte del sistema descansa en los 7 bancos sistémicos? | Σ Activos D-SIBs / Activos sistema × 100 | Informativo — referencia: nivel histórico + CESF | CNBV Sector 40 + lista D-SIBs Banxico |
+| Crédito / PIB | ¿Qué tan profundo es el sistema financiero respecto a la economía? | Cartera total banca / PIB nominal × 100 | Informativo en Fase 1 — referencia: promedio MX histórico ~35–40%, LATAM ~55% | CNBV Sector 40 + INEGI BIE |
+| IMOR banca de desarrollo | ¿Están pagando bien los créditos de la banca pública? | Misma definición IMOR Sector 40 (Cartera Etapa 3 / Cartera total) | >3.5% (mismo umbral banca múltiple) | CNBV Portafolio, Banca de Desarrollo |
+| ICAP banca de desarrollo | ¿Tiene capital suficiente la banca pública? | Capital Neto / Activos sujetos a riesgo total | <10.5% (mínimo regulatorio CUB) | CNBV Portafolio, Banca de Desarrollo |
+
+**Instituciones banca de desarrollo (cobertura completa CNBV, 7 instituciones):** Banobras, Nafin, Bancomext, Banjercito, SHF, FND, Banco del Bienestar.
+
+**Nota metodológica — umbral HHI:** se adopta la escala OCDE usada en el Reporte de Estabilidad Financiera de Banxico (no la escala COFECE 1,000/2,500). Razón: el REF es la referencia regulatoria canónica para estabilidad sistémica; COFECE aplica su escala en contexto de competencia económica, que es un análisis distinto. Se documenta explícitamente en la ficha metodológica del indicador.
+
+**Nota crédito/PIB:** la desviación respecto a tendencia de largo plazo (credit-to-GDP gap, HP filter λ=400,000, metodología BIS BCBS d187) va en Eje 7 — Sistémico. En este eje solo se publica el nivel con contexto histórico.
 
 ---
 
@@ -245,11 +256,11 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 
 ## Preguntas abiertas para Pame
 
-1. **¿El índice compuesto propio lo validamos juntas antes de publicarlo?** Es nuestra firma metodológica — quiero que Pame revise la composición antes de que salga en público.
+1. ~~**¿El índice compuesto propio lo validamos juntas antes de publicarlo?**~~ ✅ Decidido: sí, validación conjunta antes de implementar. No arrancar el semáforo global sin revisión de Pame de la composición y umbrales.
 
-2. **¿Las fichas metodológicas van en español o bilingüe (ES/EN) desde Fase 1?** El blueprint recomienda i18n pero hacerlo bien desde el inicio tiene costo. Propongo ES primero, EN en Fase 3.
+2. ~~**¿Las fichas metodológicas van en español o bilingüe (ES/EN) desde Fase 1?**~~ ✅ Decidido: todo en español. El dashboard es para México.
 
-3. **¿El dashboard tiene nombre de dominio propio o queda en pamela-ruiz9.github.io/sfm-monitor?** Para citabilidad académica, un dominio propio es mejor. `sfmrisk.mx` está disponible (~$200 MXN/año).
+3. ~~**¿El dashboard tiene nombre de dominio propio o queda en pamela-ruiz9.github.io/sfm-monitor?**~~ ✅ Decidido: URL canónica = `pamela-ruiz9.github.io/sfm-monitor` — sin dominio propio. Eliminar `app/public/CNAME` en el próximo cleanup.
 
 ---
 
