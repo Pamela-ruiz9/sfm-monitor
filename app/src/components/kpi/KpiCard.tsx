@@ -78,7 +78,7 @@ export function KpiCard({
       }
       className={cn(
         'card-surface group relative block p-5 transition-all',
-        href && 'hover:border-[--color-gold] hover:translate-y-[-1px]',
+        href && 'hover:border-[--color-accent] hover:translate-y-[-1px]',
       )}>
       <div className="flex items-start justify-between gap-3">
         <div>
@@ -91,7 +91,7 @@ export function KpiCard({
             </div>
           )}
         </div>
-        {iconName && ICON_MAP[iconName] && (() => { const Icon = ICON_MAP[iconName]; return <Icon className="size-4 text-[--color-text-mute] group-hover:text-[--color-gold] transition-colors" aria-hidden="true" />; })()}
+        {iconName && ICON_MAP[iconName] && (() => { const Icon = ICON_MAP[iconName]; return <Icon className="size-4 text-[--color-text-mute] group-hover:text-[--color-accent] transition-colors" aria-hidden="true" />; })()}
       </div>
 
       <div className="mt-3 flex items-baseline gap-1.5">

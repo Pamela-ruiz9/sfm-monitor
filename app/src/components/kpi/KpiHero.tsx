@@ -40,7 +40,7 @@ export function KpiHero({
       data-tone={tone}
       className={cn(
         'card-surface block p-6 transition-all',
-        href && 'hover:border-[--color-gold]',
+        href && 'hover:border-[--color-accent]',
       )}>
       <div className="flex items-center gap-2 text-[--color-text-mute]">
         {Icon && <Icon className="size-4" aria-hidden="true" />}
