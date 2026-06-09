@@ -71,7 +71,7 @@ export function CmdKPalette() {
                 setOpen(false);
                 setQuery('');
               }}
-              className="flex items-center justify-between gap-3 px-4 py-2 mx-1 rounded-md text-sm cursor-pointer text-[--color-text-dim] data-[selected=true]:bg-[--color-bg-elev-2] data-[selected=true]:text-[--color-text]">
+              className="flex items-center justify-between gap-3 px-4 py-2 mx-1 rounded-md text-sm cursor-pointer text-[--color-text-dim] data-[selected=true]:bg-[--color-bg-elev-2] data-[selected=true]:text-[--color-text] data-[selected=true]:border-l-2 data-[selected=true]:border-[--color-accent] data-[selected=true]:pl-[calc(1rem-2px)]">
               <div className="flex flex-col min-w-0">
                 <span className="truncate">{i.label}</span>
                 {i.refCode && (

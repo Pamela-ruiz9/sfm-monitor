@@ -98,8 +98,8 @@ export function PWAInstallPrompt() {
           <X className="size-3" />
         </button>
         <div className="flex items-center gap-2 mb-2">
-          <Download className="size-4 text-[--color-gold]" />
-          <span className="text-xs font-semibold uppercase tracking-wider text-[--color-gold]">
+          <Download className="size-4 text-[--color-accent]" />
+          <span className="text-xs font-semibold uppercase tracking-wider text-[--color-accent]">
             Instalar app
           </span>
         </div>
@@ -108,7 +108,7 @@ export function PWAInstallPrompt() {
         </p>
         <button
           onClick={install}
-          className="w-full px-3 py-2 rounded-md bg-[--color-gold] text-[--color-bg] text-xs font-semibold hover:opacity-90">
+          className="w-full px-3 py-2 rounded-md bg-[--color-accent] text-[--color-bg] text-xs font-semibold hover:opacity-90">
           Instalar SFM Monitor
         </button>
       </div>
@@ -125,8 +125,8 @@ export function PWAInstallPrompt() {
           <X className="size-3" />
         </button>
         <div className="flex items-center gap-2 mb-2">
-          <Share className="size-4 text-[--color-gold]" />
-          <span className="text-xs font-semibold uppercase tracking-wider text-[--color-gold]">
+          <Share className="size-4 text-[--color-accent]" />
+          <span className="text-xs font-semibold uppercase tracking-wider text-[--color-accent]">
             Instalar en iOS
           </span>
         </div>
