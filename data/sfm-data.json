@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-06-08",
+  "ultima_actualizacion": "2026-06-09",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "17.4755",
-    "fecha": "2026-06-05",
+    "actual": "17.4453",
+    "fecha": "2026-06-08",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1567,7 +1567,7 @@
       },
       {
         "mes": "2026-06",
-        "valor": 17.4755
+        "valor": 17.4453
       }
     ]
   },
@@ -1576,7 +1576,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-06-08",
+        "fecha": "2024-06-09",
         "valor": 11.0
       },
       {
@@ -1638,8 +1638,8 @@
     ]
   },
   "inflacion": {
-    "actual": 4.45,
-    "fecha": "2026-04-01",
+    "actual": 3.94,
+    "fecha": "2026-05-01",
     "historico_mensual": [
       {
         "mes": "2025-06",
@@ -1695,6 +1695,11 @@
         "mes": "2026-04",
         "fecha": "2026-04-01",
         "valor": 4.45
+      },
+      {
+        "mes": "2026-05",
+        "fecha": "2026-05-01",
+        "valor": 3.94
       }
     ],
     "subyacente_mensual": [
@@ -1752,6 +1757,11 @@
         "mes": "2026-04",
         "fecha": "2026-04-01",
         "valor": 4.26
+      },
+      {
+        "mes": "2026-05",
+        "fecha": "2026-05-01",
+        "valor": 4.19
       }
     ],
     "no_subyacente_mensual": [
@@ -1809,13 +1819,18 @@
         "mes": "2026-04",
         "fecha": "2026-04-01",
         "valor": 2.82
+      },
+      {
+        "mes": "2026-05",
+        "fecha": "2026-05-01",
+        "valor": 2.63
       }
     ]
   },
   "mercado": {
     "reservas_internacionales": {
-      "actual": 256599.9,
-      "fecha": "2026-05-29",
+      "actual": 255731.3,
+      "fecha": "2026-06-05",
       "historico": [
         {
           "fecha": "2025-06-13",
@@ -2020,6 +2035,10 @@
         {
           "fecha": "2026-05-29",
           "valor": 256599.9
+        },
+        {
+          "fecha": "2026-06-05",
+          "valor": 255731.3
         }
       ]
     },
@@ -3896,8 +3915,8 @@
       ]
     },
     "udis": {
-      "actual": 8.83172,
-      "fecha": "2026-06-08"
+      "actual": 8.83083,
+      "fecha": "2026-06-09"
     },
     "salario_minimo": {
       "actual": 0.06,
@@ -4410,11 +4429,11 @@
       "historico": []
     },
     "tasa_real_banxico": {
-      "actual": 2.05,
+      "actual": 2.56,
       "fecha": "2026-05-08"
     },
     "tasa_real_cetes": {
-      "actual": 1.91,
+      "actual": 2.42,
       "fecha": "2026-06-02"
     }
   },
