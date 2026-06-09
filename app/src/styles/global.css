@@ -13,6 +13,11 @@
   --color-text-dim: #8b949e;
   --color-text-mute: #6e7681;
 
+  /* Acento de marca — Naranja señal */
+  --color-accent: #f5793c;
+  --color-accent-soft: rgba(245, 121, 60, 0.15);
+  --color-accent-knock: #1a0a03;
+
   /* Acentos KPI — exactos al legacy, sin azul */
   --color-gold: #c4a35a;
   --color-green: #3fb950;
@@ -25,6 +30,8 @@
   --font-sans:
     'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+  --font-logo: 'Space Grotesk', sans-serif;
+  --font-data: 'IBM Plex Mono', ui-monospace, monospace;
 
   --default-transition-duration: 200ms;
 }
@@ -81,9 +88,9 @@ body {
   scroll-margin-top: 80px;
 }
 
-/* Focus ring — gold instead of blue */
+/* Focus ring — accent naranja */
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   border-radius: 4px;
 }

@@ -12,6 +12,14 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(app): identidad de marca — logo SFM con acento naranja (2026-06-09)
+- `app/src/components/shell/SfmLogo.astro`: componente de logo con SVG inline (`currentColor`), soporte para variantes `horizontal` / `stacked` / `icon` y tamaños `sm` / `md` / `lg`.
+- `app/src/components/shell/Header.astro`: reemplaza el placeholder dorado por `SfmLogo` horizontal con el nuevo wordmark "SFM" en Space Grotesk 700.
+- `app/src/styles/global.css`: añade `--color-accent: #f5793c` (naranja señal), `--color-accent-soft`, `--color-accent-knock`; añade `--font-logo: 'Space Grotesk'` y `--font-data: 'IBM Plex Mono'`; actualiza el focus ring al acento naranja. El hover del botón de búsqueda en header usa `--color-accent`.
+- `app/src/layouts/Layout.astro`: agrega `<link rel="icon" href="/sfm-icon.svg">` (SVG favicon) y carga Space Grotesk 400/500/600/700 + IBM Plex Mono 400/500/600 desde Google Fonts.
+- `app/public/sfm-icon.svg`: símbolo ECG + anillo dial en naranja `#f5793c`, sin tile — para favicon y uso general.
+- `app/public/sfm-appicon.svg`: app icon cuadrado (`rx=13`, tile `#0c1014`) con marca naranja al 70% centrada — añadido al manifest como ícono SVG `"sizes": "any"`.
+
 ### feat(credito): TDA + EprcChart — tasa de deterioro y cobertura de cartera (2026-06-05)
 - `scripts/extract-cnbv-raw.py`: añade concepto `40200118` (EPRC / cartera total) con escala ×100 (ratio → %). TDA (40200074) ya existía en extractor.
 - `scripts/normalize-cnbv.py`: emite `eprc_cartera` en `historico_por_cartera` como array nullable.
