@@ -11,7 +11,7 @@ export function DrawerExport({ indicator }: Props) {
       <a
         href={`/data/sfm-data.json`}
         download={`sfm-${indicator.id}.json`}
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[--color-border] bg-[--color-bg-elev-2] text-xs text-[--color-text-dim] hover:text-[--color-text] hover:border-[--color-gold]">
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[--color-border] bg-[--color-bg-elev-2] text-xs text-[--color-text-dim] hover:text-[--color-text] hover:border-[--color-accent]">
         <Download className="size-3" aria-hidden="true" />
         JSON completo
       </a>

@@ -46,7 +46,7 @@ export function ChartDrawer() {
             <div className="flex-1 overflow-y-auto px-5 pb-8 pt-4">
               <div className="flex items-start justify-between gap-3 mb-4">
                 <div>
-                  <div className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[--color-gold]">
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[--color-accent]">
                     {indicator.tab}
                   </div>
                   <Drawer.Title className="serif text-2xl font-semibold text-[--color-text] leading-tight mt-1">
@@ -71,7 +71,7 @@ export function ChartDrawer() {
                 Vista detallada de {indicator.shortLabel} disponible en el
                 <a
                   href="https://pamela-ruiz9.github.io/sfm-monitor/"
-                  className="text-[--color-gold] hover:underline ml-1">
+                  className="text-[--color-accent] hover:underline ml-1">
                   dashboard estable ↗
                 </a>
                 {' '}mientras se completa la migración.
