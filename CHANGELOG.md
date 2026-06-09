@@ -12,6 +12,21 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(app): branding — token swap naranja consistente en toda la app (2026-06-09)
+- `app/src/styles/global.css`: token `--color-accent: #f5793c` ya definido; estrategia formalizada: `--color-accent` para chrome/interacción, `--color-gold` queda exclusivamente para semántica KPI.
+- `app/src/components/shell/TabBar.astro`: tab activo y sub-texto en `--color-accent` (antes `--color-gold`).
+- `app/src/components/shell/BottomNav.astro`: ítem activo en `--color-accent`.
+- `app/src/components/kpi/KpiCard.tsx`: hover border e ícono en `--color-accent`; `VALUE_COLOR.gold` sin cambio (semántico).
+- `app/src/components/kpi/KpiHero.tsx`: hover border en `--color-accent`; tone gold sin cambio.
+- `app/src/pages/index.astro`: borde del KPI card seleccionado en `--color-accent`.
+- `app/src/components/drawer/ChartDrawer.tsx`: label de sección y link "ver más" en `--color-accent`.
+- `app/src/components/drawer/DrawerExport.tsx`: hover del botón exportar en `--color-accent`.
+- `app/src/components/shell/UpdateToast.tsx`: borde, ícono RotateCw y botón "Actualizar" en `--color-accent`.
+- `app/src/components/shell/PWAInstallPrompt.tsx`: íconos, labels y botón "Instalar" en `--color-accent`.
+- `app/src/components/shell/CmdKPalette.tsx`: ítem seleccionado con borde izquierdo naranja + padding compensatorio `calc(1rem-2px)`.
+- `app/src/pages/riesgo.astro`: eyebrow label y link externo en `--color-accent`.
+- `app/src/pages/metodologia.astro`: link inline en `--color-accent`.
+
 ### feat(app): identidad de marca — logo SFM con acento naranja (2026-06-09)
 - `app/src/components/shell/SfmLogo.astro`: componente de logo con SVG inline (`currentColor`), soporte para variantes `horizontal` / `stacked` / `icon` y tamaños `sm` / `md` / `lg`.
 - `app/src/components/shell/Header.astro`: reemplaza el placeholder dorado por `SfmLogo` horizontal con el nuevo wordmark "SFM" en Space Grotesk 700.
