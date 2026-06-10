@@ -1,0 +1,171 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
+import Header from '~/components/shell/Header.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import { KpiCard } from '~/components/kpi/KpiCard';
+import { SofiposSegmentChart } from '~/components/charts/SofiposSegmentChart';
+import { SofiposEntidadesChart } from '~/components/charts/SofiposEntidadesChart';
+import { SofiposImoraRoaChart } from '~/components/charts/SofiposImoraRoaChart';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
+import { loadSfmData } from '~/data/loader';
+import { formatPct } from '~/lib/utils';
+
+const data = loadSfmData();
+const s = data.sofipos;
+const ultima = s.ultima!;
+
+const SOFIPOS_PRIORITY: string[] = [
+  '027014', '027046', '027033', '027032', '027009',
+  '027035', '027047', '027001', '027029', '027036',
+  '027045', '027008', '027026', '027031', '027011',
+];
+const priorityIndex = (id: string) => {
+  const i = SOFIPOS_PRIORITY.indexOf(id);
+  return i === -1 ? SOFIPOS_PRIORITY.length : i;
+};
+
+const ents = Object.values(s.historico_por_entidad?.entidades ?? {}) as Array<{
+  id: string; nombre: string; imor: (number | null)[];
+  imora?: (number | null)[];
+  imor_comercial?: (number | null)[]; imor_consumo?: (number | null)[]; imor_vivienda?: (number | null)[];
+  cartera_total?: number | null;
+}>;
+
+const top15 = [...ents]
+  .filter((e) => e.imor.length > 0)
+  .sort((a, b) => {
+    const ai = priorityIndex(a.id);
+    const bi = priorityIndex(b.id);
+    if (ai !== bi) return ai - bi;
+    const aC = a.cartera_total ?? null;
+    const bC = b.cartera_total ?? null;
+    if (aC !== null && bC !== null) return bC - aC;
+    return (b.imor[b.imor.length - 1] ?? 0) - (a.imor[a.imor.length - 1] ?? 0);
+  })
+  .slice(0, 15);
+---
+
+<Layout
+  title="SoFiPOs"
+  description="IMOR, IMORA y ROA de Sociedades Financieras Populares. Comparativa por cartera y top 15 entidades. Fuente: CNBV Sector 27."
+  jsonLd={datasetJsonLd({
+    name: 'SoFiPOs — Indicadores de riesgo y rentabilidad',
+    description: 'IMOR, IMORA y ROA de Sociedades Financieras Populares (SoFiPOs). Fuente: CNBV Sector 27.',
+    path: '/instituciones/sofipos',
+    keywords: ['SoFiPOs', 'IMOR', 'IMORA', 'ROA', 'CNBV', 'sector popular'],
+  })}>
+  <Header slot="header" />
+
+  <div class="space-y-6">
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <KpiCard
+        label="IMOR Total"
+        value={formatPct(ultima.imor_total)}
+        asOf={ultima.fecha}
+        iconName="Activity"
+        tone="yellow"
+        indicatorId="sofipos-imor"
+        client:visible
+      />
+      <KpiCard
+        label="IMOR Vivienda"
+        value={formatPct(ultima.imor_vivienda)}
+        asOf={ultima.fecha}
+        iconName="TrendingDown"
+        tone="red"
+        indicatorId="sofipos-imor-vivienda"
+        client:visible
+      />
+      <KpiCard
+        label="IMORA"
+        value={formatPct(ultima.imora_total)}
+        asOf={ultima.fecha}
+        iconName="Percent"
+        tone="yellow"
+        indicatorId="sofipos-imora"
+        client:visible
+      />
+      <KpiCard
+        label="ROA"
+        value={formatPct(ultima.roa)}
+        asOf={ultima.fecha}
+        iconName="TrendingUp"
+        tone="red"
+        indicatorId="sofipos-roa"
+        client:visible
+      />
+    </div>
+
+    <EditorialHeadline
+      eyebrow={`SoFiPOs · Sociedades Financieras Populares · ${ultima.fecha}`}
+      headline="Morosidad ~3× la de Banca Múltiple. Vivienda supera el 31% y rentabilidad bajo presión."
+    />
+
+    <Section
+      id="sofipos-imor-cartera"
+      eyebrow="Morosidad por cartera"
+      title="IMOR por cartera"
+      description="Índice de Morosidad por tipo de cartera. Vivienda supera sistemáticamente el 25%."
+      source="CNBV Sector 27 (SoFiPOs)"
+      metricSlug="imor"
+      tone="yellow">
+      <SofiposSegmentChart
+        fechas={s.fechas}
+        total={s.imor_total}
+        comercial={s.imor_comercial}
+        consumo={s.imor_consumo}
+        vivienda={s.imor_vivienda}
+        client:visible
+      />
+    </Section>
+
+    <Section
+      id="sofipos-top15"
+      eyebrow="Entidades individuales"
+      title="Top 15 entidades más reconocidas"
+      description="Las 15 SoFiPOs con mayor presencia: cooperativas líderes, fintechs y microfinancieras."
+      source="CNBV Sector 27 — histórico por entidad"
+      tone="red">
+      <SofiposEntidadesChart
+        fechas={s.historico_por_entidad?.fechas ?? s.fechas}
+        entidades={top15}
+        client:visible
+      />
+    </Section>
+
+    <Section
+      id="sofipos-imora-roa"
+      eyebrow="Calidad y rentabilidad"
+      title="IMOR + ROA dual"
+      description="IMOR total (eje izquierdo) y ROA del sector (eje derecho). ROA negativo señala rentabilidad por debajo del costo de capital."
+      source="CNBV Sector 27 (SoFiPOs)"
+      tone="yellow">
+      <SofiposImoraRoaChart
+        fechas={s.fechas}
+        imor={s.imor_total}
+        roa={s.roa}
+        client:visible
+      />
+    </Section>
+
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
+  <BottomNav slot="bottom-nav" />
+</Layout>
