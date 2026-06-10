@@ -68,7 +68,7 @@ function useCardImage(sourceUrl: string | undefined) {
     return () => observer.disconnect();
   }, [sourceUrl]);
 
-  return { ref, imageUrl };
+  return { ref, imageUrl, setImageUrl };
 }
 
 function formatDate(iso: string): string {
@@ -79,7 +79,7 @@ function formatDate(iso: string): string {
 export function NoticiaCard({ item }: Props) {
   const [expanded, setExpanded] = useState(false);
   const sourceUrl = item.sources[0]?.url;
-  const { ref, imageUrl } = useCardImage(sourceUrl);
+  const { ref, imageUrl, setImageUrl } = useCardImage(sourceUrl);
   const catCfg = CATEGORY_CONFIG[item.impact.category];
   const hasImpact = item.impact.axes.length > 0 || item.impact.mechanism !== '';
 
@@ -101,6 +101,7 @@ export function NoticiaCard({ item }: Props) {
             aria-hidden="true"
             className="w-full h-full"
             style={{ objectFit: 'cover', display: 'block' }}
+            onError={() => setImageUrl(null)}
           />
         ) : (
           <span style={{ fontSize: '2.5rem' }}>{item.trackerEmoji}</span>
