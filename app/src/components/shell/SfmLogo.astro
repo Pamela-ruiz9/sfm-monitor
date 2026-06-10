@@ -48,6 +48,7 @@ const wordmarkSize = { sm: 'text-sm', md: 'text-lg', lg: 'text-2xl' }[size];
     />
     <!-- Pulso ECG -->
     <path
+      class="sfm-logo__pulse"
       d="M9 28 H18 L21.5 19.5 L26.5 37.5 L30 24 L32.5 28 H47"
       fill="none"
       stroke="currentColor"
@@ -96,5 +97,18 @@ const wordmarkSize = { sm: 'text-sm', md: 'text-lg', lg: 'text-2xl' }[size];
   }
   .sfm-logo--icon {
     flex-direction: row;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .sfm-logo__pulse {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 60;
+      animation: sfm-draw 2.6s ease-in-out infinite;
+    }
+  }
+  @keyframes sfm-draw {
+    0%   { stroke-dashoffset: 60; }
+    45%  { stroke-dashoffset: 0; }
+    75%  { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -60; }
   }
 </style>
