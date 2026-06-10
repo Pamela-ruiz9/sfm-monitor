@@ -12,7 +12,7 @@
 **Editorial Premium** — conserva el estilo dark + serif actual (Cormorant Garamond para valores, Inter para UI) pero con mejor jerarquía tipográfica, más espacio y proporciones refinadas. Referencia: Bloomberg Terminal editorial, Financial Times digital.
 
 ### Navegación
-- **Desktop**: sidebar fija de 240px reemplaza el `TabBar` actual. Solo navegación — no KPIs.
+- **Desktop**: sidebar colapsable reemplaza el `TabBar` actual. Solo navegación — no KPIs. Expandida: 240px (icono + label). Colapsada: 56px (solo iconos).
 - **Mobile**: sin cambios. `BottomNav` sigue siendo la navegación primaria.
 
 ### KPIs
@@ -26,30 +26,44 @@ Permanecen en el área principal del dashboard. Son los selectores de la gráfic
 Cambia su estructura de `flex-col` a `grid` en desktop:
 
 ```
-[Sidebar 240px] | [Área principal 1fr]
+[Sidebar 56–240px] | [Área principal 1fr]
 ```
 
-En mobile (`< lg`): grid colapsa a columna única, sidebar oculta.
+El ancho de la columna izquierda es una CSS variable `--sidebar-w` que cambia entre `56px` (colapsada) y `240px` (expandida) con `transition: width 200ms ease`. En mobile (`< lg`): grid colapsa a columna única, sidebar oculta.
 
 El slot `header` se mantiene para mobile (`lg:hidden` en desktop). La sidebar absorbe identidad y navegación en desktop.
 
 ### `Sidebar.astro` (nuevo, reemplaza `TabBar.astro`)
-Estructura vertical de arriba a abajo:
 
-1. **Logo** — `<SfmLogo variant="horizontal" size="md" showSubtitle />` (componente oficial, incluye ícono ECG + wordmark "SFM" + subtítulo "Sistema Financiero Mexicano · Monitor")
+**Estado colapsado / expandido:**
+- El estado se persiste en `localStorage` (`sfm-sidebar-collapsed`).
+- Un nuevo nanostore `sidebarCollapsed` (`src/stores/sidebarState.ts`) sincroniza el valor entre el componente React del toggle y el layout.
+- Botón de toggle: icono de flecha (`ChevronLeft` / `ChevronRight`) en la parte superior de la sidebar, alineado a la derecha.
+
+**Estructura en estado expandido (240px) — de arriba a abajo:**
+
+1. **Fila logo + toggle** — logo oficial a la izquierda, botón toggle a la derecha
+   - Logo: `<SfmLogo variant="horizontal" size="md" showSubtitle />` cuando esté disponible el GIF animado se usa aquí en lugar del SVG estático (ver Sección 5)
 2. **Separador**
 3. **Descripción del proyecto** — 2 líneas: "Indicadores de riesgo del sistema financiero mexicano. Datos de Banxico SIE, CNBV e INEGI." + link `→ Metodología`
 4. **Separador**
-5. **Links de navegación** — mismo set de tabs actuales con icono + label + sublabel (igual que `TabBar`):
-   - ⌂ Resumen / FX · Tasas
-   - ⚠ Riesgo Sistémico / Heatmap
-   - 🏦 Instituciones / Banca · SoFiPOs
-   - 📈 Macro / PIB · IGAE
-   - 📖 Metodología
+5. **Links de navegación** con icono Lucide + label + sublabel:
+   - Home — Resumen / FX · Tasas
+   - Thermometer — Riesgo Sistémico / Heatmap
+   - Building2 — Instituciones / Banca · SoFiPOs
+   - TrendingUp — Macro / PIB · IGAE
+   - BookOpen — Metodología
 6. **Spacer** (`flex-grow`)
-7. **`DataFreshnessBadge`** — se mueve del Header a la parte inferior de la sidebar
+7. **`DataFreshnessBadge`** — se mueve del Header al pie de la sidebar
 
-Link activo: `border-left: 2px solid var(--color-accent)` + `bg-[--color-bg-elev]`, igual que el diseño aprobado en el brainstorm.
+**Estado colapsado (56px):**
+- Logo colapsa a `<SfmLogo variant="icon" size="sm" />` (solo ícono ECG, sin texto)
+- Descripción del proyecto: oculta
+- Nav links: solo el icono centrado, sin label ni sublabel. Tooltip al hover con el nombre de la sección.
+- `DataFreshnessBadge`: oculto (o reducido a punto de color)
+- Toggle: icono `ChevronRight` centrado arriba
+
+**Link activo:** `border-left: 2px solid var(--color-accent)` + `bg-[--color-bg-elev]` en expandido; fondo `bg-[--color-bg-elev]` sin border en colapsado (no hay espacio).
 
 ### `TabBar.astro`
 Se elimina. Su lógica de tabs activos pasa a `Sidebar.astro`.
@@ -95,13 +109,33 @@ Nueva sección al inicio de la página, antes del contenido técnico actual:
 
 El contenido técnico de metodología de indicadores (IMOR, IMORA, IFRS9, etc.) sigue igual después de esta sección.
 
-### `Footer.astro` — descripción en mobile
-Añadir en el footer un bloque de 2 líneas visible solo en mobile (`lg:hidden`):
+### `Footer.astro` — rediseño completo
+El footer pasa de estar vacío/mínimo a ser un componente informativo visible en todas las páginas y tamaños de pantalla. Estructura en dos zonas:
 
-> "Indicadores de riesgo del sistema financiero mexicano. Datos de Banxico SIE, CNBV e INEGI."
-> `→ Metodología`
+**Zona izquierda / principal:**
+- Logo `<SfmLogo variant="horizontal" size="sm" />`
+- Descripción: "Indicadores de riesgo del sistema financiero mexicano. Datos de Banxico SIE, CNBV e INEGI."
+- Créditos: "Autoría: Ingrid Pamela Ruiz Puga · Co-autoría: Artemio Padilla" con link a Metodología
+- Licencias: MIT (código) / CC-BY 4.0 (contenido)
 
-Garantiza que la descripción del proyecto sea accesible en cualquier tamaño de pantalla.
+**Zona derecha / redes sociales:**
+- GitHub del proyecto (link al repositorio `pamela-ruiz9/sfm-monitor`)
+- LinkedIn de Pamela (si se provee URL)
+- Twitter/X (si se provee)
+- Los iconos son de Lucide (`Github`, `Linkedin`, `Twitter`) o SVGs si Lucide no los tiene
+
+**Layout:** `grid grid-cols-1 md:grid-cols-2` — en mobile se apila, en desktop dos columnas.
+**Borde superior:** `border-t border-[--color-border]`. Fondo: `bg-[--color-bg]`.
+
+---
+
+## Sección 5 — Logo animado (GIF)
+
+**Pendiente de asset:** La usuaria tiene un logo GIF animado que aún no está en el repositorio. Una vez disponible, se coloca en `app/public/sfm-logo-animated.gif`.
+
+**Dónde se usa:** En la sidebar expandida en lugar de `<SfmLogo variant="horizontal" />` — el GIF reemplaza solo el bloque del logo, el resto de la sidebar no cambia. En la versión colapsada se sigue usando el SVG estático `<SfmLogo variant="icon" />` (el GIF animado a 56px quedaría demasiado pequeño).
+
+**Implementación:** Condicionalmente — si `sfm-logo-animated.gif` existe en `public/`, se renderiza como `<img>` con `width` y `height` fijos. Si no existe, fallback al componente `SfmLogo` estático. Esto permite implementar el resto del shell sin bloquear en el asset.
 
 ---
 
@@ -109,14 +143,16 @@ Garantiza que la descripción del proyecto sea accesible en cualquier tamaño de
 
 | Archivo | Tipo de cambio |
 |---|---|
-| `src/layouts/Layout.astro` | Grid sidebar + main en desktop |
-| `src/components/shell/Sidebar.astro` | Nuevo componente |
+| `src/layouts/Layout.astro` | Grid con `--sidebar-w` variable en desktop |
+| `src/components/shell/Sidebar.astro` | Nuevo — colapsable, logo, nav, badge |
+| `src/stores/sidebarState.ts` | Nuevo nanostore — estado colapsado/expandido |
 | `src/components/shell/TabBar.astro` | Eliminado |
-| `src/components/shell/Header.astro` | Simplificado (desktop: solo ⌘K) |
+| `src/components/shell/Header.astro` | Oculto en desktop (`lg:hidden`) |
 | `src/components/kpi/KpiCard.tsx` | 3 ajustes tipográficos/espaciado |
 | `src/components/HeroScore.astro` | Quita pills y copy descriptivo |
-| `src/components/Footer.astro` | Añade descripción en mobile |
+| `src/components/Footer.astro` | Rediseño completo: info proyecto + redes sociales |
 | `src/pages/metodologia.astro` | Añade sección "Sobre el proyecto" |
+| `app/public/sfm-logo-animated.gif` | Asset pendiente de la usuaria |
 | `src/components/shell/BottomNav.astro` | Sin cambios |
 | `src/pages/*.astro` (resto) | Heredan shell, sin modificación de contenido |
 
@@ -126,10 +162,12 @@ Garantiza que la descripción del proyecto sea accesible en cualquier tamaño de
 
 ## Consideraciones de implementación
 
-- `Sidebar.astro` debe replicar la lógica de detección de tab activo que hoy vive en `TabBar.astro` (comparación de `Astro.url.pathname` con regex por sección).
-- En `Layout.astro` el slot `header` sigue existiendo para mobile; en desktop se oculta con `lg:hidden` o se reduce.
-- `DataFreshnessBadge` es un componente React con `client:load` — en la sidebar sigue funcionando igual.
-- View transitions (`ClientRouter`) no se afectan — el sidebar es parte del shell estático, no del área de transición.
+- `Sidebar.astro` replica la lógica de detección de tab activo de `TabBar.astro` (regex contra `Astro.url.pathname`).
+- El toggle de colapso es un componente React (`SidebarToggle.tsx`) con `client:load` que lee/escribe `sidebarState` nanostore y persiste en `localStorage`.
+- `--sidebar-w` se inyecta como inline style en el `<body>` o en el grid wrapper, actualizado por el toggle via JS.
+- `DataFreshnessBadge` sigue siendo `client:load` — funciona igual en la sidebar.
+- View transitions (`ClientRouter`) no se afectan — sidebar es shell estático fuera del área de transición.
+- Los links de redes sociales del Footer son configurables como constantes en el propio `Footer.astro` — no se sacan a un archivo de config separado.
 
 ---
 
