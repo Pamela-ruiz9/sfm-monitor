@@ -1354,3 +1354,88 @@ Esperado: todos los tests pasan (incluyendo los nuevos de `watchboard-rules`).
 git add CHANGELOG.md
 git commit -m "chore: CHANGELOG — feat Noticias & Impacto /macro/noticias (issue #100)"
 ```
+
+---
+
+## Mejoras pendientes — fase 2 (continuación)
+
+> Identificadas tras primer deploy. Agrupar en un PR de polish antes de v0.2.0.
+
+### M1: Layout en cuadrícula y cards más compactas
+
+**Problema:** El feed muestra las cards en lista vertical ancha. En desktop se desperdicia espacio; en móvil las cards son muy altas y requieren mucho scroll.
+
+**Solución:**
+- En `NoticiasFeed.tsx`: cambiar `flex flex-col gap-4` por `grid grid-cols-1 sm:grid-cols-2 gap-3` en el contenedor del feed.
+- En `NoticiaCard.tsx`: reducir padding de `p-3` a `p-2.5`, título de `text-sm` a `text-xs font-semibold`, chips de impacto a `text-[8px]`, imagen de `16/9` a `3/2` (más compacta en cuadrícula).
+- El expand de análisis se mantiene igual — se abre en la misma card ocupando el ancho de su columna.
+
+**Files:** `app/src/components/noticias/NoticiasFeed.tsx`, `app/src/components/noticias/NoticiaCard.tsx`
+
+---
+
+### M2: Link directo a la noticia fuente (no al home de Watchboard)
+
+**Problema actual:** El botón "Ver evento completo en Watchboard" enlaza a `https://watchboard.dev` (home), porque la API v1 no expone URLs de evento.
+
+**Opciones investigadas:**
+1. **`sources[0].url`** — el artículo fuente original (Reuters, Bloomberg, AP). Ya disponible en `NoticiaItem.sources`. Es el enlace más directo y útil para el usuario.
+2. **Permalink Watchboard** — el `id` del evento es un slug legible (ej. `triple-cb-week-preview-...`). Posible URL: `https://watchboard.dev/trackers/{tracker}/events/{id}`. **No confirmado** — requiere verificar manualmente en el sitio si estas URLs existen.
+
+**Solución recomendada (segura):**
+- En `ImpactoTable.tsx`: cambiar el link a `sources[0].url` si existe, con label "↗ Leer artículo fuente". Si no hay fuente, ocultar el link.
+- En `NoticiaCard.tsx`: pasar `sourceUrl={item.sources[0]?.url}` a `ImpactoTable`.
+- En `ImpactoTable` props: añadir `sourceUrl?: string` y usarla en lugar de `watchboardUrl`.
+
+**Cambio en `NoticiaItem`:** No se necesita — `sources[0].url` ya está en la interfaz.
+
+**Files:** `app/src/components/noticias/ImpactoTable.tsx`, `app/src/components/noticias/NoticiaCard.tsx`
+
+---
+
+### M3: Rediseñar ContextoBanda — menos texto, más visual
+
+**Problema:** La banda de contexto actual muestra `label` + `value` + `delta` en texto plano. Los labels son largos (venían del API), `delta` puede ser texto raro, y sin contexto visual parece una lista de errores o datos crudos.
+
+**Solución:**
+- **Truncar labels**: máximo 28 caracteres con `…` usando una función de truncado.
+- **Eliminar `delta`** del render (era demasiado verboso para una banda compacta).
+- **Añadir indicador de color**: un punto de color (`●`) antes del valor en lugar del texto de color actual, para que sea visualmente más inmediato.
+- **Layout más compacto**: reducir `gap-y-2` a `gap-y-1`, tamaño de valor de `text-sm` a `text-xs font-bold`.
+- **Título de la banda**: cambiar "Contexto global · Watchboard" por "Contexto global" con un link pequeño "via Watchboard ↗" a un lado.
+- Si el API devuelve 0 KPIs válidos, la banda ya retorna `null` — mantener ese comportamiento.
+
+**Ejemplo del antes/después:**
+
+```
+Antes:
+  US Recession Probability (Goldman Sachs Model)
+  15%   ↓ Goldman...
+
+Después:
+  ● Riesgo recesión EE.UU.
+    15%
+```
+
+**Files:** `app/src/components/noticias/ContextoBanda.tsx`
+
+---
+
+### M4: Imágenes rotas — mejorar robustez del fallback
+
+**Problema:** Algunas imágenes cargadas via Microlink se muestran rotas (el tag `<img>` existe pero la URL falla — 404, CORS, etc.). El emoji fallback solo se muestra cuando Microlink no devuelve `data.image.url`, pero si devuelve una URL inválida, queda roto.
+
+**Solución:**
+- En `NoticiaCard.tsx`, dentro del `<img>`, añadir `onError` handler que borre la `imageUrl` y fuerce el fallback al emoji:
+  ```tsx
+  onError={() => setImageUrl(null)}
+  ```
+- Esto convierte cualquier imagen rota en un emoji visible en lugar de un ícono de imagen rota del browser.
+
+**Files:** `app/src/components/noticias/NoticiaCard.tsx`
+
+---
+
+### Orden de implementación sugerido
+
+M4 (1 línea, máximo impacto) → M3 (visual, independiente) → M2 (link útil) → M1 (layout, más cambios)
