@@ -2,6 +2,8 @@
 import '~/styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 import FeedbackFAB from '~/components/common/FeedbackFAB.astro';
+import Sidebar from '~/components/shell/Sidebar.astro';
+import Footer from '~/components/Footer.astro';
 
 interface Props {
   title: string;
@@ -83,14 +85,32 @@ const goatCounterUrl = import.meta.env.PUBLIC_GOATCOUNTER_URL as string | undefi
       />
     )}
   </head>
-  <body class="min-h-screen flex flex-col pb-20 lg:pb-0">
-    <slot name="header" />
+  <body class="min-h-screen pb-20 lg:pb-0">
+    <!-- Mobile header only -->
+    <div class="lg:hidden">
+      <slot name="header" />
+    </div>
 
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 lg:px-6 py-6">
-      <slot />
-    </main>
+    <!-- Desktop: sidebar + content grid -->
+    <div
+      id="app-shell"
+      data-collapsed="false"
+      class="lg:flex lg:min-h-screen"
+    >
+      <!-- Sidebar: desktop only -->
+      <div class="hidden lg:block shrink-0">
+        <Sidebar />
+      </div>
 
-    <slot name="footer" />
+      <!-- Main content column -->
+      <div class="flex flex-col flex-1 min-w-0">
+        <main class="flex-1 w-full px-4 lg:px-8 py-6 max-w-5xl mx-auto">
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
+
     <slot name="drawer" />
     <slot name="cmdk" />
     <slot name="update-toast" />
@@ -100,4 +120,17 @@ const goatCounterUrl = import.meta.env.PUBLIC_GOATCOUNTER_URL as string | undefi
     <slot name="bottom-nav" />
     <FeedbackFAB lang="es" />
   </body>
+
+<style is:global>
+  #app-shell > div:first-child {
+    transition: width 200ms ease;
+  }
+  #app-shell[data-collapsed="false"] > div:first-child,
+  #app-shell:not([data-collapsed]) > div:first-child {
+    width: 240px;
+  }
+  #app-shell[data-collapsed="true"] > div:first-child {
+    width: 56px;
+  }
+</style>
 </html>
