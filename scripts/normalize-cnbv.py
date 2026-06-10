@@ -100,6 +100,18 @@ def build_credito() -> dict:
             out.append(v if v is not None else (None if nullable else 0.0))
         return out
 
+    def yoy(field: str) -> list:
+        """Year-over-year growth % for an absolute balance series (e.g. cartera MMP)."""
+        vals = [safe_float(r.get(field)) for r in rows]
+        out: list = []
+        for i, v in enumerate(vals):
+            if i < 12 or v is None:
+                out.append(None)
+                continue
+            prev = vals[i - 12]
+            out.append(round((v - prev) / prev * 100, 2) if prev else None)
+        return out
+
     # historico_por_banco — not in this source
     historico_por_banco = None
 
@@ -136,6 +148,9 @@ def build_credito() -> dict:
             "quitas_castigos":    arr("quitas_castigos", nullable=True),
             # EPRC / cartera total — tasa de cobertura sobre cartera completa (no solo vencida)
             "eprc_cartera":       arr("eprc_cartera",    nullable=True),
+            # Saldo y crecimiento de cartera total — 40100185 (MMP, saldo=130)
+            "cartera_total_mmp":  arr("cartera_total_mmp", nullable=True),
+            "cartera_total_yoy":  yoy("cartera_total_mmp"),
         },
         "historico_por_banco": historico_por_banco or None,
     }

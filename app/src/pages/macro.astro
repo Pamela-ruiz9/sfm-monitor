@@ -73,7 +73,6 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
         asOf={inflacionFecha}
         iconName="TrendingUp"
         tone={inflacionActual > 4 ? 'red' : inflacionActual > 3 ? 'yellow' : 'green'}
-        indicatorId="inflacion"
         client:visible
       />
       {igae?.actual != null && (
@@ -83,7 +82,6 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
           {...(igae.fecha ? { asOf: igae.fecha } : {})}
           iconName="Activity"
           tone={igae.actual >= 2 ? 'green' : igae.actual >= 0 ? 'yellow' : 'red'}
-          indicatorId="igae"
           client:visible
         />
       )}
@@ -94,7 +92,6 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
           {...(pib.fecha ? { asOf: pib.fecha } : {})}
           iconName="TrendingUp"
           tone={pib.actual >= 2 ? 'green' : pib.actual >= 0 ? 'yellow' : 'red'}
-          indicatorId="pib"
           client:visible
         />
       )}
@@ -105,7 +102,6 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
           {...(desempleo.fecha ? { asOf: desempleo.fecha } : {})}
           iconName="Activity"
           tone={desempleo.actual > 4.5 ? 'red' : desempleo.actual > 3.5 ? 'yellow' : 'green'}
-          indicatorId="desempleo"
           client:visible
         />
       )}
@@ -116,7 +112,6 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
           {...(subocupacion.fecha ? { asOf: subocupacion.fecha } : {})}
           iconName="Activity"
           tone={subocupacion.actual > 9 ? 'red' : subocupacion.actual > 7 ? 'yellow' : 'green'}
-          indicatorId="subocupacion"
           client:visible
         />
       )}
@@ -127,7 +122,6 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
           {...(tasaReal.fecha ? { asOf: tasaReal.fecha } : {})}
           iconName="Percent"
           tone={tasaReal.actual >= 2 ? 'green' : tasaReal.actual >= 0 ? 'yellow' : 'red'}
-          indicatorId="tasa_real_banxico"
           client:visible
         />
       )}
@@ -138,7 +132,6 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
           {...(tasaRealCetes.fecha ? { asOf: tasaRealCetes.fecha } : {})}
           iconName="Percent"
           tone={tasaRealCetes.actual >= 2 ? 'green' : tasaRealCetes.actual >= 0 ? 'yellow' : 'red'}
-          indicatorId="tasa_real_cetes"
           client:visible
         />
       )}

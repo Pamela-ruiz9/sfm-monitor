@@ -13,6 +13,7 @@ import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
 import { MifChart } from '~/components/charts/MifChart';
 import { QuitasChart } from '~/components/charts/QuitasChart';
 import { EprcChart } from '~/components/charts/EprcChart';
+import { CarteraCrecimientoChart } from '~/components/charts/CarteraCrecimientoChart';
 import { Ifrs9Chart } from '~/components/charts/Ifrs9Chart';
 import { BancosTable } from '~/components/tables/BancosTable';
 import { MetricTooltip } from '~/components/MetricTooltip';
@@ -257,6 +258,24 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
           tasaPasiva={hpc.tasa_pasiva}
           mif={hpc.mif}
           tasaBanxico={data.tasa_banxico?.historico}
+          client:visible
+        />
+      </Section>
+    )}
+
+    {hpc.cartera_total_yoy && hpc.cartera_total_mmp && (
+      <Section
+        id="cartera-crecimiento"
+        eyebrow="Volumen de crédito"
+        title="Crecimiento anual de la cartera total"
+        description="Variación porcentual de la cartera de crédito con riesgo de crédito respecto al mismo mes del año anterior. Crecimiento acelerado puede anticipar deterioro futuro de la calidad."
+        source="CNBV Sector 40 — concepto 40100185 (saldo=130)"
+        refCode="40100185"
+        tone="default">
+        <CarteraCrecimientoChart
+          fechas={hpc.fechas}
+          yoy={hpc.cartera_total_yoy}
+          mmp={hpc.cartera_total_mmp}
           client:visible
         />
       </Section>

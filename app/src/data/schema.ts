@@ -121,6 +121,10 @@ const HistoricoCarteraSchema = z.object({
   quitas_castigos: z.array(z.number().nullable()).optional(),
   // EPRC / cartera total — tasa de cobertura de reservas sobre la cartera completa (%)
   eprc_cartera: z.array(z.number().nullable()).optional(),
+  // Saldo de cartera total en miles de millones de pesos (MMP) — 40100185 saldo=130
+  cartera_total_mmp: z.array(z.number().nullable()).optional(),
+  // Crecimiento anual de cartera — variación % vs mismo mes año anterior
+  cartera_total_yoy: z.array(z.number().nullable()).optional(),
 });
 
 const BancoLatestSchema = z.object({ valor: z.number(), fecha: z.string() });

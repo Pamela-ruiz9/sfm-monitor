@@ -8,7 +8,8 @@
     "imor_tarjeta": 11.1172,
     "imor_consumo_norev": 18.5458,
     "mif": 0.0,
-    "eprc_cartera": 9.5564
+    "eprc_cartera": 9.5564,
+    "cartera_total_mmp": 1035.6102
   },
   {
     "fecha": "2001-01",
@@ -20,7 +21,8 @@
     "imor_consumo_norev": 18.4907,
     "tasa_activa": 17.799,
     "mif": 0.0,
-    "eprc_cartera": 9.5841
+    "eprc_cartera": 9.5841,
+    "cartera_total_mmp": 1031.0614
   },
   {
     "fecha": "2001-02",
@@ -32,7 +34,8 @@
     "imor_consumo_norev": 18.465,
     "tasa_activa": 15.954,
     "mif": 0.0,
-    "eprc_cartera": 9.6797
+    "eprc_cartera": 9.6797,
+    "cartera_total_mmp": 1029.5324
   },
   {
     "fecha": "2001-03",
@@ -44,7 +47,8 @@
     "imor_consumo_norev": 16.2848,
     "tasa_activa": 17.0381,
     "mif": 0.0,
-    "eprc_cartera": 9.2043
+    "eprc_cartera": 9.2043,
+    "cartera_total_mmp": 1018.0683
   },
   {
     "fecha": "2001-04",
@@ -56,7 +60,8 @@
     "imor_consumo_norev": 15.9794,
     "tasa_activa": 15.2019,
     "mif": 0.0,
-    "eprc_cartera": 9.1905
+    "eprc_cartera": 9.1905,
+    "cartera_total_mmp": 1014.35
   },
   {
     "fecha": "2001-05",
@@ -68,7 +73,8 @@
     "imor_consumo_norev": 15.8042,
     "tasa_activa": 14.9859,
     "mif": 0.0,
-    "eprc_cartera": 9.0758
+    "eprc_cartera": 9.0758,
+    "cartera_total_mmp": 1011.0722
   },
   {
     "fecha": "2001-06",
@@ -80,7 +86,8 @@
     "imor_consumo_norev": 15.6496,
     "tasa_activa": 12.2691,
     "mif": 0.0,
-    "eprc_cartera": 8.8888
+    "eprc_cartera": 8.8888,
+    "cartera_total_mmp": 995.5729
   },
   {
     "fecha": "2001-07",
@@ -92,7 +99,8 @@
     "imor_consumo_norev": 15.1053,
     "tasa_activa": 12.226,
     "mif": 0.0,
-    "eprc_cartera": 8.758
+    "eprc_cartera": 8.758,
+    "cartera_total_mmp": 998.3246
   },
   {
     "fecha": "2001-08",
@@ -104,7 +112,8 @@
     "imor_consumo_norev": 15.0984,
     "tasa_activa": 11.8967,
     "mif": 0.0,
-    "eprc_cartera": 8.7741
+    "eprc_cartera": 8.7741,
+    "cartera_total_mmp": 999.7598
   },
   {
     "fecha": "2001-09",
@@ -116,7 +125,8 @@
     "imor_consumo_norev": 15.2734,
     "tasa_activa": 11.9253,
     "mif": 0.0,
-    "eprc_cartera": 8.7333
+    "eprc_cartera": 8.7333,
+    "cartera_total_mmp": 1002.8549
   },
   {
     "fecha": "2001-10",
@@ -128,7 +138,8 @@
     "imor_consumo_norev": 15.3909,
     "tasa_activa": 11.6795,
     "mif": 0.0,
-    "eprc_cartera": 8.7102
+    "eprc_cartera": 8.7102,
+    "cartera_total_mmp": 1000.1774
   },
   {
     "fecha": "2001-11",
@@ -140,7 +151,8 @@
     "imor_consumo_norev": 13.8901,
     "tasa_activa": 7.4983,
     "mif": 0.0,
-    "eprc_cartera": 7.9756
+    "eprc_cartera": 7.9756,
+    "cartera_total_mmp": 992.668
   },
   {
     "fecha": "2001-12",
@@ -154,7 +166,8 @@
     "tasa_activa": 10.3609,
     "tasa_pasiva": 9.0576,
     "mif": 4.2062,
-    "eprc_cartera": 6.0785
+    "eprc_cartera": 6.0785,
+    "cartera_total_mmp": 973.3143
   },
   {
     "fecha": "2002-01",
@@ -168,7 +181,8 @@
     "tasa_activa": 9.7601,
     "tasa_pasiva": 8.4066,
     "mif": 4.1895,
-    "eprc_cartera": 6.1223
+    "eprc_cartera": 6.1223,
+    "cartera_total_mmp": 956.0897
   },
   {
     "fecha": "2002-02",
@@ -182,7 +196,8 @@
     "tasa_activa": 9.3781,
     "tasa_pasiva": 7.8554,
     "mif": 4.1917,
-    "eprc_cartera": 6.1534
+    "eprc_cartera": 6.1534,
+    "cartera_total_mmp": 953.9648
   },
   {
     "fecha": "2002-03",
@@ -196,7 +211,8 @@
     "tasa_activa": 9.9185,
     "tasa_pasiva": 7.31,
     "mif": 4.1384,
-    "eprc_cartera": 6.3923
+    "eprc_cartera": 6.3923,
+    "cartera_total_mmp": 951.8939
   },
   {
     "fecha": "2002-04",
@@ -210,7 +226,8 @@
     "tasa_activa": 8.9409,
     "tasa_pasiva": 6.8518,
     "mif": 4.0694,
-    "eprc_cartera": 6.7316
+    "eprc_cartera": 6.7316,
+    "cartera_total_mmp": 956.7149
   },
   {
     "fecha": "2002-05",
@@ -224,7 +241,8 @@
     "tasa_activa": 9.4455,
     "tasa_pasiva": 6.4244,
     "mif": 4.0326,
-    "eprc_cartera": 6.7413
+    "eprc_cartera": 6.7413,
+    "cartera_total_mmp": 954.6735
   },
   {
     "fecha": "2002-06",
@@ -238,7 +256,8 @@
     "tasa_activa": 9.6782,
     "tasa_pasiva": 6.1861,
     "mif": 4.05,
-    "eprc_cartera": 6.7398
+    "eprc_cartera": 6.7398,
+    "cartera_total_mmp": 951.3729
   },
   {
     "fecha": "2002-07",
@@ -252,7 +271,8 @@
     "tasa_activa": 10.3001,
     "tasa_pasiva": 6.0326,
     "mif": 4.044,
-    "eprc_cartera": 6.7205
+    "eprc_cartera": 6.7205,
+    "cartera_total_mmp": 951.6075
   },
   {
     "fecha": "2002-08",
@@ -266,7 +286,8 @@
     "tasa_activa": 9.7648,
     "tasa_pasiva": 5.9207,
     "mif": 3.9748,
-    "eprc_cartera": 6.5989
+    "eprc_cartera": 6.5989,
+    "cartera_total_mmp": 957.4272
   },
   {
     "fecha": "2002-09",
@@ -280,7 +301,8 @@
     "tasa_activa": 9.883,
     "tasa_pasiva": 5.7696,
     "mif": 3.9547,
-    "eprc_cartera": 6.5134
+    "eprc_cartera": 6.5134,
+    "cartera_total_mmp": 955.755
   },
   {
     "fecha": "2002-10",
@@ -294,7 +316,8 @@
     "tasa_activa": 12.0514,
     "tasa_pasiva": 5.6267,
     "mif": 4.1206,
-    "eprc_cartera": 6.2667
+    "eprc_cartera": 6.2667,
+    "cartera_total_mmp": 967.316
   },
   {
     "fecha": "2002-11",
@@ -308,7 +331,8 @@
     "tasa_activa": 9.9665,
     "tasa_pasiva": 5.9128,
     "mif": 4.0413,
-    "eprc_cartera": 6.3544
+    "eprc_cartera": 6.3544,
+    "cartera_total_mmp": 972.6396
   },
   {
     "fecha": "2002-12",
@@ -322,7 +346,8 @@
     "tasa_activa": 10.526,
     "tasa_pasiva": 5.963,
     "mif": 4.0007,
-    "eprc_cartera": 6.2912
+    "eprc_cartera": 6.2912,
+    "cartera_total_mmp": 986.6713
   },
   {
     "fecha": "2003-01",
@@ -339,7 +364,8 @@
     "mif": 4.0447,
     "tda": 100.0,
     "quitas_castigos": 0.5263,
-    "eprc_cartera": 6.3062
+    "eprc_cartera": 6.3062,
+    "cartera_total_mmp": 982.3614
   },
   {
     "fecha": "2003-02",
@@ -356,7 +382,8 @@
     "mif": 4.0274,
     "tda": 100.0,
     "quitas_castigos": 1.0874,
-    "eprc_cartera": 6.172
+    "eprc_cartera": 6.172,
+    "cartera_total_mmp": 984.2984
   },
   {
     "fecha": "2003-03",
@@ -373,7 +400,8 @@
     "mif": 4.0436,
     "tda": 100.0,
     "quitas_castigos": 1.7537,
-    "eprc_cartera": 6.1941
+    "eprc_cartera": 6.1941,
+    "cartera_total_mmp": 980.0251
   },
   {
     "fecha": "2003-04",
@@ -390,7 +418,8 @@
     "mif": 4.0939,
     "tda": 100.0,
     "quitas_castigos": 2.2271,
-    "eprc_cartera": 6.3114
+    "eprc_cartera": 6.3114,
+    "cartera_total_mmp": 967.2508
   },
   {
     "fecha": "2003-05",
@@ -407,7 +436,8 @@
     "mif": 4.1356,
     "tda": 100.0,
     "quitas_castigos": 7.483,
-    "eprc_cartera": 5.7882
+    "eprc_cartera": 5.7882,
+    "cartera_total_mmp": 973.817
   },
   {
     "fecha": "2003-06",
@@ -424,7 +454,8 @@
     "mif": 4.1835,
     "tda": 100.0,
     "quitas_castigos": 9.1432,
-    "eprc_cartera": 5.9776
+    "eprc_cartera": 5.9776,
+    "cartera_total_mmp": 961.796
   },
   {
     "fecha": "2003-07",
@@ -441,7 +472,8 @@
     "mif": 4.2272,
     "tda": 100.0,
     "quitas_castigos": 10.791,
-    "eprc_cartera": 5.9395
+    "eprc_cartera": 5.9395,
+    "cartera_total_mmp": 950.3336
   },
   {
     "fecha": "2003-08",
@@ -458,7 +490,8 @@
     "mif": 4.2906,
     "tda": 100.0,
     "quitas_castigos": 11.3505,
-    "eprc_cartera": 5.9428
+    "eprc_cartera": 5.9428,
+    "cartera_total_mmp": 962.7235
   },
   {
     "fecha": "2003-09",
@@ -475,7 +508,8 @@
     "mif": 4.2951,
     "tda": 100.0,
     "quitas_castigos": 13.4058,
-    "eprc_cartera": 5.7605
+    "eprc_cartera": 5.7605,
+    "cartera_total_mmp": 964.5665
   },
   {
     "fecha": "2003-10",
@@ -492,7 +526,8 @@
     "mif": 4.2152,
     "tda": 100.0,
     "quitas_castigos": 14.2864,
-    "eprc_cartera": 5.6502
+    "eprc_cartera": 5.6502,
+    "cartera_total_mmp": 966.8224
   },
   {
     "fecha": "2003-11",
@@ -509,7 +544,8 @@
     "mif": 4.2932,
     "tda": 100.0,
     "quitas_castigos": 15.3926,
-    "eprc_cartera": 5.6227
+    "eprc_cartera": 5.6227,
+    "cartera_total_mmp": 977.628
   },
   {
     "fecha": "2003-12",
@@ -528,7 +564,8 @@
     "mif": 4.36,
     "tda": 5.9113,
     "quitas_castigos": 17.8611,
-    "eprc_cartera": 5.266
+    "eprc_cartera": 5.266,
+    "cartera_total_mmp": 987.401
   },
   {
     "fecha": "2004-01",
@@ -547,7 +584,8 @@
     "mif": 4.4186,
     "tda": 5.8019,
     "quitas_castigos": 18.0736,
-    "eprc_cartera": 5.279
+    "eprc_cartera": 5.279,
+    "cartera_total_mmp": 982.185
   },
   {
     "fecha": "2004-02",
@@ -566,7 +604,8 @@
     "mif": 4.5624,
     "tda": 5.6816,
     "quitas_castigos": 18.0157,
-    "eprc_cartera": 5.3116
+    "eprc_cartera": 5.3116,
+    "cartera_total_mmp": 984.7254
   },
   {
     "fecha": "2004-03",
@@ -585,7 +624,8 @@
     "mif": 4.6526,
     "tda": 5.6282,
     "quitas_castigos": 18.7257,
-    "eprc_cartera": 5.3376
+    "eprc_cartera": 5.3376,
+    "cartera_total_mmp": 997.7507
   },
   {
     "fecha": "2004-04",
@@ -604,7 +644,8 @@
     "mif": 4.7377,
     "tda": 5.5012,
     "quitas_castigos": 19.0755,
-    "eprc_cartera": 5.3111
+    "eprc_cartera": 5.3111,
+    "cartera_total_mmp": 1004.7551
   },
   {
     "fecha": "2004-05",
@@ -623,7 +664,8 @@
     "mif": 4.7976,
     "tda": 5.0274,
     "quitas_castigos": 15.3995,
-    "eprc_cartera": 5.1302
+    "eprc_cartera": 5.1302,
+    "cartera_total_mmp": 1013.9838
   },
   {
     "fecha": "2004-06",
@@ -642,7 +684,8 @@
     "mif": 4.9042,
     "tda": 4.8448,
     "quitas_castigos": 14.5917,
-    "eprc_cartera": 5.2248
+    "eprc_cartera": 5.2248,
+    "cartera_total_mmp": 1016.9043
   },
   {
     "fecha": "2004-07",
@@ -661,7 +704,8 @@
     "mif": 4.9473,
     "tda": 4.683,
     "quitas_castigos": 13.9842,
-    "eprc_cartera": 5.157
+    "eprc_cartera": 5.157,
+    "cartera_total_mmp": 1020.7203
   },
   {
     "fecha": "2004-08",
@@ -680,7 +724,8 @@
     "mif": 5.064,
     "tda": 4.5891,
     "quitas_castigos": 14.0838,
-    "eprc_cartera": 5.6227
+    "eprc_cartera": 5.6227,
+    "cartera_total_mmp": 1032.7339
   },
   {
     "fecha": "2004-09",
@@ -699,7 +744,8 @@
     "mif": 5.2946,
     "tda": 4.5649,
     "quitas_castigos": 14.8148,
-    "eprc_cartera": 5.3687
+    "eprc_cartera": 5.3687,
+    "cartera_total_mmp": 1048.3759
   },
   {
     "fecha": "2004-10",
@@ -718,7 +764,8 @@
     "mif": 5.3873,
     "tda": 4.478,
     "quitas_castigos": 14.8437,
-    "eprc_cartera": 5.202
+    "eprc_cartera": 5.202,
+    "cartera_total_mmp": 1082.1652
   },
   {
     "fecha": "2004-11",
@@ -737,7 +784,8 @@
     "mif": 5.4753,
     "tda": 4.3829,
     "quitas_castigos": 14.7832,
-    "eprc_cartera": 5.1025
+    "eprc_cartera": 5.1025,
+    "cartera_total_mmp": 1088.4373
   },
   {
     "fecha": "2004-12",
@@ -756,7 +804,8 @@
     "mif": 5.6163,
     "tda": 4.295,
     "quitas_castigos": 14.5171,
-    "eprc_cartera": 5.0644
+    "eprc_cartera": 5.0644,
+    "cartera_total_mmp": 1076.7561
   },
   {
     "fecha": "2005-01",
@@ -775,7 +824,8 @@
     "mif": 5.7319,
     "tda": 4.1936,
     "quitas_castigos": 14.2771,
-    "eprc_cartera": 5.0009
+    "eprc_cartera": 5.0009,
+    "cartera_total_mmp": 1081.632
   },
   {
     "fecha": "2005-02",
@@ -794,7 +844,8 @@
     "mif": 5.8607,
     "tda": 4.1277,
     "quitas_castigos": 14.3898,
-    "eprc_cartera": 4.8749
+    "eprc_cartera": 4.8749,
+    "cartera_total_mmp": 1090.882
   },
   {
     "fecha": "2005-03",
@@ -813,7 +864,8 @@
     "mif": 5.9995,
     "tda": 4.0187,
     "quitas_castigos": 14.0056,
-    "eprc_cartera": 4.8232
+    "eprc_cartera": 4.8232,
+    "cartera_total_mmp": 1107.0479
   },
   {
     "fecha": "2005-04",
@@ -832,7 +884,8 @@
     "mif": 6.1184,
     "tda": 3.9323,
     "quitas_castigos": 13.8802,
-    "eprc_cartera": 4.7359
+    "eprc_cartera": 4.7359,
+    "cartera_total_mmp": 1130.4047
   },
   {
     "fecha": "2005-05",
@@ -851,7 +904,8 @@
     "mif": 6.2656,
     "tda": 3.8067,
     "quitas_castigos": 12.9305,
-    "eprc_cartera": 4.8796
+    "eprc_cartera": 4.8796,
+    "cartera_total_mmp": 1109.6618
   },
   {
     "fecha": "2005-06",
@@ -870,7 +924,8 @@
     "mif": 6.344,
     "tda": 3.7206,
     "quitas_castigos": 12.7526,
-    "eprc_cartera": 4.5112
+    "eprc_cartera": 4.5112,
+    "cartera_total_mmp": 1144.503
   },
   {
     "fecha": "2005-07",
@@ -889,7 +944,8 @@
     "mif": 6.4943,
     "tda": 3.6397,
     "quitas_castigos": 12.5749,
-    "eprc_cartera": 4.4568
+    "eprc_cartera": 4.4568,
+    "cartera_total_mmp": 1153.5213
   },
   {
     "fecha": "2005-08",
@@ -908,7 +964,8 @@
     "mif": 6.5482,
     "tda": 3.5602,
     "quitas_castigos": 12.6598,
-    "eprc_cartera": 4.1867
+    "eprc_cartera": 4.1867,
+    "cartera_total_mmp": 1138.6469
   },
   {
     "fecha": "2005-09",
@@ -927,7 +984,8 @@
     "mif": 6.6117,
     "tda": 3.3853,
     "quitas_castigos": 11.3805,
-    "eprc_cartera": 4.5973
+    "eprc_cartera": 4.5973,
+    "cartera_total_mmp": 1110.1757
   },
   {
     "fecha": "2005-10",
@@ -946,7 +1004,8 @@
     "mif": 6.7268,
     "tda": 3.3714,
     "quitas_castigos": 11.9627,
-    "eprc_cartera": 4.5429
+    "eprc_cartera": 4.5429,
+    "cartera_total_mmp": 1125.7113
   },
   {
     "fecha": "2005-11",
@@ -965,7 +1024,8 @@
     "mif": 6.8395,
     "tda": 3.3072,
     "quitas_castigos": 11.9243,
-    "eprc_cartera": 4.4977
+    "eprc_cartera": 4.4977,
+    "cartera_total_mmp": 1139.5197
   },
   {
     "fecha": "2005-12",
@@ -984,7 +1044,8 @@
     "mif": 6.9461,
     "tda": 3.1546,
     "quitas_castigos": 10.8792,
-    "eprc_cartera": 4.3834
+    "eprc_cartera": 4.3834,
+    "cartera_total_mmp": 1153.215
   },
   {
     "fecha": "2006-01",
@@ -1003,7 +1064,8 @@
     "mif": 7.0651,
     "tda": 3.1347,
     "quitas_castigos": 11.3569,
-    "eprc_cartera": 4.3753
+    "eprc_cartera": 4.3753,
+    "cartera_total_mmp": 1161.185
   },
   {
     "fecha": "2006-02",
@@ -1022,7 +1084,8 @@
     "mif": 7.1674,
     "tda": 3.1064,
     "quitas_castigos": 11.7141,
-    "eprc_cartera": 4.4629
+    "eprc_cartera": 4.4629,
+    "cartera_total_mmp": 1177.732
   },
   {
     "fecha": "2006-03",
@@ -1041,7 +1104,8 @@
     "mif": 7.2802,
     "tda": 3.0972,
     "quitas_castigos": 12.4413,
-    "eprc_cartera": 4.2096
+    "eprc_cartera": 4.2096,
+    "cartera_total_mmp": 1210.1138
   },
   {
     "fecha": "2006-04",
@@ -1060,7 +1124,8 @@
     "mif": 7.3898,
     "tda": 3.0636,
     "quitas_castigos": 12.8345,
-    "eprc_cartera": 4.1874
+    "eprc_cartera": 4.1874,
+    "cartera_total_mmp": 1237.8296
   },
   {
     "fecha": "2006-05",
@@ -1079,7 +1144,8 @@
     "mif": 7.5038,
     "tda": 3.0079,
     "quitas_castigos": 13.1028,
-    "eprc_cartera": 4.1479
+    "eprc_cartera": 4.1479,
+    "cartera_total_mmp": 1250.8246
   },
   {
     "fecha": "2006-06",
@@ -1098,7 +1164,8 @@
     "mif": 7.7153,
     "tda": 2.9991,
     "quitas_castigos": 13.5533,
-    "eprc_cartera": 4.1774
+    "eprc_cartera": 4.1774,
+    "cartera_total_mmp": 1256.5185
   },
   {
     "fecha": "2006-07",
@@ -1117,7 +1184,8 @@
     "mif": 7.8327,
     "tda": 2.9748,
     "quitas_castigos": 13.757,
-    "eprc_cartera": 4.1612
+    "eprc_cartera": 4.1612,
+    "cartera_total_mmp": 1268.3712
   },
   {
     "fecha": "2006-08",
@@ -1136,7 +1204,8 @@
     "mif": 8.0497,
     "tda": 2.9815,
     "quitas_castigos": 13.9758,
-    "eprc_cartera": 4.2256
+    "eprc_cartera": 4.2256,
+    "cartera_total_mmp": 1269.7715
   },
   {
     "fecha": "2006-09",
@@ -1155,7 +1224,8 @@
     "mif": 8.166,
     "tda": 2.9585,
     "quitas_castigos": 13.8607,
-    "eprc_cartera": 4.2078
+    "eprc_cartera": 4.2078,
+    "cartera_total_mmp": 1294.1468
   },
   {
     "fecha": "2006-10",
@@ -1174,7 +1244,8 @@
     "mif": 8.2867,
     "tda": 2.9308,
     "quitas_castigos": 13.6049,
-    "eprc_cartera": 4.2212
+    "eprc_cartera": 4.2212,
+    "cartera_total_mmp": 1314.1616
   },
   {
     "fecha": "2006-11",
@@ -1193,7 +1264,8 @@
     "mif": 8.4377,
     "tda": 2.946,
     "quitas_castigos": 13.8217,
-    "eprc_cartera": 4.2696
+    "eprc_cartera": 4.2696,
+    "cartera_total_mmp": 1347.6546
   },
   {
     "fecha": "2006-12",
@@ -1212,7 +1284,8 @@
     "mif": 8.5438,
     "tda": 2.981,
     "quitas_castigos": 14.2956,
-    "eprc_cartera": 4.1877
+    "eprc_cartera": 4.1877,
+    "cartera_total_mmp": 1383.4579
   },
   {
     "fecha": "2007-01",
@@ -1231,7 +1304,8 @@
     "mif": 8.6666,
     "tda": 3.0938,
     "quitas_castigos": 15.7068,
-    "eprc_cartera": 4.2159
+    "eprc_cartera": 4.2159,
+    "cartera_total_mmp": 1387.4851
   },
   {
     "fecha": "2007-02",
@@ -1250,7 +1324,8 @@
     "mif": 8.7611,
     "tda": 3.2136,
     "quitas_castigos": 17.2152,
-    "eprc_cartera": 4.2578
+    "eprc_cartera": 4.2578,
+    "cartera_total_mmp": 1414.1039
   },
   {
     "fecha": "2007-03",
@@ -1269,7 +1344,8 @@
     "mif": 8.8853,
     "tda": 3.4189,
     "quitas_castigos": 19.7443,
-    "eprc_cartera": 4.2205
+    "eprc_cartera": 4.2205,
+    "cartera_total_mmp": 1423.7244
   },
   {
     "fecha": "2007-04",
@@ -1288,7 +1364,8 @@
     "mif": 9.0051,
     "tda": 3.5736,
     "quitas_castigos": 21.5358,
-    "eprc_cartera": 4.2466
+    "eprc_cartera": 4.2466,
+    "cartera_total_mmp": 1449.5542
   },
   {
     "fecha": "2007-05",
@@ -1307,7 +1384,8 @@
     "mif": 9.1329,
     "tda": 3.7866,
     "quitas_castigos": 24.2568,
-    "eprc_cartera": 4.3072
+    "eprc_cartera": 4.3072,
+    "cartera_total_mmp": 1469.5076
   },
   {
     "fecha": "2007-06",
@@ -1326,7 +1404,8 @@
     "mif": 9.1345,
     "tda": 3.9479,
     "quitas_castigos": 26.3764,
-    "eprc_cartera": 4.2786
+    "eprc_cartera": 4.2786,
+    "cartera_total_mmp": 1508.5078
   },
   {
     "fecha": "2007-07",
@@ -1345,7 +1424,8 @@
     "mif": 9.2551,
     "tda": 4.1118,
     "quitas_castigos": 28.4672,
-    "eprc_cartera": 4.3202
+    "eprc_cartera": 4.3202,
+    "cartera_total_mmp": 1539.1911
   },
   {
     "fecha": "2007-08",
@@ -1364,7 +1444,8 @@
     "mif": 9.2457,
     "tda": 4.2982,
     "quitas_castigos": 31.1696,
-    "eprc_cartera": 4.3043
+    "eprc_cartera": 4.3043,
+    "cartera_total_mmp": 1583.9904
   },
   {
     "fecha": "2007-09",
@@ -1383,7 +1464,8 @@
     "mif": 9.2832,
     "tda": 4.4661,
     "quitas_castigos": 33.704,
-    "eprc_cartera": 4.3579
+    "eprc_cartera": 4.3579,
+    "cartera_total_mmp": 1613.2424
   },
   {
     "fecha": "2007-10",
@@ -1402,7 +1484,8 @@
     "mif": 9.3178,
     "tda": 4.6641,
     "quitas_castigos": 36.8427,
-    "eprc_cartera": 4.318
+    "eprc_cartera": 4.318,
+    "cartera_total_mmp": 1655.9004
   },
   {
     "fecha": "2007-11",
@@ -1421,7 +1504,8 @@
     "mif": 9.2982,
     "tda": 4.8547,
     "quitas_castigos": 40.0655,
-    "eprc_cartera": 4.3699
+    "eprc_cartera": 4.3699,
+    "cartera_total_mmp": 1686.7397
   },
   {
     "fecha": "2007-12",
@@ -1440,7 +1524,8 @@
     "mif": 9.3133,
     "tda": 5.1229,
     "quitas_castigos": 44.4943,
-    "eprc_cartera": 4.292
+    "eprc_cartera": 4.292,
+    "cartera_total_mmp": 1697.623
   },
   {
     "fecha": "2008-01",
@@ -1459,7 +1544,8 @@
     "mif": 9.303,
     "tda": 5.2586,
     "quitas_castigos": 46.9962,
-    "eprc_cartera": 4.2671
+    "eprc_cartera": 4.2671,
+    "cartera_total_mmp": 1719.5794
   },
   {
     "fecha": "2008-02",
@@ -1478,7 +1564,8 @@
     "mif": 9.3157,
     "tda": 5.4324,
     "quitas_castigos": 50.3454,
-    "eprc_cartera": 4.2468
+    "eprc_cartera": 4.2468,
+    "cartera_total_mmp": 1736.0242
   },
   {
     "fecha": "2008-03",
@@ -1497,7 +1584,8 @@
     "mif": 9.3413,
     "tda": 5.4635,
     "quitas_castigos": 51.3887,
-    "eprc_cartera": 4.2832
+    "eprc_cartera": 4.2832,
+    "cartera_total_mmp": 1761.679
   },
   {
     "fecha": "2008-04",
@@ -1516,7 +1604,8 @@
     "mif": 9.3621,
     "tda": 5.4923,
     "quitas_castigos": 52.1086,
-    "eprc_cartera": 4.3656
+    "eprc_cartera": 4.3656,
+    "cartera_total_mmp": 1780.7876
   },
   {
     "fecha": "2008-05",
@@ -1535,7 +1624,8 @@
     "mif": 9.3581,
     "tda": 5.5409,
     "quitas_castigos": 53.0698,
-    "eprc_cartera": 4.4313
+    "eprc_cartera": 4.4313,
+    "cartera_total_mmp": 1813.0523
   },
   {
     "fecha": "2008-06",
@@ -1554,7 +1644,8 @@
     "mif": 9.412,
     "tda": 5.649,
     "quitas_castigos": 55.1443,
-    "eprc_cartera": 4.545
+    "eprc_cartera": 4.545,
+    "cartera_total_mmp": 1815.1864
   },
   {
     "fecha": "2008-07",
@@ -1573,7 +1664,8 @@
     "mif": 9.3953,
     "tda": 5.7334,
     "quitas_castigos": 56.858,
-    "eprc_cartera": 4.5871
+    "eprc_cartera": 4.5871,
+    "cartera_total_mmp": 1831.2512
   },
   {
     "fecha": "2008-08",
@@ -1592,7 +1684,8 @@
     "mif": 9.4168,
     "tda": 5.8482,
     "quitas_castigos": 59.0188,
-    "eprc_cartera": 4.6037
+    "eprc_cartera": 4.6037,
+    "cartera_total_mmp": 1856.2054
   },
   {
     "fecha": "2008-09",
@@ -1611,7 +1704,8 @@
     "mif": 9.4495,
     "tda": 6.0487,
     "quitas_castigos": 62.7585,
-    "eprc_cartera": 4.8246
+    "eprc_cartera": 4.8246,
+    "cartera_total_mmp": 1869.5584
   },
   {
     "fecha": "2008-10",
@@ -1630,7 +1724,8 @@
     "mif": 9.2396,
     "tda": 6.2242,
     "quitas_castigos": 65.6878,
-    "eprc_cartera": 5.0017
+    "eprc_cartera": 5.0017,
+    "cartera_total_mmp": 1886.4638
   },
   {
     "fecha": "2008-11",
@@ -1649,7 +1744,8 @@
     "mif": 9.2236,
     "tda": 6.3923,
     "quitas_castigos": 68.1451,
-    "eprc_cartera": 5.1176
+    "eprc_cartera": 5.1176,
+    "cartera_total_mmp": 1900.5748
   },
   {
     "fecha": "2008-12",
@@ -1668,7 +1764,8 @@
     "mif": 9.4288,
     "tda": 6.7275,
     "quitas_castigos": 74.4957,
-    "eprc_cartera": 5.1707
+    "eprc_cartera": 5.1707,
+    "cartera_total_mmp": 1866.3653
   },
   {
     "fecha": "2009-01",
@@ -1687,7 +1784,8 @@
     "mif": 9.3994,
     "tda": 6.8748,
     "quitas_castigos": 76.8622,
-    "eprc_cartera": 5.253
+    "eprc_cartera": 5.253,
+    "cartera_total_mmp": 1882.9843
   },
   {
     "fecha": "2009-02",
@@ -1706,7 +1804,8 @@
     "mif": 9.3807,
     "tda": 7.0412,
     "quitas_castigos": 79.4687,
-    "eprc_cartera": 5.3386
+    "eprc_cartera": 5.3386,
+    "cartera_total_mmp": 1885.4143
   },
   {
     "fecha": "2009-03",
@@ -1725,7 +1824,8 @@
     "mif": 9.3657,
     "tda": 7.3203,
     "quitas_castigos": 84.2089,
-    "eprc_cartera": 5.4386
+    "eprc_cartera": 5.4386,
+    "cartera_total_mmp": 1858.0425
   },
   {
     "fecha": "2009-04",
@@ -1744,7 +1844,8 @@
     "mif": 9.3569,
     "tda": 7.5823,
     "quitas_castigos": 88.6268,
-    "eprc_cartera": 5.5098
+    "eprc_cartera": 5.5098,
+    "cartera_total_mmp": 1846.5038
   },
   {
     "fecha": "2009-05",
@@ -1764,7 +1865,8 @@
     "mif": 9.2594,
     "tda": 7.8247,
     "quitas_castigos": 92.3388,
-    "eprc_cartera": 5.6171
+    "eprc_cartera": 5.6171,
+    "cartera_total_mmp": 1830.0954
   },
   {
     "fecha": "2009-06",
@@ -1784,7 +1886,8 @@
     "mif": 9.215,
     "tda": 8.0994,
     "quitas_castigos": 96.715,
-    "eprc_cartera": 5.5224
+    "eprc_cartera": 5.5224,
+    "cartera_total_mmp": 1832.2694
   },
   {
     "fecha": "2009-07",
@@ -1804,7 +1907,8 @@
     "mif": 9.2615,
     "tda": 8.3222,
     "quitas_castigos": 100.2657,
-    "eprc_cartera": 5.4539
+    "eprc_cartera": 5.4539,
+    "cartera_total_mmp": 1845.1099
   },
   {
     "fecha": "2009-08",
@@ -1824,7 +1928,8 @@
     "mif": 9.2962,
     "tda": 8.6573,
     "quitas_castigos": 106.4294,
-    "eprc_cartera": 5.6269
+    "eprc_cartera": 5.6269,
+    "cartera_total_mmp": 1828.1138
   },
   {
     "fecha": "2009-09",
@@ -1844,7 +1949,8 @@
     "mif": 9.3145,
     "tda": 8.7915,
     "quitas_castigos": 108.7842,
-    "eprc_cartera": 5.6178
+    "eprc_cartera": 5.6178,
+    "cartera_total_mmp": 1867.2864
   },
   {
     "fecha": "2009-10",
@@ -1864,7 +1970,8 @@
     "mif": 9.4861,
     "tda": 8.839,
     "quitas_castigos": 109.6734,
-    "eprc_cartera": 5.542
+    "eprc_cartera": 5.542,
+    "cartera_total_mmp": 1874.2215
   },
   {
     "fecha": "2009-11",
@@ -1884,7 +1991,8 @@
     "mif": 9.4594,
     "tda": 8.886,
     "quitas_castigos": 111.0099,
-    "eprc_cartera": 5.5011
+    "eprc_cartera": 5.5011,
+    "cartera_total_mmp": 1891.5816
   },
   {
     "fecha": "2009-12",
@@ -1904,7 +2012,8 @@
     "mif": 9.3179,
     "tda": 8.7093,
     "quitas_castigos": 107.7685,
-    "eprc_cartera": 5.3183
+    "eprc_cartera": 5.3183,
+    "cartera_total_mmp": 1934.8623
   },
   {
     "fecha": "2010-01",
@@ -1924,7 +2033,8 @@
     "mif": 9.3111,
     "tda": 8.6139,
     "quitas_castigos": 106.4948,
-    "eprc_cartera": 5.328
+    "eprc_cartera": 5.328,
+    "cartera_total_mmp": 1933.0833
   },
   {
     "fecha": "2010-02",
@@ -1944,7 +2054,8 @@
     "mif": 9.2817,
     "tda": 8.5134,
     "quitas_castigos": 105.383,
-    "eprc_cartera": 5.2714
+    "eprc_cartera": 5.2714,
+    "cartera_total_mmp": 1931.4616
   },
   {
     "fecha": "2010-03",
@@ -1964,7 +2075,8 @@
     "mif": 9.2509,
     "tda": 8.3771,
     "quitas_castigos": 103.9218,
-    "eprc_cartera": 5.0949
+    "eprc_cartera": 5.0949,
+    "cartera_total_mmp": 1929.3926
   },
   {
     "fecha": "2010-04",
@@ -1984,7 +2096,8 @@
     "mif": 9.2262,
     "tda": 8.2462,
     "quitas_castigos": 102.8019,
-    "eprc_cartera": 5.0489
+    "eprc_cartera": 5.0489,
+    "cartera_total_mmp": 1926.8798
   },
   {
     "fecha": "2010-05",
@@ -2004,7 +2117,8 @@
     "mif": 9.2869,
     "tda": 8.0258,
     "quitas_castigos": 100.2799,
-    "eprc_cartera": 4.9833
+    "eprc_cartera": 4.9833,
+    "cartera_total_mmp": 1962.3554
   },
   {
     "fecha": "2010-06",
@@ -2024,7 +2138,8 @@
     "mif": 9.2536,
     "tda": 7.7871,
     "quitas_castigos": 97.6781,
-    "eprc_cartera": 4.9537
+    "eprc_cartera": 4.9537,
+    "cartera_total_mmp": 1970.6636
   },
   {
     "fecha": "2010-07",
@@ -2044,7 +2159,8 @@
     "mif": 9.1738,
     "tda": 7.5505,
     "quitas_castigos": 94.9133,
-    "eprc_cartera": 4.9255
+    "eprc_cartera": 4.9255,
+    "cartera_total_mmp": 1985.1075
   },
   {
     "fecha": "2010-08",
@@ -2064,7 +2180,8 @@
     "mif": 9.0956,
     "tda": 7.1496,
     "quitas_castigos": 88.507,
-    "eprc_cartera": 4.8608
+    "eprc_cartera": 4.8608,
+    "cartera_total_mmp": 2003.6358
   },
   {
     "fecha": "2010-09",
@@ -2084,7 +2201,8 @@
     "mif": 9.0248,
     "tda": 6.8504,
     "quitas_castigos": 84.1771,
-    "eprc_cartera": 4.8646
+    "eprc_cartera": 4.8646,
+    "cartera_total_mmp": 2021.9809
   },
   {
     "fecha": "2010-10",
@@ -2104,7 +2222,8 @@
     "mif": 9.0179,
     "tda": 6.6093,
     "quitas_castigos": 81.0748,
-    "eprc_cartera": 4.8391
+    "eprc_cartera": 4.8391,
+    "cartera_total_mmp": 2043.3411
   },
   {
     "fecha": "2010-11",
@@ -2124,7 +2243,8 @@
     "mif": 9.0353,
     "tda": 6.355,
     "quitas_castigos": 77.5805,
-    "eprc_cartera": 4.8312
+    "eprc_cartera": 4.8312,
+    "cartera_total_mmp": 2071.4488
   },
   {
     "fecha": "2010-12",
@@ -2144,7 +2264,8 @@
     "mif": 8.9409,
     "tda": 6.2303,
     "quitas_castigos": 76.6422,
-    "eprc_cartera": 4.6577
+    "eprc_cartera": 4.6577,
+    "cartera_total_mmp": 2087.0963
   },
   {
     "fecha": "2011-01",
@@ -2164,7 +2285,8 @@
     "mif": 8.9174,
     "tda": 6.2251,
     "quitas_castigos": 78.3743,
-    "eprc_cartera": 4.4929
+    "eprc_cartera": 4.4929,
+    "cartera_total_mmp": 2084.0559
   },
   {
     "fecha": "2011-02",
@@ -2184,7 +2306,8 @@
     "mif": 8.8845,
     "tda": 6.0019,
     "quitas_castigos": 75.3151,
-    "eprc_cartera": 4.4507
+    "eprc_cartera": 4.4507,
+    "cartera_total_mmp": 2119.6373
   },
   {
     "fecha": "2011-03",
@@ -2204,7 +2327,8 @@
     "mif": 8.8513,
     "tda": 5.7558,
     "quitas_castigos": 71.4109,
-    "eprc_cartera": 4.6782
+    "eprc_cartera": 4.6782,
+    "cartera_total_mmp": 2137.9718
   },
   {
     "fecha": "2011-04",
@@ -2224,7 +2348,8 @@
     "mif": 8.8057,
     "tda": 5.5566,
     "quitas_castigos": 68.7467,
-    "eprc_cartera": 4.6112
+    "eprc_cartera": 4.6112,
+    "cartera_total_mmp": 2178.4564
   },
   {
     "fecha": "2011-05",
@@ -2244,7 +2369,8 @@
     "mif": 8.7892,
     "tda": 5.3806,
     "quitas_castigos": 65.9207,
-    "eprc_cartera": 4.7477
+    "eprc_cartera": 4.7477,
+    "cartera_total_mmp": 2187.427
   },
   {
     "fecha": "2011-06",
@@ -2264,7 +2390,8 @@
     "mif": 8.8158,
     "tda": 5.2049,
     "quitas_castigos": 62.4862,
-    "eprc_cartera": 4.8263
+    "eprc_cartera": 4.8263,
+    "cartera_total_mmp": 2181.6058
   },
   {
     "fecha": "2011-07",
@@ -2284,7 +2411,8 @@
     "mif": 8.8278,
     "tda": 5.115,
     "quitas_castigos": 60.9842,
-    "eprc_cartera": 4.8437
+    "eprc_cartera": 4.8437,
+    "cartera_total_mmp": 2208.1791
   },
   {
     "fecha": "2011-08",
@@ -2304,7 +2432,8 @@
     "mif": 8.8543,
     "tda": 5.048,
     "quitas_castigos": 59.8155,
-    "eprc_cartera": 4.9039
+    "eprc_cartera": 4.9039,
+    "cartera_total_mmp": 2234.9959
   },
   {
     "fecha": "2011-09",
@@ -2324,7 +2453,8 @@
     "mif": 8.9044,
     "tda": 5.0585,
     "quitas_castigos": 60.0442,
-    "eprc_cartera": 4.8107
+    "eprc_cartera": 4.8107,
+    "cartera_total_mmp": 2291.1951
   },
   {
     "fecha": "2011-10",
@@ -2344,7 +2474,8 @@
     "mif": 8.9553,
     "tda": 5.0388,
     "quitas_castigos": 59.1341,
-    "eprc_cartera": 4.9005
+    "eprc_cartera": 4.9005,
+    "cartera_total_mmp": 2290.9692
   },
   {
     "fecha": "2011-11",
@@ -2364,7 +2495,8 @@
     "mif": 8.984,
     "tda": 5.0396,
     "quitas_castigos": 58.7621,
-    "eprc_cartera": 4.8973
+    "eprc_cartera": 4.8973,
+    "cartera_total_mmp": 2347.3446
   },
   {
     "fecha": "2011-12",
@@ -2384,7 +2516,8 @@
     "mif": 8.9973,
     "tda": 4.9406,
     "quitas_castigos": 56.8738,
-    "eprc_cartera": 4.677
+    "eprc_cartera": 4.677,
+    "cartera_total_mmp": 2415.0844
   },
   {
     "fecha": "2012-01",
@@ -2404,7 +2537,8 @@
     "mif": 9.0336,
     "tda": 4.7946,
     "quitas_castigos": 53.739,
-    "eprc_cartera": 4.6368
+    "eprc_cartera": 4.6368,
+    "cartera_total_mmp": 2403.1188
   },
   {
     "fecha": "2012-02",
@@ -2424,7 +2558,8 @@
     "mif": 9.1058,
     "tda": 4.8071,
     "quitas_castigos": 54.2056,
-    "eprc_cartera": 4.7054
+    "eprc_cartera": 4.7054,
+    "cartera_total_mmp": 2402.1898
   },
   {
     "fecha": "2012-03",
@@ -2444,7 +2579,8 @@
     "mif": 9.1898,
     "tda": 4.8063,
     "quitas_castigos": 54.4045,
-    "eprc_cartera": 4.6988
+    "eprc_cartera": 4.6988,
+    "cartera_total_mmp": 2442.7569
   },
   {
     "fecha": "2012-04",
@@ -2464,7 +2600,8 @@
     "mif": 9.226,
     "tda": 4.7979,
     "quitas_castigos": 54.2159,
-    "eprc_cartera": 4.7964
+    "eprc_cartera": 4.7964,
+    "cartera_total_mmp": 2452.937
   },
   {
     "fecha": "2012-05",
@@ -2484,7 +2621,8 @@
     "mif": 9.2709,
     "tda": 4.8515,
     "quitas_castigos": 56.2265,
-    "eprc_cartera": 4.7651
+    "eprc_cartera": 4.7651,
+    "cartera_total_mmp": 2506.6107
   },
   {
     "fecha": "2012-06",
@@ -2504,7 +2642,8 @@
     "mif": 9.2937,
     "tda": 4.8933,
     "quitas_castigos": 58.3147,
-    "eprc_cartera": 4.6566
+    "eprc_cartera": 4.6566,
+    "cartera_total_mmp": 2525.6083
   },
   {
     "fecha": "2012-07",
@@ -2524,7 +2663,8 @@
     "mif": 9.3354,
     "tda": 4.8809,
     "quitas_castigos": 58.9876,
-    "eprc_cartera": 4.6997
+    "eprc_cartera": 4.6997,
+    "cartera_total_mmp": 2539.4555
   },
   {
     "fecha": "2012-08",
@@ -2544,7 +2684,8 @@
     "mif": 9.3835,
     "tda": 4.8675,
     "quitas_castigos": 59.4649,
-    "eprc_cartera": 4.7409
+    "eprc_cartera": 4.7409,
+    "cartera_total_mmp": 2564.7342
   },
   {
     "fecha": "2012-09",
@@ -2564,7 +2705,8 @@
     "mif": 9.388,
     "tda": 4.8271,
     "quitas_castigos": 59.5348,
-    "eprc_cartera": 4.7261
+    "eprc_cartera": 4.7261,
+    "cartera_total_mmp": 2592.7904
   },
   {
     "fecha": "2012-10",
@@ -2584,7 +2726,8 @@
     "mif": 9.4389,
     "tda": 4.8495,
     "quitas_castigos": 61.7389,
-    "eprc_cartera": 4.7078
+    "eprc_cartera": 4.7078,
+    "cartera_total_mmp": 2606.0149
   },
   {
     "fecha": "2012-11",
@@ -2604,7 +2747,8 @@
     "mif": 9.4668,
     "tda": 4.8244,
     "quitas_castigos": 62.6059,
-    "eprc_cartera": 4.7212
+    "eprc_cartera": 4.7212,
+    "cartera_total_mmp": 2658.0265
   },
   {
     "fecha": "2012-12",
@@ -2624,7 +2768,8 @@
     "mif": 9.5464,
     "tda": 4.8134,
     "quitas_castigos": 62.7151,
-    "eprc_cartera": 4.6919
+    "eprc_cartera": 4.6919,
+    "cartera_total_mmp": 2711.6989
   },
   {
     "fecha": "2013-01",
@@ -2644,7 +2789,8 @@
     "mif": 9.5889,
     "tda": 4.8329,
     "quitas_castigos": 63.48,
-    "eprc_cartera": 4.7643
+    "eprc_cartera": 4.7643,
+    "cartera_total_mmp": 2706.961
   },
   {
     "fecha": "2013-02",
@@ -2664,7 +2810,8 @@
     "mif": 9.5843,
     "tda": 4.8668,
     "quitas_castigos": 64.6884,
-    "eprc_cartera": 4.767
+    "eprc_cartera": 4.767,
+    "cartera_total_mmp": 2721.4242
   },
   {
     "fecha": "2013-03",
@@ -2684,7 +2831,8 @@
     "mif": 9.5941,
     "tda": 4.9354,
     "quitas_castigos": 66.7829,
-    "eprc_cartera": 4.8152
+    "eprc_cartera": 4.8152,
+    "cartera_total_mmp": 2735.2597
   },
   {
     "fecha": "2013-04",
@@ -2704,7 +2852,8 @@
     "mif": 9.6505,
     "tda": 5.0196,
     "quitas_castigos": 69.2295,
-    "eprc_cartera": 4.8731
+    "eprc_cartera": 4.8731,
+    "cartera_total_mmp": 2749.8618
   },
   {
     "fecha": "2013-05",
@@ -2724,7 +2873,8 @@
     "mif": 9.6777,
     "tda": 5.1299,
     "quitas_castigos": 71.7182,
-    "eprc_cartera": 4.8804
+    "eprc_cartera": 4.8804,
+    "cartera_total_mmp": 2786.6388
   },
   {
     "fecha": "2013-06",
@@ -2744,7 +2894,8 @@
     "mif": 9.6981,
     "tda": 5.2606,
     "quitas_castigos": 74.9371,
-    "eprc_cartera": 5.2366
+    "eprc_cartera": 5.2366,
+    "cartera_total_mmp": 2808.3186
   },
   {
     "fecha": "2013-07",
@@ -2764,7 +2915,8 @@
     "mif": 9.7286,
     "tda": 5.3651,
     "quitas_castigos": 76.8836,
-    "eprc_cartera": 5.2416
+    "eprc_cartera": 5.2416,
+    "cartera_total_mmp": 2823.0304
   },
   {
     "fecha": "2013-08",
@@ -2784,7 +2936,8 @@
     "mif": 9.7438,
     "tda": 5.4685,
     "quitas_castigos": 79.043,
-    "eprc_cartera": 5.2179
+    "eprc_cartera": 5.2179,
+    "cartera_total_mmp": 2869.3873
   },
   {
     "fecha": "2013-09",
@@ -2804,7 +2957,8 @@
     "mif": 9.7583,
     "tda": 5.568,
     "quitas_castigos": 80.5465,
-    "eprc_cartera": 5.2287
+    "eprc_cartera": 5.2287,
+    "cartera_total_mmp": 2872.1323
   },
   {
     "fecha": "2013-10",
@@ -2824,7 +2978,8 @@
     "mif": 9.7358,
     "tda": 5.6598,
     "quitas_castigos": 81.688,
-    "eprc_cartera": 5.1956
+    "eprc_cartera": 5.1956,
+    "cartera_total_mmp": 2910.9815
   },
   {
     "fecha": "2013-11",
@@ -2844,7 +2999,8 @@
     "mif": 9.7432,
     "tda": 5.8039,
     "quitas_castigos": 84.7394,
-    "eprc_cartera": 5.0305
+    "eprc_cartera": 5.0305,
+    "cartera_total_mmp": 2955.2637
   },
   {
     "fecha": "2013-12",
@@ -2864,7 +3020,8 @@
     "mif": 9.7709,
     "tda": 5.9036,
     "quitas_castigos": 86.455,
-    "eprc_cartera": 4.9629
+    "eprc_cartera": 4.9629,
+    "cartera_total_mmp": 2976.2915
   },
   {
     "fecha": "2014-01",
@@ -2884,7 +3041,8 @@
     "mif": 9.7432,
     "tda": 5.9999,
     "quitas_castigos": 88.1087,
-    "eprc_cartera": 4.9919
+    "eprc_cartera": 4.9919,
+    "cartera_total_mmp": 2963.1573
   },
   {
     "fecha": "2014-02",
@@ -2904,7 +3062,8 @@
     "mif": 9.7329,
     "tda": 6.0921,
     "quitas_castigos": 89.7697,
-    "eprc_cartera": 4.9731
+    "eprc_cartera": 4.9731,
+    "cartera_total_mmp": 2964.6731
   },
   {
     "fecha": "2014-03",
@@ -2924,7 +3083,8 @@
     "mif": 9.7288,
     "tda": 6.2203,
     "quitas_castigos": 92.743,
-    "eprc_cartera": 4.9191
+    "eprc_cartera": 4.9191,
+    "cartera_total_mmp": 2981.7353
   },
   {
     "fecha": "2014-04",
@@ -2944,7 +3104,8 @@
     "mif": 9.7291,
     "tda": 6.2867,
     "quitas_castigos": 94.0068,
-    "eprc_cartera": 4.9476
+    "eprc_cartera": 4.9476,
+    "cartera_total_mmp": 2984.6967
   },
   {
     "fecha": "2014-05",
@@ -2964,7 +3125,8 @@
     "mif": 9.7232,
     "tda": 6.3154,
     "quitas_castigos": 94.9759,
-    "eprc_cartera": 4.8703
+    "eprc_cartera": 4.8703,
+    "cartera_total_mmp": 3036.5859
   },
   {
     "fecha": "2014-06",
@@ -2984,7 +3146,8 @@
     "mif": 9.7434,
     "tda": 6.3507,
     "quitas_castigos": 96.0147,
-    "eprc_cartera": 4.7259
+    "eprc_cartera": 4.7259,
+    "cartera_total_mmp": 3045.6698
   },
   {
     "fecha": "2014-07",
@@ -3004,7 +3167,8 @@
     "mif": 9.7323,
     "tda": 6.3701,
     "quitas_castigos": 97.091,
-    "eprc_cartera": 4.6533
+    "eprc_cartera": 4.6533,
+    "cartera_total_mmp": 3064.5146
   },
   {
     "fecha": "2014-08",
@@ -3024,7 +3188,8 @@
     "mif": 9.7174,
     "tda": 6.394,
     "quitas_castigos": 98.2904,
-    "eprc_cartera": 4.5843
+    "eprc_cartera": 4.5843,
+    "cartera_total_mmp": 3081.403
   },
   {
     "fecha": "2014-09",
@@ -3044,7 +3209,8 @@
     "mif": 9.6929,
     "tda": 6.4048,
     "quitas_castigos": 99.3251,
-    "eprc_cartera": 4.5718
+    "eprc_cartera": 4.5718,
+    "cartera_total_mmp": 3093.4854
   },
   {
     "fecha": "2014-10",
@@ -3064,7 +3230,8 @@
     "mif": 9.6766,
     "tda": 6.4172,
     "quitas_castigos": 100.579,
-    "eprc_cartera": 4.5643
+    "eprc_cartera": 4.5643,
+    "cartera_total_mmp": 3118.7277
   },
   {
     "fecha": "2014-11",
@@ -3084,7 +3251,8 @@
     "mif": 9.604,
     "tda": 6.3867,
     "quitas_castigos": 100.4332,
-    "eprc_cartera": 4.4094
+    "eprc_cartera": 4.4094,
+    "cartera_total_mmp": 3204.2127
   },
   {
     "fecha": "2014-12",
@@ -3104,7 +3272,8 @@
     "mif": 9.4882,
     "tda": 6.4227,
     "quitas_castigos": 103.206,
-    "eprc_cartera": 4.1577
+    "eprc_cartera": 4.1577,
+    "cartera_total_mmp": 3268.5648
   },
   {
     "fecha": "2015-01",
@@ -3124,7 +3293,8 @@
     "mif": 9.4322,
     "tda": 6.4107,
     "quitas_castigos": 104.6358,
-    "eprc_cartera": 4.0725
+    "eprc_cartera": 4.0725,
+    "cartera_total_mmp": 3292.9718
   },
   {
     "fecha": "2015-02",
@@ -3144,7 +3314,8 @@
     "mif": 9.3387,
     "tda": 6.3819,
     "quitas_castigos": 105.2498,
-    "eprc_cartera": 4.1272
+    "eprc_cartera": 4.1272,
+    "cartera_total_mmp": 3281.81
   },
   {
     "fecha": "2015-03",
@@ -3164,7 +3335,8 @@
     "mif": 9.3519,
     "tda": 6.314,
     "quitas_castigos": 104.8315,
-    "eprc_cartera": 4.0341
+    "eprc_cartera": 4.0341,
+    "cartera_total_mmp": 3318.8624
   },
   {
     "fecha": "2015-04",
@@ -3184,7 +3356,8 @@
     "mif": 9.2782,
     "tda": 6.2687,
     "quitas_castigos": 105.2655,
-    "eprc_cartera": 4.0238
+    "eprc_cartera": 4.0238,
+    "cartera_total_mmp": 3357.6767
   },
   {
     "fecha": "2015-05",
@@ -3204,7 +3377,8 @@
     "mif": 9.2243,
     "tda": 6.211,
     "quitas_castigos": 105.1488,
-    "eprc_cartera": 3.9451
+    "eprc_cartera": 3.9451,
+    "cartera_total_mmp": 3416.9473
   },
   {
     "fecha": "2015-06",
@@ -3224,7 +3398,8 @@
     "mif": 9.1597,
     "tda": 6.1157,
     "quitas_castigos": 103.5573,
-    "eprc_cartera": 3.9621
+    "eprc_cartera": 3.9621,
+    "cartera_total_mmp": 3405.1745
   },
   {
     "fecha": "2015-07",
@@ -3244,7 +3419,8 @@
     "mif": 9.0949,
     "tda": 6.0828,
     "quitas_castigos": 104.6428,
-    "eprc_cartera": 3.903
+    "eprc_cartera": 3.903,
+    "cartera_total_mmp": 3440.0788
   },
   {
     "fecha": "2015-08",
@@ -3264,7 +3440,8 @@
     "mif": 9.031,
     "tda": 6.0097,
     "quitas_castigos": 104.2625,
-    "eprc_cartera": 3.9193
+    "eprc_cartera": 3.9193,
+    "cartera_total_mmp": 3489.7526
   },
   {
     "fecha": "2015-09",
@@ -3284,7 +3461,8 @@
     "mif": 8.957,
     "tda": 5.9177,
     "quitas_castigos": 103.7081,
-    "eprc_cartera": 3.8334
+    "eprc_cartera": 3.8334,
+    "cartera_total_mmp": 3545.0713
   },
   {
     "fecha": "2015-10",
@@ -3304,7 +3482,8 @@
     "mif": 8.9159,
     "tda": 5.8179,
     "quitas_castigos": 102.7072,
-    "eprc_cartera": 3.8587
+    "eprc_cartera": 3.8587,
+    "cartera_total_mmp": 3544.7249
   },
   {
     "fecha": "2015-11",
@@ -3324,7 +3503,8 @@
     "mif": 8.9054,
     "tda": 5.7657,
     "quitas_castigos": 103.3895,
-    "eprc_cartera": 3.8227
+    "eprc_cartera": 3.8227,
+    "cartera_total_mmp": 3604.9357
   },
   {
     "fecha": "2015-12",
@@ -3344,7 +3524,8 @@
     "mif": 8.9459,
     "tda": 5.6511,
     "quitas_castigos": 101.8795,
-    "eprc_cartera": 3.6493
+    "eprc_cartera": 3.6493,
+    "cartera_total_mmp": 3716.9042
   },
   {
     "fecha": "2016-01",
@@ -3364,7 +3545,8 @@
     "mif": 8.8879,
     "tda": 5.5547,
     "quitas_castigos": 101.0395,
-    "eprc_cartera": 3.6404
+    "eprc_cartera": 3.6404,
+    "cartera_total_mmp": 3762.7211
   },
   {
     "fecha": "2016-02",
@@ -3384,7 +3566,8 @@
     "mif": 8.9104,
     "tda": 5.4753,
     "quitas_castigos": 100.8755,
-    "eprc_cartera": 3.6256
+    "eprc_cartera": 3.6256,
+    "cartera_total_mmp": 3760.8172
   },
   {
     "fecha": "2016-03",
@@ -3404,7 +3587,8 @@
     "mif": 8.7948,
     "tda": 5.4031,
     "quitas_castigos": 100.6606,
-    "eprc_cartera": 3.616
+    "eprc_cartera": 3.616,
+    "cartera_total_mmp": 3761.1322
   },
   {
     "fecha": "2016-04",
@@ -3424,7 +3608,8 @@
     "mif": 8.7673,
     "tda": 5.3926,
     "quitas_castigos": 102.9723,
-    "eprc_cartera": 3.6184
+    "eprc_cartera": 3.6184,
+    "cartera_total_mmp": 3781.149
   },
   {
     "fecha": "2016-05",
@@ -3444,7 +3629,8 @@
     "mif": 8.7536,
     "tda": 5.3116,
     "quitas_castigos": 102.435,
-    "eprc_cartera": 3.6157
+    "eprc_cartera": 3.6157,
+    "cartera_total_mmp": 3834.8229
   },
   {
     "fecha": "2016-06",
@@ -3464,7 +3650,8 @@
     "mif": 8.6887,
     "tda": 5.2532,
     "quitas_castigos": 103.217,
-    "eprc_cartera": 3.5448
+    "eprc_cartera": 3.5448,
+    "cartera_total_mmp": 3917.7718
   },
   {
     "fecha": "2016-07",
@@ -3484,7 +3671,8 @@
     "mif": 8.6191,
     "tda": 5.1543,
     "quitas_castigos": 102.0812,
-    "eprc_cartera": 3.5676
+    "eprc_cartera": 3.5676,
+    "cartera_total_mmp": 3955.2016
   },
   {
     "fecha": "2016-08",
@@ -3504,7 +3692,8 @@
     "mif": 8.5646,
     "tda": 5.1013,
     "quitas_castigos": 102.7087,
-    "eprc_cartera": 3.5833
+    "eprc_cartera": 3.5833,
+    "cartera_total_mmp": 3961.8469
   },
   {
     "fecha": "2016-09",
@@ -3524,7 +3713,8 @@
     "mif": 8.5015,
     "tda": 5.065,
     "quitas_castigos": 103.9555,
-    "eprc_cartera": 3.552
+    "eprc_cartera": 3.552,
+    "cartera_total_mmp": 4027.7761
   },
   {
     "fecha": "2016-10",
@@ -3544,7 +3734,8 @@
     "mif": 8.4472,
     "tda": 5.0647,
     "quitas_castigos": 106.9352,
-    "eprc_cartera": 3.5283
+    "eprc_cartera": 3.5283,
+    "cartera_total_mmp": 4029.8742
   },
   {
     "fecha": "2016-11",
@@ -3564,7 +3755,8 @@
     "mif": 8.3359,
     "tda": 4.9901,
     "quitas_castigos": 106.7636,
-    "eprc_cartera": 3.4889
+    "eprc_cartera": 3.4889,
+    "cartera_total_mmp": 4128.9482
   },
   {
     "fecha": "2016-12",
@@ -3584,7 +3776,8 @@
     "mif": 8.2586,
     "tda": 4.9487,
     "quitas_castigos": 107.729,
-    "eprc_cartera": 3.3716
+    "eprc_cartera": 3.3716,
+    "cartera_total_mmp": 4201.2039
   },
   {
     "fecha": "2017-01",
@@ -3604,7 +3797,8 @@
     "mif": 8.3092,
     "tda": 4.9162,
     "quitas_castigos": 108.8296,
-    "eprc_cartera": 3.3762
+    "eprc_cartera": 3.3762,
+    "cartera_total_mmp": 4201.9768
   },
   {
     "fecha": "2017-02",
@@ -3624,7 +3818,8 @@
     "mif": 8.286,
     "tda": 4.8847,
     "quitas_castigos": 109.9067,
-    "eprc_cartera": 3.3875
+    "eprc_cartera": 3.3875,
+    "cartera_total_mmp": 4204.6804
   },
   {
     "fecha": "2017-03",
@@ -3644,7 +3839,8 @@
     "mif": 8.3091,
     "tda": 4.8457,
     "quitas_castigos": 110.5576,
-    "eprc_cartera": 3.3933
+    "eprc_cartera": 3.3933,
+    "cartera_total_mmp": 4228.2395
   },
   {
     "fecha": "2017-04",
@@ -3664,7 +3860,8 @@
     "mif": 8.3175,
     "tda": 4.7865,
     "quitas_castigos": 110.3586,
-    "eprc_cartera": 3.3608
+    "eprc_cartera": 3.3608,
+    "cartera_total_mmp": 4283.5653
   },
   {
     "fecha": "2017-05",
@@ -3684,7 +3881,8 @@
     "mif": 8.3177,
     "tda": 4.7917,
     "quitas_castigos": 112.799,
-    "eprc_cartera": 3.3877
+    "eprc_cartera": 3.3877,
+    "cartera_total_mmp": 4293.3851
   },
   {
     "fecha": "2017-06",
@@ -3704,7 +3902,8 @@
     "mif": 8.3198,
     "tda": 4.7919,
     "quitas_castigos": 114.9599,
-    "eprc_cartera": 3.3693
+    "eprc_cartera": 3.3693,
+    "cartera_total_mmp": 4330.613
   },
   {
     "fecha": "2017-07",
@@ -3724,7 +3923,8 @@
     "mif": 8.3796,
     "tda": 4.7998,
     "quitas_castigos": 117.2771,
-    "eprc_cartera": 3.3958
+    "eprc_cartera": 3.3958,
+    "cartera_total_mmp": 4355.6455
   },
   {
     "fecha": "2017-08",
@@ -3744,7 +3944,8 @@
     "mif": 8.4266,
     "tda": 4.8022,
     "quitas_castigos": 119.5085,
-    "eprc_cartera": 3.376
+    "eprc_cartera": 3.376,
+    "cartera_total_mmp": 4399.2974
   },
   {
     "fecha": "2017-09",
@@ -3764,7 +3965,8 @@
     "mif": 8.4877,
     "tda": 4.7948,
     "quitas_castigos": 121.1417,
-    "eprc_cartera": 3.3714
+    "eprc_cartera": 3.3714,
+    "cartera_total_mmp": 4431.9266
   },
   {
     "fecha": "2017-10",
@@ -3784,7 +3986,8 @@
     "mif": 8.5254,
     "tda": 4.7539,
     "quitas_castigos": 120.6326,
-    "eprc_cartera": 3.4301
+    "eprc_cartera": 3.4301,
+    "cartera_total_mmp": 4456.9688
   },
   {
     "fecha": "2017-11",
@@ -3804,7 +4007,8 @@
     "mif": 8.6047,
     "tda": 4.7852,
     "quitas_castigos": 123.2487,
-    "eprc_cartera": 3.4158
+    "eprc_cartera": 3.4158,
+    "cartera_total_mmp": 4505.7086
   },
   {
     "fecha": "2017-12",
@@ -3824,7 +4028,8 @@
     "mif": 8.6104,
     "tda": 4.7913,
     "quitas_castigos": 124.4852,
-    "eprc_cartera": 3.3245
+    "eprc_cartera": 3.3245,
+    "cartera_total_mmp": 4593.4192
   },
   {
     "fecha": "2018-01",
@@ -3844,7 +4049,8 @@
     "mif": 8.5663,
     "tda": 4.8123,
     "quitas_castigos": 126.4254,
-    "eprc_cartera": 3.3089
+    "eprc_cartera": 3.3089,
+    "cartera_total_mmp": 4597.1532
   },
   {
     "fecha": "2018-02",
@@ -3864,7 +4070,8 @@
     "mif": 8.569,
     "tda": 4.8174,
     "quitas_castigos": 127.5746,
-    "eprc_cartera": 3.3257
+    "eprc_cartera": 3.3257,
+    "cartera_total_mmp": 4606.9888
   },
   {
     "fecha": "2018-03",
@@ -3884,7 +4091,8 @@
     "mif": 8.5555,
     "tda": 4.8039,
     "quitas_castigos": 127.8218,
-    "eprc_cartera": 3.3392
+    "eprc_cartera": 3.3392,
+    "cartera_total_mmp": 4620.3424
   },
   {
     "fecha": "2018-04",
@@ -3904,7 +4112,8 @@
     "mif": 8.5344,
     "tda": 4.7751,
     "quitas_castigos": 127.0747,
-    "eprc_cartera": 3.3476
+    "eprc_cartera": 3.3476,
+    "cartera_total_mmp": 4678.9508
   },
   {
     "fecha": "2018-05",
@@ -3924,7 +4133,8 @@
     "mif": 8.4867,
     "tda": 4.7444,
     "quitas_castigos": 126.6143,
-    "eprc_cartera": 3.3271
+    "eprc_cartera": 3.3271,
+    "cartera_total_mmp": 4769.2399
   },
   {
     "fecha": "2018-06",
@@ -3944,7 +4154,8 @@
     "mif": 8.4505,
     "tda": 4.7021,
     "quitas_castigos": 125.4706,
-    "eprc_cartera": 3.2871
+    "eprc_cartera": 3.2871,
+    "cartera_total_mmp": 4829.7612
   },
   {
     "fecha": "2018-07",
@@ -3964,7 +4175,8 @@
     "mif": 8.4549,
     "tda": 4.6918,
     "quitas_castigos": 125.743,
-    "eprc_cartera": 3.3053
+    "eprc_cartera": 3.3053,
+    "cartera_total_mmp": 4820.8633
   },
   {
     "fecha": "2018-08",
@@ -3984,7 +4196,8 @@
     "mif": 8.4258,
     "tda": 4.6759,
     "quitas_castigos": 125.72,
-    "eprc_cartera": 3.2852
+    "eprc_cartera": 3.2852,
+    "cartera_total_mmp": 4877.8313
   },
   {
     "fecha": "2018-09",
@@ -4004,7 +4217,8 @@
     "mif": 8.3972,
     "tda": 4.639,
     "quitas_castigos": 124.4539,
-    "eprc_cartera": 3.2895
+    "eprc_cartera": 3.2895,
+    "cartera_total_mmp": 4905.9175
   },
   {
     "fecha": "2018-10",
@@ -4024,7 +4238,8 @@
     "mif": 8.3803,
     "tda": 4.6314,
     "quitas_castigos": 125.0627,
-    "eprc_cartera": 3.2894
+    "eprc_cartera": 3.2894,
+    "cartera_total_mmp": 4978.931
   },
   {
     "fecha": "2018-11",
@@ -4044,7 +4259,8 @@
     "mif": 8.3555,
     "tda": 4.5986,
     "quitas_castigos": 124.4871,
-    "eprc_cartera": 3.2754
+    "eprc_cartera": 3.2754,
+    "cartera_total_mmp": 5017.9999
   },
   {
     "fecha": "2018-12",
@@ -4064,7 +4280,8 @@
     "mif": 8.3748,
     "tda": 4.5655,
     "quitas_castigos": 123.8395,
-    "eprc_cartera": 3.2114
+    "eprc_cartera": 3.2114,
+    "cartera_total_mmp": 5021.8405
   },
   {
     "fecha": "2019-01",
@@ -4084,7 +4301,8 @@
     "mif": 8.3597,
     "tda": 4.5569,
     "quitas_castigos": 124.6362,
-    "eprc_cartera": 3.2078
+    "eprc_cartera": 3.2078,
+    "cartera_total_mmp": 5025.3211
   },
   {
     "fecha": "2019-02",
@@ -4104,7 +4322,8 @@
     "mif": 8.3249,
     "tda": 4.5442,
     "quitas_castigos": 125.2546,
-    "eprc_cartera": 3.2038
+    "eprc_cartera": 3.2038,
+    "cartera_total_mmp": 5047.542
   },
   {
     "fecha": "2019-03",
@@ -4124,7 +4343,8 @@
     "mif": 8.3034,
     "tda": 4.5133,
     "quitas_castigos": 125.0104,
-    "eprc_cartera": 3.2065
+    "eprc_cartera": 3.2065,
+    "cartera_total_mmp": 5091.6335
   },
   {
     "fecha": "2019-04",
@@ -4144,7 +4364,8 @@
     "mif": 8.2799,
     "tda": 4.504,
     "quitas_castigos": 125.8532,
-    "eprc_cartera": 3.2038
+    "eprc_cartera": 3.2038,
+    "cartera_total_mmp": 5124.2456
   },
   {
     "fecha": "2019-05",
@@ -4164,7 +4385,8 @@
     "mif": 8.2897,
     "tda": 4.4968,
     "quitas_castigos": 126.4916,
-    "eprc_cartera": 3.1982
+    "eprc_cartera": 3.1982,
+    "cartera_total_mmp": 5164.9401
   },
   {
     "fecha": "2019-06",
@@ -4184,7 +4406,8 @@
     "mif": 8.2997,
     "tda": 4.4848,
     "quitas_castigos": 126.641,
-    "eprc_cartera": 3.1935
+    "eprc_cartera": 3.1935,
+    "cartera_total_mmp": 5191.0118
   },
   {
     "fecha": "2019-07",
@@ -4204,7 +4427,8 @@
     "mif": 8.2516,
     "tda": 4.4938,
     "quitas_castigos": 127.8567,
-    "eprc_cartera": 3.2077
+    "eprc_cartera": 3.2077,
+    "cartera_total_mmp": 5181.2194
   },
   {
     "fecha": "2019-08",
@@ -4224,7 +4448,8 @@
     "mif": 8.2499,
     "tda": 4.4919,
     "quitas_castigos": 128.5927,
-    "eprc_cartera": 3.1906
+    "eprc_cartera": 3.1906,
+    "cartera_total_mmp": 5257.1074
   },
   {
     "fecha": "2019-09",
@@ -4244,7 +4469,8 @@
     "mif": 8.2552,
     "tda": 4.5333,
     "quitas_castigos": 131.2496,
-    "eprc_cartera": 3.2519
+    "eprc_cartera": 3.2519,
+    "cartera_total_mmp": 5178.0097
   },
   {
     "fecha": "2019-10",
@@ -4264,7 +4490,8 @@
     "mif": 8.2559,
     "tda": 4.5388,
     "quitas_castigos": 131.5796,
-    "eprc_cartera": 3.3002
+    "eprc_cartera": 3.3002,
+    "cartera_total_mmp": 5167.5132
   },
   {
     "fecha": "2019-11",
@@ -4284,7 +4511,8 @@
     "mif": 8.2714,
     "tda": 4.5516,
     "quitas_castigos": 132.521,
-    "eprc_cartera": 3.2813
+    "eprc_cartera": 3.2813,
+    "cartera_total_mmp": 5251.3552
   },
   {
     "fecha": "2019-12",
@@ -4304,7 +4532,8 @@
     "mif": 8.2654,
     "tda": 4.5844,
     "quitas_castigos": 134.421,
-    "eprc_cartera": 3.2184
+    "eprc_cartera": 3.2184,
+    "cartera_total_mmp": 5265.9679
   },
   {
     "fecha": "2020-01",
@@ -4324,7 +4553,8 @@
     "mif": 8.3003,
     "tda": 4.5976,
     "quitas_castigos": 134.9872,
-    "eprc_cartera": 3.2361
+    "eprc_cartera": 3.2361,
+    "cartera_total_mmp": 5260.724
   },
   {
     "fecha": "2020-02",
@@ -4344,7 +4574,8 @@
     "mif": 8.3862,
     "tda": 4.5929,
     "quitas_castigos": 134.6883,
-    "eprc_cartera": 3.2995
+    "eprc_cartera": 3.2995,
+    "cartera_total_mmp": 5295.5873
   },
   {
     "fecha": "2020-03",
@@ -4364,7 +4595,8 @@
     "mif": 8.3937,
     "tda": 4.62,
     "quitas_castigos": 136.2835,
-    "eprc_cartera": 3.4829
+    "eprc_cartera": 3.4829,
+    "cartera_total_mmp": 5626.487
   },
   {
     "fecha": "2020-04",
@@ -4384,7 +4616,8 @@
     "mif": 8.3801,
     "tda": 4.6405,
     "quitas_castigos": 137.6631,
-    "eprc_cartera": 3.5275
+    "eprc_cartera": 3.5275,
+    "cartera_total_mmp": 5693.4831
   },
   {
     "fecha": "2020-05",
@@ -4404,7 +4637,8 @@
     "mif": 8.3491,
     "tda": 4.6609,
     "quitas_castigos": 138.491,
-    "eprc_cartera": 3.6096
+    "eprc_cartera": 3.6096,
+    "cartera_total_mmp": 5583.2596
   },
   {
     "fecha": "2020-06",
@@ -4424,7 +4658,8 @@
     "mif": 8.3155,
     "tda": 4.7788,
     "quitas_castigos": 146.2216,
-    "eprc_cartera": 3.4944
+    "eprc_cartera": 3.4944,
+    "cartera_total_mmp": 5495.9894
   },
   {
     "fecha": "2020-07",
@@ -4444,7 +4679,8 @@
     "mif": 8.2828,
     "tda": 4.7693,
     "quitas_castigos": 146.7145,
-    "eprc_cartera": 3.5346
+    "eprc_cartera": 3.5346,
+    "cartera_total_mmp": 5429.3654
   },
   {
     "fecha": "2020-08",
@@ -4464,7 +4700,8 @@
     "mif": 8.2882,
     "tda": 4.7635,
     "quitas_castigos": 147.1674,
-    "eprc_cartera": 3.5681
+    "eprc_cartera": 3.5681,
+    "cartera_total_mmp": 5374.1258
   },
   {
     "fecha": "2020-09",
@@ -4484,7 +4721,8 @@
     "mif": 8.2684,
     "tda": 4.7333,
     "quitas_castigos": 146.5865,
-    "eprc_cartera": 3.6919
+    "eprc_cartera": 3.6919,
+    "cartera_total_mmp": 5341.4921
   },
   {
     "fecha": "2020-10",
@@ -4504,7 +4742,8 @@
     "mif": 8.2539,
     "tda": 4.6953,
     "quitas_castigos": 145.2212,
-    "eprc_cartera": 3.7989
+    "eprc_cartera": 3.7989,
+    "cartera_total_mmp": 5280.6408
   },
   {
     "fecha": "2020-11",
@@ -4524,7 +4763,8 @@
     "mif": 8.2446,
     "tda": 4.6763,
     "quitas_castigos": 142.9824,
-    "eprc_cartera": 4.0098
+    "eprc_cartera": 4.0098,
+    "cartera_total_mmp": 5213.7987
   },
   {
     "fecha": "2020-12",
@@ -4544,7 +4784,8 @@
     "mif": 8.2354,
     "tda": 4.7817,
     "quitas_castigos": 147.3683,
-    "eprc_cartera": 4.105
+    "eprc_cartera": 4.105,
+    "cartera_total_mmp": 5161.3149
   },
   {
     "fecha": "2021-01",
@@ -4564,7 +4805,8 @@
     "mif": 8.2131,
     "tda": 4.806,
     "quitas_castigos": 146.6018,
-    "eprc_cartera": 4.104
+    "eprc_cartera": 4.104,
+    "cartera_total_mmp": 5206.5068
   },
   {
     "fecha": "2021-02",
@@ -4584,7 +4826,8 @@
     "mif": 8.1038,
     "tda": 4.8969,
     "quitas_castigos": 149.737,
-    "eprc_cartera": 4.0889
+    "eprc_cartera": 4.0889,
+    "cartera_total_mmp": 5212.6328
   },
   {
     "fecha": "2021-03",
@@ -4604,7 +4847,8 @@
     "mif": 8.0881,
     "tda": 5.0292,
     "quitas_castigos": 155.4386,
-    "eprc_cartera": 3.9663
+    "eprc_cartera": 3.9663,
+    "cartera_total_mmp": 5216.8912
   },
   {
     "fecha": "2021-04",
@@ -4624,7 +4868,8 @@
     "mif": 8.1125,
     "tda": 5.1056,
     "quitas_castigos": 157.7524,
-    "eprc_cartera": 3.8676
+    "eprc_cartera": 3.8676,
+    "cartera_total_mmp": 5209.372
   },
   {
     "fecha": "2021-05",
@@ -4644,7 +4889,8 @@
     "mif": 8.1444,
     "tda": 5.1453,
     "quitas_castigos": 158.6186,
-    "eprc_cartera": 3.7666
+    "eprc_cartera": 3.7666,
+    "cartera_total_mmp": 5200.7816
   },
   {
     "fecha": "2021-06",
@@ -4664,7 +4910,8 @@
     "mif": 8.1858,
     "tda": 5.0595,
     "quitas_castigos": 151.198,
-    "eprc_cartera": 3.7473
+    "eprc_cartera": 3.7473,
+    "cartera_total_mmp": 5196.8078
   },
   {
     "fecha": "2021-07",
@@ -4684,7 +4931,8 @@
     "mif": 8.2197,
     "tda": 5.0626,
     "quitas_castigos": 149.5302,
-    "eprc_cartera": 3.6537
+    "eprc_cartera": 3.6537,
+    "cartera_total_mmp": 5228.7134
   },
   {
     "fecha": "2021-08",
@@ -4704,7 +4952,8 @@
     "mif": 8.2172,
     "tda": 5.0931,
     "quitas_castigos": 149.5874,
-    "eprc_cartera": 3.6131
+    "eprc_cartera": 3.6131,
+    "cartera_total_mmp": 5223.3383
   },
   {
     "fecha": "2021-09",
@@ -4724,7 +4973,8 @@
     "mif": 8.2312,
     "tda": 5.1084,
     "quitas_castigos": 149.0325,
-    "eprc_cartera": 3.5348
+    "eprc_cartera": 3.5348,
+    "cartera_total_mmp": 5254.3782
   },
   {
     "fecha": "2021-10",
@@ -4744,7 +4994,8 @@
     "mif": 8.2175,
     "tda": 5.1076,
     "quitas_castigos": 148.6597,
-    "eprc_cartera": 3.4727
+    "eprc_cartera": 3.4727,
+    "cartera_total_mmp": 5292.1692
   },
   {
     "fecha": "2021-11",
@@ -4764,7 +5015,8 @@
     "mif": 8.1987,
     "tda": 5.0695,
     "quitas_castigos": 148.3338,
-    "eprc_cartera": 3.4376
+    "eprc_cartera": 3.4376,
+    "cartera_total_mmp": 5383.3667
   },
   {
     "fecha": "2021-12",
@@ -4784,7 +5036,8 @@
     "mif": 8.1729,
     "tda": 4.8922,
     "quitas_castigos": 141.0585,
-    "eprc_cartera": 3.2921
+    "eprc_cartera": 3.2921,
+    "cartera_total_mmp": 5415.6608
   },
   {
     "fecha": "2022-01",
@@ -4804,7 +5057,8 @@
     "mif": 8.1025,
     "tda": 4.8255,
     "quitas_castigos": 138.1063,
-    "eprc_cartera": 3.4985
+    "eprc_cartera": 3.4985,
+    "cartera_total_mmp": 5474.9828
   },
   {
     "fecha": "2022-02",
@@ -4824,7 +5078,8 @@
     "mif": 8.0408,
     "tda": 4.7151,
     "quitas_castigos": 132.8165,
-    "eprc_cartera": 3.4656
+    "eprc_cartera": 3.4656,
+    "cartera_total_mmp": 5488.9837
   },
   {
     "fecha": "2022-03",
@@ -4844,7 +5099,8 @@
     "mif": 7.9402,
     "tda": 4.5769,
     "quitas_castigos": 125.8983,
-    "eprc_cartera": 3.4337
+    "eprc_cartera": 3.4337,
+    "cartera_total_mmp": 5542.9118
   },
   {
     "fecha": "2022-04",
@@ -4864,7 +5120,8 @@
     "mif": 7.9181,
     "tda": 4.4595,
     "quitas_castigos": 120.413,
-    "eprc_cartera": 3.4001
+    "eprc_cartera": 3.4001,
+    "cartera_total_mmp": 5631.2094
   },
   {
     "fecha": "2022-05",
@@ -4884,7 +5141,8 @@
     "mif": 7.7672,
     "tda": 4.3849,
     "quitas_castigos": 117.4005,
-    "eprc_cartera": 3.3757
+    "eprc_cartera": 3.3757,
+    "cartera_total_mmp": 5682.5679
   },
   {
     "fecha": "2022-06",
@@ -4904,7 +5162,8 @@
     "mif": 7.7252,
     "tda": 4.3198,
     "quitas_castigos": 115.1252,
-    "eprc_cartera": 3.3326
+    "eprc_cartera": 3.3326,
+    "cartera_total_mmp": 5747.2329
   },
   {
     "fecha": "2022-07",
@@ -4924,7 +5183,8 @@
     "mif": 7.6634,
     "tda": 4.285,
     "quitas_castigos": 114.1535,
-    "eprc_cartera": 3.358
+    "eprc_cartera": 3.358,
+    "cartera_total_mmp": 5787.2047
   },
   {
     "fecha": "2022-08",
@@ -4944,7 +5204,8 @@
     "mif": 7.5675,
     "tda": 4.2222,
     "quitas_castigos": 111.8949,
-    "eprc_cartera": 3.3083
+    "eprc_cartera": 3.3083,
+    "cartera_total_mmp": 5805.9597
   },
   {
     "fecha": "2022-09",
@@ -4964,7 +5225,8 @@
     "mif": 7.4775,
     "tda": 4.1573,
     "quitas_castigos": 109.9526,
-    "eprc_cartera": 3.2205
+    "eprc_cartera": 3.2205,
+    "cartera_total_mmp": 5870.6676
   },
   {
     "fecha": "2022-10",
@@ -4984,7 +5246,8 @@
     "mif": 7.3731,
     "tda": 4.1344,
     "quitas_castigos": 110.1634,
-    "eprc_cartera": 3.246
+    "eprc_cartera": 3.246,
+    "cartera_total_mmp": 5978.9878
   },
   {
     "fecha": "2022-11",
@@ -5004,7 +5267,8 @@
     "mif": 7.2603,
     "tda": 4.1185,
     "quitas_castigos": 110.5266,
-    "eprc_cartera": 3.3083
+    "eprc_cartera": 3.3083,
+    "cartera_total_mmp": 6044.3178
   },
   {
     "fecha": "2022-12",
@@ -5024,7 +5288,8 @@
     "mif": 7.2445,
     "tda": 4.1142,
     "quitas_castigos": 111.2854,
-    "eprc_cartera": 3.2988
+    "eprc_cartera": 3.2988,
+    "cartera_total_mmp": 6094.7686
   },
   {
     "fecha": "2023-01",
@@ -5044,7 +5309,8 @@
     "mif": 7.2133,
     "tda": 4.0855,
     "quitas_castigos": 112.9639,
-    "eprc_cartera": 3.2919
+    "eprc_cartera": 3.2919,
+    "cartera_total_mmp": 6148.5108
   },
   {
     "fecha": "2023-02",
@@ -5064,7 +5330,8 @@
     "mif": 7.1729,
     "tda": 4.0521,
     "quitas_castigos": 114.1608,
-    "eprc_cartera": 3.3107
+    "eprc_cartera": 3.3107,
+    "cartera_total_mmp": 6183.7301
   },
   {
     "fecha": "2023-03",
@@ -5084,7 +5351,8 @@
     "mif": 7.1503,
     "tda": 4.0256,
     "quitas_castigos": 115.3816,
-    "eprc_cartera": 3.2905
+    "eprc_cartera": 3.2905,
+    "cartera_total_mmp": 6245.5505
   },
   {
     "fecha": "2023-04",
@@ -5104,7 +5372,8 @@
     "mif": 7.0654,
     "tda": 4.0058,
     "quitas_castigos": 116.6498,
-    "eprc_cartera": 3.2879
+    "eprc_cartera": 3.2879,
+    "cartera_total_mmp": 6294.1599
   },
   {
     "fecha": "2023-05",
@@ -5124,7 +5393,8 @@
     "mif": 7.0464,
     "tda": 4.0046,
     "quitas_castigos": 118.7311,
-    "eprc_cartera": 3.324
+    "eprc_cartera": 3.324,
+    "cartera_total_mmp": 6305.3793
   },
   {
     "fecha": "2023-06",
@@ -5144,7 +5414,8 @@
     "mif": 6.9598,
     "tda": 4.0134,
     "quitas_castigos": 120.866,
-    "eprc_cartera": 3.315
+    "eprc_cartera": 3.315,
+    "cartera_total_mmp": 6319.6455
   },
   {
     "fecha": "2023-07",
@@ -5164,7 +5435,8 @@
     "mif": 6.8956,
     "tda": 4.0084,
     "quitas_castigos": 122.2561,
-    "eprc_cartera": 3.3392
+    "eprc_cartera": 3.3392,
+    "cartera_total_mmp": 6421.7945
   },
   {
     "fecha": "2023-08",
@@ -5184,7 +5456,8 @@
     "mif": 6.8918,
     "tda": 4.025,
     "quitas_castigos": 124.7979,
-    "eprc_cartera": 3.3236
+    "eprc_cartera": 3.3236,
+    "cartera_total_mmp": 6465.3479
   },
   {
     "fecha": "2023-09",
@@ -5204,7 +5477,8 @@
     "mif": 6.8784,
     "tda": 4.0451,
     "quitas_castigos": 126.9888,
-    "eprc_cartera": 3.2442
+    "eprc_cartera": 3.2442,
+    "cartera_total_mmp": 6550.5214
   },
   {
     "fecha": "2023-10",
@@ -5224,7 +5498,8 @@
     "mif": 6.9123,
     "tda": 4.0736,
     "quitas_castigos": 129.5255,
-    "eprc_cartera": 3.2819
+    "eprc_cartera": 3.2819,
+    "cartera_total_mmp": 6610.1083
   },
   {
     "fecha": "2023-11",
@@ -5244,7 +5519,8 @@
     "mif": 6.8578,
     "tda": 4.1288,
     "quitas_castigos": 133.8167,
-    "eprc_cartera": 3.2954
+    "eprc_cartera": 3.2954,
+    "cartera_total_mmp": 6693.3353
   },
   {
     "fecha": "2023-12",
@@ -5264,7 +5540,8 @@
     "mif": 6.7436,
     "tda": 4.2015,
     "quitas_castigos": 139.8981,
-    "eprc_cartera": 3.2079
+    "eprc_cartera": 3.2079,
+    "cartera_total_mmp": 6689.8308
   },
   {
     "fecha": "2024-01",
@@ -5284,7 +5561,8 @@
     "mif": 6.7445,
     "tda": 4.2346,
     "quitas_castigos": 143.2003,
-    "eprc_cartera": 3.2214
+    "eprc_cartera": 3.2214,
+    "cartera_total_mmp": 6679.6576
   },
   {
     "fecha": "2024-02",
@@ -5304,7 +5582,8 @@
     "mif": 6.7641,
     "tda": 4.2968,
     "quitas_castigos": 148.5825,
-    "eprc_cartera": 3.2013
+    "eprc_cartera": 3.2013,
+    "cartera_total_mmp": 6699.9034
   },
   {
     "fecha": "2024-03",
@@ -5324,7 +5603,8 @@
     "mif": 6.7641,
     "tda": 4.3257,
     "quitas_castigos": 152.2468,
-    "eprc_cartera": 3.1705
+    "eprc_cartera": 3.1705,
+    "cartera_total_mmp": 6786.3547
   },
   {
     "fecha": "2024-04",
@@ -5344,7 +5624,8 @@
     "mif": 6.7561,
     "tda": 4.3538,
     "quitas_castigos": 155.868,
-    "eprc_cartera": 3.1656
+    "eprc_cartera": 3.1656,
+    "cartera_total_mmp": 6843.4992
   },
   {
     "fecha": "2024-05",
@@ -5364,7 +5645,8 @@
     "mif": 6.7817,
     "tda": 4.3506,
     "quitas_castigos": 157.6292,
-    "eprc_cartera": 3.1647
+    "eprc_cartera": 3.1647,
+    "cartera_total_mmp": 6920.0914
   },
   {
     "fecha": "2024-06",
@@ -5384,7 +5666,8 @@
     "mif": 6.8002,
     "tda": 4.3514,
     "quitas_castigos": 160.3339,
-    "eprc_cartera": 3.1303
+    "eprc_cartera": 3.1303,
+    "cartera_total_mmp": 7039.2688
   },
   {
     "fecha": "2024-07",
@@ -5404,7 +5687,8 @@
     "mif": 6.807,
     "tda": 4.3519,
     "quitas_castigos": 162.8307,
-    "eprc_cartera": 3.1522
+    "eprc_cartera": 3.1522,
+    "cartera_total_mmp": 7106.0242
   },
   {
     "fecha": "2024-08",
@@ -5424,7 +5708,8 @@
     "mif": 6.7614,
     "tda": 4.3332,
     "quitas_castigos": 163.6393,
-    "eprc_cartera": 3.1745
+    "eprc_cartera": 3.1745,
+    "cartera_total_mmp": 7230.4909
   },
   {
     "fecha": "2024-09",
@@ -5444,7 +5729,8 @@
     "mif": 6.7497,
     "tda": 4.3369,
     "quitas_castigos": 165.8144,
-    "eprc_cartera": 3.2115
+    "eprc_cartera": 3.2115,
+    "cartera_total_mmp": 7222.3154
   },
   {
     "fecha": "2024-10",
@@ -5464,7 +5750,8 @@
     "mif": 6.6967,
     "tda": 4.3339,
     "quitas_castigos": 167.6784,
-    "eprc_cartera": 3.2274
+    "eprc_cartera": 3.2274,
+    "cartera_total_mmp": 7295.8375
   },
   {
     "fecha": "2024-11",
@@ -5484,7 +5771,8 @@
     "mif": 6.7137,
     "tda": 4.318,
     "quitas_castigos": 168.9203,
-    "eprc_cartera": 3.1934
+    "eprc_cartera": 3.1934,
+    "cartera_total_mmp": 7437.3075
   },
   {
     "fecha": "2024-12",
@@ -5504,7 +5792,8 @@
     "mif": 6.719,
     "tda": 4.2909,
     "quitas_castigos": 168.9339,
-    "eprc_cartera": 3.1606
+    "eprc_cartera": 3.1606,
+    "cartera_total_mmp": 7515.6699
   },
   {
     "fecha": "2025-01",
@@ -5524,7 +5813,8 @@
     "mif": 6.6575,
     "tda": 4.2976,
     "quitas_castigos": 171.8116,
-    "eprc_cartera": 3.1526
+    "eprc_cartera": 3.1526,
+    "cartera_total_mmp": 7573.5969
   },
   {
     "fecha": "2025-02",
@@ -5544,7 +5834,8 @@
     "mif": 6.6061,
     "tda": 4.2597,
     "quitas_castigos": 171.017,
-    "eprc_cartera": 3.1659
+    "eprc_cartera": 3.1659,
+    "cartera_total_mmp": 7596.3987
   },
   {
     "fecha": "2025-03",
@@ -5564,7 +5855,8 @@
     "mif": 6.6073,
     "tda": 4.2586,
     "quitas_castigos": 172.6111,
-    "eprc_cartera": 3.1608
+    "eprc_cartera": 3.1608,
+    "cartera_total_mmp": 7650.3074
   },
   {
     "fecha": "2025-04",
@@ -5584,7 +5876,8 @@
     "mif": 6.5711,
     "tda": 4.2445,
     "quitas_castigos": 172.8702,
-    "eprc_cartera": 3.1815
+    "eprc_cartera": 3.1815,
+    "cartera_total_mmp": 7649.5238
   },
   {
     "fecha": "2025-05",
@@ -5604,7 +5897,8 @@
     "mif": 6.5847,
     "tda": 4.2581,
     "quitas_castigos": 175.1965,
-    "eprc_cartera": 3.2019
+    "eprc_cartera": 3.2019,
+    "cartera_total_mmp": 7699.7478
   },
   {
     "fecha": "2025-06",
@@ -5624,7 +5918,8 @@
     "mif": 6.5892,
     "tda": 4.2859,
     "quitas_castigos": 177.9007,
-    "eprc_cartera": 3.2001
+    "eprc_cartera": 3.2001,
+    "cartera_total_mmp": 7668.0765
   },
   {
     "fecha": "2025-07",
@@ -5644,7 +5939,8 @@
     "mif": 6.6258,
     "tda": 4.3073,
     "quitas_castigos": 180.0487,
-    "eprc_cartera": 3.2149
+    "eprc_cartera": 3.2149,
+    "cartera_total_mmp": 7709.951
   },
   {
     "fecha": "2025-08",
@@ -5664,7 +5960,8 @@
     "mif": 6.6924,
     "tda": 4.3376,
     "quitas_castigos": 182.6737,
-    "eprc_cartera": 3.243
+    "eprc_cartera": 3.243,
+    "cartera_total_mmp": 7727.228
   },
   {
     "fecha": "2025-09",
@@ -5684,7 +5981,8 @@
     "mif": 6.7544,
     "tda": 4.3694,
     "quitas_castigos": 185.0292,
-    "eprc_cartera": 3.31
+    "eprc_cartera": 3.31,
+    "cartera_total_mmp": 7732.7407
   },
   {
     "fecha": "2025-10",
@@ -5704,7 +6002,8 @@
     "mif": 6.8232,
     "tda": 4.4085,
     "quitas_castigos": 187.9687,
-    "eprc_cartera": 3.3224
+    "eprc_cartera": 3.3224,
+    "cartera_total_mmp": 7807.0201
   },
   {
     "fecha": "2025-11",
@@ -5724,7 +6023,8 @@
     "mif": 6.9126,
     "tda": 4.4533,
     "quitas_castigos": 191.2609,
-    "eprc_cartera": 3.2884
+    "eprc_cartera": 3.2884,
+    "cartera_total_mmp": 7914.1904
   },
   {
     "fecha": "2025-12",
@@ -5744,7 +6044,8 @@
     "mif": 6.9948,
     "tda": 4.5094,
     "quitas_castigos": 195.8946,
-    "eprc_cartera": 3.2299
+    "eprc_cartera": 3.2299,
+    "cartera_total_mmp": 8045.0128
   },
   {
     "fecha": "2026-01",
@@ -5764,7 +6065,8 @@
     "mif": 7.0942,
     "tda": 4.5261,
     "quitas_castigos": 196.7909,
-    "eprc_cartera": 3.2547
+    "eprc_cartera": 3.2547,
+    "cartera_total_mmp": 8033.104
   },
   {
     "fecha": "2026-02",
@@ -5784,7 +6086,8 @@
     "mif": 7.1867,
     "tda": 4.5709,
     "quitas_castigos": 200.1318,
-    "eprc_cartera": 3.3144
+    "eprc_cartera": 3.3144,
+    "cartera_total_mmp": 8098.2949
   },
   {
     "fecha": "2026-03",
@@ -5804,6 +6107,7 @@
     "mif": 7.2565,
     "tda": 4.5931,
     "quitas_castigos": 201.6557,
-    "eprc_cartera": 3.3133
+    "eprc_cartera": 3.3133,
+    "cartera_total_mmp": 8204.4255
   }
 ]

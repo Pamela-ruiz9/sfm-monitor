@@ -104,6 +104,15 @@ CONCEPT_MAP_EXTRA = {
 # established. Treat any raw ratio >= 0.99 as missing for these concepts.
 ARTIFACT_CONCEPTS = {"40200056"}
 
+# Balance sheet concepts: idconcepto → (indicator_name, multiplier)
+# These require filtering to saldo='130' (pesos) to avoid double-counting the
+# saldo='133' (alternate denomination) row that CNBV emits for the same period.
+# 40100185 = "Cartera de crédito con riesgo de crédito" — cat_conceptos_40.csv nivel 2
+BALANCE_CONCEPT_MAP = {
+    "cartera_total_mmp": ("40100185", 1e-9),  # pesos → miles de millones (MMP)
+}
+BALANCE_CONCEPT_IDS = {c for c, _ in BALANCE_CONCEPT_MAP.values()}
+
 
 # ──────────────────────────────────────────────
 # SoFiPOs concept mapping — sh_datos_27.csv
@@ -149,7 +158,7 @@ def extract_cnbv() -> None:
         sys.exit(1)
 
     all_concepts = set(CONCEPT_MAP.values()) | set(CONCEPT_MAP_EXTRA.values())
-    needed_ids = {c for c, _ in all_concepts}
+    needed_ids = {c for c, _ in all_concepts} | BALANCE_CONCEPT_IDS
 
     print(f"📂 Reading {src}  ({os.path.getsize(src) / 1024 / 1024:.1f} MB) ...")
     print("   Filtering entidad='5' — this may take 30-60 seconds ...")
@@ -163,6 +172,9 @@ def extract_cnbv() -> None:
                 continue
             concept = row["idconcepto"]
             if concept not in needed_ids:
+                continue
+            # Balance sheet concepts: only take saldo='130' (pesos) row
+            if concept in BALANCE_CONCEPT_IDS and row.get("saldo", "").strip() != "130":
                 continue
             p = row["periodo"]
             val = safe_float(row["valor"])
@@ -190,6 +202,10 @@ def extract_cnbv() -> None:
             if val is not None:
                 row[ind] = round(val * mult, 4)
         for ind, (concept, mult) in CONCEPT_MAP_EXTRA.items():
+            val = data.get(concept)
+            if val is not None:
+                row[ind] = round(val * mult, 4)
+        for ind, (concept, mult) in BALANCE_CONCEPT_MAP.items():
             val = data.get(concept)
             if val is not None:
                 row[ind] = round(val * mult, 4)
