@@ -1,0 +1,163 @@
+---
+import { Home, Thermometer, Building2, TrendingUp, BookOpen } from 'lucide-react';
+import SfmLogo from '~/components/shell/SfmLogo.astro';
+import { SidebarToggle } from '~/components/shell/SidebarToggle';
+import { DataFreshnessBadge } from '~/components/DataFreshnessBadge';
+import { loadSfmData } from '~/data/loader';
+
+const data = loadSfmData();
+const lastUpdated = data.ultima_actualizacion;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const path = Astro.url.pathname;
+
+const TABS = [
+  {
+    href: `${base}/`,
+    label: 'Resumen',
+    sub: 'FX · Tasas',
+    match: new RegExp(`^${base}\\/?$`),
+    Icon: Home,
+  },
+  {
+    href: `${base}/riesgo`,
+    label: 'Riesgo Sistémico',
+    sub: 'Heatmap',
+    match: new RegExp(`^${base}/riesgo`),
+    Icon: Thermometer,
+  },
+  {
+    href: `${base}/instituciones`,
+    label: 'Instituciones',
+    sub: 'Banca · SoFiPOs',
+    match: new RegExp(`^${base}/instituciones`),
+    Icon: Building2,
+  },
+  {
+    href: `${base}/macro`,
+    label: 'Macro',
+    sub: 'PIB · IGAE',
+    match: new RegExp(`^${base}/macro`),
+    Icon: TrendingUp,
+  },
+  {
+    href: `${base}/metodologia`,
+    label: 'Metodología',
+    sub: undefined,
+    match: new RegExp(`^${base}/metodologia`),
+    Icon: BookOpen,
+  },
+] as const;
+---
+
+<aside
+  data-sidebar
+  data-collapsed="false"
+  class="sidebar flex flex-col border-r border-(--color-border) sticky top-0 h-screen overflow-y-auto overflow-x-hidden bg-(--color-bg)"
+>
+  <!-- Logo row + toggle -->
+  <div class="sidebar-header flex items-center justify-between gap-2 px-3 py-4 border-b border-(--color-border)">
+    <a
+      href={`${base}/`}
+      data-astro-prefetch
+      class="sidebar-logo-full min-w-0 overflow-hidden"
+      aria-label="SFM Monitor — inicio"
+    >
+      <SfmLogo variant="horizontal" size="md" showSubtitle />
+    </a>
+    <a
+      href={`${base}/`}
+      data-astro-prefetch
+      class="sidebar-logo-icon hidden"
+      aria-label="SFM Monitor — inicio"
+    >
+      <SfmLogo variant="icon" size="sm" />
+    </a>
+    <SidebarToggle client:load />
+  </div>
+
+  <!-- Project description -->
+  <div class="sidebar-desc px-4 py-3 border-b border-(--color-border-soft)">
+    <p class="text-[11px] text-(--color-text-mute) leading-relaxed">
+      Indicadores de riesgo del sistema financiero mexicano. Datos de Banxico SIE, CNBV e INEGI.
+    </p>
+    <a
+      href={`${base}/metodologia`}
+      class="text-[11px] text-(--color-accent) hover:underline mt-1 inline-block"
+      data-astro-prefetch
+    >
+      Metodología →
+    </a>
+  </div>
+
+  <!-- Nav links -->
+  <nav aria-label="Secciones del dashboard" class="flex-1 py-2">
+    {
+      TABS.map(({ href, label, sub, match, Icon }) => {
+        const active = match.test(path);
+        return (
+          <a
+            href={href}
+            data-astro-prefetch
+            aria-current={active ? 'page' : undefined}
+            class:list={[
+              'nav-link flex items-center gap-3 px-3 py-2.5 mx-1 rounded-md transition-colors group relative',
+              active
+                ? 'bg-(--color-bg-elev) text-(--color-text) font-medium sidebar-active'
+                : 'text-(--color-text-mute) hover:text-(--color-text) hover:bg-(--color-bg-elev)',
+            ]}
+            title={label}
+          >
+            <Icon className="size-4 shrink-0" aria-hidden="true" />
+            <span class="sidebar-label flex flex-col leading-tight min-w-0">
+              <span class="truncate text-sm">{label}</span>
+              {sub && (
+                <span class="sidebar-subnav text-[10px] font-normal text-(--color-text-mute) truncate">
+                  {sub}
+                </span>
+              )}
+            </span>
+          </a>
+        );
+      })
+    }
+  </nav>
+
+  <!-- Data freshness badge at bottom -->
+  <div class="sidebar-badge px-3 py-3 border-t border-(--color-border-soft)">
+    <DataFreshnessBadge source="Banxico" lastUpdated={lastUpdated} client:load />
+  </div>
+</aside>
+
+<style is:global>
+  /* Collapsed state — controlled by SidebarToggle via data-collapsed attr */
+  [data-sidebar][data-collapsed="true"] .sidebar-desc,
+  [data-sidebar][data-collapsed="true"] .sidebar-label,
+  [data-sidebar][data-collapsed="true"] .sidebar-badge {
+    display: none;
+  }
+
+  [data-sidebar][data-collapsed="true"] .sidebar-logo-full {
+    display: none;
+  }
+  [data-sidebar][data-collapsed="true"] .sidebar-logo-icon {
+    display: block;
+  }
+
+  [data-sidebar][data-collapsed="true"] .nav-link {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Active indicator — left border */
+  .sidebar-active {
+    border-left: 2px solid var(--color-accent);
+    padding-left: calc(0.75rem - 2px);
+  }
+
+  [data-sidebar][data-collapsed="true"] .sidebar-active {
+    border-left: none;
+    padding-left: 0;
+  }
+</style>
