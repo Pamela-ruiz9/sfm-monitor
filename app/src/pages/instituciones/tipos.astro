@@ -1,0 +1,48 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
+import Header from '~/components/shell/Header.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import { SfmVennDiagram } from '~/components/SfmVennDiagram';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
+---
+
+<Layout
+  title="Tipos de Instituciones"
+  description="13 tipos de instituciones del Sistema Financiero Mexicano: regulador, ley aplicable y capacidades de captación, crédito y mercado de valores."
+  jsonLd={datasetJsonLd({
+    name: 'Mapa del Sistema Financiero Mexicano — Tipos de instituciones',
+    description: '13 tipos de instituciones financieras mexicanas clasificadas por capacidades: captar ahorro, otorgar crédito, operar en mercado de valores.',
+    path: '/instituciones/tipos',
+    keywords: ['banca múltiple', 'SoFiPOs', 'SOFOM', 'CNBV', 'Banxico', 'sistema financiero'],
+  })}>
+  <Header slot="header" />
+
+  <div class="space-y-6">
+    <Section
+      id="venn-sfm"
+      eyebrow="Mapa del sistema"
+      title="¿Qué tipo de institución es esta?"
+      description="13 tipos de instituciones del Sistema Financiero Mexicano según sus capacidades: captar ahorro, otorgar crédito y operar en mercado de valores. Toca cualquier nodo para ver regulador, ley aplicable y ejemplos."
+      source="CNBV · Banxico · CONSAR · CNSF · Ley Fintech 2018"
+      tone="gold">
+      <SfmVennDiagram client:visible />
+    </Section>
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
+  <BottomNav slot="bottom-nav" />
+</Layout>
