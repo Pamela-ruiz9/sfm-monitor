@@ -95,24 +95,35 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3, porSegmento, porBan
       },
     ];
   } else {
-    // Vista por segmento — E2/E3 % de esa cartera (no apilado)
+    // Vista por segmento — E1/E2/E3 apilado igual que sistema
     const seg = porSegmento[vistaSegmento];
-    yStacked = false;
-    yMax = 15;
+    yStacked = true;
+    yMax = 100;
     datasets = [
       {
         label: 'Stage 3',
         data: labels.map((_, i) => seg.etapa3_pct[i] ?? null),
         borderColor: '#f85149',
-        backgroundColor: 'rgba(248, 81, 73, 0.15)',
-        fill: true, tension: 0.2, pointRadius: 0, pointHoverRadius: 4, borderWidth: 2, order: 1, spanGaps: true,
+        backgroundColor: 'rgba(248, 81, 73, 0.5)',
+        fill: true, tension: 0.1, pointRadius: 0, pointHoverRadius: 4, borderWidth: 1.5, order: 1, spanGaps: true,
       },
       {
         label: 'Stage 2',
         data: labels.map((_, i) => seg.etapa2_pct[i] ?? null),
         borderColor: '#d29922',
-        backgroundColor: 'rgba(210, 153, 34, 0.15)',
-        fill: true, tension: 0.2, pointRadius: 0, pointHoverRadius: 4, borderWidth: 2, order: 2, spanGaps: true,
+        backgroundColor: 'rgba(210, 153, 34, 0.5)',
+        fill: true, tension: 0.1, pointRadius: 0, pointHoverRadius: 4, borderWidth: 1.5, order: 2, spanGaps: true,
+      },
+      {
+        label: 'Stage 1',
+        data: labels.map((_, i) => {
+          const e2 = seg.etapa2_pct[i] ?? null;
+          const e3 = seg.etapa3_pct[i] ?? null;
+          return e2 != null && e3 != null ? Math.max(0, 100 - e2 - e3) : null;
+        }),
+        borderColor: '#3fb950',
+        backgroundColor: 'rgba(63, 185, 80, 0.5)',
+        fill: true, tension: 0.1, pointRadius: 0, pointHoverRadius: 4, borderWidth: 1.5, order: 3, spanGaps: true,
       },
     ];
   }
@@ -145,12 +156,6 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3, porSegmento, porBan
           </div>
         )}
       </div>
-
-      {vistaSegmento !== 'sistema' && !bancoSeleccionado && (
-        <p className="text-[10px] text-(--color-text-mute) mb-2">
-          % de la cartera {vistaSegmento} en cada Stage (Stage 1 = 100% − E2 − E3)
-        </p>
-      )}
 
       <div className="h-64 md:h-72 -mx-1">
         <Line

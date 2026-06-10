@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useState, useEffect } from 'react';
 
 interface Props {
   source: string;
@@ -18,16 +18,32 @@ function parseDdmmyyyy(s: string): Date | null {
 }
 
 export function DataFreshnessBadge({ source, lastUpdated }: Props) {
-  const { dotClass, label } = useMemo(() => {
+  const [ageH, setAgeH] = useState<number | null>(null);
+
+  useEffect(() => {
     const date = parseDdmmyyyy(lastUpdated);
-    if (!date) return { dotClass: 'bg-(--color-text-mute)', label: 'sin fecha' };
-    const ageH = (Date.now() - date.getTime()) / (1000 * 60 * 60);
-    if (ageH < 24)
-      return { dotClass: 'bg-(--color-green)', label: 'fresco' };
-    if (ageH < 72)
-      return { dotClass: 'bg-(--color-yellow)', label: 'reciente' };
-    return { dotClass: 'bg-(--color-red)', label: 'desactualizado' };
+    if (!date) { setAgeH(-1); return; }
+    setAgeH((Date.now() - date.getTime()) / (1000 * 60 * 60));
   }, [lastUpdated]);
+
+  let dotClass: string;
+  let label: string;
+  if (ageH === null) {
+    dotClass = 'bg-(--color-text-mute)';
+    label = '…';
+  } else if (ageH < 0) {
+    dotClass = 'bg-(--color-text-mute)';
+    label = 'sin fecha';
+  } else if (ageH < 24) {
+    dotClass = 'bg-(--color-green)';
+    label = 'fresco';
+  } else if (ageH < 72) {
+    dotClass = 'bg-(--color-yellow)';
+    label = 'reciente';
+  } else {
+    dotClass = 'bg-(--color-red)';
+    label = 'desactualizado';
+  }
 
   return (
     <span

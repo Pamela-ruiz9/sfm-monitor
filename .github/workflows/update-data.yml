@@ -116,7 +116,8 @@ jobs:
 
           # 3. Inflación: general SP1, subyacente SP74625, no subyacente SP74627
           # Nota: SP74625 era incorrecto como proxy del INPC general — se corrige a SP1
-          infl_window = (date.today() - timedelta(days=760)).strftime("%Y-%m-%d")
+          # Ventana de 7.5 años para obtener ~6.5 años de variación anual (necesario para botones 1A/3A/5A)
+          infl_window = (date.today() - timedelta(days=2740)).strftime("%Y-%m-%d")
           infl_anual   = calc_yoy(fetch("SP1",     infl_window))
           infl_sub     = calc_yoy(fetch("SP74625", infl_window))
           infl_nosub   = calc_yoy(fetch("SP74627", infl_window))
@@ -165,9 +166,9 @@ jobs:
                   prev = x["dato"]
           print(f"{'✅' if salmin_changes else '⚠️ '} Salario mínimo: {salmin_changes[-1]['valor'] if salmin_changes else 'N/D'} ({salmin_changes[-1]['fecha'] if salmin_changes else 'serie SR17358 sin datos válidos — verificar ID en BIE'})")
 
-          # 9. Remesas familiares (SE67516 — USD millones, mensual)
-          # Si falla: buscar "Ingresos por remesas" en Banxico SIE y actualizar clave
-          remesas_raw = safe_fetch("SE67516", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))
+          # 9. Remesas familiares — Banxico SIE SE27803 (Ingresos por remesas, USD millones mensual)
+          # SE67516 descartada (retorna 404) — issue #106
+          remesas_raw = safe_fetch("SE27803", (date.today() - timedelta(days=730)).strftime("%Y-%m-%d"))
           remesas_macro = []
           for x in remesas_raw:
               val = parse_dato(x.get("dato"))
@@ -309,9 +310,9 @@ jobs:
               "inflacion": {
                   "actual": infl_anual[-1]["var_anual"] if infl_anual else None,
                   "fecha": banxico_to_iso(infl_anual[-1]["fecha"]) if infl_anual else None,
-                  "historico_mensual":      [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_anual[-24:]],
-                  "subyacente_mensual":     [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_sub[-24:]],
-                  "no_subyacente_mensual":  [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_nosub[-24:]]
+                  "historico_mensual":      [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_anual[-72:]],
+                  "subyacente_mensual":     [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_sub[-72:]],
+                  "no_subyacente_mensual":  [{"mes": banxico_to_iso(x["fecha"])[:7], "fecha": banxico_to_iso(x["fecha"]), "valor": x["var_anual"]} for x in infl_nosub[-72:]]
               }
           }
 
