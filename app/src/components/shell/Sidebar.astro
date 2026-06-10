@@ -51,6 +51,21 @@ const TABS = [
 
 const isInstituciones = path.startsWith(`${base}/instituciones`);
 
+const isMacro = path.startsWith(`${base}/macro`);
+
+const MACRO_SUBNAV = [
+  {
+    href: `${base}/macro`,
+    label: 'Indicadores',
+    match: new RegExp(`^${base}/macro$`),
+  },
+  {
+    href: `${base}/macro/noticias`,
+    label: 'Noticias & Impacto',
+    match: new RegExp(`^${base}/macro/noticias`),
+  },
+];
+
 const SUBNAV = [
   {
     href: `${base}/instituciones/tipos`,
@@ -173,6 +188,24 @@ const SUBNAV = [
                         {item.label}
                       </a>
                     </>
+                  );
+                })}
+              </div>
+            )}
+            {href.includes('/macro') && isMacro && (
+              <div class="instituciones-subnav mx-1 mb-1">
+                {MACRO_SUBNAV.map((item) => {
+                  const subActive = item.match.test(path);
+                  return (
+                    <a
+                      href={item.href}
+                      data-astro-prefetch
+                      aria-current={subActive ? 'page' : undefined}
+                      class:list={['subnav-item', subActive && 'subnav-active']}
+                    >
+                      <span class="subnav-dot" aria-hidden="true" />
+                      {item.label}
+                    </a>
                   );
                 })}
               </div>

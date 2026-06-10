@@ -23,7 +23,10 @@ const TAB_TO_PATH: Record<TabId, string> = {
 };
 
 function pathToTab(path: string): TabId {
-  return PATH_TO_TAB[path] ?? 'resumen';
+  if (path in PATH_TO_TAB) return PATH_TO_TAB[path as keyof typeof PATH_TO_TAB]!;
+  if (path.startsWith('/macro/')) return 'macro';
+  if (path.startsWith('/instituciones/')) return 'instituciones';
+  return 'resumen';
 }
 
 export const $activeTab = atom<TabId>(
