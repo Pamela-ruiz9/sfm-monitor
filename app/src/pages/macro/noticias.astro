@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
+import Header from '~/components/shell/Header.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
+import { ContextoBanda } from '~/components/noticias/ContextoBanda';
+import { NoticiasFeed } from '~/components/noticias/NoticiasFeed';
+---
+
+<Layout
+  title="Noticias & Impacto Macro"
+  description="Feed de eventos macroeconómicos relevantes para el Sistema Financiero Mexicano, con análisis de impacto sobre mora, liquidez, solvencia y rentabilidad."
+  jsonLd={datasetJsonLd({
+    name: 'Noticias & Impacto Macro — SFM Monitor',
+    description: 'Eventos macro globales y México con análisis de impacto en los ejes del SFM.',
+    path: '/macro/noticias',
+    keywords: ['noticias', 'macro', 'Fed', 'TIIE', 'aranceles', 'SFM', 'impacto financiero'],
+  })}
+>
+  <Header slot="header" />
+
+  <div class="space-y-4">
+    <EditorialHeadline
+      eyebrow="Macro · Noticias"
+      headline="Eventos que mueven el Sistema Financiero Mexicano."
+    />
+    <p class="text-sm text-(--color-text-mute) -mt-2 max-w-2xl">
+      Feed en tiempo real de Watchboard. El análisis de impacto es estimativo y no predictivo.
+    </p>
+
+    <Section id="noticias-contexto" title="Contexto global">
+      <ContextoBanda client:load />
+    </Section>
+
+    <Section id="noticias-feed" title="Eventos recientes">
+      <NoticiasFeed client:load />
+    </Section>
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
+
+  <BottomNav slot="bottom-nav" />
+</Layout>
