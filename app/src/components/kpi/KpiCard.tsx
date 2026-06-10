@@ -28,10 +28,10 @@ interface Props {
 }
 
 const VALUE_COLOR: Record<Tone, string> = {
-  gold: 'text-[--color-gold]',
-  green: 'text-[--color-green]',
-  yellow: 'text-[--color-yellow]',
-  red: 'text-[--color-red]',
+  gold: 'text-(--color-gold)',
+  green: 'text-(--color-green)',
+  yellow: 'text-(--color-yellow)',
+  red: 'text-(--color-red)',
 };
 
 function deltaIcon(d: NonNullable<Props['delta']>): {
@@ -39,14 +39,14 @@ function deltaIcon(d: NonNullable<Props['delta']>): {
   Icon: LucideIcon;
 } {
   if (d.direction === 'flat') {
-    return { color: 'text-[--color-text-mute]', Icon: Minus };
+    return { color: 'text-(--color-text-mute)', Icon: Minus };
   }
   const upIsGood = d.upIsGood ?? true;
   const isGood =
     (d.direction === 'up' && upIsGood) ||
     (d.direction === 'down' && !upIsGood);
   return {
-    color: isGood ? 'text-[--color-green]' : 'text-[--color-red]',
+    color: isGood ? 'text-(--color-green)' : 'text-(--color-red)',
     Icon: d.direction === 'up' ? ArrowUpRight : ArrowDownRight,
   };
 }
@@ -78,20 +78,20 @@ export function KpiCard({
       }
       className={cn(
         'card-surface group relative block p-5 transition-all',
-        href && 'hover:border-[--color-accent] hover:translate-y-[-1px]',
+        href && 'hover:border-(--color-accent) hover:translate-y-[-1px]',
       )}>
       <div className="flex items-start justify-between gap-3">
         <div>
-          <div className="text-[10px] font-medium uppercase tracking-[0.12em] text-[--color-text-mute]">
+          <div className="text-[10px] font-medium uppercase tracking-[0.12em] text-(--color-text-mute)">
             {label}
           </div>
           {asOf && (
-            <div className="text-[10px] text-[--color-text-mute]/70 mt-0.5">
+            <div className="text-[10px] text-(--color-text-mute)/70 mt-0.5">
               {asOf}
             </div>
           )}
         </div>
-        {iconName && ICON_MAP[iconName] && (() => { const Icon = ICON_MAP[iconName]; return <Icon className="size-4 text-[--color-text-mute] group-hover:text-[--color-accent] transition-colors" aria-hidden="true" />; })()}
+        {iconName && ICON_MAP[iconName] && (() => { const Icon = ICON_MAP[iconName]; return <Icon className="size-4 text-(--color-text-mute) group-hover:text-(--color-accent) transition-colors" aria-hidden="true" />; })()}
       </div>
 
       <div className="mt-3 flex items-baseline gap-1.5">
@@ -103,7 +103,7 @@ export function KpiCard({
           {value}
         </span>
         {unit && (
-          <span className="text-sm text-[--color-text-dim]">{unit}</span>
+          <span className="text-sm text-(--color-text-dim)">{unit}</span>
         )}
       </div>
 
@@ -117,7 +117,7 @@ export function KpiCard({
                 <span className={cn('font-medium tabular', d.color)}>
                   {delta.label}
                 </span>
-                <span className="text-[--color-text-mute]">vs anterior</span>
+                <span className="text-(--color-text-mute)">vs anterior</span>
               </>
             );
           })()}

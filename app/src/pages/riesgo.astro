@@ -62,15 +62,15 @@ const dimensions = [
 ] satisfies { label: string; tone: Tone; value: string; detail: string }[];
 
 const PILL_DOT: Record<Tone, string> = {
-  green: 'bg-[--color-green]',
-  yellow: 'bg-[--color-yellow]',
-  red: 'bg-[--color-red]',
+  green: 'bg-(--color-green)',
+  yellow: 'bg-(--color-yellow)',
+  red: 'bg-(--color-red)',
 };
 
 const PILL_TEXT: Record<Tone, string> = {
-  green: 'text-[--color-green]',
-  yellow: 'text-[--color-yellow]',
-  red: 'text-[--color-red]',
+  green: 'text-(--color-green)',
+  yellow: 'text-(--color-yellow)',
+  red: 'text-(--color-red)',
 };
 ---
 
@@ -89,18 +89,18 @@ const PILL_TEXT: Record<Tone, string> = {
   <div class="space-y-8">
     <!-- Page header -->
     <div class="space-y-2">
-      <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[--color-accent]">
+      <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-(--color-accent)">
         Riesgo Sistémico
       </p>
-      <h1 class="serif font-semibold text-[clamp(1.8rem,4vw,2.8rem)] leading-tight text-[--color-text]">
+      <h1 class="serif font-semibold text-[clamp(1.8rem,4vw,2.8rem)] leading-tight text-(--color-text)">
         Heatmap del Sistema Financiero
       </h1>
-      <p class="text-sm text-[--color-text-dim] max-w-3xl leading-relaxed">
+      <p class="text-sm text-(--color-text-dim) max-w-3xl leading-relaxed">
         Mapa térmico multidimensional basado en percentiles históricos rolling.
         Verde = riesgo bajo, Rojo = riesgo elevado.
         Metodología inspirada en el Mapa Térmico de Riesgos del
         <a href="https://www.banxico.org.mx/publicaciones-y-prensa/reportes-sobre-el-sistema-financiero/reportes-sistema-financiero.html"
-           class="text-[--color-accent] hover:underline" target="_blank" rel="noopener">
+           class="text-(--color-accent) hover:underline" target="_blank" rel="noopener">
           REF Banxico
         </a> (Recuadro 3, oct 2018) y el ESRB Risk Dashboard.
       </p>
@@ -109,13 +109,13 @@ const PILL_TEXT: Record<Tone, string> = {
     <!-- Dimension summary pills -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
       {dimensions.map((d) => (
-        <div class="rounded-lg border border-[--color-border] bg-[--color-bg-elev] p-3 space-y-1.5">
+        <div class="rounded-lg border border-(--color-border) bg-(--color-bg-elev) p-3 space-y-1.5">
           <div class="flex items-center gap-1.5">
             <span class={`size-2 rounded-full ${PILL_DOT[d.tone]}`} aria-hidden="true" />
-            <span class="text-[10px] font-semibold uppercase tracking-wider text-[--color-text-mute]">{d.label}</span>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-(--color-text-mute)">{d.label}</span>
           </div>
           <div class={`serif font-semibold text-xl tabular-nums ${PILL_TEXT[d.tone]}`}>{d.value}</div>
-          <div class="text-[10px] text-[--color-text-mute] leading-snug">{d.detail}</div>
+          <div class="text-[10px] text-(--color-text-mute) leading-snug">{d.detail}</div>
         </div>
       ))}
     </div>
@@ -131,9 +131,9 @@ const PILL_TEXT: Record<Tone, string> = {
     </Section>
 
     <!-- Methodology note -->
-    <div class="rounded-lg border border-[--color-border] bg-[--color-bg-elev] p-4 space-y-2">
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-[--color-text-dim]">Nota metodológica</h3>
-      <ul class="text-[11px] text-[--color-text-mute] space-y-1 leading-relaxed list-disc list-inside">
+    <div class="rounded-lg border border-(--color-border) bg-(--color-bg-elev) p-4 space-y-2">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-(--color-text-dim)">Nota metodológica</h3>
+      <ul class="text-[11px] text-(--color-text-mute) space-y-1 leading-relaxed list-disc list-inside">
         <li>Percentil calculado con función de distribución empírica rank-based (CDF empírica), siguiendo metodología CISS del BCE (Hollo, Kremer & Lo Duca, 2012).</li>
         <li>El percentil es <em>rolling</em>: cada mes se calcula sobre todos los datos históricos disponibles hasta ese punto (sin look-ahead bias).</li>
         <li>Para indicadores donde <strong>mayor valor = menor riesgo</strong> (ROA, ROE, Reservas Internacionales), el percentil se invierte (100 − p).</li>

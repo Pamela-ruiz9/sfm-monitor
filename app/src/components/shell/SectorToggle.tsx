@@ -13,8 +13,8 @@ function pillClass(active: boolean): string {
   return cn(
     'flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-lg border transition-colors',
     active
-      ? 'bg-[--color-gold-soft] text-[--color-gold] border-[--color-gold]/40'
-      : 'text-[--color-text-mute] border-[--color-border] hover:text-[--color-text-dim] hover:border-[--color-border-soft]',
+      ? 'bg-(--color-gold-soft) text-(--color-gold) border-(--color-gold)/40'
+      : 'text-(--color-text-mute) border-(--color-border) hover:text-(--color-text-dim) hover:border-(--color-border-soft)',
   );
 }
 

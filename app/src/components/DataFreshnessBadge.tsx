@@ -20,18 +20,18 @@ function parseDdmmyyyy(s: string): Date | null {
 export function DataFreshnessBadge({ source, lastUpdated }: Props) {
   const { dotClass, label } = useMemo(() => {
     const date = parseDdmmyyyy(lastUpdated);
-    if (!date) return { dotClass: 'bg-[--color-text-mute]', label: 'sin fecha' };
+    if (!date) return { dotClass: 'bg-(--color-text-mute)', label: 'sin fecha' };
     const ageH = (Date.now() - date.getTime()) / (1000 * 60 * 60);
     if (ageH < 24)
-      return { dotClass: 'bg-[--color-green]', label: 'fresco' };
+      return { dotClass: 'bg-(--color-green)', label: 'fresco' };
     if (ageH < 72)
-      return { dotClass: 'bg-[--color-yellow]', label: 'reciente' };
-    return { dotClass: 'bg-[--color-red]', label: 'desactualizado' };
+      return { dotClass: 'bg-(--color-yellow)', label: 'reciente' };
+    return { dotClass: 'bg-(--color-red)', label: 'desactualizado' };
   }, [lastUpdated]);
 
   return (
     <span
-      className="inline-flex items-center gap-2 text-[11px] text-[--color-text-mute]"
+      className="inline-flex items-center gap-2 text-[11px] text-(--color-text-mute)"
       aria-live="polite">
       <span
         className={`inline-block w-2 h-2 rounded-full ${dotClass}`}

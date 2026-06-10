@@ -8,7 +8,7 @@ const lastUpdated = data.ultima_actualizacion;
 ---
 
 <header
-  class="sticky top-0 z-40 border-b border-[--color-border] backdrop-blur-md"
+  class="sticky top-0 z-40 border-b border-(--color-border) backdrop-blur-md"
   style="background: linear-gradient(180deg, rgba(13,17,23,0.92), rgba(13,17,23,0.78))">
   <div class="max-w-7xl mx-auto px-4 lg:px-6 h-14 flex items-center justify-between gap-3">
     <a
@@ -17,7 +17,7 @@ const lastUpdated = data.ultima_actualizacion;
       aria-label="SFM Monitor — inicio"
       data-astro-prefetch>
       <SfmLogo variant="horizontal" size="md" />
-      <span class="text-[10px] text-[--color-text-mute] ml-2 hidden sm:inline leading-none">
+      <span class="text-[10px] text-(--color-text-mute) ml-2 hidden sm:inline leading-none">
         v0.2.0
       </span>
     </a>
@@ -31,10 +31,10 @@ const lastUpdated = data.ultima_actualizacion;
       <button
         type="button"
         data-cmdk-trigger
-        class="hidden sm:inline-flex items-center gap-2 px-2.5 py-1 rounded-md border border-[--color-border] bg-[--color-bg-elev] text-[11px] text-[--color-text-dim] hover:text-[--color-text] hover:border-[--color-accent] transition-colors"
+        class="hidden sm:inline-flex items-center gap-2 px-2.5 py-1 rounded-md border border-(--color-border) bg-(--color-bg-elev) text-[11px] text-(--color-text-dim) hover:text-(--color-text) hover:border-(--color-accent) transition-colors"
         aria-label="Buscar indicador">
         Buscar
-        <kbd class="text-[10px] mono px-1.5 py-0.5 rounded bg-[--color-bg-elev-2] border border-[--color-border-soft] text-[--color-text-dim]">
+        <kbd class="text-[10px] mono px-1.5 py-0.5 rounded bg-(--color-bg-elev-2) border border-(--color-border-soft) text-(--color-text-dim)">
           ⌘K
         </kbd>
       </button>

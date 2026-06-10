@@ -64,9 +64,9 @@ export function PullToRefresh() {
         transition: refreshing ? 'transform 0.2s' : 'none',
       }}>
       <div
-        className="card-surface px-3 py-1.5 inline-flex items-center gap-2 text-xs text-[--color-text-dim]">
+        className="card-surface px-3 py-1.5 inline-flex items-center gap-2 text-xs text-(--color-text-dim)">
         <RotateCw
-          className={`size-3 text-[--color-gold] ${refreshing || ready ? 'animate-spin' : ''}`}
+          className={`size-3 text-(--color-gold) ${refreshing || ready ? 'animate-spin' : ''}`}
         />
         {refreshing ? 'Actualizando…' : ready ? 'Soltar para actualizar' : 'Tirar para actualizar'}
       </div>

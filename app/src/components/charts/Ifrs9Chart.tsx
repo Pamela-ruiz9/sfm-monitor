@@ -43,8 +43,8 @@ function pillClass(active: boolean) {
   return cn(
     'px-3 py-1 text-xs font-medium rounded-md border transition-colors whitespace-nowrap',
     active
-      ? 'bg-[--color-gold-soft] text-[--color-gold] border-[--color-gold]/40'
-      : 'text-[--color-text-mute] border-[--color-border] hover:text-[--color-text-dim] hover:border-[--color-border-soft]',
+      ? 'bg-(--color-gold-soft) text-(--color-gold) border-(--color-gold)/40'
+      : 'text-(--color-text-mute) border-(--color-border) hover:text-(--color-text-dim) hover:border-(--color-border-soft)',
   );
 }
 
@@ -125,7 +125,7 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3, porSegmento, porBan
           <select
             value={bancoId}
             onChange={(e) => { setBancoId(e.target.value); setVistaSegmento('sistema'); }}
-            className="text-xs px-2 py-1 rounded-md border border-[--color-border] bg-[--color-surface] text-[--color-text-dim] focus:outline-none focus:border-[--color-gold]/60"
+            className="text-xs px-2 py-1 rounded-md border border-(--color-border) bg-(--color-surface) text-(--color-text-dim) focus:outline-none focus:border-(--color-gold)/60"
           >
             <option value="sistema">Sistema</option>
             {(porBanco ?? []).map((b) => (
@@ -147,7 +147,7 @@ export function Ifrs9Chart({ fechas, etapa1, etapa2, etapa3, porSegmento, porBan
       </div>
 
       {vistaSegmento !== 'sistema' && !bancoSeleccionado && (
-        <p className="text-[10px] text-[--color-text-mute] mb-2">
+        <p className="text-[10px] text-(--color-text-mute) mb-2">
           % de la cartera {vistaSegmento} en cada Stage (Stage 1 = 100% − E2 − E3)
         </p>
       )}

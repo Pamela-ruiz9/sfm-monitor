@@ -117,8 +117,8 @@ const deltaRoa   = ultima.roa         - data.credito.roa.actual;
 function fmtDelta(d: number, inverse = false) {
   const sign = d > 0 ? '+' : '';
   const color = inverse
-    ? (d > 0 ? 'text-[--color-green]' : 'text-[--color-red]')
-    : (d > 0 ? 'text-[--color-red]'   : 'text-[--color-green]');
+    ? (d > 0 ? 'text-(--color-green)' : 'text-(--color-red)')
+    : (d > 0 ? 'text-(--color-red)'   : 'text-(--color-green)');
   return { text: `${sign}${d.toFixed(2)}pp`, color };
 }
 
@@ -191,19 +191,19 @@ const top15 = [...ents]
     <!-- Panel comparativo BM vs SoFiPOs -->
     <div class="card-surface rounded-xl overflow-hidden">
       <!-- Encabezados de sector -->
-      <div class="grid grid-cols-[1fr_auto_1fr] border-b border-[--color-border-soft]">
+      <div class="grid grid-cols-[1fr_auto_1fr] border-b border-(--color-border-soft)">
         <div class="px-5 py-3 flex items-center gap-2">
           <span aria-hidden="true">🏦</span>
-          <span class="text-sm font-semibold text-[--color-text]">Banca Múltiple</span>
-          <span class="text-[10px] text-[--color-text-mute] ml-auto tabular-nums">{data.credito.imor.fecha}</span>
+          <span class="text-sm font-semibold text-(--color-text)">Banca Múltiple</span>
+          <span class="text-[10px] text-(--color-text-mute) ml-auto tabular-nums">{data.credito.imor.fecha}</span>
         </div>
-        <div class="px-3 py-3 flex items-center justify-center border-x border-[--color-border-soft]">
-          <span class="text-[10px] font-bold text-[--color-text-mute] uppercase tracking-widest">vs</span>
+        <div class="px-3 py-3 flex items-center justify-center border-x border-(--color-border-soft)">
+          <span class="text-[10px] font-bold text-(--color-text-mute) uppercase tracking-widest">vs</span>
         </div>
         <div class="px-5 py-3 flex items-center gap-2">
           <span aria-hidden="true">🏘️</span>
-          <span class="text-sm font-semibold text-[--color-text]">SoFiPOs</span>
-          <span class="text-[10px] text-[--color-text-mute] ml-auto tabular-nums">{ultima.fecha}</span>
+          <span class="text-sm font-semibold text-(--color-text)">SoFiPOs</span>
+          <span class="text-[10px] text-(--color-text-mute) ml-auto tabular-nums">{ultima.fecha}</span>
         </div>
       </div>
 
@@ -212,52 +212,52 @@ const top15 = [...ents]
         {
           label: 'IMOR',
           bmVal: formatPct(data.credito.imor.actual),
-          bmTone: 'text-[--color-green]',
+          bmTone: 'text-(--color-green)',
           sfVal: formatPct(ultima.imor_total),
-          sfTone: 'text-[--color-yellow]',
+          sfTone: 'text-(--color-yellow)',
           delta: dImor,
         },
         {
           label: 'IMORA',
           bmVal: formatPct(data.credito.imora.actual),
-          bmTone: 'text-[--color-yellow]',
+          bmTone: 'text-(--color-yellow)',
           sfVal: formatPct(ultima.imora_total),
-          sfTone: 'text-[--color-red]',
+          sfTone: 'text-(--color-red)',
           delta: dImora,
         },
         {
           label: 'ROA',
           bmVal: formatPct(data.credito.roa.actual),
-          bmTone: 'text-[--color-green]',
+          bmTone: 'text-(--color-green)',
           sfVal: formatPct(ultima.roa),
-          sfTone: 'text-[--color-red]',
+          sfTone: 'text-(--color-red)',
           delta: dRoa,
         },
         {
           label: 'ICOR',
           bmVal: `${data.credito.icor.actual.toFixed(2)}×`,
-          bmTone: 'text-[--color-green]',
+          bmTone: 'text-(--color-green)',
           sfVal: '—',
-          sfTone: 'text-[--color-text-mute]',
+          sfTone: 'text-(--color-text-mute)',
           delta: null,
         },
       ].map((row) => (
-        <div class="grid grid-cols-[1fr_auto_1fr] border-b border-[--color-border-soft] last:border-0 hover:bg-white/[0.02] transition-colors">
+        <div class="grid grid-cols-[1fr_auto_1fr] border-b border-(--color-border-soft) last:border-0 hover:bg-white/[0.02] transition-colors">
           <!-- BM -->
           <div class="px-5 py-3.5 flex items-baseline justify-between gap-4">
-            <span class="text-[11px] font-medium text-[--color-text-mute] uppercase tracking-wider">{row.label}</span>
+            <span class="text-[11px] font-medium text-(--color-text-mute) uppercase tracking-wider">{row.label}</span>
             <span class={`serif text-xl font-semibold tabular-nums ${row.bmTone}`}>{row.bmVal}</span>
           </div>
           <!-- Delta -->
-          <div class="px-3 flex items-center justify-center border-x border-[--color-border-soft] min-w-[72px]">
+          <div class="px-3 flex items-center justify-center border-x border-(--color-border-soft) min-w-[72px]">
             {row.delta
               ? <span class={`text-[10px] font-semibold tabular-nums ${row.delta.color}`}>{row.delta.text}</span>
-              : <span class="text-[10px] text-[--color-border-soft]">—</span>
+              : <span class="text-[10px] text-(--color-border-soft)">—</span>
             }
           </div>
           <!-- SoFiPOs -->
           <div class="px-5 py-3.5 flex items-baseline justify-between gap-4">
-            <span class="text-[11px] font-medium text-[--color-text-mute] uppercase tracking-wider">{row.label}</span>
+            <span class="text-[11px] font-medium text-(--color-text-mute) uppercase tracking-wider">{row.label}</span>
             <span class={`serif text-xl font-semibold tabular-nums ${row.sfTone}`}>{row.sfVal}</span>
           </div>
         </div>
@@ -267,7 +267,7 @@ const top15 = [...ents]
     <!-- ── Gráficas comparativas ──────────────────────────────────────── -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div class="card-surface rounded-xl p-4">
-        <div class="text-[10px] font-semibold uppercase tracking-widest text-[--color-text-mute] mb-3">IMOR · histórico</div>
+        <div class="text-[10px] font-semibold uppercase tracking-widest text-(--color-text-mute) mb-3">IMOR · histórico</div>
         <ComparisonChart
           fechasBm={hpc.fechas}
           valuesBm={hpc.imor_total}
@@ -277,7 +277,7 @@ const top15 = [...ents]
         />
       </div>
       <div class="card-surface rounded-xl p-4">
-        <div class="text-[10px] font-semibold uppercase tracking-widest text-[--color-text-mute] mb-3">IMORA · histórico</div>
+        <div class="text-[10px] font-semibold uppercase tracking-widest text-(--color-text-mute) mb-3">IMORA · histórico</div>
         <ComparisonChart
           fechasBm={hpc.fechas}
           valuesBm={hpc.imora_total}
@@ -287,7 +287,7 @@ const top15 = [...ents]
         />
       </div>
       <div class="card-surface rounded-xl p-4">
-        <div class="text-[10px] font-semibold uppercase tracking-widest text-[--color-text-mute] mb-3">ROA · histórico</div>
+        <div class="text-[10px] font-semibold uppercase tracking-widest text-(--color-text-mute) mb-3">ROA · histórico</div>
         <ComparisonChart
           fechasBm={hpc.fechas}
           valuesBm={hpc.roa}
@@ -300,8 +300,8 @@ const top15 = [...ents]
     </div>
 
     <!-- ── Selector de sector ──────────────────────────────────────────── -->
-    <div class="pt-2 border-t border-[--color-border-soft]">
-      <p class="text-xs text-[--color-text-mute] mb-3">Explora en detalle cada sector:</p>
+    <div class="pt-2 border-t border-(--color-border-soft)">
+      <p class="text-xs text-(--color-text-mute) mb-3">Explora en detalle cada sector:</p>
       <SectorToggle client:load />
     </div>
 
@@ -316,7 +316,7 @@ const top15 = [...ents]
         source="CNBV Sector 40 (Banca Múltiple)"
         metricSlug="imor"
         tone="gold">
-        <p class="text-xs text-[--color-text-mute] mb-3">
+        <p class="text-xs text-(--color-text-mute) mb-3">
           <MetricTooltip slug="imor" client:visible>IMOR</MetricTooltip>: indice de morosidad — cartera vencida / cartera total.
         </p>
         <ImorSegPivotChart {...pivotProps} showSofipos={false} client:visible />
@@ -336,7 +336,7 @@ const top15 = [...ents]
             client:visible
           />
         ) : (
-          <p class="text-sm text-[--color-text-mute]">Sin datos por institución disponibles.</p>
+          <p class="text-sm text-(--color-text-mute)">Sin datos por institución disponibles.</p>
         )}
       </Section>
 
@@ -441,16 +441,16 @@ const top15 = [...ents]
         {ifrs.ultima && (
           <div class="grid grid-cols-3 gap-3 mb-4">
             <div class="card-surface p-4 text-center">
-              <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">Stage 1</div>
-              <div class="serif text-2xl font-semibold text-[--color-green]">{formatPct(ifrs.ultima.etapa1)}</div>
+              <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute) mb-1">Stage 1</div>
+              <div class="serif text-2xl font-semibold text-(--color-green)">{formatPct(ifrs.ultima.etapa1)}</div>
             </div>
             <div class="card-surface p-4 text-center">
-              <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">Stage 2</div>
-              <div class="serif text-2xl font-semibold text-[--color-yellow]">{formatPct(ifrs.ultima.etapa2)}</div>
+              <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute) mb-1">Stage 2</div>
+              <div class="serif text-2xl font-semibold text-(--color-yellow)">{formatPct(ifrs.ultima.etapa2)}</div>
             </div>
             <div class="card-surface p-4 text-center">
-              <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute] mb-1">Stage 3</div>
-              <div class="serif text-2xl font-semibold text-[--color-red]">{formatPct(ifrs.ultima.etapa3)}</div>
+              <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute) mb-1">Stage 3</div>
+              <div class="serif text-2xl font-semibold text-(--color-red)">{formatPct(ifrs.ultima.etapa3)}</div>
             </div>
           </div>
         )}

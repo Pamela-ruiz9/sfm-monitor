@@ -174,7 +174,7 @@ function Pill({ yes, label }: { yes: boolean; label: string }) {
       >
         {yes ? '✓ SÍ' : '✗ NO'}
       </span>
-      <span className="text-[11px] text-[--color-text-mute]">{label}</span>
+      <span className="text-[11px] text-(--color-text-mute)">{label}</span>
     </div>
   );
 }
@@ -186,52 +186,52 @@ function DetailPanel({ id, onClose }: { id: string; onClose: () => void }) {
     <div className="space-y-3">
       <div className="flex items-start justify-between gap-2">
         <div>
-          <div className="text-sm font-semibold text-[--color-text]">{d.name}</div>
+          <div className="text-sm font-semibold text-(--color-text)">{d.name}</div>
           <div className="text-[10px] font-mono uppercase tracking-widest mt-0.5" style={{ color: d.color }}>
             {d.figure}
           </div>
         </div>
         <button
           onClick={onClose}
-          className="text-[--color-text-mute] hover:text-[--color-text] text-base leading-none mt-0.5 shrink-0"
+          className="text-(--color-text-mute) hover:text-(--color-text) text-base leading-none mt-0.5 shrink-0"
           aria-label="Cerrar"
         >
           ✕
         </button>
       </div>
 
-      <div className="border-t border-[--color-border-soft] pt-3 space-y-0.5">
+      <div className="border-t border-(--color-border-soft) pt-3 space-y-0.5">
         <Pill yes={d.capta}   label="Capta ahorro del público" />
         <Pill yes={d.credito} label="Otorga crédito" />
         <Pill yes={d.mercado} label="Mercado de valores" />
       </div>
 
-      <div className="border-t border-[--color-border-soft] pt-3 space-y-1.5">
+      <div className="border-t border-(--color-border-soft) pt-3 space-y-1.5">
         <div className="flex gap-2 text-[11px]">
-          <span className="text-[--color-text-mute] shrink-0">Regulador:</span>
-          <span className="font-semibold text-[--color-text]">{d.regulador}</span>
+          <span className="text-(--color-text-mute) shrink-0">Regulador:</span>
+          <span className="font-semibold text-(--color-text)">{d.regulador}</span>
         </div>
         <div className="flex gap-2 text-[11px]">
-          <span className="text-[--color-text-mute] shrink-0">Ley:</span>
-          <span className="text-[--color-text] leading-relaxed">{d.ley}</span>
+          <span className="text-(--color-text-mute) shrink-0">Ley:</span>
+          <span className="text-(--color-text) leading-relaxed">{d.ley}</span>
         </div>
         <div className="flex gap-2 text-[11px]">
-          <span className="text-[--color-text-mute] shrink-0">Protección:</span>
-          <span className="text-[--color-text]">{d.proteccion}</span>
+          <span className="text-(--color-text-mute) shrink-0">Protección:</span>
+          <span className="text-(--color-text)">{d.proteccion}</span>
         </div>
       </div>
 
-      <p className="text-[11px] leading-relaxed text-[--color-text-dim] border-t border-[--color-border-soft] pt-3">
+      <p className="text-[11px] leading-relaxed text-(--color-text-dim) border-t border-(--color-border-soft) pt-3">
         {d.descripcion}
       </p>
 
-      <div className="border-t border-[--color-border-soft] pt-3">
-        <div className="text-[9px] font-mono uppercase tracking-widest text-[--color-text-mute] mb-2">Ejemplos</div>
+      <div className="border-t border-(--color-border-soft) pt-3">
+        <div className="text-[9px] font-mono uppercase tracking-widest text-(--color-text-mute) mb-2">Ejemplos</div>
         <div className="flex flex-wrap gap-1">
           {d.ejemplos.map((e) => (
             <span
               key={e}
-              className="bg-[--color-border-soft] text-[--color-text-dim] font-mono text-[10px] px-2 py-0.5 rounded"
+              className="bg-(--color-border-soft) text-(--color-text-dim) font-mono text-[10px] px-2 py-0.5 rounded"
             >
               {e}
             </span>
@@ -404,8 +404,8 @@ export function SfmVennDiagram() {
           >
             <span className="text-base shrink-0 mt-0.5">{icon}</span>
             <div>
-              <div className="font-semibold text-[--color-text] mb-1" style={{ color }}>{title}</div>
-              <p className="text-[--color-text-mute] leading-relaxed">{body}</p>
+              <div className="font-semibold text-(--color-text) mb-1" style={{ color }}>{title}</div>
+              <p className="text-(--color-text-mute) leading-relaxed">{body}</p>
             </div>
           </div>
         ))}
@@ -549,7 +549,7 @@ export function SfmVennDiagram() {
             {selected ? (
               <DetailPanel id={selected} onClose={() => setSelected(null)} />
             ) : (
-              <div className="flex flex-col items-center justify-center h-full gap-3 text-[--color-text-mute] text-center py-8">
+              <div className="flex flex-col items-center justify-center h-full gap-3 text-(--color-text-mute) text-center py-8">
                 <div className="text-3xl opacity-40">⬡</div>
                 <p className="text-xs leading-relaxed">
                   Toca cualquier nodo<br />para ver sus detalles
@@ -576,7 +576,7 @@ export function SfmVennDiagram() {
               className="w-2.5 h-2.5 rounded-full shrink-0 border-2"
               style={{ background: `${color}33`, borderColor: color }}
             />
-            <span className="text-[10px] font-mono text-[--color-text-mute]">{label}</span>
+            <span className="text-[10px] font-mono text-(--color-text-mute)">{label}</span>
           </div>
         ))}
       </div>
@@ -591,8 +591,8 @@ export function SfmVennDiagram() {
           { key: 'CNSF',     desc: 'seguros · fianzas' },
           { key: 'CONDUSEF', desc: 'defensa del usuario' },
         ].map(({ key, desc }) => (
-          <div key={key} className="card-surface rounded-lg px-3 py-1.5 text-[10px] font-mono text-[--color-text-mute]">
-            <span className="text-[--color-text] font-bold">{key}</span> — {desc}
+          <div key={key} className="card-surface rounded-lg px-3 py-1.5 text-[10px] font-mono text-(--color-text-mute)">
+            <span className="text-(--color-text) font-bold">{key}</span> — {desc}
           </div>
         ))}
       </div>

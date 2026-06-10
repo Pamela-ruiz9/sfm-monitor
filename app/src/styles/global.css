@@ -36,8 +36,10 @@
   --default-transition-duration: 200ms;
 }
 
-* {
-  border-color: var(--color-border);
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
 }
 
 html {

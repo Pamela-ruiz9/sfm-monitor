@@ -120,7 +120,7 @@ export function SofiposEntidadesChart({ fechas, entidades }: Props) {
       {/* Cartera breakdown toggle — only when 1 entity selected and has cartera data */}
       {soloEntidad && hasCarteraData && (
         <div className="mb-2 flex items-center gap-2">
-          <span className="text-[10px] text-[--color-text-mute]">
+          <span className="text-[10px] text-(--color-text-mute)">
             {soloEntidad.nombre}
           </span>
           <button
@@ -139,7 +139,7 @@ export function SofiposEntidadesChart({ fechas, entidades }: Props) {
       {/* Selector de entidades */}
       <div className="mb-3 space-y-2">
         <div className="flex items-center gap-2">
-          <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[--color-text-mute]">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">
             Entidades
           </span>
           <div className="flex items-center gap-1 ml-auto">

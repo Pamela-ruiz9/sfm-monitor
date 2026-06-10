@@ -16,7 +16,7 @@ const path = Astro.url.pathname;
 
 <nav
   aria-label="Navegación principal"
-  class="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-[--color-border]"
+  class="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-(--color-border)"
   style="background: linear-gradient(180deg, rgba(13,17,23,0.85), rgba(13,17,23,0.95)); backdrop-filter: blur(12px); padding-bottom: env(safe-area-inset-bottom);">
   <ul class="flex justify-around items-stretch" role="tablist">
     {
@@ -32,7 +32,7 @@ const path = Astro.url.pathname;
               data-astro-prefetch
               class:list={[
                 'flex flex-col items-center justify-center gap-1 py-2 text-[10px] font-medium transition-colors',
-                active ? 'text-[--color-accent]' : 'text-[--color-text-mute]',
+                active ? 'text-(--color-accent)' : 'text-(--color-text-mute)',
               ]}>
               <Icon className="size-5" aria-hidden="true" />
               <span>{label}</span>

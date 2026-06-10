@@ -31,17 +31,17 @@ const {
     <div class="space-y-1 min-w-0">
       {
         eyebrow && (
-          <div class="text-[10px] font-semibold uppercase tracking-[0.15em] text-[--color-gold]">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.15em] text-(--color-gold)">
             {eyebrow}
           </div>
         )
       }
-      <h2 class="serif text-xl lg:text-2xl font-semibold text-[--color-text] leading-tight">
+      <h2 class="serif text-xl lg:text-2xl font-semibold text-(--color-text) leading-tight">
         {title}
       </h2>
       {
         description && (
-          <p class="text-sm leading-relaxed text-[--color-text-dim] max-w-3xl">
+          <p class="text-sm leading-relaxed text-(--color-text-dim) max-w-3xl">
             {description}
           </p>
         )
@@ -49,7 +49,7 @@ const {
     </div>
     {
       refCode && (
-        <span class="mono text-[10px] text-[--color-text-mute] whitespace-nowrap">
+        <span class="mono text-[10px] text-(--color-text-mute) whitespace-nowrap">
           {refCode}
         </span>
       )
@@ -63,8 +63,8 @@ const {
   </div>
   {
     source && (
-      <p class="text-[11px] text-[--color-text-mute]">
-        <span class="text-[--color-text-mute]/70">Fuente:</span> {source}
+      <p class="text-[11px] text-(--color-text-mute)">
+        <span class="text-(--color-text-mute)/70">Fuente:</span> {source}
       </p>
     )
   }

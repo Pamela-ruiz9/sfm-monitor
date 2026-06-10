@@ -49,9 +49,9 @@ if (reds >= 2) {
 }
 
 const PILL_DOT = {
-  green: 'bg-[--color-green]',
-  yellow: 'bg-[--color-yellow]',
-  red: 'bg-[--color-red]',
+  green: 'bg-(--color-green)',
+  yellow: 'bg-(--color-yellow)',
+  red: 'bg-(--color-red)',
 } as const;
 
 const pills = [
@@ -63,7 +63,7 @@ const pills = [
 ---
 
 <section class="space-y-3">
-  <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[--color-gold]">
+  <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-(--color-gold)">
     Score Global del Sistema
   </div>
   <h1
@@ -71,14 +71,14 @@ const pills = [
     style={`font-size: clamp(2.8rem, 6vw, 4.8rem); color: ${scoreColor}`}>
     {scoreLabel}
   </h1>
-  <p class="text-sm text-[--color-text-dim] max-w-3xl leading-relaxed">
+  <p class="text-sm text-(--color-text-dim) max-w-3xl leading-relaxed">
     Índice compuesto basado en indicadores de crédito, mercado, macro y
     liquidez del sistema bancario mexicano. Detalle por dimensión:
   </p>
   <div class="flex flex-wrap gap-2 pt-1">
     {
       pills.map((p) => (
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-[--color-border] bg-[--color-bg-elev] text-xs text-[--color-text-dim]">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-(--color-border) bg-(--color-bg-elev) text-xs text-(--color-text-dim)">
           <span class={`size-2 rounded-full ${PILL_DOT[p.tone]}`} aria-hidden="true" />
           {p.label}
         </span>
@@ -87,7 +87,7 @@ const pills = [
   </div>
   {
     alerts.length > 0 && (
-      <p class="text-[11px] text-[--color-text-mute] pt-1">
+      <p class="text-[11px] text-(--color-text-mute) pt-1">
         {alerts.length} {alerts.length === 1 ? 'alerta activa' : 'alertas activas'} — ver panel debajo.
       </p>
     )

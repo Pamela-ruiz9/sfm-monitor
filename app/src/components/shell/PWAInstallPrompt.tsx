@@ -94,21 +94,21 @@ export function PWAInstallPrompt() {
         <button
           onClick={dismiss}
           aria-label="Descartar"
-          className="absolute top-2 right-2 text-[--color-text-mute] hover:text-[--color-text]">
+          className="absolute top-2 right-2 text-(--color-text-mute) hover:text-(--color-text)">
           <X className="size-3" />
         </button>
         <div className="flex items-center gap-2 mb-2">
-          <Download className="size-4 text-[--color-accent]" />
-          <span className="text-xs font-semibold uppercase tracking-wider text-[--color-accent]">
+          <Download className="size-4 text-(--color-accent)" />
+          <span className="text-xs font-semibold uppercase tracking-wider text-(--color-accent)">
             Instalar app
           </span>
         </div>
-        <p className="text-xs text-[--color-text-dim] mb-3 leading-relaxed">
+        <p className="text-xs text-(--color-text-dim) mb-3 leading-relaxed">
           Acceso rápido sin abrir el navegador. Funciona offline.
         </p>
         <button
           onClick={install}
-          className="w-full px-3 py-2 rounded-md bg-[--color-accent] text-[--color-bg] text-xs font-semibold hover:opacity-90">
+          className="w-full px-3 py-2 rounded-md bg-(--color-accent) text-(--color-bg) text-xs font-semibold hover:opacity-90">
           Instalar SFM Monitor
         </button>
       </div>
@@ -121,16 +121,16 @@ export function PWAInstallPrompt() {
         <button
           onClick={dismiss}
           aria-label="Descartar"
-          className="absolute top-2 right-2 text-[--color-text-mute] hover:text-[--color-text]">
+          className="absolute top-2 right-2 text-(--color-text-mute) hover:text-(--color-text)">
           <X className="size-3" />
         </button>
         <div className="flex items-center gap-2 mb-2">
-          <Share className="size-4 text-[--color-accent]" />
-          <span className="text-xs font-semibold uppercase tracking-wider text-[--color-accent]">
+          <Share className="size-4 text-(--color-accent)" />
+          <span className="text-xs font-semibold uppercase tracking-wider text-(--color-accent)">
             Instalar en iOS
           </span>
         </div>
-        <ol className="text-xs text-[--color-text-dim] space-y-1.5 leading-relaxed">
+        <ol className="text-xs text-(--color-text-dim) space-y-1.5 leading-relaxed">
           <li>1. Toca el botón <Share className="inline size-3" /> Compartir</li>
           <li>2. Selecciona "Añadir a pantalla de inicio"</li>
           <li>3. Confirma con "Añadir"</li>

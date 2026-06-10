@@ -16,7 +16,7 @@ const path = Astro.url.pathname;
 
 <nav
   aria-label="Secciones del dashboard"
-  class="hidden lg:block border-b border-[--color-border-soft]">
+  class="hidden lg:block border-b border-(--color-border-soft)">
   <div
     class="max-w-7xl mx-auto px-6 flex gap-1 overflow-x-auto"
     role="tablist">
@@ -33,8 +33,8 @@ const path = Astro.url.pathname;
             class:list={[
               'inline-flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap',
               active
-                ? 'text-[--color-accent] border-[--color-accent]'
-                : 'text-[--color-text-mute] border-transparent hover:text-[--color-text-dim] hover:border-[--color-border]',
+                ? 'text-(--color-accent) border-(--color-accent)'
+                : 'text-(--color-text-mute) border-transparent hover:text-(--color-text-dim) hover:border-(--color-border)',
             ]}>
             <Icon className="size-4 shrink-0" aria-hidden="true" />
             <span class="flex flex-col leading-tight">
@@ -42,7 +42,7 @@ const path = Astro.url.pathname;
               {sub && (
                 <span class:list={[
                   'text-[10px] font-normal',
-                  active ? 'text-[--color-accent]/60' : 'text-[--color-text-mute]/60',
+                  active ? 'text-(--color-accent)/60' : 'text-(--color-text-mute)/60',
                 ]}>
                   {sub}
                 </span>

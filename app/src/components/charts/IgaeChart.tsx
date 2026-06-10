@@ -37,7 +37,7 @@ export function IgaeChart({ series }: Props) {
   return (
     <ChartErrorBoundary chartName="IGAE">
       {earliestDate && earliestDate >= '2025-12' && (
-        <p className="text-[10px] text-[--color-text-mute] mb-1 text-right">
+        <p className="text-[10px] text-(--color-text-mute) mb-1 text-right">
           Serie BIE disponible desde dic 2025 (migración INEGI)
         </p>
       )}

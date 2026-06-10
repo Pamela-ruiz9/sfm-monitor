@@ -59,8 +59,8 @@ function pillClass(active: boolean): string {
   return cn(
     'px-3 py-1 text-xs font-medium rounded-md border transition-colors whitespace-nowrap',
     active
-      ? 'bg-[--color-gold-soft] text-[--color-gold] border-[--color-gold]/40'
-      : 'text-[--color-text-mute] border-[--color-border] hover:text-[--color-text-dim] hover:border-[--color-border-soft]',
+      ? 'bg-(--color-gold-soft) text-(--color-gold) border-(--color-gold)/40'
+      : 'text-(--color-text-mute) border-(--color-border) hover:text-(--color-text-dim) hover:border-(--color-border-soft)',
   );
 }
 
@@ -242,8 +242,8 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
         )}
 
         {/* Current value display */}
-        <div className="flex items-baseline justify-between border-t border-[--color-border-soft] pt-3">
-          <div className="text-[10px] text-[--color-text-mute] uppercase tracking-wider">{label}</div>
+        <div className="flex items-baseline justify-between border-t border-(--color-border-soft) pt-3">
+          <div className="text-[10px] text-(--color-text-mute) uppercase tracking-wider">{label}</div>
           <div className="serif tabular text-2xl font-semibold" style={{ color }}>
             {latest != null ? `${(latest as number).toFixed(2)}%` : '—'}
           </div>

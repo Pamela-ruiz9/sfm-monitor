@@ -16,7 +16,7 @@ export function QuitasChart({ fechas, valores }: Props) {
 
   return (
     <ChartErrorBoundary chartName="Quitas y castigos">
-      <p className="text-[10px] text-[--color-text-mute] mb-2">
+      <p className="text-[10px] text-(--color-text-mute) mb-2">
         Flujo acumulado 12 meses · miles de millones de pesos (mmdp)
       </p>
       <div className="h-64 md:h-72 -mx-1">

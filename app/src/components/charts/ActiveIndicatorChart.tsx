@@ -168,25 +168,25 @@ export function ActiveIndicatorChart({
     <section className="space-y-3 scroll-mt-24">
       <header className="flex items-baseline justify-between gap-3">
         <div className="space-y-1 min-w-0">
-          <div className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[--color-gold]">
+          <div className="text-[10px] font-semibold uppercase tracking-[0.15em] text-(--color-gold)">
             {meta.eyebrow}
           </div>
-          <h2 className="serif text-xl lg:text-2xl font-semibold text-[--color-text] leading-tight">
+          <h2 className="serif text-xl lg:text-2xl font-semibold text-(--color-text) leading-tight">
             {meta.title}
           </h2>
-          <p className="text-sm leading-relaxed text-[--color-text-dim] max-w-3xl">
+          <p className="text-sm leading-relaxed text-(--color-text-dim) max-w-3xl">
             {meta.description}
           </p>
         </div>
-        <span className="mono text-[10px] text-[--color-text-mute] whitespace-nowrap">
+        <span className="mono text-[10px] text-(--color-text-mute) whitespace-nowrap">
           {meta.refCode}
         </span>
       </header>
       <div className="card-surface p-4" data-tone={meta.tone}>
         {renderChart()}
       </div>
-      <p className="text-[11px] text-[--color-text-mute]">
-        <span className="text-[--color-text-mute]/70">Fuente:</span>{' '}
+      <p className="text-[11px] text-(--color-text-mute)">
+        <span className="text-(--color-text-mute)/70">Fuente:</span>{' '}
         {meta.source}
       </p>
     </section>

@@ -45,21 +45,21 @@ export function CmdKPalette() {
         className="w-full max-w-lg card-surface overflow-hidden"
         onClick={(e) => e.stopPropagation()}
         shouldFilter={false}>
-        <div className="flex items-center gap-2 border-b border-[--color-border] px-4">
-          <Search className="size-4 text-[--color-text-mute]" aria-hidden="true" />
+        <div className="flex items-center gap-2 border-b border-(--color-border) px-4">
+          <Search className="size-4 text-(--color-text-mute)" aria-hidden="true" />
           <Command.Input
             value={query}
             onValueChange={setQuery}
             placeholder="Buscar IMOR, FX, SF43718…"
-            className="flex-1 bg-transparent border-none py-3 text-sm text-[--color-text] placeholder-[--color-text-mute] focus:outline-none"
+            className="flex-1 bg-transparent border-none py-3 text-sm text-(--color-text) placeholder-(--color-text-mute) focus:outline-none"
             autoFocus
           />
-          <kbd className="text-[10px] mono px-1.5 py-0.5 rounded bg-[--color-bg-elev-2] border border-[--color-border-soft] text-[--color-text-dim]">
+          <kbd className="text-[10px] mono px-1.5 py-0.5 rounded bg-(--color-bg-elev-2) border border-(--color-border-soft) text-(--color-text-dim)">
             esc
           </kbd>
         </div>
         <Command.List className="max-h-80 overflow-y-auto py-1">
-          <Command.Empty className="px-4 py-6 text-sm text-[--color-text-mute] text-center">
+          <Command.Empty className="px-4 py-6 text-sm text-(--color-text-mute) text-center">
             Sin resultados. Quizás: IMOR · FX · Tasa Banxico · Inflación
           </Command.Empty>
           {results.map((i) => (
@@ -71,16 +71,16 @@ export function CmdKPalette() {
                 setOpen(false);
                 setQuery('');
               }}
-              className="flex items-center justify-between gap-3 px-4 py-2 mx-1 rounded-md text-sm cursor-pointer text-[--color-text-dim] data-[selected=true]:bg-[--color-bg-elev-2] data-[selected=true]:text-[--color-text] data-[selected=true]:border-l-2 data-[selected=true]:border-[--color-accent] data-[selected=true]:pl-[calc(1rem-2px)]">
+              className="flex items-center justify-between gap-3 px-4 py-2 mx-1 rounded-md text-sm cursor-pointer text-(--color-text-dim) data-[selected=true]:bg-(--color-bg-elev-2) data-[selected=true]:text-(--color-text) data-[selected=true]:border-l-2 data-[selected=true]:border-(--color-accent) data-[selected=true]:pl-[calc(1rem-2px)]">
               <div className="flex flex-col min-w-0">
                 <span className="truncate">{i.label}</span>
                 {i.refCode && (
-                  <span className="mono text-[10px] text-[--color-text-mute]">
+                  <span className="mono text-[10px] text-(--color-text-mute)">
                     {i.refCode} · {i.tab}
                   </span>
                 )}
               </div>
-              <ArrowRight className="size-3 text-[--color-text-mute] flex-shrink-0" />
+              <ArrowRight className="size-3 text-(--color-text-mute) flex-shrink-0" />
             </Command.Item>
           ))}
         </Command.List>

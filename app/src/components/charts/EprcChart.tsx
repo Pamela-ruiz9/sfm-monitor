@@ -17,7 +17,7 @@ export function EprcChart({ fechas, eprcCartera }: Props) {
 
   return (
     <ChartErrorBoundary chartName="EPRC / Cartera">
-      <p className="text-[10px] text-[--color-text-mute] mb-2">
+      <p className="text-[10px] text-(--color-text-mute) mb-2">
         EPRC (reservas preventivas) como % de la cartera total. Complementa el ICOR: mientras ICOR = EPRC / vencida, esta métrica muestra la carga de reservas sobre el portafolio completo.
       </p>
       <div className="h-64 md:h-72 -mx-1">
