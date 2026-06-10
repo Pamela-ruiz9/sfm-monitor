@@ -1,0 +1,176 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
+import Header from '~/components/shell/Header.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import { ComparisonChart } from '~/components/charts/ComparisonChart';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
+import { loadSfmData } from '~/data/loader';
+import { formatPct } from '~/lib/utils';
+
+const data = loadSfmData();
+const hpc = data.credito.historico_por_cartera;
+const s = data.sofipos;
+const ultima = s.ultima!;
+
+const deltaImor  = ultima.imor_total  - data.credito.imor.actual;
+const deltaImora = ultima.imora_total - data.credito.imora.actual;
+const deltaRoa   = ultima.roa         - data.credito.roa.actual;
+
+function fmtDelta(d: number, inverse = false) {
+  const sign = d > 0 ? '+' : '';
+  const color = inverse
+    ? (d > 0 ? 'text-(--color-green)' : 'text-(--color-red)')
+    : (d > 0 ? 'text-(--color-red)'   : 'text-(--color-green)');
+  return { text: `${sign}${d.toFixed(2)}pp`, color };
+}
+
+const dImor  = fmtDelta(deltaImor);
+const dImora = fmtDelta(deltaImora);
+const dRoa   = fmtDelta(deltaRoa, true);
+---
+
+<Layout
+  title="Contraste de Riesgo"
+  description="Comparativa de IMOR, IMORA, ROA e ICOR entre Banca Múltiple y SoFiPOs."
+  jsonLd={datasetJsonLd({
+    name: 'Contraste de Riesgo — Banca Múltiple vs SoFiPOs',
+    description: 'Comparativa de indicadores de riesgo y rentabilidad entre Banca Múltiple y SoFiPOs. Fuente: CNBV.',
+    path: '/instituciones/contraste',
+    keywords: ['IMOR', 'IMORA', 'ROA', 'banca múltiple', 'SoFiPOs', 'comparativa'],
+  })}>
+  <Header slot="header" />
+
+  <div class="space-y-6">
+
+    <EditorialHeadline
+      eyebrow="Instituciones Financieras · Banca Múltiple vs SoFiPOs"
+      headline="El sistema bancario mantiene IMOR controlado; el sector popular muestra morosidad ~3× mayor con rentabilidad bajo presión."
+    />
+
+    <!-- Panel comparativo BM vs SoFiPOs -->
+    <div class="card-surface rounded-xl overflow-hidden">
+      <!-- Encabezados de sector -->
+      <div class="grid grid-cols-[1fr_auto_1fr] border-b border-(--color-border-soft)">
+        <div class="px-5 py-3 flex items-center gap-2">
+          <span aria-hidden="true">🏦</span>
+          <span class="text-sm font-semibold text-(--color-text)">Banca Múltiple</span>
+          <span class="text-[10px] text-(--color-text-mute) ml-auto tabular-nums">{data.credito.imor.fecha}</span>
+        </div>
+        <div class="px-3 py-3 flex items-center justify-center border-x border-(--color-border-soft)">
+          <span class="text-[10px] font-bold text-(--color-text-mute) uppercase tracking-widest">vs</span>
+        </div>
+        <div class="px-5 py-3 flex items-center gap-2">
+          <span aria-hidden="true">🏘️</span>
+          <span class="text-sm font-semibold text-(--color-text)">SoFiPOs</span>
+          <span class="text-[10px] text-(--color-text-mute) ml-auto tabular-nums">{ultima.fecha}</span>
+        </div>
+      </div>
+
+      <!-- Filas de indicadores -->
+      {[
+        {
+          label: 'IMOR',
+          bmVal: formatPct(data.credito.imor.actual),
+          bmTone: 'text-(--color-green)',
+          sfVal: formatPct(ultima.imor_total),
+          sfTone: 'text-(--color-yellow)',
+          delta: dImor,
+        },
+        {
+          label: 'IMORA',
+          bmVal: formatPct(data.credito.imora.actual),
+          bmTone: 'text-(--color-yellow)',
+          sfVal: formatPct(ultima.imora_total),
+          sfTone: 'text-(--color-red)',
+          delta: dImora,
+        },
+        {
+          label: 'ROA',
+          bmVal: formatPct(data.credito.roa.actual),
+          bmTone: 'text-(--color-green)',
+          sfVal: formatPct(ultima.roa),
+          sfTone: 'text-(--color-red)',
+          delta: dRoa,
+        },
+        {
+          label: 'ICOR',
+          bmVal: `${data.credito.icor.actual.toFixed(2)}×`,
+          bmTone: 'text-(--color-green)',
+          sfVal: '—',
+          sfTone: 'text-(--color-text-mute)',
+          delta: null,
+        },
+      ].map((row) => (
+        <div class="grid grid-cols-[1fr_auto_1fr] border-b border-(--color-border-soft) last:border-0 hover:bg-white/[0.02] transition-colors">
+          <div class="px-5 py-3.5 flex items-baseline justify-between gap-4">
+            <span class="text-[11px] font-medium text-(--color-text-mute) uppercase tracking-wider">{row.label}</span>
+            <span class={`serif text-xl font-semibold tabular-nums ${row.bmTone}`}>{row.bmVal}</span>
+          </div>
+          <div class="px-3 flex items-center justify-center border-x border-(--color-border-soft) min-w-[72px]">
+            {row.delta
+              ? <span class={`text-[10px] font-semibold tabular-nums ${row.delta.color}`}>{row.delta.text}</span>
+              : <span class="text-[10px] text-(--color-border-soft)">—</span>
+            }
+          </div>
+          <div class="px-5 py-3.5 flex items-baseline justify-between gap-4">
+            <span class="text-[11px] font-medium text-(--color-text-mute) uppercase tracking-wider">{row.label}</span>
+            <span class={`serif text-xl font-semibold tabular-nums ${row.sfTone}`}>{row.sfVal}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Gráficas comparativas históricas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="card-surface rounded-xl p-4">
+        <div class="text-[10px] font-semibold uppercase tracking-widest text-(--color-text-mute) mb-3">IMOR · histórico</div>
+        <ComparisonChart
+          fechasBm={hpc.fechas}
+          valuesBm={hpc.imor_total}
+          fechasSf={s.fechas}
+          valuesSf={s.imor_total}
+          client:visible
+        />
+      </div>
+      <div class="card-surface rounded-xl p-4">
+        <div class="text-[10px] font-semibold uppercase tracking-widest text-(--color-text-mute) mb-3">IMORA · histórico</div>
+        <ComparisonChart
+          fechasBm={hpc.fechas}
+          valuesBm={hpc.imora_total}
+          fechasSf={s.fechas}
+          valuesSf={s.imora_total}
+          client:visible
+        />
+      </div>
+      <div class="card-surface rounded-xl p-4">
+        <div class="text-[10px] font-semibold uppercase tracking-widest text-(--color-text-mute) mb-3">ROA · histórico</div>
+        <ComparisonChart
+          fechasBm={hpc.fechas}
+          valuesBm={hpc.roa}
+          fechasSf={s.fechas}
+          valuesSf={s.roa}
+          allowNegative={true}
+          client:visible
+        />
+      </div>
+    </div>
+
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
+  <BottomNav slot="bottom-nav" />
+</Layout>
