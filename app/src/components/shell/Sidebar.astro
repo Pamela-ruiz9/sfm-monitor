@@ -27,9 +27,9 @@ const TABS = [
     Icon: Thermometer,
   },
   {
-    href: `${base}/instituciones`,
+    href: `${base}/instituciones/tipos`,
     label: 'Instituciones',
-    sub: 'Banca · SoFiPOs',
+    sub: undefined,
     match: new RegExp(`^${base}/instituciones`),
     Icon: Building2,
   },
@@ -48,6 +48,35 @@ const TABS = [
     Icon: BookOpen,
   },
 ] as const;
+
+const isInstituciones = path.startsWith(`${base}/instituciones`);
+
+const SUBNAV = [
+  {
+    href: `${base}/instituciones/tipos`,
+    label: 'Tipos de inst.',
+    group: 'overview' as const,
+    match: new RegExp(`^${base}/instituciones/tipos`),
+  },
+  {
+    href: `${base}/instituciones/contraste`,
+    label: 'Contraste de riesgo',
+    group: 'overview' as const,
+    match: new RegExp(`^${base}/instituciones/contraste`),
+  },
+  {
+    href: `${base}/instituciones/banca-multiple`,
+    label: 'Banca Múltiple',
+    group: 'inst' as const,
+    match: new RegExp(`^${base}/instituciones/banca-multiple`),
+  },
+  {
+    href: `${base}/instituciones/sofipos`,
+    label: 'SoFiPOs',
+    group: 'inst' as const,
+    match: new RegExp(`^${base}/instituciones/sofipos`),
+  },
+];
 ---
 
 <aside
@@ -95,29 +124,60 @@ const TABS = [
     {
       TABS.map(({ href, label, sub, match, Icon }) => {
         const active = match.test(path);
+        const isInstEntry = href.includes('/instituciones');
         return (
-          <a
-            href={href}
-            data-astro-prefetch
-            aria-current={active ? 'page' : undefined}
-            class:list={[
-              'nav-link flex items-center gap-3 px-3 py-2.5 mx-1 rounded-md transition-colors group relative',
-              active
-                ? 'bg-(--color-bg-elev) text-(--color-text) font-medium sidebar-active'
-                : 'text-(--color-text-mute) hover:text-(--color-text) hover:bg-(--color-bg-elev)',
-            ]}
-            title={label}
-          >
-            <Icon className="size-4 shrink-0" aria-hidden="true" />
-            <span class="sidebar-label flex flex-col leading-tight min-w-0">
-              <span class="truncate text-sm">{label}</span>
-              {sub && (
-                <span class="sidebar-subnav text-[10px] font-normal text-(--color-text-mute) truncate">
-                  {sub}
-                </span>
-              )}
-            </span>
-          </a>
+          <>
+            <a
+              href={href}
+              data-astro-prefetch
+              aria-current={active ? 'page' : undefined}
+              class:list={[
+                'nav-link flex items-center gap-3 px-3 py-2.5 mx-1 rounded-md transition-colors group relative',
+                active
+                  ? 'bg-(--color-bg-elev) text-(--color-text) font-medium sidebar-active'
+                  : 'text-(--color-text-mute) hover:text-(--color-text) hover:bg-(--color-bg-elev)',
+              ]}
+              title={label}
+            >
+              <Icon className="size-4 shrink-0" aria-hidden="true" />
+              <span class="sidebar-label flex flex-col leading-tight min-w-0">
+                <span class="truncate text-sm">{label}</span>
+                {sub && (
+                  <span class="sidebar-subnav text-[10px] font-normal text-(--color-text-mute) truncate">
+                    {sub}
+                  </span>
+                )}
+              </span>
+            </a>
+            {isInstEntry && isInstituciones && (
+              <div class="instituciones-subnav mx-1 mb-1">
+                {SUBNAV.map((item, i) => {
+                  const subActive = item.match.test(path);
+                  const prevGroup = i > 0 ? SUBNAV.at(i - 1)?.group : undefined;
+                  const showGroupLabel = item.group === 'inst' && prevGroup === 'overview';
+                  return (
+                    <>
+                      {showGroupLabel && (
+                        <div class="subnav-group-label">Por institución</div>
+                      )}
+                      <a
+                        href={item.href}
+                        data-astro-prefetch
+                        aria-current={subActive ? 'page' : undefined}
+                        class:list={[
+                          'subnav-item',
+                          subActive && 'subnav-active',
+                        ]}
+                      >
+                        <span class="subnav-dot" aria-hidden="true" />
+                        {item.label}
+                      </a>
+                    </>
+                  );
+                })}
+              </div>
+            )}
+          </>
         );
       })
     }
@@ -159,5 +219,50 @@ const TABS = [
   [data-sidebar][data-collapsed="true"] .sidebar-active {
     border-left: none;
     padding-left: 0;
+  }
+
+  /* Instituciones sub-nav */
+  .subnav-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px 5px 26px;
+    border-radius: 6px;
+    font-size: 0.6875rem;
+    color: var(--color-text-mute);
+    transition: color 150ms, background 150ms;
+    text-decoration: none;
+  }
+  .subnav-item:hover {
+    color: var(--color-text);
+    background: var(--color-bg-elev);
+  }
+  .subnav-item.subnav-active {
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+    font-weight: 600;
+  }
+  .subnav-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+    opacity: 0.5;
+  }
+  .subnav-item.subnav-active .subnav-dot {
+    opacity: 1;
+  }
+  .subnav-group-label {
+    padding: 6px 10px 3px 26px;
+    font-size: 0.5625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-mute);
+    opacity: 0.5;
+  }
+  [data-sidebar][data-collapsed="true"] .instituciones-subnav {
+    display: none;
   }
 </style>
