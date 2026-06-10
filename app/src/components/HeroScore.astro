@@ -47,19 +47,6 @@ if (reds >= 2) {
   scoreLabel = 'Riesgo Bajo';
   scoreColor = 'var(--color-green)';
 }
-
-const PILL_DOT = {
-  green: 'bg-(--color-green)',
-  yellow: 'bg-(--color-yellow)',
-  red: 'bg-(--color-red)',
-} as const;
-
-const pills = [
-  { label: 'Crédito', tone: credito },
-  { label: 'Mercado', tone: mercado },
-  { label: 'Macro', tone: macro },
-  { label: 'Liquidez', tone: liquidez },
-] as const;
 ---
 
 <section class="space-y-3">
@@ -71,20 +58,6 @@ const pills = [
     style={`font-size: clamp(2.8rem, 6vw, 4.8rem); color: ${scoreColor}`}>
     {scoreLabel}
   </h1>
-  <p class="text-sm text-(--color-text-dim) max-w-3xl leading-relaxed">
-    Índice compuesto basado en indicadores de crédito, mercado, macro y
-    liquidez del sistema bancario mexicano. Detalle por dimensión:
-  </p>
-  <div class="flex flex-wrap gap-2 pt-1">
-    {
-      pills.map((p) => (
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-(--color-border) bg-(--color-bg-elev) text-xs text-(--color-text-dim)">
-          <span class={`size-2 rounded-full ${PILL_DOT[p.tone]}`} aria-hidden="true" />
-          {p.label}
-        </span>
-      ))
-    }
-  </div>
   {
     alerts.length > 0 && (
       <p class="text-[11px] text-(--color-text-mute) pt-1">
