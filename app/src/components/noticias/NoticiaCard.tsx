@@ -163,7 +163,7 @@ export function NoticiaCard({ item }: Props) {
           <ImpactoTable
             mechanism={item.impact.mechanism}
             axes={item.impact.axes}
-            watchboardUrl="https://watchboard.dev"
+            {...(sourceUrl && { sourceUrl })}
           />
         )}
       </div>

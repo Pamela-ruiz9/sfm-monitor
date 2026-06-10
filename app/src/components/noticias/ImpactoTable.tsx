@@ -5,10 +5,10 @@ import { DIRECTION_CONFIG, AXIS_LABEL } from '~/data/watchboard-rules';
 interface Props {
   mechanism: string;
   axes: AxisImpact[];
-  watchboardUrl: string;
+  sourceUrl?: string;
 }
 
-export function ImpactoTable({ mechanism, axes, watchboardUrl }: Props) {
+export function ImpactoTable({ mechanism, axes, sourceUrl }: Props) {
   return (
     <div className="mt-3 rounded-md p-3 text-[11px]" style={{ background: 'var(--color-bg)', borderTop: '1px solid var(--color-border-soft)' }}>
       <div className="text-[9px] font-semibold uppercase tracking-widest mb-2" style={{ color: 'var(--color-accent)' }}>
@@ -48,15 +48,17 @@ export function ImpactoTable({ mechanism, axes, watchboardUrl }: Props) {
           </tbody>
         </table>
       )}
-      <a
-        href={watchboardUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-[10px] hover:underline"
-        style={{ color: 'var(--color-accent)' }}
-      >
-        ↗ Ver evento completo en Watchboard
-      </a>
+      {sourceUrl && (
+        <a
+          href={sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[10px] hover:underline"
+          style={{ color: 'var(--color-accent)' }}
+        >
+          ↗ Leer artículo fuente
+        </a>
+      )}
     </div>
   );
 }
