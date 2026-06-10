@@ -1,0 +1,310 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { datasetJsonLd } from '~/lib/jsonld';
+import Header from '~/components/shell/Header.astro';
+import BottomNav from '~/components/shell/BottomNav.astro';
+import Section from '~/components/chrome/Section.astro';
+import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
+import { KpiCard } from '~/components/kpi/KpiCard';
+import { ImorSegPivotChart } from '~/components/charts/ImorSegPivotChart';
+import { ImoraChart } from '~/components/charts/ImoraChart';
+import { IcorChart } from '~/components/charts/IcorChart';
+import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
+import { MifChart } from '~/components/charts/MifChart';
+import { QuitasChart } from '~/components/charts/QuitasChart';
+import { EprcChart } from '~/components/charts/EprcChart';
+import { Ifrs9Chart } from '~/components/charts/Ifrs9Chart';
+import { BancosTable } from '~/components/tables/BancosTable';
+import { MetricTooltip } from '~/components/MetricTooltip';
+import { ChartDrawer } from '~/components/drawer/ChartDrawer';
+import { CmdKPalette } from '~/components/shell/CmdKPalette';
+import { UpdateToast } from '~/components/shell/UpdateToast';
+import { PWAInstallPrompt } from '~/components/shell/PWAInstallPrompt';
+import { OnboardingTour } from '~/components/shell/OnboardingTour';
+import { SwipeNav } from '~/components/shell/SwipeNav';
+import { PullToRefresh } from '~/components/shell/PullToRefresh';
+import { loadSfmData } from '~/data/loader';
+import { formatPct } from '~/lib/utils';
+
+const data = loadSfmData();
+const hpc = data.credito.historico_por_cartera;
+const ifrs = data.ifrs9;
+const hpb = data.credito.historico_por_banco;
+
+const bancosArr = hpb
+  ? Object.values(hpb.bancos).map((b) => ({
+      id: b.id,
+      nombre: b.nombre,
+      imor_total: b.imor_total,
+      ...(b.imor_comercial != null ? { imor_comercial: b.imor_comercial } : {}),
+      ...(b.imor_consumo   != null ? { imor_consumo:   b.imor_consumo   } : {}),
+      ...(b.imor_vivienda  != null ? { imor_vivienda:  b.imor_vivienda  } : {}),
+      ...(b.imor_tarjeta   != null ? { imor_tarjeta:   b.imor_tarjeta   } : {}),
+    }))
+  : [];
+
+const bancosRoaArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.roa?.some((v) => v !== null))
+      .map((b) => ({ id: b.id, nombre: b.nombre, roa: b.roa ?? [], roe: b.roe ?? [] }))
+  : [];
+
+const bancosImoraArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.imora_total?.some((v) => v !== null))
+      .map((b) => ({ id: b.id, nombre: b.nombre, values: b.imora_total ?? [] }))
+  : [];
+
+const bancosIcorArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.icor_total?.some((v) => v !== null))
+      .map((b) => ({ id: b.id, nombre: b.nombre, values: b.icor_total ?? [] }))
+  : [];
+
+const bmPivot = {
+  fechas: hpc.fechas,
+  cartera: {
+    total: hpc.imor_total,
+    comercial: hpc.imor_comercial,
+    consumo: hpc.imor_consumo,
+    vivienda: hpc.imor_vivienda,
+    tarjeta: hpc.imor_tarjeta,
+    consumo_norev: hpc.imor_consumo_norev,
+  },
+  bancos: bancosArr,
+};
+
+const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
+---
+
+<Layout
+  title="Banca Múltiple"
+  description="IMOR, IMORA, ICOR, IFRS9, ROA/ROE y Margen de Intermediación de Banca Múltiple. Fuente: CNBV Sector 40."
+  jsonLd={datasetJsonLd({
+    name: 'Banca Múltiple — Indicadores de riesgo y rentabilidad',
+    description: 'IMOR, IMORA, ICOR, IFRS 9 y rentabilidad de Banca Múltiple. Fuente: CNBV Portafolio de Información Sector 40.',
+    path: '/instituciones/banca-multiple',
+    keywords: ['IMOR', 'IMORA', 'ICOR', 'IFRS 9', 'banca múltiple', 'CNBV'],
+  })}>
+  <Header slot="header" />
+
+  <div class="space-y-6">
+
+    <EditorialHeadline
+      eyebrow={`Banca Múltiple · CNBV Sector 40 · ${data.credito.imor.fecha}`}
+      headline="IMOR controlado. Cobertura sobre cartera vencida superior al 100%."
+    />
+
+    <!-- KPIs -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <KpiCard
+        label="IMOR"
+        value={formatPct(data.credito.imor.actual)}
+        asOf={data.credito.imor.fecha}
+        iconName="Activity"
+        tone="green"
+        indicatorId="bm-imor"
+        client:visible
+      />
+      <KpiCard
+        label="IMORA"
+        value={formatPct(data.credito.imora.actual)}
+        asOf={data.credito.imor.fecha}
+        iconName="Percent"
+        tone="yellow"
+        indicatorId="bm-imora"
+        client:visible
+      />
+      <KpiCard
+        label="ICOR"
+        value={`${data.credito.icor.actual.toFixed(2)}×`}
+        asOf={data.credito.imor.fecha}
+        iconName="Shield"
+        tone="green"
+        indicatorId="bm-icor"
+        client:visible
+      />
+      <KpiCard
+        label="ROA"
+        value={formatPct(data.credito.roa.actual)}
+        asOf={data.credito.imor.fecha}
+        iconName="TrendingUp"
+        tone="green"
+        indicatorId="bm-roa"
+        client:visible
+      />
+    </div>
+
+    <Section
+      id="imor-pivot"
+      eyebrow="Explorador interactivo"
+      title="IMOR por banco / cartera"
+      description="Vista Sistema o por banco individual. Selecciona cartera: total, comercial, consumo, vivienda, tarjeta o consumo no revolvente."
+      source="CNBV Sector 40 (Banca Múltiple)"
+      metricSlug="imor"
+      tone="gold">
+      <p class="text-xs text-(--color-text-mute) mb-3">
+        <MetricTooltip slug="imor" client:visible>IMOR</MetricTooltip>: indice de morosidad — cartera vencida / cartera total.
+      </p>
+      <ImorSegPivotChart
+        bm={bmPivot}
+        sofipos={{ fechas: [], cartera: { total: [], comercial: [], consumo: [], vivienda: [] }, entidades: [] }}
+        showSofipos={false}
+        client:visible
+      />
+    </Section>
+
+    <Section
+      id="bancos-table"
+      eyebrow="Riesgo por institución"
+      title="IMOR por banco"
+      description={`Índice de morosidad por institución. Ordenable por IMOR actual, variación anual o nombre. CNBV Sector 40, 2000–${latest_date}.`}
+      source="CNBV Sector 40 (sh_datos_40.csv)"
+      tone="gold">
+      {hpb ? (
+        <BancosTable
+          fechas={hpb.fechas}
+          bancos={hpb.bancos as Record<string, import('../../components/tables/BancosTable').BancoEntry>}
+          client:visible
+        />
+      ) : (
+        <p class="text-sm text-(--color-text-mute)">Sin datos por institución disponibles.</p>
+      )}
+    </Section>
+
+    <Section
+      id="imora"
+      eyebrow="Morosidad ajustada"
+      title="IMORA — Índice de Morosidad Ajustado"
+      description="Incluye cartera vencida más castigos contables acumulados en los últimos 12 meses."
+      source="CNBV Sector 40"
+      metricSlug="imora"
+      tone="yellow">
+      <ImoraChart
+        fechas={hpc.fechas}
+        values={hpc.imora_total}
+        bancos={bancosImoraArr}
+        {...(hpc.tda ? { tda: hpc.tda } : {})}
+        client:visible
+      />
+    </Section>
+
+    {hpc.quitas_castigos && (
+      <Section
+        id="quitas"
+        eyebrow="Flujo de deterioro"
+        title="Quitas y castigos"
+        description="Flujo acumulado de los últimos 12 meses de quitas y castigos contables de la cartera de Banca Múltiple. Las quitas son el componente adicional que diferencia IMORA de IMOR: la morosidad ajustada incorpora estos castigos para reflejar el deterioro real de la cartera."
+        source="CNBV Sector 40 — concepto 40200193"
+        tone="yellow">
+        <QuitasChart
+          fechas={hpc.fechas}
+          valores={hpc.quitas_castigos}
+          client:visible
+        />
+      </Section>
+    )}
+
+    <Section
+      id="icor"
+      eyebrow="Cobertura de cartera"
+      title="ICOR — Índice de Cobertura"
+      description="Razón entre reservas preventivas y cartera vencida. Un valor > 1 indica cobertura igual o superior al 100%."
+      source="CNBV Sector 40"
+      metricSlug="icor"
+      tone="green">
+      <IcorChart fechas={hpc.fechas} values={hpc.icor_total} bancos={bancosIcorArr} client:visible />
+    </Section>
+
+    {hpc.eprc_cartera && (
+      <Section
+        id="eprc"
+        eyebrow="Cobertura de cartera"
+        title="EPRC / Cartera total"
+        description="Estimaciones Preventivas para Riesgos Crediticios como porcentaje de la cartera total. Complementa el ICOR: mientras el ICOR mide cuántas veces las reservas cubren la cartera vencida, esta métrica muestra la carga de reservas sobre el portafolio completo."
+        source="CNBV Sector 40 — concepto 40200118"
+        tone="green">
+        <EprcChart
+          fechas={hpc.fechas}
+          eprcCartera={hpc.eprc_cartera}
+          client:visible
+        />
+      </Section>
+    )}
+
+    <Section
+      id="roa-roe"
+      eyebrow="Rentabilidad"
+      title="ROA y ROE"
+      description="Retorno sobre activos (eje izquierdo) y retorno sobre capital (eje derecho). Banca Múltiple consolidado."
+      source="CNBV Sector 40"
+      metricSlug="roa"
+      tone="green">
+      <RoaRoeChart fechas={hpc.fechas} roa={hpc.roa} roe={hpc.roe} bancos={bancosRoaArr} client:visible />
+    </Section>
+
+    {hpc.mif && hpc.tasa_activa && hpc.tasa_pasiva && (
+      <Section
+        id="mif"
+        eyebrow="Intermediación financiera"
+        title="MIF — Margen de Intermediación"
+        description="Diferencia entre la tasa activa implícita (rendimiento de la cartera) y la tasa pasiva implícita (costo de fondeo). El MIF mide la rentabilidad estructural del negocio bancario."
+        source="CNBV Sector 40 — conceptos 40200162, 40200037, 40200218"
+        tone="green">
+        <MifChart
+          fechas={hpc.fechas}
+          tasaActiva={hpc.tasa_activa}
+          tasaPasiva={hpc.tasa_pasiva}
+          mif={hpc.mif}
+          tasaBanxico={data.tasa_banxico?.historico}
+          client:visible
+        />
+      </Section>
+    )}
+
+    <Section
+      id="ifrs9"
+      eyebrow="Estándares contables"
+      title="IFRS 9 — Stages 1/2/3"
+      description="Distribución porcentual de la cartera por stage de riesgo crediticio. Stage 1: riesgo bajo; Stage 2: aumento significativo; Stage 3: deteriorada."
+      source="CNBV Reporte R12A"
+      metricSlug="ifrs9"
+      tone="yellow">
+      {ifrs.ultima && (
+        <div class="grid grid-cols-3 gap-3 mb-4">
+          <div class="card-surface p-4 text-center">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute) mb-1">Stage 1</div>
+            <div class="serif text-2xl font-semibold text-(--color-green)">{formatPct(ifrs.ultima.etapa1)}</div>
+          </div>
+          <div class="card-surface p-4 text-center">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute) mb-1">Stage 2</div>
+            <div class="serif text-2xl font-semibold text-(--color-yellow)">{formatPct(ifrs.ultima.etapa2)}</div>
+          </div>
+          <div class="card-surface p-4 text-center">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute) mb-1">Stage 3</div>
+            <div class="serif text-2xl font-semibold text-(--color-red)">{formatPct(ifrs.ultima.etapa3)}</div>
+          </div>
+        </div>
+      )}
+      <Ifrs9Chart
+        fechas={ifrs.fechas}
+        etapa1={ifrs.etapa1_pct}
+        etapa2={ifrs.etapa2_pct}
+        etapa3={ifrs.etapa3_pct}
+        {...(ifrs.por_segmento ? { porSegmento: ifrs.por_segmento } : {})}
+        {...(ifrs.por_banco ? { porBanco: ifrs.por_banco } : {})}
+        client:visible
+      />
+    </Section>
+
+  </div>
+
+  <ChartDrawer slot="drawer" client:idle />
+  <CmdKPalette slot="cmdk" client:idle />
+  <UpdateToast slot="update-toast" client:idle />
+  <PWAInstallPrompt slot="install-prompt" client:idle />
+  <OnboardingTour slot="onboarding" client:idle />
+  <SwipeNav slot="gestures" client:idle />
+  <PullToRefresh slot="gestures" client:idle />
+  <BottomNav slot="bottom-nav" />
+</Layout>
