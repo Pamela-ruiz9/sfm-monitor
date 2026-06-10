@@ -1,7 +1,6 @@
 ---
 import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/shell/Header.astro';
-import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
 import EditorialHeadline from '~/components/chrome/EditorialHeadline.astro';
 import CitationBox from '~/components/CitationBox.astro';
@@ -24,7 +23,6 @@ const SEMAFORO_DOT = {
   title="Metodología"
   description="Notas metodológicas: cómo se calculan los semáforos del SFM Monitor, fuentes de datos, frecuencia de actualización.">
   <Header slot="header" />
-  <TabBar slot="header" />
 
   <div class="space-y-8 max-w-3xl">
     <EditorialHeadline

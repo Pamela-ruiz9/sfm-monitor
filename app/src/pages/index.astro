@@ -2,7 +2,6 @@
 import Layout from '~/layouts/Layout.astro';
 import { catalogJsonLd } from '~/lib/jsonld';
 import Header from '~/components/shell/Header.astro';
-import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
 import HeroScore from '~/components/HeroScore.astro';
 import AlertsPanel from '~/components/alerts/AlertsPanel.astro';
@@ -63,7 +62,6 @@ const udiFecha = m.udis?.fecha ?? null;
   description="Resumen ejecutivo del riesgo del Sistema Financiero Mexicano. Tipo de cambio, tasas, inflación y reservas internacionales. Datos de Banxico SIE, CNBV e INEGI."
   jsonLd={catalogJsonLd()}>
   <Header slot="header" />
-  <TabBar slot="header" />
 
   <div class="space-y-8">
     <HeroScore />

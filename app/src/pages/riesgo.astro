@@ -6,7 +6,6 @@
 import Layout from '~/layouts/Layout.astro';
 import { datasetJsonLd } from '~/lib/jsonld';
 import Header from '~/components/shell/Header.astro';
-import TabBar from '~/components/shell/TabBar.astro';
 import BottomNav from '~/components/shell/BottomNav.astro';
 import Section from '~/components/chrome/Section.astro';
 import { RiskHeatmap } from '~/components/charts/RiskHeatmap';
@@ -84,7 +83,6 @@ const PILL_TEXT: Record<Tone, string> = {
     keywords: ['riesgo sistémico', 'heatmap', 'percentiles', 'Banxico', 'CNBV'],
   })}>
   <Header slot="header" />
-  <TabBar slot="header" />
 
   <div class="space-y-8">
     <!-- Page header -->
