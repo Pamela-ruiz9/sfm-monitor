@@ -1,0 +1,76 @@
+name: Probe INEGI BIE series
+
+on:
+  workflow_dispatch:
+    inputs:
+      extra_ids:
+        description: "IDs adicionales a probar (separados por coma, ej: 737300,737310)"
+        required: false
+        default: ""
+
+jobs:
+  probe:
+    name: Identificar series INEGI BIE
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe candidate series
+        env:
+          INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}
+        run: |
+          python3 << 'PYEOF'
+          import urllib.request, json, os
+
+          TOKEN = os.environ.get("INEGI_TOKEN", "")
+          BASE = "https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR"
+
+          def probe(serie_id):
+              url = f"{BASE}/{serie_id}/es/00/false/BIE-BISE/2.0/{TOKEN}?type=json"
+              try:
+                  req = urllib.request.Request(url)
+                  with urllib.request.urlopen(req, timeout=15) as r:
+                      d = json.loads(r.read())
+                  s = d["Series"][0]
+                  name = s.get("INDICADOR_NOMBRE", s.get("DESC", "—"))
+                  unit = s.get("UNIDAD_NOMBRE", "—")
+                  freq = s.get("FREQ", "—")
+                  obs = s.get("OBSERVATIONS", [])
+                  last3 = list(reversed(obs))[:3] if obs else []
+                  last3_str = ", ".join(
+                      f"{o['TIME_PERIOD']}={o['OBS_VALUE']}"
+                      for o in last3 if o.get("OBS_VALUE")
+                  )
+                  print(f"  ✅ {serie_id}: {name} | unidad={unit} freq={freq} | últimos: {last3_str}")
+              except Exception as e:
+                  print(f"  ❌ {serie_id}: {e}")
+
+          # ── Candidatos IFB (Inversión Fija Bruta var. anual mensual) ──────────────
+          # 737346 fue el más prometedor en sesión anterior (~-12% para 2026/01)
+          print("\n── Candidatos IFB ──")
+          for sid in ["737340","737341","737342","737343","737344","737345","737346",
+                      "737347","737348","737349","737350","737351","737352","737353"]:
+              probe(sid)
+
+          # ── Candidatos Balanza Comercial (Exportaciones / Importaciones) ───────
+          # Área diferente a Cuentas Nacionales — rango tentativo más amplio
+          print("\n── Candidatos BCMM area 737360–737400 ──")
+          for sid in [str(i) for i in range(737360, 737401, 2)]:
+              probe(sid)
+
+          print("\n── Candidatos BCMM area 737500–737560 ──")
+          for sid in [str(i) for i in range(737500, 737561, 4)]:
+              probe(sid)
+
+          print("\n── Candidatos BCMM area 738000–738060 ──")
+          for sid in [str(i) for i in range(738000, 738061, 4)]:
+              probe(sid)
+
+          # ── IDs adicionales (input manual) ────────────────────────────────────
+          extra = os.environ.get("EXTRA_IDS", "").strip()
+          if extra:
+              print("\n── IDs extra ingresados ──")
+              for sid in [x.strip() for x in extra.split(",") if x.strip()]:
+                  probe(sid)
+
+          PYEOF
+        env:
+          EXTRA_IDS: ${{ inputs.extra_ids }}
