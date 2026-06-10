@@ -118,13 +118,21 @@ El footer pasa de estar vacío/mínimo a ser un componente informativo visible e
 - Créditos: "Autoría: Ingrid Pamela Ruiz Puga · Co-autoría: Artemio Padilla" con link a Metodología
 - Licencias: MIT (código) / CC-BY 4.0 (contenido)
 
-**Zona derecha / redes sociales:**
-- GitHub del proyecto (link al repositorio `pamela-ruiz9/sfm-monitor`)
-- LinkedIn de Pamela (si se provee URL)
-- Twitter/X (si se provee)
-- Los iconos son de Lucide (`Github`, `Linkedin`, `Twitter`) o SVGs si Lucide no los tiene
+**Zona central / fuentes de consulta:**
+- Título "Fuentes" en uppercase pequeño
+- Banxico SIE — Sistema de Información Económica (link a `www.banxico.org.mx/SieInternet/`)
+- CNBV — Comisión Nacional Bancaria y de Valores (link a `www.cnbv.gob.mx`)
+- INEGI — Instituto Nacional de Estadística y Geografía (link a `www.inegi.org.mx`)
+- Links en `text-[--color-text-mute]` con hover naranja, abren en `_blank`
 
-**Layout:** `grid grid-cols-1 md:grid-cols-2` — en mobile se apila, en desktop dos columnas.
+**Zona derecha / redes sociales:**
+- Título "Contacto" en uppercase pequeño
+- GitHub del proyecto — `github.com/pamela-ruiz9/sfm-monitor`
+- LinkedIn de Pamela — URL a definir como constante en el componente
+- Twitter/X — si se provee URL (opcional)
+- Iconos Lucide (`Github`, `Linkedin`, `Twitter`) + nombre de la red
+
+**Layout:** `grid grid-cols-1 md:grid-cols-3` — en mobile se apila, en desktop tres columnas.
 **Borde superior:** `border-t border-[--color-border]`. Fondo: `bg-[--color-bg]`.
 
 ---
