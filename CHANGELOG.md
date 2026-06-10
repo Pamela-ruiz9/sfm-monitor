@@ -12,6 +12,15 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(app): redesign shell — sidebar colapsable, footer 3-columnas, logo animado (2026-06-09)
+- `app/src/components/shell/Sidebar.astro`: navegación colapsable nuevo en desktop (240px expandido ↔ 56px colapsado); reemplaza `TabBar` en layout grid; toggle persist en `$sidebarCollapsed` (localStorage). `DataFreshnessBadge` movido al pie de la sidebar.
+- `app/src/stores/sidebarState.ts`: nanostore `$sidebarCollapsed` con getter/setter, persistencia localStorage.
+- `app/src/components/shell/Footer.astro`: footer rediseñado con 3 columnas — Fuentes (Banxico/CNBV/INEGI), Autoría (Ingrid Pamela Ruiz Puga + Artemio Padilla), Links (LinkedIn + GitHub). Detalles de licencia MIT/CC-BY. `text-[11px]` gris 400.
+- `app/src/components/shell/SfmLogo.astro`: animación CSS puro — pulso ECG `stroke-dashoffset` en el trazo del símbolo, respeta `prefers-reduced-motion`. Logo colapsado a `icon` (solo símbolo) en sidebar.
+- `app/src/layouts/Layout.astro`: grid desktop `grid-cols-[56px_1fr] lg:grid-cols-[240px_1fr]` con Sidebar + contenido; Header ocultado en desktop (`lg:hidden`). Footer como 4ta región en grid.
+- `app/src/components/kpi/KpiCard.tsx`: valor numérico `clamp(32px, 6vw, 44px)`, padding `p-6`, label `text-[11px]` (era 14px). Hover border e ícono en `--color-accent`.
+- `app/src/components/kpi/HeroScore.tsx`: eliminadas pills de dimensión (Crédito/Mercado/Macro/Liquidez) y copy descriptivo — hero limpio solo con número + tone color.
+
 ### fix: cierra bugs UI y pipeline — #107 #108 #109 + remesas #106 (2026-06-09)
 - `app/src/components/DataFreshnessBadge.tsx`: mueve `Date.now()` de `useMemo` a `useEffect`; elimina hydration mismatch React #418 (closes #108).
 - `app/src/components/charts/Ifrs9Chart.tsx`: vista por cartera ahora muestra E1/E2/E3 apilados igual que vista sistema; Stage 1 = 100 − E2 − E3 calculado inline (closes #109).
