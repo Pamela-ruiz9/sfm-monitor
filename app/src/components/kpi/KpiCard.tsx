@@ -77,12 +77,12 @@ export function KpiCard({
           : undefined
       }
       className={cn(
-        'card-surface group relative block p-5 transition-all',
+        'card-surface group relative block p-6 transition-all',
         href && 'hover:border-(--color-accent) hover:translate-y-[-1px]',
       )}>
       <div className="flex items-start justify-between gap-3">
         <div>
-          <div className="text-[10px] font-medium uppercase tracking-[0.12em] text-(--color-text-mute)">
+          <div className="text-[11px] font-medium uppercase tracking-[0.12em] text-(--color-text-mute)">
             {label}
           </div>
           {asOf && (
@@ -97,7 +97,7 @@ export function KpiCard({
       <div className="mt-3 flex items-baseline gap-1.5">
         <span
           className={cn(
-            'serif tabular text-[clamp(28px,6vw,38px)] font-semibold tracking-tight leading-none',
+            'serif tabular text-[clamp(32px,7vw,44px)] font-semibold tracking-tight leading-none',
             VALUE_COLOR[tone],
           )}>
           {value}
