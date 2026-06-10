@@ -92,7 +92,7 @@ export function NoticiaCard({ item }: Props) {
       <div
         ref={ref}
         className="w-full"
-        style={{ aspectRatio: '16/9', background: imageUrl ? 'transparent' : item.trackerColor + '22', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        style={{ aspectRatio: '3/2', background: imageUrl ? 'transparent' : item.trackerColor + '22', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       >
         {imageUrl ? (
           <img
@@ -109,7 +109,7 @@ export function NoticiaCard({ item }: Props) {
       </div>
 
       {/* Body */}
-      <div className="p-3">
+      <div className="p-2.5">
         {/* Category + meta */}
         <div className="flex items-center gap-2 mb-2 flex-wrap">
           <span
@@ -125,19 +125,19 @@ export function NoticiaCard({ item }: Props) {
         </div>
 
         {/* Title */}
-        <h3 className="text-sm font-semibold leading-snug mb-2" style={{ color: 'var(--color-text)' }}>
+        <h3 className="text-xs font-semibold leading-snug mb-1.5" style={{ color: 'var(--color-text)' }}>
           {item.title}
         </h3>
 
         {/* Impact chips */}
         {item.impact.axes.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mb-2">
+          <div className="flex flex-wrap gap-1 mb-1.5">
             {item.impact.axes.map((ai) => {
               const dir = DIRECTION_CONFIG[ai.direction];
               return (
                 <span
                   key={ai.axis}
-                  className="text-[9px] font-semibold px-2 py-0.5 rounded-full border"
+                  className="text-[8px] font-semibold px-1.5 py-0.5 rounded-full border"
                   style={{ background: dir.bg, color: dir.color, borderColor: dir.border }}
                 >
                   {dir.symbol} {AXIS_LABEL[ai.axis]}
