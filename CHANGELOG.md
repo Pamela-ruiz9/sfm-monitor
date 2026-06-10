@@ -12,6 +12,15 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(app): macro salario + cartera crecimiento + PWA icons + smoke tests (2026-06-10)
+- **`SalarioMinimoChart.tsx`** — KpiCard ($315.04 MXN/día) + chart de serie SL11298 movidos de Home a Macro.
+- **`DesempleoChart.tsx`** — línea de subocupación (serie 444775) añadida como segunda línea punteada en el mismo chart.
+- **`CarteraCrecimientoChart.tsx`** — crecimiento YoY de cartera total (concepto 40100185, saldo=130): línea azul fill, zero-line annotation, tooltip con crecimiento % + saldo en MMP. Sección en `banca-multiple.astro`.
+- **Pipeline CNBV** — `extract-cnbv-raw.py` extiende `BALANCE_CONCEPT_MAP` con concepto 40100185; `normalize-cnbv.py` agrega `cartera_total_mmp` y `cartera_total_yoy` (YoY% con ventana 12 meses) al `historico_por_cartera`. `data/credito.json` y `data/sfm-data.json` regenerados (304 meses 2000-12–2026-03).
+- **Íconos PWA reales** — `icon-192.png`, `icon-512.png`, `icon-maskable-192.png`, `icon-maskable-512.png`, `apple-touch-icon.png` y `sfm-appicon.svg` reemplazan placeholders 1×1. Diseño: bg oscuro (#0d1117), 4 barras azul/azul/ámbar/verde, línea de tendencia blanca con puntos. Generados con Python stdlib (struct + zlib, sin PIL).
+- **`smoke-check.spec.ts`** — 4 tests e2e Playwright (project: desktop): home carga con IMOR, macro salario visible + sin drawer en KpiCards, banca-múltiple chart cartera crecimiento visible.
+- **Macro KpiCards** — eliminado `indicatorId` de los 7 KpiCards de macro.astro (inflación, IGAE, PIB, desempleo, subocupación, tasa real Banxico, tasa real Cetes). El drawer ya no se abre al tocarlos.
+
 ### Añadido
 - **`/macro/noticias`** — nueva sub-página "Noticias & Impacto": feed de eventos macro de Watchboard API (4 trackers: `global-recession-risk`, `sheinbaum-presidency`, `trump-presidencies`, `mexico`) con análisis de impacto estático sobre ejes SFM (mora/liquidez/solvencia/rentabilidad) mediante 10 reglas en `watchboard-rules.ts`. Imágenes lazy via Microlink con fallback a emoji. Banda de contexto con 4 KPIs de `global-recession-risk`. Cierra #100.
 - Sub-nav Macro en Sidebar: "Indicadores" + "Noticias & Impacto".

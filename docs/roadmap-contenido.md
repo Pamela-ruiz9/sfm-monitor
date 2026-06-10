@@ -9,22 +9,25 @@
 
 El repo ya tiene `data/sfm-data.json` con la siguiente cobertura:
 
-| Módulo | Indicadores presentes | Fuente | Automatización |
-|--------|----------------------|--------|----------------|
-| Mercado/Macro | FX FIX, Tasa Banxico, TIIE 28d, Inflación INPC | Banxico SIE | ✅ GitHub Actions diario (lun-vie 8am CDMX) |
-| Crédito Banca Múltiple | IMOR, IMORA, ICOR, ROA, ROE — por cartera y por banco (G-7) | CNBV CSV | ⚠️ Manual mensual |
-| IFRS 9 | Etapas 1/2/3 en % y MMP | CNBV R12A | ⚠️ Manual mensual |
-| SoFiPOs | IMOR por cartera, IMORA, ROA, ROE | CNBV Excel | ⚠️ Manual mensual |
-| Histórico largo | FX desde 1994, Inflación desde 2000, IMOR desde 2000 | Banxico + CNBV | ⚠️ Estático en JSON |
+| Módulo | Indicadores presentes | Fuente | Automatización | UI |
+|--------|----------------------|--------|----------------|-----|
+| Mercado | FX FIX, Tasa Banxico, TIIE 28d, Reservas, Cetes 28d, UDI | Banxico SIE | ✅ GitHub Actions diario L-V 8am CDMX | ✅ Home |
+| Inflación | INPC general, subyacente, no subyacente | Banxico SIE | ✅ | ✅ Home |
+| Macro INEGI | IGAE (4 meses), PIB (trimestral), desempleo, subocupación, informalidad, salario mínimo | INEGI BIE + STPS | ✅ (IGAE truncado a ≥dic 2025 — ID nuevo) | ✅ Macro |
+| Macro Banxico | Remesas familiares (22 meses, SE27803) | Banxico SIE | ✅ | ❌ Sin UI |
+| Crédito Banca Múltiple | IMOR/IMORA/ICOR/ROA/ROE por cartera y 62 bancos · MIF · Quitas · EPRC · IFRS9 stages · Crecimiento cartera | CNBV CSV sh_datos_40 + R12A | ⚠️ Manual mensual | ✅ Instituciones/Banca Múltiple |
+| SoFiPOs | IMOR por cartera, IMORA, ROA, ROE (123 meses) · por entidad | CNBV Excel | ⚠️ Manual mensual | ✅ Instituciones/SoFiPOs (ROE sin mostrar) |
+| Histórico largo | FX desde 1994, Inflación desde 2000, IMOR desde 2000 | Banxico + CNBV | ⚠️ Estático en JSON | ✅ |
 
-**Lo que falta y es prioritario:**
-- ICAP / Capital Neto (solvencia) — no está en el JSON actual
-- LCR / CCL y NSFR / CFEN (liquidez) — no están
-- Reservas internacionales (SF43707) — no está
-- ~~Subyacente / no-subyacente — no están~~ ✅ Completo: SP74625 + SP74627 en pipeline y en `InflacionChart.tsx` (2026-06-01)
+**Pendiente urgente — explotar datos ya en JSON sin descarga adicional:**
+- ~~Reservas internacionales (SF43707)~~ ✅ KpiCard + `ReservasChart.tsx` en Home (2026-06-01)
+- ~~Subyacente / no-subyacente~~ ✅ SP74625 + SP74627 en pipeline y `InflacionChart.tsx` (2026-06-01)
+- **Remesas familiares** — `macro.remesas` tiene 22 meses y $4,978 MUSD actual. Solo falta KpiCard + `RemesasChart.tsx` en Macro. Esfuerzo: S
+- **SoFiPOs ROE** — `sofipos.roe` tiene 123 meses completos. `SofiposImoraRoaChart` muestra ROA pero no ROE. Esfuerzo: XS
+- **IGAE historia pre-2026** — ID de serie larga pendiente; `probe-inegi.yml` creado, requiere trigger manual en GitHub Actions UI
 - Desglose IFRS9 automático desde CNBV (hoy es carga manual)
 - `index.json` con hash + timestamp por archivo (cache busting)
-- **[nuevo #106]** Exportaciones (471584), importaciones (471588), inversión fija (462219) — series INEGI rotas post-BIE dic 2025 (HTTP 400); buscar nuevos IDs en `inegi.org.mx/app/indicadores/`
+- **Exportaciones (471584), importaciones (471588), inversión fija (462219)** — series INEGI rotas post-BIE dic 2025 (HTTP 400); buscar nuevos IDs en `inegi.org.mx/app/indicadores/`
 
 **El pipeline de Banxico funciona bien.** El cuello de botella real es CNBV: CSVs en encoding Latin-1, headers multinivel de 3-5 filas, formato que cambia con cada ciclo regulatorio. Eso requiere un parser robusto con validación Pandera antes de automatizarlo.
 
@@ -264,7 +267,7 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 
 ---
 
-*Última actualización: 27 de abril 2026 — Nyx 🌙*
+*Última actualización: 2026-06-10*
 
 ---
 
@@ -272,55 +275,65 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 
 > Inventario de indicadores que ya están en los archivos descargados y pueden agregarse al dashboard sin descargar nada nuevo.
 
-### Del CSV sh_datos_40.csv (Sector 40 Banca Múltiple — 303 meses, dic 2000 – feb 2026)
+### Del CSV sh_datos_40.csv (Sector 40 Banca Múltiple — 304 meses, dic 2000 – mar 2026)
 
-| Métrica | Concepto CNBV | Nivel disponible | Prioridad |
+| Métrica | Concepto CNBV | Nivel disponible | Estado |
 |---|---|---|---|
-| IMORA por banco G-7 | 40200033 × entidad | Sistema, por banco | Alta |
-| ICOR por banco G-7 | 40200096 × entidad | Sistema, por banco | Alta |
-| ROA y ROE por banco G-7 | 40200001/002 × entidad | Sistema, por banco | Alta |
-| ~~Tasa de interés implícita activa~~ | ~~40200162~~ | ~~Sistema~~ | ~~Alta~~ | ✅ MifChart (2026-06-04) |
-| ~~Tasa de interés implícita pasiva~~ | ~~40200037~~ | ~~Sistema~~ | ~~Alta~~ | ✅ MifChart (2026-06-04) |
-| ~~Margen de intermediación financiera (MIF)~~ | ~~40200218~~ | ~~Sistema~~ | ~~Alta~~ | ✅ MifChart (2026-06-04) |
-| ~~Tasa de deterioro ajustada (TDA)~~ | ~~40200074~~ | ~~Sistema~~ | ~~Media~~ | ✅ ImoraChart línea TDA (2026-06-05) |
-| ~~EPRC / Cartera IFRS9 (E1+E2+E3)~~ | ~~40200118~~ | ~~Sistema~~ | ~~Media~~ | ✅ EprcChart (2026-06-05) |
-| ~~Quitas y castigos — flujo 12 meses~~ | ~~40200193~~ | ~~Sistema~~ | ~~Media~~ | ✅ QuitasChart (2026-06-04) |
-| Crecimiento de cartera total (flujo anual) | Balance conceptos | Sistema, por cartera | Media |
+| ~~Tasa de interés implícita activa~~ | ~~40200162~~ | ~~Sistema~~ | ✅ MifChart (2026-06-04) |
+| ~~Tasa de interés implícita pasiva~~ | ~~40200037~~ | ~~Sistema~~ | ✅ MifChart (2026-06-04) |
+| ~~Margen de intermediación financiera (MIF)~~ | ~~40200218~~ | ~~Sistema~~ | ✅ MifChart (2026-06-04) |
+| ~~Tasa de deterioro ajustada (TDA)~~ | ~~40200074~~ | ~~Sistema~~ | ✅ ImoraChart línea TDA (2026-06-05) |
+| ~~EPRC / Cartera IFRS9 (E1+E2+E3)~~ | ~~40200118~~ | ~~Sistema~~ | ✅ EprcChart (2026-06-05) |
+| ~~Quitas y castigos — flujo 12 meses~~ | ~~40200193~~ | ~~Sistema~~ | ✅ QuitasChart (2026-06-04) |
+| ~~Crecimiento de cartera total (YoY anual)~~ | ~~40100185 (saldo=130)~~ | ~~Sistema~~ | ✅ CarteraCrecimientoChart (2026-06-10) |
+| IMORA por banco individual | 40200033 × entidad | Por banco | En JSON `historico_por_banco.imor_total` · chart con dropdown ✅ |
+| ICOR por banco individual | 40200096 × entidad | Por banco | En JSON `historico_por_banco.icor_total` · chart con dropdown ✅ |
+| ROA y ROE por banco individual | 40200001/002 × entidad | Por banco | En JSON `historico_por_banco.roa/roe` · chart con dropdown ✅ |
+| IMOR por cartera × banco | 40100xxx × entidad | Por banco × cartera | En JSON `historico_por_banco.imor_comercial/consumo/vivienda/tarjeta` — filtro banco×cartera pendiente (US-401) |
 
-### Del R12A IFRS9 (ya descargado — dic 2019 – feb 2026)
+### Del R12A IFRS9 (ya descargado — dic 2019 – mar 2026)
 
-| Métrica | Disponibilidad | Prioridad |
+| Métrica | Disponibilidad | Estado |
 |---|---|---|
-| ~~IFRS9 etapas 1/2/3 por banco G-7~~ | ~~Por entidad~~ | ~~Alta~~ | ✅ Ifrs9Chart dropdown 48 bancos (2026-06-04) |
-| ~~IFRS9 etapas por segmento de cartera~~ | ~~Comercial/Consumo/Vivienda~~ | ~~Alta~~ | ✅ Ifrs9Chart pills segmento (2026-06-04) |
+| ~~IFRS9 etapas 1/2/3 por banco~~ | ~~Por entidad~~ | ✅ Ifrs9Chart dropdown 48 bancos (2026-06-04) |
+| ~~IFRS9 etapas por segmento de cartera~~ | ~~Comercial/Consumo/Vivienda~~ | ✅ Ifrs9Chart pills segmento (2026-06-04) |
 
-### SoFiPOs (requiere CSV R11 por institución — pendiente descarga)
+### SoFiPOs (en JSON — `historico_por_entidad` disponible)
 
-| Métrica | Disponibilidad actual | Lo que falta |
+| Métrica | Disponibilidad actual | Estado |
 |---|---|---|
-| IMORA e ICOR por entidad | Solo sistema total | CSV R11 con cve_institucion individual |
-| IMOR por cartera × entidad | Solo sistema total | Mismo CSV R11 |
-| IFRS9 etapas por entidad SoFiPO | No disponible | R12A SoFiPOs |
+| ~~IMOR por cartera sistema total~~ | — | ✅ SofiposSegmentChart |
+| ~~IMORA + ROA sistema~~ | — | ✅ SofiposImoraRoaChart |
+| ~~Entidades individuales~~ | `historico_por_entidad` en JSON | ✅ SofiposEntidadesChart (top 15, toggle cartera) |
+| ROE sistema SoFiPOs | `sofipos.roe` 123 meses | ❌ Sin UI — dato listo en JSON (US-309) |
+| IMOR por cartera × entidad individual | `historico_por_entidad` — verificar granularidad | ❌ Pendiente (US-404) |
 
-### Otros reportes CNBV (pendientes de descarga)
+### Otros reportes CNBV (pendientes de descarga manual)
 
 | Métrica | Fuente | Notas |
 |---|---|---|
 | Liquidez LCR y NSFR | Reporte R13/similar | Basilea III — activos líquidos / salidas netas 30 días |
-| ICAP índice de capitalización | Reporte de solvencia | Capital neto / Activos sujetos a riesgo — mínimo 10.5% |
+| ICAP índice de capitalización | Boletín capitalización CNBV | Capital neto / Activos sujetos a riesgo — mínimo 10.5% (no está en sh_datos_40.csv) |
 
-### Banxico SIE API (token activo — solo falta agregar al JSON y al dashboard)
+### Banxico SIE API (token activo — series automáticas)
 
 | Métrica | Serie | Frecuencia | Estado |
 |---|---|---|---|
-| ~~Reservas internacionales brutas~~ | ~~SF43707~~ | ~~Semanal~~ | ✅ KpiCard + ReservasChart |
-| ~~TIIE de Fondeo (SF343410)~~ → TIIE 28d | SF43783 | Diaria | ✅ Corregida (fix 2026-05-31) |
-| IGAE var. anual mensual | INEGI BIE 737370 | T+53 días | ✅ En pipeline (truncado a ≥2025-12, #105) |
-| PIB trimestral | INEGI BIE 381016 | T+55 días | ✅ En pipeline |
-| INPC subyacente | SP74625 | Mensual | ✅ En pipeline y dashboard |
-| INPC no subyacente | SP74627 | Mensual | ✅ En pipeline y dashboard |
-| Salario mínimo general | SR17358 | Anual (cambios) | ✅ Migrado desde SF60628 (#106) |
+| ~~Reservas internacionales brutas~~ | ~~SF43707~~ | ~~Semanal~~ | ✅ KpiCard + ReservasChart (2026-06-01) |
+| ~~TIIE 28d~~ | ~~SF43783~~ | ~~Diaria~~ | ✅ Corregida (fix 2026-05-31) |
+| ~~INPC subyacente~~ | ~~SP74625~~ | ~~Mensual~~ | ✅ En pipeline y dashboard (2026-06-01) |
+| ~~INPC no subyacente~~ | ~~SP74627~~ | ~~Mensual~~ | ✅ En pipeline y dashboard (2026-06-01) |
+| ~~Salario mínimo general~~ | ~~SL11298~~ | ~~Anual~~ | ✅ KpiCard + SalarioMinimoChart en Macro (2026-06-10) |
+| **Remesas familiares** | SE27803 | Mensual | ✅ En JSON (22 meses, $4,978 MUSD) — ❌ Sin UI · KpiCard+chart pendiente (US-308) |
+| IGAE var. anual mensual | INEGI BIE 737370 | T+53 días | ✅ En pipeline — solo 4 meses (ID nuevo post-BIE dic 2025); ID largo pendiente (US-310) |
+| PIB trimestral | INEGI BIE 381016 | T+55 días | ✅ En pipeline y dashboard |
+| ~~Desocupación ENOE~~ | ~~444774~~ | ~~Mensual~~ | ✅ DesempleoChart en Macro (2026-06-01) |
+| ~~Subocupación ENOE~~ | ~~444775~~ | ~~Mensual~~ | ✅ DesempleoChart línea punteada (2026-06-10) |
+| ~~Informalidad ENOE~~ | ~~444779~~ | ~~Mensual~~ | ✅ InformalidadChart en Macro (2026-06-01) |
+| Exportaciones | 471584 | Mensual | ❌ HTTP 400 post-BIE dic 2025 — ID roto |
+| Importaciones | 471588 | Mensual | ❌ HTTP 400 post-BIE dic 2025 — ID roto |
+| Inversión fija bruta | 462219 | Mensual | ❌ HTTP 400 post-BIE dic 2025 — ID roto |
 
 ---
 
-*Actualizado: 27 de abril 2026 — Nyx 🌙*
+*Actualizado: 2026-06-10*

@@ -64,14 +64,15 @@ Ver `docs/superpowers/specs/2026-04-27-app-like-redesign-pwa-design.md` y CHANGE
 Tightear `CreditoSchema` en `schema.ts` con shapes reales (quitar `passthrough`):
 
 - [x] `ImorHistoricoChart.tsx` — cubierto por `ImorSegPivotChart.tsx` (IMOR desde 2000, vista Sistema)
-- [x] `ImorSegPivotChart.tsx` — IMOR por segmento (comercial/consumo/vivienda/tarjeta) + toggle por banco G-7 (US-96 paso-2, 2026-06-01)
-- [x] `RoaRoeChart.tsx` — ROA/ROE por sistema y por banco G-7 con pills toggle (US-96 paso-2, 2026-06-01)
+- [x] `ImorSegPivotChart.tsx` — IMOR por segmento (comercial/consumo/vivienda/tarjeta) + toggle por banco (62 bancos) (US-96 paso-2, 2026-06-01)
+- [x] `RoaRoeChart.tsx` — ROA/ROE por sistema y por banco con pills toggle (US-96 paso-2, 2026-06-01)
 - [x] `BancosTable` — tabla ordenable por IMOR/variación anual/nombre (2026-06-01)
 - [x] `ImoraChart.tsx` — IMORA por sistema y por banco + línea TDA punteada (2026-06-05)
 - [x] `IcorChart.tsx` — ICOR por sistema y por banco con cap ×20 (2026-06-01)
 - [x] `MifChart.tsx` — tasa activa / tasa pasiva / MIF con fill / tasa Banxico step-line (2026-06-04)
 - [x] `QuitasChart.tsx` — quitas y castigos flujo 12m en mmdp · barra mensual (2026-06-04)
 - [x] `EprcChart.tsx` — EPRC / cartera total en % · línea con área (2026-06-05)
+- [x] `CarteraCrecimientoChart.tsx` — YoY cartera total (concepto 40100185, saldo=130) con tooltip saldo en MMP · anotación zero-line (2026-06-10)
 
 ### Sprint M3 — IFRS 9 + SoFiPOs ✅
 
@@ -79,6 +80,15 @@ Tightear `CreditoSchema` en `schema.ts` con shapes reales (quitar `passthrough`)
 - [x] `SofiposEntidadesChart.tsx` — top 15 por activo con chips Okabe-Ito, toggle Todas/Ninguna, vista por cartera cuando 1 entidad seleccionada (US-401, US-96 paso-2, 2026-06-01)
 - [x] `SofiposImoraRoaChart.tsx` — IMORA + ROA dual-axis SoFiPOs (2026-06-01)
 - [x] `SofiposSegmentChart.tsx` — IMOR por cartera SoFiPOs (2026-06-01)
+
+### Sprint M3.5 — Macro + Salario + Infra ✅ (2026-06-10)
+
+- [x] `SalarioMinimoChart.tsx` — serie SL11298, KpiCard $315.04 + chart en Macro (2026-06-10)
+- [x] `DesempleoChart.tsx` extendido — línea subocupación (serie 444775) punteada (2026-06-10)
+- [x] Íconos PWA reales — 192/512/maskable/apple-touch regenerados con Python stdlib (2026-06-10)
+- [x] `sfm-appicon.svg` — ícono SVG con barras coloreadas + línea de tendencia (2026-06-10)
+- [x] `smoke-check.spec.ts` — 4 tests e2e desktop: home, macro salario, macro sin drawers, cartera chart (2026-06-10)
+- [x] Macro KpiCards sin `indicatorId` — drawer deshabilitado en toda la página macro (2026-06-10)
 
 ### Sprint M4 — features citables del blueprint ✅ (parcial)
 
