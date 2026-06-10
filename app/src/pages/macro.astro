@@ -34,6 +34,7 @@ const macro          = data.macro ?? {};
 const igae           = macro.igae              ?? null;
 const pib            = macro.pib               ?? null;
 const desempleo      = macro.desempleo         ?? null;
+const subocupacion   = macro.subocupacion      ?? null;
 const informalidad   = macro.informalidad      ?? null;
 const tasaReal       = macro.tasa_real_banxico ?? null;
 const tasaRealCetes  = macro.tasa_real_cetes   ?? null;
@@ -97,6 +98,17 @@ const tasaRealCetes  = macro.tasa_real_cetes   ?? null;
           iconName="Activity"
           tone={desempleo.actual > 4.5 ? 'red' : desempleo.actual > 3.5 ? 'yellow' : 'green'}
           indicatorId="desempleo"
+          client:visible
+        />
+      )}
+      {subocupacion?.actual != null && (
+        <KpiCard
+          label="Subocupación ENOE"
+          value={formatPct(subocupacion.actual, 2)}
+          {...(subocupacion.fecha ? { asOf: subocupacion.fecha } : {})}
+          iconName="Activity"
+          tone={subocupacion.actual > 9 ? 'red' : subocupacion.actual > 7 ? 'yellow' : 'green'}
+          indicatorId="subocupacion"
           client:visible
         />
       )}
@@ -199,12 +211,16 @@ const tasaRealCetes  = macro.tasa_real_cetes   ?? null;
       <Section
         id="desempleo"
         eyebrow="Mercado laboral"
-        title="Tasa de desocupación nacional"
-        description="Porcentaje de la PEA sin empleo (ENOE, mensual). Línea punteada: referencia pre-pandemia ~3.4%."
-        source="INEGI ENOE, serie 444774"
+        title="Tasa de desocupación y subocupación"
+        description="Desocupación: % de la PEA sin empleo (sólido). Subocupación: % de ocupados que trabajan <35h/sem y quieren trabajar más (punteado). ENOE mensual. Referencia: pre-pandemia ~3.4%."
+        source="INEGI ENOE, series 444774 · 444775"
         refCode="444774"
         tone="gold">
-        <DesempleoChart series={desempleo.historico} client:visible />
+        <DesempleoChart
+          series={desempleo.historico}
+          subocupacion={subocupacion?.historico?.length ? subocupacion.historico : undefined}
+          client:visible
+        />
       </Section>
     ) : null}
 

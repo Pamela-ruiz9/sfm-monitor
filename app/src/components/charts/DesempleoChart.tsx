@@ -2,27 +2,29 @@ import { Line } from 'react-chartjs-2';
 import { ChartErrorBoundary } from './ChartErrorBoundary';
 import '~/components/charts/chartSetup';
 
-interface DesempleoPoint {
+interface LaborPoint {
   fecha: string; // YYYY-MM
-  valor: number; // tasa desocupación %
+  valor: number;
 }
 
 interface Props {
-  series: DesempleoPoint[];
+  series: LaborPoint[];
+  subocupacion?: LaborPoint[] | undefined;
 }
 
-// Tasa de desocupación pre-pandemia (promedio 2018-2019) como referencia
 const PRE_PANDEMIA_REF = 3.4;
 
-export function DesempleoChart({ series }: Props) {
-  const points = [...series]
-    .sort((a, b) => a.fecha.localeCompare(b.fecha))
-    .map((p) => ({ x: `${p.fecha}-15`, y: p.valor }));
+export function DesempleoChart({ series, subocupacion }: Props) {
+  const toPoints = (pts: LaborPoint[]) =>
+    [...pts].sort((a, b) => a.fecha.localeCompare(b.fecha)).map((p) => ({ x: `${p.fecha}-15`, y: p.valor }));
+
+  const points    = toPoints(series);
+  const ptsSub    = subocupacion?.length ? toPoints(subocupacion) : null;
 
   const data = {
     datasets: [
       {
-        label: 'Tasa desocupación',
+        label: 'Desocupación',
         data: points,
         borderColor: '#E69F00',
         backgroundColor: 'rgba(230, 159, 0, 0.1)',
@@ -32,6 +34,18 @@ export function DesempleoChart({ series }: Props) {
         pointHoverRadius: 4,
         borderWidth: 2,
       },
+      ...(ptsSub ? [{
+        label: 'Subocupación',
+        data: ptsSub,
+        borderColor: '#56B4E9',
+        backgroundColor: 'rgba(86, 180, 233, 0.0)',
+        fill: false,
+        tension: 0.3,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+        borderWidth: 1.5,
+        borderDash: [4, 3] as number[],
+      }] : []),
     ],
   };
 

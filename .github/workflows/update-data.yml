@@ -150,11 +150,11 @@ jobs:
           udis_data = fetch("SP68257", (date.today() - timedelta(days=7)).strftime("%Y-%m-%d"))
           udis_actual = next((x for x in reversed(udis_data) if x["dato"] not in ("N/E", None)), None)
 
-          # 8. Salario mínimo general diario — SR17358
-          # SF60628 descartada (retorna 96 entradas todas en '0.00' — issue #106)
-          # SR17358: Salario mínimo general México (familia SR = Salarios/Remuneraciones)
-          salmin_data = safe_fetch("SR17358", "2010-01-01")
-          print(f"  SR17358 raw entries: {len(salmin_data)}, muestra: {salmin_data[:3] if salmin_data else 'vacío'}")
+          # 8. Salario mínimo general diario — SL11298 (pesos/día, Banxico SIE familia SL)
+          # SF60628 descartada (ceros) — SR17358 descartada (retorna variaciones ~0.06, no nivel)
+          # SL11298: Salario Mínimo General, nivel diario en MXN (cambia una vez al año en enero)
+          salmin_data = safe_fetch("SL11298", "2010-01-01")
+          print(f"  SL11298 raw entries: {len(salmin_data)}, muestra: {salmin_data[:3] if salmin_data else 'vacío'}")
           salmin_changes = []
           prev = None
           for x in salmin_data:
@@ -164,7 +164,7 @@ jobs:
               if x["dato"] != prev:
                   salmin_changes.append({"fecha": banxico_to_iso(x["fecha"]), "valor": val})
                   prev = x["dato"]
-          print(f"{'✅' if salmin_changes else '⚠️ '} Salario mínimo: {salmin_changes[-1]['valor'] if salmin_changes else 'N/D'} ({salmin_changes[-1]['fecha'] if salmin_changes else 'serie SR17358 sin datos válidos — verificar ID en BIE'})")
+          print(f"{'✅' if salmin_changes else '⚠️ '} Salario mínimo: {salmin_changes[-1]['valor'] if salmin_changes else 'N/D'} MXN/día ({salmin_changes[-1]['fecha'] if salmin_changes else 'verificar SL11298'})")
 
           # 9. Remesas familiares — Banxico SIE SE27803 (Ingresos por remesas, USD millones mensual)
           # SE67516 descartada (retorna 404) — issue #106
@@ -236,6 +236,16 @@ jobs:
               for o in desoc_obs if o.get("OBS_VALUE") not in (None, "")
           ]
           desoc_latest = desoc_series[-1] if desoc_series else None
+
+          # Tasa de subocupación mensual ENOE — serie 444775
+          # Personas ocupadas que trabajan menos de 35h/sem y quieren/pueden trabajar más
+          subocup_obs = fetch_inegi("444775")
+          subocup_series = [
+              {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
+              for o in subocup_obs if o.get("OBS_VALUE") not in (None, "")
+          ]
+          subocup_latest = subocup_series[-1] if subocup_series else None
+          print(f"{'✅' if subocup_latest else '⚠️ '} Subocupación: {subocup_latest['valor'] if subocup_latest else 'N/D'}% ({subocup_latest['fecha'] if subocup_latest else 'verificar 444775'})")
 
           # IGAE var. anual mensual — serie 737370
           # Serie confirmada post-dic-2025. Los datos pre-2025-12 son de otra cobertura/metodología
@@ -360,6 +370,11 @@ jobs:
                   "actual": desoc_latest["valor"] if desoc_latest else None,
                   "fecha":  desoc_latest["fecha"] if desoc_latest else None,
                   "historico": desoc_series[-24:]
+              },
+              "subocupacion": {
+                  "actual": subocup_latest["valor"] if subocup_latest else None,
+                  "fecha":  subocup_latest["fecha"] if subocup_latest else None,
+                  "historico": subocup_series[-24:]
               },
               "remesas": {
                   "actual": remesas_macro[-1]["valor"] if remesas_macro else None,

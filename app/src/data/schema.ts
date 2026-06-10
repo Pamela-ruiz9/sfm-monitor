@@ -288,7 +288,8 @@ const MacroSchema = z.object({
   igae: MacroSerieSchema.optional(),
   pib: MacroSerieSchema.optional(),
   desempleo: MacroSerieSchema.optional(),
-  remesas: MacroSerieSchema.optional(),           // Banxico SE67516 — USD millones mensual
+  subocupacion: MacroSerieSchema.optional(),      // INEGI ENOE 444775 — % subocupación laboral
+  remesas: MacroSerieSchema.optional(),           // Banxico SE27803 — USD millones mensual
   informalidad: MacroSerieSchema.optional(),      // INEGI ENOE 444779 — % informalidad laboral
   exportaciones: MacroSerieSchema.optional(),     // INEGI 471584 — exportaciones totales
   importaciones: MacroSerieSchema.optional(),     // INEGI 471588 — importaciones totales
