@@ -27,6 +27,10 @@ const COLOR_CLASS: Record<string, string> = {
   blue: '#58a6ff',
 };
 
+function truncate(s: string, max = 28): string {
+  return s.length <= max ? s : s.slice(0, max - 1) + '…';
+}
+
 function selectKpis(kpis: WbKpi[]): WbKpi[] {
   const selected: WbKpi[] = [];
   const used = new Set<string>();
@@ -67,26 +71,36 @@ export function ContextoBanda() {
   if (kpis.length === 0) return null;
 
   return (
-    <div className="rounded-lg border p-3 mb-4" style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-elev)' }}>
-      <div className="text-[9px] font-semibold uppercase tracking-widest mb-3" style={{ color: 'var(--color-text-mute)' }}>
-        Contexto global · Watchboard
+    <div className="rounded-lg border p-3 mb-2" style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-elev)' }}>
+      <div className="flex items-center gap-2 mb-2">
+        <span className="text-[9px] font-semibold uppercase tracking-widest" style={{ color: 'var(--color-text-mute)' }}>
+          Contexto global
+        </span>
+        <a
+          href="https://watchboard.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[9px] hover:underline"
+          style={{ color: 'var(--color-accent)' }}
+        >
+          via Watchboard ↗
+        </a>
       </div>
-      <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-        {kpis.map((kpi) => (
-          <div key={kpi.id}>
-            <div className="text-[10px] leading-tight" style={{ color: 'var(--color-text-mute)' }}>
-              {kpi.label}
+      <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+        {kpis.map((kpi) => {
+          const color = COLOR_CLASS[kpi.color] ?? 'var(--color-text)';
+          return (
+            <div key={kpi.id}>
+              <div className="text-[10px] leading-tight truncate" style={{ color: 'var(--color-text-mute)' }}>
+                {truncate(kpi.label)}
+              </div>
+              <div className="text-xs font-bold leading-tight" style={{ color }}>
+                <span aria-hidden="true">● </span>
+                {kpi.value}
+              </div>
             </div>
-            <div className="text-sm font-bold leading-tight" style={{ color: COLOR_CLASS[kpi.color] ?? 'var(--color-text)' }}>
-              {kpi.value}
-              {kpi.delta && (
-                <span className="text-[10px] font-normal ml-1" style={{ color: 'var(--color-text-mute)' }}>
-                  {kpi.delta}
-                </span>
-              )}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
