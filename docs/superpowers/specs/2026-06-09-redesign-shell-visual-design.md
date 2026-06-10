@@ -128,8 +128,8 @@ El footer pasa de estar vacío/mínimo a ser un componente informativo visible e
 **Zona derecha / redes sociales:**
 - Título "Contacto" en uppercase pequeño
 - GitHub del proyecto — `github.com/pamela-ruiz9/sfm-monitor`
-- LinkedIn de Pamela — URL a definir como constante en el componente
-- Twitter/X — si se provee URL (opcional)
+- LinkedIn de Pamela — `linkedin.com/in/pamela-ru%C3%ADz-512834231/`
+- Twitter/X — opcional, sin URL definida aún
 - Iconos Lucide (`Github`, `Linkedin`, `Twitter`) + nombre de la red
 
 **Layout:** `grid grid-cols-1 md:grid-cols-3` — en mobile se apila, en desktop tres columnas.
@@ -137,13 +137,32 @@ El footer pasa de estar vacío/mínimo a ser un componente informativo visible e
 
 ---
 
-## Sección 5 — Logo animado (GIF)
+## Sección 5 — Logo animado (SVG CSS)
 
-**Pendiente de asset:** La usuaria tiene un logo GIF animado que aún no está en el repositorio. Una vez disponible, se coloca en `app/public/sfm-logo-animated.gif`.
+**No es un GIF** — es una animación CSS sobre el path SVG del ECG existente en `SfmLogo.astro`. El path del pulso se dibuja y desdibuja en loop con `stroke-dashoffset`.
 
-**Dónde se usa:** En la sidebar expandida en lugar de `<SfmLogo variant="horizontal" />` — el GIF reemplaza solo el bloque del logo, el resto de la sidebar no cambia. En la versión colapsada se sigue usando el SVG estático `<SfmLogo variant="icon" />` (el GIF animado a 56px quedaría demasiado pequeño).
+**Animación (del handoff de marca):**
+```css
+@media (prefers-reduced-motion: no-preference) {
+  .sfm-logo__pulse {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: sfm-draw 2.6s ease-in-out infinite;
+  }
+}
+@keyframes sfm-draw {
+  0%   { stroke-dashoffset: 60 }
+  45%  { stroke-dashoffset: 0 }
+  75%  { stroke-dashoffset: 0 }
+  100% { stroke-dashoffset: -60 }
+}
+```
 
-**Implementación:** Condicionalmente — si `sfm-logo-animated.gif` existe en `public/`, se renderiza como `<img>` con `width` y `height` fijos. Si no existe, fallback al componente `SfmLogo` estático. Esto permite implementar el resto del shell sin bloquear en el asset.
+**Cambios en `SfmLogo.astro`:**
+- Agregar clase `sfm-logo__pulse` al `<path>` del ECG (el de `d="M9 28 H18 L21.5..."`)
+- Agregar el `@keyframes` y la regla `prefers-reduced-motion` al bloque `<style>` del componente
+- La animación usa `currentColor` vía `stroke` heredado — toma el naranja del sistema automáticamente
+- Aplica en todos los usos del logo (sidebar, footer, header mobile) sin cambio adicional
 
 ---
 
@@ -160,7 +179,7 @@ El footer pasa de estar vacío/mínimo a ser un componente informativo visible e
 | `src/components/HeroScore.astro` | Quita pills y copy descriptivo |
 | `src/components/Footer.astro` | Rediseño completo: info proyecto + redes sociales |
 | `src/pages/metodologia.astro` | Añade sección "Sobre el proyecto" |
-| `app/public/sfm-logo-animated.gif` | Asset pendiente de la usuaria |
+| `src/components/shell/SfmLogo.astro` | Agrega animación CSS al path ECG |
 | `src/components/shell/BottomNav.astro` | Sin cambios |
 | `src/pages/*.astro` (resto) | Heredan shell, sin modificación de contenido |
 
