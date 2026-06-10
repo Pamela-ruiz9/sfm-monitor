@@ -7,8 +7,6 @@ import HeroScore from '~/components/HeroScore.astro';
 import AlertsPanel from '~/components/alerts/AlertsPanel.astro';
 import { KpiCard } from '~/components/kpi/KpiCard';
 import { ActiveIndicatorChart } from '~/components/charts/ActiveIndicatorChart';
-import { SalarioMinimoChart } from '~/components/charts/SalarioMinimoChart';
-import Section from '~/components/chrome/Section.astro';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
 import { CmdKPalette } from '~/components/shell/CmdKPalette';
 import { UpdateToast } from '~/components/shell/UpdateToast';
@@ -58,13 +56,6 @@ const reservasVar    = (reservasHist.length >= 5 && reservasActual != null)
 const udi      = m.udis?.actual ?? null;
 const udiFecha = m.udis?.fecha ?? null;
 
-// ─── Salario mínimo ───────────────────────────────────────────────────────────
-const salario        = m.salario_minimo ?? null;
-const salarioActual  = salario?.actual ?? null;
-const salarioFecha   = salario?.fecha ?? null;
-// Solo mostrar cuando el dato sea el nivel real en MXN (>50 = SL11298 ok; <10 = SR17358 roto)
-const salarioValido  = salarioActual != null && salarioActual > 50;
-const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
 ---
 
 <Layout
@@ -175,16 +166,6 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
           tone="yellow"
         />
       )}
-      {salarioValido && (
-        <KpiCard
-          label="Salario mínimo"
-          value={`$${salarioActual!.toFixed(2)}`}
-          unit="MXN/día"
-          {...(salarioFecha ? { asOf: salarioFecha } : {})}
-          iconName="TrendingUp"
-          tone="green"
-        />
-      )}
       <KpiCard
         label="IMOR Banca"
         value="2.2%"
@@ -215,19 +196,6 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
       </div>
     </div>
 
-    <!-- ── Salario mínimo ── -->
-    {salarioHist.length > 2 && (
-      <Section
-        id="salario-minimo"
-        eyebrow="Mercado laboral"
-        title="Salario mínimo general"
-        description="Salario mínimo diario en pesos nominales (MXN). Lo fija la CONASAMI cada enero. No ajustado por inflación."
-        source="Banxico SIE, serie SL11298"
-        refCode="SL11298"
-        tone="green">
-        <SalarioMinimoChart series={salarioHist} client:visible />
-      </Section>
-    )}
   </div>
 
   <ChartDrawer slot="drawer" client:idle />

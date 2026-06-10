@@ -11,6 +11,7 @@ import { IgaeChart } from '~/components/charts/IgaeChart';
 import { PibChart } from '~/components/charts/PibChart';
 import { DesempleoChart } from '~/components/charts/DesempleoChart';
 import { InformalidadChart } from '~/components/charts/InformalidadChart';
+import { SalarioMinimoChart } from '~/components/charts/SalarioMinimoChart';
 import { loadSfmData } from '~/data/loader';
 import { formatPct } from '~/lib/utils';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
@@ -31,6 +32,7 @@ const inflacionActual = Number(data.inflacion.actual);
 const inflacionFecha  = data.inflacion.fecha;
 
 const macro          = data.macro ?? {};
+const mercado        = data.mercado ?? {};
 const igae           = macro.igae              ?? null;
 const pib            = macro.pib               ?? null;
 const desempleo      = macro.desempleo         ?? null;
@@ -38,6 +40,12 @@ const subocupacion   = macro.subocupacion      ?? null;
 const informalidad   = macro.informalidad      ?? null;
 const tasaReal       = macro.tasa_real_banxico ?? null;
 const tasaRealCetes  = macro.tasa_real_cetes   ?? null;
+
+const salario        = mercado.salario_minimo  ?? null;
+const salarioActual  = salario?.actual         ?? null;
+const salarioFecha   = salario?.fecha          ?? null;
+const salarioValido  = salarioActual != null && salarioActual > 50;
+const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
 ---
 
 <Layout
@@ -131,6 +139,17 @@ const tasaRealCetes  = macro.tasa_real_cetes   ?? null;
           iconName="Percent"
           tone={tasaRealCetes.actual >= 2 ? 'green' : tasaRealCetes.actual >= 0 ? 'yellow' : 'red'}
           indicatorId="tasa_real_cetes"
+          client:visible
+        />
+      )}
+      {salarioValido && (
+        <KpiCard
+          label="Salario mínimo"
+          value={`$${salarioActual!.toFixed(2)}`}
+          unit="MXN/día"
+          {...(salarioFecha ? { asOf: salarioFecha } : {})}
+          iconName="TrendingUp"
+          tone="green"
           client:visible
         />
       )}
@@ -237,6 +256,20 @@ const tasaRealCetes  = macro.tasa_real_cetes   ?? null;
         <InformalidadChart series={informalidad.historico} client:visible />
       </Section>
     ) : null}
+
+    <!-- ── Salario mínimo ── -->
+    {salarioHist.length > 2 && (
+      <Section
+        id="salario-minimo"
+        eyebrow="Mercado laboral"
+        title="Salario mínimo general"
+        description="Salario mínimo diario en pesos nominales (MXN). Lo fija la CONASAMI cada enero. No ajustado por inflación."
+        source="Banxico SIE, serie SL11298"
+        refCode="SL11298"
+        tone="green">
+        <SalarioMinimoChart series={salarioHist} client:visible />
+      </Section>
+    )}
   </div>
 
   <ChartDrawer slot="drawer" client:idle />
