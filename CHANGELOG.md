@@ -13,6 +13,9 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 ## [Sin publicar]
 
 ### Añadido
+- **`/macro/noticias`** — nueva sub-página "Noticias & Impacto": feed de eventos macro de Watchboard API (4 trackers: `global-recession-risk`, `sheinbaum-presidency`, `trump-presidencies`, `mexico`) con análisis de impacto estático sobre ejes SFM (mora/liquidez/solvencia/rentabilidad) mediante 10 reglas en `watchboard-rules.ts`. Imágenes lazy via Microlink con fallback a emoji. Banda de contexto con 4 KPIs de `global-recession-risk`. Cierra #100.
+- Sub-nav Macro en Sidebar: "Indicadores" + "Noticias & Impacto".
+- Sección "Noticias & Impacto" en `/metodologia` con fuentes, tabla de trackers y limitaciones.
 - Sub-rutas de Instituciones: `/instituciones/tipos`, `/instituciones/contraste`, `/instituciones/banca-multiple`, `/instituciones/sofipos`
 - Accordion sub-nav en sidebar para sección Instituciones con grupo "Por institución"
 - KPI cards (IMOR, IMORA, ICOR, ROA) en sub-página Banca Múltiple
