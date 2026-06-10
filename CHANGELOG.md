@@ -12,6 +12,16 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### Añadido
+- Sub-rutas de Instituciones: `/instituciones/tipos`, `/instituciones/contraste`, `/instituciones/banca-multiple`, `/instituciones/sofipos`
+- Accordion sub-nav en sidebar para sección Instituciones con grupo "Por institución"
+- KPI cards (IMOR, IMORA, ICOR, ROA) en sub-página Banca Múltiple
+- Redirect 301 de `/instituciones` a `/instituciones/tipos`
+
+### Eliminado
+- `SectorToggle` y script `sfm:sector-change` — reemplazados por rutas separadas
+- Página monolítica `instituciones.astro` — dividida en 4 sub-páginas
+
 ### feat(app): redesign shell — sidebar colapsable, footer 3-columnas, logo animado (2026-06-09)
 - `app/src/components/shell/Sidebar.astro`: navegación colapsable nuevo en desktop (240px expandido ↔ 56px colapsado); reemplaza `TabBar` en layout grid; toggle persist en `$sidebarCollapsed` (localStorage). `DataFreshnessBadge` movido al pie de la sidebar.
 - `app/src/stores/sidebarState.ts`: nanostore `$sidebarCollapsed` con getter/setter, persistencia localStorage.
