@@ -12,6 +12,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### fix: cierra bugs UI y pipeline — #107 #108 #109 + remesas #106 (2026-06-09)
+- `app/src/components/DataFreshnessBadge.tsx`: mueve `Date.now()` de `useMemo` a `useEffect`; elimina hydration mismatch React #418 (closes #108).
+- `app/src/components/charts/Ifrs9Chart.tsx`: vista por cartera ahora muestra E1/E2/E3 apilados igual que vista sistema; Stage 1 = 100 − E2 − E3 calculado inline (closes #109).
+- `.github/workflows/update-data.yml`: ventana inflación extendida de 760 a 2740 días; historial almacenado de 24 a 72 meses — botones 1A/3A/5A tendrán efecto en el próximo run (closes #107).
+- `.github/workflows/update-data.yml`: remesas corregida de `SE67516` (404) a `SE27803` (partial closes #106).
+
 ### feat(app): branding — token swap naranja consistente en toda la app (2026-06-09)
 - `app/src/styles/global.css`: token `--color-accent: #f5793c` ya definido; estrategia formalizada: `--color-accent` para chrome/interacción, `--color-gold` queda exclusivamente para semántica KPI.
 - `app/src/components/shell/TabBar.astro`: tab activo y sub-texto en `--color-accent` (antes `--color-gold`).
