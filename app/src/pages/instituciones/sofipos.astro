@@ -104,6 +104,14 @@ const top15 = [...ents]
         indicatorId="sofipos-roa"
         client:visible
       />
+      <KpiCard
+        label="ROE"
+        value={formatPct(ultima.roe)}
+        asOf={ultima.fecha}
+        iconName="TrendingUp"
+        tone={ultima.roe >= 0 ? 'green' : 'red'}
+        client:visible
+      />
     </div>
 
     <EditorialHeadline
@@ -146,14 +154,16 @@ const top15 = [...ents]
     <Section
       id="sofipos-imora-roa"
       eyebrow="Calidad y rentabilidad"
-      title="IMOR + ROA dual"
-      description="IMOR total (eje izquierdo) y ROA del sector (eje derecho). ROA negativo señala rentabilidad por debajo del costo de capital."
+      title="IMOR + ROA/ROE dual"
+      description="IMOR total (eje izquierdo), ROA y ROE del sector (eje derecho, línea discontinua azul). Negativos señalan rentabilidad por debajo del costo de capital."
       source="CNBV Sector 27 (SoFiPOs)"
+      metricSlug="roa"
       tone="yellow">
       <SofiposImoraRoaChart
         fechas={s.fechas}
         imor={s.imor_total}
         roa={s.roa}
+        roe={s.roe}
         client:visible
       />
     </Section>
