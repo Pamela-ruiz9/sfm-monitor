@@ -104,7 +104,7 @@ export function NoticiaCard({ item }: Props) {
             onError={() => setImageUrl(null)}
           />
         ) : (
-          <span style={{ fontSize: '2.5rem' }}>{item.trackerEmoji}</span>
+          <span style={{ fontSize: '2rem' }}>{item.trackerEmoji}</span>
         )}
       </div>
 
