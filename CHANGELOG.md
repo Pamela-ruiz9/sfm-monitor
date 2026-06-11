@@ -22,6 +22,9 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - **Macro KpiCards** — eliminado `indicatorId` de los 7 KpiCards de macro.astro (inflación, IGAE, PIB, desempleo, subocupación, tasa real Banxico, tasa real Cetes). El drawer ya no se abre al tocarlos.
 
 ### Añadido
+- **Fichas metodológicas** — 15 entradas nuevas en `glossary.ts`: inflacion, fx, tasa, reservas, spread-tiie-cetes, mif, eprc, quitas, crecimiento-cartera, igae, pib, desempleo, informalidad, salario-minimo, remesas. Todos los indicadores visibles tienen ahora definición, fórmula, umbral y fuente en el acordeón MetricInfo.
+- `metricSlug` cableado en banca-multiple: MIF, quitas, EPRC, crecimiento-cartera.
+- **IGAE historia completa** — Pipeline fusiona serie BIE 736181 (historia pre-2026) con 737370 (post-dic-2025). La próxima ejecución del workflow `update-data.yml` poblará el historial completo. Cierra US-310.
 - **`/macro/noticias`** — nueva sub-página "Noticias & Impacto": feed de eventos macro de Watchboard API (4 trackers: `global-recession-risk`, `sheinbaum-presidency`, `trump-presidencies`, `mexico`) con análisis de impacto estático sobre ejes SFM (mora/liquidez/solvencia/rentabilidad) mediante 10 reglas en `watchboard-rules.ts`. Imágenes lazy via Microlink con fallback a emoji. Banda de contexto con 4 KPIs de `global-recession-risk`. Cierra #100.
 - Sub-nav Macro en Sidebar: "Indicadores" + "Noticias & Impacto".
 - Sección "Noticias & Impacto" en `/metodologia` con fuentes, tabla de trackers y limitaciones.
@@ -29,6 +32,9 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - Accordion sub-nav en sidebar para sección Instituciones con grupo "Por institución"
 - KPI cards (IMOR, IMORA, ICOR, ROA) en sub-página Banca Múltiple
 - Redirect 301 de `/instituciones` a `/instituciones/tipos`
+
+### Corregido
+- **ImorSegPivotChart** — Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) ahora visibles en vista "Por banco", habilitando combinaciones banco × cartera (ej: IMOR consumo de Banamex). Cierra US-401.
 
 ### Eliminado
 - `SectorToggle` y script `sfm:sector-change` — reemplazados por rutas separadas
