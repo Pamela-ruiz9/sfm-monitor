@@ -1,9 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useStore } from '@nanostores/react';
 import { Line } from 'react-chartjs-2';
 import { ChartErrorBoundary } from './ChartErrorBoundary';
 import { cn } from '~/lib/utils';
 import '~/components/charts/chartSetup';
 import { Chart as ChartJS } from 'chart.js';
+import { $selectedBancoId } from '~/stores/bancaState';
 
 interface BancoPivot {
   id: string;
@@ -44,6 +46,17 @@ export function IcorChart({ fechas, values, bancos }: Props) {
 
   const [view, setView] = useState<'sistema' | 'banco'>('sistema');
   const [bancoId, setBancoId] = useState<string>(bancosConDatos[0]?.id ?? '');
+
+  const externalBancoId = useStore($selectedBancoId);
+
+  useEffect(() => {
+    if (!externalBancoId) return;
+    const match = bancosConDatos.find((b) => b.id === externalBancoId);
+    if (match) {
+      setView('banco');
+      setBancoId(externalBancoId);
+    }
+  }, [externalBancoId, bancosConDatos]);
 
   const { activeValues, activeLabel } = useMemo(() => {
     if (view === 'banco' && bancosConDatos.length > 0) {
@@ -102,7 +115,7 @@ export function IcorChart({ fechas, values, bancos }: Props) {
             {bancosConDatos.map((b) => (
               <button
                 key={b.id}
-                onClick={() => setBancoId(b.id)}
+                onClick={() => { setBancoId(b.id); $selectedBancoId.set(b.id); }}
                 className={pillClass(bancoId === b.id)}
               >
                 {b.nombre}
