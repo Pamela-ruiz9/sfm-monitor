@@ -10,6 +10,7 @@ import { ImorSegPivotChart } from '~/components/charts/ImorSegPivotChart';
 import { ImoraChart } from '~/components/charts/ImoraChart';
 import { IcorChart } from '~/components/charts/IcorChart';
 import { RoaRoeChart } from '~/components/charts/RoaRoeChart';
+import { BancoPerfilPanel } from '~/components/instituciones/BancoPerfilPanel';
 import { MifChart } from '~/components/charts/MifChart';
 import { QuitasChart } from '~/components/charts/QuitasChart';
 import { EprcChart } from '~/components/charts/EprcChart';
@@ -75,6 +76,26 @@ const bmPivot = {
   bancos: bancosArr,
 };
 
+const bancosPerfilArr = hpb
+  ? Object.values(hpb.bancos).map((b) => ({
+      id: b.id,
+      nombre: b.nombre,
+      imor_latest:  b.imor_latest  != null  ? { valor: b.imor_latest.valor,  fecha: b.imor_latest.fecha  } : null,
+      imora_latest: b.imora_latest != null ? { valor: b.imora_latest.valor, fecha: b.imora_latest.fecha } : null,
+      imor_total:     b.imor_total     ?? [],
+      imor_comercial: b.imor_comercial ?? [],
+      imor_consumo:   b.imor_consumo   ?? [],
+      imor_vivienda:  b.imor_vivienda  ?? [],
+      imor_tarjeta:   b.imor_tarjeta   ?? [],
+      icor_total:     b.icor_total     ?? [],
+      roa:            b.roa            ?? [],
+      roe:            b.roe            ?? [],
+    }))
+  : [];
+
+const sistemaImor = [...hpc.imor_total].reverse().find((v) => v !== null) ?? null;
+const sistemaImora = [...hpc.imora_total].reverse().find((v) => v !== null) ?? null;
+
 const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
 ---
 
@@ -135,6 +156,16 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
         client:visible
       />
     </div>
+
+    {bancosPerfilArr.length > 0 && hpb && (
+      <BancoPerfilPanel
+        bancos={bancosPerfilArr}
+        fechas={hpb.fechas}
+        sistemaImor={sistemaImor}
+        sistemaImora={sistemaImora}
+        client:visible
+      />
+    )}
 
     <Section
       id="imor-pivot"

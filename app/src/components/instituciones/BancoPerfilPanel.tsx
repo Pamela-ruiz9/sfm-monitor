@@ -5,11 +5,16 @@ import { $selectedBancoId } from '~/stores/bancaState';
 import { cn } from '~/lib/utils';
 import '~/components/charts/chartSetup';
 
+export interface BancoLatest {
+  valor: number;
+  fecha: string;
+}
+
 export interface BancoPerfilItem {
   id: string;
   nombre: string;
-  imor_latest: number | null;
-  imora_latest: number | null;
+  imor_latest: BancoLatest | null;
+  imora_latest: BancoLatest | null;
   imor_total: (number | null)[];
   imor_comercial: (number | null)[];
   imor_consumo: (number | null)[];
@@ -145,8 +150,8 @@ export function BancoPerfilPanel({ bancos, fechas, sistemaImor, sistemaImora }: 
           {/* KPI row */}
           <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
             {[
-              { label: 'IMOR', value: banco.imor_latest, suffix: '%', decimals: 2, sistemaVal: sistemaImor, lowerBetter: true },
-              { label: 'IMORA', value: banco.imora_latest, suffix: '%', decimals: 2, sistemaVal: sistemaImora, lowerBetter: true },
+              { label: 'IMOR', value: banco.imor_latest?.valor ?? null, suffix: '%', decimals: 2, sistemaVal: sistemaImor, lowerBetter: true },
+              { label: 'IMORA', value: banco.imora_latest?.valor ?? null, suffix: '%', decimals: 2, sistemaVal: sistemaImora, lowerBetter: true },
               { label: 'ICOR', value: icor, suffix: 'x', decimals: 1, sistemaVal: null, lowerBetter: false },
               { label: 'ROA', value: roa, suffix: '%', decimals: 2, sistemaVal: null, lowerBetter: false },
               { label: 'ROE', value: roe, suffix: '%', decimals: 1, sistemaVal: null, lowerBetter: false },
