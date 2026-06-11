@@ -2,10 +2,10 @@
 import type { WbKpi } from '~/data/watchboard-loader';
 
 const KPI_GROUPS: Array<{ keywords: string[]; label: string }> = [
-  { keywords: ['recession', 'probability'], label: 'Riesgo recesión EE.UU.' },
-  { keywords: ['brent', 'oil', 'crude'],    label: 'Petróleo Brent' },
-  { keywords: ['fomc', 'fed', 'federal reserve'], label: 'Perspectiva Fed' },
-  { keywords: ['tariff', 'section 122', 'cliff'], label: 'Aranceles / Cliff' },
+  { keywords: ['fed funds', 'federal funds'],         label: 'Tasa Fed' },
+  { keywords: ['pce', 'core pce'],                    label: 'Inflación PCE EE.UU.' },
+  { keywords: ['us gdp q1', 'us gdp q4', 'gdp q1'],  label: 'PIB EE.UU.' },
+  { keywords: ['tariff', 'effective tariff'],         label: 'Arancel promedio EE.UU.' },
 ];
 
 const COLOR_HEX: Record<string, string> = {
@@ -17,6 +17,11 @@ const COLOR_HEX: Record<string, string> = {
 
 function truncate(s: string, max = 28): string {
   return s.length <= max ? s : s.slice(0, max - 1) + '…';
+}
+
+function truncateValue(v: string, max = 32): string {
+  const first = (v.split(';')[0] ?? v).trim();
+  return first.length <= max ? first : first.slice(0, max - 1) + '…';
 }
 
 interface SelectedKpi extends WbKpi {
@@ -83,9 +88,9 @@ export function ContextoBanda({ rawKpis }: Props) {
               <div className="text-[10px] leading-tight" style={{ color: 'var(--color-text-mute)' }}>
                 {kpi.spanishLabel}
               </div>
-              <div className="text-xs font-medium leading-tight" style={{ color: 'var(--color-text)' }}>
+              <div className="text-xs leading-tight" style={{ color: 'var(--color-text)' }}>
                 <span aria-hidden="true" style={{ color }}>● </span>
-                {kpi.value}
+                {truncateValue(kpi.value)}
               </div>
             </div>
           );
