@@ -147,7 +147,7 @@ export function NoticiaCard({ item }: Props) {
           </div>
         )}
 
-        {/* Expand toggle */}
+        {/* Expand toggle (solo si hay análisis) */}
         {hasImpact && (
           <button
             onClick={() => setExpanded((v) => !v)}
@@ -156,6 +156,19 @@ export function NoticiaCard({ item }: Props) {
           >
             {expanded ? '▾ Ocultar análisis' : '▸ Ver análisis completo →'}
           </button>
+        )}
+
+        {/* Link directo cuando no hay análisis de impacto */}
+        {!hasImpact && sourceUrl && (
+          <a
+            href={sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] font-medium hover:underline"
+            style={{ color: 'var(--color-accent)' }}
+          >
+            ↗ Leer artículo fuente
+          </a>
         )}
 
         {/* Expanded block */}
