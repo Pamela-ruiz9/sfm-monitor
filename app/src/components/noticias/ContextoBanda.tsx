@@ -94,8 +94,8 @@ export function ContextoBanda() {
               <div className="text-[10px] leading-tight truncate" style={{ color: 'var(--color-text-mute)' }}>
                 {truncate(kpi.label)}
               </div>
-              <div className="text-xs font-bold leading-tight" style={{ color }}>
-                <span aria-hidden="true">● </span>
+              <div className="text-xs font-bold leading-tight" style={{ color: 'var(--color-text)' }}>
+                <span aria-hidden="true" style={{ color }}>● </span>
                 {kpi.value}
               </div>
             </div>
