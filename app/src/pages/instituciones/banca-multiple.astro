@@ -197,6 +197,7 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
         title="Quitas y castigos"
         description="Flujo acumulado de los últimos 12 meses de quitas y castigos contables de la cartera de Banca Múltiple. Las quitas son el componente adicional que diferencia IMORA de IMOR: la morosidad ajustada incorpora estos castigos para reflejar el deterioro real de la cartera."
         source="CNBV Sector 40 — concepto 40200193"
+        metricSlug="quitas"
         tone="yellow">
         <QuitasChart
           fechas={hpc.fechas}
@@ -224,6 +225,7 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
         title="EPRC / Cartera total"
         description="Estimaciones Preventivas para Riesgos Crediticios como porcentaje de la cartera total. Complementa el ICOR: mientras el ICOR mide cuántas veces las reservas cubren la cartera vencida, esta métrica muestra la carga de reservas sobre el portafolio completo."
         source="CNBV Sector 40 — concepto 40200118"
+        metricSlug="eprc"
         tone="green">
         <EprcChart
           fechas={hpc.fechas}
@@ -251,6 +253,7 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
         title="MIF — Margen de Intermediación"
         description="Diferencia entre la tasa activa implícita (rendimiento de la cartera) y la tasa pasiva implícita (costo de fondeo). El MIF mide la rentabilidad estructural del negocio bancario."
         source="CNBV Sector 40 — conceptos 40200162, 40200037, 40200218"
+        metricSlug="mif"
         tone="green">
         <MifChart
           fechas={hpc.fechas}
@@ -271,6 +274,7 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
         description="Variación porcentual de la cartera de crédito con riesgo de crédito respecto al mismo mes del año anterior. Crecimiento acelerado puede anticipar deterioro futuro de la calidad."
         source="CNBV Sector 40 — concepto 40100185 (saldo=130)"
         refCode="40100185"
+        metricSlug="crecimiento-cartera"
         tone="default">
         <CarteraCrecimientoChart
           fechas={hpc.fechas}

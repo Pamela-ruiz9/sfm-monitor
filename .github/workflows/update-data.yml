@@ -247,17 +247,26 @@ jobs:
           subocup_latest = subocup_series[-1] if subocup_series else None
           print(f"{'✅' if subocup_latest else '⚠️ '} Subocupación: {subocup_latest['valor'] if subocup_latest else 'N/D'}% ({subocup_latest['fecha'] if subocup_latest else 'verificar 444775'})")
 
-          # IGAE var. anual mensual — serie 737370
-          # Serie confirmada post-dic-2025. Los datos pre-2025-12 son de otra cobertura/metodología
-          # y muestran valores anómalos (~0.2-0.6% cuando el real era ~3-5%) — issue #105.
-          # Solución: truncar al corte de migración BIE (dic 2025).
-          igae_obs = fetch_inegi("737370")
-          IGAE_CUTOFF = "2025-12"
-          igae_series = [
-              {"fecha": o["TIME_PERIOD"].replace("/", "-"), "valor": round(float(o["OBS_VALUE"]), 4)}
-              for o in igae_obs
-              if o.get("OBS_VALUE") not in (None, "") and o["TIME_PERIOD"].replace("/", "-") >= IGAE_CUTOFF
-          ]
+          # IGAE — merge serie larga 736181 (historia pre-2026) + serie nueva 737370 (post-dic-2025)
+          def fetch_igae_merged():
+              raw_nuevo = fetch_inegi("737370") or []
+              raw_largo = fetch_inegi("736181") or []
+              seen = {}
+              for obs in raw_largo + raw_nuevo:
+                  v = obs.get("OBS_VALUE")
+                  if v in (None, ""):
+                      continue
+                  fecha = obs["TIME_PERIOD"].replace("/", "-")
+                  try:
+                      seen[fecha] = float(v)
+                  except (ValueError, TypeError):
+                      continue
+              return sorted(
+                  [{"fecha": f, "valor": v} for f, v in seen.items()],
+                  key=lambda x: x["fecha"],
+              )
+
+          igae_series = fetch_igae_merged()
           igae_latest = igae_series[-1] if igae_series else None
           igae_var_anual = igae_latest["valor"] if igae_latest else None
           pib_var_anual = pib_latest["valor"] if pib_latest else None

@@ -54,6 +54,7 @@ const CARTERA_LABELS: Record<Cartera, string> = {
 
 const BM_CARTERAS: Cartera[] = ['total', 'comercial', 'consumo', 'vivienda', 'tarjeta', 'consumo_norev'];
 const SOFI_CARTERAS: Cartera[] = ['total', 'comercial', 'consumo', 'vivienda'];
+const BANCO_CARTERAS: Cartera[] = ['total', 'comercial', 'consumo', 'vivienda', 'tarjeta'];
 
 function pillClass(active: boolean): string {
   return cn(
@@ -181,6 +182,7 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
     setView(next);
     // Reset cartera for entidad (SoFiPOs don't have consumo_norev/tarjeta)
     if (next === 'entidad') setCartera('total');
+    if (next === 'banco' && cartera === 'consumo_norev') setCartera('total');
   }
 
   const carteras = sector === 'bm' ? BM_CARTERAS : SOFI_CARTERAS;
@@ -223,13 +225,22 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
           </div>
         )}
         {view === 'banco' && (
-          <div className="flex gap-1.5 flex-wrap">
-            {bancosConDatos.map((b) => (
-              <button key={b.id} onClick={() => setBancoId(b.id)} className={pillClass(bancoId === b.id)}>
-                {b.nombre}
-              </button>
-            ))}
-          </div>
+          <>
+            <div className="flex gap-1.5 flex-wrap">
+              {bancosConDatos.map((b) => (
+                <button key={b.id} onClick={() => setBancoId(b.id)} className={pillClass(bancoId === b.id)}>
+                  {b.nombre}
+                </button>
+              ))}
+            </div>
+            <div className="flex gap-1.5 flex-wrap">
+              {BANCO_CARTERAS.map((c) => (
+                <button key={c} onClick={() => setCartera(c)} className={pillClass(cartera === c)}>
+                  {CARTERA_LABELS[c]}
+                </button>
+              ))}
+            </div>
+          </>
         )}
         {view === 'entidad' && (
           <div className="flex gap-1.5 overflow-x-auto pb-1 max-h-24 flex-wrap">
