@@ -1,9 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useStore } from '@nanostores/react';
 import { Line } from 'react-chartjs-2';
 import { ChartErrorBoundary } from './ChartErrorBoundary';
 import { cn } from '~/lib/utils';
 import '~/components/charts/chartSetup';
 import { Chart as ChartJS } from 'chart.js';
+import { $selectedBancoId } from '~/stores/bancaState';
 
 type Sector = 'bm' | 'sofipos';
 type Cartera = 'total' | 'comercial' | 'consumo' | 'vivienda' | 'tarjeta' | 'consumo_norev';
@@ -79,6 +81,17 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
 
   const [bancoId, setBancoId] = useState<string>(bancosConDatos[0]?.id ?? '');
   const [entidadId, setEntidadId] = useState<string>(entidadesConDatos[0]?.id ?? '');
+
+  const externalBancoId = useStore($selectedBancoId);
+
+  useEffect(() => {
+    if (!externalBancoId) return;
+    const match = bancosConDatos.find((b) => b.id === externalBancoId);
+    if (match) {
+      setView('banco');
+      setBancoId(externalBancoId);
+    }
+  }, [externalBancoId, bancosConDatos]);
 
   const { fechas, values, label, color, yMax } = useMemo(() => {
     if (sector === 'bm') {
@@ -228,7 +241,7 @@ export function ImorSegPivotChart({ bm, sofipos, showSofipos = true }: Props) {
           <>
             <div className="flex gap-1.5 flex-wrap">
               {bancosConDatos.map((b) => (
-                <button key={b.id} onClick={() => setBancoId(b.id)} className={pillClass(bancoId === b.id)}>
+                <button key={b.id} onClick={() => { setBancoId(b.id); $selectedBancoId.set(b.id); }} className={pillClass(bancoId === b.id)}>
                   {b.nombre}
                 </button>
               ))}
