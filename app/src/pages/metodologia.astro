@@ -75,67 +75,172 @@ const SEMAFORO_DOT = {
     </section>
 
     <!-- Noticias & Impacto -->
-    <section class="space-y-4 pb-8 border-b border-(--color-border-soft)">
-      <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-(--color-accent)">
-        Noticias & Impacto
-      </div>
-      <h2 class="serif font-semibold text-3xl text-(--color-text) leading-tight">
-        Fuente y metodología del feed de noticias
-      </h2>
-      <p class="text-sm text-(--color-text-dim) leading-relaxed max-w-2xl">
-        La sección <strong>Noticias & Impacto</strong> en <code>/macro/noticias</code> consume la
-        <a href="https://watchboard.dev/api/" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:underline">API pública de Watchboard</a>
-        — plataforma de inteligencia de eventos globales desarrollada por
-        <strong>Artemio Padilla</strong> (co-autor del blueprint 2026 de este proyecto).
-        La API es gratuita, sin autenticación y con CORS abierto.
-      </p>
+    <details class="card-surface p-5 group">
+      <summary class="cursor-pointer text-base font-semibold text-(--color-text) flex items-center justify-between">
+        Noticias & Impacto — metodología del feed
+        <span class="text-(--color-text-mute) group-open:rotate-180 transition-transform">▾</span>
+      </summary>
+      <div class="mt-4 space-y-5">
 
-      <div class="space-y-2">
-        <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Trackers monitoreados</div>
-        <div class="overflow-x-auto">
-          <table class="text-sm w-full max-w-2xl border-collapse">
-            <thead>
-              <tr class="border-b border-(--color-border)">
-                <th class="text-left py-2 pr-4 text-xs text-(--color-text-mute) font-semibold">Tracker</th>
-                <th class="text-left py-2 pr-4 text-xs text-(--color-text-mute) font-semibold">Foco temático</th>
-                <th class="text-left py-2 text-xs text-(--color-text-mute) font-semibold">Categoría SFM</th>
-              </tr>
-            </thead>
-            <tbody class="text-xs text-(--color-text-dim)">
-              <tr class="border-b border-(--color-border-soft)"><td class="py-1.5 pr-4 font-mono">global-recession-risk</td><td class="py-1.5 pr-4">Fed, tasas, aranceles, PMI global</td><td class="py-1.5">Política monetaria / Externa</td></tr>
-              <tr class="border-b border-(--color-border-soft)"><td class="py-1.5 pr-4 font-mono">sheinbaum-presidency</td><td class="py-1.5 pr-4">Política económica México (FDI, USMCA, fiscal)</td><td class="py-1.5">Fiscal</td></tr>
-              <tr class="border-b border-(--color-border-soft)"><td class="py-1.5 pr-4 font-mono">trump-presidencies</td><td class="py-1.5 pr-4">Aranceles EE.UU., política comercial</td><td class="py-1.5">Externa</td></tr>
-              <tr><td class="py-1.5 pr-4 font-mono">mexico</td><td class="py-1.5 pr-4">Macro general México (Pemex, deuda, precios)</td><td class="py-1.5">Sistémica</td></tr>
-            </tbody>
-          </table>
+        <p class="text-sm text-(--color-text-dim) leading-relaxed">
+          La sección <strong class="text-(--color-text)">Noticias & Impacto</strong> en
+          <code>/macro/noticias</code> consume la
+          <a href="https://watchboard.dev/api/" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:underline">API pública de Watchboard</a>
+          — plataforma de inteligencia de eventos globales desarrollada por
+          <strong class="text-(--color-text)">Artemio Padilla</strong> (co-autor del blueprint 2026).
+          API gratuita, sin autenticación, CORS abierto, caché CDN de 1 hora.
+        </p>
+
+        <!-- Trackers -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Trackers monitoreados</div>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-xs text-(--color-text-dim)">
+              <thead>
+                <tr class="border-b border-(--color-border)">
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Tracker</th>
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Foco</th>
+                  <th class="text-left py-1.5 font-semibold text-(--color-text-mute)">Categoría SFM</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-(--color-border-soft)"><td class="py-1.5 pr-4 font-mono text-(--color-text)">global-recession-risk</td><td class="py-1.5 pr-4">Fed, tasas, aranceles, PMI global</td><td class="py-1.5">Política monetaria / Externa</td></tr>
+                <tr class="border-b border-(--color-border-soft)"><td class="py-1.5 pr-4 font-mono text-(--color-text)">sheinbaum-presidency</td><td class="py-1.5 pr-4">Política económica México (FDI, USMCA, fiscal)</td><td class="py-1.5">Fiscal</td></tr>
+                <tr class="border-b border-(--color-border-soft)"><td class="py-1.5 pr-4 font-mono text-(--color-text)">trump-presidencies</td><td class="py-1.5 pr-4">Aranceles EE.UU., política comercial</td><td class="py-1.5">Externa</td></tr>
+                <tr><td class="py-1.5 pr-4 font-mono text-(--color-text)">mexico</td><td class="py-1.5 pr-4">Macro México (Pemex, deuda, precios)</td><td class="py-1.5">Sistémica</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
 
-      <div class="space-y-2 max-w-2xl">
-        <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Metodología de reglas de impacto</div>
-        <p class="text-sm text-(--color-text-dim) leading-relaxed">
-          El análisis de impacto es <strong>estático y determinístico</strong>: cada evento se clasifica
-          mediante 10 reglas predefinidas en código (<code>watchboard-rules.ts</code>) que combinan
-          el tracker de origen, el tipo de evento y palabras clave en el titular.
-          No se utiliza inteligencia artificial en tiempo de ejecución.
-        </p>
-        <p class="text-sm text-(--color-text-dim) leading-relaxed">
-          Las reglas modelan canales de transmisión estándar de política monetaria y riesgo de crédito:
-          tasas de interés (Fed → TIIE → IMOR consumo), choques externos (aranceles → FX → liquidez
-          empresarial), riesgo soberano (Pemex/déficit → spread bancario → solvencia sistémica).
-        </p>
-      </div>
+        <!-- Metodología de reglas -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Metodología de reglas de impacto</div>
+          <p class="text-sm text-(--color-text-dim) leading-relaxed">
+            El análisis de impacto es <strong class="text-(--color-text)">estático y determinístico</strong>: cada evento
+            pasa por 10 reglas en <code>watchboard-rules.ts</code>. Una regla activa cuando el tracker, el tipo de evento
+            y al menos una palabra clave del titular coinciden. Se acumulan todas las reglas activas; en caso de conflicto
+            en el mismo eje, gana la primera regla. Sin inteligencia artificial en runtime.
+          </p>
+        </div>
 
-      <div class="space-y-2 max-w-2xl">
-        <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Limitaciones</div>
-        <ul class="text-sm text-(--color-text-dim) leading-relaxed list-disc list-inside space-y-1">
-          <li>Las reglas capturan el canal de transmisión principal; no modelan escenarios compuestos ni efectos de segunda ronda.</li>
-          <li>El horizonte temporal es orientativo, no una proyección cuantitativa.</li>
-          <li>El feed muestra los últimos 30 eventos por tracker; no es un archivo histórico exhaustivo.</li>
-          <li>Las imágenes de las noticias se obtienen de los artículos fuente vía <a href="https://microlink.io" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:underline">Microlink API</a>.</li>
-        </ul>
+        <!-- Tabla de 10 reglas -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Las 10 reglas</div>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-xs text-(--color-text-dim)">
+              <thead>
+                <tr class="border-b border-(--color-border)">
+                  <th class="text-left py-1.5 pr-3 font-semibold text-(--color-text-mute) whitespace-nowrap">ID</th>
+                  <th class="text-left py-1.5 pr-3 font-semibold text-(--color-text-mute)">Tracker(s)</th>
+                  <th class="text-left py-1.5 pr-3 font-semibold text-(--color-text-mute)">Tipo</th>
+                  <th class="text-left py-1.5 pr-3 font-semibold text-(--color-text-mute)">Keywords</th>
+                  <th class="text-left py-1.5 pr-3 font-semibold text-(--color-text-mute)">Canal de transmisión</th>
+                  <th class="text-left py-1.5 font-semibold text-(--color-text-mute) whitespace-nowrap">Ejes SFM</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-(--color-border-soft) align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text) whitespace-nowrap">R01</td>
+                  <td class="py-1.5 pr-3 font-mono">global-recession-risk</td>
+                  <td class="py-1.5 pr-3">policy</td>
+                  <td class="py-1.5 pr-3">fed, fomc, warsh, tasa, rate</td>
+                  <td class="py-1.5 pr-3">Hawkish Fed → TIIE elevada → costo fondeo → IMOR consumo</td>
+                  <td class="py-1.5 whitespace-nowrap">Mora ↑ 3-6m<br/>Rent. ↑ inm.</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft) align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text)">R02</td>
+                  <td class="py-1.5 pr-3 font-mono">global-recession-risk<br/>trump-presidencies</td>
+                  <td class="py-1.5 pr-3">trade</td>
+                  <td class="py-1.5 pr-3">tariff, arancel, section 122, trade war</td>
+                  <td class="py-1.5 pr-3">Aranceles → contracción comercial → FX presión → liquidez empresarial</td>
+                  <td class="py-1.5 whitespace-nowrap">Liq. ↓ 3m<br/>Mora ↑ 3-6m</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft) align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text)">R03</td>
+                  <td class="py-1.5 pr-3 font-mono">global-recession-risk</td>
+                  <td class="py-1.5 pr-3">market</td>
+                  <td class="py-1.5 pr-3">oil, crude, brent, petróleo</td>
+                  <td class="py-1.5 pr-3">Brent bajo → inflación baja → menor presión TIIE → fondeo estable</td>
+                  <td class="py-1.5 text-(--color-text-mute) italic">solo cat.</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft) align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text)">R04</td>
+                  <td class="py-1.5 pr-3 font-mono">global-recession-risk</td>
+                  <td class="py-1.5 pr-3">economic</td>
+                  <td class="py-1.5 pr-3">recession, gdp, pmi, slowdown</td>
+                  <td class="py-1.5 pr-3">Desaceleración global → remesas/exportaciones bajan → IMOR lagging</td>
+                  <td class="py-1.5 whitespace-nowrap">Mora ↑ 6-12m<br/>Liq. ↓ 6m</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft) align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text)">R05</td>
+                  <td class="py-1.5 pr-3 font-mono">sheinbaum-presidency</td>
+                  <td class="py-1.5 pr-3">economic</td>
+                  <td class="py-1.5 pr-3">fdi, ied, inversión, nearshoring</td>
+                  <td class="py-1.5 pr-3">IED récord → flujos capital → FX estable → fondeo barato</td>
+                  <td class="py-1.5 whitespace-nowrap">Liq. ↑ 3m</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft) align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text)">R06</td>
+                  <td class="py-1.5 pr-3 font-mono">sheinbaum-presidency<br/>trump-presidencies</td>
+                  <td class="py-1.5 pr-3">trade, economic</td>
+                  <td class="py-1.5 pr-3">usmca, renegociación, mexico tariff</td>
+                  <td class="py-1.5 pr-3">Incertidumbre USMCA → riesgo exportador → IMOR empresarial</td>
+                  <td class="py-1.5 whitespace-nowrap">Mora ↑ 6m<br/>Liq. ↓ 3m</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft) align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text)">R07</td>
+                  <td class="py-1.5 pr-3 font-mono">sheinbaum-presidency</td>
+                  <td class="py-1.5 pr-3">political</td>
+                  <td class="py-1.5 pr-3">cnte, huelga, reforma, strike</td>
+                  <td class="py-1.5 pr-3">Incertidumbre regulatoria/fiscal → riesgo soberano leve</td>
+                  <td class="py-1.5 whitespace-nowrap">Solv. ↓ 6-12m</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft) align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text)">R08</td>
+                  <td class="py-1.5 pr-3 font-mono">global-recession-risk</td>
+                  <td class="py-1.5 pr-3">economic</td>
+                  <td class="py-1.5 pr-3">inflation, inflación, pce, cpi, inpc</td>
+                  <td class="py-1.5 pr-3">Inflación alta → TIIE no baja → costo crédito consumo</td>
+                  <td class="py-1.5 whitespace-nowrap">Mora ↑ 3m<br/>Rent. ↑ inm.</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft) align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text)">R09</td>
+                  <td class="py-1.5 pr-3 font-mono">mexico</td>
+                  <td class="py-1.5 pr-3">economic</td>
+                  <td class="py-1.5 pr-3">pemex, deuda, déficit, fiscal</td>
+                  <td class="py-1.5 pr-3">Riesgo soberano/cuasi-soberano → spread bancario → solvencia sistémica</td>
+                  <td class="py-1.5 whitespace-nowrap">Solv. ↓ 6-12m</td>
+                </tr>
+                <tr class="align-top">
+                  <td class="py-1.5 pr-3 font-mono text-(--color-text)">R10</td>
+                  <td class="py-1.5 pr-3 font-mono">sheinbaum-presidency<br/>mexico</td>
+                  <td class="py-1.5 pr-3">economic</td>
+                  <td class="py-1.5 pr-3">tomate, precio, canasta, salario</td>
+                  <td class="py-1.5 pr-3">Presión precios consumo → INPC → expectativas inflación</td>
+                  <td class="py-1.5 whitespace-nowrap">Mora ↑ 3m</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[11px] text-(--color-text-mute)">
+            Rent. = Rentabilidad · Liq. = Liquidez · Solv. = Solvencia · inm. = inmediato · solo cat. = solo categorización, sin chips de impacto
+          </p>
+        </div>
+
+        <!-- Limitaciones -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Limitaciones</div>
+          <ul class="text-sm text-(--color-text-dim) leading-relaxed list-disc list-inside space-y-1">
+            <li>Las reglas capturan el canal de transmisión principal; no modelan escenarios compuestos ni efectos de segunda ronda.</li>
+            <li>El horizonte temporal es orientativo, no una proyección cuantitativa.</li>
+            <li>El feed muestra los últimos ~30 eventos por tracker; no es un archivo histórico exhaustivo.</li>
+            <li>Las imágenes se obtienen de los artículos fuente vía <a href="https://microlink.io" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:underline">Microlink API</a>; pueden fallar si el artículo bloquea scraping.</li>
+          </ul>
+        </div>
+
       </div>
-    </section>
+    </details>
 
     <details class="card-surface p-5 group" open>
       <summary class="cursor-pointer text-base font-semibold text-(--color-text) flex items-center justify-between">
