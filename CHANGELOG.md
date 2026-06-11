@@ -12,6 +12,9 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### Añadido
+- **Vista por institucion (US-403)** — `BancoPerfilPanel` en Banca Multiple: selector de banco que muestra KPIs (IMOR, IMORA, ICOR, ROA, ROE con comparativa vs sistema) + mini chart IMOR por cartera (ultimos 36 meses). Al seleccionar un banco, los charts de IMOR, IMORA, ICOR y ROA/ROE se sincronizan automaticamente via nanostore `$selectedBancoId`.
+
 ### feat(app): macro salario + cartera crecimiento + PWA icons + smoke tests (2026-06-10)
 - **`SalarioMinimoChart.tsx`** — KpiCard ($315.04 MXN/día) + chart de serie SL11298 movidos de Home a Macro.
 - **`DesempleoChart.tsx`** — línea de subocupación (serie 444775) añadida como segunda línea punteada en el mismo chart.
