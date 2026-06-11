@@ -12,6 +12,7 @@ import { PibChart } from '~/components/charts/PibChart';
 import { DesempleoChart } from '~/components/charts/DesempleoChart';
 import { InformalidadChart } from '~/components/charts/InformalidadChart';
 import { SalarioMinimoChart } from '~/components/charts/SalarioMinimoChart';
+import { RemesasChart } from '~/components/charts/RemesasChart';
 import { loadSfmData } from '~/data/loader';
 import { formatPct } from '~/lib/utils';
 import { ChartDrawer } from '~/components/drawer/ChartDrawer';
@@ -46,6 +47,11 @@ const salarioActual  = salario?.actual         ?? null;
 const salarioFecha   = salario?.fecha          ?? null;
 const salarioValido  = salarioActual != null && salarioActual > 50;
 const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
+
+const remesas        = macro.remesas ?? null;
+const remesasActual  = remesas?.actual ?? null;
+const remesasFecha   = remesas?.fecha  ?? null;
+const remesasHist    = remesas?.historico ?? [];
 ---
 
 <Layout
@@ -146,6 +152,17 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
           client:visible
         />
       )}
+      {remesasActual != null && (
+        <KpiCard
+          label="Remesas"
+          value={`$${remesasActual.toFixed(0)}`}
+          unit="MUSD"
+          {...(remesasFecha ? { asOf: remesasFecha } : {})}
+          iconName="TrendingUp"
+          tone="green"
+          client:visible
+        />
+      )}
     </div>
 
     <!-- ── Inflación histórica ── -->
@@ -175,7 +192,8 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
         description="Índice General de Actividad Económica del INEGI. Proxy mensual del PIB. Variación respecto al mismo mes del año anterior."
         source="INEGI BIE, serie 737370"
         refCode="737370"
-        tone="green">
+        tone="green"
+        metricSlug="igae">
         <IgaeChart series={igae.historico} client:visible />
       </Section>
     ) : (
@@ -185,7 +203,8 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
         title="IGAE — Índice General de Actividad Económica"
         description="Indicador mensual de actividad económica del INEGI. Proxy del PIB mensual."
         source="INEGI BIE — datos pendientes"
-        tone="green">
+        tone="green"
+        metricSlug="igae">
         <p class="text-sm text-(--color-text-dim) py-8 text-center">
           Datos disponibles próximamente.
         </p>
@@ -201,7 +220,8 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
         description="Crecimiento real del PIB base 2018. Frecuencia trimestral con rezago T+55 días. Verde: expansión, rojo: contracción."
         source="INEGI BIE, serie 737375"
         refCode="737375"
-        tone="green">
+        tone="green"
+        metricSlug="pib">
         <PibChart series={pib.historico} client:visible />
       </Section>
     ) : (
@@ -211,7 +231,8 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
         title="PIB trimestral — variación anual"
         description="Crecimiento real del PIB base 2018. Frecuencia trimestral con rezago T+55 días."
         source="INEGI BIE — datos pendientes"
-        tone="green">
+        tone="green"
+        metricSlug="pib">
         <p class="text-sm text-(--color-text-dim) py-8 text-center">
           Datos disponibles próximamente.
         </p>
@@ -227,7 +248,8 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
         description="Desocupación: % de la PEA sin empleo (sólido). Subocupación: % de ocupados que trabajan <35h/sem y quieren trabajar más (punteado). ENOE mensual. Referencia: pre-pandemia ~3.4%."
         source="INEGI ENOE, series 444774 · 444775"
         refCode="444774"
-        tone="gold">
+        tone="gold"
+        metricSlug="desempleo">
         <DesempleoChart
           series={desempleo.historico}
           subocupacion={subocupacion?.historico?.length ? subocupacion.historico : undefined}
@@ -245,7 +267,8 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
         description="Porcentaje de la PEA en empleo informal (ENOE, mensual). Nota: pendiente de verificar sub-índice exacto de la serie 444779 (issue #106)."
         source="INEGI ENOE, serie 444779"
         refCode="444779"
-        tone="gold">
+        tone="gold"
+        metricSlug="informalidad">
         <InformalidadChart series={informalidad.historico} client:visible />
       </Section>
     ) : null}
@@ -259,8 +282,23 @@ const salarioHist    = (salario?.historico ?? []).filter((p) => p.valor > 50);
         description="Salario mínimo diario en pesos nominales (MXN). Lo fija la CONASAMI cada enero. No ajustado por inflación."
         source="Banxico SIE, serie SL11298"
         refCode="SL11298"
-        tone="green">
+        tone="green"
+        metricSlug="salario-minimo">
         <SalarioMinimoChart series={salarioHist} client:visible />
+      </Section>
+    )}
+
+    {remesasHist.length > 0 && (
+      <Section
+        id="remesas"
+        eyebrow="Sector externo"
+        title="Remesas familiares"
+        description="Flujo mensual de remesas recibidas en México. Principal fuente de divisas, ~3.5% del PIB. Fuente: Banxico SIE SE27803."
+        source="Banco de México, SIE, serie SE27803"
+        refCode="SE27803"
+        tone="green"
+        metricSlug="remesas">
+        <RemesasChart series={remesasHist} client:visible />
       </Section>
     )}
   </div>
