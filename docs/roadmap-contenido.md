@@ -13,8 +13,8 @@ El repo ya tiene `data/sfm-data.json` con la siguiente cobertura:
 |--------|----------------------|--------|----------------|-----|
 | Mercado | FX FIX, Tasa Banxico, TIIE 28d, Reservas, Cetes 28d, UDI | Banxico SIE | ✅ GitHub Actions diario L-V 8am CDMX | ✅ Home |
 | Inflación | INPC general, subyacente, no subyacente | Banxico SIE | ✅ | ✅ Home |
-| Macro INEGI | IGAE (4 meses), PIB (trimestral), desempleo, subocupación, informalidad, salario mínimo | INEGI BIE + STPS | ✅ (IGAE truncado a ≥dic 2025 — ID nuevo) | ✅ Macro |
-| Macro Banxico | Remesas familiares (22 meses, SE27803) | Banxico SIE | ✅ | ❌ Sin UI |
+| Macro INEGI | IGAE (historia completa desde pipeline 2026-06-11), PIB (trimestral), desempleo, subocupación, informalidad, salario mínimo | INEGI BIE + STPS | ✅ (series 736181+737370 merged) | ✅ Macro |
+| Macro Banxico | Remesas familiares (22 meses, SE27803) | Banxico SIE | ✅ | ✅ KpiCard + RemesasChart (2026-06-11) |
 | Crédito Banca Múltiple | IMOR/IMORA/ICOR/ROA/ROE por cartera y 62 bancos · MIF · Quitas · EPRC · IFRS9 stages · Crecimiento cartera | CNBV CSV sh_datos_40 + R12A | ⚠️ Manual mensual | ✅ Instituciones/Banca Múltiple |
 | SoFiPOs | IMOR por cartera, IMORA, ROA, ROE (123 meses) · por entidad | CNBV Excel | ⚠️ Manual mensual | ✅ Instituciones/SoFiPOs (ROE sin mostrar) |
 | Histórico largo | FX desde 1994, Inflación desde 2000, IMOR desde 2000 | Banxico + CNBV | ⚠️ Estático en JSON | ✅ |
@@ -22,9 +22,9 @@ El repo ya tiene `data/sfm-data.json` con la siguiente cobertura:
 **Pendiente urgente — explotar datos ya en JSON sin descarga adicional:**
 - ~~Reservas internacionales (SF43707)~~ ✅ KpiCard + `ReservasChart.tsx` en Home (2026-06-01)
 - ~~Subyacente / no-subyacente~~ ✅ SP74625 + SP74627 en pipeline y `InflacionChart.tsx` (2026-06-01)
-- **Remesas familiares** — `macro.remesas` tiene 22 meses y $4,978 MUSD actual. Solo falta KpiCard + `RemesasChart.tsx` en Macro. Esfuerzo: S
-- **SoFiPOs ROE** — `sofipos.roe` tiene 123 meses completos. `SofiposImoraRoaChart` muestra ROA pero no ROE. Esfuerzo: XS
-- **IGAE historia pre-2026** — ID de serie larga pendiente; `probe-inegi.yml` creado, requiere trigger manual en GitHub Actions UI
+- ~~Remesas familiares~~ ✅ `RemesasChart.tsx` + KpiCard `$4,978 MUSD` en Macro (2026-06-11). Datos Banxico SE27803.
+- ~~SoFiPOs ROE~~ ✅ `sofipos.roe` (123 meses) en `SofiposImoraRoaChart` como línea discontinua azul + KpiCard (2026-06-11).
+- ~~IGAE historia pre-2026~~ ✅ Pipeline fusiona serie 736181 + 737370 en `fetch_igae_merged()`. Eliminado `IGAE_CUTOFF`. Próxima ejecución del workflow poblará el historial completo (2026-06-11).
 - Desglose IFRS9 automático desde CNBV (hoy es carga manual)
 - `index.json` con hash + timestamp por archivo (cache busting)
 - **Exportaciones (471584), importaciones (471588), inversión fija (462219)** — series INEGI rotas post-BIE dic 2025 (HTTP 400); buscar nuevos IDs en `inegi.org.mx/app/indicadores/`
@@ -267,7 +267,7 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 
 ---
 
-*Última actualización: 2026-06-10*
+*Última actualización: 2026-06-11*
 
 ---
 
@@ -289,7 +289,7 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 | IMORA por banco individual | 40200033 × entidad | Por banco | En JSON `historico_por_banco.imor_total` · chart con dropdown ✅ |
 | ICOR por banco individual | 40200096 × entidad | Por banco | En JSON `historico_por_banco.icor_total` · chart con dropdown ✅ |
 | ROA y ROE por banco individual | 40200001/002 × entidad | Por banco | En JSON `historico_por_banco.roa/roe` · chart con dropdown ✅ |
-| IMOR por cartera × banco | 40100xxx × entidad | Por banco × cartera | En JSON `historico_por_banco.imor_comercial/consumo/vivienda/tarjeta` — filtro banco×cartera pendiente (US-401) |
+| ~~IMOR por cartera × banco~~ | ~~40100xxx × entidad~~ | ~~Por banco × cartera~~ | ✅ Pills de cartera visibles en vista "Por banco" — `ImorSegPivotChart` (US-401, 2026-06-11) |
 
 ### Del R12A IFRS9 (ya descargado — dic 2019 – mar 2026)
 
@@ -305,7 +305,7 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 | ~~IMOR por cartera sistema total~~ | — | ✅ SofiposSegmentChart |
 | ~~IMORA + ROA sistema~~ | — | ✅ SofiposImoraRoaChart |
 | ~~Entidades individuales~~ | `historico_por_entidad` en JSON | ✅ SofiposEntidadesChart (top 15, toggle cartera) |
-| ROE sistema SoFiPOs | `sofipos.roe` 123 meses | ❌ Sin UI — dato listo en JSON (US-309) |
+| ~~ROE sistema SoFiPOs~~ | ~~`sofipos.roe` 123 meses~~ | ✅ KpiCard + línea discontinua azul en SofiposImoraRoaChart (2026-06-11) |
 | IMOR por cartera × entidad individual | `historico_por_entidad` — verificar granularidad | ❌ Pendiente (US-404) |
 
 ### Otros reportes CNBV (pendientes de descarga manual)
@@ -324,8 +324,8 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 | ~~INPC subyacente~~ | ~~SP74625~~ | ~~Mensual~~ | ✅ En pipeline y dashboard (2026-06-01) |
 | ~~INPC no subyacente~~ | ~~SP74627~~ | ~~Mensual~~ | ✅ En pipeline y dashboard (2026-06-01) |
 | ~~Salario mínimo general~~ | ~~SL11298~~ | ~~Anual~~ | ✅ KpiCard + SalarioMinimoChart en Macro (2026-06-10) |
-| **Remesas familiares** | SE27803 | Mensual | ✅ En JSON (22 meses, $4,978 MUSD) — ❌ Sin UI · KpiCard+chart pendiente (US-308) |
-| IGAE var. anual mensual | INEGI BIE 737370 | T+53 días | ✅ En pipeline — solo 4 meses (ID nuevo post-BIE dic 2025); ID largo pendiente (US-310) |
+| ~~Remesas familiares~~ | ~~SE27803~~ | ~~Mensual~~ | ✅ KpiCard `$4,978 MUSD` + `RemesasChart.tsx` en Macro (2026-06-11) |
+| ~~IGAE historia larga~~ | ~~736181 + 737370~~ | ~~T+53 días~~ | ✅ Pipeline fusiona ambas series, eliminado `IGAE_CUTOFF` (2026-06-11, US-310) |
 | PIB trimestral | INEGI BIE 381016 | T+55 días | ✅ En pipeline y dashboard |
 | ~~Desocupación ENOE~~ | ~~444774~~ | ~~Mensual~~ | ✅ DesempleoChart en Macro (2026-06-01) |
 | ~~Subocupación ENOE~~ | ~~444775~~ | ~~Mensual~~ | ✅ DesempleoChart línea punteada (2026-06-10) |

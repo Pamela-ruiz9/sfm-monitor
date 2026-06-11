@@ -1,6 +1,6 @@
 # Roadmap SFM Monitor — Epics y Historias de Usuario
 
-**Última actualización:** 2026-06-10  
+**Última actualización:** 2026-06-11  
 **Versión en producción:** v0.2.0-dev (Astro app reemplazó el `index.html` via `deploy.yml`)  
 **Autora:** Ingrid Pamela Ruiz Puga · Co-autor blueprint: Artemio Padilla
 
@@ -81,20 +81,14 @@ SP74625 + SP74627 en pipeline. `InflacionChart.tsx` con 3 líneas.
 ### US-307 — Informalidad + tasas reales ✅
 `InformalidadChart.tsx` serie 444779. KpiCards tasa real Banxico y Cetes 28d.
 
-### US-308 — Remesas familiares — KpiCard + chart
-**Estado:** Datos listos (`macro.remesas`: actual $4,978 MUSD, 22 meses de historia a abr 2026, serie SE27803). Solo falta UI.  
-**Tarea:** KpiCard en macro + `RemesasChart.tsx` (línea, tooltip USD millones).  
-**Esfuerzo:** S
+### US-308 — Remesas familiares — KpiCard + chart ✅ 2026-06-11
+`RemesasChart.tsx` (línea verde, 22 meses), KpiCard `$4,978 MUSD`, `metricSlug="remesas"`. Datos Banxico SE27803.
 
-### US-309 — SoFiPOs ROE — conectar serie existente
-**Estado:** `sofipos.roe` tiene 123 meses completos. `RoaRoeChart` muestra ROA pero no ROE en SoFiPOs.  
-**Tarea:** Pasar `roe` al componente `SofiposImoraRoaChart` o similar.  
-**Esfuerzo:** XS
+### US-309 — SoFiPOs ROE — conectar serie existente ✅ 2026-06-11
+`sofipos.roe` (123 meses) en `SofiposImoraRoaChart` como tercera línea discontinua azul (`#79c0ff`). KpiCard con tone dinámico verde/rojo.
 
-### US-310 — IGAE historia pre-2026 — resolver IDs INEGI
-**Estado:** Serie 737370 devuelve solo 4 meses. Hay que identificar el ID de la serie larga IGAE en INEGI BIE usando `probe-inegi.yml` (ya creado).  
-**Tarea:** Disparar probe workflow manualmente, identificar ID correcto, actualizar pipeline.  
-**Esfuerzo:** S (si el probe devuelve el ID) · Bloqueo: requiere acción manual en GitHub Actions UI
+### US-310 — IGAE historia pre-2026 ✅ 2026-06-11
+Pipeline fusiona serie BIE 736181 (historia pre-2026) con 737370 (post-dic-2025). Eliminado filtro `IGAE_CUTOFF`. Workflow disparado manualmente; el historial completo estará en sfm-data.json desde la próxima ejecución automática.
 
 ### US-311 — Crecimiento de cartera total ✅
 `CarteraCrecimientoChart.tsx` implementado. Concepto 40100185, 304 meses 2001–2026. YoY en Banca Múltiple.
@@ -118,16 +112,11 @@ Serie 444775 en pipeline. Línea punteada en `DesempleoChart.tsx`. KpiCard en Ma
 - `historico_por_banco` — 62 bancos, 304 meses. Campos por banco: `imor_total`, `imor_comercial`, `imor_consumo`, `imor_vivienda`, `imor_tarjeta`, `imora_total`, `icor_total`, `roa`, `roe`
 - `sofipos.historico_por_entidad` — series por institución SoFiPO (IMOR por cartera)
 
-### US-401 — Selector combinado banco × cartera en ImorSegPivotChart
-**Estado:** El chart actual tiene toggle Sistema/Banco Y pills de cartera, pero no combina ambos (si seleccionas "Por banco", las pills de cartera desaparecen).  
-**Tarea:** Habilitar la combinación: seleccionar banco X + cartera Y → ver la serie `imor_comercial` de Banamex, por ejemplo.  
-**Datos disponibles:** `historico_por_banco[banco].imor_comercial`, `imor_consumo`, `imor_vivienda`, `imor_tarjeta`.  
-**Esfuerzo:** M
+### US-401 — Selector combinado banco × cartera en ImorSegPivotChart ✅ 2026-06-11
+Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) visibles en vista "Por banco". Se agregó constante `BANCO_CARTERAS` y guard para resetear `consumo_norev` al cambiar de vista. La lógica de datos ya existía en el `useMemo`.
 
-### US-402 — Filtro por banco en IMORA, ICOR, ROA/ROE con cartera disponible
-**Estado:** `ImoraChart`, `IcorChart`, `RoaRoeChart` tienen selector de banco (dropdown), pero no tienen filtro de cartera porque los datos por banco solo tienen totales para IMORA e ICOR.  
-**Tarea:** Para IMORA e ICOR, mantener el dropdown de banco con los datos de total disponibles. Para ROA/ROE, verificar si hay datos por cartera por banco (actualmente no en el JSON).  
-**Esfuerzo:** S
+### US-402 — Filtro por banco en IMORA, ICOR, ROA/ROE ✅ Ya implementado
+`ImoraChart`, `IcorChart`, `RoaRoeChart` tienen selector de banco funcional. No existe desglose por cartera para IMORA/ICOR/ROA/ROE en el JSON (solo `imora_total`, `icor_total`, `roa`, `roe` por banco). No requiere trabajo adicional — los datos no existen.
 
 ### US-403 — Vista "por institución" unificada en Instituciones
 **Estado:** El usuario actualmente visita sub-rutas separadas (banca-multiple, sofipos). No hay una vista que muestre todos los indicadores de UNA institución específica.  
