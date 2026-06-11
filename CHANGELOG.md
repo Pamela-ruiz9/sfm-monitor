@@ -34,6 +34,11 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - `SectorToggle` y script `sfm:sector-change` — reemplazados por rutas separadas
 - Página monolítica `instituciones.astro` — dividida en 4 sub-páginas
 
+### Corregido
+- **Noticias M4** — imágenes Microlink rotas muestran emoji fallback via `onError` handler en `NoticiaCard.tsx`.
+- **Noticias M3** — `ContextoBanda` rediseñada: labels truncados 28 chars, punto de color por KPI, link "via Watchboard ↗", eliminado `delta` verboso.
+- **Noticias M1** — Feed en grid 2 columnas `sm:`, cards con imagen 3:2 mas compactas.
+
 ### feat(app): redesign shell — sidebar colapsable, footer 3-columnas, logo animado (2026-06-09)
 - `app/src/components/shell/Sidebar.astro`: navegación colapsable nuevo en desktop (240px expandido ↔ 56px colapsado); reemplaza `TabBar` en layout grid; toggle persist en `$sidebarCollapsed` (localStorage). `DataFreshnessBadge` movido al pie de la sidebar.
 - `app/src/stores/sidebarState.ts`: nanostore `$sidebarCollapsed` con getter/setter, persistencia localStorage.
