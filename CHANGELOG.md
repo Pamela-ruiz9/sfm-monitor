@@ -12,8 +12,18 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(app): pipeline diario Watchboard — datos estáticos en build-time (2026-06-11)
+- **`scripts/fetch-watchboard.py`** — script Python (sin deps externas) que consulta la API pública de Watchboard: 4 trackers de eventos + KPIs de `global-recession-risk`, escribe `data/watchboard-events.json`. Errores por tracker son no-fatales; retorna exit code 1 solo si todos los endpoints fallan.
+- **`.github/workflows/update-watchboard.yml`** — workflow GitHub Actions cron `0 14 * * 1-5` (8am CDMX L-V) + `workflow_dispatch`. Commit automático si el JSON cambia; dispara `deploy.yml` en ese caso.
+- **`data/watchboard-events.json`** — JSON bootstrapeado (62 eventos, 14 KPIs) comprometido al repo; se actualiza diariamente sin fetch en cliente.
+- **`app/src/data/watchboard-loader.ts`** — loader con Zod (Zod strips campos desconocidos), cacheo en módulo, exports `getTrackerEvents`, `getTrackerKpis`, `getWatchboardUpdated`.
+- **Refactor `ContextoBanda.tsx`** — elimina `useEffect`/fetch; acepta `rawKpis: WbKpi[]` como prop; la selección de 4 KPIs con etiquetas en español sigue siendo local (función pura).
+- **Refactor `NoticiasFeed.tsx`** — elimina fetch de 4 trackers + estado loading/error; acepta `initialItems: NoticiaItem[]` pre-procesados; mantiene solo el filtro por categoría como estado cliente.
+- **`NoticiaCard.tsx`** — `WbSource` ahora importado de `watchboard-loader` en lugar de re-definido.
+- **`noticias.astro`** — carga datos en build-time vía loader, aplica `applyRules` para cada evento, pasa `items` e `rawKpis` como props a los islands React.
+
 ### Añadido
-- **Vista por institucion (US-403)** — `BancoPerfilPanel` en Banca Multiple: selector de banco que muestra KPIs (IMOR, IMORA, ICOR, ROA, ROE con comparativa vs sistema) + mini chart IMOR por cartera (ultimos 36 meses). Al seleccionar un banco, los charts de IMOR, IMORA, ICOR y ROA/ROE se sincronizan automaticamente via nanostore `$selectedBancoId`.
+- **Vista por institucion (US-403)** — `BancoPerfilPanel` en Banca Múltiple: selector de banco que muestra KPIs (IMOR, IMORA, ICOR, ROA, ROE con comparativa vs sistema) + mini chart IMOR por cartera (últimos 36 meses). Al seleccionar un banco, los charts de IMOR, IMORA, ICOR y ROA/ROE se sincronizan automáticamente via nanostore `$selectedBancoId`.
 
 ### feat(app): macro salario + cartera crecimiento + PWA icons + smoke tests (2026-06-10)
 - **`SalarioMinimoChart.tsx`** — KpiCard ($315.04 MXN/día) + chart de serie SL11298 movidos de Home a Macro.

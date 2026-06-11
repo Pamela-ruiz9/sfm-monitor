@@ -3,13 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import type { EventImpact } from '~/data/watchboard-rules';
 import { CATEGORY_CONFIG, DIRECTION_CONFIG, AXIS_LABEL } from '~/data/watchboard-rules';
 import { ImpactoTable } from '~/components/noticias/ImpactoTable';
-
-interface WbSource {
-  name: string;
-  url: string;
-  tier: number;
-  pole: string;
-}
+import type { WbSource } from '~/data/watchboard-loader';
 
 export interface NoticiaItem {
   id: string;

@@ -14,6 +14,49 @@ import { SwipeNav } from '~/components/shell/SwipeNav';
 import { PullToRefresh } from '~/components/shell/PullToRefresh';
 import { ContextoBanda } from '~/components/noticias/ContextoBanda';
 import { NoticiasFeed } from '~/components/noticias/NoticiasFeed';
+import { getTrackerEvents, getTrackerKpis } from '~/data/watchboard-loader';
+import { applyRules } from '~/data/watchboard-rules';
+import type { NoticiaItem } from '~/components/noticias/NoticiaCard';
+
+const TRACKERS: Array<{
+  slug: string;
+  emoji: string;
+  color: string;
+  types?: string[];
+}> = [
+  { slug: 'global-recession-risk', emoji: '📉', color: '#e67e22' },
+  { slug: 'sheinbaum-presidency',  emoji: '🇲🇽', color: '#006847', types: ['economic', 'political'] },
+  { slug: 'trump-presidencies',    emoji: '🇺🇸', color: '#3c3b6e', types: ['trade', 'economic'] },
+  { slug: 'mexico',                emoji: '🌮', color: '#ce1126', types: ['economic', 'market'] },
+];
+
+const seen = new Set<string>();
+const allItems: NoticiaItem[] = [];
+
+for (const t of TRACKERS) {
+  const events = getTrackerEvents(t.slug);
+  for (const e of events) {
+    if (t.types && !t.types.includes(e.type)) continue;
+    const id = `${t.slug}::${e.id}`;
+    if (seen.has(id)) continue;
+    seen.add(id);
+    allItems.push({
+      id,
+      date: e.date,
+      title: e.title,
+      type: e.type,
+      sources: e.sources,
+      tracker: t.slug,
+      trackerEmoji: t.emoji,
+      trackerColor: t.color,
+      impact: applyRules({ title: e.title, type: e.type }, t.slug),
+    });
+  }
+}
+
+allItems.sort((a, b) => b.date.localeCompare(a.date));
+const items = allItems.slice(0, 40);
+const rawKpis = getTrackerKpis('global-recession-risk');
 ---
 
 <Layout
@@ -34,15 +77,15 @@ import { NoticiasFeed } from '~/components/noticias/NoticiasFeed';
       headline="Eventos que mueven el Sistema Financiero Mexicano."
     />
     <p class="text-sm text-(--color-text-mute) -mt-2 max-w-2xl">
-      Feed en tiempo real de Watchboard. El análisis de impacto es estimativo y no predictivo.
+      Datos actualizados diariamente via Watchboard. El análisis de impacto es estimativo y no predictivo.
     </p>
 
     <Section id="noticias-contexto" title="Contexto global">
-      <ContextoBanda client:load />
+      <ContextoBanda rawKpis={rawKpis} client:load />
     </Section>
 
     <Section id="noticias-feed" title="Eventos recientes">
-      <NoticiasFeed client:load />
+      <NoticiasFeed initialItems={items} client:load />
     </Section>
   </div>
 

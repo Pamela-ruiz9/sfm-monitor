@@ -1,17 +1,5 @@
 // app/src/components/noticias/ContextoBanda.tsx
-import { useEffect, useState } from 'react';
-
-interface WbKpi {
-  id: string;
-  label: string;
-  value: string;
-  color: string;
-  delta?: string;
-}
-
-interface WbKpisResponse {
-  kpis: WbKpi[];
-}
+import type { WbKpi } from '~/data/watchboard-loader';
 
 const KPI_GROUPS: Array<{ keywords: string[]; label: string }> = [
   { keywords: ['recession', 'probability'], label: 'Riesgo recesión EE.UU.' },
@@ -20,7 +8,7 @@ const KPI_GROUPS: Array<{ keywords: string[]; label: string }> = [
   { keywords: ['tariff', 'section 122', 'cliff'], label: 'Aranceles / Cliff' },
 ];
 
-const COLOR_CLASS: Record<string, string> = {
+const COLOR_HEX: Record<string, string> = {
   red: '#f85149',
   amber: '#e3b341',
   green: '#56d364',
@@ -62,15 +50,12 @@ function selectKpis(kpis: WbKpi[]): SelectedKpi[] {
   return selected.slice(0, 4);
 }
 
-export function ContextoBanda() {
-  const [kpis, setKpis] = useState<SelectedKpi[]>([]);
+interface Props {
+  rawKpis: WbKpi[];
+}
 
-  useEffect(() => {
-    fetch('https://watchboard.dev/api/v1/kpis/global-recession-risk.json')
-      .then((r) => r.json() as Promise<WbKpisResponse>)
-      .then((data) => setKpis(selectKpis(data.kpis ?? [])))
-      .catch(() => {});
-  }, []);
+export function ContextoBanda({ rawKpis }: Props) {
+  const kpis = selectKpis(rawKpis);
 
   if (kpis.length === 0) return null;
 
@@ -92,7 +77,7 @@ export function ContextoBanda() {
       </div>
       <div className="grid grid-cols-2 gap-x-4 gap-y-1">
         {kpis.map((kpi) => {
-          const color = COLOR_CLASS[kpi.color] ?? 'var(--color-text)';
+          const color = COLOR_HEX[kpi.color] ?? 'var(--color-text)';
           return (
             <div key={kpi.id}>
               <div className="text-[10px] leading-tight" style={{ color: 'var(--color-text-mute)' }}>
