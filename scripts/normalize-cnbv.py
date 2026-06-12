@@ -145,9 +145,19 @@ def build_credito() -> dict:
             "mif":                arr("mif",            nullable=True),
             "tda":                arr("tda",            nullable=True),
             # Flujo acumulado 12 meses de quitas y castigos — en miles de millones de pesos
-            "quitas_castigos":    arr("quitas_castigos", nullable=True),
-            # EPRC / cartera total — tasa de cobertura sobre cartera completa (no solo vencida)
-            "eprc_cartera":       arr("eprc_cartera",    nullable=True),
+            "quitas_castigos":       arr("quitas_castigos",    nullable=True),
+            "quitas_comercial":      arr("quitas_comercial",   nullable=True),
+            "quitas_consumo":        arr("quitas_consumo",     nullable=True),
+            "quitas_vivienda":       arr("quitas_vivienda",    nullable=True),
+            # EPRC / cartera — tasa de cobertura (%) sobre cartera completa y por tipo
+            "eprc_cartera":          arr("eprc_cartera",       nullable=True),
+            "eprc_comercial":        arr("eprc_comercial",     nullable=True),
+            "eprc_consumo":          arr("eprc_consumo",       nullable=True),
+            "eprc_vivienda":         arr("eprc_vivienda",      nullable=True),
+            # Tasas activas por cartera — rendimiento implícito (%)
+            "tasa_activa_comercial": arr("tasa_activa_comercial", nullable=True),
+            "tasa_activa_consumo":   arr("tasa_activa_consumo",   nullable=True),
+            "tasa_activa_vivienda":  arr("tasa_activa_vivienda",  nullable=True),
             # Saldo y crecimiento de cartera total — 40100185 (MMP, saldo=130)
             "cartera_total_mmp":  arr("cartera_total_mmp", nullable=True),
             "cartera_total_yoy":  yoy("cartera_total_mmp"),

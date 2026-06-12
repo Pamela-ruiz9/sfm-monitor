@@ -63,6 +63,46 @@ const bancosIcorArr = hpb
       .map((b) => ({ id: b.id, nombre: b.nombre, values: b.icor_total ?? [] }))
   : [];
 
+const bancosQuitasArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.quitas_castigos?.some((v) => v !== null))
+      .map((b) => ({
+        id: b.id, nombre: b.nombre,
+        quitas_castigos:  b.quitas_castigos,
+        quitas_comercial: b.quitas_comercial,
+        quitas_consumo:   b.quitas_consumo,
+        quitas_vivienda:  b.quitas_vivienda,
+      }))
+  : [];
+
+const bancosEprcArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.eprc_cartera?.some((v) => v !== null))
+      .map((b) => ({
+        id: b.id, nombre: b.nombre,
+        eprc_cartera:    b.eprc_cartera,
+        eprc_comercial:  b.eprc_comercial,
+        eprc_consumo:    b.eprc_consumo,
+        eprc_vivienda:   b.eprc_vivienda,
+      }))
+  : [];
+
+const bancosMifArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.mif?.some((v) => v !== null) || b.tasa_activa?.some((v) => v !== null))
+      .map((b) => ({
+        id: b.id, nombre: b.nombre,
+        mif:         b.mif,
+        tasa_activa: b.tasa_activa,
+      }))
+  : [];
+
+const bancosCarteraArr = hpb
+  ? Object.values(hpb.bancos)
+      .filter((b) => b.cartera_total_mmp?.some((v) => v !== null))
+      .map((b) => ({ id: b.id, nombre: b.nombre, cartera_total_mmp: b.cartera_total_mmp }))
+  : [];
+
 const bmPivot = {
   fechas: hpc.fechas,
   cartera: {
@@ -232,7 +272,11 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
         tone="yellow">
         <QuitasChart
           fechas={hpc.fechas}
-          valores={hpc.quitas_castigos}
+          valores={hpc.quitas_castigos ?? []}
+          quitas_comercial={hpc.quitas_comercial}
+          quitas_consumo={hpc.quitas_consumo}
+          quitas_vivienda={hpc.quitas_vivienda}
+          bancos={bancosQuitasArr}
           client:visible
         />
       </Section>
@@ -260,7 +304,11 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
         tone="green">
         <EprcChart
           fechas={hpc.fechas}
-          eprcCartera={hpc.eprc_cartera}
+          eprcCartera={hpc.eprc_cartera ?? []}
+          eprc_comercial={hpc.eprc_comercial}
+          eprc_consumo={hpc.eprc_consumo}
+          eprc_vivienda={hpc.eprc_vivienda}
+          bancos={bancosEprcArr}
           client:visible
         />
       </Section>
@@ -288,10 +336,11 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
         tone="green">
         <MifChart
           fechas={hpc.fechas}
-          tasaActiva={hpc.tasa_activa}
-          tasaPasiva={hpc.tasa_pasiva}
-          mif={hpc.mif}
+          tasaActiva={hpc.tasa_activa ?? []}
+          tasaPasiva={hpc.tasa_pasiva ?? []}
+          mif={hpc.mif ?? []}
           tasaBanxico={data.tasa_banxico?.historico}
+          bancos={bancosMifArr}
           client:visible
         />
       </Section>
@@ -309,8 +358,9 @@ const latest_date = hpb?.fechas?.slice(-1)[0] ?? '';
         tone="default">
         <CarteraCrecimientoChart
           fechas={hpc.fechas}
-          yoy={hpc.cartera_total_yoy}
-          mmp={hpc.cartera_total_mmp}
+          yoy={hpc.cartera_total_yoy ?? []}
+          mmp={hpc.cartera_total_mmp ?? []}
+          bancos={bancosCarteraArr}
           client:visible
         />
       </Section>

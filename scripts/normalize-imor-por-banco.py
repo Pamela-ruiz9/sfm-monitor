@@ -44,21 +44,44 @@ OUT_FILE = os.path.join(DATA, "imor_por_banco.json")
 # Raw CSV values are ratios (0–1); multiply by 100 to get percentage points.
 # ICOR is already a coverage ratio (e.g. 2.04 = 204% coverage), kept ×1.
 # ROA/ROE: raw values are ratios; ×100 → percentage points.
+# Quitas/cartera_total_mmp: raw values are in pesos; ×1e-9 → miles de millones.
 CONCEPTS: dict[str, tuple[str, float]] = {
-    "40200017": ("imor_total",     100.0),
-    "40200033": ("imora_total",    100.0),
-    "40200096": ("icor_total",       1.0),
-    "40200018": ("imor_comercial", 100.0),
-    "40200056": ("imor_consumo",   100.0),
-    "40200046": ("imor_vivienda",  100.0),
-    "40200019": ("imor_tarjeta",   100.0),
-    "40200034": ("roa",            100.0),
-    "40200002": ("roe",            100.0),
+    "40200017": ("imor_total",           100.0),
+    "40200033": ("imora_total",          100.0),
+    "40200096": ("icor_total",             1.0),
+    "40200018": ("imor_comercial",       100.0),
+    "40200056": ("imor_consumo",         100.0),
+    "40200046": ("imor_vivienda",        100.0),
+    "40200019": ("imor_tarjeta",         100.0),
+    "40200034": ("roa",                  100.0),
+    "40200002": ("roe",                  100.0),
+    # Quitas y castigos — pesos → miles de millones (mmdp)
+    "40200193": ("quitas_castigos",        1e-9),
+    "40200194": ("quitas_comercial",       1e-9),
+    "40200198": ("quitas_consumo",         1e-9),
+    "40200209": ("quitas_vivienda",        1e-9),
+    # EPRC / cartera — reservas como % de la cartera
+    "40200118": ("eprc_cartera",         100.0),
+    "40200119": ("eprc_comercial",       100.0),
+    "40200123": ("eprc_consumo",         100.0),
+    "40200134": ("eprc_vivienda",        100.0),
+    # Tasas activas implícitas por cartera (%)
+    "40200162": ("tasa_activa",          100.0),
+    "40200163": ("tasa_activa_comercial",100.0),
+    "40200167": ("tasa_activa_consumo",  100.0),
+    "40200178": ("tasa_activa_vivienda", 100.0),
+    # Cartera total — pesos → miles de millones (MMP)
+    "40100185": ("cartera_total_mmp",      1e-9),
+    # Margen de intermediación financiera (%)
+    "40200218": ("mif",                  100.0),
 }
 
 # IMOR/IMORA fields bounded [0, 100%]; sentinel detection applies to all.
 IMOR_FIELDS = {"imor_total", "imora_total",
                "imor_comercial", "imor_consumo", "imor_vivienda", "imor_tarjeta"}
+
+# Balance sheet concepts that require filtering to saldo='130' (pesos denomination only).
+BALANCE_CONCEPTS = {"40100185"}
 
 # Aggregate entity IDs to exclude (sistema, grupos, no individuales)
 EXCLUIR_ENTIDADES = {"5", "59", "60", "61", "62", "63", "64"}
@@ -116,6 +139,10 @@ def parse_sh_datos_40() -> dict:
             if entidad in EXCLUIR_ENTIDADES:
                 continue
 
+            # Balance sheet concepts: only take saldo='130' (pesos) to avoid double-counting
+            if concepto in BALANCE_CONCEPTS and row.get("saldo", "").strip() != "130":
+                continue
+
             periodo = str(row.get("periodo", "")).strip()
             periodo_iso = periodo_to_iso(periodo)
 
@@ -137,6 +164,10 @@ def parse_sh_datos_40() -> dict:
                     "imor_total", "imora_total", "icor_total",
                     "imor_comercial", "imor_consumo", "imor_vivienda", "imor_tarjeta",
                     "roa", "roe",
+                    "quitas_castigos", "quitas_comercial", "quitas_consumo", "quitas_vivienda",
+                    "eprc_cartera", "eprc_comercial", "eprc_consumo", "eprc_vivienda",
+                    "tasa_activa", "tasa_activa_comercial", "tasa_activa_consumo", "tasa_activa_vivienda",
+                    "cartera_total_mmp", "mif",
                 )}
 
             field, _ = CONCEPTS[concepto]
@@ -196,6 +227,20 @@ def build_output(raw_data: dict, catalogue: dict) -> dict:
         imor_tarjeta    = arr(periodos, "imor_tarjeta")
         roa             = arr(periodos, "roa")
         roe             = arr(periodos, "roe")
+        quitas_castigos         = arr(periodos, "quitas_castigos")
+        quitas_comercial        = arr(periodos, "quitas_comercial")
+        quitas_consumo          = arr(periodos, "quitas_consumo")
+        quitas_vivienda         = arr(periodos, "quitas_vivienda")
+        eprc_cartera            = arr(periodos, "eprc_cartera")
+        eprc_comercial          = arr(periodos, "eprc_comercial")
+        eprc_consumo            = arr(periodos, "eprc_consumo")
+        eprc_vivienda           = arr(periodos, "eprc_vivienda")
+        tasa_activa             = arr(periodos, "tasa_activa")
+        tasa_activa_comercial   = arr(periodos, "tasa_activa_comercial")
+        tasa_activa_consumo     = arr(periodos, "tasa_activa_consumo")
+        tasa_activa_vivienda    = arr(periodos, "tasa_activa_vivienda")
+        cartera_total_mmp       = arr(periodos, "cartera_total_mmp")
+        mif                     = arr(periodos, "mif")
 
         # Only include banks that have at least some IMOR data
         if not any(v is not None for v in imor_total):
@@ -226,6 +271,42 @@ def build_output(raw_data: dict, catalogue: dict) -> dict:
             entry["roa"] = roa
         if any(v is not None for v in roe):
             entry["roe"] = roe
+
+        # Quitas y castigos por cartera
+        if any(v is not None for v in quitas_castigos):
+            entry["quitas_castigos"] = quitas_castigos
+        if any(v is not None for v in quitas_comercial):
+            entry["quitas_comercial"] = quitas_comercial
+        if any(v is not None for v in quitas_consumo):
+            entry["quitas_consumo"] = quitas_consumo
+        if any(v is not None for v in quitas_vivienda):
+            entry["quitas_vivienda"] = quitas_vivienda
+
+        # EPRC por cartera
+        if any(v is not None for v in eprc_cartera):
+            entry["eprc_cartera"] = eprc_cartera
+        if any(v is not None for v in eprc_comercial):
+            entry["eprc_comercial"] = eprc_comercial
+        if any(v is not None for v in eprc_consumo):
+            entry["eprc_consumo"] = eprc_consumo
+        if any(v is not None for v in eprc_vivienda):
+            entry["eprc_vivienda"] = eprc_vivienda
+
+        # Tasas activas por cartera
+        if any(v is not None for v in tasa_activa):
+            entry["tasa_activa"] = tasa_activa
+        if any(v is not None for v in tasa_activa_comercial):
+            entry["tasa_activa_comercial"] = tasa_activa_comercial
+        if any(v is not None for v in tasa_activa_consumo):
+            entry["tasa_activa_consumo"] = tasa_activa_consumo
+        if any(v is not None for v in tasa_activa_vivienda):
+            entry["tasa_activa_vivienda"] = tasa_activa_vivienda
+
+        # Cartera total y MIF
+        if any(v is not None for v in cartera_total_mmp):
+            entry["cartera_total_mmp"] = cartera_total_mmp
+        if any(v is not None for v in mif):
+            entry["mif"] = mif
 
         bancos[entidad_id] = entry
 

@@ -94,9 +94,19 @@ CONCEPT_MAP_EXTRA = {
     "mif":                ("40200218", 100.0),  # margen de intermediación financiera
     "tda":                ("40200074", 100.0),  # tasa de deterioro ajustada
     # Flujo monetario — valor en pesos → almacenar en miles de millones (mmdp)
-    "quitas_castigos":    ("40200193", 1e-9),   # quitas y castigos flujo 12m (mmdp)
+    "quitas_castigos":       ("40200193", 1e-9),   # quitas y castigos flujo 12m total (mmdp)
+    "quitas_comercial":      ("40200194", 1e-9),   # quitas cartera comercial (mmdp)
+    "quitas_consumo":        ("40200198", 1e-9),   # quitas cartera consumo (mmdp)
+    "quitas_vivienda":       ("40200209", 1e-9),   # quitas cartera vivienda (mmdp)
     # Cobertura — ratio 0–1 → ×100 para puntos porcentuales
-    "eprc_cartera":       ("40200118", 100.0),  # EPRC / cartera total (tasa de cobertura)
+    "eprc_cartera":          ("40200118", 100.0),  # EPRC / cartera total (tasa de cobertura)
+    "eprc_comercial":        ("40200119", 100.0),  # EPRC / cartera comercial
+    "eprc_consumo":          ("40200123", 100.0),  # EPRC / cartera consumo
+    "eprc_vivienda":         ("40200134", 100.0),  # EPRC / cartera vivienda
+    # Tasas activas por cartera — rendimiento implícito
+    "tasa_activa_comercial": ("40200163", 100.0),  # tasa activa cartera comercial
+    "tasa_activa_consumo":   ("40200167", 100.0),  # tasa activa cartera consumo
+    "tasa_activa_vivienda":  ("40200178", 100.0),  # tasa activa cartera vivienda
 }
 
 # Concepts whose raw value = 1.0 (ratio sentinel) is a CNBV artifact, not real data.

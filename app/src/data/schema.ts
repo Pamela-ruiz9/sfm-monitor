@@ -118,13 +118,23 @@ const HistoricoCarteraSchema = z.object({
   mif: z.array(z.number().nullable()).optional(),
   tda: z.array(z.number().nullable()).optional(),
   // Flujo acumulado 12 meses de quitas y castigos — en miles de millones de pesos (mmdp)
-  quitas_castigos: z.array(z.number().nullable()).optional(),
-  // EPRC / cartera total — tasa de cobertura de reservas sobre la cartera completa (%)
-  eprc_cartera: z.array(z.number().nullable()).optional(),
+  quitas_castigos:       z.array(z.number().nullable()).optional(),
+  quitas_comercial:      z.array(z.number().nullable()).optional(),
+  quitas_consumo:        z.array(z.number().nullable()).optional(),
+  quitas_vivienda:       z.array(z.number().nullable()).optional(),
+  // EPRC / cartera — tasa de cobertura de reservas (%)
+  eprc_cartera:          z.array(z.number().nullable()).optional(),
+  eprc_comercial:        z.array(z.number().nullable()).optional(),
+  eprc_consumo:          z.array(z.number().nullable()).optional(),
+  eprc_vivienda:         z.array(z.number().nullable()).optional(),
+  // Tasas activas por cartera — rendimiento implícito (%)
+  tasa_activa_comercial: z.array(z.number().nullable()).optional(),
+  tasa_activa_consumo:   z.array(z.number().nullable()).optional(),
+  tasa_activa_vivienda:  z.array(z.number().nullable()).optional(),
   // Saldo de cartera total en miles de millones de pesos (MMP) — 40100185 saldo=130
-  cartera_total_mmp: z.array(z.number().nullable()).optional(),
+  cartera_total_mmp:     z.array(z.number().nullable()).optional(),
   // Crecimiento anual de cartera — variación % vs mismo mes año anterior
-  cartera_total_yoy: z.array(z.number().nullable()).optional(),
+  cartera_total_yoy:     z.array(z.number().nullable()).optional(),
 });
 
 const BancoLatestSchema = z.object({ valor: z.number(), fecha: z.string() });
@@ -145,6 +155,24 @@ const HistoricoBancoEntrySchema = z.object({
   roe:             z.array(z.number().nullable()).optional(),
   imor_latest:     BancoLatestSchema.nullable().optional(),
   imora_latest:    BancoLatestSchema.nullable().optional(),
+  // Quitas y castigos por cartera (mmdp)
+  quitas_castigos:       z.array(z.number().nullable()).optional(),
+  quitas_comercial:      z.array(z.number().nullable()).optional(),
+  quitas_consumo:        z.array(z.number().nullable()).optional(),
+  quitas_vivienda:       z.array(z.number().nullable()).optional(),
+  // EPRC / cartera (%)
+  eprc_cartera:          z.array(z.number().nullable()).optional(),
+  eprc_comercial:        z.array(z.number().nullable()).optional(),
+  eprc_consumo:          z.array(z.number().nullable()).optional(),
+  eprc_vivienda:         z.array(z.number().nullable()).optional(),
+  // Tasas activas implícitas (%)
+  tasa_activa:           z.array(z.number().nullable()).optional(),
+  tasa_activa_comercial: z.array(z.number().nullable()).optional(),
+  tasa_activa_consumo:   z.array(z.number().nullable()).optional(),
+  tasa_activa_vivienda:  z.array(z.number().nullable()).optional(),
+  // Cartera total (MMP) y MIF (%)
+  cartera_total_mmp:     z.array(z.number().nullable()).optional(),
+  mif:                   z.array(z.number().nullable()).optional(),
 });
 
 // Deprecated: cartera breakdown moved into HistoricoBancoEntrySchema directly (issue #96).
