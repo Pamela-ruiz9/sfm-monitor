@@ -53,21 +53,20 @@ El repo ya tiene `data/sfm-data.json` con la siguiente cobertura:
 
 ## Fase 1 — Estructura de información (meses 1-2)
 
-### Capa 1: Semáforo global
+### Capa 1: Semáforo global ✅ 2026-06-11
 
 La primera pantalla del dashboard muestra **1 número, 1 color, 1 frase** que cualquier persona entienda antes de ver cualquier gráfica.
 
-**Índice compuesto propio:**
-- Metodología: percentiles rolling (p10/p25/p50/p75/p90) sobre serie histórica desde 2006
-- Agregación: equal-weighting como default público + variante PCA visible como "modo experto"
-- 5 colores: verde (<p25), amarillo-verde (p25–p50), amarillo (p50–p75), naranja (p75–p90), rojo (>p90)
-- Citamos Banxico REF Oct 2018 Recuadro 3 como referencia metodológica; la composición es nuestra
+**Score Global implementado en `HeroScore.astro` + `app/src/data/score.ts`:**
+- 8 KPIs: IMOR, IMORA, ICOR, ROA, ROE (percentil rolling sobre historia 2000–hoy), FX (percentil rolling 390 obs), inflación (distancia al objetivo 3%), tasa real vs r* neutral 2.5%
+- Sub-índices: S_crédito 50%, S_rentabilidad 30%, S_macro 20%
+- 5 bandas de color fijas: Riesgo Bajo / Contenido / Moderado / Elevado / Alto
+- UI: h1 colorizado + 3 barras de progreso de subíndices + score numérico + link a metodología
+- Metodología colapsable en `/metodologia#score-global` con fórmula, tabla de KPIs, nota técnica, backtesting esperado (Tequila/GFC/COVID/2022), limitaciones y referencia ECB CISS (Hollo et al. 2012)
+- Reproducible: build-time, sin fetches en cliente; fuente pública en `score.ts`
 
 **Por qué índice propio y no espejo de Banxico:**  
 Banxico publica su Mapa Térmico en PDF semestral. Nosotros lo hacemos vivo, mensual, con metodología visible y reproducible. Eso nos convierte en fuente independiente, no en visualizador de datos ajenos.
-
-**Atribución en el semáforo:**  
-`Datos: Banco de México SIE + CNBV Portafolio de Información | Metodología propia | Actualizado: [fecha]`
 
 ---
 
@@ -212,7 +211,7 @@ Cada indicador tiene su propia ficha con estructura estándar:
 - **DOI Zenodo:** conectar repo → reservar DOI → release `v1.0.0` → badge en README
 - **JSON-LD `Dataset`** por indicador + `DataCatalog` en homepage → Google Dataset Search
 - **Citation generator:** componente `<CitationBox />` con tabs APA 7 / Chicago / MLA / BibTeX / RIS
-- **API pública:** `/api/v1/*.json` con CORS abierto + `Cache-Control: public, max-age=3600`
+- ~~**API pública:** `/api/v1/*.json` con CORS abierto + `Cache-Control: public, max-age=3600`~~ ✅ 2026-06-11 — 6 endpoints estáticos generados en build. Docs en `/metodologia#api`.
 - **OpenAPI 3.1** documentada en `/docs/api` con Scalar o Redoc CE
 - **Paquete Python `sfmriskmx`** en PyPI (~50 líneas, thin wrapper sobre los JSONs)
 
@@ -268,7 +267,7 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 
 ---
 
-*Última actualización: 2026-06-11*
+*Última actualización: 2026-06-11 — Score Global (HeroScore + score.ts + metodología colapsable) + API pública v1 (6 endpoints) + docs API en /metodologia#api*
 
 ---
 

@@ -1,6 +1,6 @@
 # Roadmap SFM Monitor — Epics y Historias de Usuario
 
-**Última actualización:** 2026-06-11 (sesión)  
+**Última actualización:** 2026-06-11 (sesión — Score Global + API pública v1)  
 **Versión en producción:** v0.2.0-dev (Astro app reemplazó el `index.html` via `deploy.yml`)  
 **Autora:** Ingrid Pamela Ruiz Puga · Co-autor blueprint: Artemio Padilla
 
@@ -8,7 +8,7 @@
 
 ## Resumen ejecutivo
 
-SFM Monitor está en producción con el stack Astro 5 + React 19. El cutover formal (tag v0.2.0, Zenodo DOI) está pendiente de confirmación. El dashboard cubre las 5 pestañas con datos automáticos (Banxico + INEGI vía GitHub Actions) y datos CNBV manuales mensuales. La sección Macro tiene sub-ruta "Noticias & Impacto" operativa con pipeline Watchboard build-time, panel de contexto macroeconómico y filtro por categoría. La app tiene modo claro/oscuro persistente con toggle en sidebar y header.
+SFM Monitor está en producción con el stack Astro 5 + React 19. El cutover formal (tag v0.2.0, Zenodo DOI) está pendiente de confirmación. El dashboard cubre las 5 pestañas con datos automáticos (Banxico + INEGI vía GitHub Actions) y datos CNBV manuales mensuales. La sección Macro tiene sub-ruta "Noticias & Impacto" operativa con pipeline Watchboard build-time, panel de contexto macroeconómico y filtro por categoría. La app tiene modo claro/oscuro persistente. El HeroScore muestra el **Score Global compuesto** (percentil rolling, 8 KPIs, pesos 50/30/20) con 3 barras de subíndices y link a metodología. La **API pública estática v1** expone 6 endpoints JSON con CORS abierto, generados en cada deploy.
 
 ### Estado de gates
 
@@ -121,10 +121,8 @@ Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) visibles en vista "P
 ### US-402 — Filtro por banco en IMORA, ICOR, ROA/ROE ✅ Ya implementado
 `ImoraChart`, `IcorChart`, `RoaRoeChart` tienen selector de banco funcional. No existe desglose por cartera para IMORA/ICOR/ROA/ROE en el JSON (solo `imora_total`, `icor_total`, `roa`, `roe` por banco). No requiere trabajo adicional — los datos no existen.
 
-### US-403 — Vista "por institución" unificada en Instituciones
-**Estado:** El usuario actualmente visita sub-rutas separadas (banca-multiple, sofipos). No hay una vista que muestre todos los indicadores de UNA institución específica.  
-**Tarea:** Página o drawer `/instituciones/banca-multiple?banco=040012` que consolide IMOR (por cartera) + IMORA + ICOR + ROA/ROE de ese banco en un solo scroll.  
-**Esfuerzo:** L
+### US-403 — Vista "por institución" unificada en Instituciones ✅ 2026-06-11
+`BancoPerfilPanel` en `/instituciones/banca-multiple`: selector de banco con 5 KPI chips (IMOR, IMORA, ICOR, ROA, ROE con comparativa vs sistema) + pills de cartera + mini chart IMOR últimos 36 meses. Al seleccionar banco, los charts IMOR/IMORA/ICOR/ROA+ROE se sincronizan vía nanostore `$selectedBancoId`.
 
 ### US-404 — SoFiPOs por entidad con filtro de cartera
 **Estado:** `historico_por_entidad` existe en `sfm-data.json`. `SofiposEntidadesChart` muestra IMOR total por entidad. Falta cruzar entidad × cartera.  
@@ -156,11 +154,11 @@ Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) visibles en vista "P
 
 | US | Descripción | Estado | Esfuerzo |
 |---|---|---|---|
-| US-601 | API pública `/api/v1/*.json` con CORS | 🔴 | M |
+| US-601 | API pública `/api/v1/*.json` con CORS | ✅ 2026-06-11 — 6 endpoints estáticos: index, snapshot, score, credito, macro, sofipos | M |
 | US-602 | Paquete Python `sfmriskmx` en PyPI | 🔴 | M |
 | US-603 | Comparativa internacional MX vs LatAm/OCDE | 🔴 Completar Epic 3 primero | XL |
 | US-604 | Credit-to-GDP gap metodología BIS | 🔴 | L |
-| US-605 | Índice de stress financiero propio (CISS) | 🔴 Requiere validación Pame | XL |
+| US-605 | Índice de stress financiero propio (CISS) | ✅ 2026-06-11 — `score.ts` + `HeroScore.astro` + sección colapsable en `/metodologia#score-global`. Percentil rolling 8 KPIs, pesos 50/30/20, 5 bandas de color, referencia ECB CISS (Hollo et al. 2012) | XL |
 | US-606 | ICAP + LCR/NSFR desde reportes CNBV manuales | 🔴 Requiere descarga CNBV | M |
 | US-607 | Noticias & Impacto — página `/macro/noticias` | ✅ 2026-06-11 — feed Watchboard (4 trackers), `applyRules()` 10 reglas 4 ejes SFM, `NoticiaCard` con badge de impacto, `ContextoBanda` con KPIs macroeconómicos en español + párrafo resumen | M |
 
@@ -177,4 +175,4 @@ Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) visibles en vista "P
 
 ---
 
-*Actualizado: 2026-06-11*
+*Actualizado: 2026-06-11 — Score Global (US-605) + API pública v1 (US-601) + BancoPerfilPanel (US-403)*
