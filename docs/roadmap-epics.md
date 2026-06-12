@@ -1,6 +1,6 @@
 # Roadmap SFM Monitor — Epics y Historias de Usuario
 
-**Última actualización:** 2026-06-11 (sesión — Score Global + API pública v1)  
+**Última actualización:** 2026-06-11 (sesión — desagregación quitas/EPRC/tasa_activa/cartera por cartera e institución)  
 **Versión en producción:** v0.2.0-dev (Astro app reemplazó el `index.html` via `deploy.yml`)  
 **Autora:** Ingrid Pamela Ruiz Puga · Co-autor blueprint: Artemio Padilla
 
@@ -8,7 +8,7 @@
 
 ## Resumen ejecutivo
 
-SFM Monitor está en producción con el stack Astro 5 + React 19. El cutover formal (tag v0.2.0, Zenodo DOI) está pendiente de confirmación. El dashboard cubre las 5 pestañas con datos automáticos (Banxico + INEGI vía GitHub Actions) y datos CNBV manuales mensuales. La sección Macro tiene sub-ruta "Noticias & Impacto" operativa con pipeline Watchboard build-time, panel de contexto macroeconómico y filtro por categoría. La app tiene modo claro/oscuro persistente. El HeroScore muestra el **Score Global compuesto** (percentil rolling, 8 KPIs, pesos 50/30/20) con 3 barras de subíndices y link a metodología. La **API pública estática v1** expone 6 endpoints JSON con CORS abierto, generados en cada deploy.
+SFM Monitor está en producción con el stack Astro 5 + React 19. El cutover formal (tag v0.2.0, Zenodo DOI) está pendiente de confirmación. El dashboard cubre las 5 pestañas con datos automáticos (Banxico + INEGI vía GitHub Actions) y datos CNBV manuales mensuales. La sección Macro tiene sub-ruta "Noticias & Impacto" operativa con pipeline Watchboard build-time, panel de contexto macroeconómico y filtro por categoría. La app tiene modo claro/oscuro persistente. El HeroScore muestra el **Score Global compuesto** (percentil rolling, 8 KPIs, pesos 50/30/20) con 3 barras de subíndices y link a metodología. La **API pública estática v1** expone 6 endpoints JSON con CORS abierto, generados en cada deploy. La sección Instituciones tiene **desagregación cruzada banco × cartera** para Quitas, EPRC, MIF y Crecimiento de cartera — 62 bancos × 304 meses × 24 series.
 
 ### Estado de gates
 
@@ -112,7 +112,8 @@ Serie 444775 en pipeline. Línea punteada en `DesempleoChart.tsx`. KpiCard en Ma
 **Objetivo:** Habilitar exploración cruzada por institución Y por tipo de cartera en todos los indicadores disponibles. El usuario debe poder ver, por ejemplo, "IMOR consumo de Banamex" o "ROA de Nu México".
 
 **Datos disponibles en JSON:**
-- `historico_por_banco` — 62 bancos, 304 meses. Campos por banco: `imor_total`, `imor_comercial`, `imor_consumo`, `imor_vivienda`, `imor_tarjeta`, `imora_total`, `icor_total`, `roa`, `roe`
+- `historico_por_banco` — 62 bancos, 304 meses. Campos por banco: `imor_total/comercial/consumo/vivienda/tarjeta`, `imora_total`, `icor_total`, `roa`, `roe`, `quitas_castigos/comercial/consumo/vivienda`, `eprc_cartera/comercial/consumo/vivienda`, `tasa_activa` (+ por cartera), `cartera_total_mmp`, `mif`
+- `historico_por_cartera` — sistema total: nuevas series `quitas_comercial/consumo/vivienda`, `eprc_comercial/consumo/vivienda`, `tasa_activa_comercial/consumo/vivienda`
 - `sofipos.historico_por_entidad` — series por institución SoFiPO (IMOR por cartera)
 
 ### US-401 — Selector combinado banco × cartera en ImorSegPivotChart ✅ 2026-06-11
@@ -123,6 +124,17 @@ Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) visibles en vista "P
 
 ### US-403 — Vista "por institución" unificada en Instituciones ✅ 2026-06-11
 `BancoPerfilPanel` en `/instituciones/banca-multiple`: selector de banco con 5 KPI chips (IMOR, IMORA, ICOR, ROA, ROE con comparativa vs sistema) + pills de cartera + mini chart IMOR últimos 36 meses. Al seleccionar banco, los charts IMOR/IMORA/ICOR/ROA+ROE se sincronizan vía nanostore `$selectedBancoId`.
+
+### US-406 — Desagregación quitas/EPRC/tasa_activa/cartera por cartera e institución ✅ 2026-06-11
+**Pipeline:** `extract-cnbv-raw.py` +9 conceptos (quitas/EPRC/tasa_activa por cartera a nivel sistema); `normalize-imor-por-banco.py` +14 conceptos por banco (quitas, EPRC, tasa_activa × 4 carteras, cartera_total_mmp, mif) con filtro `saldo='130'` para 40100185. `normalize-cnbv.py` +12 series en `historico_por_cartera`.  
+**Schema:** `HistoricoCarteraSchema` +9 campos; `HistoricoBancoEntrySchema` +14 campos (todos `optional nullable`).  
+**UI:** 4 charts actualizados con nanostore sync (`$selectedBancoId`):
+- `QuitasChart`: pills Total/Comercial/Consumo/Vivienda + selector de banco
+- `EprcChart`: pills Total/Comercial/Consumo/Vivienda + selector de banco
+- `MifChart`: selector de banco (MIF no tiene desglose por cartera en CNBV)
+- `CarteraCrecimientoChart`: selector de banco con YoY calculado on-the-fly
+
+**Datos:** quitas consumo 167 mmdp, EPRC consumo 8.3%, tasa activa consumo 28.9% (mar 2026)
 
 ### US-404 — SoFiPOs por entidad con filtro de cartera
 **Estado:** `historico_por_entidad` existe en `sfm-data.json`. `SofiposEntidadesChart` muestra IMOR total por entidad. Falta cruzar entidad × cartera.  
@@ -175,4 +187,4 @@ Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) visibles en vista "P
 
 ---
 
-*Actualizado: 2026-06-11 — Score Global (US-605) + API pública v1 (US-601) + BancoPerfilPanel (US-403)*
+*Actualizado: 2026-06-11 — US-406 desagregación quitas/EPRC/tasa_activa/cartera por cartera e institución (62 bancos × 24 series)*
