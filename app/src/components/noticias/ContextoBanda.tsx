@@ -24,6 +24,15 @@ function truncateValue(v: string, max = 32): string {
   return first.length <= max ? first : first.slice(0, max - 1) + '…';
 }
 
+// Extrae solo la parte numérica/porcentual antes de cualquier palabra en inglés.
+// "3.3% Core / 3.8% Headline" → "3.3%"   |   "8.9% overall" → "8.9%"
+// "3.50–3.75%" → "3.50–3.75%"             |   "+1.6%" → "+1.6%"
+function numericPart(v: string): string {
+  const clean = (v.split(';')[0] ?? v).trim();
+  const stripped = clean.replace(/\s+[A-Za-z].*/g, '').trim();
+  return stripped.length > 0 ? stripped : truncateValue(v, 20);
+}
+
 interface SelectedKpi extends WbKpi {
   spanishLabel: string;
 }
@@ -55,6 +64,13 @@ function selectKpis(kpis: WbKpi[]): SelectedKpi[] {
   return selected.slice(0, 4);
 }
 
+function buildResumen(kpis: SelectedKpi[]): string {
+  const parts = kpis.map((k) => `${k.spanishLabel} ${numericPart(k.value)}`);
+  if (parts.length === 0) return '';
+  const sentence = parts.join(', ');
+  return sentence.charAt(0).toUpperCase() + sentence.slice(1) + '.';
+}
+
 interface Props {
   rawKpis: WbKpi[];
 }
@@ -63,6 +79,8 @@ export function ContextoBanda({ rawKpis }: Props) {
   const kpis = selectKpis(rawKpis);
 
   if (kpis.length === 0) return null;
+
+  const resumen = buildResumen(kpis);
 
   return (
     <div className="rounded-lg border p-3 mb-2" style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-elev)' }}>
@@ -80,6 +98,13 @@ export function ContextoBanda({ rawKpis }: Props) {
           via Watchboard ↗
         </a>
       </div>
+
+      {resumen && (
+        <p className="text-[11px] leading-relaxed mb-2" style={{ color: 'var(--color-text-mute)' }}>
+          {resumen}
+        </p>
+      )}
+
       <div className="grid grid-cols-2 gap-x-4 gap-y-1">
         {kpis.map((kpi) => {
           const color = COLOR_HEX[kpi.color] ?? 'var(--color-text)';
