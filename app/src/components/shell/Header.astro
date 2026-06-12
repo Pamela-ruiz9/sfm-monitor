@@ -1,5 +1,25 @@
 ---
 import SfmLogo from '~/components/shell/SfmLogo.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const path = Astro.url.pathname;
+
+const isMacro = path.startsWith(`${base}/macro`);
+const isInstituciones = path.startsWith(`${base}/instituciones`);
+
+const MACRO_SUBNAV = [
+  { href: `${base}/macro`,          label: 'Indicadores',       match: new RegExp(`^${base}/macro/?$`) },
+  { href: `${base}/macro/noticias`, label: 'Noticias & Impacto', match: new RegExp(`^${base}/macro/noticias`) },
+];
+
+const INST_SUBNAV = [
+  { href: `${base}/instituciones/tipos`,          label: 'Tipos de inst.',  match: new RegExp(`^${base}/instituciones/tipos`) },
+  { href: `${base}/instituciones/contraste`,      label: 'Contraste',       match: new RegExp(`^${base}/instituciones/contraste`) },
+  { href: `${base}/instituciones/banca-multiple`, label: 'Banca Múltiple',  match: new RegExp(`^${base}/instituciones/banca-multiple`) },
+  { href: `${base}/instituciones/sofipos`,        label: 'SoFiPOs',         match: new RegExp(`^${base}/instituciones/sofipos`) },
+];
+
+const subnav = isMacro ? MACRO_SUBNAV : isInstituciones ? INST_SUBNAV : null;
 ---
 
 <header
@@ -30,4 +50,35 @@ import SfmLogo from '~/components/shell/SfmLogo.astro';
       </button>
     </div>
   </div>
+
+  {subnav && (
+    <nav
+      aria-label="Sub-navegación de sección"
+      class="lg:hidden overflow-x-auto border-t border-(--color-border)"
+      style="scrollbar-width: none; -webkit-overflow-scrolling: touch;">
+      <ul class="flex gap-1 px-3 py-1.5" role="tablist">
+        {subnav.map(({ href, label, match }) => {
+          const active = match.test(path);
+          return (
+            <li class="shrink-0">
+              <a
+                href={href}
+                role="tab"
+                aria-selected={active}
+                aria-current={active ? 'page' : undefined}
+                data-astro-prefetch
+                class:list={[
+                  'block text-[11px] font-medium px-3 py-1 rounded-full whitespace-nowrap transition-colors',
+                  active
+                    ? 'bg-(--color-accent) text-white'
+                    : 'text-(--color-text-mute) hover:text-(--color-text) hover:bg-(--color-bg-elev)',
+                ]}>
+                {label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  )}
 </header>
