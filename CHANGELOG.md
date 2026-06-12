@@ -12,6 +12,27 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(cnbv): desagregación quitas/EPRC/tasa_activa/cartera por cartera e institución (2026-06-11)
+
+**Pipeline**
+- **`scripts/extract-cnbv-raw.py`** — +9 conceptos en `CONCEPT_MAP_EXTRA`: quitas_castigos por cartera (40200194 comercial, 40200198 consumo, 40200209 vivienda), EPRC por cartera (40200119/123/134), tasa_activa por cartera (40200163/167/178). El loop de emisión de filas ya cubría todos los mapas sin cambio adicional.
+- **`scripts/normalize-imor-por-banco.py`** — +14 conceptos en `CONCEPTS`: quitas_castigos total (40200193) + 3 carteras, eprc_cartera total (40200118) + 3 carteras, tasa_activa total (40200162) + 3 carteras, cartera_total_mmp (40100185), mif (40200218). Añadido `BALANCE_CONCEPTS = {"40100185"}` con filtro `saldo='130'` para evitar doble-conteo del saldo denominado en otra moneda. Inicialización de `data[entidad][periodo_iso]` extendida. `build_output` emite condicionalmente cada campo si el banco tiene al menos un valor no-nulo.
+- **`scripts/normalize-cnbv.py`** — +12 series en `historico_por_cartera`: `quitas_comercial/consumo/vivienda`, `eprc_comercial/consumo/vivienda`, `tasa_activa_comercial/consumo/vivienda` (todas nullable).
+- **Datos regenerados:** `imor_por_banco.json` 6.1 MB (62 bancos × 304 meses × 24 series), `credito.json` 7.4 MB, `sfm-data.json` 9.0 MB. Valores de referencia mar 2026: quitas consumo 167 mmdp, EPRC consumo 8.3%, tasa activa consumo 28.9%.
+
+**Schema** (`app/src/data/schema.ts`)
+- `HistoricoCarteraSchema`: +9 campos `z.array(z.number().nullable()).optional()` — quitas/eprc/tasa_activa × 3 carteras.
+- `HistoricoBancoEntrySchema`: +14 campos optional nullable — quitas/eprc/tasa_activa × (total + 3 carteras), cartera_total_mmp, mif.
+
+**UI** — 4 charts actualizados, todos sincronizan con `$selectedBancoId` (nanostore):
+- **`QuitasChart.tsx`** — pills Total/Comercial/Consumo/Vivienda + selector banco con overflow scroll. Activa serie de sistema o de banco según vista, con fallback a total cuando cartera no disponible.
+- **`EprcChart.tsx`** — mismo patrón: pills de cartera + selector banco.
+- **`MifChart.tsx`** — selector banco solamente (MIF no tiene desglose por cartera en CNBV Sector 40). Vista banco muestra tasa_activa + mif del banco seleccionado.
+- **`CarteraCrecimientoChart.tsx`** — selector banco con YoY calculado on-the-fly sobre `cartera_total_mmp` del banco.
+- **`banca-multiple.astro`** — 5 arrays de bancos nuevos (`bancosQuitasArr`, `bancosEprcArr`, `bancosMifArr`, `bancosCarteraArr`) pasados a los charts. Fallback `?? []` en props obligatorias.
+
+**Fix** (`app/astro.config.ts`) — `maximumFileSizeToCacheInBytes` 5 MiB → 12 MiB: `banca-multiple/index.html` alcanza 9.34 MB por 62 bancos × 24 series inlineadas.
+
 ### feat(app): API pública estática v1 — endpoints JSON build-time (2026-06-11)
 - **`src/pages/api/v1/index.json.ts`** — discovery endpoint: lista de endpoints, fuente, licencia, cita DOI.
 - **`src/pages/api/v1/snapshot.json.ts`** — snapshot ligero: todos los valores actuales + score global. Equivalente al KPI endpoint de Watchboard.
