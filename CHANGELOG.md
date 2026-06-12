@@ -12,6 +12,11 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(app): Score Global del Sistema — índice compuesto de riesgo sistémico (2026-06-11)
+- **`app/src/data/score.ts`** — módulo puro `computeScore(data: SfmData): SfmScore`. 8 KPIs: IMOR/IMORA/ICOR (percentil rolling), ROA/ROE (percentil rolling invertido), FX (percentil rolling 390 obs), inflación (distancia al objetivo 3%), tasa real vs r* neutral 2.5%. Sub-índices: S_crédito 50%, S_rentabilidad 30%, S_macro 20%. 5 bandas de color (Riesgo Bajo → Riesgo Alto). Helper `normSeriesCapped` para ICOR (cap ×20).
+- **`app/src/components/HeroScore.astro`** — reemplaza lógica hardcodeada con `computeScore`; nueva UI: h1 colorizado + etiqueta de período, 3 barras de progreso (Crédito/Rentabilidad/Macro), score numérico, link a `/metodologia#score-global`.
+- **`app/src/pages/metodologia.astro`** — nueva sección colapsable `<details id="score-global">` con: fórmula de agregación, tabla de 8 KPIs con pesos y método de normalización, nota técnica de percentil rolling, tabla de umbrales de color con dots coloreados, backtesting esperado (Tequila/GFC/COVID/2022), limitaciones explícitas (LCR, historia corta inflación, sin contagio), instrucciones de reproducibilidad, referencia ECB CISS (Hollo et al., 2012).
+
 ### feat(app): pipeline diario Watchboard — datos estáticos en build-time (2026-06-11)
 - **`scripts/fetch-watchboard.py`** — script Python (sin deps externas) que consulta la API pública de Watchboard: 4 trackers de eventos + KPIs de `global-recession-risk`, escribe `data/watchboard-events.json`. Errores por tracker son no-fatales; retorna exit code 1 solo si todos los endpoints fallan.
 - **`.github/workflows/update-watchboard.yml`** — workflow GitHub Actions cron `0 14 * * 1-5` (8am CDMX L-V) + `workflow_dispatch`. Commit automático si el JSON cambia; dispara `deploy.yml` en ese caso.

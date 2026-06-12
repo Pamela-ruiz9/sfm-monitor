@@ -242,6 +242,230 @@ const SEMAFORO_DOT = {
       </div>
     </details>
 
+    <!-- Score Global del Sistema -->
+    <details class="card-surface p-5 group" id="score-global">
+      <summary class="cursor-pointer text-base font-semibold text-(--color-text) flex items-center justify-between">
+        Score Global del Sistema — metodología
+        <span class="text-(--color-text-mute) group-open:rotate-180 transition-transform">▾</span>
+      </summary>
+      <div class="mt-4 space-y-5">
+
+        <p class="text-sm text-(--color-text-dim) leading-relaxed">
+          El <strong class="text-(--color-text)">Score Global del SFM Monitor</strong> es un índice compuesto mensual de riesgo sistémico financiero para México. Agrega en un único número las condiciones de crédito, rentabilidad bancaria y entorno macro, permitiendo comparar el nivel de estrés del sistema a través del tiempo. Metodológicamente está inspirado en el
+          <strong class="text-(--color-text)">CISS (Composite Indicator of Systemic Stress)</strong> del BCE (Hollo, Kremer &amp; Lo Duca, 2012), adaptado a las series disponibles en las APIs públicas del Banxico y la CNBV para el sistema bancario mexicano.
+        </p>
+
+        <!-- Fórmula -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Fórmula de agregación</div>
+          <pre class="text-xs bg-(--color-bg-elev) p-3 rounded-md font-mono overflow-x-auto text-(--color-text-dim)">Score_t = 0.50 × S_crédito + 0.30 × S_rentabilidad + 0.20 × S_macro
+
+S_crédito      = mean(IMOR_norm, IMORA_norm, ICOR_norm)
+S_rentabilidad = mean(ROA_norm, ROE_norm)
+S_macro        = mean(FX_norm, Inflación_norm, TasaReal_norm)
+
+Donde cada norma ∈ [0, 1]</pre>
+        </div>
+
+        <!-- Tabla de KPIs -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Indicadores y normalización</div>
+          <div class="overflow-x-auto">
+            <table class="table-auto w-full border-collapse text-xs text-(--color-text-dim)">
+              <thead>
+                <tr class="border-b border-(--color-border)">
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Indicador</th>
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Subíndice</th>
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Peso global</th>
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Serie</th>
+                  <th class="text-left py-1.5 font-semibold text-(--color-text-mute)">Normalización</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">IMOR total</td>
+                  <td class="py-1.5 pr-4">Crédito</td>
+                  <td class="py-1.5 pr-4">~16.7%</td>
+                  <td class="py-1.5 pr-4">304 obs (2000–hoy)</td>
+                  <td class="py-1.5">Percentil rolling ↑</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">IMORA total</td>
+                  <td class="py-1.5 pr-4">Crédito</td>
+                  <td class="py-1.5 pr-4">~16.7%</td>
+                  <td class="py-1.5 pr-4">268 obs (2003–hoy)</td>
+                  <td class="py-1.5">Percentil rolling ↑</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">ICOR total</td>
+                  <td class="py-1.5 pr-4">Crédito</td>
+                  <td class="py-1.5 pr-4">~16.7%</td>
+                  <td class="py-1.5 pr-4">304 obs (2000–hoy)</td>
+                  <td class="py-1.5">Percentil rolling ↓ (invertido, cap ×20)</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">ROA</td>
+                  <td class="py-1.5 pr-4">Rentabilidad</td>
+                  <td class="py-1.5 pr-4">15%</td>
+                  <td class="py-1.5 pr-4">279 obs (2003–hoy)</td>
+                  <td class="py-1.5">Percentil rolling ↓ (invertido)</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">ROE</td>
+                  <td class="py-1.5 pr-4">Rentabilidad</td>
+                  <td class="py-1.5 pr-4">15%</td>
+                  <td class="py-1.5 pr-4">292 obs (2001–hoy)</td>
+                  <td class="py-1.5">Percentil rolling ↓ (invertido)</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">Tipo de cambio</td>
+                  <td class="py-1.5 pr-4">Macro</td>
+                  <td class="py-1.5 pr-4">~6.7%</td>
+                  <td class="py-1.5 pr-4">~390 obs (~1994–hoy)</td>
+                  <td class="py-1.5">Percentil rolling ↑</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">Inflación INPC</td>
+                  <td class="py-1.5 pr-4">Macro</td>
+                  <td class="py-1.5 pr-4">~6.7%</td>
+                  <td class="py-1.5 pr-4">—</td>
+                  <td class="py-1.5">Distancia al objetivo: |inf − 3| / 3</td>
+                </tr>
+                <tr>
+                  <td class="py-1.5 pr-4 text-(--color-text)">Tasa Banxico real</td>
+                  <td class="py-1.5 pr-4">Macro</td>
+                  <td class="py-1.5 pr-4">~6.7%</td>
+                  <td class="py-1.5 pr-4">—</td>
+                  <td class="py-1.5">Distancia al r* neutral: |tasa_real − 2.5%| / 3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Nota técnica -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Normalización — nota técnica</div>
+          <p class="text-sm text-(--color-text-dim) leading-relaxed">
+            Para cada serie e indicador, el score en el tiempo <em>t</em> es el <strong class="text-(--color-text)">rango empírico</strong> de x<sub>t</sub> entre todas las observaciones desde el inicio de la serie hasta <em>t</em> (rango relativo acumulado). Esto significa que el score evoluciona conforme se acumula historia: un IMOR de 4% que era "normal" en 2003–2010 puntúa más alto (mayor estrés) en 2024 si la norma reciente ha aumentado. El método es robusto a valores atípicos (basado en rangos, sin supuesto de distribución normal) y consistente con la metodología del Mapa Térmico del sistema financiero mexicano (Banxico, Reporte de Estabilidad Financiera, Recuadro 3, octubre 2018). Para empates, se usa el rango promedio. En series con pocos datos disponibles se retorna 0.5 como valor neutral.
+          </p>
+        </div>
+
+        <!-- Umbrales de color -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Umbrales de color</div>
+          <div class="overflow-x-auto">
+            <table class="table-auto w-full border-collapse text-xs text-(--color-text-dim)">
+              <thead>
+                <tr class="border-b border-(--color-border)">
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Score</th>
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Etiqueta</th>
+                  <th class="text-left py-1.5 font-semibold text-(--color-text-mute)">Color</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 font-mono">0.00–0.20</td>
+                  <td class="py-1.5 pr-4">Riesgo Bajo</td>
+                  <td class="py-1.5"><span style="color:#56d364">&#9679;</span> Verde</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 font-mono">0.20–0.40</td>
+                  <td class="py-1.5 pr-4">Riesgo Contenido</td>
+                  <td class="py-1.5"><span style="color:#d4a72c">&#9679;</span> Verde-ámbar</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 font-mono">0.40–0.60</td>
+                  <td class="py-1.5 pr-4">Riesgo Moderado</td>
+                  <td class="py-1.5"><span style="color:#e3b341">&#9679;</span> Ámbar</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 font-mono">0.60–0.80</td>
+                  <td class="py-1.5 pr-4">Riesgo Elevado</td>
+                  <td class="py-1.5"><span style="color:#f0883e">&#9679;</span> Naranja</td>
+                </tr>
+                <tr>
+                  <td class="py-1.5 pr-4 font-mono">0.80–1.00</td>
+                  <td class="py-1.5 pr-4">Riesgo Alto</td>
+                  <td class="py-1.5"><span style="color:#f85149">&#9679;</span> Rojo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Backtesting esperado -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Backtesting esperado</div>
+          <div class="overflow-x-auto">
+            <table class="table-auto w-full border-collapse text-xs text-(--color-text-dim)">
+              <thead>
+                <tr class="border-b border-(--color-border)">
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Crisis</th>
+                  <th class="text-left py-1.5 pr-4 font-semibold text-(--color-text-mute)">Período pico</th>
+                  <th class="text-left py-1.5 font-semibold text-(--color-text-mute)">Score esperado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">Crisis Tequila</td>
+                  <td class="py-1.5 pr-4 font-mono">1995-03</td>
+                  <td class="py-1.5">&ge; 0.70</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">Crisis Financiera Global</td>
+                  <td class="py-1.5 pr-4 font-mono">2009-06</td>
+                  <td class="py-1.5">&ge; 0.55</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-4 text-(--color-text)">COVID-19</td>
+                  <td class="py-1.5 pr-4 font-mono">2020-04</td>
+                  <td class="py-1.5">&ge; 0.60</td>
+                </tr>
+                <tr>
+                  <td class="py-1.5 pr-4 text-(--color-text)">Alzas de tasa 2022</td>
+                  <td class="py-1.5 pr-4 font-mono">2022-12</td>
+                  <td class="py-1.5">&ge; 0.45</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Limitaciones -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Limitaciones explícitas</div>
+          <ul class="text-sm text-(--color-text-dim) leading-relaxed list-disc list-inside space-y-1.5">
+            <li><strong class="text-(--color-text)">Sin LCR ni NSFR:</strong> los datos de liquidez del sistema no están disponibles en la API pública del Banxico ni de la CNBV en formato automatable. El score puede señalar "verde" en episodios de estrés de fondeo a corto plazo.</li>
+            <li><strong class="text-(--color-text)">Historia corta en inflación:</strong> la serie de inflación mensual disponible inicia en 2020; la normalización usa distancia al objetivo en lugar de percentiles para evitar sesgos del período inflacionario 2021–2023.</li>
+            <li><strong class="text-(--color-text)">Tasa Banxico:</strong> la serie de decisiones de tasa incluye solo observaciones desde 2024-06; se usa nivel vs r* neutral (2.5%) hasta acumular historia suficiente para percentiles.</li>
+            <li><strong class="text-(--color-text)">Sin contagio interbancario:</strong> el score no captura riesgo de red — un banco grande en problemas puede no verse reflejado hasta que su IMOR escale al sistema.</li>
+            <li><strong class="text-(--color-text)">Datos mensuales:</strong> no captura shocks intra-mes (p.ej., volatilidad de mercado cambiario en un día).</li>
+            <li><strong class="text-(--color-text)">MIF excluido:</strong> el Margen de Intermediación Financiera está disponible en el JSON pero es KPI informativo — su dirección es ambigua (MIF alto puede reflejar rentabilidad sana o extracción de renta en período de tasas altas) y no entra al score compuesto.</li>
+          </ul>
+        </div>
+
+        <!-- Reproducibilidad -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Reproducibilidad</div>
+          <p class="text-sm text-(--color-text-dim) leading-relaxed">
+            El score se calcula en tiempo de construcción (build-time) con los datos de <code class="text-(--color-text)">data/sfm-data.json</code>, disponible públicamente en el repositorio. Para reproducir:
+          </p>
+          <pre class="text-xs bg-(--color-bg-elev) p-3 rounded-md font-mono overflow-x-auto text-(--color-text-dim)">git clone https://github.com/Pamela-ruiz9/sfm-monitor
+cd app && npm install && npm run build</pre>
+          <p class="text-[11px] text-(--color-text-mute)">
+            Ver <code>app/src/data/score.ts</code> para la implementación completa.
+          </p>
+        </div>
+
+        <!-- Referencia -->
+        <p class="text-[11px] text-(--color-text-mute) pt-1 border-t border-(--color-border-soft)">
+          Inspirado metodológicamente en: Hollo, D., Kremer, M. &amp; Lo Duca, M. (2012). CISS — A Composite Indicator of Systemic Stress in the Financial System. <em>ECB Working Paper No. 1426</em>. Adaptado para datos mensuales del sistema bancario mexicano con series CNBV-Banxico.
+        </p>
+
+      </div>
+    </details>
+
     <details class="card-surface p-5 group" open>
       <summary class="cursor-pointer text-base font-semibold text-(--color-text) flex items-center justify-between">
         Cómo se calculan los semáforos

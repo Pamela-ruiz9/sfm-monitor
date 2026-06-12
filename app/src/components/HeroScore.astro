@@ -1,51 +1,27 @@
 ---
 import { loadSfmData } from '~/data/loader';
 import { computeAlerts } from '~/data/alerts';
+import { computeScore } from '~/data/score';
 
 const data = loadSfmData();
 const alerts = computeAlerts(data);
+const score = computeScore(data);
 
-// Simple compositional score:
-// - Crédito: green if IMOR <= 3.5, yellow if 3.5-4.5, red if > 4.5
-// - Mercado: yellow default (FX volatility hard to compute server-side from monthly data)
-// - Macro: based on inflation (green 2-4, yellow 4-6, red >6)
-// - Liquidez: green if no liquidity-related alerts, else yellow
-
-function semaforoFromImor(imor: number): 'green' | 'yellow' | 'red' {
-  if (imor <= 3.5) return 'green';
-  if (imor <= 4.5) return 'yellow';
-  return 'red';
-}
-function semaforoFromInflacion(inf: number): 'green' | 'yellow' | 'red' {
-  if (inf >= 2 && inf <= 4) return 'green';
-  if (inf <= 6) return 'yellow';
-  return 'red';
+// Format periodo 'YYYY-MM' → 'mar 2026'
+const MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+function formatPeriodo(periodo: string): string {
+  const parts = periodo.split('-');
+  const year = parts[0] ?? '';
+  const monthRaw = parts[1] ?? '';
+  const monthIdx = parseInt(monthRaw, 10) - 1;
+  const monthLabel = MESES[monthIdx] ?? monthRaw;
+  return `${monthLabel} ${year}`;
 }
 
-const credito = semaforoFromImor(Number(data.credito.imor.actual));
-const macro = semaforoFromInflacion(Number(data.inflacion.actual));
-const mercado: 'green' | 'yellow' | 'red' = 'yellow'; // simple default until FX vol logic lands
-const liquidez: 'green' | 'yellow' | 'red' = 'green'; // simple default until depósitos data is wired
+const periodoLabel = formatPeriodo(score.periodo);
 
-// Aggregate score: count yellows and reds
-const tones = [credito, mercado, macro, liquidez];
-const reds = tones.filter((t) => t === 'red').length;
-const yellows = tones.filter((t) => t === 'yellow').length;
-
-let scoreLabel: string;
-let scoreColor: string;
-if (reds >= 2) {
-  scoreLabel = 'Riesgo Elevado';
-  scoreColor = 'var(--color-red)';
-} else if (reds >= 1 || yellows >= 3) {
-  scoreLabel = 'Riesgo Moderado';
-  scoreColor = 'var(--color-yellow)';
-} else if (yellows >= 1) {
-  scoreLabel = 'Riesgo Contenido';
-  scoreColor = 'var(--color-gold)';
-} else {
-  scoreLabel = 'Riesgo Bajo';
-  scoreColor = 'var(--color-green)';
+function barWidth(val: number): number {
+  return Math.min(Math.round(val * 100), 100);
 }
 ---
 
@@ -53,16 +29,81 @@ if (reds >= 2) {
   <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-(--color-gold)">
     Score Global del Sistema
   </div>
+
   <h1
     class="serif font-semibold leading-[1.05] tracking-tight"
-    style={`font-size: clamp(2.8rem, 6vw, 4.8rem); color: ${scoreColor}`}>
-    {scoreLabel}
+    style={`font-size: clamp(2.8rem, 6vw, 4.8rem); color: ${score.color}`}>
+    {score.label}
+    <span
+      class="text-(--color-text-mute) font-normal"
+      style="font-size: clamp(1rem, 2.5vw, 1.4rem)">
+      [{periodoLabel}]
+    </span>
   </h1>
-  {
-    alerts.length > 0 && (
-      <p class="text-[11px] text-(--color-text-mute) pt-1">
-        {alerts.length} {alerts.length === 1 ? 'alerta activa' : 'alertas activas'} — ver panel debajo.
-      </p>
-    )
-  }
+
+  <!-- Sub-index progress bars -->
+  <div class="space-y-2 pt-1 max-w-sm">
+    <!-- Credito -->
+    <div class="flex items-center gap-3">
+      <span class="text-xs text-(--color-text-dim) w-24 shrink-0">Credito</span>
+      <div class="flex-1 h-2 rounded-full bg-(--color-border-soft) overflow-hidden">
+        <div
+          class="h-full rounded-full"
+          style={`width: ${barWidth(score.subindices.credito)}%; background: ${score.color}`}>
+        </div>
+      </div>
+      <span class="text-xs text-(--color-text-mute) w-8 text-right tabular-nums">
+        {score.subindices.credito.toFixed(2)}
+      </span>
+    </div>
+
+    <!-- Rentabilidad -->
+    <div class="flex items-center gap-3">
+      <span class="text-xs text-(--color-text-dim) w-24 shrink-0">Rentabilidad</span>
+      <div class="flex-1 h-2 rounded-full bg-(--color-border-soft) overflow-hidden">
+        <div
+          class="h-full rounded-full"
+          style={`width: ${barWidth(score.subindices.rentabilidad)}%; background: ${score.color}`}>
+        </div>
+      </div>
+      <span class="text-xs text-(--color-text-mute) w-8 text-right tabular-nums">
+        {score.subindices.rentabilidad.toFixed(2)}
+      </span>
+    </div>
+
+    <!-- Macro -->
+    <div class="flex items-center gap-3">
+      <span class="text-xs text-(--color-text-dim) w-24 shrink-0">Macro</span>
+      <div class="flex-1 h-2 rounded-full bg-(--color-border-soft) overflow-hidden">
+        <div
+          class="h-full rounded-full"
+          style={`width: ${barWidth(score.subindices.macro)}%; background: ${score.color}`}>
+        </div>
+      </div>
+      <span class="text-xs text-(--color-text-mute) w-8 text-right tabular-nums">
+        {score.subindices.macro.toFixed(2)}
+      </span>
+    </div>
+  </div>
+
+  <!-- Numeric score -->
+  <p class="text-xs text-(--color-text-mute) tabular-nums">
+    Score: {score.value.toFixed(2)} / 1.00
+  </p>
+
+  <!-- Alerts and methodology link -->
+  <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+    {
+      alerts.length > 0 && (
+        <p class="text-[11px] text-(--color-text-mute)">
+          {alerts.length} {alerts.length === 1 ? 'alerta activa' : 'alertas activas'} — ver panel debajo.
+        </p>
+      )
+    }
+    <a
+      href="/metodologia#score-global"
+      class="text-[11px] text-(--color-accent) hover:underline">
+      &#x2197; Metodologia
+    </a>
+  </div>
 </section>
