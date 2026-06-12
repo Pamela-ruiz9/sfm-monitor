@@ -1,6 +1,6 @@
 # Spec: Score Global del SFM Monitor
 
-**Estado:** Borrador para validación — requiere aprobación de Pame antes de implementar  
+**Estado:** ✅ Aprobado — listo para implementar  
 **Autora:** Ingrid Pamela Ruiz Puga  
 **Fecha:** 2026-06-11  
 **Referencia blueprint:** `docs/research/blueprint-2026.md` §3.2  
@@ -65,13 +65,13 @@ Score_t = (w₁ · S_credito + w₂ · S_rentabilidad + w₃ · S_macro) / (w₁
 
 Donde cada Sᵢ ∈ [0, 1] y los pesos son iguales como baseline (equal-weight):
 
-| Subíndice | Peso baseline | Series incluidas |
+| Subíndice | Peso | Series incluidas |
 |---|---|---|
-| **S_credito** | 40% | IMOR, IMORA, ICOR (invertido), MIF |
-| **S_rentabilidad** | 30% | ROA (invertido), ROE (invertido) |
-| **S_macro** | 30% | Inflación, FX, Tasa Banxico real |
+| **S_credito** | **50%** | IMOR, IMORA, ICOR (invertido) |
+| **S_rentabilidad** | **30%** | ROA (invertido), ROE (invertido) |
+| **S_macro** | **20%** | FX, Inflación, Tasa Banxico real |
 
-> **Pregunta abierta para Pame:** ¿Los pesos 40/30/30 reflejan tu juicio sobre la importancia relativa de cada dimensión para el sistema mexicano? Alternativa: 50/25/25 dando más peso al crédito.
+Pesos confirmados por Pame: 2026-06-11.
 
 ---
 
@@ -97,11 +97,9 @@ ICOR alto = buena cobertura = menos estrés. Invertir y capear en 20× antes de 
 ICOR_norm = 1 - percentile(min(ICOR_t, 20), historia)
 ```
 
-#### MIF: dirección ambigua → usar con cautela
+#### MIF: KPI informativo — excluido del score ✅
 
-MIF alto puede significar mayor rentabilidad O mayor extracción de renta (monopolio). En períodos de tasas altas el MIF sube aunque el sistema sea "sano". Propongo usar solo IMOR + IMORA + ICOR para S_credito en la primera versión, dejando MIF como indicador auxiliar visible pero excluido del score hasta validar su señal.
-
-> **Pregunta abierta para Pame:** ¿Incluir MIF en el subíndice de crédito o dejarlo como KPI informativo sin peso en el score?
+Confirmado por Pame: MIF queda como KPI informativo en la página de Banca Múltiple, sin peso en el score compuesto. Razón: dirección ambigua (MIF alto puede reflejar rentabilidad sana o extracción de renta en períodos de tasas altas).
 
 #### Inflación → Distance-from-target normalizado
 
@@ -122,7 +120,7 @@ neutral = 2.5%   (proxy del r* MX, discutible)
 tasa_norm = sigmoid(|tasa_real_t - neutral| / 3.0)
 ```
 
-> **Pregunta abierta para Pame:** ¿El r* neutral de 2.5% es razonable para México? Alternativa: usar como umbral la mediana histórica de la tasa real.
+r* neutral = **2.5%** confirmado por Pame: 2026-06-11.
 
 #### Tipo de cambio → Percentil rolling (390 meses)
 
@@ -154,7 +152,7 @@ Siguiendo Banxico Mapa Térmico (Recuadro 3, REF oct 2018) con 5 niveles:
 | 0.60 – 0.80 | Naranja | Riesgo Elevado | `#f0883e` |
 | 0.80 – 1.00 | Rojo | Riesgo Alto | `#f85149` |
 
-> **Pregunta abierta para Pame:** ¿Estos umbrales son razonables? Alternativa: umbrales p10/p25/p50/p75/p90 sobre la distribución histórica del score mismo (autoajustable). El problema es que requiere calibrar el score histórico completo primero.
+Umbrales fijos confirmados por Pame: 2026-06-11.
 
 ---
 
@@ -244,18 +242,16 @@ Para mantener el alcance acotado y la metodología publicable:
 
 ---
 
-## 9. Gates de aprobación (bloqueadores antes de implementar)
+## 9. Gates de aprobación ✅ TODOS APROBADOS (2026-06-11)
 
-Antes de escribir una línea de código, necesito tu validación explícita en:
+- [x] **G1 — Composición:** 3 subíndices confirmados (crédito/rentabilidad/macro)
+- [x] **G2 — Pesos:** **50% / 30% / 20%** (macro reducida de 30% a 20%)
+- [x] **G3 — MIF:** KPI informativo, excluido del score
+- [x] **G4 — r* neutral:** 2.5%
+- [x] **G5 — Umbrales:** fijos 0.20 / 0.40 / 0.60 / 0.80
+- [x] **G6 — Backtesting:** Tequila / GFC / COVID / alzas 2022 ✅
 
-- [ ] **G1 — Composición:** ¿Los 3 subíndices y las series incluidas en cada uno son correctos?
-- [ ] **G2 — Pesos:** ¿40/30/30 o diferente?
-- [ ] **G3 — MIF:** ¿Incluido en S_credito o excluido?
-- [ ] **G4 — r* neutral:** ¿2.5% o usamos la mediana histórica de la tasa real?
-- [ ] **G5 — Umbrales de color:** ¿0.20/0.40/0.60/0.80 o percentiles del score histórico?
-- [ ] **G6 — Backtesting:** ¿Las 4 crisis propuestas son los eventos de referencia correctos?
-
-Con G1-G6 aprobados: la implementación es ~2 días (score.ts + HeroScore.astro + sección en metodología + backtesting visual).
+**Siguiente paso:** implementar `app/src/data/score.ts` + actualizar `HeroScore.astro` + sección en `/metodologia`.
 
 ---
 
