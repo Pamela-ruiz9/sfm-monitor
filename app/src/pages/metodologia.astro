@@ -509,6 +509,140 @@ cd app && npm install && npm run build</pre>
       </div>
     </details>
 
+    <!-- API pública -->
+    <details class="card-surface p-5 group" id="api">
+      <summary class="cursor-pointer text-base font-semibold text-(--color-text) flex items-center justify-between">
+        Cómo consumir los datos por API
+        <span class="text-(--color-text-mute) group-open:rotate-180 transition-transform">▾</span>
+      </summary>
+      <div class="mt-4 space-y-5">
+
+        <p class="text-sm text-(--color-text-dim) leading-relaxed">
+          Todos los datos del SFM Monitor están disponibles como archivos JSON estáticos con CORS abierto.
+          Se generan en cada deploy diario y no requieren autenticación.
+          La URL base es <code class="text-(--color-text)">https://pamela-ruiz9.github.io/sfm-monitor</code>.
+        </p>
+
+        <!-- Endpoints -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Endpoints disponibles</div>
+          <div class="overflow-x-auto">
+            <table class="table-auto w-full border-collapse text-xs text-(--color-text-dim)">
+              <thead>
+                <tr class="border-b border-(--color-border)">
+                  <th class="text-left py-1.5 pr-6 font-semibold text-(--color-text-mute)">Endpoint</th>
+                  <th class="text-left py-1.5 font-semibold text-(--color-text-mute)">Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-6 font-mono text-(--color-accent)">/api/v1/index.json</td>
+                  <td class="py-1.5">Discovery: lista de endpoints, licencia, cita DOI</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-6 font-mono text-(--color-accent)">/api/v1/snapshot.json</td>
+                  <td class="py-1.5">Valores actuales de todos los indicadores + score global (ligero)</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-6 font-mono text-(--color-accent)">/api/v1/score.json</td>
+                  <td class="py-1.5">Score compuesto de riesgo sistémico con 8 KPIs normalizados</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-6 font-mono text-(--color-accent)">/api/v1/credito.json</td>
+                  <td class="py-1.5">Series históricas: IMOR, IMORA, ICOR, ROA, ROE (desde 2000)</td>
+                </tr>
+                <tr class="border-b border-(--color-border-soft)">
+                  <td class="py-1.5 pr-6 font-mono text-(--color-accent)">/api/v1/macro.json</td>
+                  <td class="py-1.5">Series de tipo de cambio, tasa Banxico, inflación, IGAE, remesas</td>
+                </tr>
+                <tr>
+                  <td class="py-1.5 pr-6 font-mono text-(--color-accent)">/api/v1/sofipos.json</td>
+                  <td class="py-1.5">Indicadores de Sociedades Financieras Populares (SoFiPOs)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ejemplo fetch -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Ejemplo — JavaScript / fetch</div>
+          <pre class="text-xs bg-(--color-bg-elev) p-3 rounded-md font-mono overflow-x-auto text-(--color-text-dim)">const BASE = 'https://pamela-ruiz9.github.io/sfm-monitor';
+
+// Score global actual
+const res = await fetch(BASE + '/api/v1/snapshot.json');
+const data = await res.json();
+
+console.log(data.score.label);              // "Riesgo Contenido"
+console.log(data.credito.imor.valor);       // 3.12
+console.log(data.macro.tipo_cambio.valor);  // 17.48</pre>
+        </div>
+
+        <!-- Ejemplo Python -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Ejemplo — Python</div>
+          <pre class="text-xs bg-(--color-bg-elev) p-3 rounded-md font-mono overflow-x-auto text-(--color-text-dim)">import urllib.request, json
+
+BASE = "https://pamela-ruiz9.github.io/sfm-monitor"
+
+with urllib.request.urlopen(BASE + "/api/v1/credito.json") as r:
+    data = json.loads(r.read())
+
+fechas = data["fechas"]
+imor   = data["series"]["imor_total"]
+
+# Par fecha-valor más reciente
+print(fechas[-1], imor[-1])  # 2026-04  3.12</pre>
+        </div>
+
+        <!-- Ejemplo curl -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Ejemplo — curl</div>
+          <pre class="text-xs bg-(--color-bg-elev) p-3 rounded-md font-mono overflow-x-auto text-(--color-text-dim)">curl https://pamela-ruiz9.github.io/sfm-monitor/api/v1/snapshot.json | jq '.score'</pre>
+        </div>
+
+        <!-- Estructura snapshot -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Estructura de snapshot.json</div>
+          <pre class="text-xs bg-(--color-bg-elev) p-3 rounded-md font-mono overflow-x-auto text-(--color-text-dim)">{"{"}
+  "updated": "2026-04-30",
+  "periodo": "2026-04",
+  "score": {"{"}
+    "value": 0.31,
+    "label": "Riesgo Contenido",
+    "color": "#d4a72c",
+    "subindices": {"{"}"credito": 0.38, "rentabilidad": 0.29, "macro": 0.18{"}"}
+  {"}"},
+  "credito": {"{"}
+    "imor":  {"{"}"valor": 3.12, "fecha": "2026-04", "semaforo": "verde"{"}"},
+    "imora": {"{"}"valor": 2.87, "fecha": "2026-04"{"}"},
+    "icor":  {"{"}"valor": 1.84, "fecha": "2026-04"{"}"},
+    "roa":   {"{"}"valor": 2.11, "fecha": "2026-04"{"}"},
+    "roe":   {"{"}"valor": 18.4, "fecha": "2026-04"{"}"}
+  {"}"},
+  "macro": {"{"}
+    "tipo_cambio": {"{"}"valor": 17.48, "fecha": "2026-04-30"{"}"},
+    "tasa_banxico": {"{"}"valor": 9.0,  "fecha": "2026-03-27"{"}"},
+    "inflacion":    {"{"}"valor": 3.94, "fecha": "2026-04-30"{"}"}
+  {"}"}
+{"}"}</pre>
+        </div>
+
+        <!-- Condiciones de uso -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-(--color-text-mute)">Condiciones de uso</div>
+          <ul class="text-sm text-(--color-text-dim) leading-relaxed list-disc list-inside space-y-1">
+            <li>Datos disponibles bajo licencia <strong class="text-(--color-text)">CC-BY 4.0</strong> — uso libre con atribución.</li>
+            <li>Atribución requerida: <em>"SFM Monitor — Ruiz Puga, I.P. (2025). DOI: 10.5281/zenodo.20370914"</em></li>
+            <li>No hay SLA de disponibilidad — los archivos se sirven desde GitHub Pages.</li>
+            <li>Los datos son mensuales y se actualizan automáticamente cada día hábil.</li>
+            <li>Las fuentes primarias son CNBV y Banxico — para uso regulatorio o académico formal, citar directamente las fuentes originales.</li>
+          </ul>
+        </div>
+
+      </div>
+    </details>
+
     <CitationBox />
 
     <details class="card-surface p-5 group">
