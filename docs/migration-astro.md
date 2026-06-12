@@ -101,9 +101,23 @@ Tightear `CreditoSchema` en `schema.ts` con shapes reales (quitar `passthrough`)
 - [ ] `nuqs` para URL state (filtros)
 - [ ] `<ExportMenu>` PNG/SVG/CSV/PDF con metadata embebida
 
-### Sprint M5 — cutover (ver `cutover.md`)
+### Sprint M5 — Noticias & Impacto + Shell ✅ (2026-06-11)
 
-Solo cuando M1–M4 estén completos y Playwright valide paridad pixel-perfect en las 9 charts.
+- [x] `scripts/fetch-watchboard.py` — fetcha 4 trackers Watchboard (global-recession-risk, sheinbaum-presidency, trump-presidencies, mexico) + KPIs del tracker global; solo stdlib Python (`urllib.request`); errores no-fatales por tracker; sale con código 1 solo si fallan todos
+- [x] `.github/workflows/update-watchboard.yml` — cron `'0 14 * * 1-5'` + `workflow_dispatch`; commitea `data/watchboard-events.json` si hubo cambio; dispara `deploy.yml` condicionalmente
+- [x] `data/watchboard-events.json` — 62 eventos, 14 KPIs bootstrap; estructura `{ updated, trackers: { slug: { events, kpis } } }`
+- [x] `app/src/data/watchboard-loader.ts` — schema Zod que descarta campos desconocidos; caché por módulo; exports tipados `getTrackerEvents()`, `getTrackerKpis()`, `getWatchboardUpdated()`
+- [x] `app/src/data/watchboard-rules.ts` — `applyRules()` determinista: 10 reglas, 4 ejes SFM (crédito/liquidez/mercado/macro), score de impacto 1-5
+- [x] `app/src/components/noticias/NoticiaCard.tsx` — card con badge de impacto, eje, fuente y fecha; categorías: economic/political/trade/market/other
+- [x] `app/src/components/noticias/NoticiasFeed.tsx` — acepta `initialItems` (build-time); solo estado cliente: `activeCategory` para filtro por pills
+- [x] `app/src/components/noticias/ContextoBanda.tsx` — acepta `rawKpis` (build-time); selecciona KPIs por keywords (Fed Funds, PCE, PIB EE.UU., arancel); párrafo resumen en español sin negritas; grid 2-col compacto
+- [x] `app/src/pages/macro/noticias.astro` — carga `getTrackerEvents` + `getTrackerKpis` en build-time; aplica `applyRules`; ordena desc, max 40 items
+- [x] `ThemeToggle.tsx` — `client:only="react"` en Sidebar (con etiqueta) y Header (icon-only `lg:hidden`); `html.light` CSS vars en `global.css`; anti-FOUC inline script en `Layout.astro`; `localStorage['sfm-theme']`
+- [x] Header sub-nav móvil — strip `lg:hidden` en `Header.astro`: detecta `isMacro` / `isInstituciones`, renderiza pills con regex match; accesible con `role="tablist"` / `aria-selected`
+
+### Sprint M6 — cutover (ver `cutover.md`)
+
+Solo cuando M1–M5 estén completos y Playwright valide paridad pixel-perfect en las 9 charts.
 
 ## Decisiones de stack ya tomadas
 

@@ -1,6 +1,6 @@
 # Roadmap SFM Monitor — Epics y Historias de Usuario
 
-**Última actualización:** 2026-06-11  
+**Última actualización:** 2026-06-11 (sesión)  
 **Versión en producción:** v0.2.0-dev (Astro app reemplazó el `index.html` via `deploy.yml`)  
 **Autora:** Ingrid Pamela Ruiz Puga · Co-autor blueprint: Artemio Padilla
 
@@ -8,7 +8,7 @@
 
 ## Resumen ejecutivo
 
-SFM Monitor está en producción con el stack Astro 5 + React 19. El cutover formal (tag v0.2.0, Zenodo DOI) está pendiente de confirmación. El dashboard cubre las 5 pestañas con datos automáticos (Banxico + INEGI vía GitHub Actions) y datos CNBV manuales mensuales. El siguiente foco es explotar al máximo las fuentes que ya corren automáticamente y habilitar filtros combinados banco × cartera en Instituciones.
+SFM Monitor está en producción con el stack Astro 5 + React 19. El cutover formal (tag v0.2.0, Zenodo DOI) está pendiente de confirmación. El dashboard cubre las 5 pestañas con datos automáticos (Banxico + INEGI vía GitHub Actions) y datos CNBV manuales mensuales. La sección Macro tiene sub-ruta "Noticias & Impacto" operativa con pipeline Watchboard build-time, panel de contexto macroeconómico y filtro por categoría. La app tiene modo claro/oscuro persistente con toggle en sidebar y header.
 
 ### Estado de gates
 
@@ -102,6 +102,9 @@ Serie 444775 en pipeline. Línea punteada en `DesempleoChart.tsx`. KpiCard en Ma
 ### US-314 — Íconos PWA reales ✅
 Íconos 192/512/maskable/apple-touch reemplazan placeholders 1×1.
 
+### US-315 — Pipeline Watchboard build-time ✅ 2026-06-11
+`scripts/fetch-watchboard.py` fetcha 4 trackers (global-recession-risk, sheinbaum-presidency, trump-presidencies, mexico) + KPIs vía API pública Watchboard. `.github/workflows/update-watchboard.yml` corre cron L-V 14:00 UTC, commitea `data/watchboard-events.json` si hubo cambios, dispara `deploy.yml`. `app/src/data/watchboard-loader.ts` con schema Zod + caché por módulo. NoticiasFeed refactorizado: zero fetches en cliente, acepta `initialItems` build-time. ContextoBanda acepta `rawKpis` build-time.
+
 ---
 
 ## Epic 4 — Instituciones: filtros combinados banco × cartera
@@ -144,6 +147,8 @@ Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) visibles en vista "P
 | US-503 | Permalinks con nuqs (estado en URL) | 🔴 Pendiente | M |
 | US-504 | Embeds iframes responsive | 🔴 Pendiente | M |
 | US-505 | Selector rango fechas 1A/3A/5A/Máx universal | 🔶 FX/Tasa/Inflación OK · resto pendiente | S |
+| US-506 | Sub-nav móvil en Header para Macro e Instituciones | ✅ 2026-06-11 — strip `lg:hidden` en Header con regex match por ruta | S |
+| US-507 | Modo claro / oscuro persistente | ✅ 2026-06-11 — `ThemeToggle.tsx` (client:only react) en Sidebar + Header icon-only; `html.light` CSS vars override; anti-FOUC inline script en `<head>`; `localStorage['sfm-theme']` | S |
 
 ---
 
@@ -157,7 +162,7 @@ Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) visibles en vista "P
 | US-604 | Credit-to-GDP gap metodología BIS | 🔴 | L |
 | US-605 | Índice de stress financiero propio (CISS) | 🔴 Requiere validación Pame | XL |
 | US-606 | ICAP + LCR/NSFR desde reportes CNBV manuales | 🔴 Requiere descarga CNBV | M |
-| US-607 | Noticias & Impacto — decisiones editoriales primero | 🔴 | M (investigación) |
+| US-607 | Noticias & Impacto — página `/macro/noticias` | ✅ 2026-06-11 — feed Watchboard (4 trackers), `applyRules()` 10 reglas 4 ejes SFM, `NoticiaCard` con badge de impacto, `ContextoBanda` con KPIs macroeconómicos en español + párrafo resumen | M |
 
 ---
 
@@ -172,4 +177,4 @@ Pills de cartera (Total/Comercial/Consumo/Vivienda/Tarjeta) visibles en vista "P
 
 ---
 
-*Actualizado: 2026-06-10*
+*Actualizado: 2026-06-11*

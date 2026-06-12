@@ -15,6 +15,7 @@ El repo ya tiene `data/sfm-data.json` con la siguiente cobertura:
 | Inflación | INPC general, subyacente, no subyacente | Banxico SIE | ✅ | ✅ Home |
 | Macro INEGI | IGAE (historia completa desde pipeline 2026-06-11), PIB (trimestral), desempleo, subocupación, informalidad, salario mínimo | INEGI BIE + STPS | ✅ (series 736181+737370 merged) | ✅ Macro |
 | Macro Banxico | Remesas familiares (22 meses, SE27803) | Banxico SIE | ✅ | ✅ KpiCard + RemesasChart (2026-06-11) |
+| Noticias & Contexto | Eventos macro/político/comercial + KPIs globales (4 trackers Watchboard) | Watchboard API (CORS *, CDN) | ✅ GitHub Actions diario L-V 14:00 UTC — `update-watchboard.yml` | ✅ Macro/Noticias — `NoticiasFeed` + `ContextoBanda` (2026-06-11) |
 | Crédito Banca Múltiple | IMOR/IMORA/ICOR/ROA/ROE por cartera y 62 bancos · MIF · Quitas · EPRC · IFRS9 stages · Crecimiento cartera | CNBV CSV sh_datos_40 + R12A | ⚠️ Manual mensual | ✅ Instituciones/Banca Múltiple |
 | SoFiPOs | IMOR por cartera, IMORA, ROA, ROE (123 meses) · por entidad | CNBV Excel | ⚠️ Manual mensual | ✅ Instituciones/SoFiPOs (ROE sin mostrar) |
 | Histórico largo | FX desde 1994, Inflación desde 2000, IMOR desde 2000 | Banxico + CNBV | ⚠️ Estático en JSON | ✅ |
@@ -336,4 +337,4 @@ Solo cuando México esté bien afinado. Primero que todo funcione en casa.
 
 ---
 
-*Actualizado: 2026-06-10*
+*Actualizado: 2026-06-11*

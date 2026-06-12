@@ -148,15 +148,21 @@ sites:
 ```
 GitHub Actions (cron)
        │
-       ├── fetchers/banxico.py      → data/series_banxico.json
-       ├── fetchers/cnbv.py         → data/cnbv_banca_multiple.json
-       ├── fetchers/cnbv_sofipos.py → data/cnbv_sofipos.json
-       └── pipeline.py              → data/index.json (manifest + hashes)
+       ├── .github/workflows/update-data.yml      (L-V 8am CDMX)
+       │     └── update-sfm-data.py → data/sfm-data.json
+       │
+       ├── .github/workflows/update-watchboard.yml  (L-V 14:00 UTC) ✅ 2026-06-11
+       │     └── scripts/fetch-watchboard.py → data/watchboard-events.json
+       │           4 trackers: global-recession-risk, sheinbaum-presidency,
+       │                        trump-presidencies, mexico
+       │           + KPIs del tracker global-recession-risk
+       │
+       └── (futuro) fetchers/cnbv.py → data/cnbv_banca_multiple.json
                                            │
                                      git commit & push
                                            │
                              GitHub Pages sirve los JSONs
-                             con brotli (~50-150KB en wire)
+                             Astro los lee en build-time (cero fetch en cliente)
 ```
 
 ### 1.1 Ampliar Banxico (fácil — misma API)
@@ -290,6 +296,12 @@ Fuentes gratuitas priorizadas:
 | DBnomics | Agregador de todos los anteriores | `pip install dbnomics` |
 
 **Advertencia de comparabilidad en cada chart:** IMOR México (IFRS9 Stage 3) ≠ NPL ratio EBA ≠ CECL US — nota metodológica visible obligatoria.
+
+---
+
+## Tema visual — Modo claro/oscuro ✅ 2026-06-11
+
+`ThemeToggle.tsx` (`client:only="react"`) en Sidebar (icon + label) y Header (icon-only, `lg:hidden`). Preferencia en `localStorage['sfm-theme']`. Override CSS en `html.light { ... }` antes del bloque `html {}` en `global.css`. Anti-FOUC: script `is:inline` en `<head>` de `Layout.astro` aplica la clase antes del primer paint.
 
 ---
 
