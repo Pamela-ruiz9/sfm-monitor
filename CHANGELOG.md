@@ -12,6 +12,16 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### feat(app): API pública estática v1 — endpoints JSON build-time (2026-06-11)
+- **`src/pages/api/v1/index.json.ts`** — discovery endpoint: lista de endpoints, fuente, licencia, cita DOI.
+- **`src/pages/api/v1/snapshot.json.ts`** — snapshot ligero: todos los valores actuales + score global. Equivalente al KPI endpoint de Watchboard.
+- **`src/pages/api/v1/score.json.ts`** — score compuesto completo con subíndices y KPIs normalizados.
+- **`src/pages/api/v1/credito.json.ts`** — series históricas de crédito (IMOR, IMORA, ICOR, ROA, ROE, carteras) + actuals.
+- **`src/pages/api/v1/macro.json.ts`** — series de FX, tasa Banxico, inflación, IGAE, PIB, desempleo, remesas, reservas.
+- **`src/pages/api/v1/sofipos.json.ts`** — series SoFiPOs + última observación.
+- Todos con `Access-Control-Allow-Origin: *` y `Cache-Control: public, max-age=3600`.
+- Generados como archivos estáticos en `dist/api/v1/` en cada deploy diario.
+
 ### feat(app): Score Global del Sistema — índice compuesto de riesgo sistémico (2026-06-11)
 - **`app/src/data/score.ts`** — módulo puro `computeScore(data: SfmData): SfmScore`. 8 KPIs: IMOR/IMORA/ICOR (percentil rolling), ROA/ROE (percentil rolling invertido), FX (percentil rolling 390 obs), inflación (distancia al objetivo 3%), tasa real vs r* neutral 2.5%. Sub-índices: S_crédito 50%, S_rentabilidad 30%, S_macro 20%. 5 bandas de color (Riesgo Bajo → Riesgo Alto). Helper `normSeriesCapped` para ICOR (cap ×20).
 - **`app/src/components/HeroScore.astro`** — reemplaza lógica hardcodeada con `computeScore`; nueva UI: h1 colorizado + etiqueta de período, 3 barras de progreso (Crédito/Rentabilidad/Macro), score numérico, link a `/metodologia#score-global`.
