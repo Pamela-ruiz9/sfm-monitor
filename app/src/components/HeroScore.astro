@@ -19,6 +19,7 @@ function formatPeriodo(periodo: string): string {
 }
 
 const periodoLabel = formatPeriodo(score.periodo);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 function barWidth(val: number): number {
   return Math.min(Math.round(val * 100), 100);
@@ -101,7 +102,7 @@ function barWidth(val: number): number {
       )
     }
     <a
-      href="/metodologia#score-global"
+      href={`${base}/metodologia#score-global`}
       class="text-[11px] text-(--color-accent) hover:underline">
       &#x2197; Metodologia
     </a>
