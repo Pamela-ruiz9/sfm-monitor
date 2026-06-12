@@ -48,8 +48,8 @@ export default defineConfig({
         // que ocurre cuando el SW viejo cachea assets con hash diferente al nuevo build.
         skipWaiting: true,
         clientsClaim: true,
-        // instituciones/index.html > 2 MiB por datos CNBV inlineados — sube límite a 5 MiB
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        // banca-multiple/index.html > 9 MiB (62 bancos × 304 meses × 24 series) — sube límite a 12 MiB
+        maximumFileSizeToCacheInBytes: 12 * 1024 * 1024,
         globPatterns: ['**/*.{js,css,html,woff2,svg,png,ico}'],
         runtimeCaching: [
           {
