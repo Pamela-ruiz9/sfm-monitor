@@ -1,5 +1,6 @@
 ---
 import SfmLogo from '~/components/shell/SfmLogo.astro';
+import { ThemeToggle } from '~/components/shell/ThemeToggle';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname;
@@ -37,7 +38,7 @@ const subnav = isMacro ? MACRO_SUBNAV : isInstituciones ? INST_SUBNAV : null;
       </span>
     </a>
 
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2">
       <button
         type="button"
         data-cmdk-trigger
@@ -48,6 +49,10 @@ const subnav = isMacro ? MACRO_SUBNAV : isInstituciones ? INST_SUBNAV : null;
           ⌘K
         </kbd>
       </button>
+      <!-- Tema: visible en móvil (desktop lo maneja el sidebar) -->
+      <div class="lg:hidden">
+        <ThemeToggle iconOnly={true} client:only="react" />
+      </div>
     </div>
   </div>
 

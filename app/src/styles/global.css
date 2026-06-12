@@ -42,6 +42,25 @@
   }
 }
 
+/* Light theme overrides — applied via html.light class */
+html.light {
+  color-scheme: light;
+  --color-bg: #ffffff;
+  --color-bg-elev: #f6f8fa;
+  --color-bg-elev-2: #eaeef2;
+  --color-border: #d0d7de;
+  --color-border-soft: #d8dee4;
+  --color-text: #1f2328;
+  --color-text-dim: #636c76;
+  --color-text-mute: #848d97;
+  --color-accent-soft: rgba(245, 121, 60, 0.12);
+  --color-accent-knock: #fff3ed;
+  --color-gold: #7d6109;
+  --color-green: #1a7f37;
+  --color-yellow: #9a6700;
+  --color-red: #cf222e;
+}
+
 html {
   font-family: var(--font-sans);
   font-feature-settings: 'tnum', 'lnum', 'ss01', 'cv11';

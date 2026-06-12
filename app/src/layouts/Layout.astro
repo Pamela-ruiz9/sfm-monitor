@@ -66,6 +66,15 @@ const goatCounterUrl = import.meta.env.PUBLIC_GOATCOUNTER_URL as string | undefi
       rel="stylesheet"
     />
 
+    <!-- Anti-FOUC: apply saved theme before first paint -->
+    <script is:inline>
+      (function () {
+        if (localStorage.getItem('sfm-theme') === 'light') {
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
+
     {jsonLd && (
       <script
         is:inline

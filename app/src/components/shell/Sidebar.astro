@@ -2,6 +2,7 @@
 import { Home, Thermometer, Building2, TrendingUp, BookOpen } from 'lucide-react';
 import SfmLogo from '~/components/shell/SfmLogo.astro';
 import { SidebarToggle } from '~/components/shell/SidebarToggle';
+import { ThemeToggle } from '~/components/shell/ThemeToggle';
 import { DataFreshnessBadge } from '~/components/DataFreshnessBadge';
 import { loadSfmData } from '~/data/loader';
 
@@ -215,6 +216,11 @@ const SUBNAV = [
       })
     }
   </nav>
+
+  <!-- Theme toggle -->
+  <div class="py-1 border-t border-(--color-border-soft)">
+    <ThemeToggle client:only="react" />
+  </div>
 
   <!-- Data freshness badge at bottom -->
   <div class="sidebar-badge px-3 py-3 border-t border-(--color-border-soft)">
