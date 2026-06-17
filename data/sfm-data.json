@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-06-16",
+  "ultima_actualizacion": "2026-06-17",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
@@ -1576,7 +1576,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-06-16",
+        "fecha": "2024-06-17",
         "valor": 11.0
       },
       {
@@ -4827,8 +4827,8 @@
       ]
     },
     "udis": {
-      "actual": 8.82533,
-      "fecha": "2026-06-16"
+      "actual": 8.824562,
+      "fecha": "2026-06-17"
     },
     "salario_minimo": {
       "actual": 315.04,
