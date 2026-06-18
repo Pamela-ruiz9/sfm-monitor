@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-06-17",
+  "ultima_actualizacion": "2026-06-18",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "17.2023",
-    "fecha": "2026-06-16",
+    "actual": "17.1892",
+    "fecha": "2026-06-17",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1567,7 +1567,7 @@
       },
       {
         "mes": "2026-06",
-        "valor": 17.2023
+        "valor": 17.1892
       }
     ]
   },
@@ -1576,7 +1576,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-06-17",
+        "fecha": "2024-06-18",
         "valor": 11.0
       },
       {
@@ -2946,10 +2946,6 @@
       "actual": 6.7458,
       "fecha": "2026-06-16",
       "historico": [
-        {
-          "fecha": "2024-06-17",
-          "valor": 11.2475
-        },
         {
           "fecha": "2024-06-18",
           "valor": 11.245
@@ -4827,8 +4823,8 @@
       ]
     },
     "udis": {
-      "actual": 8.824562,
-      "fecha": "2026-06-17"
+      "actual": 8.823794,
+      "fecha": "2026-06-18"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5070,89 +5066,89 @@
       ]
     },
     "pib": {
-      "actual": 1.7864,
-      "fecha": "2025-Q4",
-      "variacion_anual": 1.7864,
+      "actual": 0.2423,
+      "fecha": "2026-Q1",
+      "variacion_anual": 0.2423,
       "historico": [
         {
-          "fecha": "2021-Q1",
-          "valor": -2.5953
-        },
-        {
           "fecha": "2021-Q2",
-          "valor": 22.7021
+          "valor": 22.7018
         },
         {
           "fecha": "2021-Q3",
-          "valor": 5.1311
+          "valor": 5.1313
         },
         {
           "fecha": "2021-Q4",
-          "valor": 1.8926
+          "valor": 1.8929
         },
         {
           "fecha": "2022-Q1",
-          "valor": 2.625
+          "valor": 2.6234
         },
         {
           "fecha": "2022-Q2",
-          "valor": 2.9069
+          "valor": 2.9063
         },
         {
           "fecha": "2022-Q3",
-          "valor": 4.6738
+          "valor": 4.674
         },
         {
           "fecha": "2022-Q4",
-          "valor": 4.6022
+          "valor": 4.6042
         },
         {
           "fecha": "2023-Q1",
-          "valor": 3.7928
+          "valor": 3.7986
         },
         {
           "fecha": "2023-Q2",
-          "valor": 3.2752
+          "valor": 3.2836
         },
         {
           "fecha": "2023-Q3",
-          "valor": 3.2986
+          "valor": 3.3159
         },
         {
           "fecha": "2023-Q4",
-          "valor": 2.1156
+          "valor": 2.1462
         },
         {
           "fecha": "2024-Q1",
-          "valor": 1.6975
+          "valor": 1.7701
         },
         {
           "fecha": "2024-Q2",
-          "valor": 2.0678
+          "valor": 2.1794
         },
         {
           "fecha": "2024-Q3",
-          "valor": 1.401
+          "valor": 1.5169
         },
         {
           "fecha": "2024-Q4",
-          "valor": 0.2673
+          "valor": 0.4033
         },
         {
           "fecha": "2025-Q1",
-          "valor": 0.5631
+          "valor": 0.6137
         },
         {
           "fecha": "2025-Q2",
-          "valor": -0.056
+          "valor": -0.1434
         },
         {
           "fecha": "2025-Q3",
-          "valor": -0.0523
+          "valor": -0.2065
         },
         {
           "fecha": "2025-Q4",
-          "valor": 1.7864
+          "valor": 1.7217
+        },
+        {
+          "fecha": "2026-Q1",
+          "valor": 0.2423
         }
       ]
     },
