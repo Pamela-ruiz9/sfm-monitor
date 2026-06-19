@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-06-18",
+  "ultima_actualizacion": "2026-06-19",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "17.1892",
-    "fecha": "2026-06-17",
+    "actual": "17.3688",
+    "fecha": "2026-06-18",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1567,7 +1567,7 @@
       },
       {
         "mes": "2026-06",
-        "valor": 17.1892
+        "valor": 17.3688
       }
     ]
   },
@@ -1576,7 +1576,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-06-18",
+        "fecha": "2024-06-19",
         "valor": 11.0
       },
       {
@@ -2946,10 +2946,6 @@
       "actual": 6.7458,
       "fecha": "2026-06-16",
       "historico": [
-        {
-          "fecha": "2024-06-18",
-          "valor": 11.245
-        },
         {
           "fecha": "2024-06-19",
           "valor": 11.243
@@ -4401,10 +4397,6 @@
       "fecha": "2026-06-16",
       "historico": [
         {
-          "fecha": "2024-06-18",
-          "valor": 10.95
-        },
-        {
           "fecha": "2024-06-25",
           "valor": 10.88
         },
@@ -4823,8 +4815,8 @@
       ]
     },
     "udis": {
-      "actual": 8.823794,
-      "fecha": "2026-06-18"
+      "actual": 8.823026,
+      "fecha": "2026-06-19"
     },
     "salario_minimo": {
       "actual": 315.04,
