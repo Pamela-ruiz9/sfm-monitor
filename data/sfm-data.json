@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-06-23",
+  "ultima_actualizacion": "2026-06-24",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "17.3480",
-    "fecha": "2026-06-22",
+    "actual": "17.5505",
+    "fecha": "2026-06-23",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1567,7 +1567,7 @@
       },
       {
         "mes": "2026-06",
-        "valor": 17.348
+        "valor": 17.5505
       }
     ]
   },
@@ -1576,7 +1576,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-06-23",
+        "fecha": "2024-06-24",
         "valor": 11.0
       },
       {
@@ -4394,7 +4394,7 @@
     },
     "cetes_28d": {
       "actual": 6.28,
-      "fecha": "2026-06-16",
+      "fecha": "2026-06-23",
       "historico": [
         {
           "fecha": "2024-06-25",
@@ -4811,12 +4811,16 @@
         {
           "fecha": "2026-06-16",
           "valor": 6.28
+        },
+        {
+          "fecha": "2026-06-23",
+          "valor": 6.28
         }
       ]
     },
     "udis": {
-      "actual": 8.819955,
-      "fecha": "2026-06-23"
+      "actual": 8.819187,
+      "fecha": "2026-06-24"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5565,7 +5569,7 @@
     },
     "tasa_real_cetes": {
       "actual": 2.34,
-      "fecha": "2026-06-16"
+      "fecha": "2026-06-23"
     }
   },
   "credito": {
