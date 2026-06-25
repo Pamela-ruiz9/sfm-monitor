@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-06-24",
+  "ultima_actualizacion": "2026-06-25",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "17.5505",
-    "fecha": "2026-06-23",
+    "actual": "17.6213",
+    "fecha": "2026-06-24",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1567,7 +1567,7 @@
       },
       {
         "mes": "2026-06",
-        "valor": 17.5505
+        "valor": 17.6213
       }
     ]
   },
@@ -1576,7 +1576,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-06-24",
+        "fecha": "2024-06-25",
         "valor": 11.0
       },
       {
@@ -2943,11 +2943,11 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7559,
-      "fecha": "2026-06-23",
+      "actual": 6.7458,
+      "fecha": "2026-06-25",
       "historico": [
         {
-          "fecha": "2024-06-24",
+          "fecha": "2024-06-25",
           "valor": 11.245
         },
         {
@@ -4389,6 +4389,10 @@
         {
           "fecha": "2026-06-23",
           "valor": 6.7559
+        },
+        {
+          "fecha": "2026-06-25",
+          "valor": 6.7458
         }
       ]
     },
@@ -4819,8 +4823,8 @@
       ]
     },
     "udis": {
-      "actual": 8.819187,
-      "fecha": "2026-06-24"
+      "actual": 8.81842,
+      "fecha": "2026-06-25"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5149,13 +5153,9 @@
       ]
     },
     "desempleo": {
-      "actual": 2.4588,
-      "fecha": "2026-04",
+      "actual": 2.787,
+      "fecha": "2026-05",
       "historico": [
-        {
-          "fecha": "2024-05",
-          "valor": 2.4765
-        },
         {
           "fecha": "2024-06",
           "valor": 2.7349
@@ -5247,17 +5247,17 @@
         {
           "fecha": "2026-04",
           "valor": 2.4588
+        },
+        {
+          "fecha": "2026-05",
+          "valor": 2.787
         }
       ]
     },
     "subocupacion": {
-      "actual": 12.833,
-      "fecha": "2026-04",
+      "actual": 13.1093,
+      "fecha": "2026-05",
       "historico": [
-        {
-          "fecha": "2024-05",
-          "valor": 12.1974
-        },
         {
           "fecha": "2024-06",
           "valor": 12.4345
@@ -5349,6 +5349,10 @@
         {
           "fecha": "2026-04",
           "valor": 12.833
+        },
+        {
+          "fecha": "2026-05",
+          "valor": 13.1093
         }
       ]
     },
@@ -5447,13 +5451,9 @@
       ]
     },
     "informalidad": {
-      "actual": 33.5394,
-      "fecha": "2026-04",
+      "actual": 34.2935,
+      "fecha": "2026-05",
       "historico": [
-        {
-          "fecha": "2024-05",
-          "valor": 29.8174
-        },
         {
           "fecha": "2024-06",
           "valor": 30.3396
@@ -5545,6 +5545,10 @@
         {
           "fecha": "2026-04",
           "valor": 33.5394
+        },
+        {
+          "fecha": "2026-05",
+          "valor": 34.2935
         }
       ]
     },
