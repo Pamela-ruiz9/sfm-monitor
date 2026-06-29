@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-06-26",
+  "ultima_actualizacion": "2026-06-29",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "17.5260",
-    "fecha": "2026-06-25",
+    "actual": "17.4700",
+    "fecha": "2026-06-26",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1567,7 +1567,7 @@
       },
       {
         "mes": "2026-06",
-        "valor": 17.526
+        "valor": 17.47
       }
     ]
   },
@@ -1576,7 +1576,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-06-26",
+        "fecha": "2024-06-29",
         "valor": 11.0
       },
       {
@@ -2733,10 +2733,6 @@
       "fecha": "2026-06-19",
       "historico": [
         {
-          "fecha": "2025-06-27",
-          "valor": 241480.1
-        },
-        {
           "fecha": "2025-07-04",
           "valor": 241880.1
         },
@@ -2943,21 +2939,9 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7458,
-      "fecha": "2026-06-25",
+      "actual": 6.7559,
+      "fecha": "2026-06-29",
       "historico": [
-        {
-          "fecha": "2024-06-26",
-          "valor": 11.245
-        },
-        {
-          "fecha": "2024-06-27",
-          "valor": 11.2449
-        },
-        {
-          "fecha": "2024-06-28",
-          "valor": 11.24
-        },
         {
           "fecha": "2024-07-01",
           "valor": 11.2445
@@ -4393,6 +4377,10 @@
         {
           "fecha": "2026-06-25",
           "valor": 6.7458
+        },
+        {
+          "fecha": "2026-06-29",
+          "valor": 6.7559
         }
       ]
     },
@@ -4819,8 +4807,8 @@
       ]
     },
     "udis": {
-      "actual": 8.817781,
-      "fecha": "2026-06-26"
+      "actual": 8.815864,
+      "fecha": "2026-06-29"
     },
     "salario_minimo": {
       "actual": 315.04,
