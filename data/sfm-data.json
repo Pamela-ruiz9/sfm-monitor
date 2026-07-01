@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-06-30",
+  "ultima_actualizacion": "2026-07-01",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "17.5053",
-    "fecha": "2026-06-29",
+    "actual": "17.4693",
+    "fecha": "2026-06-30",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1567,7 +1567,7 @@
       },
       {
         "mes": "2026-06",
-        "valor": 17.5053
+        "valor": 17.4693
       }
     ]
   },
@@ -1576,7 +1576,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-06-30",
+        "fecha": "2024-07-01",
         "valor": 11.0
       },
       {
@@ -2943,8 +2943,8 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7559,
-      "fecha": "2026-06-29",
+      "actual": 6.7659,
+      "fecha": "2026-07-01",
       "historico": [
         {
           "fecha": "2024-07-01",
@@ -4385,12 +4385,16 @@
         {
           "fecha": "2026-06-29",
           "valor": 6.7559
+        },
+        {
+          "fecha": "2026-07-01",
+          "valor": 6.7659
         }
       ]
     },
     "cetes_28d": {
-      "actual": 6.28,
-      "fecha": "2026-06-23",
+      "actual": 6.3,
+      "fecha": "2026-06-30",
       "historico": [
         {
           "fecha": "2024-07-02",
@@ -4807,12 +4811,16 @@
         {
           "fecha": "2026-06-23",
           "valor": 6.28
+        },
+        {
+          "fecha": "2026-06-30",
+          "valor": 6.3
         }
       ]
     },
     "udis": {
-      "actual": 8.815225,
-      "fecha": "2026-06-30"
+      "actual": 8.814586,
+      "fecha": "2026-07-01"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5345,96 +5353,100 @@
       ]
     },
     "remesas": {
-      "actual": 4978.051408,
-      "fecha": "2026-04",
+      "actual": 5611.0024,
+      "fecha": "2026-05",
       "historico": [
         {
           "fecha": "2024-07",
-          "valor": 5612.890931
+          "valor": 5612.8909
         },
         {
           "fecha": "2024-08",
-          "valor": 6110.278001
+          "valor": 6110.278
         },
         {
           "fecha": "2024-09",
-          "valor": 5386.941772
+          "valor": 5386.9418
         },
         {
           "fecha": "2024-10",
-          "valor": 5765.495879
+          "valor": 5765.4959
         },
         {
           "fecha": "2024-11",
-          "valor": 5469.787521
+          "valor": 5469.7875
         },
         {
           "fecha": "2024-12",
-          "valor": 5258.990736
+          "valor": 5258.9907
         },
         {
           "fecha": "2025-01",
-          "valor": 4697.875942
+          "valor": 4697.8759
         },
         {
           "fecha": "2025-02",
-          "valor": 4490.899527
+          "valor": 4490.8995
         },
         {
           "fecha": "2025-03",
-          "valor": 5190.678501
+          "valor": 5190.6785
         },
         {
           "fecha": "2025-04",
-          "valor": 4801.096778
+          "valor": 4801.0968
         },
         {
           "fecha": "2025-05",
-          "valor": 5407.462931
+          "valor": 5407.4629
         },
         {
           "fecha": "2025-06",
-          "valor": 5253.49182
+          "valor": 5253.4918
         },
         {
           "fecha": "2025-07",
-          "valor": 5408.248623
+          "valor": 5408.2486
         },
         {
           "fecha": "2025-08",
-          "valor": 5653.710437
+          "valor": 5653.7104
         },
         {
           "fecha": "2025-09",
-          "valor": 5280.137437
+          "valor": 5280.1374
         },
         {
           "fecha": "2025-10",
-          "valor": 5710.235988
+          "valor": 5710.236
         },
         {
           "fecha": "2025-11",
-          "valor": 5193.638699
+          "valor": 5193.6387
         },
         {
           "fecha": "2025-12",
-          "valor": 5384.222296
+          "valor": 5384.2223
         },
         {
           "fecha": "2026-01",
-          "valor": 4656.526805
+          "valor": 4656.5268
         },
         {
           "fecha": "2026-02",
-          "valor": 4542.078132
+          "valor": 4542.0781
         },
         {
           "fecha": "2026-03",
-          "valor": 5499.823695
+          "valor": 5499.8237
         },
         {
           "fecha": "2026-04",
-          "valor": 4978.051408
+          "valor": 4978.0514
+        },
+        {
+          "fecha": "2026-05",
+          "valor": 5611.0024
         }
       ]
     },
@@ -5560,8 +5572,8 @@
       "fecha": "2026-05-08"
     },
     "tasa_real_cetes": {
-      "actual": 2.34,
-      "fecha": "2026-06-23"
+      "actual": 2.36,
+      "fecha": "2026-06-30"
     }
   },
   "credito": {
