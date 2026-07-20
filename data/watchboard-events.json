@@ -1,8 +1,404 @@
 {
-  "updated": "2026-07-17T15:09:42Z",
+  "updated": "2026-07-20T15:46:45Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "section-122-cliff-8-days-state-of-play-july16-2026",
+          "date": "2026-07-16",
+          "title": "Section 122 Tariff Cliff 8 Days Out — No Congressional Action Reported; Section 301 Fallback Timing Still in Doubt",
+          "type": "policy",
+          "detail": "With the Section 122 tariff authority set to expire July 24 — 8 days away — no Congressional action has been reported and none is expected; an extension would require 60 Senate votes, and there is no indication Congress plans to act. The administration's intended fallback, Section 301 tariffs on 60 economies over forced-labor practices, remained in the proposal/hearing stage as of July 7, with a 30-day pre-effect notice requirement that puts its readiness by July 24 in serious doubt — raising the prospect of a tariff-revenue coverage gap at the cliff date. Separately, the next FOMC meeting is scheduled for July 28-29 — a non-SEP meeting with no new dot plot — where consensus expects another hold at 3.50-3.75%. China's Politburo meeting, expected in late July, is being watched for fresh stimulus signals after the Q2 GDP miss.",
+          "sources": [
+            {
+              "name": "Dorsey & Whitney — New Section 301 Tariffs Client Alert",
+              "tier": 3,
+              "url": "https://www.dorsey.com/newsresources/publications/client-alerts/2026/6/new-section-301-tariffs",
+              "pole": "western"
+            },
+            {
+              "name": "Federal Reserve — FOMC Meeting Calendars",
+              "tier": 1,
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — Fed Hike Interest Rates July",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/economy/policy/articles/fed-hike-interest-rates-july-060507499.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "china-june-activity-data-stimulus-expectations-july15-2026",
+          "date": "2026-07-15",
+          "title": "China June Activity Data Mixed — Industrial Production Beats, Retail Sales Soft, Stimulus Speculation Builds",
+          "type": "economic",
+          "detail": "China's June 2026 activity data showed industrial production up 5.3% YoY, beating the 4.7% forecast, while retail sales rose just 1.0% YoY — a soft print. Combined with the Q2 GDP miss reported a day earlier, the mixed data fueled market expectations of fresh stimulus measures at the Communist Party's Politburo meeting expected in late July.",
+          "sources": [
+            {
+              "name": "CNBC — China GDP, Retail Sales, Investment June 2026",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/07/15/china-gdp-retail-sales-investment-june-.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "china-q2-2026-gdp-miss-july14-2026",
+          "date": "2026-07-14",
+          "title": "China Q2 2026 GDP Grows 4.3% YoY, Missing Forecast — Slowest Pace in 3.5 Years",
+          "type": "economic",
+          "detail": "China's Q2 2026 GDP grew 4.3% YoY, missing the 4.5% forecast and down sharply from 5.0% in Q1 — the slowest pace of growth in roughly 3.5 years. Quarter-on-quarter growth was 0.9%. H1 2026 fixed-asset investment fell 5.7% YoY, with real estate investment down 18% YoY, underscoring the property sector's continued drag on the broader economy.",
+          "sources": [
+            {
+              "name": "CNN — China Q2 GDP, Export Economy",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/07/14/business/china-q2-gdp-export-economy-intl-hnk",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — China GDP, Retail Sales, Investment June 2026",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/07/15/china-gdp-retail-sales-investment-june-.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "june-2026-cpi-cools-35pct-july14-2026",
+          "date": "2026-07-14",
+          "title": "June 2026 US CPI Cools to 3.5% YoY as Energy Prices Tumble, Confirming Inflation Peak Passing",
+          "type": "economic",
+          "detail": "June 2026 CPI fell 0.4% MoM (vs. -0.2% expected), bringing the annual rate down to 3.5% from May's 4.2% (vs. 3.8% expected). Core CPI was flat MoM at 2.6% YoY (vs. 2.9% expected/prior). The energy index fell 5.7% MoM — the biggest monthly drop since April 2020 — though it remained up 15.7% YoY (gasoline +26.7% YoY), reflecting the lagged pass-through of the post-MOU Brent crash. Markets read the report as confirming that the inflation peak was passing: the S&P 500 closed +0.38% at 7,572.40, the Nasdaq +0.62% at 26,269.23, and the Dow +150 points (+0.29%) to 52,658.64.",
+          "sources": [
+            {
+              "name": "CNBC — Consumer Price Index Inflation Report June 2026",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/07/14/consumer-price-index-inflation-report-june-2026.html",
+              "pole": "western"
+            },
+            {
+              "name": "Blockonomi — June 2026 CPI Report, US Inflation Cools to 3.5%",
+              "tier": 3,
+              "url": "https://blockonomi.com/june-2026-cpi-report-u-s-inflation-cools-to-3-5-as-energy-costs-tumble/",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — Stock Market Today Live Updates",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/07/14/stock-market-today-live-updates.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "imf-july-2026-weo-update-july8-2026",
+          "date": "2026-07-08",
+          "title": "IMF July 2026 WEO Update: Global Growth 3.0%, Inflation Revised Up as Disinflation Stalls",
+          "type": "economic",
+          "detail": "The IMF's July 2026 World Economic Outlook Update projected global growth of 3.0% for 2026 and 3.4% for 2027 — roughly unchanged cumulatively from the April WEO, but down from the 2024-25 average of 3.5%. Global headline inflation was revised up to 4.7% as the IMF said the disinflation trend had 'stalled.' The Fund characterized risks as 'more balanced than in April,' reflecting the Iran deal's de-escalation, but flagged continued downside risk from renewed conflict or a financial-conditions repricing.",
+          "sources": [
+            {
+              "name": "International Monetary Fund — World Economic Outlook Update, July 2026",
+              "tier": 1,
+              "url": "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+              "pole": "international"
+            }
+          ]
+        },
+        {
+          "id": "ustr-section-301-hearing-timing-gap-july7-2026",
+          "date": "2026-07-07",
+          "title": "USTR Holds Section 301 Hearing — Timing Raises Doubt Section 301 Can Fully Backstop July 24 Section 122 Cliff",
+          "type": "trade",
+          "detail": "USTR held its public hearing on the proposed Section 301 forced-labor tariffs. Under standard rulemaking procedure, a final rule must be published at least 30 days before taking effect — meaning that even an expedited Section 301 rule may not be ready to fully replace Section 122 authority when it lapses on July 24, absent Congressional action. This raised the prospect of a coverage gap in tariff collection at the cliff date, a risk not previously priced into most tariff-revenue projections.",
+          "sources": [
+            {
+              "name": "Dorsey & Whitney — New Section 301 Tariffs Client Alert",
+              "tier": 3,
+              "url": "https://www.dorsey.com/newsresources/publications/client-alerts/2026/6/new-section-301-tariffs",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "section-301-comment-period-closes-july6-2026",
+          "date": "2026-07-06",
+          "title": "Public Comment Period Closes on Proposed Section 301 Forced-Labor Tariffs on 60 Economies",
+          "type": "trade",
+          "detail": "The public comment period closed on USTR's proposed Section 301 tariffs targeting 60 economies over forced-labor import practices, first proposed June 2 as the administration's legal fallback for when Section 122 tariff authority expires on July 24. Treasury yields were little changed on the day as investors looked ahead to the upcoming FOMC minutes release.",
+          "sources": [
+            {
+              "name": "International Economic Law and Policy Blog — Governments Make Their Case Against Section 301 Forced-Labor Tariffs",
+              "tier": 3,
+              "url": "https://ielp.worldtradelaw.net/2026/07/governments-make-their-case-against-section-301-forced-labor-tariffs/",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — US Treasury Yields, Investors Look Ahead to FOMC Meeting Minutes",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/07/06/us-treasury-yields-investors-look-ahead-to-fomc-meeting-minutesu.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "june-jobs-report-weak-nfp-57k-july2-2026",
+          "date": "2026-07-02",
+          "title": "June 2026 Jobs Report: NFP +57K, Sharp Slowdown From May; Unemployment Falls to 4.2% on Lower Participation",
+          "type": "economic",
+          "detail": "The June 2026 jobs report showed nonfarm payrolls up just 57,000, well below the roughly 113,000-115,000 consensus and a sharp slowdown from May's downwardly-revised +129,000. April and May were revised down a combined 74,000. The unemployment rate fell to 4.2% (vs. 4.3% expected), but largely because the labor-force participation rate dropped to 61.5% — the lowest since March 2021 — rather than from underlying strength. Average hourly earnings rose 0.3% to $37.64, up 3.5% YoY. Despite the weak headline, stocks edged higher into the July 4 holiday weekend, with the Dow closing at a fresh record.",
+          "sources": [
+            {
+              "name": "CNBC — Jobs Report June 2026",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/07/02/jobs-report-june-2026-.html",
+              "pole": "western"
+            },
+            {
+              "name": "247WallSt — Stock Market Live July 2 2026",
+              "tier": 3,
+              "url": "https://247wallst.com/investing/2026/07/02/stock-market-live-july-2-2026-sp-500-spy-flat-with-new-jobs-data/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "yen-40-year-low-despite-boj-hike-june30-2026",
+          "date": "2026-06-30",
+          "title": "Yen Falls to Fresh 40-Year Low Past 162/USD Despite BOJ Hike and Intervention",
+          "type": "market",
+          "detail": "The yen fell to a fresh roughly 40-year low, breaching 162 per US dollar — the weakest level since December 1986 — despite an estimated $72.5 billion in BOJ/Ministry of Finance FX interventions in late April-May and the June 16 rate hike to 1.00%. The move underscored that persistent yen weakness, and the associated carry-trade-unwind risk to global asset markets, had not been resolved by the rate hike alone.",
+          "sources": [
+            {
+              "name": "Real Investment Advice — The Yen at a 40-Year Low: Should You Care?",
+              "tier": 3,
+              "url": "https://realinvestmentadvice.com/resources/blog/the-yen-at-40-year-low-should-you-care/",
+              "pole": "western"
+            },
+            {
+              "name": "Japan Times — Yen Carry Trade Revives",
+              "tier": 2,
+              "url": "https://www.japantimes.co.jp/business/2026/06/15/markets/yen-carry-trade-revive/",
+              "pole": "eastern"
+            }
+          ]
+        },
+        {
+          "id": "h1-2026-stock-market-wrap-june30-2026",
+          "date": "2026-06-30",
+          "title": "S&P 500 Closes H1 2026 +9.6%, Best First Half Since 2020 Despite War and Rate Shocks",
+          "type": "market",
+          "detail": "The S&P 500 closed the first half of 2026 up 9.6%, the Nasdaq up 12.8%, and the Russell 2000 up roughly 22% — the small-cap index's best first half since 1991. The S&P notched 24 record closes and the Nasdaq 20 through the first half, despite the Iran war, the Section 122 tariff turmoil, and the June triple-central-bank-hike week. Brent crude, which peaked near $118 in April at the height of the war, traded near $73/barrel in early July — down roughly 40% from the war peak — as Morgan Stanley cut its Brent forecast to $90 for Q3 and $80 for Q4.",
+          "sources": [
+            {
+              "name": "CNN — Stock Market Up, Inflation, War",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/07/01/business/stock-market-up-inflation-war",
+              "pole": "western"
+            },
+            {
+              "name": "Capital.com — Oil Price Forecast",
+              "tier": 3,
+              "url": "https://capital.com/en-int/market-updates/oil-price-forecast-30-06-2026",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "investment-banks-upbeat-post-iran-deal-june29-2026",
+          "date": "2026-06-29",
+          "title": "Wall Street Banks Turn More Upbeat on Global Growth Following Iran Deal",
+          "type": "economic",
+          "detail": "Investment banks turned more optimistic on the global economic outlook in the weeks following the Iran deal. JPMorgan's chief economist wrote that the deal, cooling trade-war rhetoric, and a tech-capex surge were laying the groundwork for 'a period of strong and balanced global growth.' No specific revised numeric JPMorgan recession-probability figure was published alongside the commentary — the firm's most recent hard number remained its pre-deal estimate — but the tonal shift across major banks marked a meaningful change from the stagflation-trap narrative that had dominated the spring.",
+          "sources": [
+            {
+              "name": "Semafor — Investment Banks More Upbeat on Global Economy Following US-Iran Deal",
+              "tier": 3,
+              "url": "https://www.semafor.com/article/06/29/2026/investment-banks-more-upbeat-on-global-economy-following-us-iran-deal",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "may-pce-inflation-report-hot-june25-2026",
+          "date": "2026-06-25",
+          "title": "May 2026 PCE: Headline Inflation Hits 4.1% YoY, Highest Since April 2023",
+          "type": "economic",
+          "detail": "The May 2026 PCE report showed headline inflation at 4.1% YoY (+0.4% MoM) — the highest reading since April 2023 — while core PCE came in at 3.4% YoY, slightly above the 3.3% forecast. Personal income and personal spending each rose 0.7% MoM, and the personal saving rate held at just 3%. The hot print, released just over a week after Warsh's hawkish dot plot, reinforced the case for the Fed's projected 2026 hike and complicated the disinflation narrative even as the Iran-deal oil-price relief was working its way through the data.",
+          "sources": [
+            {
+              "name": "CNBC — PCE Inflation Report May 2026",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/06/25/pce-inflation-report-may-2026-.html",
+              "pole": "western"
+            },
+            {
+              "name": "CBS News — PCE Report May 2026, Federal Reserve Inflation",
+              "tier": 2,
+              "url": "https://www.cbsnews.com/news/pce-report-report-may-2026-federal-reserve-inflation/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "goldman-cuts-recession-probability-15pct-confirmed-june22-2026",
+          "date": "2026-06-22",
+          "title": "Goldman Sachs Confirms 12-Month US Recession Probability at 15%, Citing Iran Deal",
+          "type": "economic",
+          "detail": "Goldman Sachs formally cut its 12-month US recession probability to 15% (from roughly 20% pre-war), citing the signed Iran deal, improved labor-market resilience, lower gasoline prices following the Brent crash, and AI-driven equity wealth effects. Chief economist Jan Hatzius characterized 15% as the firm's 'long-term norm' baseline recession probability, effectively signaling that the acute war-driven risk premium embedded in prior estimates had been retired following the June 17 MOU signing.",
+          "sources": [
+            {
+              "name": "Yahoo Finance UK — Goldman Cuts US Recession Risk",
+              "tier": 2,
+              "url": "https://uk.finance.yahoo.com/news/goldman-cuts-u-recession-risk-121208991.html",
+              "pole": "western"
+            },
+            {
+              "name": "Prism News — Goldman Sachs Cuts US Recession Odds to 15% After Iran Peace",
+              "tier": 3,
+              "url": "https://www.prismnews.com/workplace/goldman-sachs/goldman-sachs-cuts-us-recession-odds-to-15-after-iran-peace",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "us-iran-geneva-talks-postponed-june19-2026",
+          "date": "2026-06-19",
+          "title": "Follow-On US-Iran Geneva Talks Abruptly Postponed",
+          "type": "political",
+          "detail": "Follow-on talks in Geneva, intended to advance the signed MOU toward a permanent peace deal, were abruptly postponed. The underlying ceasefire and Strait of Hormuz reopening held despite the postponement. Brent crude rose modestly on the news, though it remained well below its pre-MOU levels as the broader de-escalation trend stayed intact.",
+          "sources": [
+            {
+              "name": "CNBC — Oil Prices, WTI Brent Crude, US-Iran Deal, Strait of Hormuz Shipping Recovery",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/06/19/oil-prices-wti-brent-crude-us-iran-deal-strait-hormuz-shipping-recovery.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "fomc-warsh-first-meeting-hawkish-dot-plot-june17-2026",
+          "date": "2026-06-17",
+          "title": "Warsh's First FOMC Holds Rate at 3.50–3.75%; Hawkish Dot Plot Shows Median Hike, Not Cut",
+          "type": "policy",
+          "detail": "The FOMC under new Chair Kevin Warsh unanimously held the federal funds rate at 3.50-3.75% in his first meeting as Chair. The accompanying Summary of Economic Projections turned notably hawkish: the 2026 median dot rose to 3.8% from 3.4% in the March projections — implying a hike rather than a cut — with 9 of 18 members projecting at least one 2026 hike (6 of those projecting two or more). The Committee's 2026 PCE inflation forecast was raised to 3.6% from 2.7%. Warsh declined to submit his own dot, telling reporters he found the tool 'inconsistent with his views' on communicating policy intentions. The post-meeting statement was cut to roughly 130 words, down from 341 words in April — a marked change in Fed communication style under the new chair.",
+          "sources": [
+            {
+              "name": "Federal Reserve — FOMC Statement, June 17 2026",
+              "tier": 1,
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+              "pole": "western"
+            },
+            {
+              "name": "Federal Reserve — Summary of Economic Projections, June 2026",
+              "tier": 1,
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260617.htm",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — Fed Interest Rate Decision June 2026",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "us-iran-mou-signed-brent-crashes-june17-2026",
+          "date": "2026-06-17",
+          "title": "US-Iran MOU Formally Signed — Strait of Hormuz Reopens, Brent Crashes ~11%",
+          "type": "political",
+          "detail": "The US-Iran memorandum of understanding was formally signed and entered into force: Iran agreed to immediately reopen the Strait of Hormuz to commercial shipping, and the US agreed to lift its naval blockade of Iranian ports. The MOU sets up 60 days of follow-on talks toward a permanent peace deal. Oil prices collapsed on the news — Brent crude fell as much as 11% to roughly $96/barrel, WTI fell roughly 14% to about $96 — while Asian equity markets hit fresh records (Nikkei, Kospi, and Taiex all posted gains). The 10-year Treasury yield fell 9bp to 4.25% as rate-hike odds eased on the improved energy-price outlook, partially offsetting the hawkish signal from the same-day Warsh dot plot.",
+          "sources": [
+            {
+              "name": "Al Jazeera — Oil Prices Fall, Stocks Rally as US-Iran Sign Framework to End War",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/economy/2026/6/18/oil-prices-fall-stocks-rally-as-us-iran-sign-framework-to-end-war",
+              "pole": "middle_eastern"
+            },
+            {
+              "name": "Yahoo Finance — Stock Market Today: Oil Plunges After US-Iran Ceasefire",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-surge-oil-plunges-after-us-iran-ceasefire-sparks-relief-rally-200305068.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "boj-hikes-to-100pct-june16-2026",
+          "date": "2026-06-16",
+          "title": "BOJ Hikes to 1.00% — Highest Rate Since 1995 — as Warsh's First FOMC Opens",
+          "type": "policy",
+          "detail": "The Bank of Japan raised its overnight call rate 25bp to 1.00%, the highest level since 1995, in a 7-1 vote (board member Asada dissenting). The BOJ cited Iran-war-driven energy-cost pass-through risk to inflation as justification. The decision landed the same day Kevin Warsh's first FOMC meeting as Fed Chair opened (June 16-17), the exact overlap flagged for weeks as carrying August-2024-style yen-carry-unwind risk. Market reaction on the day was orderly: Nikkei rose 0.46% and the yen traded around 160.22/USD — a much calmer reaction than the feared 'Black Monday II' replay, though yen weakness would resume later in the month.",
+          "sources": [
+            {
+              "name": "CNBC — BOJ Rate Hike, Historic Inflation Concerns",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html",
+              "pole": "western"
+            },
+            {
+              "name": "Bank of Japan — Monetary Policy Release",
+              "tier": 1,
+              "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf",
+              "pole": "eastern"
+            }
+          ]
+        },
+        {
+          "id": "yen-carry-trade-nine-year-high-june15-2026",
+          "date": "2026-06-15",
+          "title": "Yen Short Bets Hit Nine-Year High as Carry Trade Revives Ahead of BOJ/Fed Week",
+          "type": "market",
+          "detail": "Leveraged funds' yen short positions rose to their highest level in nine years — over 115,000 contracts in the week through June 9 — as traders re-established yen-funded carry trades betting the currency will keep weakening even as the BOJ prepares to hike. The build-up revives concern about a repeat of the August 5, 2024 'Black Monday II' unwind, in which a BOJ hike combined with weak US data triggered a same-day 12% Nikkei collapse as $4 trillion in yen-funded carry positions were closed simultaneously. The position build comes just one day before the BOJ's June 16 decision and the start of Warsh's first FOMC meeting.",
+          "sources": [
+            {
+              "name": "Japan Times — Yen Carry Trade Revives",
+              "tier": 2,
+              "url": "https://www.japantimes.co.jp/business/2026/06/15/markets/yen-carry-trade-revive/",
+              "pole": "eastern"
+            }
+          ]
+        },
+        {
+          "id": "trump-announces-iran-deal-framework-markets-rally-june15-2026",
+          "date": "2026-06-15",
+          "title": "Trump Announces US-Iran Deal Framework — Global Markets Rally, Oil Falls",
+          "type": "political",
+          "detail": "President Trump announced a framework agreement with Iran to end the war, ahead of the formal MOU signing. Asian markets rallied sharply on the relief: the Nikkei jumped roughly 5.5% and the Kospi rose roughly 5.7%, with US equity futures also rising. Oil prices fell on the news as traders priced in a reopening of the Strait of Hormuz and an end to the sustained supply disruption that had kept Brent crude elevated since the war began.",
+          "sources": [
+            {
+              "name": "Al Jazeera — Stock Markets Soar, Oil Falls as US-Iran Confirm Deal to End War",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/economy/2026/6/15/stock-markets-soar-oil-falls-as-us-iran-confirm-deal-to-end-war",
+              "pole": "middle_eastern"
+            }
+          ]
+        },
+        {
+          "id": "ecb-hikes-25bp-to-225-june11-2026",
+          "date": "2026-06-11",
+          "title": "ECB Hikes All Three Key Rates 25bp — Deposit Rate to 2.25%, First Increase Since July 2023",
+          "type": "policy",
+          "detail": "The ECB Governing Council raised all three key rates by 25bp: the deposit facility rate to 2.25%, the main refinancing rate to 2.40%, and the marginal lending rate to 2.65%, effective June 17. This is the first ECB hike since July 2023 and formally reverses the final step of the 8-cut easing cycle that ran from June 2024 to June 2025. The move was priced at 99% probability by markets heading into the meeting. New ECB staff macroeconomic projections: headline HICP inflation revised to 3.0% for 2026, 2.3% for 2027, and 2.0% for 2028 (returning to target only in the final projection year); Eurozone GDP growth cut to 0.8% (2026), 1.2% (2027), 1.5% (2028). President Lagarde cited Iran-war-driven energy inflation as the primary driver, and left the door open to further tightening depending on incoming data — markets read this as signaling at least one more hike is possible before year-end.",
+          "sources": [
+            {
+              "name": "European Central Bank — Monetary Policy Decisions",
+              "tier": 1,
+              "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260611~4d41bd5e83.en.html",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — ECB Hikes Interest Rates",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/06/11/ecb-hikes-interest-rates.html",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "triple-cb-week-preview-ecb-boj-warsh-june7-2026",
           "date": "2026-06-07",
@@ -278,570 +674,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "brent-93-iran-hezbollah-ceasefire-june2-2026",
-          "date": "2026-06-02",
-          "title": "Brent Crude Falls to ~$93.38 (–1.68%) as Iran-US Talks Resume; Israel-Hezbollah Ceasefire Agreed; Trump: Hormuz Deal Reachable 'Over the Next Week' — Day 4 of Unsigned MOU",
-          "type": "market",
-          "detail": "Brent crude oil fell to approximately **$93.38 per barrel** on June 2, 2026 — a decline of 1.68% — as oil markets priced incremental progress on two parallel de-escalation tracks: resumed US-Iran peace negotiations and a newly announced Israel-Hezbollah ceasefire agreement that reduced the broader Middle East war premium.\n\n**Oil Market June 2, 2026:**\n- **Brent crude**: ~$93.38/bbl (–1.68% on the day; intraday range $93–$97.70)\n- **WTI**: ~$90.70/bbl (–1.58%)\n- Prior close (June 1): ~$96.42/bbl (Brent had recovered from $92.56 May 30 low)\n- **Month-to-date range**: Brent peaked ~$115 in May, fell ~20% to $91-92 before partially recovering to $96-97 range\n\n**Iran-US Negotiations — Day 4 of Unsigned MOU:**\nThe tentative 60-day Memorandum of Understanding drafted by US and Iranian negotiators around May 28 **remains unsigned** on June 4. However, Iran and the US resumed talks on June 2 after Iran briefly suspended them following new US air strikes. Key developments:\n- **Trump on ABC News (June 2)**: Trump stated he believes a deal to reopen the Strait of Hormuz and extend the Iran ceasefire was reachable **'over the next week'** — the most optimistic presidential statement on deal timing to date\n- **Outstanding issues**: Iran's uranium stockpile disposition (72 kg of 60%-enriched uranium), US demands for IAEA access to Fordow and Natanz, Lebanon conflict linkage, and Iran parliament hardliner opposition\n- **Trump's demand**: Iran 'must agree' to never pursue nuclear weapons; inspections required\n- **Proposed framework**: 60-day gradual Hormuz reopening + IAEA access + uranium enrichment cap at 20% + US sanctions waivers; formal nuclear negotiations during the 60-day window\n\n**Israel-Hezbollah Ceasefire — A Separate De-Escalation:**\nA significant development occurred on June 2 as Israel and Hezbollah agreed to stop attacks — a partial de-escalation of the broader Middle East conflict that had been running parallel to the Iran war. The Hezbollah ceasefire:\n- Reduces the regional escalation risk premium embedded in oil prices\n- Does NOT directly address Hormuz shipping (which is the primary oil market driver)\n- Signals the broader conflict may be 'ringed off' rather than expanding into a full Lebanon war\n- Goldman Sachs estimates: if Iran MOU signed within the next week + Hezbollah ceasefire holds, Brent could fall to **$88/bbl** within 2 weeks of signing\n\n**Market Implications:**\n1. **Disinflation scenario taking shape**: Brent at $93 (vs. $115 peak) and heading toward $88–90 if deal signed = US headline CPI could fall from 3.8% (April) toward **2.5–3.0%** by August–September 2026, dramatically easing the stagflation trap\n2. **IEA floor**: Even with a full Hormuz reopening, IEA estimates the structural supply disruption would sustain Brent at $80–82/bbl minimum through end-2026 (Iranian sanctioned oil re-entry takes months to ramp)\n3. **Fed policy implications**: Lower oil prices reduce the PCE energy component, improving the inflation trajectory and giving Warsh more flexibility at the June 16-17 FOMC\n4. **Goldman recession probability trigger**: Goldman explicitly stated that if Brent reaches $88 by June 5 (signed deal by then), their 30% US recession probability would fall toward 18-20%\n\n**The June 5 Convergence Point:**\nJune 5, 2026 (3 days away) represents a critical dual-catalyst convergence:\n1. **May Non-Farm Payrolls** (BLS 8:30 AM ET) — labor market's answer to the manufacturing PMI beats\n2. **Iran MOU Signature Window** — Trump's 'over the next week' comment points to June 5-9 as the target signing window\n\nIf both events deliver positively (payrolls beat + deal signed), recession probability could revise sharply lower — potentially the most significant single-week de-risking event since the April CBO April tariff shock.",
-          "sources": [
-            {
-              "name": "The National — Oil prices slide on Hezbollah ceasefire and Iran peace talks (June 2, 2026)",
-              "tier": 2,
-              "url": "https://www.thenationalnews.com/business/energy/2026/06/02/oil-prices-slide-on-hezbollah-ceasefire-and-iran-peace-talks/",
-              "pole": "western"
-            },
-            {
-              "name": "Fortune — Current price of oil, June 2, 2026 (Brent ~$93-$94)",
-              "tier": 2,
-              "url": "https://fortune.com/article/price-of-oil-06-02-2026/",
-              "pole": "western"
-            },
-            {
-              "name": "CNN — Iran-Trump Lebanon war live updates (June 1-2, 2026)",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "markets-pullback-nvidia-ai-chips-hpe-vix-june2-2026",
-          "date": "2026-06-02",
-          "title": "S&P 500 Slips 0.14% from Record; Nvidia +6% on New PC Processor; HPE +20%+ on Record AI Data Center Quarter; VIX Rises to 16.05 — Narrow AI Leadership Signals Late-Cycle Dynamics",
-          "type": "market",
-          "detail": "US equity markets pulled back modestly from their June 1 record-high session on June 2, with the S&P 500 slipping 0.14%, the Nasdaq declining 0.25%, and the Dow Jones losing 0.09% — a pause after the S&P 500 closed June 1 at **7,599.96**, the Nasdaq at **27,086.81**, and the Dow at **51,078.88** (all-time records for each index). Despite the headline market pullback, individual AI-adjacent stocks surged sharply, reinforcing the narrow leadership dynamic that has characterized this late-cycle rally.\n\n**June 2, 2026 Market Summary:**\n- **S&P 500**: –0.14% (from ATH 7,599.96 on June 1)\n- **Dow Jones Industrial Average**: –0.09%\n- **Nasdaq Composite**: –0.25%\n- **Russell 2000**: –0.38% (small caps underperforming — a classic late-cycle and recession-risk signal)\n- **VIX**: 16.05 (+4.77% on the day) — rising volatility beneath records is a late-cycle technical signal\n\n**AI Technology Surge — Notable Individual Moves:**\n- **Nvidia**: +~6% after unveiling a new PC processor — extends its AI-driven rally (crosses $1T market cap range; AI infrastructure continues driving investment thesis)\n- **HPE (Hewlett Packard Enterprise)**: +20%+ after reporting a record AI data center quarter (AI system revenues hit record high; strong demand from hyperscaler clients)\n- **Dell Technologies**: +~10% on AI server demand signals\n- **Intel**: –4% (losing market share in PC and AI segments to Nvidia architecture)\n\n**Why This Matters for Recession Risk Assessment:**\n\n**The Narrow Leadership Warning:**\nThe pattern on June 2 — headline indices flat-to-down while a handful of AI mega-cap/data-center stocks surge +6% to +20% — is a classic late-cycle 'narrow leadership' signal:\n1. **Market breadth deteriorating**: Russell 2000 (–0.38%) underperforming S&P 500 (–0.14%) confirms that the rally is driven by large-cap AI/tech, not the broad economy\n2. **Small cap divergence**: Small companies (Russell 2000) are more exposed to the domestic economy, tariff disruptions, and higher borrowing costs — their underperformance signals that the real economy may be weaker than mega-cap tech suggests\n3. **VIX rising to 16.05**: While still low in absolute terms, a 4.77% single-day VIX spike at all-time highs is a classic 'complacency crack' signal — options traders beginning to price tail risk even as the S&P sits at ATH\n4. **CAPE ratio at ~39.0 with 30Y at ~5.02%**: The combination of extreme equity valuations and high long-term yields is historically the most unstable configuration for equity markets — the June 1-2 pullback from ATH, though small, is consistent with this tension\n\n**The Sentiment/Equity Paradox Continues:**\nThe S&P 500 at 7,580-7,600 represents approximately **+5% for May 2026** — a historic gain in a month when:\n- Michigan Consumer Sentiment crashed to 44.8 (70-year record low)\n- CPI ran at 3.8% (3-year high)\n- Core PCE at 3.3% (3-year high)\n- FOMC minutes showed explicit rate hike discussion\n- Michigan year-ahead inflation expectations at 4.5%\n\nThis is the widest equity/sentiment divergence in market history. Historically, such divergences resolve either through: (a) sentiment recovering as inflation falls, or (b) equity markets correcting as the pessimism in sentiment data precedes a consumption slowdown.\n\n**Key Catalyst Calendar:**\n- **June 3 (Tomorrow)**: ISM Services PMI May 2026 (consensus ~53.7 vs. 53.6 April) + ADP May private payrolls\n- **June 5 (3 Days)**: BLS May Non-Farm Payrolls (consensus ~90K) + Iran MOU signature window\n- **June 16-17 (14 Days)**: Warsh inaugural FOMC + BOJ rate hike (65-77% probability to 1.00%) — simultaneous global policy shock tail risk\n- **July 24 (52 Days)**: Section 122 tariff cliff",
-          "sources": [
-            {
-              "name": "24/7 Wall St. — Stock Market Live June 2, 2026 (S&P 500, Nvidia, HPE moves)",
-              "tier": 3,
-              "url": "https://247wallst.com/investing/2026/06/02/stock-market-live-june-2-2026-sp-500-spy-slips-after-testing-record-highs/",
-              "pole": "western"
-            },
-            {
-              "name": "TheStreet — Stock Market Today June 2, 2026 (Dow, S&P, Nasdaq updates)",
-              "tier": 2,
-              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-02-2026",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance — Dow, S&P, Nasdaq teeter from records as US-Iran tensions weigh (June 2, 2026)",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/economy/live/stock-market-today-tuesday-june-2-ai-231755175.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "ism-manufacturing-pmi-54-may2026-june1",
-          "date": "2026-06-01",
-          "title": "ISM Manufacturing PMI Surges to 54.0% in May — 5th Consecutive Expansion Month; New Orders 56.8%; Confirms Chicago PMI Surge; Strongest Since May 2022",
-          "type": "economic",
-          "detail": "The Institute for Supply Management (ISM) released the US Manufacturing Purchasing Managers' Index for May 2026 on June 1, showing the index rose to **54.0%** — up 1.3 percentage points from April's 52.7%, marking the **fifth consecutive month of manufacturing expansion** and the strongest reading since May 2022.\n\n**ISM Manufacturing PMI — May 2026 Key Details:**\n- **Headline PMI**: 54.0% (vs. 52.7% April; vs. ~49 consensus; 5th consecutive month above 50)\n- **New Orders Index**: 56.8% (up 2.7 percentage points from April's 54.1% — signals robust forward demand)\n- **19th consecutive month of overall economic expansion** (manufacturing contributing positively)\n- **Corresponds to**: 2.2% annualized real GDP growth, per ISM historical correlation\n- **Four of six largest manufacturing industries** reported increased new orders\n\n**Why This Matters for Recession Risk:**\n1. **Confirms the Chicago PMI surge**: The Chicago Business Barometer surged to 62.7 on May 29 (4-year high, biggest monthly jump since 2020) — market participants had been uncertain whether the regional data would translate nationally. The ISM 54.0% confirms the Chicago surge was nationally representative.\n2. **Challenges the 'Q2 GDP ~1%' narrative**: Goldman Sachs, JPMorgan, and others had projected Q2 2026 GDP growth at approximately 1% annualized (vs. Q1's revised +1.6%). An ISM reading of 54.0% historically correlates to 2.2% annualized GDP growth — significantly above the ~1% projection.\n3. **Front-loading vs. genuine demand**: Analysts note the ISM surge likely reflects both genuine demand recovery (AI capital goods investment, defense spending) and pre-emptive front-loading ahead of the Section 122 tariff cliff (July 24, 52 days away). The distinction matters for H2 2026 outlook.\n4. **Input costs trajectory**: ISM's Prices Paid sub-index will be closely watched — if cost pressures eased alongside higher production (as Caixin China PMI shows for Chinese manufacturers), it would validate a 'disinflationary expansion' rather than a stagflationary rebound.\n\n**The Manufacturing Divergence Continues — Strong Data vs. Weak Sentiment:**\nFor the third consecutive month, US manufacturing PMI data (ISM 54.0%, Chicago 62.7, S&P Global Flash 55.3%) is running far ahead of consumer sentiment indicators (Michigan 44.8 — 70-year record low). This bifurcation is historically anomalous:\n- Business investment (particularly AI data centers, defense procurement, and reshoring capital expenditures) is driving the manufacturing surge\n- Consumer-facing sectors remain under pressure from: inflation 3.8% headline CPI, 7.4-7.5% mortgage rates, and 4.3% unemployment\n- The critical question for recession forecasters: can business investment sustain the expansion if consumer spending weakens?\n\n**Critical Path Context (June 1, 2026):**\n- **June 5 (4 days)**: May Non-Farm Payrolls + Iran MOU decision window — the two most watched catalysts before the FOMC\n- **June 16-17 (15 days)**: Kevin Warsh's first FOMC (hold ~99%) + BOJ June hike (65-77% to 1.00%) — simultaneous global policy shock tail risk\n- **July 24 (52 days)**: Section 122 tariff cliff (Congressional action required)\n- **Recession probability estimates**: Goldman Sachs 30%, JPMorgan 35%, Moody's Analytics 49% — all set before this ISM beat; updates expected",
-          "sources": [
-            {
-              "name": "ISM — Manufacturing PMI at 54%; May 2026 ISM Manufacturing PMI Report (June 1, 2026)",
-              "tier": 1,
-              "url": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-54-may-2026-ism-manufacturing-pmi-report-302786165.html",
-              "pole": "western"
-            },
-            {
-              "name": "Reuters — US ISM Manufacturing PMI May 2026 (June 1, 2026)",
-              "tier": 2,
-              "url": "https://www.reuters.com/markets/us/us-manufacturing-sector-activity-may-2026-ism/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "caixin-china-pmi-518-may2026-june1",
-          "date": "2026-06-01",
-          "title": "Caixin China Manufacturing PMI 51.8% in May — Beats NBS 50.0 Divergence; SME and Private Sector Resilience; Domestic Demand Supports; Export Orders Dip",
-          "type": "economic",
-          "detail": "Caixin Media and S&P Global released the Caixin China Manufacturing PMI for May 2026 on June 1, showing **51.8%** — beating the 51.4% consensus forecast and remaining well above the 50-point expansion threshold, despite slipping modestly from April's 52.2% and diverging *favorably* from the official NBS Manufacturing PMI released May 31 (which showed a borderline 50.0%).\n\n**Caixin China Manufacturing PMI — May 2026 Key Details:**\n- **Headline PMI**: 51.8% (vs. 51.4% consensus; vs. 52.2% April — modest deceleration)\n- **Above 50**: Still in expansion territory; contrasts with NBS 50.0 borderline reading\n- **New orders and output**: Growth moderated but remained robust — domestic demand and new customers are key drivers\n- **Export orders**: Dipped slightly, reflecting ongoing Iran war Middle East demand destruction and US 31.6% effective tariff barrier\n- **Inflationary pressures**: Eased — input and output price increases slowed for the first time in 6–7 months (a notable disinflation signal for the PBoC)\n- **Employment**: Minor improvement in the private/SME sector — contrasts with weak employment in state-sector NBS survey\n\n**NBS vs. Caixin PMI Divergence — Why It Matters:**\nThe 1.8-percentage-point divergence between Caixin (51.8%) and NBS (50.0%) is analytically important:\n- **NBS PMI** surveys predominantly **large state-owned enterprises (SOEs)** and construction-linked manufacturing — sectors most exposed to property sector weakness and Iran war export demand destruction\n- **Caixin PMI** surveys predominantly **small and medium-sized private enterprises (SMEs)** — sectors benefiting from domestic consumption resilience, technology supply chain investment, and AI hardware demand\n- The divergence confirms a bifurcated Chinese manufacturing landscape: the export/SOE sector is stalling at the borderline while the domestic-demand/private sector continues expanding\n- This has important implications for PBOC policy: Governor Pan Gongsheng may be more comfortable with targeted liquidity tools (targeted MLF, LPR cuts) rather than broad-based stimulus, since the private sector is still growing\n\n**Global Macro Implications:**\n1. **Commodity/industrial demand**: Caixin 51.8% provides a slightly more constructive signal than the NBS 50.0 for global commodity demand, particularly for South Korea, Japan, Vietnam, and Taiwan (which export manufacturing inputs to Chinese SMEs)\n2. **Disinflation signal**: The easing of Caixin input/output price pressures aligns with Brent crude falling 19% in May 2026 — China's factories appear to be passing lower energy costs through to output prices, reducing the global stagflation impulse from Chinese PPI\n3. **PBOC response**: The Caixin 51.8% gives the PBOC less urgency for emergency stimulus, but the NBS 50.0/new orders 49.9 contraction signal a targeted RRR cut (bank reserve requirement ratio reduction) in Q2 2026 remains likely\n\n**Context: The China Manufacturing Complexity (June 1, 2026):**\n- NBS Manufacturing PMI (May 31): 50.0 (borderline; new orders 49.9 in contraction)\n- Caixin Manufacturing PMI (June 1): 51.8% (SME expansion; domestic demand\n- Q1 2026 GDP: +5.0% (front-loaded export surge)\n- IMF 2026 China forecast: ~4.5% (downside risk growing)\n- US-China effective tariff rate: ~31.6% (operational ceiling)\n- PBOC counter-cyclical tools: likely imminent (RRR cut signaled)",
-          "sources": [
-            {
-              "name": "Caixin / S&P Global — Caixin China Manufacturing PMI May 2026 (June 1, 2026)",
-              "tier": 2,
-              "url": "https://www.spglobal.com/marketintelligence/en/mi/research-analysis/caixin-china-general-manufacturing-pmi-may-2026.html",
-              "pole": "eastern"
-            },
-            {
-              "name": "VT Markets — China's Caixin May Manufacturing PMI Beats Forecasts (June 1, 2026)",
-              "tier": 3,
-              "url": "https://www.vtmarkets.com/live-updates/chinas-caixin-may-manufacturing-pmi-beats-forecasts-supporting-commodities-aud-and-china-equities/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "china-nbs-manufacturing-pmi-50-borderline-may31-2026",
-          "date": "2026-05-31",
-          "title": "China NBS Manufacturing PMI Falls to 50.0 in May — Exactly at Expansion/Contraction Boundary; New Orders Sub-Index Slips to Contraction 49.9; Global Recession Signal",
-          "type": "economic",
-          "detail": "China's National Bureau of Statistics (NBS) released the official Manufacturing Purchasing Managers' Index (PMI) for May 2026 on May 31, showing the index fell to **50.0** — exactly at the 50-point threshold that separates expansion from contraction — down from 50.3 in April and the weakest reading since the index was in contraction territory.\n\n**China NBS Manufacturing PMI — May 2026 Key Details:**\n- **Headline PMI**: 50.0 (vs. 50.3 in April; forecast was approximately 50.2)\n- **New orders sub-index**: 49.9 — dipped BELOW the 50-point threshold into contraction territory for the first time in three months; signals weakening forward demand\n- **Production sub-index**: 51.2 — still in expansion, supporting output despite weak orders\n- **High-tech manufacturing PMI**: 52.9 — technology production remains in solid expansion, buoyed by AI hardware demand\n- **Equipment manufacturing PMI**: 52.1 — capital goods production holding up above 50\n- **Employment sub-index**: likely below 50 (persistent employment contraction in manufacturing)\n- **Export orders**: under pressure from Iran war demand destruction in Middle East markets and ongoing US-China ~31.6% effective tariff barrier\n\n**Why 50.0 Matters — The Borderline Signal:**\nThe 50.0 headline reading is the statistical boundary between expansion and contraction but carries outsized significance:\n1. **Iran war demand destruction**: The Middle East region accounts for approximately 12-15% of China's export markets. The ongoing Iran-Hormuz crisis has reduced demand from energy-importing developing countries across the Middle East and Asia\n2. **US tariff wall**: The US-China effective tariff rate of ~31.6% continues to constrain the world's largest bilateral trade relationship\n3. **Front-loading effect fading**: The Q1 2026 manufacturing surge (+5.0% GDP) was driven in part by front-loaded orders before the Iran war fully impacted supply chains — that front-loading boost is now normalizing\n4. **Property sector drag**: China's property developer crisis (Evergrande liquidated January 2024, Country Garden defaulted) continues to suppress domestic construction-related manufacturing demand\n\n**The China Manufacturing Contradiction — PMI 50.0 vs. Q1 GDP 5.0%:**\n- Q1 2026 GDP was 5.0% year-over-year — a beat driven by January-February export front-loading\n- May 2026 manufacturing PMI at 50.0 signals Q2 2026 momentum is decelerating sharply toward the official growth target of ~5.0% becoming harder to maintain\n- IMF maintains 2026 China forecast at approximately 4.5% — but the PMI trajectory suggests downside risk to even this reduced projection\n- China's factory-gate PPI (Producer Price Index) turned positive (+0.5%) for the first time in 3+ years in March 2026, breaking the deflationary trend — but new orders at 49.9 suggest this is demand-push rather than demand-pull reflation\n\n**Global Recession Implications:**\nChina at exactly the PMI borderline has cascading implications:\n- South Korea, Vietnam, Japan, Taiwan, and Germany all have significant export exposure to Chinese industrial demand\n- Singapore's trade bellwether role: MAS is watching Chinese PMI closely as a leading indicator for Asian financial conditions\n- The IEA estimates China's slower industrial output reduces global crude demand growth by approximately 0.3 mbpd — a marginal factor for the Brent crude relief narrative\n- Analysts watching whether Caixin Manufacturing PMI (released June 1 separately) confirms the NBS 50.0 or diverges — Caixin focuses more on small/medium enterprises and often diverges from NBS\n\n**What to Watch:**\n- PBOC response: Governor Pan Gongsheng has signaled readiness with 'counter-cyclical tools' — a PMI at 50.0 may trigger another RRR cut or targeted lending facility expansion\n- June 16-17 FOMC (Warsh's first): BOJ hike + Warsh hold would create yen carry unwind risk that could tighten global financial conditions and further pressure Chinese capital flows\n- Section 122 tariff cliff July 24: if Congressional action fails and Section 301 tariffs are reimposed at higher rates, China's export-driven manufacturing would face additional headwinds in H2 2026",
-          "sources": [
-            {
-              "name": "Xinhua — China's Manufacturing PMI at 50.0 in May 2026 (May 31, 2026)",
-              "tier": 1,
-              "url": "https://english.news.cn/20260531/7be1c632781e4cd29dee051b56b6ece1/c.html",
-              "pole": "eastern"
-            },
-            {
-              "name": "China.org.cn — NBS: China Manufacturing PMI 50.0 in May 2026 (May 31, 2026)",
-              "tier": 1,
-              "url": "http://www.china.org.cn/2026-05/31/content_118523275.shtml",
-              "pole": "eastern"
-            }
-          ]
-        },
-        {
-          "id": "warsh-3-ways-reshape-fed-independence-balance-sheet-may31-2026",
-          "date": "2026-05-31",
-          "title": "Warsh '3 Ways to Reshape the Fed' — Balance Sheet Reduction, Forward Guidance Overhaul, Inflation Gauge Reform; Philadelphia Inquirer: 'Independence and Resolve' — First FOMC 16 Days Away",
-          "type": "policy",
-          "detail": "As Kevin Warsh completes his first full week as Federal Reserve Chair (confirmed May 13, sworn in May 22), major analyses on May 31 map out the three most consequential structural changes he is expected to implement — changes that could materially affect US borrowing costs, equity valuations, and the global macro outlook beyond the near-term June 16-17 FOMC hold.\n\n**Warsh's Three Pillars of Fed Reform (per Motley Fool and Philadelphia Inquirer analyses, May 31, 2026):**\n\n**1. Balance Sheet Reduction — The $6.7T Agenda:**\nWarsh has argued the Fed's $6.7 trillion balance sheet (down from a $9T peak but still 7x the pre-2008 baseline of ~$900B) 'disproportionately helps those with financial assets' and distorts price discovery. His planned approach:\n- Accelerate quantitative tightening (QT) beyond the pace Powell maintained\n- Potentially target a $4-5T balance sheet over 3-5 years\n- Impact: if implemented, the increased Treasury supply absorption burden would structurally elevate 10Y+ yields — Citi estimates a path toward 5.5% on 10Y, BofA toward 6% on 30Y\n- Market implication: the 'QT premium' already embedded in the 30Y Treasury (currently ~5.02%) would widen further\n- Fed Governor Barr publicly dissented (Axios, May 20) — internal Fed resistance is real\n\n**2. Forward Guidance Overhaul — 'No More Precommitments':**\nWarsh has long criticized the Fed's practice of providing detailed forward guidance (signaling future rate paths), arguing it:\n- Creates 'moral hazard' by letting markets front-run Fed decisions\n- Reduces Fed flexibility to respond to new data\n- Locks the Fed into commitments that may be outdated by the time they're executed\nHis reform: move to meeting-by-meeting assessment, reduce dot plot specificity, and rely more on the overnight repo market as a real-time signal of financial conditions rather than 'calendar-based guidance.' This 'real Fed regime change may happen deep inside Wall Street's plumbing' (CNBC, May 22).\n\n**3. Inflation Gauge Reform — PCE Out, Trimmed Mean In:**\nWarsh has publicly called PCE (the Fed's current primary inflation gauge) a 'rough swag,' expressing preference for:\n- **Dallas Fed trimmed-mean PCE**: strips outliers above and below the distribution — shows a more stable path\n- **Cleveland Fed median CPI**: the 50th percentile of price changes — less volatile than headline\n- Both of these gauges appear to show a slightly more favorable inflation trajectory than the April PCE headline print (3.8% headline / 3.3% core)\n- If adopted formally: the Fed's 2% target would need to be redefined against a new reference gauge, potentially giving Warsh analytical cover for both holding longer and cutting sooner depending on trimmed-mean readings\n\n**Philadelphia Inquirer (May 31): 'Independence and Resolve':**\nThe Philadelphia Inquirer profiled Warsh's stated commitment to Fed independence — 'I will not be the President's sock puppet' (April 21, Senate Banking Committee testimony). Warsh is in an inherently difficult position:\n- The White House openly wants lower rates\n- The data (CPI 3.8%, PCE 3.3% core) precludes cuts\n- June FOMC hold (~99% priced) is the near-certain outcome — but the dot plot (SEP) and press conference tone will be closely parsed for any softening toward the administration's rate-cut preferences\n\n**Warsh's First FOMC — June 16-17 Critical Path:**\n- **Agenda**: First Summary of Economic Projections (SEP) + dot plot + press conference under Warsh\n- **Rate decision**: Hold at 3.50-3.75% (~99% priced)\n- **The real signal**: whether Warsh's 2026 dot shifts toward hold-longer (hawkish) vs. signals eventual 2027 cut path (dovish)\n- **Coincides with**: BOJ June 16 meeting (65-77% hike to 1.00%) — the simultaneous global policy shock tail risk\n- **Section 122 cliff**: 38 days after the FOMC, the tariff authority expires unless Congressional or administrative action is taken\n\n**Macro Snapshot — May 31:**\n- Fed Funds Rate: 3.50-3.75% (last changed April 29, 2026 — Powell's final meeting)\n- 10Y Treasury: ~4.44% (May 29 close)\n- 30Y Treasury: ~5.00-5.02% (May 29 close)\n- Core PCE: 3.3% YoY (April 2026)\n- Q1 2026 GDP: +1.6% (revised down from +2.0%)\n- Chicago PMI May: 62.7 (4-year high)\n- China NBS PMI May: 50.0 (borderline)\n- Brent crude: ~$92 (down 19% in May on Iran deal progress)\n- S&P 500: 7,580.06 (May 29 record close, +5% for May)",
-          "sources": [
-            {
-              "name": "Motley Fool — 3 Ways Kevin Warsh Will Reshape the Fed and Decimate Wall Street (May 31, 2026)",
-              "tier": 3,
-              "url": "https://www.fool.com/investing/2026/05/31/3-ways-kevin-warsh-reshape-fed-decimate-wall-st/",
-              "pole": "western"
-            },
-            {
-              "name": "Philadelphia Inquirer — Kevin Warsh, the New Fed Chair, Vows Independence From Trump (May 31, 2026)",
-              "tier": 2,
-              "url": "https://www.inquirer.com/economy/kevin-warsh-federal-reserve-interest-rates-20260531.html",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Kevin Warsh's Real Fed Regime Change May Happen Deep Inside Wall Street's Plumbing (May 22, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/05/22/kevin-warshs-real-fed-regime-change-may-happen-deep-inside-wall-streets-plumbing.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "chicago-pmi-surges-627-4yr-high-may30-2026",
-          "date": "2026-05-30",
-          "title": "Chicago PMI Surges to 62.7 in May — 4-Year High, Biggest Monthly Jump Since 2020; S&P 500 Closes May at Record 7,580 (+5%)",
-          "type": "economic",
-          "detail": "The MNI Chicago Business Barometer — one of the most watched regional manufacturing indicators in the US — delivered a stunning upside surprise for May 2026: **62.7**, a 4-year high and the largest single-month jump since 2020, demolishing the 50.5 consensus forecast and surging from April's contractionary 49.2 reading.\n\n**Chicago PMI May 2026 — Key Details:**\n- **May 2026**: 62.7 (4-year high; consensus 50.5; prior 49.2)\n- Month-over-month gain: +13.5 points — the largest single-month jump since the pandemic reopening surge of 2020\n- Reading above 50 = expansion; the jump from 49.2 (contraction) to 62.7 (strong expansion) is a dramatic reversal\n- Production and new orders sub-indices likely led the surge, consistent with the broader S&P Global Manufacturing PMI's 55.3 4-year high released May 22\n- The Chicago PMI is closely watched as a leading indicator for the national ISM Manufacturing PMI due June 1 (Monday)\n\n**Context — Manufacturing Resilience Despite Tariff Uncertainty:**\nThe 62.7 reading appears to reflect a combination of factors:\n1. **Front-loading ahead of Section 122 tariff cliff** (July 24): Importers and manufacturers accelerating orders before potential tariff expiry/restructuring\n2. **Domestic demand resilience** despite Michigan Consumer Sentiment at a 70-year record low (44.8)\n3. **Iran oil price relief** (Brent down ~20% from 2026 high of ~$115 to ~$92) easing input cost pressures in energy-intensive manufacturing sectors\n4. The paradox of record-low consumer sentiment coexisting with record-high manufacturing PMI reflects the bifurcated economy: consumers are pessimistic but still spending (+4.9% YoY retail sales in April), while business investment — particularly in AI-linked capital goods — is accelerating\n\n**S&P 500 May 2026 Month-End:**\n- **S&P 500 May 29 close**: 7,580.06 — a new all-time high and a **+5.0% gain for the month of May 2026**\n- The S&P 500 has now posted gains in 9 of the last 10 weeks\n- Nasdaq also at record levels; AI technology names (Microsoft, Oracle, Palantir, Snowflake) continue to lead\n- The May +5% gain comes against a backdrop of: CPI 3.8%, Core PCE 3.3%, Q1 GDP revised to +1.6%, and Michigan sentiment at 70-year lows\n- The divergence between S&P 500 ATH and Michigan record-low sentiment has never been wider in the survey's 70+ year history\n\n**Watch — ISM Manufacturing PMI (June 1):**\nThe Chicago PMI surge to 62.7 implies a strong probability of an ISM Manufacturing beat on June 1. Consensus for ISM is approximately 48-49 (still contractionary territory), but if the Chicago surge is representative, ISM could print 50+ for the first time since September 2022. A surprise ISM beat on June 1 would be the first major macro signal of June, arriving 4 days before the May jobs report (June 5) and 15 days before the Warsh FOMC (June 16–17).",
-          "sources": [
-            {
-              "name": "Advisor Perspectives — Chicago PMI Surges to 4-Year High in May 2026 (May 29, 2026)",
-              "tier": 3,
-              "url": "https://www.advisorperspectives.com/dshort/updates/2026/05/29/chicago-pmi-surges-to-4-year-high",
-              "pole": "western"
-            },
-            {
-              "name": "AimsFX — Chicago PMI Surges to 62.7 in May 2026, Exceeding Expectations and Indicating Strong Economic Growth (May 29, 2026)",
-              "tier": 3,
-              "url": "https://aimsfx.com/2026/05/29/chicago-pmi-surges-to-62-7-in-may-2026-exceeding-expectations-and-indicating-strong-economic-growth",
-              "pole": "western"
-            },
-            {
-              "name": "Crypto Briefing — Chicago PMI Surges 62.7, Beats Forecast (May 29, 2026)",
-              "tier": 4,
-              "url": "https://cryptobriefing.com/chicago-pmi-surges-62-7-beats-forecast/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "iran-mou-weekend-standoff-brent-92-combat-ready-may30-2026",
-          "date": "2026-05-30",
-          "title": "Iran MOU 'Mostly Agreed' at Negotiator Level But Trump Withholds Signature Through Weekend; Brent ~$92.56; US Military Maintains Combat Readiness in Gulf",
-          "type": "market",
-          "detail": "As of Saturday May 30, 2026, the tentative 60-day US-Iran Memorandum of Understanding drafted by negotiators on May 28 remains unsigned — with diplomatic sources describing it as 'mostly agreed' while President Trump continues to withhold his formal endorsement through the weekend.\n\n**Status of the Iran MOU (as of May 30):**\nThe MOU framework, as reported by Axios (which obtained key deal details), covers:\n- **Strait of Hormuz reopening**: Commercial vessels can begin transiting within 72 hours of signing; Iran agrees to clear mines within 30 days\n- **Nuclear freeze**: Iran caps uranium enrichment at 20%; grants IAEA daily access to Fordow and Natanz facilities\n- **Sanctions waiver**: Iran receives temporary waivers to sell oil in international markets\n- **60-day window** for formal nuclear negotiations to begin\n- **Unresolved**: Disposition of Iran's ~72 kg stockpile of 60%-enriched uranium (deferred to 30-day follow-on talks)\n\n**Weekend Diplomatic Standoff:**\n- VP Vance stated there are 'still a couple of language points being discussed'\n- The White House denied Iranian state TV claims of a finalized deal, calling them a 'fabrication'\n- Iran's parliament hardliners remain the domestic political obstacle — Supreme Leader Khamenei has not endorsed\n- US Defense Secretary Hegseth signaled the US military 'remains ready to resume combat in the Gulf if needed' — maintaining maximum pressure posture even as talks continue\n- Iranian FM Araghchi: uncertainty about timeline; Khamenei advisor Shamkhani: US demands for nuclear program control are still a 'fantasy'\n\n**Oil Market Reaction — Down ~19% for May 2026:**\n- **Brent crude May 30**: approximately $92.56/bbl — down ~19% for the full month of May 2026\n- **Monthly context**: Brent opened May around $114 (during the peak of IRGC seizure crisis) and closed ~$92 — the largest single-month oil price decline since the COVID demand collapse of April 2020\n- **WTI crude**: approximately $86-88/bbl range\n- Oil analysts note the ~$92 level already prices a significant probability of deal completion; Goldman Sachs oil desk target for a signed deal: Brent $88 within 2 weeks of signature\n- IEA structural floor estimate: ~$80-82 even with full Hormuz reopening, given the 10.1 mbpd supply deficit built up during the blockade\n\n**Key Deal Timeline — The Critical Convergence:**\n- **June 5 (6 days)**: May jobs report + Iran MOU signature window closes before June 16\n- **June 16-17 (17 days)**: Warsh first FOMC + BOJ meeting (65-77% hike probability) — simultaneous global policy shock risk remains the highest-stakes single-day in 2026 markets\n- **July 24 (54 days)**: Section 122 tariff cliff (Congressional extension vs Section 301 pivot)\n\n**Recession Scenario Matrix — May 30:**\nWith Chicago PMI 62.7 + oil down 19% for May + PCE MoM softer than feared:\n- Goldman Sachs: 30% recession probability (pre-May 30 data; update expected)\n- JPMorgan: 35%\n- Moody's Analytics: 49%\n- Market consensus (S&P 500 at record 7,580, +5% May): soft-landing base case intact; markets pricing deal as more-likely-than-not",
-          "sources": [
-            {
-              "name": "Axios — Iran Deal Details: 60-Day Ceasefire, Hormuz Reopening, Sanctions Waivers (May 24, 2026)",
-              "tier": 2,
-              "url": "https://www.axios.com/2026/05/24/iran-deal-strait-hormuz-sanctions-nuclear",
-              "pole": "western"
-            },
-            {
-              "name": "Axios — Iran Peace Deal Still Needs Trump Approval (May 28, 2026)",
-              "tier": 2,
-              "url": "https://www.axios.com/2026/05/28/iran-peace-deal-trump-approval",
-              "pole": "western"
-            },
-            {
-              "name": "CNN — Iran-Trump War News Live (May 29–30, 2026)",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/05/29/world/live-news/iran-trump-war-news",
-              "pole": "western"
-            },
-            {
-              "name": "The Hill — US-Iran Ceasefire Extension Deal Key Takeaways (May 2026)",
-              "tier": 2,
-              "url": "https://thehill.com/policy/international/5900355-us-iran-ceasefire-extension-deal/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "oil-down-20pct-2026-highs-iran-mou-june-fomc-hold-may29-2026",
-          "date": "2026-05-29",
-          "title": "Brent Crude Down 20% from 2026 Highs to ~$91–92 on Iran MOU Progress; June FOMC Hold ~99% Priced; US Tariff Uncertainty Remains — Section 122 Cliff 54 Days",
-          "type": "market",
-          "detail": "As of May 29, 2026, crude oil has declined approximately **20% from its 2026 intraday high** of ~$115 reached during the most acute phase of the Iran-Hormuz crisis in early May — with Brent settling in the $91–92/bbl range as Iran MOU negotiations continue, despite the deal not yet being formally signed by President Trump or Supreme Leader Khamenei.\n\n**Oil Market — Down 20% from 2026 Peak:**\n- **Brent crude May 29 range**: approximately $91.00–92.50/bbl\n- From the 2026 high of ~$115/bbl (early May IRGC seizures peak) to the current ~$91–92 level = a **~20% decline** as reported by CNBC (May 29)\n- The decline is faster than IEA projected even in a 'signed deal' scenario, suggesting markets are pricing a deal as a done deal\n- However, the 60-day MOU framework has NOT been signed — Iran parliament hardliners remain the key domestic obstacle; the uranium enrichment stockpile disposition remains unresolved\n- **WTI crude**: approximately $86–88/bbl range\n- Goldman Sachs oil desk: if MOU signed within 5 days, Brent targets $88/bbl within 2 weeks; structural IEA supply deficit means Brent floor is approximately $80–82 even with full Hormuz reopening\n\n**US Policy Calendar — The Critical Three Weeks:**\n- **June 5 (7 days)**: BLS May Employment Situation (jobs report) — the last major labor market data before the June 16-17 FOMC\n- **June 16-17 (18 days)**: Warsh's first FOMC meeting (new Summary of Economic Projections + dot plot + press conference); BOJ June 16 meeting (65–77% hike probability to 1.00%) — the simultaneous hawkish policy signal tail risk remains the highest-stakes single-day event in global markets\n- **July 23 (54 days)**: Section 122 tariff cliff — Congressional action required or Bessent/Greer pivot to Section 301; bipartisan deal remains elusive\n\n**PCE April Aftermath — The 'Less Bad Than Feared' Narrative:**\nThe May 28 PCE release (3.3% core / 3.8% headline YoY; but MoM core +0.2% softer than the +0.3% feared) produced an interesting market dynamic:\n- The softer monthly prints allowed traders to reduce rate-hike bets; 2Y Treasury fell to ~3.99–4.00%\n- June FOMC hold probability is approximately **99%** (CME FedWatch)\n- The rate hike scenario — which had been priced at ~30% by year-end 2026 — is fading if the Iran MOU closes and oil continues declining\n- Warsh's preference for trimmed-mean PCE gauges means the 'supercore' deceleration (+0.1% vs prior +0.3%) is the data point his team will emphasize\n\n**The Updated Macro Scorecard (May 29):**\n- Inflation: CPI 3.8%, PPI 6.0%, PCE headline 3.8%, PCE core 3.3% — all above target but oil relief path credible\n- Growth: Q1 GDP revised to +1.6%; Q2 GDPNow flash trajectory ~0.8–1.0% (near stall speed)\n- Labor: April payrolls +115K; unemployment 4.3%; May jobs report June 5\n- Sentiment: Michigan 44.8 (record low); CB Expectations Index 74.4 (16th month below recession threshold)\n- Oil: Brent ~$92 (down 20% from high); deal unsigned\n- Tariffs: Section 122 cliff 54 days; Section 301 investigations (16 countries) ongoing\n- Yields: 10Y ~4.47%; 30Y ~5.00–5.10%; 30Y mortgage ~7.3–7.4%\n- Recession probabilities: Goldman ~30%, JPMorgan ~35%, Moody's Analytics ~49% (all pre-PCE figures; updates expected)\n\n**Recession Scenario Update — May 29:**\n- If Iran MOU signed by June 5 + May jobs report confirms labor market stability + PCE softens in May: Goldman recession probability could fall toward 20%\n- If MOU collapses + Section 122 expires without Congressional action + June 16 BOJ + Warsh hawkish: recession probability surpasses 60%\n- The S&P 500 continuing to set records (ATH ~7,557 on May 28) reflects the market's current assessment that the soft landing base case (Goldman 70% no-recession) remains intact, even as consumer sentiment hits 70-year lows",
-          "sources": [
-            {
-              "name": "CNBC — Oil prices drop ~20% from 2026 highs as Iran ceasefire hopes grow (May 29, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/05/29/oil-prices-iran-ceasefire-us-trump-strait-hormuz-energy-costs.html",
-              "pole": "western"
-            },
-            {
-              "name": "Penn Mutual Asset Management — The Treasury Yield Curve Has Risen and Flattened in 2026 (May 28, 2026)",
-              "tier": 3,
-              "url": "https://www.pennmutualam.com/market-insights-news/blogs/chart-of-the-week/2026-05-28-the-treasury-yield-curve-has-risen-and-flattened-in-2026",
-              "pole": "western"
-            },
-            {
-              "name": "MPA Magazine — New Fed Chair Warsh in a 'bit of a pickle' navigating current market (May 2026)",
-              "tier": 3,
-              "url": "https://www.mpamag.com/us/mortgage-industry/market-updates/new-fed-chair-warsh-in-a-bit-of-a-pickle-navigating-current-market-says-senior-economist/576954",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "bea-april-pce-q1-gdp-2nd-estimate-may28-2026",
-          "date": "2026-05-28",
-          "title": "BEA May 28 Triple Release: April PCE 3.8% Headline / 3.3% Core (3-Year Highs); Q1 GDP Revised Down to +1.6%; Durable Goods +7.9%; S&P 500 Hits New ATH ~7,557",
-          "type": "economic",
-          "detail": "The Bureau of Economic Analysis delivered the most consequential data trio of the Warsh era on May 28, 2026: the April PCE Price Index, the Q1 2026 GDP Second Estimate, and (via Census Bureau) April Durable Goods Orders — released simultaneously at 8:30 a.m. EDT.\n\n**April 2026 PCE — Mixed Signal: YoY 3-Year High, MoM Softer Than Feared:**\n- **Headline PCE YoY**: +3.8% — the highest level since May 2023 (vs. March 3.5%); energy-driven Iran war shock\n- **Core PCE YoY**: +3.3% — the highest since October 2025 (vs. March 3.2%); a new high in the Warsh era\n- **Headline PCE MoM**: +0.4% (vs. +0.5% expected) — slightly below consensus, providing marginal relief\n- **Core PCE MoM**: +0.2% (vs. +0.3% expected) — softer monthly print; 'supercore' services PCE (ex-energy, ex-housing) decelerated sharply to +0.1% from +0.3% — the one genuine dovish signal\n- **Real Disposable Income**: -0.5% MoM — the second consecutive monthly decline, confirming the Iran war energy shock is eroding real household purchasing power\n- **Personal Saving Rate**: 2.6% — a multi-year low, implying consumers are drawing down savings to maintain spending levels\n- **Personal Spending (nominal)**: +0.5% (+$111.1B total); Real spending: +0.1% — barely positive after inflation adjustment\n- **Energy spending**: +$28.8B driven by gasoline +5.5% MoM — the dominant inflation driver this month\n\n**Market Reaction to PCE:**\nThe 2-year Treasury yield fell from 4.04% to approximately 3.99% as traders pared aggressive rate-hike bets on the softer MoM core reading. The 10-year Treasury touched a session high of 4.53% on the hot YoY headline before retreating to close approximately 4.47–4.48%. The S&P 500 interpreted the PCE as 'not as bad as feared' and closed at a new all-time high of approximately 7,557 (+0.51%), driven by AI tech names — Microsoft, Oracle, and Palantir each gaining 3–4%. Snowflake (SNOW) surged +36.5% on strong guidance, its best-ever single session. The implied probability of a June 16–17 FOMC rate hold rose to approximately 99%.\n\n**Q1 2026 GDP Second Estimate — Revised Down to +1.6%:**\n- The BEA revised Q1 2026 GDP growth down to **+1.6% annualized** from the +2.0% advance estimate (April 30)\n- Revision driven by downward adjustments to consumer spending and residential investment components\n- Q4 2025 GDP remains at +0.5% (unchanged)\n- Q1 2026 at +1.6% is still technically growth but represents the weakest U.S. quarterly reading since Q1 2025 (-0.6%) and reinforces the 'near-stall-speed' reading from S&P Global's Flash PMI Composite of 51.7\n- Real final sales to domestic purchasers — the Fed's preferred 'underlying growth' metric — likely revised down further given the income and spending data\n\n**April Durable Goods Orders — Beat Driven by Aircraft:**\n- **Headline**: +7.9% MoM (+$25.5B to $346.0B total) — far above the ~+3.5% consensus\n- **Transportation equipment**: +21.5% (+$23.1B) — dominated by nondefense aircraft & parts (+165.9%)\n- **Ex-transportation**: +1.1% — the more reliable signal; solid but not exceptional\n- **Non-defense capital goods ex-aircraft** (proxy for business investment): a modest gain, confirming underlying capex is intact despite policy uncertainty\n- The headline number is an aircraft-order distortion and does not reflect broad manufacturing strength\n\n**Integrated Macro Snapshot — May 28:**\n- **Brent crude**: $93.71/bbl (Iran peace deal optimism driving oil's third consecutive weekly decline; down from $99.18 May 27)\n- **S&P 500**: New ATH ~7,557; Snowflake (SNOW) +36.5%\n- **10Y Treasury**: ~4.47–4.48% (closed, after session high of 4.53%)\n- **30Y Treasury**: ~5.03–5.10% range\n- **2Y Treasury**: ~4.04% (fell on softer MoM PCE)\n- **June FOMC hold**: ~99% probability\n\n**The Warsh Policy Calculus — First Inflation Test:**\nWarsh was sworn in May 22 and received his first PCE print just 6 days later. Key Warsh-specific signals emerged:\n- Warsh has publicly expressed skepticism about PCE as a metric, calling it a 'rough swag' — he reportedly prefers the Dallas Fed trimmed-mean PCE and Cleveland Fed median PCE as more reliable gauges\n- The softer MoM core (0.2% vs 0.3% expected) provides Warsh with analytical cover to hold at June 16–17 rather than signal a hike\n- However, the YoY core PCE at 3.3% is moving away from, not toward, the 2% target\n- The White House is openly pushing for rate cuts; Warsh is in a structurally difficult position ('bit of a pickle') between the inflation data and political pressure\n- Fed Governor Lisa Cook signaled openness to rate hikes if inflation persists; Kashkari: 'inflationary risks are higher'\n- Deloitte revised full-year 2026 US real GDP growth forecast down to just +0.4% (vs. +1.1% in 2025) after the Q1 revision and income weakness",
-          "sources": [
-            {
-              "name": "BEA — Personal Income and Outlays, April 2026 (released May 28, 2026)",
-              "tier": 1,
-              "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-april-2026",
-              "pole": "western"
-            },
-            {
-              "name": "BEA — GDP (Second Estimate), Q1 2026 (released May 28, 2026)",
-              "tier": 1,
-              "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-1st-quarter-2026",
-              "pole": "western"
-            },
-            {
-              "name": "Motley Fool — Inflation Just Spiked to Highest Level in Almost 3 Years Under New Fed Chair Warsh (May 28, 2026)",
-              "tier": 3,
-              "url": "https://www.fool.com/investing/2026/05/28/inflation-just-spiked-to-the-highest-level-in-almost-3-years-in-the-first-report-under-new-fed-chair-kevin-warsh-but-there-was-some-good-news/",
-              "pole": "western"
-            },
-            {
-              "name": "Advisor Perspectives — Q1 GDP Second Estimate: Real GDP at 1.6%, Lower Than Expected (May 28, 2026)",
-              "tier": 3,
-              "url": "https://www.advisorperspectives.com/dshort/updates/2026/05/28/gdp-gross-domestic-product-q1-2026-second-estimate",
-              "pole": "western"
-            },
-            {
-              "name": "Advisor Perspectives — Durable Goods Orders Jump 7.9% in April, More Than Expected (May 28, 2026)",
-              "tier": 3,
-              "url": "https://www.advisorperspectives.com/dshort/updates/2026/05/28/durable-goods-orders-jump-7-9-in-april-more-than-expected",
-              "pole": "western"
-            },
-            {
-              "name": "Benzinga — Fed's Favorite Inflation Gauge Hits 3.8%, Highest Since May 2023 (May 28, 2026)",
-              "tier": 3,
-              "url": "https://www.benzinga.com/markets/macro-economic-events/26/05/52835775/us-pce-inflation-report-april-2026",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "iran-mou-negotiator-level-not-signed-brent-93-may28-2026",
-          "date": "2026-05-28",
-          "title": "US-Iran Tentative 60-Day MOU Drafted at Negotiator Level — Trump Has NOT Signed Off; White House Calls Iranian Press Claim 'Fabrication'; Brent Falls to $93.71",
-          "type": "market",
-          "detail": "On May 28, 2026, the most dramatic development in the ongoing Iran peace negotiations occurred: US and Iranian negotiators drafted a tentative **60-day Memorandum of Understanding (MOU)** — but President Trump had not endorsed it, Vice President Vance explicitly stated there were still 'a couple of language points still being discussed,' and the White House called an Iranian state media claim of a finalized deal a 'complete fabrication.'\n\n**The MOU Framework:**\n- 60-day ceasefire extension with a structured framework for nuclear discussions\n- Partial Strait of Hormuz reopening protocol — commercial vessels can begin transiting with international escort within 72 hours of signing\n- A monitored nuclear freeze: Iran agrees to cap uranium enrichment at 20% and allow IAEA daily access to Fordow and Natanz facilities\n- The verification mechanism (inspections scope) remains the unresolved core issue — Iran's position is that permanent IAEA daily access constitutes a sovereignty violation\n- The most critical item — disposition of Iran's **~72 kg stockpile of 60%-enriched uranium** — was not addressed in the MOU framework, only deferred to 30-day follow-on talks\n\n**The Contradictions:**\nOn the same day the MOU framework was being discussed at the negotiator level:\n- US and Iranian forces **exchanged military strikes** near the Strait of Hormuz — Iran targeted a US forward-deployed military base with two ballistic missiles (both intercepted); the US struck Iranian Revolutionary Guard naval assets in the Strait as part of the ongoing 'self-defense' posture\n- Iranian state TV announced a deal to open the Strait — a claim the **White House called a 'complete fabrication'**\n- VP Vance: 'There are still a couple of language points being discussed — TBD whether the President endorses this framework'\n\n**Oil Market Reaction:**\n- **Brent crude**: closed at **$93.71/bbl** (-$5.47 from $99.18 on May 27) — the third consecutive multi-dollar drop; the largest single-day decline since May 6 when Iran's ceasefire counter-proposal crashed oil 8–9%\n- **WTI crude**: $88.90/bbl (+$0.22 from prior)\n- Oil is now approximately **18–20% below** its 2026 intraday high of ~$115 reached in early May (when IRGC seizures nearly closed Hormuz entirely)\n- The IEA structural caveat remains: even a signed MOU would not fully normalize oil below $85–90/bbl until well into Q4 2026, given the 6 Mbpd structural supply deficit\n\n**Why the MOU Matters — Inflation Arithmetic:**\nIf Brent falls to the $85–90 range (within 2–3 weeks of a signed deal):\n- US national average gasoline would fall approximately 15–18% from current levels\n- Headline CPI could ease from 3.8% to approximately 3.0–3.2% by the July print\n- This would create space for Warsh to hold rates at June 16–17 and signal a more neutral path at the July or September FOMC — reducing rate hike probability and the J.P. Morgan/Moody's recession probabilities\n\nIf the MOU talks collapse:\n- Brent returns toward $103–115\n- June CPI prints above 4.0%\n- FOMC rate hike becomes the primary market scenario by late 2026\n- Moody's Analytics 49% recession probability rises toward 60%+\n\n**Critical Next Steps:**\n- Iranian parliament hardliners must approve any deal — historically the most difficult domestic political obstacle in Iran\n- The IAEA Board of Governors must approve the inspection protocol by June 6\n- Trump has set an informal 'end of May' deadline (which has passed) — the next stated deadline is June 16 (the same day as Warsh's first FOMC and the BOJ meeting)\n- Goldman Sachs: deal signature by June 5 = Brent at $88 by July = Goldman recession probability falls from 30% toward 18%",
-          "sources": [
-            {
-              "name": "CNN — US and Iran reach tentative agreement though Trump hasn't signed off (May 28, 2026)",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/05/28/world/live-news/iran-war-us-news",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Traders' hopes fade for US-Iran nuclear deal after ceasefire report (May 28, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/05/28/hope-fades-for-us-iran-nuclear-deal-after-ceasefire-report.html",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Oil prices: US strikes in Iran revive Strait of Hormuz fears (May 28, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/05/28/oil-prices-us-strikes-in-iran-revive-strait-of-hormuz-turmoil-fears.html",
-              "pole": "western"
-            },
-            {
-              "name": "FXStreet — US Core PCE inflation rises to 3.3% in April — Warsh's preferred trimmed-mean easing (May 28, 2026)",
-              "tier": 3,
-              "url": "https://www.fxstreet.com/news/us-core-pce-inflation-expected-to-tick-up-in-april-reinforcing-fed-hawkish-shift-202605280600",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-iran-close-to-finalizing-deal-brent-99-may27-2026",
-          "date": "2026-05-27",
-          "title": "Trump: US-Iran Nuclear Deal 'Close to Finalizing' with 'Strong Inspections' — Brent $99.18; Khamenei Advisor Calls US Nuclear Demands a 'Fantasy'; Section 122 Cliff Now 57 Days",
-          "type": "market",
-          "detail": "On May 27, 2026, President Trump stated that the United States and Iran were 'close to finalizing' a nuclear deal that would include 'strong inspections,' while Iranian officials sent contradictory signals — with Supreme Leader Khamenei's advisor Ali Shamkhani publicly dismissing US demands for control over Iran's nuclear program as a 'fantasy.'\n\n**Trump's May 27 Statement:**\n- Trump declared: 'We are close to finalizing an agreement with Iran involving strong inspections'\n- The statement extends his Memorial Day ('constructive') remarks of May 25 and signals the US negotiating framework includes verification mechanisms acceptable to Washington\n- Framework under discussion: 30–60 day gradual Hormuz reopening contingent on verified Iranian nuclear drawdown progress; inspections regime modeled on modified JCPOA-style protocols\n\n**Iranian Counternarrative — The Verification Gap:**\n- Iranian Foreign Minister Araghchi expressed 'uncertainty' about timeline, noting remaining 'gaps' on inspections scope\n- Khamenei's senior advisor Ali Shamkhani publicly stated US demands for comprehensive nuclear program control were 'a fantasy we've heard for decades'\n- Iran's publicly stated position: sanctions relief must be immediate and guaranteed, not conditioned on a verification process that could drag for years\n- Iran's IRGC continues to control Strait of Hormuz chokepoints; military operations have not fully paused despite ongoing negotiations\n\n**Oil Price — Brent Holds Near $99:**\n- **Brent crude**: $99.18/bbl (−0.41% from May 26) — holding below $100 for the third consecutive session\n- **WTI crude**: $93.12/bbl (−0.82%)\n- Oil is 'on track for a monthly decline' as Iran peace negotiations continue — but the IEA's warning of a structural 6 Mbpd supply deficit until Q4 2026 creates a floor for prices\n- IEA structural caveat: even a full deal signed this week would not normalize oil below $85–90/bbl until October 2026 at the earliest; full normalization (Brent near $70–75) not before 2027\n- **Inflation arithmetic at Brent $99**: US national average gasoline is still approximately 15–18% above year-ago levels; headline CPI would ease to approximately 3.2–3.4% if Brent sustains below $95, but a deal is NOT yet signed\n\n**Markets on May 27:**\n- **S&P 500**: −0.07% (essentially flat, extending the 9-week run; sector rotation from tech into value/defensives)\n- **Dow Jones**: +~300 pts to a new record as oil prices retreated and defensive/value stocks (Procter & Gamble +3%, Home Depot +2%) outperformed\n- **Nasdaq**: −0.25% (tech consolidation after the Micron-led +1.19% surge on May 26)\n- **10-Year Treasury**: 4.47% (eased slightly from 4.489% May 26 as PCE-week positioning begins)\n\n**Section 122 Tariff Cliff — 57 Days:**\n- Section 122 tariffs expire July 23, 2026 — just 57 days away as of May 27\n- CIT ruled Section 122 unlawful on May 7 (2-1); Federal Circuit stay active — tariffs still collected\n- USTR Greer signals 'accelerated timeline' for Section 301 investigations as legal replacement for Section 122 post-July 23\n- Congressional extension is the other option; bipartisan support uncertain given debt ceiling/Big Beautiful Bill fatigue\n- No Iran/Hormuz deal = Section 122 expiry at $99 Brent = significant oil market uncertainty compound with tariff regime change\n\n**Recession Decision Tree as of May 27:**\n- **Scenario A (Deal this week → Brent falls to $85–90 by July)**: May 28 PCE already hot (above 3.2% core forecast), but forward CPI path improves → Warsh holds June 16-17 → Q2 GDP recovers from ~1% → Goldman recession probability falls from 30% toward 20%\n- **Scenario B (Talks stall or Khamenei veto → Brent recovers to $110+)**: May CPI prints 3.8–4.0%+ → FOMC rate hike H2 2026 → mortgage rates 8%+ → Q3-Q4 GDP contraction → NBER recession late 2026\n- **Scenario C (BOJ + Warsh simultaneous hawkish June 16)**: Even if oil eases, $4–6T yen carry trade unwind → global risk-off → S&P 500 correction → US recession through financial channel rather than inflation\n\n**What to Watch Next:**\n- **May 28 (tomorrow)**: April PCE Price Index + Q1 2026 GDP 2nd estimate + Durable Goods orders (8:30 a.m. EDT) — the most important data release of the Warsh era so far\n- **June 5**: May BLS Employment Situation (jobs report)\n- **June 16-17**: BOJ (65–77% hike probability) + Warsh's first FOMC (SEP + dot plot)\n- **July 23**: Section 122 tariff cliff",
-          "sources": [
-            {
-              "name": "CBS News — Iran War Trump Peace Talks Live Updates (May 27, 2026)",
-              "tier": 2,
-              "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-peace-talks-strait-of-hormuz-control/",
-              "pole": "western"
-            },
-            {
-              "name": "Fortune — Current Price of Oil May 27, 2026",
-              "tier": 2,
-              "url": "https://fortune.com/article/price-of-oil-05-27-2026/",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Stock Market Today Live Updates (May 27, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/05/26/stock-market-today-live-updates.html",
-              "pole": "western"
-            },
-            {
-              "name": "Wikipedia — 2026 Iran War Ceasefire Negotiations",
-              "tier": 3,
-              "url": "https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire",
-              "pole": "international"
-            }
-          ]
-        },
-        {
-          "id": "warsh-independence-resolve-pre-pce-positioning-may27-2026",
-          "date": "2026-05-27",
-          "title": "Warsh 'Independence and Resolve' Swearing-In Statement Analyzed; Pre-PCE Market Positioning; April PCE + Q1 GDP 2nd Estimate Due May 28; BOJ June 16 Hike at 65% Probability",
-          "type": "policy",
-          "detail": "On May 27, 2026, financial media extensively analyzed the market implications of Fed Chair Kevin Warsh's 11-word swearing-in statement at the White House ceremony on May 22: 'I will act with independence and resolve in the public interest.' The analysis crystallized on the eve of the most critical economic data release of the Warsh era — the April PCE Price Index, Q1 2026 GDP second estimate, and Durable Goods Orders, all scheduled for May 28.\n\n**The 11-Word Warsh Statement — Market Interpretation:**\nWarsh's swearing-in statement was notably brief — 11 words — compared to the typically longer ceremonial remarks given by incoming Fed Chairs. Motley Fool, the Globe and Mail, and 247 Wall Street all dedicated analysis to the phrase:\n- **'Independence'**: Analysts read this as a direct response to Trump's repeated public pressure for lower rates — Warsh signaling he will NOT simply comply with White House rate-cut demands\n- **'Resolve'**: Interpreted as hawkish discipline — willingness to maintain restrictive policy despite political pressure and consumer distress\n- **'Public interest'**: The dual mandate framing — inflation control AND maximum employment, not just political accommodation\n- The 10-year Treasury rose 27 basis points in the 5 days following the swearing-in (May 22–May 26 before May 26 Iran-driven rally), reflecting market pricing of a more hawkish Fed path\n\n**Pre-PCE Market Positioning — The Most Important Data Release of the Year:**\nThe April PCE data scheduled for May 28 is the most consequential single data point Warsh will use to calibrate his June 16-17 FOMC stance:\n- **Consensus forecasts (as of May 27)**: Core PCE April estimated at approximately 3.1–3.2% YoY; Headline PCE ~3.5–3.7% YoY\n- **Impact on Fed path**: A core PCE print **above 3.2%** reinforces the rate hike argument; **below 3.0%** would be a major surprise supporting rate cuts\n- **Impact on bond yields**: Hot PCE → 30Y yields reverse the May 26 relief rally back toward 5.10–5.15%; cool PCE → 30Y falls toward 4.90%\n- **Context**: March PCE was 3.2% core / 3.5% headline (released April 30); April should show the first full month of Iran war energy shock pass-through to consumer prices\n\n**10-Year Treasury Yield — 4.47% on May 27:**\n- The 10-year settled at approximately **4.47%** on May 27 (down slightly from 4.489% on May 26), consistent with cautious positioning ahead of the May 28 PCE release\n- The 2-year/10-year yield curve remains slightly positive, having fully un-inverted from the 2022–2024 deep inversion\n- The 30-year at **5.024%** (May 26 close) represents the structural equilibrium between bond vigilante pressure (Moody's Aa1, Big Beautiful Bill, Warsh QT) and Iran peace-deal relief\n\n**BOJ June 16 Hike — Probability Now 65%:**\nING Think and HeyGoTrade updated their BOJ June 16 hike probability to **65%** (some sources cite 77% from ING's prior report; the range is 65–77% across dealers after Japan's Q1 2026 GDP revision). Key data:\n- Japan Q1 2026 GDP: +0.5% QoQ (beat +0.4% forecast)\n- Japan GDP price deflator: +3.4% YoY — well above the BOJ's 2% price stability target\n- BOJ policy rate: 0.75%; expected June hike would bring it to **1.00%** — the first BOJ rate above 1% since 2007\n- The simultaneous BOJ June 16 hike + Warsh FOMC June 16-17 remains the single most dangerous tail risk in global markets\n\n**The Warsh Era Day-5 Macro Balance Sheet:**\n- CPI 3.8% + PPI 6.0% + Core PCE 3.2% — all above 2% target; no cuts possible\n- FOMC April minutes: rate HIKE discussion (unprecedented in this cycle)\n- 30Y Treasury 5.024% (near 19-year high range)\n- S&P 500 at 7,519.12 (record) — equity wealth intact but sentiment at 70-year low\n- Q2 GDP flash trajectory ~1% (near stall speed)\n- Michigan Consumer Sentiment 44.8 (all-time record low)\n- Brent $99.18 (below $100, first time in weeks) — largest downside surprise of the year\n- Section 122 tariff cliff: July 23 (57 days)\n- June 16-17 FOMC: BOJ hike probability 65–77% on same day",
-          "sources": [
-            {
-              "name": "Motley Fool — Fed Chair Kevin Warsh Dropped the Hammer with His 11-Word Swearing-In Statement (May 27, 2026)",
-              "tier": 3,
-              "url": "https://www.fool.com/investing/2026/05/27/fed-chair-kevin-warsh-drop-hammer-11-word-remark/",
-              "pole": "western"
-            },
-            {
-              "name": "ING Think — Stronger-Than-Expected Q1 2026 GDP to Support the BOJ's Rate Hike in June",
-              "tier": 3,
-              "url": "https://think.ing.com/snaps/stronger-than-expected-1q26-gdp-to-support-the-bojs-rate-hike-in-june-a/",
-              "pole": "western"
-            },
-            {
-              "name": "247 Wall St — Kevin Warsh Inherits a Fed that Wall Street Has Almost Stopped Talking About (May 25-27, 2026)",
-              "tier": 3,
-              "url": "https://247wallst.com/investing/2026/05/25/kevin-warsh-inherits-a-fed-that-wall-street-has-almost-stopped-talking-about/",
-              "pole": "western"
-            },
-            {
-              "name": "Kiplinger — This Week's Economic Calendar (May 25-29, 2026)",
-              "tier": 3,
-              "url": "https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-markets-reopen-sp500-record-iran-strikes-may26-2026",
-          "date": "2026-05-26",
-          "title": "US Markets Reopen After Memorial Day: S&P 500 & Nasdaq Hit Records on AI Surge; US Conducts Self-Defense Strikes on Iran Missile Sites; 30Y Treasury Eases to 5.024%",
-          "type": "market",
-          "detail": "US financial markets reopened on Tuesday May 26 after the Memorial Day holiday to a complex macro backdrop: equities surged on AI-driven momentum, Treasury yields fell on Iran peace optimism, but oil spiked intraday after the US military conducted 'self-defense strikes' on Iranian missile launch sites and small boats near the Strait of Hormuz.\n\n**Equity Market — S&P 500 and Nasdaq Hit New Record Closes:**\n- **S&P 500**: +0.61% to 7,519.12 — a new record close, the 9th consecutive weekly-level gain\n- **Nasdaq Composite**: +1.19% to 26,656.18 — new record close, driven primarily by AI-semiconductor names\n- **Dow Jones Industrial Average**: -0.23% (−118 pts) to 50,461.68\n- **Micron Technology (MU)**: surged +19% after UBS upgrade, crossing a $1 trillion market cap for the first time — the catalyst for the AI-chip complex rally\n- AMD, Qualcomm, and Alphabet (Google) also advanced sharply\n- The S&P 500 / equity rally represents an extraordinary 'sentiment-spending divergence': Michigan Consumer Sentiment at a 70-year record low of 44.8 yet the stock market is repeatedly hitting all-time highs\n\n**Treasury Yields — Bond Market Rally on Iran Peace Optimism:**\nUS Treasury yields fell materially as markets reopened, pricing in Trump's Memorial Day 'constructive' Iran statement:\n- **10-Year Treasury**: fell ~8 basis points to **4.489%** (from ~4.57% on May 23 close)\n- **2-Year Treasury**: fell ~8 bps to **4.04%**\n- **30-Year Treasury**: fell ~5 bps to **5.024%** — easing from the 5.086% May 22 close and the 5.189% May 19 19-year high\n- The 30Y yield at 5.024% remains structurally elevated — driven by Moody's Aa1 downgrade, Warsh's QT plans, and Big Beautiful Bill fiscal expansion — but Iran peace progress is the single-session relief factor\n\n**US Self-Defense Strikes on Iran — Oil Volatility Returns:**\nUS Central Command carried out 'self-defense strikes' on Iranian missile launch sites and small boats near the Strait of Hormuz on May 26, responding to a 24-hour IRGC campaign of missile, drone, and small-boat harassment:\n- Iran immediately vowed retaliation — Brent crude jumped **more than 3% intraday** on the news\n- Despite the intraday spike, Brent remained below $103 as markets priced the strikes as defensive rather than escalatory\n- US and Iran negotiating teams were simultaneously conducting peace negotiations via Gulf facilitators — the contradiction of 'striking while talking' is seen by analysts as a pressure tactic\n- Secretary of State Rubio (attending G7 Foreign Ministers in Rome): characterized the strikes as 'limited self-defense response' and confirmed negotiations continue\n- Oil market: Brent ended the day roughly flat to slightly elevated vs the $97 Memorial Day level as peace-talk optimism (driving yields down) and Iran retaliation threats (driving oil up) roughly offset each other\n\n**Recession Implications:**\n- The S&P 500 record close at 7,519.12 confirms the 'equity wealth effect' remains intact even as consumer sentiment hits 70-year lows — a divergence without historical precedent\n- Treasury 30Y easing to 5.024% provides marginal relief on mortgage rates (30Y fixed ~7.4-7.5%) — a modest positive for the housing sector\n- The Iran self-defense strikes, while not a full escalation, reinforce the IEA's warning that the 6 Mbpd structural supply deficit persists until Q4 2026 regardless of negotiating progress\n- S&P Global's May Flash PMI (released May 22) had flagged a Q2 GDP trajectory of ~1% annualized — a 'near stall speed' level that suggests the equity rally is not matched by the real economy\n- Key risk: May 28 (next day +2) PCE April + Q1 GDP 2nd estimate — if PCE exceeds 3.2% core, the 30Y Treasury rally could reverse rapidly",
-          "sources": [
-            {
-              "name": "CNBC — Treasury Yields Slide After Memorial Day Break as US Strikes Iran (May 26, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/05/26/treasury-yields-us-strikes-on-iran-oil-bonds.html",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — US Conducts Self-Defense Strikes on Iran as Trump Seeks Peace Deal (May 26, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/05/26/us-conducts-self-defense-strikes-in-iran-as-trump-seeks-peace-deal.html",
-              "pole": "western"
-            },
-            {
-              "name": "NBC News — US Military Says It Conducted Self-Defense Strikes Targeting Iran (May 26, 2026)",
-              "tier": 2,
-              "url": "https://www.nbcnews.com/world/iran/us-military-says-conducted-self-defense-strikes-targets-iran-rcna346839",
-              "pole": "western"
-            },
-            {
-              "name": "TheStreet — Stock Market Today: Dow Jones, S&P 500, Nasdaq Updates May 26, 2026",
-              "tier": 2,
-              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-26-2026",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "conference-board-consumer-confidence-may-2026-93pt1",
-          "date": "2026-05-26",
-          "title": "Conference Board Consumer Confidence May 2026: 93.1 (Beat vs 91.9 Forecast; First Monthly Decline in 4 Months; Two-Thirds of Consumers Cutting Spending on Inflation)",
-          "type": "economic",
-          "detail": "The Conference Board released its May 2026 Consumer Confidence Index on Tuesday May 26, showing a reading of **93.1** — beating the consensus forecast of 91.9 but recording the first monthly decline in four months, falling approximately 0.7 points from the revised April figure.\n\n**May 2026 Consumer Confidence — Key Components:**\n- **Headline**: 93.1 (beat vs ~91.9 consensus; first decline in 4 months)\n- **Present Situation Index**: 121.2 (fell 3.2 points)\n- **Expectations Index**: 74.4 (ticked up slightly)\n- **Expectations below 80**: still below the 80-point 'recession warning threshold' — this marks the **16th consecutive month** the Expectations Index has been in recession-warning territory\n- **Consumer behavior**: Two-thirds (approximately 66%) of survey respondents said they were cutting back on spending due to rising prices — the highest proportion citing active spending cuts in the survey's history for a period outside of an official recession\n- **Primary driver cited**: Inflationary impact of the Middle East (Iran) war — gasoline prices and energy costs dominated consumer concerns\n\n**Context — The Sentiment/Spending Paradox:**\nMay 2026 data crystallizes an unprecedented macroeconomic paradox:\n- **Conference Board May**: 93.1 (fell slightly, still relatively high — reflects current conditions)\n- **University of Michigan May Final**: 44.8 (all-time record low in 70+ year survey history)\n- **Retail Sales April**: +4.9% YoY (consumers are still spending despite record pessimism)\n- The CB index measures both current conditions (stronger — Present Situation at 121.2) and expectations (weaker — Expectations at 74.4), while Michigan measures forward-looking sentiment more heavily\n- The combined picture: consumers assess their current financial position as still adequate but are deeply pessimistic about where prices and the economy are headed\n\n**The 'Spending Cliff' Risk:**\nHistorically, when Michigan Sentiment falls to post-1979 lows, retail spending collapses within 2-4 quarters as consumers finally exhaust savings buffers and reduce discretionary purchases. The April 2026 retail spending resilience (+4.9% YoY) may therefore represent the last robust reading before a demand-led GDP deceleration in Q3-Q4 2026.\n\n**Recession Probability Implications:**\n- The 16th consecutive month below the 80-point Expectations threshold increases the probability of a CB-defined pre-recession consumer environment\n- Combined with Michigan at 44.8, April PCE at 3.2% core, and Q2 GDP flash trajectory at ~1%, the Conference Board May 93.1 provides only marginal comfort\n- Key context: The US consumer has beaten pessimism surveys before — the question is whether the Iran war energy shock and Moody's Aa1 downgrade now break that pattern\n- Goldman 30%, JPMorgan 35%, Moody's Analytics 49% recession probabilities were all compiled before the Memorial Day developments",
-          "sources": [
-            {
-              "name": "Axios — Consumer Confidence Dips in May as Inflation Intensifies (May 26, 2026)",
-              "tier": 2,
-              "url": "https://www.axios.com/2026/05/26/consumer-confidence-conference-board",
-              "pole": "western"
-            },
-            {
-              "name": "Advisor Perspectives — Consumer Confidence Dipped in May as Inflation Intensifies (May 26, 2026)",
-              "tier": 3,
-              "url": "https://www.advisorperspectives.com/dshort/updates/2026/05/26/consumer-confidence-dipped-in-may-as-inflation-intensifies",
-              "pole": "western"
-            },
-            {
-              "name": "Sharecast — US Consumer Confidence Slips in May (May 26, 2026)",
-              "tier": 3,
-              "url": "https://www.sharecast.com/news/international-economic/us-consumer-confidence-slips-in-may--22551056.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-memorial-day-iran-brent-below-100-may25-2026",
-          "date": "2026-05-25",
-          "title": "Trump Memorial Day Statement: Iran Talks 'Constructive' — Brent Falls to ~$97, First Sub-$100 Since Mid-April; US Markets Closed",
-          "type": "market",
-          "detail": "On Memorial Day — May 25, 2026 — with US financial markets closed, President Trump posted on social media that US-Iran peace negotiations are 'proceeding in an orderly and constructive manner,' while instructing his team 'not to rush.' The statement triggered the most significant oil price move in weeks, pushing Brent crude from Friday's $103.54 close toward approximately $97/barrel during Sunday-Monday holiday trading — the first time Brent has been below $100 since mid-April 2026.\n\n**The Memorial Day Iran Statement:**\n- Trump characterized talks as 'orderly and constructive' but discouraged urgency, signaling a measured approach\n- The Gulf facilitators — UAE, Saudi Arabia, and Qatar — have reportedly narrowed the remaining sticking points to two: the pace of Iranian enriched-uranium drawdown verification, and the duration of a US sanctions relief guarantee\n- Secretary Rubio, speaking from Rome (G7 Foreign Ministers meeting), described the deal as a 'work in progress' with 'significant gaps remaining'\n- The proposed MOU framework would include a 30–60 day gradual Hormuz reopening process, with full commercial shipping restoration conditional on verified nuclear drawdown progress\n\n**Oil Price Impact — First Sub-$100 Since Mid-April:**\nBrent crude's drop toward $97 during Memorial Day weekend represents a milestone — oil has not traded below $100/barrel since the Iran war's Hormuz-blocking phase escalated in late March/early April 2026:\n- **Brent intraday range (May 25)**: $97–$100 — down from Friday's close of $103.54\n- **WTI**: approximately $90–$92 — below $100 for the first time since mid-April\n- The move extends the week's decline from the $111 Brent close on May 15 (post-Trump-Xi summit) to approximately $97 — a $14/barrel drop in 10 days on peace talk optimism\n- **IEA structural caveat remains**: Even if a deal is signed this week, the IEA estimates the global oil market will remain 'severely undersupplied' until at least Q4 2026 — a 6 million barrels/day deficit that requires months to close once Hormuz reopens\n\n**Inflation Transmission Calculus:**\n- Brent at $97 → US national average gasoline prices would still be approximately 18–22% above year-ago levels (April CPI showed gasoline +28.4% YoY at ~$111 Brent)\n- For meaningful CPI relief — reducing headline CPI from 3.8% toward 3.0% — Brent would need to sustain below $88–$90\n- The May 28 PCE April release (the Fed's preferred inflation gauge) will be the first hard data point Warsh uses to calibrate his June 16-17 FOMC stance\n- A hot PCE print (above 3.2% Core) combined with oil relief may keep the stagflation narrative intact — preventing any market pricing of rate cuts\n\n**Memorial Day Context — US Markets Closed:**\n- NYSE and Nasdaq closed on May 25, 2026 for Memorial Day\n- When markets reopen Tuesday May 26, the primary focus will shift to:\n  1. **May 28**: Q1 2026 GDP second estimate + April PCE Price Index + April Durable Goods Orders\n  2. **June 5**: May employment situation (BLS)\n  3. **June 16-17**: Warsh's first FOMC (SEP + dot plot + press conference)\n  4. **July 23**: Section 122 tariff cliff (59 days)\n\n**Recession Probability Implications:**\n- If Iran deal signed this week → Brent falls to $85–90 → June PCE prints at 3.0–3.2% → Warsh holds → Q2 GDP trajectory improves from ~1% → Goldman recession probability falls from 30% toward 20%\n- If talks collapse or stall → Brent recovers to $110–115 → May CPI prints 3.8–4.0%+ → FOMC rate hike in H2 → mortgage rates hit 8%+ → Q3-Q4 GDP contraction → NBER recession likely late 2026\n- The IEA's warning about structural undersupply means even a peace deal does not guarantee oil below $100 Brent by July-August — the most critical window for avoiding a recession",
-          "sources": [
-            {
-              "name": "Al Jazeera — Oil Prices Fall Amid Mixed Signals on US-Iran Peace Deal (May 25, 2026)",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/economy/2026/5/25/oil-prices-fall-amid-mixed-signals-on-us-iran-peace-deal",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "CNN — Iran War Live Updates: Trump Says Peace Talks Proceeding Nicely (May 25, 2026)",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/05/25/world/live-news/iran-war-us-peace-deal",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Oil Prices Fall 4%+ After Trump's Constructive Comment on Iran (May 24-25, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/amp/2026/05/24/oil-price-iran-war-strait-hormuz-trump-peace-talks.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "japan-q1-2026-gdp-boj-june-hike-77pct-carry-trade-may25-2026",
-          "date": "2026-05-25",
-          "title": "Japan Q1 2026 GDP Stronger Than Expected — BOJ June 16 Rate Hike at 77% Market Probability; Simultaneous Warsh FOMC Creates Historic Global Policy Convergence",
-          "type": "policy",
-          "detail": "Over the Memorial Day weekend, analysts crystallized the assessment that Japan's Q1 2026 GDP — which came in stronger than expected (preliminary estimate released mid-May) — has materially raised the probability of a Bank of Japan rate hike at the June 16 meeting to approximately 77% in overnight index swap markets. This is the most consequential single peripheral risk factor for global markets in the near term, because the June 16 BOJ meeting coincides exactly with the first day of Kevin Warsh's inaugural FOMC meeting.\n\n**Japan Q1 2026 GDP — Stronger Than Expected:**\n- Japan's Cabinet Office released the preliminary Q1 2026 GDP estimate in mid-May 2026, showing expansion that exceeded consensus forecasts — the primary driver behind the upward reassessment of the BOJ's June hike readiness\n- GDP strength was driven by continued investment demand, recovering services consumption, and wage growth materializing from the Shunto spring wage negotiations (largest wage increase in three decades)\n- ING Think noted in a research snap: 'Stronger-than-expected Q1 2026 GDP [supports] the BOJ's rate hike in June' — this is a definitive shift from the BOJ's earlier 2026 stance, where the Iran war energy shock was expected to delay normalization\n\n**BOJ June 16 — 77% Market Probability:**\nOvernight index swaps as of late May 25 imply approximately 77% probability of a 25 basis point BOJ rate hike at the June 16 meeting, which would bring the policy rate from 0.75% to 1.00% — the first time the BOJ rate has exceeded 1% since 2007:\n- The April 28, 2026 BOJ decision held at 0.75% (6-3 vote) but three dissenters (Nakagawa, Takata, Tamura) pushed for an immediate hike to 1.00%\n- The Summary of Opinions (released May 12) included a board member statement that a June hike is 'quite possible'\n- FY2026 GDP forecast: 0.5% (revised from 1.0%) — but core inflation forecast raised to 2.8% (from 1.9%), the decisive factor\n- Both Goldman Sachs and Nomura have June 16 BOJ hike to 1.00% as their base case\n\n**The June 16 Global Policy Convergence — 'Black Monday II' Risk:**\nThe BOJ June 16 meeting coincides precisely with Kevin Warsh's first FOMC meeting (June 16-17). This creates a scenario without precedent in the post-2008 era:\n- **BOJ June 16 (Tokyo morning)**: Expected hike from 0.75% to 1.00% → yen strengthens sharply\n- **Fed June 16-17 (Washington)**: Warsh's first SEP + dot plot + press conference — with FOMC officials having discussed rate hikes in April\n- If both central banks deliver simultaneously hawkish signals on the same day, the yen carry trade — estimated at $4–6 trillion in outstanding positions — could unwind rapidly\n- August 5, 2024 ('Black Monday II') precedent: BOJ surprise hike → Nikkei -12% in single session (largest single-day drop since 1987) → S&P 500 -3% intraday\n- The current situation is structurally MORE dangerous than August 2024 because: (1) Fed rate hike risk is NEW to this cycle; (2) 30Y Treasury at 5.09% vs 4.2% in August 2024; (3) US-Iran conflict still active; (4) Moody's Aa1 downgrade already in price\n\n**Japan's Macro Context — Stuck Between Inflation and Exposure:**\n- Japan core CPI (excluding fresh food): approximately 3.5% YoY in April 2026 — far above the BOJ's 2% target\n- Iran war energy shock has been particularly severe for Japan: ~90% of oil and LNG is imported; any Hormuz disruption directly raises Japanese utility costs, freight, and wages\n- JGB 10-year yield: approximately 2.11% — the highest in over 15 years, representing a normalization of Japanese bond markets after three decades of yield curve control\n- USD/JPY: approximately 150–155 range — yen still weak, amplifying imported energy costs further\n- A BOJ hike to 1.00% on June 16 would likely push USD/JPY toward 140–145 in a rapid correction, accelerating the carry trade unwind\n\n**Memorial Day Weekend Assessment:**\nAs US investors return from the Memorial Day holiday on May 26, the June 16 BOJ-FOMC convergence is becoming the dominant narrative in macro circles. The combination of: (1) Trump's Memorial Day Iran statement (potential oil relief); (2) Warsh's first week of full authority (balance sheet reduction plans); (3) BOJ June hike priced at 77%; and (4) PCE data due May 28 — creates a market environment where the next 22 days are the most consequential of the year for global recession risk.",
-          "sources": [
-            {
-              "name": "ING Think — Stronger-Than-Expected Q1 2026 GDP to Support the BOJ's Rate Hike in June",
-              "tier": 3,
-              "url": "https://think.ing.com/snaps/stronger-than-expected-1q26-gdp-to-support-the-bojs-rate-hike-in-june-a/",
-              "pole": "western"
-            },
-            {
-              "name": "Japan Times — BOJ April Summary of Opinions: Interest Rate Hike Possible at June Meeting",
-              "tier": 2,
-              "url": "https://www.japantimes.co.jp/business/2026/05/12/economy/boj-april-summary-opinion-interest-rate/",
-              "pole": "eastern"
-            },
-            {
-              "name": "CNBC — Bank of Japan Keeps Policy Rate Steady; Three Hawkish Dissenters (Apr 28, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "boj-june-rate-hike-quite-possible-summary-opinions-carry-risk-may24-2026",
-          "date": "2026-05-24",
-          "title": "Bank of Japan Summary of Opinions: June Rate Hike 'Quite Possible' — BOJ June 16 Meeting Coincides with Warsh's First FOMC; Carry Trade Unwind Risk Returns",
-          "type": "policy",
-          "detail": "The Bank of Japan's Summary of Opinions from the April 28 meeting (released May 12, 2026) sent a clear signal that a June rate hike is on the table — a development that market analysts are assessing over the Memorial Day weekend for its global carry-trade implications. One board member explicitly stated: 'I think it is quite possible the bank will raise the policy rate at the next monetary policy meeting' — the June 16 meeting.\n\n**The April 28, 2026 BOJ Decision — Most Hawkish Split of the Ueda Era:**\n- Policy decision: Hold at 0.75% (unanimous rate decision)\n- Actual vote split: 6-3 — three dissenters (Nakagawa, Takata, Tamura) pushed for an IMMEDIATE hike to 1.00%\n- This is the most hawkish internal divide in Governor Ueda's tenure since assuming office in April 2023\n- FY2026 GDP forecast: cut to 0.5% (from 1.0%) — but inflation forecast RAISED significantly\n- FY2026 core inflation forecast: raised to 2.8% (from 1.9%) — far above the 2% target\n- Primary driver: Iran war energy shock and second-round price effects on Japanese utility costs, freight, and wages\n\n**June 16 — The Global Policy Convergence Date:**\nThe Bank of Japan's next scheduled meeting is June 16, 2026 — the same day that Kevin Warsh's first Federal Open Market Committee meeting begins (June 16-17). This creates an extraordinary global policy convergence:\n- **BOJ (June 16)**: Expected by Goldman Sachs and Nomura to hike from 0.75% to 1.00% — the first hike ABOVE 1% in Japan since 2007\n- **Fed (June 16-17)**: Warsh's first FOMC with new Summary of Economic Projections, dot plot, and press conference — with FOMC April minutes showing rate hike discussion\n- A simultaneous BOJ hike and hawkish Fed signal could materially unwind the yen carry trade, with systemic implications for global risk assets\n\n**The August 2024 Carry Trade Warning:**\nThe August 5, 2024 ('Black Monday II') market crash — triggered by a surprise BOJ rate hike that unwound yen carry trades — remains the clearest precedent:\n- Nikkei fell 12% in a single session (largest one-day drop since 1987)\n- S&P 500 fell 3% intraday (significant but less severe than Japan)\n- Global estimates suggest $4–6 trillion in yen-funded carry trades remain outstanding\n- The BOJ explicitly identified the August 2024 shock as a 'communication lesson' and has since been far more deliberate in signaling hikes in advance — but the current June convergence with a hawkish Fed is structurally more dangerous than the August 2024 episode, because: (1) Fed rate hike risk is NEW to this cycle; (2) The 30Y Treasury is at 5.09% vs 4.2% in August 2024; (3) US-Iran conflict is still active\n\n**Japan's Inflation Context:**\n- Japan CPI (core, excluding fresh food): approximately 3.5% YoY in April 2026\n- Iran war energy shock has been particularly severe for Japan, which imports virtually all of its oil and LNG\n- Yen depreciation (USD/JPY around 150-155 range) amplifies imported energy costs further\n- JGB 10Y yield: approximately 2.11% — its highest level in over 15 years\n- Japan's balance-of-trade has shifted to persistent deficits as energy import costs overwhelm export revenues\n\n**Market Impact Assessment:**\nIf the BOJ hikes on June 16 (the same day as Warsh's first FOMC):\n- Yen appreciates sharply → carry trade unwind → global risk-off\n- Nikkei and Asian equities sell off → contagion risk to S&P 500 and European equities\n- Global credit spreads widen → high-yield borrowing costs increase\n- The Fed's June 16-17 FOMC is already the most consequential event since the Iran war began — a simultaneous BOJ hike amplifies both the positive scenario (both central banks control inflation) and the negative scenario (global carry unwind + US rate hike risk = synchronized tightening).",
-          "sources": [
-            {
-              "name": "Japan Times — BOJ April Summary of Opinions: Interest Rate Hike Possible at June Meeting",
-              "tier": 2,
-              "url": "https://www.japantimes.co.jp/business/2026/05/12/economy/boj-april-summary-opinion-interest-rate/",
-              "pole": "eastern"
-            },
-            {
-              "name": "CNBC — Bank of Japan Keeps Policy Rate Steady; Three Hawkish Dissenters",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "iran-peace-talks-brent-103-weekly-decline-iea-undersupply-may24-2026",
-          "date": "2026-05-24",
-          "title": "Iran Peace Talks Progress Pulls Brent to $103.54 (Down >5% on Week) — But IEA Warns 6 Mbpd Deficit Persists Until Q4 2026; Full Normalization Not Until 2027",
-          "type": "economic",
-          "detail": "Oil markets recorded their largest weekly decline since the Iran war began as peace negotiations facilitated by the UAE, Saudi Arabia, and Qatar showed concrete progress during the week ending May 22, 2026. Brent crude settled at $103.54/barrel on May 22 — down more than 5% for the week — while WTI fell to $96.60/barrel, down more than 8% on the week.\n\n**The Weekly Oil Price Movement (May 18-22):**\n- May 18: Brent ~$108-109 (Monday open)\n- May 19: Iran peace talk optimism begins; Brent eases from ~$113 intraweek high\n- May 20: Iran ceasefire rumor intensifies; Brent approaches $107\n- May 21: Ceasefire reversal; Brent surges back to ~$107\n- May 22 (close): Brent $103.54 (-5%+ on week), WTI $96.60 (-8%+ on week)\n- **Prior week close (May 15)**: Brent ~$111.04, WTI ~$106 — the weekly decline of ~$7-8/bbl is the largest since the conflict began\n\n**Why Peace Talks Are Progressing:**\nThree Gulf facilitators — UAE, Saudi Arabia, and Qatar — have been mediating between the US and Iran since the Trump-Xi Beijing summit (May 14-15) failed to produce an Iran/Hormuz breakthrough. Key developments:\n- Sticking points identified: (1) Iran's enriched uranium stockpile (Iran wants guarantees against future strikes; US demands verified drawdown); (2) Strait of Hormuz transit toll mechanism (Iran proposed a 'reconstruction levy' on oil tankers; US and shippers reject any toll)\n- US interlocutor: Confirmed as Steven Mnuchin (informal envoy) and State Department Channel B via Oman\n- Trump called off 'imminent strike' plans on Monday May 18, providing a de-escalation signal that moved markets\n\n**What the IEA is Saying — Structural Undersupply Persists:**\nDespite the price relief, the International Energy Agency's May 2026 report maintains that the oil market will remain structurally undersupplied:\n- **IEA assessment**: 'Even if the conflict ends next month, the market will be severely undersupplied until at least October 2026' — the production ramp-up from Iran, Iraqi southern fields, and UAE emergency fields takes months\n- **Supply deficit**: Approximately 6 million barrels per day below pre-war levels (EIA: 10.1 mbpd still disrupted, a figure the IEA is more conservative about at 6+ mbpd)\n- **Energy executives**: Multiple CEOs of major oil companies have warned full normalization may not occur until 2027 — particularly if any lasting infrastructure damage to Hormuz navigation channels is confirmed\n\n**The Inflation Implication — Oil Must Fall Further to Move the Needle:**\nAt $103 Brent:\n- US national average gasoline prices remain approximately 25-28% above year-ago levels (April CPI: gasoline +28.4% YoY)\n- To reduce the gasoline CPI contribution to ~15% YoY, Brent would need to fall to approximately $85-90/barrel\n- To ease headline CPI from 3.8% toward 3.0%, energy prices need to normalize toward $80-85 Brent by the June 2026 data reading\n- None of these scenarios are in the base case given the IEA's 'October 2026 undersupply' warning\n\n**The Good News / Bad News Bifurcation:**\n- **Good scenario**: Iran deal signed by end of May → Hormuz fully reopens by July → Brent falls toward $85-90 → June CPI prints at 3.2-3.4% → Warsh holds at 3.50-3.75% in June FOMC → recession risk eases from Moody's 49% toward Goldman's base case\n- **Bad scenario**: Talks collapse in June (uranium stockpile remains the primary sticking point) → Brent recovers to $110-115 → May CPI prints 3.8-4.0%+ → FOMC rate hike in H2 → mortgage rates hit 8%+ → Q3-Q4 GDP contraction → NBER recession in late 2026\n\n**Memorial Day Long Weekend Context:**\nUS financial markets closed on Monday, May 25 (Memorial Day). When markets reopen on May 26, the critical data releases begin: GDP Q1 second estimate, Durable Goods Orders (April), and PCE Price Index (April) are all scheduled for May 28, 2026 — with PCE being the Federal Reserve's preferred inflation gauge and the most consequential release before Warsh's June 16-17 FOMC.",
-          "sources": [
-            {
-              "name": "CNBC — Oil Prices Today: Trump, Iran, Strait of Hormuz Negotiations (May 22, 2026)",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/05/22/oil-prices-today-trump-iran-strait-of-hormuz-uranium-.html",
-              "pole": "western"
-            },
-            {
-              "name": "Al Jazeera — Why the Oil and Gas Price Shock from the Iran War Won't Just Fade Away",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/opinions/2026/3/23/why-the-oil-and-gas-price-shock-from-the-iran-war-wont-just-fade-away",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "Fortune — Current Price of Oil, May 22, 2026",
-              "tier": 2,
-              "url": "https://fortune.com/article/price-of-oil-05-22-2026/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "michigan-may-2026-final-sentiment-448-record-low-may22",
-          "date": "2026-05-23",
-          "title": "Michigan Consumer Sentiment May 2026 Final: 44.8 — Shatters April's 47.6 Record; Deepest Pessimism in 70-Year Survey History; Year-Ahead Inflation 4.5%",
-          "type": "economic",
-          "detail": "The University of Michigan released its final May 2026 Consumer Sentiment reading on Friday, May 22, 2026 — and the result shattered the April 2026 all-time record low by another 2.8 points. The final May reading came in at 44.8 — dramatically below the preliminary reading of 48.2 and well below any previous survey reading in the index's 70+ year history.\n\n**Historical Context — Three Records in Three Months:**\nThe sequence of record lows is unprecedented:\n- February 2026: 73.7 (elevated Iran war inflation shock beginning)\n- March 2026: 57.0 (Iran war energy shock intensifies)\n- April 2026 FINAL: 47.6 (new all-time record — broke 1980 energy crisis nadir of 51.7)\n- May 2026 PRELIMINARY: 48.2 (expected slight stabilization)\n- **May 2026 FINAL: 44.8 — NEW ALL-TIME RECORD LOW** (broke April's record by 2.8 points)\n\nThe 3.4-point collapse from the preliminary (48.2) to the final (44.8) is highly unusual — monthly revisions typically are under 1 point — suggesting consumer conditions deteriorated materially during the second half of May, precisely as the Moody's Aa1 downgrade (May 16) and FOMC rate hike discussion (minutes released May 20) added to household anxiety.\n\n**Breakdown by Component:**\n- **Current Economic Conditions index**: fell approximately 9% from April levels — consumers describing their current situation as significantly worse\n- **Consumer Expectations index**: further deteriorated, consistent with forward-looking pessimism about the economic trajectory\n- **Year-ahead inflation expectations**: 4.5% — down slightly from April's 4.7% (which was the largest one-month jump in survey history) but still far above the historical range associated with anchored expectations\n- **Long-run (5-year) inflation expectations**: remained elevated — suggesting de-anchoring risk\n\n**What Consumers Are Blaming:**\n- Approximately 1/3 of respondents spontaneously mentioned gasoline prices when asked about the economy — reflecting April's +28.4% YoY energy shock from the Iran/Hormuz conflict\n- Approximately 30% spontaneously mentioned tariffs — consistent with the University of Michigan's running series showing tariff awareness at multi-decade highs\n- High prices and interest rates remained the dominant unprompted themes\n\n**The Stagflation Signal — Sentiment vs. Spending Divergence:**\nA persistent puzzle in the 2025-2026 US data is the extraordinary divergence between consumer sentiment (all-time record low at 44.8) and consumer spending (April retail sales +4.9% YoY — above headline inflation, implying real growth). Historically, sentiment readings below 60 have always preceded spending contractions within 6-12 months. The current divergence has persisted since late 2024 and cannot continue indefinitely:\n- Theory A: Spending collapse is coming — households are drawing down savings/credit to maintain spending despite pessimism\n- Theory B: Soft data (sentiment) is being distorted by political polarization, and hard data (spending, jobs) is the correct signal\n- The Michigan survey's own research shows higher correlations between current-conditions and near-term spending than expectations and forward spending\n\n**The Implication for Warsh's June 16-17 FOMC:**\nKevin Warsh was sworn in on May 22 — the same day the record-low sentiment was confirmed. His first FOMC meeting with a Summary of Economic Projections (dot plot) on June 16-17 will have to reconcile: (1) record-low consumer sentiment; (2) persistent above-target inflation (CPI 3.8%, PCE 3.2%); (3) FOMC April minutes showing officials discussed rate hikes; (4) Q2 GDP trajectory of only ~1% (Flash PMI, May 22); (5) strong April retail sales and April jobs (+115K). The stagflation trap — weak consumer confidence + above-target inflation + decelerating growth + strong spending data — is the defining challenge.\n\n**Why 44.8 Matters More Than Prior Records:**\nThe 1980 nadir of 51.7 occurred during a genuine stagflation crisis (11% unemployment, 13%+ CPI, prime rate 20%+). Today's 44.8 with 4.3% unemployment and 3.8% CPI suggests consumers are experiencing extreme stress through the combination of: energy prices, tariff uncertainty, housing affordability collapse (7.5%+ mortgage rates), and eroded pandemic-era savings buffers. The record low sentiment at 44.8 may be the leading indicator of a spending collapse that lagging hard data has not yet confirmed.",
-          "sources": [
-            {
-              "name": "Advisor Perspectives / dshort — Consumer Sentiment Sinks to Record Low (May 2026 Final: 44.8)",
-              "tier": 3,
-              "url": "https://www.advisorperspectives.com/dshort/updates/2026/05/22/consumer-sentiment-sinks-to-record-low-as-cost-of-living-concerns-intensify",
-              "pole": "western"
-            },
-            {
-              "name": "InvestingLive — UMich May Final Consumer Sentiment 44.8 vs 48.2 Expected",
-              "tier": 3,
-              "url": "https://investinglive.com/news/umich-may-final-consumer-sentiment-448-vs-482-expected-20260522/",
-              "pole": "western"
-            },
-            {
-              "name": "Neil Sethi Substack — University of Michigan Survey of Consumer Sentiment May 2026",
-              "tier": 3,
-              "url": "https://neilsethi.substack.com/p/university-of-michigan-survey-of-179",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -885,50 +717,50 @@
         {
           "id": "us-unemployment",
           "label": "US Unemployment Rate",
-          "value": "4.3%",
+          "value": "4.2%",
           "color": "amber",
-          "source": "BLS April 2026 Employment Situation (released May 8, 2026)",
+          "source": "BLS June 2026 Employment Situation (released July 2, 2026)",
           "contested": false,
-          "delta": "+0.9pp",
-          "deltaNote": "vs 2023 trough (3.4%). April 2026 CONFIRMED 4.3% (unchanged from March) — BLS May 8 release. April payrolls: +115,000 (strong beat vs ~60K consensus). February now revised to –156,000 (deepest monthly loss since April 2020, from prior –133K). March revised up to +185,000. Part-time for economic reasons +445K to 4.9M. Federal government –9K (DOGE cuts continuing).",
+          "delta": "-0.1pp vs May (4.3%)",
+          "deltaNote": "June 2026 (July 2): Unemployment fell to 4.2% (vs 4.3% expected) — but largely because labor-force participation dropped to 61.5%, the lowest since March 2021, rather than from underlying strength. June NFP +57,000, a sharp slowdown from May's downwardly-revised +129,000; April/May combined revised down 74,000. Average hourly earnings +0.3% to $37.64 (+3.5% YoY).",
           "trend": "down",
-          "lastUpdated": "2026-05-08T14:20:00Z"
+          "lastUpdated": "2026-07-02T13:30:00Z"
         },
         {
           "id": "us-core-pce",
-          "label": "US PCE Inflation (April 2026 — 3-Year High)",
-          "value": "3.3% Core / 3.8% Headline",
+          "label": "US PCE Inflation (May 2026 — Highest Since 2023)",
+          "value": "3.4% Core / 4.1% Headline",
           "color": "red",
-          "source": "BEA PCE Release, April 2026 (released May 28, 2026)",
+          "source": "BEA PCE Release, May 2026 (released June 25, 2026)",
           "contested": false,
-          "delta": "+0.1pp core / +0.3pp headline vs March",
-          "deltaNote": "APRIL 2026 (released May 28): Core PCE 3.3% YoY (+0.2% MoM — softer than +0.3% feared); Headline PCE 3.8% YoY (+0.4% MoM — below +0.5% consensus). YoY prints are 3-year highs (highest core since Oct 2025; highest headline since May 2023). 'Supercore' services PCE (ex-energy, ex-housing) decelerated to +0.1% MoM — the one dovish signal. Real disposable income: -0.5% MoM (2nd consecutive decline). Saving rate: 2.6% multi-year low. Energy (gasoline +5.5% MoM) drove the headline surge. Warsh prefers trimmed-mean gauge — which eased. June FOMC hold: ~99% priced.",
+          "delta": "+0.1pp core / +0.3pp headline vs April",
+          "deltaNote": "MAY 2026 (released June 25): Headline PCE 4.1% YoY (+0.4% MoM) — highest since April 2023. Core PCE 3.4% YoY (vs 3.3% forecast). Personal income and spending each +0.7% MoM; saving rate held at 3%. Released just over a week after Warsh's hawkish dot plot, complicating the disinflation narrative even as Iran-deal oil relief began working through the data. June CPI (July 14) subsequently cooled to 3.5%, suggesting May PCE may mark the cycle high.",
           "trend": "up",
-          "lastUpdated": "2026-05-28T13:30:00Z"
+          "lastUpdated": "2026-06-25T13:30:00Z"
         },
         {
           "id": "fed-funds-rate",
           "label": "Fed Funds Rate",
           "value": "3.50–3.75%",
           "color": "blue",
-          "source": "Federal Reserve FOMC, Apr 29 2026 (unanimous hold — Powell's final meeting)",
+          "source": "Federal Reserve FOMC, June 17 2026 (Warsh's first meeting — unanimous hold)",
           "contested": false,
-          "delta": "-175 bps",
-          "deltaNote": "vs peak (5.25–5.50%, Aug 2023–Sep 2024); FOMC held unanimously at Apr 29 — Powell's final meeting. Warsh floor vote expected week of May 11. JPMorgan: zero cuts 2026, possible hike Q3 2027.",
-          "trend": "down",
-          "lastUpdated": "2026-04-29T19:00:00Z"
+          "delta": "Held; hawkish dot plot signals hike ahead",
+          "deltaNote": "June 16-17: Warsh's first FOMC as Chair unanimously held at 3.50-3.75%. The Summary of Economic Projections turned hawkish: 2026 median dot rose to 3.8% from 3.4% in March — implying a hike, not a cut — with 9 of 18 members projecting ≥1 hike. 2026 PCE forecast raised to 3.6% from 2.7%. Warsh declined to submit his own dot. Next FOMC July 28-29 is a non-SEP meeting; consensus expects another hold.",
+          "trend": "up",
+          "lastUpdated": "2026-06-17T18:00:00Z"
         },
         {
           "id": "ecb-deposit-rate",
           "label": "ECB Deposit Facility Rate",
-          "value": "2.00%",
+          "value": "2.25%",
           "color": "blue",
-          "source": "ECB Governing Council, Apr 30 2026 (hold; Eurozone CPI flash 3.0%)",
+          "source": "ECB Governing Council, June 11 2026 (25bp hike — first since July 2023)",
           "contested": false,
-          "delta": "-200 bps",
-          "deltaNote": "8 consecutive cuts from 4.00% (Jun 2024) to 2.00% (Jun 2025). Apr 30: Held at 2.00% as Eurozone April CPI flash hit 3.0% (up from 2.3%) — Iran war energy shock reverses ECB disinflation progress.",
-          "trend": "down",
-          "lastUpdated": "2026-04-30T13:45:00Z"
+          "delta": "+25 bps",
+          "deltaNote": "June 11: ECB raised all three key rates 25bp — deposit facility to 2.25%, main refi to 2.40%, marginal lending to 2.65% (effective June 17). First hike since July 2023, reversing the final step of the prior 8-cut easing cycle. New staff projections: HICP 3.0% (2026)/2.3% (2027)/2.0% (2028); growth cut to 0.8%/1.2%/1.5%. Lagarde left the door open to further tightening.",
+          "trend": "up",
+          "lastUpdated": "2026-06-11T13:00:00Z"
         },
         {
           "id": "us-10y-treasury-yield",
@@ -969,50 +801,62 @@
         {
           "id": "vix-fear-gauge",
           "label": "S&P 500 / Market Risk Gauge",
-          "value": "S&P 500 –2.6% June 5 to 7,383.74 (Worst Day Since Oct 2025); Goldman 15% Recession Probability; ECB June 11 Hike 99%; BOJ June 16 Hike 96%+; Warsh FOMC June 16-17 (9 Days); Iran MOU Day 9 Unsigned; Section 122 Cliff 47 Days",
+          "value": "S&P 500 7,572.40 (Jul 14 Close, +0.38%); H1 2026 +9.6% (Best Since 2020); Goldman Recession Probability Confirmed at 15% (Jun 22); June CPI Cools to 3.5%",
           "color": "amber",
-          "source": "Yahoo Finance / TheStreet / Goldman Sachs / Bloomberg; June 5-7, 2026",
+          "source": "CNBC / CNN / Goldman Sachs; June 22 – July 14, 2026",
           "contested": false,
-          "delta": "JUNE 5 CLOSE (CONFIRMED): S&P 500 –200.57 pts (–2.6%) to 7,383.74 — worst single-day drop since October 2025; Nasdaq –4.2% to 25,709.43; Dow –1.4% to 50,866.78. 10Y yield 4.544%; 30Y 5.007%; 2Y 4.162% (2026 high). December 2026 Fed hike fully priced. WEEKEND: Goldman Sachs cut US recession probability to 15% (from 25%) — 'no landing' base case. Triple central bank week: ECB June 11 (25bp hike to 2.25% at 99% probability), BOJ June 16 (hike to 1.00% at 96%+), Warsh FOMC June 16-17 (hold; dot plot critical). Iran MOU Day 9 unsigned; Brent ~$93-97.",
-          "deltaNote": "JUNE 6-7 UPDATE — GOLDMAN 15% + TRIPLE CB WEEK: After May NFP +172K blowout (June 5), Goldman Sachs formally cut 12-month US recession probability to 15% (from 25%). 'No landing' — growth above trend + inflation above 2% — is now the base case, requiring the Warsh Fed to hike rather than cut. JPMorgan 35% and Moody's 49% have not yet updated. Critical week June 8-17: (1) ECB June 11: 99% probability 25bp hike to 2.25% — first ECB hike since July 2023; (2) BOJ June 16: 96%+ probability 25bp hike to 1.00% — simultaneous with Warsh FOMC Day 1, creating August 2024 carry-unwind replay risk; (3) Warsh FOMC June 16-17: Hold expected, but dot plot December hike signal is the key deliverable. Iran MOU Day 9 unsigned → Brent above $90 → CPI stays above 3.5% → Warsh cannot signal cuts. Section 122 tariff cliff July 24 (47 days). Goldman 'paycheck recession' concurrent warning: real income eroding at pace rarely seen outside official recessions.",
-          "trend": "down",
-          "lastUpdated": "2026-06-07T08:30:00Z"
+          "delta": "Markets round-tripped the June scare: after the June 5 -2.6% drop, the signed Iran MOU (June 17) and subsequent oil-price collapse drove a relief rally into H1 close (S&P +9.6%, 24 record closes). June's weak jobs report (July 2) and cooling June CPI (July 14, 3.5%) both supported further gains — S&P closed July 14 at 7,572.40 (+0.38%), Nasdaq +0.62% to 26,269.23, Dow +150 pts to 52,658.64.",
+          "deltaNote": "JUNE-JULY ARC: Triple central bank week (ECB hike Jun 11, BOJ hike Jun 16, Warsh hawkish dot plot Jun 17) was more than offset by the same-day signed Iran MOU, which crashed Brent ~11% and triggered a broad risk-on rally. Goldman confirmed its 15% 12-month US recession probability on June 22 post-deal. H1 2026 closed +9.6% for the S&P (best first half since 2020) and +12.8% for Nasdaq, with the Russell 2000 up ~22% (best since 1991). Weak June jobs (NFP +57K, Jul 2) and cooling June CPI (3.5%, Jul 14) reinforced a 'goldilocks' market read heading into the July 24 Section 122 tariff cliff and July 28-29 FOMC.",
+          "trend": "up",
+          "lastUpdated": "2026-07-14T20:00:00Z"
         },
         {
           "id": "us-effective-tariff-rate",
           "label": "US Avg Effective Tariff Rate",
-          "value": "8.9% overall; ~31.6% China effective; USTR Greer (May 17): US Can Restore 'Busan Deal' ~41.6% China Rate; Board of Trade Framework Only; CIT Struck Down Sec. 122 (May 7) — Federal Circuit Stay Active",
+          "value": "8.9% overall; ~31.6% China effective; Section 122 Cliff July 24 — 8 Days Away; Section 301 Fallback Timing in Doubt",
           "color": "red",
           "source": "Penn Wharton / CBP / USTR Greer CBS Face the Nation / Gibson Dunn / BDO, May 17 2026",
           "contested": true,
-          "contestNote": "Section 122 baseline: 8.9% overall, 31.6% China effective rate. Summit Day 1-2 (May 14-15): Board of Trade $30B framework; Boeing 200 jets; ag pledges; rare earth mutual de-escalation; NO Iran/Hormuz breakthrough. USTR Greer (May 17 Face the Nation): 'The Chinese know the US can elevate tariffs to the higher level at the time of the Busan deal in October.' Post-SCOTUS Feb ruling knocked ~10pp off China rate; Greer warning US can restore ~41.6% level. LEGAL: CIT ruled (May 7, 2-1) Section 122 tariffs unlawful — BUT Federal Circuit issued stay May 12; tariffs still collected. Federal Circuit appeal likely resolves Oct-Nov 2026. CRITICAL DEADLINE: Section 122 expires July 23 (66 days from May 17); Congressional action required.",
+          "contestNote": "Section 122 baseline unchanged at 8.9% overall / 31.6% China effective. Federal Circuit stay (June 11) keeps Section 122 tariffs collected pending appeal, but the underlying July 24 statutory cliff is unaffected by the stay. USTR's Section 301 fallback (60 economies, forced-labor rationale) closed its comment period July 6 and held its hearing July 7 — but standard rulemaking requires a final rule ≥30 days before taking effect, meaning Section 301 may not be ready to fully backstop the cliff, raising the prospect of a tariff-revenue coverage gap. No Congressional action to extend Section 122 has been reported; an extension needs 60 Senate votes.",
           "trend": "up",
-          "lastUpdated": "2026-05-17T12:00:00Z"
+          "lastUpdated": "2026-07-16T00:00:00Z"
         },
         {
           "id": "china-gdp-2025",
-          "label": "China GDP Q1 2026 (actual) / 2025 Full Year",
-          "value": "5.0% (Q1 2026)",
+          "label": "China GDP Q2 2026 (actual)",
+          "value": "4.3% (Q2 2026) — Slowest in 3.5 Years",
           "color": "amber",
-          "source": "China NBS (Apr 16, 2026) / IMF WEO Apr 2026",
+          "source": "China NBS (Jul 14, 2026) / IMF WEO Jul 2026",
           "contested": true,
-          "contestNote": "Q1 2026 beat (+5.0% vs 4.8% forecast) driven by Jan-Feb export front-loading. March exports fell sharply to +2.5% YoY (miss vs +8.6% forecast); factory-gate prices turned positive (+0.5%) for first time in 3+ years. Q2 headwinds mounting from Iran war demand destruction.",
-          "delta": "+0.5pp vs Q4 2025",
-          "deltaNote": "Q4 2025: 4.5%. Q1 2026: 5.0% — beat driven by front-loaded exports before Iran war demand shock took full effect. IMF maintains 2026 China forecast at ~4.5%.",
-          "trend": "up",
-          "lastUpdated": "2026-04-18T12:00:00Z"
+          "contestNote": "Q2 2026 missed forecast (4.3% vs 4.5% expected), down from 5.0% in Q1 — slowest pace in roughly 3.5 years. H1 fixed-asset investment -5.7% YoY (real estate -18%). June activity data (Jul 15) was mixed: industrial production +5.3% YoY beat, retail sales +1.0% YoY soft. Stimulus speculation building ahead of the late-July Politburo meeting.",
+          "delta": "-0.7pp vs Q1 2026",
+          "deltaNote": "Q1 2026: 5.0% (front-loaded exports). Q2 2026: 4.3% — Iran war demand destruction and property-sector drag materializing as expected. IMF July WEO maintains global growth at 3.0% for 2026 but revised headline inflation up to 4.7%.",
+          "trend": "down",
+          "lastUpdated": "2026-07-14T09:00:00Z"
         },
         {
           "id": "global-policy-uncertainty",
           "label": "Global Policy Uncertainty / Recession Risk",
-          "value": "JUNE 7: Goldman 15% (Cut from 25%); ECB June 11 Hike 99% (2.25%); BOJ June 16 Hike 96%+ (1.00%); Warsh FOMC June 16-17 Dot Plot Critical; Iran MOU Day 9 Unsigned; Brent ~$94-97; Section 122 Cliff 47 Days",
+          "value": "JULY 16: Goldman 15% (Confirmed Jun 22 Post-Iran-Deal); IMF Jul WEO Global Growth 3.0% / Inflation 4.7%; Section 122 Cliff 8 Days; China Q2 GDP Miss 4.3%; June CPI Cools to 3.5%",
           "color": "red",
-          "source": "Goldman Sachs / Bloomberg / ECB / BLS; June 5-7, 2026",
+          "source": "Goldman Sachs / IMF / BLS / China NBS; June 11 – July 16, 2026",
           "contested": false,
-          "delta": "JUNE 6-7 WEEKEND UPDATE — GOLDMAN 15% + TRIPLE CENTRAL BANK WEEK: (1) Goldman Sachs formally revised US 12-month recession probability to 15% (from 25%) following the May NFP +172K blowout. 'No landing' — growth above trend + inflation above 2% — is now the base case scenario. 'Paycheck recession' concurrent warning: real income eroding at pace rarely seen outside official recessions (tariffs + Iran war energy squeeze). (2) ECB June 11: Markets price 99% probability of 25bp hike to 2.25% deposit rate — first ECB hike since July 2023. Eurozone CPI 3.0% (April flash). (3) BOJ June 16: 96%+ probability of 25bp hike to 1.00% (highest Japanese rate since 2008). Simultaneous with Warsh FOMC Day 1 — August 2024 carry-unwind replay risk. (4) Warsh FOMC June 16-17: Hold expected but dot plot (December hike signal) is the policy-defining deliverable. (5) Iran MOU Day 9 unsigned → Brent $93-97 → CPI above 3.5% → Warsh cannot signal easing. (6) Section 122 cliff July 24 (47 days).",
-          "deltaNote": "JUNE 7 RECESSION PROBABILITY MATRIX (UPDATED): Goldman 15% (formally revised down June 6-7, post-NFP); JPMorgan 35% (pre-June 5 — pending formal revision); Moody's 49% (pre-June 5 — pending revision). Polymarket: ~18.5% odds of US recession by year-end. THE KEY RISK HAS SHIFTED: From 'will there be a 2026 recession?' to 'will the no-landing scenario require a 2026 hike that causes a 2027 recession?' Goldman's 15% reflects near-term optimism (NFP +172K; ISM Mfg 54.0; ISM Services 54.5; labor market intact) while maintaining elevated uncertainty for 2027 (no-landing → hike → credit tightening → eventual downturn). THE IRAN BINARY remains the single largest policy wildcard: signed MOU + Brent $88 = Goldman toward 10%; unsigned + Brent above $95 = Goldman back toward 20-25%.",
+          "delta": "JUNE-JULY ARC — TRIPLE CB WEEK RESOLVED, IRAN DEAL SIGNED, RECESSION RISK EASES FURTHER: ECB hiked to 2.25% (Jun 11), BOJ hiked to 1.00% (Jun 16), and Warsh's first FOMC held with a hawkish dot plot (Jun 17) — but the same-day signed US-Iran MOU crashed Brent ~11% and drove a broad relief rally that dominated the macro narrative for the rest of June. Goldman confirmed its 15% US recession probability June 22. Weak June jobs (NFP +57K) and cooling June CPI (3.5%) followed in early-mid July. China's Q2 GDP miss (4.3%) and the IMF's July WEO (3.0% global growth, inflation revised up to 4.7%, 'disinflation stalled') are the two main sources of renewed downside risk heading into the July 24 Section 122 tariff cliff.",
+          "deltaNote": "JULY 16 RECESSION PROBABILITY MATRIX (UPDATED): Goldman 15% (confirmed June 22, post-Iran-deal — unchanged since). JPMorgan and Moody's have not published new numeric figures within this window; bank commentary (Semafor, June 29) turned more optimistic in tone without a revised percentage. THE KEY RISK HAS SHIFTED AGAIN: from 'triple central bank shock' to 'Section 122 cliff coverage gap' — Section 301 fallback tariffs may not be legally ready by July 24, and no Congressional extension has been reported. Secondary risk: China's Q2 GDP slowdown (4.3%, slowest in 3.5 years) combined with the IMF's downward-revised disinflation trajectory (headline inflation 4.7%, up from April's estimate) suggests global growth risks are re-building even as US data cools.",
           "trend": "down",
-          "lastUpdated": "2026-06-07T08:30:00Z"
+          "lastUpdated": "2026-07-16T00:00:00Z"
+        },
+        {
+          "id": "boj-policy-rate",
+          "label": "BOJ Policy Rate",
+          "value": "1.00%",
+          "color": "blue",
+          "source": "Bank of Japan, June 16 2026 (25bp hike — highest since 1995)",
+          "contested": false,
+          "delta": "+25 bps",
+          "deltaNote": "June 16: BOJ hiked 25bp to 1.00%, the highest level since 1995, in a 7-1 vote (Asada dissenting) — citing Iran-war energy-cost pass-through risk. The hike landed the same day Warsh's first FOMC opened, raising August-2024-style carry-unwind concerns; the immediate market reaction was orderly (Nikkei +0.46%), but the yen still fell to a fresh 40-year low past 162/USD by June 30 despite the hike and an estimated $72.5bn in prior FX intervention.",
+          "trend": "up",
+          "lastUpdated": "2026-06-16T04:00:00Z"
         }
       ]
     },
@@ -1644,33 +1488,6 @@
               "url": "https://www.proceso.com.mx/nacional/politica/2026/5/25/no-vean-tv-azteca-sheinbaum-anuncia-premio-al-mitomano-de-la-semana-374692.html"
             }
           ]
-        },
-        {
-          "id": "mexico-q1-2026-fdi-record-23b-may26-2026",
-          "date": "2026-05-26",
-          "title": "Day 602 — Sheinbaum Announces Record Q1 2026 FDI of $23.591 Billion, a 10.4% Annual Increase",
-          "type": "economic",
-          "detail": "On May 26, 2026, President Sheinbaum announced at her morning mañanera that Mexico received a record US $23.591 billion in Foreign Direct Investment (FDI) in Q1 2026 — representing a 10.4% increase compared to Q1 2025 and the highest single-quarter FDI figure in Mexican history. She attributed the performance to the Plan México nearshoring strategy and Mexico's positioning as a secure, rules-based investment destination ahead of USMCA renegotiation. TOP INVESTING COUNTRY: The United States led with $10.21 billion invested in Q1 2026, followed by Germany, Canada, and Japan. KEY SECTORS WITH STRONGEST GROWTH: Mining surged 39.7%, vehicle manufacturing grew 20.4%, and electronics manufacturing expanded significantly. The manufacturing surge is directly linked to USMCA rules of origin compliance requirements driving companies to build or expand North American production footprints. GOVERNMENT NARRATIVE: Economy Secretary Marcelo Ebrard linked the record FDI to the successful messaging around Plan México — the government's 15-point nearshoring roadmap offering special economic zones (Podecobi hubs), tax incentives, and pre-zoned industrial land. The April 16, 2026 inauguration of the Huamantla, Tlaxcala Podecobi hub (the first of 15) and the signing of the EU-Mexico Interim Trade Agreement on May 22 were cited as confidence signals. CONTEXT AND CAVEATS: Independent analysts caution that the Q1 2026 FDI figure includes reinvestment of existing companies' profits rather than purely new greenfield capital. Since 2024, new greenfield investment — which creates new factories and jobs rather than expanding existing ones — has been more constrained by USMCA uncertainty. However, the scale of the Q1 number, and its acceleration vs. Q1 2025, indicate that the tariff uncertainty has not triggered a capital flight, at least in the short term. Citi's May 21 survey simultaneously lowered Mexico's 2026 full-year GDP forecast to 1.1%, reflecting that FDI data has a different time horizon than growth forecasts affected by Q1 2026 contraction.",
-          "sources": [
-            {
-              "name": "Mexico News Daily",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://mexiconewsdaily.com/business/foreign-investment-mexico-record-first-quarter/"
-            },
-            {
-              "name": "BNamericas",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.bnamericas.com/en/news/mexico-breaks-record-in-foreign-direct-investment-mexican-president-claudia-sheinbaum-highlights"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/05/26/en-vivo-la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-martes-26-de-mayo/"
-            }
-          ]
         }
       ]
     },
@@ -1785,6 +1602,48 @@
     },
     "mexico": {
       "events": [
+        {
+          "id": "trump-30pct-tariff-threat-mexico-2026-07-12",
+          "date": "2026-07-12",
+          "title": "Trump Threatens 30% Reciprocal Tariff on Mexico Starting August 1",
+          "type": "economic",
+          "detail": "President Trump announced that reciprocal tariffs on Mexican goods would rise to 30% effective August 1, 2026, escalating pressure during the ongoing USMCA joint review process. The threat came roughly two weeks after the US declined to renew USMCA on its current 16-year terms at the July 1 joint review, and as bilateral negotiating rounds on automotive rules of origin, steel, and aluminum continued. As of mid-July, USMCA-qualifying goods (an estimated 89% of Mexico-US trade) continued to enter under the existing 0% preferential rate, with the 30% threat aimed at non-qualifying goods and intended as leverage ahead of the next negotiating round scheduled for the week of July 20.",
+          "sources": [
+            {
+              "name": "Tax Foundation",
+              "tier": 3,
+              "url": "https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/",
+              "pole": "western"
+            },
+            {
+              "name": "Baker Botts Trump Tariff Tracker",
+              "tier": 3,
+              "url": "https://ourtake.bakerbotts.com/post/102n7tq/trump-tariff-tracker-july-2-2026",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "banxico-holds-rate-6point5-2026-06-25",
+          "date": "2026-06-25",
+          "title": "Banxico Holds Benchmark Rate at 6.5% in Unanimous Vote, Signals End of Easing Cycle",
+          "type": "economic",
+          "detail": "The Bank of Mexico's governing board unanimously voted to hold its benchmark interest rate at 6.5% at its June 25, 2026 meeting, confirming the two-year easing cycle that began in March 2024 has concluded. Headline inflation continued to ease, falling from 4.45% in April to 3.55% by mid-June, within Banxico's target tolerance range. Policymakers signaled they will likely keep the rate at this level going forward, citing upside risks from trade disruptions tied to the ongoing USMCA review, geopolitical tensions, persistent core inflation, and possible peso depreciation.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "url": "https://mexiconewsdaily.com/news/mexicos-central-bank-holds-interest-rate-a6-50-while-inflation-continues-decline/",
+              "pole": "western"
+            },
+            {
+              "name": "Bloomberg",
+              "tier": 2,
+              "url": "https://www.bloomberg.com/news/articles/2026-06-25/mexico-holds-key-interest-rate-at-6-5-after-two-years-of-cuts",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "banxico-rate-cut-6p5-may7-2026",
           "date": "2026-05-07",
