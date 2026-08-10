@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T14:48:17Z",
+  "updated": "2026-08-10T14:53:05Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -863,6 +863,129 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "sheinbaum-fracking-ban-key-basin-aug6-2026",
+          "date": "2026-08-06",
+          "title": "Day 674 — Sheinbaum Rules Out Fracking Expansion in Key Basin, Citing Water Tables and Indigenous Communities",
+          "type": "economic",
+          "detail": "On August 6, 2026 (Day 674, Thursday), President Sheinbaum announced that her government would not expand fracking (hydraulic fracturing) operations in a key northern petroleum basin, citing risks to regional water tables and nearby Indigenous communities. The announcement marked a partial reversal from an earlier, more open stance in which Sheinbaum had floated the possibility of 'new extraction technologies' distinct from traditional fracking methods as a way to boost domestic natural gas and oil output amid declining Pemex production. The decision underscored the balancing act facing her administration between reducing Mexico's growing dependence on U.S. natural gas imports and honoring environmental and social commitments central to the Fourth Transformation platform. The move followed years of pressure from environmental and Indigenous rights groups opposed to fracking expansion in northern Mexico.",
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.bloomberg.com/news/articles/2026-08-06/mexico-bans-oil-and-gas-fracking-in-key-basin-sheinbaum-says"
+            },
+            {
+              "name": "Semafor",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.semafor.com/article/08/06/2026/mexicos-sheinbaum-rules-out-fracking-expansion"
+            }
+          ]
+        },
+        {
+          "id": "sheinbaum-approval-jumps-57pct-inflation-cools-aug6-2026",
+          "date": "2026-08-06",
+          "title": "Day 674 — Sheinbaum's Approval Jumps to 57% as Inflation Cools to Near Six-Year Low",
+          "type": "political",
+          "detail": "On August 6, 2026 (Day 674, Thursday), Bloomberg News published new AtlasIntel LatAm Pulse polling showing President Sheinbaum's approval rating rising to 57%, an 8-point jump from the prior month's survey. The rebound followed a rocky summer stretch in which her approval had dipped below 50% for the first time in early July amid concerns over falling purchasing power and rising prices. Pollsters and analysts linked the improvement to two factors: annual headline inflation falling for four consecutive months — from 4.6% in March to 3.12% in July, the lowest level since May 2020 and back inside Banxico's target range — and Sheinbaum's increasingly vocal pushback against the Trump administration's immigration crackdown, including sharpened criticism of ICE following the July 7 killing of Lorenzo Salgado Araujo in Houston. The rebound reversed months of erosion in her approval that had been driven by the Q1 2026 GDP contraction, the CIA-Chihuahua sovereignty controversy, and broader economic anxiety.",
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.bloomberg.com/news/articles/2026-08-06/sheinbaum-s-approval-jumps-as-inflation-cools-to-five-year-low"
+            },
+            {
+              "name": "Ag Bull Trading",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://www.agbull.com/sheinbaums-approval-surges-as-mexicos-inflation-cools-to-a-five-year-low/"
+            }
+          ]
+        },
+        {
+          "id": "q2-2026-gdp-rebound-world-cup-spending-jul30-2026",
+          "date": "2026-07-30",
+          "title": "Day 667 — Q2 2026 GDP Grows 2.1% Annually, Strongest Quarterly Rebound Since Late 2020, Boosted by World Cup Spending",
+          "type": "economic",
+          "detail": "On July 30, 2026 (Day 667, Thursday), INEGI released preliminary Q2 2026 GDP data showing the Mexican economy grew 2.1% year-on-year, a sharp rebound from the 0.4% annual expansion recorded in Q1 2026. On a seasonally adjusted quarter-on-quarter basis, GDP rose 1.5%, reversing Q1's 0.6% contraction and marking the strongest quarterly expansion since Q4 2020. All three broad sectors improved versus Q1: services rose 1.5% QoQ (from -0.4%), industry rose 1.6% QoQ (from -1.0%), and the primary sector jumped 3.3% QoQ (from -1.7%) on a sharp agricultural rebound. Analysts attributed part of the rebound to a surge in consumer and tourism spending tied to Mexico hosting 16 FIFA World Cup 2026 matches in June and July, alongside resilient domestic consumption. Economy officials said the results kept the government's 1.5% full-year 2026 growth target within reach provided the second half of the year did not see a renewed contraction, even as private-sector forecasters (OECD, Citi, IMF) maintained more cautious full-year estimates in the 0.8–1.6% range reflecting continued uncertainty from the unresolved USMCA review and U.S. tariff exposure.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://mexiconewsdaily.com/news/world-cup-mexico-gdp-q2-2026-spending/"
+            },
+            {
+              "name": "Argus Media",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2859165-mexico-economy-tops-forecasts-with-2.2pc-2q-growth"
+            },
+            {
+              "name": "Mexico Business News",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://mexicobusiness.news/finance/news/mexico-gdp-grows-21-2q26-services-farming-rebound"
+            }
+          ]
+        },
+        {
+          "id": "usmca-joint-review-us-declines-extend-jul1-2026",
+          "date": "2026-07-01",
+          "title": "Day 638 — USMCA Mandatory Six-Year Joint Review: US Declines to Extend Agreement, Triggering Annual Review Process",
+          "type": "economic",
+          "detail": "On July 1, 2026 (Day 638), the USMCA Free Trade Commission held its mandatory six-year joint review under Article 34.7 of the trade agreement. Mexico and Canada had formally proposed renewing the agreement through 2042, but the United States declined to confirm its intention to extend USMCA for a new 16-year term, stating it 'did not agree to renew the USMCA in its current form.' The decision does not terminate the agreement; instead it triggers an annual joint-review mechanism under Article 34.7.4 that will repeat each year until the three parties either agree to an extension or the agreement's ten-year sunset clock runs out, expiring July 1, 2036 absent action. Economy Minister Marcelo Ebrard represented Mexico at a virtual trilateral meeting held the same day. President Sheinbaum had said in the run-up that her government was 'calm' because Mexico had fulfilled its obligations under the review process, and that the outcome 'depends a lot on the U.S. government's position' — reiterating that the agreement serves the interests of all three countries. She noted the treaty's underlying ten-year renewal architecture would require passage through each country's congress if a contrary U.S. position persisted. USTR Ambassador Jamieson Greer issued a separate statement on the U.S. position the same day. The outcome left North American trade relations in a state of managed uncertainty heading into the second half of 2026.",
+          "sources": [
+            {
+              "name": "White & Case LLP",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://www.whitecase.com/insight-alert/usmca-2026-joint-review-united-states-declines-extend-agreement-triggering-annual"
+            },
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://mexiconewsdaily.com/politics/sheinbaum-usmca-review-mananera-tuesday/"
+            },
+            {
+              "name": "USTR (Ambassador Greer statement)",
+              "tier": 1,
+              "pole": "western",
+              "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ambassador-greer-issues-statement-usmca-joint-review"
+            }
+          ]
+        },
+        {
+          "id": "cnte-strike-ends-20-days-jun21-2026",
+          "date": "2026-06-21",
+          "title": "Day 628 — CNTE Teachers' Strike Ends After 20 Days; Union Returns to Classrooms Without Reversal of 2007 ISSSTE Pension Law",
+          "type": "political",
+          "detail": "On June 21, 2026 (Day 628, Saturday), the CNTE national teachers' union formally ended its 20-day national strike, which had shut down classrooms across 29 states, blockaded the Zócalo in Mexico City, and threatened disruptions of FIFA World Cup 2026 events including the June 11 opening match at Estadio Azteca. CNTE representative Pedro Hernández announced the end of the action, stating: 'Today, we are returning to our classrooms because we intend to honor our commitments to our students, their communities, and their parents.' The strike had centered on two core demands: a salary increase and reversal of the 2007 ISSSTE pension law, which the Sheinbaum government maintained was fiscally unfeasible to abrogate outright. The union ultimately returned to classes without securing repeal of the pension law, accepting instead the government's proposed dialogue framework (a working table, diagnostic period, and formal proposals process running through August 31) that SEGOB and SEP had offered earlier in June. President Sheinbaum had maintained throughout the standoff that her government would not respond to 'provocations' and would keep channels of dialogue open through SEP and Gobernación rather than negotiate directly. The strike's end came 10 days after the World Cup opener and removed a major domestic political flashpoint during the tournament's run in Mexico.",
+          "sources": [
+            {
+              "name": "Channels Television / AFP",
+              "tier": 2,
+              "pole": "international",
+              "url": "https://www.channelstv.com/2026/06/21/mexican-teachers-end-strike-after-20-days/"
+            },
+            {
+              "name": "Free Malaysia Today / AFP",
+              "tier": 2,
+              "pole": "international",
+              "url": "https://www.freemalaysiatoday.com/category/world/2026/06/21/mexican-teachers-end-strike-after-20-days"
+            },
+            {
+              "name": "France 24",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.france24.com/en/americas/20260609-striking-teachers-bring-mexico-city-to-a-standstill-ahead-of-world-cup"
+            }
+          ]
+        },
+        {
           "id": "olinia-ev-prototype-debut-wc2026-jun7-2026",
           "date": "2026-06-07",
           "title": "Day 614 — Mexico's Olinia Electric Vehicle Officially Unveiled: First Domestically Designed EV; Ceremonial World Cup Role June 11",
@@ -1302,197 +1425,92 @@
               "url": "https://www.milenio.com/politica/sheinbaum-convoca-informe-domingo-31-mayo"
             }
           ]
-        },
-        {
-          "id": "cnte-segob-march-no-deal-may29-2026",
-          "date": "2026-05-29",
-          "title": "Day 605 — CNTE Marches to Secretaría de Gobernación; Seven-Hour Talks End Without Agreement; June 1 Strike Escalation Confirmed",
-          "type": "political",
-          "detail": "On May 29, 2026 (Day 605), approximately 800 CNTE members — led primarily by Sección 22 (Oaxaca), the largest and most militant section — marched to the Secretaría de Gobernación (SEGOB) building at Abraham González 48, Colonia Juárez, Mexico City at approximately 10:30 hours. CNTE representatives entered into a third tripartite dialogue session with SEGOB (represented by Interior Secretary Rosa Icela Rodríguez) and the SEP (Education Secretary Mario Delgado). OUTCOME: After seven hours of negotiations, no agreements were reached on the union's core demands: (1) Abrogation of the 2007 ISSSTE pension reform (the central demand, which restructured pension systems for post-2007 public sector enrollees, eliminating defined-benefit pensions in favor of AFORE individual accounts); (2) A 100% raise to base salary; (3) Reinstatement of dismissed workers; (4) Return to pre-2019 Education Reform teacher evaluation systems. The government offered partial responses on secondary administrative matters — teacher payroll corrections, housing fund regularization — but refused to commit to pension or salary demands, citing fiscal constraints and the 2025 budget framework. ESCALATION ANNOUNCED: The CNTE's national coordinating body formally confirmed that June 1, 2026 mobilizations would proceed as planned — including a mega-march from the Ángel de la Independencia toward the Zócalo in Mexico City (where the FIFA World Cup Fan Fest is being installed), as well as potential blockades at the NAICM/AICM airports and key highway intersections nationwide. Sección 7 (Chiapas), Sección 18 (Michoacán), and sections in Guerrero and Hidalgo announced solidarity actions. CONTEXT: The CNTE strike began May 25, with the June 1 FIFA World Cup opening weekend providing maximum international visibility leverage. Sheinbaum characterized the negotiations at subsequent mañaneras as 'ongoing' and described the CNTE as representing 'some teachers, not all.'",
-          "sources": [
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/estados/2026/05/29/cnte-confirma-mas-movilizaciones-en-cdmx-a-partir-del-1-de-junio-tras-7-horas-de-negociaciones-con-segob/"
-            },
-            {
-              "name": "CódigoQro",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://codigoqro.mx/nota/region-4/2026/05/29/cnte-no-llega-acuerdo-gobierno-advierte-que-escalara-protesta"
-            },
-            {
-              "name": "El Siglo de Torreón",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elsiglodetorreon.com.mx/noticia/2026/cnte-no-llegan-a-acuerdo-con-segob-y-escalaran-protesta-a-dias-de-mundial.html"
-            },
-            {
-              "name": "Crónica",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.cronica.com.mx/metropoli/2026/05/29/marcha-cnte-en-cdmx-hoy-viernes-29-de-mayo-a-que-hora-empieza-y-que-calles-estaran-bloqueadas/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-mananera-wc-ticket-day605-may29-2026",
-          "date": "2026-05-29",
-          "title": "Day 605 — Mañanera: Sheinbaum Gives Away World Cup Opening-Match Ticket to Indigenous Woman from Veracruz; Culture Ministry Premieres 'La Niña Futbolista'",
-          "type": "political",
-          "detail": "At her May 29, 2026 (Day 605) morning mañanera, President Sheinbaum made good on her earlier promise to give away her personal presidential inauguration-match ticket for the FIFA World Cup 2026. The ticket — for the tournament's opening match on June 11 at Estadio Azteca (Mexico vs. South Africa) — was awarded to Yolett Cervantes Cuaquehua, a 21-year-old Indigenous woman from Veracruz. Three additional presidential match tickets (for games in Mexico City, Guadalajara, and Monterrey) were given to amateur athletes aged 16, 22, and 23. Sheinbaum stated she would personally watch the opening match at the Zócalo's official FIFA Fan Fest public screening. The Culture Secretariat, under Secretary Claudia Curiel de Icaza, premiered a new recording of 'La niña futbolista' by Julieta Venegas — a song aimed at inspiring girls to pursue soccer — as part of the government's World Cup social campaign. The press conference highlighted Mexico's preparations for hosting the June 11–July 19 tournament and reinforced the administration's messaging around inclusive, popular access to the sporting event.",
-          "sources": [
-            {
-              "name": "ESPN",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.espn.com/soccer/story/_/id/48912175/mexico-president-sheinbaum-2026-world-cup-opening-game-ticket"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/05/29/en-vivo-la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-viernes-29-de-mayo/"
-            },
-            {
-              "name": "El Informador",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.informador.mx/la-mananera-de-sheinbaum-de-hoy-viernes-29-de-mayo-de-2026-lb202605290001.html"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-day604-mananera-asset-declaration-cnte-rocha-may28-2026",
-          "date": "2026-05-28",
-          "title": "Day 604 — Mañanera: Sheinbaum Publishes Asset Declaration; CNTE Dialogue Continues; Rocha Moya FGR Update",
-          "type": "political",
-          "detail": "Additional highlights from President Sheinbaum's May 28, 2026 Day 604 mañanera: (1) ASSET DECLARATION PUBLISHED: Sheinbaum's 2026 patrimonial declaration was released, showing net annual income of 1,791,441 pesos — essentially entirely from her presidential salary. She reported an 8% minority stake in two manufacturing companies ('Eli Cami y Cia' and 'Sintacrom de México'), which are family business holdings. The declaration aligns with obligations under the General Law of Responsibilities of Public Servants. Critics noted that presidential salaries under the 4T austerity framework are capped at 102,000 pesos monthly. (2) ROCHA MOYA / FGR UPDATE: Security Secretary García Harfuch explained at the mañanera why Sinaloa Governor Rubén Rocha Moya was not detained despite appearing before the FGR and having an Interpol red notice: the FGR is still gathering evidence before seeking an arrest warrant — the legal standard for detention requires the federal attorney general to formally request pretrial detention from a judge, which had not yet occurred. Rocha Moya appeared before the FGR on May 26–27 alongside Senator Enrique Inzunza Cazárez and other co-accused in the Los Chapitos conspiracy indictment. Sheinbaum stated: 'The FGR will provide updates on the case when there are developments.' (3) CNTE STRIKE — DIALOGUE CONTINUES: Sheinbaum characterized the CNTE action as involving 'some teachers, not all,' and confirmed working dialogue tables between the SEP (Education Secretariat) and SEGOB (Interior) with CNTE representatives remain active. Interior Secretary Rosa Icela Rodríguez confirmed a second meeting with CNTE Section 22 (Oaxaca). The CNTE's formal strike and mega-march toward Mexico City's Zócalo remains set for June 1, 2026 — during the FIFA World Cup's opening weekend. (4) ECONOMIC INDICATORS: Sheinbaum highlighted 12 positive economic indicators presented during the week, including Q1 2026 record FDI ($23.6B), declining inflation (4.11% vs 4.45% April), and an updated unemployment figure of 2.5% — a slight improvement from January's 2.7%. (5) FIFA WORLD CUP TICKETS: Sheinbaum announced she will give away her presidential inauguration match tickets from a contest aimed at young women and girls who love soccer — following through on a commitment she made publicly in the weeks before the tournament.",
-          "sources": [
-            {
-              "name": "El Universal",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.eluniversal.com.mx/nacion/la-mananera-de-sheinbaum-28-de-mayo-minuto-a-minuto-2/"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/05/28/claudia-sheinbaum-mananera-temas-hoy-28-de-mayo-de-2026-en-vivo/"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/05/28/declaracion-patrimonial-2026-sheinbaum-reporta-ingresos-por-17-millones-de-pesos/"
-            }
-          ]
-        },
-        {
-          "id": "garcia-harfuch-security-milestone-49pct-homicide-decline-may27-2026",
-          "date": "2026-05-27",
-          "title": "Day 603 — García Harfuch Reports 49% Homicide Decline: Daily Average Drops from 86.9 to 44.3 Since Inauguration",
-          "type": "political",
-          "detail": "On May 27, 2026 (Day 603), Public Safety Secretary Omar García Harfuch presented a landmark security balance at the mañanera — the most comprehensive since taking office. The daily intentional homicide average has fallen from 86.9 per day (September 2024, the final weeks of the AMLO government) to 44.3 per day in May 2026, a preliminary 49% reduction described by García Harfuch as 'the lowest level since this series was tracked' and 'unprecedented in this administration.' KEY STATISTICS PRESENTED: (1) HOMICIDES: Daily average 86.9→44.3/day, -49%. (2) ARRESTS: 54,300 individuals detained for high-impact crimes since October 2024. (3) DRUG SEIZURES: Over 400 tons of drugs seized across all categories (fentanyl, methamphetamine, cocaine, heroin, marijuana, synthetic variants). (4) FIREARMS: Nearly 30,000 firearms confiscated — assault rifles, handguns, and heavy weapons including .50 caliber rifles. (5) CLANDESTINE LABS: 2,400 clandestine methamphetamine and fentanyl production laboratories detected and destroyed. (6) HIGH-VALUE TARGETS: 92 high-impact cartel figures extradited to the United States. (7) OFFICIALS DETAINED: 85 public officials and ex-officials arrested on organized crime, corruption, and collusion charges — an unprecedented accountability drive. CONTEXT — QUALITY OF GAINS: García Harfuch acknowledged that security gains are uneven by state. He named Sinaloa (Chapitos-Mayiza conflict), Guerrero (Los Ardillos/Los Tlacos displacement crisis in Chilapa), and Michoacán as states where security challenges remain acute. The administration's strategy — known as 'Atención a las Causas' (Attention to Root Causes) combining social investment with targeted enforcement — has been recognized by the U.S. State Department in its May 11, 2026 formal acknowledgment of Mexico's security approach. METHODOLOGY NOTE: Independent security analysts at Causa en Común and Semáforo Delictivo note that improved homicide statistics may partly reflect changes in criminal classification (injuries ruled not homicides, disappearances not counted), particularly in states with contested reporting. The 800+ internally displaced families from Guerrero's Chilapa corridor (May 2026) illustrate that violence persists even as aggregate statistics improve.",
-          "sources": [
-            {
-              "name": "Tribuna",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://tribuna.com.mx/mexico/2026/05/27/estrategia-de-seguridad-de-sheinbaum-logra-baja-de-49-en-homicidios-informa-garcia-harfuch_550293/"
-            },
-            {
-              "name": "Publimetro",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.publimetro.com.mx/noticias/2026/05/27/harfuch-presume-caida-historica-homicidios-dolosos-bajan-49-en-gobierno-de-claudia-sheinbaum/"
-            },
-            {
-              "name": "El Informador",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.informador.mx/la-mananera-de-sheinbaum-de-hoy-miercoles-27-de-mayo-de-2026-lb202605270001.html"
-            }
-          ]
-        },
-        {
-          "id": "cnte-segob-dialogue-informe-may31-monumento-revolucion-may27-2026",
-          "date": "2026-05-27",
-          "title": "Day 603 — SEGOB Opens Daily CNTE Dialogue Sessions; May 31 National Report Confirmed at Monumento a la Revolución",
-          "type": "political",
-          "detail": "On May 27, 2026 (Day 603), two significant political developments were confirmed at the mañanera: (1) CNTE DAILY DIALOGUE SESSIONS: Interior Secretary Rosa Icela Rodríguez announced that her ministry has opened daily bilateral dialogue sessions with the CNTE's Sección 22 (Oaxaca, the largest and most militant section), which launched its indefinite strike on May 25, 2026. The sessions will run daily throughout the week of May 27–31, working methodically through all 39 points of the CNTE's formal petition. The CNTE's primary demands include: abrogation of the 2007 ISSSTE pension law reform (which restructured public sector pensions for post-reform enrollees), salary increases above the 2026 inflation rate, reinstatement of dismissed workers, and autonomous management of their FOVISSSTE housing fund resources. Rodríguez stated that Education Secretary Mario Delgado and SEGOB will coordinate their responses on each of the 39 petition points. STATUS: The CNTE has warned it will proceed with a national mega-march toward Mexico City's Zócalo on June 1, 2026, leveraging the FIFA World Cup's international visibility — though the Zócalo itself is occupied by the FIFA Fan Fest. The union also announced a potential indefinite AICM airport blockade and encampment during the World Cup if demands are not met. In parallel, CNTE's Sección 18 (Michoacán) and Sección 7 (Chiapas) announced solidarity actions. (2) MAY 31 NATIONAL ACCOUNTABILITY REPORT VENUE CONFIRMED: Sheinbaum confirmed that her second-year accountability report — 'En Defensa de la Soberanía' — will be delivered Sunday, May 31, 2026 at 10:00 AM from the National Palace, with simultaneous live broadcast and mass gathering at the Monumento a la Revolución esplanade in Colonia Tabacalera, Mexico City. The Zócalo was unavailable as the FIFA World Cup Fan Zone is being constructed there. Mexico City Mayor Clara Brugada called for a mass mobilization at the monument for 9:00 AM. The report will be simultaneously broadcast on public screens in all 32 state capitals. Sheinbaum described the report as a 'celebration and defense of two years of the Fourth Transformation' — marking approximately two years since her June 2, 2024 electoral victory.",
-          "sources": [
-            {
-              "name": "Mexico Solidarity Media",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://mexicosolidarity.com/cnte-announces-indefinite-strike-in-june-during-world-cup/"
-            },
-            {
-              "name": "Mexico News Daily",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://mexiconewsdaily.com/news/cnte-teachers-protest-mexico-city/"
-            },
-            {
-              "name": "Milenio",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.milenio.com/politica/sheinbaum-convoca-informe-domingo-31-mayo"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/05/25/clara-brugada-convoca-a-una-movilizacion-masiva-en-el-monumento-a-la-revolucion-este-domingo-para-respaldar-a-la-presidenta-sheinbaum-en-el-segundo-aniversario-de-su-triunfo-electoral/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-no-vean-tv-azteca-press-freedom-may26-2026",
-          "date": "2026-05-26",
-          "title": "Day 602 — Sheinbaum Defends 'No vean TV Azteca' Call; SIP and Alianza de Medios Warn of Press Freedom Risks",
-          "type": "political",
-          "detail": "On May 25, 2026, President Claudia Sheinbaum told supporters: 'No vean TV Azteca' (don't watch TV Azteca). At her May 26 Day 602 mañanera, she defended the statement as a personal 'opinion' rather than censorship, arguing that any citizen — including the president — has the right to express views about private media outlets and recommend audiences seek different sources. She framed the recommendation as a response to what she described as an 'offensive campaign' by TV Azteca against her government following a large SAT (tax authority) back-tax settlement that required Azteca Group to pay billions in fines and back taxes owed to the state. OWNER CONTEXT: TV Azteca is owned by Ricardo Salinas Pliego, one of Mexico's wealthiest businessmen and a persistent critic of the Sheinbaum and AMLO administrations. The SAT settlement — which Sheinbaum's administration advanced aggressively — represented one of the largest tax recovery operations against a private conglomerate in Mexican history. Salinas Pliego has subsequently used his media properties to amplify criticism of the 4T government. PRESS FREEDOM RESPONSE: The Inter-American Press Society (SIP) and Mexico's Alianza de Medios pushed back forcefully, warning that presidential calls to boycott specific media outlets — regardless of their formal legal status — create a chilling effect when coming from the head of state who controls regulatory agencies, advertising budgets, and SAT enforcement powers. TV Azteca anchor Pati Chapoy publicly defied the call and framed it as evidence of government hostility toward independent journalism, calling it a threat to press pluralism. SHEINBAUM'S ADDITIONAL ANNOUNCEMENT: At the same mañanera, Sheinbaum announced a new 'Mitómano de la Semana' (Liar of the Week) feature to highlight what she described as disinformation being spread by critics and opposition media. BROADER CONTEXT: Mexico ranks 126th in the 2026 RSF Press Freedom Index. The SIP warning joins broader concerns from Reporters Without Borders (RSF) about Mexico's press environment following the dissolution of INAI (the transparency agency) in late 2024.",
-          "sources": [
-            {
-              "name": "Mexico News Daily",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://mexiconewsdaily.com/politics/sheinbaum-boycott-tv-azteca-may-26-mananera/"
-            },
-            {
-              "name": "El Universal",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.eluniversal.com.mx/nacion/sheinbaum-rechaza-haber-ejercido-censura-tras-el-llamado-no-vean-tv-azteca-acusa-ofensiva-contra-su-gobierno/"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/05/26/no-es-censura-es-una-opinion-sheinbaum-defiende-su-llamado-a-no-ver-tv-azteca-mientras-sip-y-alianza-de-medios-acusan-posible-censura-y-advierten-por-riesgo-para-la-libertad-de-prensa/"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/05/26/pati-chapoy-lidera-avanzada-contra-sheinbaum-tras-llamado-a-no-ver-programas-criticos-del-gobierno/"
-            },
-            {
-              "name": "Proceso",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.proceso.com.mx/nacional/politica/2026/5/25/no-vean-tv-azteca-sheinbaum-anuncia-premio-al-mitomano-de-la-semana-374692.html"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "ustr-section301-forced-labor-tariffs-jul23-2026",
+          "date": "2026-07-23",
+          "title": "USTR Finalizes Section 301 Forced-Labor Tariffs on Over 80 Trading Partners",
+          "type": "economic",
+          "detail": "The Office of the US Trade Representative finalized a broad Section 301 tariff action on July 23, 2026 covering more than 80 trading partners, taxing imports at 10% or 12.5% depending on the country's enforcement record on forced-labor import bans. The new duties, which took effect at midnight, replaced Trump's temporary 10% global Section 122 tariff that expired the same day. Trading partners facing the baseline 10% rate include Canada, Mexico, India, and the United Kingdom. The action followed a public comment period that closed July 6 and hearings held July 7.",
+          "sources": [
+            {
+              "name": "NBC News",
+              "tier": 2,
+              "url": "https://www.nbcnews.com/business/economy/trump-tariffs-60-countries-forced-labor-rcna588972",
+              "pole": "western"
+            },
+            {
+              "name": "Baker Botts (Trump Tariff Tracker)",
+              "tier": 3,
+              "url": "https://ourtake.bakerbotts.com/post/102n7tq/trump-tariff-tracker-july-2-2026",
+              "pole": "western"
+            },
+            {
+              "name": "Tax Foundation",
+              "tier": 3,
+              "url": "https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "canada-50pct-tariff-jul20-2026",
+          "date": "2026-07-20",
+          "title": "Trump Escalates Trade War: 50% Tariffs on Canada, Forced-Labor Tariffs on 80+ Countries Take Effect",
+          "type": "economic",
+          "detail": "Trump announced new 50% Section 338 tariffs on Canadian dairy, alcohol, furniture, and motor vehicles on July 20, 2026, effective August 19 — covering roughly $16-20 billion in annual imports. Three days later, on July 23, the USTR finalized a separate Section 301 forced-labor tariff action covering more than 80 trading partners (10-12.5% depending on enforcement record), replacing the temporary 10% Section 122 global tariff that expired the same day. Partners including Canada, Mexico, India, and the UK now face the new baseline 10% rate on top of sector-specific duties. Analysts called the moves a warning shot ahead of further trade actions.",
+          "sources": [
+            {
+              "name": "CNN",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/07/21/economy/trump-tariffs-who-is-next",
+              "pole": "western"
+            },
+            {
+              "name": "NBC News",
+              "tier": 2,
+              "url": "https://www.nbcnews.com/business/economy/trump-tariffs-60-countries-forced-labor-rcna588972",
+              "pole": "western"
+            },
+            {
+              "name": "Tax Foundation",
+              "tier": 3,
+              "url": "https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "canada-50pct-tariff-announcement-jul20-2026",
+          "date": "2026-07-20",
+          "title": "Trump Announces 50% Tariffs on Canadian Dairy, Alcohol, Vehicles Under Section 338",
+          "type": "economic",
+          "detail": "President Trump announced on July 20, 2026 that his administration will impose additional 50% ad valorem tariffs on a range of Canadian products — dairy, alcoholic beverages, furniture, and motor vehicles — under Section 338 of the Tariff Act, effective 12:01 a.m. ET on August 19, 2026. The move came via three separate proclamations alleging Canadian discrimination against US commerce in those sectors. USTR estimated the tariffs affect nearly $20 billion in annual Canadian imports (reported elsewhere as up to $16 billion for the targeted categories). Analysts described the move as a warning shot to other trading partners ahead of pending Section 301 forced-labor tariff decisions.",
+          "sources": [
+            {
+              "name": "Fox Business",
+              "tier": 2,
+              "url": "https://www.foxbusiness.com/politics/trump-administration-hits-canada-50-tariff-over-alleged-trade-discrimination",
+              "pole": "western"
+            },
+            {
+              "name": "CNN",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/07/21/economy/trump-tariffs-who-is-next",
+              "pole": "western"
+            },
+            {
+              "name": "Mondaq / Bennett Jones",
+              "tier": 3,
+              "url": "https://www.mondaq.com/unitedstates/international-trade-investment/1821108/trump-administration-announces-50-tariffs-on-certain-canadian-products-effective-august-19",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "us-inflation-3yr-high-june-2026",
           "date": "2026-06-14",
@@ -1540,60 +1558,6 @@
               "name": "CNBC",
               "tier": 2,
               "url": "https://www.cnbc.com/2026/06/02/intelligence-trump-bill-pulte-tulsi-gabbard.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-customs-enforcement-eo-jun3-2026",
-          "date": "2026-06-03",
-          "title": "Trump Signs Customs Enforcement Executive Order — Tightens Duty Evasion Rules, Raises Penalties for Importers",
-          "type": "economic",
-          "detail": "Also on June 3, 2026, Trump signed a second executive order titled 'Strengthening Customs Enforcement,' directing a sweeping overhaul of US customs law enforcement to combat duty evasion and illegal importation. The order significantly increases bonding requirements for importers of record (IORs), requires foreign importers to meet heightened formal entry requirements (only US entities may file informal entry), imposes a 'good standing' standard for all active importers, and permanently revokes import privileges from any importer connected to fentanyl trafficking, contraband, or customs violations. Penalty minimums are set at 50% of assessed amounts with no mitigation for repeat offenders. Importers must certify supply chain compliance, disclose certain foreign tax and global business identifiers, and provide detailed production method information. Within 180 days, DHS must revise importer eligibility requirements. The order is part of Trump's broader post-tariff-court-defeats strategy to crack down on importers who undervalue goods or evade Section 301 duties — a problem that US Customs and Border Protection (CBP) estimates costs the US billions annually.",
-          "sources": [
-            {
-              "name": "White House",
-              "tier": 1,
-              "url": "https://www.whitehouse.gov/presidential-actions/2026/06/strengthening-customs-enforcement/",
-              "pole": "western"
-            },
-            {
-              "name": "JD Supra / Husch Blackwell",
-              "tier": 3,
-              "url": "https://www.jdsupra.com/legalnews/president-trump-issues-executive-order-2503721/",
-              "pole": "western"
-            },
-            {
-              "name": "White House Fact Sheet",
-              "tier": 1,
-              "url": "https://www.whitehouse.gov/fact-sheets/2026/06/fact-sheet-president-donald-j-trump-strengthens-customs-enforcement/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "bond-market-inflation-warning-iran-jun1-2026",
-          "date": "2026-06-01",
-          "title": "Bond Market Sends Trump New Inflation Warning — Iran War Energy Spike Driving Treasury Yields Higher; Growing Midterm Risk",
-          "type": "economic",
-          "detail": "On June 1, 2026, analysts and financial media reported that the bond market is sending Trump a new inflation warning: the Iran war's energy price spike — Brent crude above $100/barrel — has spread into the US Treasury bond market, causing longer-term interest rates to climb. The Associated Press/MPR News and Washington Post reported this as a growing economic and political liability for Republicans ahead of the November 2026 midterm elections. Penn Wharton Budget Model director Kent Smetters attributed approximately 40% of the rise in 30-year Treasury yields to the Iran war and tariff-driven inflation, with the remaining 60% attributable to deficit spending expectations from the 'One Big Beautiful Bill' (CBO estimate: +$4.1T over 10 years). The world is becoming more reluctant to lend money to the US government at prior rates, analysts said. The compound pressure of high energy costs (from Iran war), elevated CPI inflation (3.8% in April 2026 — a 3-year high), and rising Treasury yields is adding to the Republican Party's midterm headwinds, with Trump's approval rating at record second-term lows across multiple polls.",
-          "sources": [
-            {
-              "name": "MPR News / AP",
-              "tier": 2,
-              "url": "https://www.mprnews.org/story/2026/06/01/trump-faces-new-inflation-warning-from-bond-market-adding-to-midterm-challenges",
-              "pole": "western"
-            },
-            {
-              "name": "Washington Post",
-              "tier": 2,
-              "url": "https://www.washingtonpost.com/politics/2026/06/01/trump-interest-rates-debt-deficit/c7582682-5d6e-11f1-9c46-d6211372eede_story.html",
-              "pole": "western"
-            },
-            {
-              "name": "ABC News",
-              "tier": 2,
-              "url": "https://abcnews.com/US/wireStory/trump-facing-new-inflation-warning-bond-market-adding-133475094",
               "pole": "western"
             }
           ]
