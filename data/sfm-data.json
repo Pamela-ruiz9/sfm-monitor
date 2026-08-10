@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-08-07",
+  "ultima_actualizacion": "2026-08-10",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "17.2195",
-    "fecha": "2026-08-06",
+    "actual": "17.1387",
+    "fecha": "2026-08-07",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1575,7 +1575,7 @@
       },
       {
         "mes": "2026-08",
-        "valor": 17.2195
+        "valor": 17.1387
       }
     ]
   },
@@ -1584,11 +1584,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-08-07",
-        "valor": 11.0
-      },
-      {
-        "fecha": "2024-08-09",
+        "fecha": "2024-08-10",
         "valor": 10.75
       },
       {
@@ -2741,10 +2737,6 @@
       "fecha": "2026-07-31",
       "historico": [
         {
-          "fecha": "2025-08-08",
-          "valor": 243222.3
-        },
-        {
           "fecha": "2025-08-15",
           "valor": 243108.9
         },
@@ -2951,21 +2943,9 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7458,
-      "fecha": "2026-08-07",
+      "actual": 6.7358,
+      "fecha": "2026-08-10",
       "historico": [
-        {
-          "fecha": "2024-08-07",
-          "valor": 11.2325
-        },
-        {
-          "fecha": "2024-08-08",
-          "valor": 11.248
-        },
-        {
-          "fecha": "2024-08-09",
-          "valor": 11.2475
-        },
         {
           "fecha": "2024-08-12",
           "valor": 11.025
@@ -4377,6 +4357,10 @@
         {
           "fecha": "2026-08-07",
           "valor": 6.7458
+        },
+        {
+          "fecha": "2026-08-10",
+          "valor": 6.7358
         }
       ]
     },
@@ -4803,8 +4787,8 @@
       ]
     },
     "udis": {
-      "actual": 8.796571,
-      "fecha": "2026-08-07"
+      "actual": 8.797743,
+      "fecha": "2026-08-10"
     },
     "salario_minimo": {
       "actual": 315.04,
