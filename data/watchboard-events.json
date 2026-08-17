@@ -1,8 +1,224 @@
 {
-  "updated": "2026-08-14T14:45:46Z",
+  "updated": "2026-08-17T14:21:06Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "canada-us-tariff-talks-far-apart-aug19-deadline-aug15-2026",
+          "date": "2026-08-15",
+          "title": "Canada, US 'Far Apart' in Trade Talks Four Days Before 50% Section 338 Tariffs Hit $20B of Canadian Goods",
+          "type": "trade",
+          "detail": "Canadian Trade Minister Dominic LeBlanc told a government advisory group Saturday that Canada and the US remain significantly divided in talks meant to head off a fresh round of 50% Section 338 tariffs — covering roughly $20 billion of Canadian autos, alcohol, and dairy exports, including USMCA-qualifying goods — set to take effect at 12:01am EDT Wednesday, August 19. LeBlanc has met US Trade Representative Jamieson Greer four times in three weeks (most recently Thursday, August 13), with talks continuing through the weekend; sticking points include Canada's 25% retaliatory tariff on US vehicles, provincial restrictions on American alcohol sales, and dairy quota arrangements, while Canada is separately pushing for relief from existing US steel and aluminum tariffs. Canadian Chamber of Commerce CEO Candace Laing said both sides are exploring an interim agreement that would bundle the new threat together with tariffs already in place. The standoff is the latest flashpoint in the broader 2026 tariff cycle — alongside the July 24 Section 122/Section 301 transition — that continues to weigh on the US effective tariff rate and cross-border trade volumes.",
+          "sources": [
+            {
+              "name": "Xinhua — Canada, U.S. Remain Far Apart in Trade Talks as Tariff Deadline Looms",
+              "tier": 2,
+              "url": "https://english.news.cn/20260815/4507d6202d6a4fe8acbb12722c1fc442/c.html",
+              "pole": "eastern"
+            },
+            {
+              "name": "Bloomberg — US, Canada Still See Sticking Points Before Deadline for 50% Tariffs",
+              "tier": 2,
+              "url": "https://www.bloomberg.com/news/articles/2026-08-15/us-canada-still-see-sticking-points-before-deadline-for-50-tariffs",
+              "pole": "western"
+            },
+            {
+              "name": "CTV News / BNN Bloomberg — LeBlanc Says 'We'll Have as Many Meetings as It Takes' as Canada-US Trade Talks Continue",
+              "tier": 2,
+              "url": "https://www.ctvnews.ca/world/trumps-tariffs/article/leblanc-says-well-have-as-many-meetings-as-it-takes-as-canada-us-trade-talks-continue/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "retail-sales-miss-consumer-sentiment-slumps-aug14-2026",
+          "date": "2026-08-14",
+          "title": "July Retail Sales Fall 0.6% — Steepest Drop in Over a Year — as Michigan Sentiment Craters to 51.0; Stocks Slip From Record High",
+          "type": "economic",
+          "detail": "The Census Bureau reported July retail and food-services sales fell 0.6% MoM to $763.6 billion, missing the +0.1% forecast and marking the sharpest monthly decline in more than a year (sales remained up 5.0% YoY). The drop was led by motor vehicle and parts dealers (-1.8%), nonstore/online retailers (-2.2%), and gasoline stations (-0.9%), partly offset by gains in clothing (+1.9%) and health/personal care (+0.7%). Separately, the University of Michigan's preliminary August Consumer Sentiment Index tumbled to 51.0 — a 7.6% MoM decline and 12.4% YoY drop, badly missing the 54.5 consensus and down sharply from July's final 55.2 — with year-ahead inflation expectations rising to 4.3% and short-term expectations falling 11%. The weak-demand, weak-sentiment combination pulled US equities off Thursday's record close: the S&P 500 slipped just below flat, the Dow fell about 0.2%, and the Nasdaq-100 dropped about 0.2%, even after Wednesday's flat PPI and Thursday's cooler CPI had briefly driven stocks to fresh highs.",
+          "sources": [
+            {
+              "name": "US Census Bureau — Advance Monthly Sales for Retail and Food Services, July 2026",
+              "tier": 1,
+              "url": "https://www.census.gov/retail/marts/www/marts_current.pdf",
+              "pole": "western"
+            },
+            {
+              "name": "CNN — US Consumers Cut Retail Spending Sharply in July",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/08/14/economy/us-retail-sales-july",
+              "pole": "western"
+            },
+            {
+              "name": "University of Michigan — Surveys of Consumers, Preliminary August 2026",
+              "tier": 1,
+              "url": "https://www.sca.isr.umich.edu/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "hormuz-tankers-attacked-oil-rebounds-aug14-2026",
+          "date": "2026-08-14",
+          "title": "Two UAE Tankers Attacked in Strait of Hormuz — Oil Rebounds to End the Week, Renewing Energy-Shock Risk to Fed Policy",
+          "type": "market",
+          "detail": "Two ADNOC-operated tankers were struck by drones late Thursday into Friday while transiting the Strait of Hormuz; the UAE's Foreign Ministry blamed Iran's Revolutionary Guard Corps, calling the attacks 'acts of piracy' and a 'flagrant violation' of freedom-of-navigation principles. The UK Maritime Trade Operations Center reported both vessels suffered only minor damage with no casualties. It is the second such attack in less than a week — ADNOC reported a similar strike on Aug 8 — bringing the total to 15 ADNOC vessels attacked while transiting the Strait since the US-Israel war with Iran began in February. Oil prices, which had eased earlier in the week alongside the cooler PPI and CPI prints, rebounded to end the week on renewed Gulf supply-risk concerns, re-injecting energy-driven inflation risk into the Fed's rate-path calculus just as soft retail sales and a crumbling consumer-sentiment reading were pulling the recession-risk narrative in the opposite direction.",
+          "sources": [
+            {
+              "name": "Al Jazeera — UAE Accuses Iran of Attacks on Two ADNOC Vessels in Strait of Hormuz",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/news/2026/8/14/uae-accuses-iran-of-attacks-on-two-adnoc-vessels-in-strait-of-hormuz",
+              "pole": "middle_eastern"
+            },
+            {
+              "name": "U.S. News & World Report / AP — 2 UAE Tankers Attacked While Transiting Strait of Hormuz",
+              "tier": 2,
+              "url": "https://www.usnews.com/news/world/articles/2026-08-14/2-uae-tankers-attacked-while-transiting-strait-of-hormuz-and-other-news-from-the-middle-east",
+              "pole": "western"
+            },
+            {
+              "name": "BNN Bloomberg — US Markets Strive for a Positive Week Ahead of Retail Sales Data and Signs of Cooling Inflation",
+              "tier": 2,
+              "url": "https://www.bnnbloomberg.ca/markets/2026/08/14/world-shares-mostly-fall-and-us-futures-are-mixed-after-us-inflation-data-improves/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "ppi-flat-sp500-clears-7800-hike-odds-below-35pct-aug13-2026",
+          "date": "2026-08-13",
+          "title": "July PPI Flat, Core Below Forecast — S&P 500 Clears 7,800 for First Time as September Fed Hike Odds Sink Below 35%",
+          "type": "economic",
+          "detail": "BLS reported the Producer Price Index for final demand was unchanged in July, below the 0.2% Dow Jones consensus forecast; core PPI (ex-food and energy) rose 0.2%, also below the 0.3% estimate. The annual headline rate held at 4.7%, core at 4.2%. Goods prices fell 0.7%, driven by a 3.1% drop in energy costs (gasoline -5.7%), while services prices rose 0.2% and food fell 0.9%. Arriving a day after the softer-than-expected July CPI, the cooler wholesale-inflation reading further eased pressure on the Fed: the S&P 500 gained 0.65% to close at a fresh record 7,799 — clearing 7,800 intraday for the first time — the Nasdaq Composite rose 0.81% to 26,803, and the Dow edged up 0.13% to 53,840. The 10-year Treasury yield eased about 4bp to 4.65%, and gold fell 1.3% to $4,349.85/oz. Market-implied odds of a 25bp September Fed rate hike fell to under 35%, down from roughly 55% a week earlier.",
+          "sources": [
+            {
+              "name": "BLS — Producer Price Index News Release, July 2026",
+              "tier": 1,
+              "url": "https://www.bls.gov/news.release/ppi.nr0.htm",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — Wholesale Prices Were Flat in July, Below Expectations for 0.2% Increase",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/13/wholesale-prices-were-flat-in-july-below-expectations-for-0point2percent-increase.html",
+              "pole": "western"
+            },
+            {
+              "name": "TheStreet — Stock Market Today (Aug. 13, 2026): S&P 500 Sets New Record, Clearing 7,800 for the First Time",
+              "tier": 2,
+              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-13-2026",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "july-cpi-cools-3pt4pct-headline-2pt5pct-core-aug12-2026",
+          "date": "2026-08-12",
+          "title": "July CPI Cools to 3.4% Headline, 2.5% Core — Both Down 0.1pp From June",
+          "type": "economic",
+          "detail": "BLS reported the Consumer Price Index rose a seasonally adjusted 0.1% in July, with the annual headline rate easing to 3.4% from June's 3.5%. Core CPI (ex-food and energy) rose 0.2% for the month, with the annual core rate cooling to 2.5% from 2.6%. The energy index fell 1.5% on the month even as oil prices had spiked earlier in the window, while shelter — up 0.1% — accounted for roughly two-thirds of the headline increase; food also rose 0.1%. The report matched analyst expectations and reinforced the disinflation narrative that had been complicated by the July 23 Hormuz/Red Sea oil shock, landing five weeks before the September 16-17 FOMC meeting and taking some urgency off the hawkish rate-hike case that had briefly pushed September hike odds above 80% in late July.",
+          "sources": [
+            {
+              "name": "BLS — Consumer Price Index Summary, July 2026",
+              "tier": 1,
+              "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — CPI Inflation Report July 2026: Prices Rose 0.1%, Annual Rate 3.4%",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/12/cpi-inflation-report-july-2026.html",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance / Quartz — US CPI Rose 0.1% in July, Annual Inflation Eases to 3.4%",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/economy/articles/u-cpi-rose-0-1-123747298.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "stocks-slip-fed-hike-odds-51pct-iran-talks-stall-aug11-2026",
+          "date": "2026-08-11",
+          "title": "Stocks Slip as Iran Diplomacy Optimism Fades; September Fed Hike Odds Rise to ~51%",
+          "type": "market",
+          "detail": "US equities declined Tuesday as investors positioned defensively ahead of Wednesday's July CPI release: the S&P 500 closed down roughly 0.2-0.3% near 7,728-7,735, the Dow slipped about 0.3% to roughly 53,790, and the Nasdaq led losses, down around 0.6% to roughly 26,445, with technology stocks underperforming on renewed AI-capex-spending scrutiny (Intel, Nvidia). Brent crude rose about 1.4% to near $88.91/barrel. The primary driver was fading optimism on US-Iran diplomacy — Trump rejected Iran's war-reparations demand and Tehran dismissed near-term peace prospects, clouding the outlook for a durable Strait of Hormuz shipping arrangement. Separately, market-implied odds of a 25bp September Fed rate hike rose to roughly 51%, up from about 44% a day earlier, even as Cleveland Fed President Beth Hammack said it may take more than one hike to rein in inflation. The 10-year Treasury yield eased to about 4.68% after topping 4.71% Monday.",
+          "sources": [
+            {
+              "name": "STL.News — U.S. Stock Market Today, Tuesday, August 11, 2026",
+              "tier": 2,
+              "url": "https://www.stl.news/u-s-stock-market-today-tuesday-august-11-2026/",
+              "pole": "western"
+            },
+            {
+              "name": "TheStreet — Stock Market Today (Aug. 11, 2026): Dow Edges Higher Amid U.S.-Iran Concerns",
+              "tier": 2,
+              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-11-2026",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — Stock Market Today: Dow, S&P 500, Nasdaq Slip Amid US-Iran Impasse, Alphabet Stock Sinks",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-11-dow-sp-500-nasdaq-102827503.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "treasury-yields-oil-rise-jazan-refinery-attack-aug10-2026",
+          "date": "2026-08-10",
+          "title": "10-Year Treasury Yield Tops 4.71%, Brent Holds Near $88 After Houthi Strike on Saudi Aramco's Jazan Refinery",
+          "type": "market",
+          "detail": "The US 10-year Treasury yield rose above 4.71% Monday, its highest level in weeks, as traders priced in a growing chance of a September Fed rate hike ahead of Wednesday's July CPI report. Brent crude held near $87.55/barrel (+11 cents on the day), still elevated after a Houthi attack on Saudi Aramco's Jazan refinery on Aug 9 reignited concerns about Gulf energy-supply risk, even as it remained well off the $100.69 peak hit during the July 23 Hormuz/Red Sea shock. The combination of a firmer energy-price floor and hawkish rate repricing kept bond and oil markets on edge heading into the week's inflation data.",
+          "sources": [
+            {
+              "name": "Federal Reserve — H.15 Selected Interest Rates (Daily), August 11, 2026",
+              "tier": 1,
+              "url": "https://www.federalreserve.gov/releases/h15/",
+              "pole": "western"
+            },
+            {
+              "name": "Fortune — Current Price of Oil as of August 10, 2026",
+              "tier": 2,
+              "url": "https://fortune.com/article/price-of-oil-08-10-2026/",
+              "pole": "western"
+            },
+            {
+              "name": "CNN — August 9, 2026: Pentagon Memo to Defense Companies, Houthi Attack on Saudi Aramco's Jazan Refinery",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/08/09/world/live-news/iran-war-trump",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "houthi-drone-attack-aramco-jazan-refinery-aug9-2026",
+          "date": "2026-08-09",
+          "title": "Houthi Drone Strike Hits Saudi Aramco's Jazan Refinery — Aramco Says 'No Material Operational or Financial Impact' as Oil Risk Premium Builds",
+          "type": "market",
+          "detail": "Iran-backed Houthi forces launched a coordinated drone strike on Saudi Aramco's Jazan refinery near the Saudi-Yemen border early Sunday, sparking a fire that was extinguished by authorities with no casualties reported at the facility (a separate Houthi strike on Yemen's al-Makha port killed seven people). Houthi military spokesman Yahya Saree said the group targeted the refinery in retaliation for Saudi airspace violations. Aramco chief executive Amin Nasser acknowledged 'some production interruptions' from the recent wave of attacks but said operations would resume quickly and the strikes had 'no material operational or financial impact.' The attack — coming as the Strait of Hormuz corridor remains under strain from the broader US-Israel-Iran conflict — added a fresh, if contained, jolt to Gulf energy-supply risk just as markets were digesting the prior week's data, keeping oil's geopolitical risk premium elevated heading into the week's Treasury and inflation moves.",
+          "sources": [
+            {
+              "name": "Al Jazeera — Saudi Arabia Says Fire Extinguished at Aramco Facility in Jizan",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan",
+              "pole": "middle_eastern"
+            },
+            {
+              "name": "NBC News — Yemen's Houthis Attack Saudi Aramco Jazan Refinery",
+              "tier": 2,
+              "url": "https://www.nbcnews.com/world/middle-east/yemens-houthis-attack-saudi-aramco-jazan-refinery-rcna591561",
+              "pole": "western"
+            },
+            {
+              "name": "CNN — August 9, 2026: Pentagon Memo to Defense Companies, Houthi Attack on Saudi Aramco's Jazan Refinery",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/08/09/world/live-news/iran-war-trump",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "july-jobs-report-miss-market-rally-fed-odds-aug7-2026",
           "date": "2026-08-07",
@@ -48,6 +264,27 @@
               "tier": 3,
               "url": "https://tradingeconomics.com/china/exports-yoy",
               "pole": "international"
+            }
+          ]
+        },
+        {
+          "id": "markets-pull-back-record-highs-oil-yields-rise-aug6-2026",
+          "date": "2026-08-06",
+          "title": "Wall Street Pulls Back From Record Highs as Oil and Treasury Yields Climb",
+          "type": "market",
+          "detail": "US stocks retreated from the record levels set earlier in the week: the Dow fell 464.02 points (-0.85%) to 53,885.10, the S&P 500 slipped 0.18% to 7,709.96, and the Nasdaq dropped 0.8% to 26,363.44. The pullback looked more like profit-taking than a sentiment shift — trading stayed orderly — but was accompanied by global oil prices rising to roughly $83/barrel on continued Strait of Hormuz uncertainty (Iran announced a tentative shipping arrangement with Oman, though implementation remained unconfirmed) and the 10-year Treasury yield climbing to 4.67% (30-year to 5.21%). Separately, weekly initial jobless claims for the week ending Aug 1 came in at 199,000, still historically low despite ticking up slightly, extending the longest sub-200K streak since 1969.",
+          "sources": [
+            {
+              "name": "CNBC — Stock Market News for Aug. 6, 2026",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/05/stock-market-today-live-updates.html",
+              "pole": "western"
+            },
+            {
+              "name": "TheStreet — Stock Market Today (Aug. 6, 2026): S&P 500 Declines as Investors Weigh Jobs Data, Earnings Ahead",
+              "tier": 2,
+              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-6-2026",
+              "pole": "western"
             }
           ]
         },
@@ -467,183 +704,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "may-pce-inflation-report-hot-june25-2026",
-          "date": "2026-06-25",
-          "title": "May 2026 PCE: Headline Inflation Hits 4.1% YoY, Highest Since April 2023",
-          "type": "economic",
-          "detail": "The May 2026 PCE report showed headline inflation at 4.1% YoY (+0.4% MoM) — the highest reading since April 2023 — while core PCE came in at 3.4% YoY, slightly above the 3.3% forecast. Personal income and personal spending each rose 0.7% MoM, and the personal saving rate held at just 3%. The hot print, released just over a week after Warsh's hawkish dot plot, reinforced the case for the Fed's projected 2026 hike and complicated the disinflation narrative even as the Iran-deal oil-price relief was working its way through the data.",
-          "sources": [
-            {
-              "name": "CNBC — PCE Inflation Report May 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/06/25/pce-inflation-report-may-2026-.html",
-              "pole": "western"
-            },
-            {
-              "name": "CBS News — PCE Report May 2026, Federal Reserve Inflation",
-              "tier": 2,
-              "url": "https://www.cbsnews.com/news/pce-report-report-may-2026-federal-reserve-inflation/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "goldman-cuts-recession-probability-15pct-confirmed-june22-2026",
-          "date": "2026-06-22",
-          "title": "Goldman Sachs Confirms 12-Month US Recession Probability at 15%, Citing Iran Deal",
-          "type": "economic",
-          "detail": "Goldman Sachs formally cut its 12-month US recession probability to 15% (from roughly 20% pre-war), citing the signed Iran deal, improved labor-market resilience, lower gasoline prices following the Brent crash, and AI-driven equity wealth effects. Chief economist Jan Hatzius characterized 15% as the firm's 'long-term norm' baseline recession probability, effectively signaling that the acute war-driven risk premium embedded in prior estimates had been retired following the June 17 MOU signing.",
-          "sources": [
-            {
-              "name": "Yahoo Finance UK — Goldman Cuts US Recession Risk",
-              "tier": 2,
-              "url": "https://uk.finance.yahoo.com/news/goldman-cuts-u-recession-risk-121208991.html",
-              "pole": "western"
-            },
-            {
-              "name": "Prism News — Goldman Sachs Cuts US Recession Odds to 15% After Iran Peace",
-              "tier": 3,
-              "url": "https://www.prismnews.com/workplace/goldman-sachs/goldman-sachs-cuts-us-recession-odds-to-15-after-iran-peace",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-iran-geneva-talks-postponed-june19-2026",
-          "date": "2026-06-19",
-          "title": "Follow-On US-Iran Geneva Talks Abruptly Postponed",
-          "type": "political",
-          "detail": "Follow-on talks in Geneva, intended to advance the signed MOU toward a permanent peace deal, were abruptly postponed. The underlying ceasefire and Strait of Hormuz reopening held despite the postponement. Brent crude rose modestly on the news, though it remained well below its pre-MOU levels as the broader de-escalation trend stayed intact.",
-          "sources": [
-            {
-              "name": "CNBC — Oil Prices, WTI Brent Crude, US-Iran Deal, Strait of Hormuz Shipping Recovery",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/06/19/oil-prices-wti-brent-crude-us-iran-deal-strait-hormuz-shipping-recovery.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "fomc-warsh-first-meeting-hawkish-dot-plot-june17-2026",
-          "date": "2026-06-17",
-          "title": "Warsh's First FOMC Holds Rate at 3.50–3.75%; Hawkish Dot Plot Shows Median Hike, Not Cut",
-          "type": "policy",
-          "detail": "The FOMC under new Chair Kevin Warsh unanimously held the federal funds rate at 3.50-3.75% in his first meeting as Chair. The accompanying Summary of Economic Projections turned notably hawkish: the 2026 median dot rose to 3.8% from 3.4% in the March projections — implying a hike rather than a cut — with 9 of 18 members projecting at least one 2026 hike (6 of those projecting two or more). The Committee's 2026 PCE inflation forecast was raised to 3.6% from 2.7%. Warsh declined to submit his own dot, telling reporters he found the tool 'inconsistent with his views' on communicating policy intentions. The post-meeting statement was cut to roughly 130 words, down from 341 words in April — a marked change in Fed communication style under the new chair.",
-          "sources": [
-            {
-              "name": "Federal Reserve — FOMC Statement, June 17 2026",
-              "tier": 1,
-              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
-              "pole": "western"
-            },
-            {
-              "name": "Federal Reserve — Summary of Economic Projections, June 2026",
-              "tier": 1,
-              "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260617.htm",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Fed Interest Rate Decision June 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-iran-mou-signed-brent-crashes-june17-2026",
-          "date": "2026-06-17",
-          "title": "US-Iran MOU Formally Signed — Strait of Hormuz Reopens, Brent Crashes ~11%",
-          "type": "political",
-          "detail": "The US-Iran memorandum of understanding was formally signed and entered into force: Iran agreed to immediately reopen the Strait of Hormuz to commercial shipping, and the US agreed to lift its naval blockade of Iranian ports. The MOU sets up 60 days of follow-on talks toward a permanent peace deal. Oil prices collapsed on the news — Brent crude fell as much as 11% to roughly $96/barrel, WTI fell roughly 14% to about $96 — while Asian equity markets hit fresh records (Nikkei, Kospi, and Taiex all posted gains). The 10-year Treasury yield fell 9bp to 4.25% as rate-hike odds eased on the improved energy-price outlook, partially offsetting the hawkish signal from the same-day Warsh dot plot.",
-          "sources": [
-            {
-              "name": "Al Jazeera — Oil Prices Fall, Stocks Rally as US-Iran Sign Framework to End War",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/economy/2026/6/18/oil-prices-fall-stocks-rally-as-us-iran-sign-framework-to-end-war",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "Yahoo Finance — Stock Market Today: Oil Plunges After US-Iran Ceasefire",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-surge-oil-plunges-after-us-iran-ceasefire-sparks-relief-rally-200305068.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "boj-hikes-to-100pct-june16-2026",
-          "date": "2026-06-16",
-          "title": "BOJ Hikes to 1.00% — Highest Rate Since 1995 — as Warsh's First FOMC Opens",
-          "type": "policy",
-          "detail": "The Bank of Japan raised its overnight call rate 25bp to 1.00%, the highest level since 1995, in a 7-1 vote (board member Asada dissenting). The BOJ cited Iran-war-driven energy-cost pass-through risk to inflation as justification. The decision landed the same day Kevin Warsh's first FOMC meeting as Fed Chair opened (June 16-17), the exact overlap flagged for weeks as carrying August-2024-style yen-carry-unwind risk. Market reaction on the day was orderly: Nikkei rose 0.46% and the yen traded around 160.22/USD — a much calmer reaction than the feared 'Black Monday II' replay, though yen weakness would resume later in the month.",
-          "sources": [
-            {
-              "name": "CNBC — BOJ Rate Hike, Historic Inflation Concerns",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html",
-              "pole": "western"
-            },
-            {
-              "name": "Bank of Japan — Monetary Policy Release",
-              "tier": 1,
-              "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf",
-              "pole": "eastern"
-            }
-          ]
-        },
-        {
-          "id": "yen-carry-trade-nine-year-high-june15-2026",
-          "date": "2026-06-15",
-          "title": "Yen Short Bets Hit Nine-Year High as Carry Trade Revives Ahead of BOJ/Fed Week",
-          "type": "market",
-          "detail": "Leveraged funds' yen short positions rose to their highest level in nine years — over 115,000 contracts in the week through June 9 — as traders re-established yen-funded carry trades betting the currency will keep weakening even as the BOJ prepares to hike. The build-up revives concern about a repeat of the August 5, 2024 'Black Monday II' unwind, in which a BOJ hike combined with weak US data triggered a same-day 12% Nikkei collapse as $4 trillion in yen-funded carry positions were closed simultaneously. The position build comes just one day before the BOJ's June 16 decision and the start of Warsh's first FOMC meeting.",
-          "sources": [
-            {
-              "name": "Japan Times — Yen Carry Trade Revives",
-              "tier": 2,
-              "url": "https://www.japantimes.co.jp/business/2026/06/15/markets/yen-carry-trade-revive/",
-              "pole": "eastern"
-            }
-          ]
-        },
-        {
-          "id": "trump-announces-iran-deal-framework-markets-rally-june15-2026",
-          "date": "2026-06-15",
-          "title": "Trump Announces US-Iran Deal Framework — Global Markets Rally, Oil Falls",
-          "type": "political",
-          "detail": "President Trump announced a framework agreement with Iran to end the war, ahead of the formal MOU signing. Asian markets rallied sharply on the relief: the Nikkei jumped roughly 5.5% and the Kospi rose roughly 5.7%, with US equity futures also rising. Oil prices fell on the news as traders priced in a reopening of the Strait of Hormuz and an end to the sustained supply disruption that had kept Brent crude elevated since the war began.",
-          "sources": [
-            {
-              "name": "Al Jazeera — Stock Markets Soar, Oil Falls as US-Iran Confirm Deal to End War",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/economy/2026/6/15/stock-markets-soar-oil-falls-as-us-iran-confirm-deal-to-end-war",
-              "pole": "middle_eastern"
-            }
-          ]
-        },
-        {
-          "id": "ecb-hikes-25bp-to-225-june11-2026",
-          "date": "2026-06-11",
-          "title": "ECB Hikes All Three Key Rates 25bp — Deposit Rate to 2.25%, First Increase Since July 2023",
-          "type": "policy",
-          "detail": "The ECB Governing Council raised all three key rates by 25bp: the deposit facility rate to 2.25%, the main refinancing rate to 2.40%, and the marginal lending rate to 2.65%, effective June 17. This is the first ECB hike since July 2023 and formally reverses the final step of the 8-cut easing cycle that ran from June 2024 to June 2025. The move was priced at 99% probability by markets heading into the meeting. New ECB staff macroeconomic projections: headline HICP inflation revised to 3.0% for 2026, 2.3% for 2027, and 2.0% for 2028 (returning to target only in the final projection year); Eurozone GDP growth cut to 0.8% (2026), 1.2% (2027), 1.5% (2028). President Lagarde cited Iran-war-driven energy inflation as the primary driver, and left the door open to further tightening depending on incoming data — markets read this as signaling at least one more hike is possible before year-end.",
-          "sources": [
-            {
-              "name": "European Central Bank — Monetary Policy Decisions",
-              "tier": 1,
-              "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260611~4d41bd5e83.en.html",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — ECB Hikes Interest Rates",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/06/11/ecb-hikes-interest-rates.html",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -735,14 +795,14 @@
         {
           "id": "us-10y-treasury-yield",
           "label": "US 10Y / 30Y Treasury Yield",
-          "value": "10Y ~4.6-4.65% (Aug 10); Spiked to Highest Since Jan 2025 on Jul 23 Oil Shock, Fell ~7bp on Aug 7 Jobs Miss",
+          "value": "10Y ~4.65% (Aug 13) — Eased Further on Flat PPI; Hormuz Tanker Attack Aug 14 Renews Upside Risk",
           "color": "red",
-          "source": "CNBC / Federal Reserve H.15 / FRED; July 23 - August 10, 2026",
+          "source": "CNBC / Federal Reserve H.15 / FRED; July 23 - August 14, 2026",
           "contested": false,
-          "delta": "Round-tripped a full cycle: surged on the July 23 Hormuz/Red Sea oil shock and 82% September hike-odds spike, then fell back roughly 7bps to ~4.6% after the Aug 7 jobs miss reversed hike expectations; held at 4.65% by Aug 10.",
-          "deltaNote": "JULY 23-AUG 10: Oil-driven inflation scare (Brent >$100) pushed the 10Y to its highest since Jan 2025, even as the FOMC held rates July 29 with 3 hawkish dissents. The Aug 7 jobs report (NFP -23K, -103K combined revisions) fully reversed the hike repricing.",
+          "delta": "Round-tripped a full cycle: surged on the July 23 Hormuz/Red Sea oil shock, fell back after the Aug 7 jobs miss, then eased a further ~4bp to 4.65% on Aug 13's flat PPI — before the Aug 14 UAE tanker attacks in the Strait of Hormuz reintroduced energy-shock upside risk.",
+          "deltaNote": "JULY 23-AUG 14: Oil-driven inflation scare (Brent >$100) pushed the 10Y to its highest since Jan 2025 in late July. The Aug 7 jobs report and Aug 13 flat PPI (below the 0.2% forecast) both reversed hike repricing, pulling September hike odds under 35% and the 10Y down to 4.65%. The Aug 14 attack on two UAE tankers in the Strait of Hormuz — the second in under a week — rebounded oil prices and re-injected energy-driven inflation risk just as soft retail sales and a crumbling Michigan sentiment reading pointed toward growth weakness instead.",
           "trend": "down",
-          "lastUpdated": "2026-08-10T18:00:00Z"
+          "lastUpdated": "2026-08-14T18:00:00Z"
         },
         {
           "id": "us-consumer-confidence",
@@ -758,38 +818,38 @@
         },
         {
           "id": "michigan-consumer-sentiment",
-          "label": "Michigan Consumer Sentiment (May 2026 Final)",
-          "value": "44.8",
+          "label": "Michigan Consumer Sentiment (August 2026 Preliminary)",
+          "value": "51.0",
           "color": "red",
-          "source": "University of Michigan, May 22 2026 (Final Release)",
+          "source": "University of Michigan, August 14 2026 (Preliminary Release)",
           "contested": false,
-          "delta": "-2.8 (from Apr Final 47.6)",
-          "deltaNote": "MAY 2026 FINAL — THIRD CONSECUTIVE ALL-TIME RECORD LOW: 44.8 shatters April's 47.6 record (already below 1980 energy crisis nadir of 51.7). Preliminary reading was 48.2; final collapsed 3.4 points — unusually large revision. Year-ahead inflation expectations: 4.5% (down from April's 4.7% — the largest one-month jump in survey history). ~1/3 of respondents spontaneously mentioned gasoline prices; ~30% mentioned tariffs. Deepest consumer pessimism in the survey's 70+ year history. S&P 500 closed 8 consecutive weekly gains (7,473.47); the sentiment/spending divergence has never been wider.",
+          "delta": "-4.2 (from July Final 55.2); -7.6% MoM, -12.4% YoY",
+          "deltaNote": "AUG 2026 PRELIMINARY (released Aug 14): 51.0, badly missing the 54.5 consensus and down from July's final 55.2. Index of Consumer Expectations fell more sharply than Current Conditions; short-term expectations -11%, long-term projections -17%. Only 8% of consumers expect income growth to outpace inflation. Year-ahead inflation expectations rose to 4.3%. Sentiment fell across demographic and political lines, sharpest among Republicans, older consumers, lower-income households, and those without college degrees. Still well above May 2026's all-time record low of 44.8, but the renewed slide — alongside July retail sales' steepest drop in over a year (Aug 14) — marks the clearest crack yet in the 'resilient consumer' narrative. Final August reading due Aug 28.",
           "trend": "down",
-          "lastUpdated": "2026-05-22T14:45:00Z"
+          "lastUpdated": "2026-08-14T14:00:00Z"
         },
         {
           "id": "vix-fear-gauge",
           "label": "S&P 500 / Market Risk Gauge",
-          "value": "S&P 500 Record Close 7,757.64 (Aug 7, +0.62%); Round-Tripped Jul 23 Oil-Shock Selloff (Dow -600, Nasdaq -3%) via Jul 29 FOMC Hold and Aug 7 Jobs-Driven Rally",
+          "value": "S&P 500 Record Close 7,799 (Aug 13, +0.65%, First Close Above 7,800 Intraday); Slipped Aug 14 on Weak Retail Sales/Sentiment",
           "color": "amber",
-          "source": "CNBC / TheStreet / Federal Reserve; July 23 – August 7, 2026",
+          "source": "CNBC / TheStreet / Federal Reserve; July 23 – August 14, 2026",
           "contested": false,
-          "delta": "Sharp round trip: the July 23 Hormuz/Red Sea oil shock knocked the Dow down 600+ points and the Nasdaq nearly 3% on hike fears; the market recovered through the July 29 FOMC hold and Q2 GDP miss, then rallied to a fresh S&P record (7,757.64) on Aug 7 as the weak jobs report cut hike risk.",
-          "deltaNote": "JULY 23-AUG 7 ARC: Oil-driven hike fears (Brent >$100, Sept hike odds ~82%) triggered the sharpest selloff of the window July 23. The FOMC's July 29 hold (with 3 hawkish dissents) and a mixed data run — Q2 GDP miss (+1.5%), strong ISM manufacturing (55.6%), soft ISM services employment — kept markets choppy into early August. The Aug 7 jobs shock (NFP -23K, -103K combined revisions) flipped sentiment decisively: S&P 500 closed at a record 7,757.64, Dow +0.28% to 54,036.93, Nasdaq +1.3% to 26,690.62.",
+          "delta": "Sharp round trip and fresh record: the July 23 Hormuz/Red Sea oil shock knocked the Dow down 600+ points; markets recovered through the Jul 29 FOMC hold and Aug 7 jobs-driven rally, then set a fresh record 7,799 close on Aug 13's flat PPI before slipping fractionally Aug 14 on the retail-sales miss and Michigan sentiment plunge.",
+          "deltaNote": "JULY 23-AUG 14 ARC: Oil-driven hike fears triggered the sharpest selloff of the window July 23. The FOMC's July 29 hold, the Aug 7 jobs shock, and Aug 12-13's cooling CPI/PPI prints drove a steady rally to a fresh S&P record (7,799, clearing 7,800 intraday) on Aug 13, with September hike odds falling under 35%. Aug 14 brought a pullback — retail sales fell 0.6% (steepest drop in over a year) and Michigan consumer sentiment tumbled to 51.0 — while a fresh Hormuz tanker attack rebounded oil prices, reintroducing energy-shock risk to the disinflation narrative.",
           "trend": "up",
-          "lastUpdated": "2026-08-07T20:00:00Z"
+          "lastUpdated": "2026-08-14T20:00:00Z"
         },
         {
           "id": "us-effective-tariff-rate",
           "label": "US Avg Effective Tariff Rate",
-          "value": "Section 301 Forced-Labor Tariffs (10-12.5%) on 60 Economies Live Since Jul 24; Section 122 Expired Same Day — No Coverage Gap Materialized",
+          "value": "Section 301 Forced-Labor Tariffs (10-12.5%) on 60 Economies Live Since Jul 24; New Canada Section 338 Tariffs (50% on ~$20B) Loom Aug 19",
           "color": "red",
-          "source": "USTR / Global Trade Alert / Holland & Knight; July 24, 2026",
+          "source": "USTR / Global Trade Alert / Holland & Knight; Xinhua / CTV News; July 24 - August 15, 2026",
           "contested": true,
-          "contestNote": "The Section 122 tariff surcharge expired by statute at 12:01am EDT July 24 (150 days after its Feb 24 effective date; no Congressional extension occurred). USTR's Section 301 forced-labor tariffs (10% or 12.5%, 60 economies) took effect the same minute, avoiding the tariff-revenue coverage gap that trade counsel had flagged as a risk in mid-July. Canada/Mexico USMCA-qualifying goods and CAFTA-DR textiles remain exempt.",
-          "trend": "stable",
-          "lastUpdated": "2026-07-24T04:00:00Z"
+          "contestNote": "The Section 122 tariff surcharge expired by statute at 12:01am EDT July 24 (150 days after its Feb 24 effective date; no Congressional extension occurred). USTR's Section 301 forced-labor tariffs (10% or 12.5%, 60 economies) took effect the same minute, avoiding the tariff-revenue coverage gap that trade counsel had flagged as a risk in mid-July. Canada/Mexico USMCA-qualifying goods and CAFTA-DR textiles remain exempt from Section 301 — but a separate Section 338 threat targets Canada directly: 50% tariffs on ~$20B of autos, alcohol, and dairy (including USMCA-qualifying goods) are due to take effect Aug 19 absent a deal. Talks between USTR Greer and Canada's LeBlanc remained 'far apart' as of Aug 15, four meetings into three weeks of negotiation.",
+          "trend": "up",
+          "lastUpdated": "2026-08-15T12:00:00Z"
         },
         {
           "id": "china-gdp-2025",
@@ -807,14 +867,14 @@
         {
           "id": "global-policy-uncertainty",
           "label": "Global Policy Uncertainty / Recession Risk",
-          "value": "AUG 10: Fed Held Jul 29 (3.50-3.75%, 3 Hawkish Dissents); Section 301 Tariffs (10-12.5%) Live Since Jul 24; Jul NFP -23K Shock; S&P Record Close; Brent Round-Tripped $100→$90s",
+          "value": "AUG 14: July CPI (3.4%) and PPI (Flat) Both Cool, S&P Sets Record Above 7,800; Retail Sales -0.6% and Michigan Sentiment 51.0 Crack the Consumer Story; Hormuz Tanker Attack Renews Oil Risk",
           "color": "red",
-          "source": "Federal Reserve / BEA / BLS / ISM / Eurostat; July 17 – August 10, 2026",
+          "source": "Federal Reserve / BEA / BLS / Census Bureau / U. Michigan / ISM / Eurostat; July 17 – August 14, 2026",
           "contested": false,
-          "delta": "JULY 23-AUG 10 ARC — OIL SHOCK, TARIFF CLIFF RESOLVES, JOBS SHOCK REVERSES HIKE FEARS: Houthi tanker attacks off Saudi Arabia reflared the Hormuz/Red Sea oil shock July 23, sending Brent above $100 and September Fed-hike odds to ~82% intraday. The Section 122 tariff surcharge expired by statute July 24, replaced same-minute by Section 301 forced-labor tariffs (10-12.5%) on 60 economies — the coverage gap traders had worried about did not materialize. The FOMC held rates July 29 despite the inflation scare, with 3 members dissenting in favor of a hike. Q2 GDP's advance estimate (July 30, +1.5%) missed the 2.1% forecast, and China's Politburo (July 31) pledged only targeted stimulus. Eurozone inflation rose to 2.9% (July 31) on the oil shock. ISM prints were mixed: manufacturing surged to 55.6% (Aug 3, best since May 2022) while services' employment sub-index fell into contraction (Aug 5). The July jobs report (Aug 7: NFP -23K, May/June revised down 103K combined) reversed the hawkish repricing entirely — the S&P 500 closed at a record high and Fed September hike odds collapsed.",
-          "deltaNote": "AUG 10 RECESSION RISK SNAPSHOT: The dominant swing factor this window was geopolitical-energy, not domestic demand — the Jul 23 Hormuz/Red Sea tanker attacks pushed Brent through $100 and briefly repriced Fed policy toward a hike, before the Aug 7 jobs miss flipped sentiment back toward a hold/cut bias. Growth signals are genuinely mixed: GDP advance missed, ISM manufacturing hit a 4-year high, ISM services employment contracted, and payrolls swung negative with large downward revisions. The tariff transition (Section 122 → Section 301) executed without the feared coverage gap. Next catalysts: August CPI, the September FOMC, and whether China's 'targeted' stimulus pledge translates into concrete measures.",
+          "delta": "AUG 10-14 ARC — DISINFLATION CONFIRMED, THEN CONSUMER DATA CRACKS AND OIL RISK RETURNS: July CPI cooled to 3.4% headline / 2.5% core (Aug 12), and July PPI came in flat — below the 0.2% forecast — with core PPI +0.2% (Aug 13), driving the S&P 500 to a fresh record 7,799 close (first time above 7,800 intraday) and pulling September Fed hike odds under 35% from ~55% a week earlier. That disinflation narrative was complicated Aug 14: July retail sales fell 0.6%, the steepest monthly drop in over a year, and the University of Michigan's preliminary August sentiment reading tumbled to 51.0 (from July's 55.2), pulling stocks off their record highs. The same day, two UAE tankers were attacked in the Strait of Hormuz — the second such incident in under a week — rebounding oil prices and reintroducing energy-driven inflation risk into the Fed's calculus.",
+          "deltaNote": "AUG 14 RECESSION RISK SNAPSHOT: The window's dominant theme flipped from inflation risk to demand risk — cooling CPI/PPI initially cleared the way for a durable 'no landing' read, but the retail-sales miss and consumer-sentiment collapse are the clearest demand-side cracks since the Aug 7 jobs shock, while the renewed Hormuz tanker attacks show the energy-shock tail risk has not gone away. Next catalysts: the final August Michigan sentiment reading (Aug 28), August jobs and CPI reports, and the September 16-17 FOMC meeting.",
           "trend": "down",
-          "lastUpdated": "2026-08-10T18:00:00Z"
+          "lastUpdated": "2026-08-14T20:00:00Z"
         },
         {
           "id": "boj-policy-rate",
@@ -832,6 +892,90 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "peso-strengthens-tamaulipas-tour-aug14-2026",
+          "date": "2026-08-14",
+          "title": "Day 682 — Peso Strengthens to 16.98/USD as Sheinbaum Confirms Tamaulipas Hospital Tour",
+          "type": "economic",
+          "detail": "On August 14, 2026 (Day 682, Friday), Sheinbaum noted the peso trading at 16.98 per US dollar and said she expects H2 2026 growth to strengthen as previously delayed public works — held up mainly by bureaucratic bottlenecks — begin construction: 'Each month is going to be better.' She also confirmed a weekend work tour to Tamaulipas with Governor Américo Villarreal to inaugurate two new hospitals (ISSSTE and IMSS-Bienestar), review hydraulic works, and meet with 'Jóvenes Construyendo el Futuro' participants.",
+          "sources": [
+            {
+              "name": "Ámbito",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://www.ambito.com/mexico/informacion-general/la-mananera-claudia-sheinbaum-hoy-viernes-14-agosto-2026-minuto-minuto-vivo-n6310361"
+            },
+            {
+              "name": "Excélsior",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.excelsior.com.mx/nacional/mananera-sheinbaum-vivo-temas-conferencia-hoy-14-agosto-2026"
+            }
+          ]
+        },
+        {
+          "id": "amlo-son-visa-revoked-aug13-2026",
+          "date": "2026-08-13",
+          "title": "Day 681 — AMLO's Son Andy López Beltrán Says US Revoked His Visa, Adding Pressure on Sheinbaum",
+          "type": "political",
+          "detail": "On August 13, 2026 (Day 681, Thursday), Andrés Manuel 'Andy' López Beltrán — son of former president AMLO — announced via a letter posted to Instagram and addressed to Donald Trump that the U.S. State Department, under Secretary Marco Rubio and Deputy Secretary Christopher Landau, had revoked his U.S. visa. López Beltrán called the move 'political, more propagandistic than anything, in a Hitlerian style' and denied any wrongdoing. The episode increased scrutiny on the Sheinbaum government amid separate PAN questions linking López Beltrán to an FGR fuel-theft ('huachicol fiscal') investigation.",
+          "sources": [
+            {
+              "name": "Diario Cambio",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://www.diariocambio.com.mx/2026/nacional/estados-unidos-retira-visa-a-andy-lopez-beltran-hijo-de-amlo/"
+            },
+            {
+              "name": "La Crónica de Hoy",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://www.cronica.com.mx/nacional/2026/08/13/golpe-a-los-hijos-de-amlo-eu-le-retira-la-visa-a-andy-lopez-beltran-y-le-escribe-carta-a-trump/"
+            }
+          ]
+        },
+        {
+          "id": "sheinbaum-goldman-sachs-meeting-aug12-2026",
+          "date": "2026-08-12",
+          "title": "Day 680 — Sheinbaum Meets Goldman Sachs President Waldron to Discuss Plan México Investment",
+          "type": "economic",
+          "detail": "On August 12, 2026 (Day 680, Wednesday), President Sheinbaum met at the National Palace with Goldman Sachs President and COO John E. Waldron, alongside Finance Secretary Edgar Amador Zamora, to discuss Mexico's 'favorable perception' among international investors and opportunities under Plan México, which targets 1.5 million new jobs and investment above 25% of GDP as Mexico aims to move from the world's 15th- to a top-10 economy. No specific investment agreements or new projects were disclosed following the meeting.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://mexiconewsdaily.com/business/sheinbuam-goldman-sachs-meeting/"
+            },
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/08/12/sheinbaum-se-reune-con-john-e-waldron-director-de-uno-de-los-bancos-mas-grandes-del-mundo/"
+            }
+          ]
+        },
+        {
+          "id": "avocado-inspections-partial-resumption-aug8-2026",
+          "date": "2026-08-08",
+          "title": "Day 676 — US Partially Resumes Avocado Inspections After Mexico Deploys 1,557 Troops to Michoacán",
+          "type": "economic",
+          "detail": "On August 8, 2026 (Day 676, Saturday), the U.S. Embassy began a partial resumption of avocado export inspections in Michoacán, three days after the August 5 suspension, covering the municipalities of Tancítaro, Tacámbaro, Uruapan, and the Morelia–Pátzcuaro corridor. The restart followed a security agreement under which the Mexican government deployed 1,557 Army and National Guard personnel to the avocado belt on August 6 and established a permanent coordination table to monitor conditions protecting U.S. inspectors. The resumption remained partial and contingent on continued security improvements, with full normalization pending across the roughly 60 export packing plants in the state.",
+          "sources": [
+            {
+              "name": "The Rio Times",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://www.riotimesonline.com/us-resumes-avocado-inspections-michoacan-2026/"
+            },
+            {
+              "name": "Blue Book Services",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://www.bluebookservices.com/u-s-allows-partial-resumption-of-avocado-inspections-in-mexico/"
+            }
+          ]
+        },
         {
           "id": "sheinbaum-fracking-ban-key-basin-aug6-2026",
           "date": "2026-08-06",
@@ -871,6 +1015,27 @@
               "tier": 3,
               "pole": "western",
               "url": "https://www.agbull.com/sheinbaums-approval-surges-as-mexicos-inflation-cools-to-a-five-year-low/"
+            }
+          ]
+        },
+        {
+          "id": "us-suspends-avocado-inspections-michoacan-aug5-2026",
+          "date": "2026-08-05",
+          "title": "Day 673 — US Suspends Avocado Export Inspections in Michoacán Over Threat to Inspectors",
+          "type": "economic",
+          "detail": "On August 5, 2026 (Day 673, Wednesday), the U.S. Department of Agriculture (USDA) halted phytosanitary inspections required for Mexican avocado exports in Michoacán, citing an unspecified 'threat against U.S. interests' after inspectors received threats in the field. The suspension immediately froze new certifications needed to ship avocados to the United States, Mexico's overwhelming top export market (roughly 90% of Mexican avocado exports by volume, worth $3.65 billion in 2025). Michoacán supplies 75-80% of Mexico's total avocado output and the industry directly employs over 200,000 people in the state. It marked the third U.S. suspension of Michoacán avocado inspections since 2022, all tied to security incidents against American inspectors. Michoacán Governor Alfredo Ramírez Bedolla said the pause was intended to safeguard inspectors following recent security incidents and extortion-related arrests in the region.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://mexiconewsdaily.com/business/us-suspends-avocado-imports-from-mexico-over-unspecified-threat-to-american-interests/"
+            },
+            {
+              "name": "CNN",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.cnn.com/2026/08/05/americas/mexico-us-suspends-avocado-inspections-intl-latam"
             }
           ]
         },
@@ -1188,186 +1353,6 @@
               "url": "https://www.ambito.com/mexico/informacion-general/la-mananera-claudia-sheinbaum-hoy-jueves-4-junio-2026-minuto-minuto-vivo-n6284507"
             }
           ]
-        },
-        {
-          "id": "cnte-day3-sep-blockade-reforma-jun3-2026",
-          "date": "2026-06-03",
-          "title": "Day 610 — CNTE Day 3: Teachers Storm SEP Offices, Block Paseo de la Reforma for 4 Hours; Economic Losses Top 405M Pesos",
-          "type": "political",
-          "detail": "June 3, 2026 marked Day 3 of the CNTE (Coordinadora Nacional de Trabajadores de la Educación) national strike, with a significant escalation: CNTE members stormed and occupied the entrance of the Ministry of Public Education (SEP) offices in Mexico City, forcing staff to exit the building. Simultaneously, teachers blocked Paseo de la Reforma — Mexico City's main artery — for approximately four hours between Circuito Interior and Torre del Caballito, causing severe traffic disruption during morning and midday hours. The encampment in the Historic Center of Mexico City entered its 9th day (the CNTE had established the encampment around May 25). CNTE strike coordination reported that: economic losses from the strike and encampment between May 25 and June 3 exceeded 405 million pesos, according to estimates from Mexico City's Business Coordination Council. Over 2 million students across 29 states remained affected by the national work stoppage. CNBC reported that the overlapping disruption of CNTE blockades and FIFA World Cup 2026 infrastructure construction was creating unprecedented logistical pressure on Mexico City authorities, with the June 11 Mexico vs. South Africa opener at Estadio Azteca just 8 days away. La Jornada's live coverage documented simultaneous blockades at SEP, Reforma, and other key intersections in the Historic Center.",
-          "sources": [
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/noticia/2026/06/03/politica/cnte-realiza-multiples-bloqueos-en-cdmx-durante-el-tercer-dia-de-paro-nacional"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/cdmx/2026/06/03/cnte-toma-las-calles-de-cdmx-que-puntos-bloquearan-los-maestros-hoy-miercoles-3-de-junio/"
-            },
-            {
-              "name": "CNBC",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.cnbc.com/2026/06/03/protests-and-construction-work-disrupt-mexico-city-ahead-of-world-cup.html"
-            },
-            {
-              "name": "Crónica",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.cronica.com.mx/metropoli/2026/06/03/de-reforma-a-la-sep-asi-han-been-los-destrozos-de-la-cnte-en-la-cdmx-a-dias-del-mundial/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-refuses-cnte-direct-meeting-jun3-2026",
-          "date": "2026-06-03",
-          "title": "Day 610 — Sheinbaum Declines Direct Meeting with CNTE; Delegates to SEGOB and SEP; CNTE Threatens to Leave Dialogue",
-          "type": "political",
-          "detail": "At her June 3, 2026 (Day 610) mañanera, President Sheinbaum declared it was 'not pertinent' for her to hold a direct meeting with CNTE leadership, leaving negotiations exclusively in the hands of Interior Secretary Rosa Icela Rodríguez (SEGOB) and Education Secretary Mario Delgado (SEP). Sheinbaum said 'We are not Díaz Ordaz' — invoking the president who ordered the 1968 Tlatelolco massacre of student protesters — to indicate the government would not resort to repression against the striking teachers, while simultaneously refusing their core demand of a presidential audience. CNTE leaders responded by warning they would abandon the existing SEGOB dialogue table entirely if Sheinbaum did not agree to a direct meeting with the striking sections. According to Proceso, CNTE national coordinator representatives stated: 'Without a guarantee of a direct meeting with the President, there is no point in continuing to dialogue with her subordinates.' The CNTE's four core demands remained unchanged: abrogation of the 2007 ISSSTE pension law; a 100% salary increase (vs. the government's offered 9% raise announced May 15); elimination of the teacher evaluation/dismissal system; and direct teacher hiring without examinations. Sheinbaum also accused the CNTE of staging 'provocations' aimed at disrupting the FIFA World Cup 2026, which opens June 11 at Estadio Azteca.",
-          "sources": [
-            {
-              "name": "La Razón de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.razon.com.mx/mexico/2026/06/03/sheinbaum-descarta-reunion-con-la-cnte-y-acusa-provocacion-rumbo-al-mundial-2026/"
-            },
-            {
-              "name": "Proceso",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.proceso.com.mx/nacional/2026/6/3/si-no-hay-reunion-con-sheinbaum-cnte-advierte-que-se-retirara-de-la-mesa-de-dialogo-376305.html"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/06/03/claudia-sheinbaum-mananera-temas-hoy-3-de-junio-de-2026-en-vivo/"
-            }
-          ]
-        },
-        {
-          "id": "cnte-megamarch-national-strike-jun1-2026",
-          "date": "2026-06-01",
-          "title": "Day 608 — CNTE National Strike: Megamarch from Ángel de la Independencia Shuts Down Mexico City; 29 States Affected",
-          "type": "political",
-          "detail": "On June 1, 2026 (Day 608), the CNTE's (Coordinadora Nacional de Trabajadores de la Educación) announced national work stoppage began, with teachers from 29 states conducting a simultaneous strike and a megamarch in Mexico City. Departing from the Ángel de la Independencia on Paseo de la Reforma at approximately 9:00 AM, tens of thousands of teachers marched toward the Zócalo and Centro Histórico. El Financiero's live coverage reported major street closures throughout the morning: Paseo de la Reforma, Av. Juárez, Eje Central, 5 de Mayo, Av. Madero, and 16 de Septiembre. The Zócalo main plaza was partially inaccessible due to FIFA World Cup 2026 Fan Fest infrastructure already installed ahead of the June 11 Mexico vs. South Africa inaugural match. The CNTE's core demands remained unchanged: (1) abrogation of the 2007 ISSSTE pension law; (2) 100% salary increase; (3) elimination of the teacher career evaluation/dismissal system; (4) direct hiring of teachers without evaluation. Three rounds of SEGOB-SEP-ISSSTE dialogue (culminating in the May 29 seven-hour session) had yielded no movement on core demands, triggering the June 1 escalation. Section leaders confirmed that if core demands were not addressed before the World Cup (June 11 opener at Estadio Azteca), the CNTE would escalate actions to maximize visibility during international coverage. The national strike affected schools in Oaxaca (Sección 22 ~70,000 members), Chiapas (Sección 7), Michoacán (Sección 18), Guerrero, Hidalgo, and Campeche. At her June 1 mañanera, Sheinbaum expressed confidence the dispute would be resolved via dialogue through SEP and SEGOB, dismissing concerns about World Cup disruption.",
-          "sources": [
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/cdmx/2026/06/01/cdmx-trafico-en-vivo-calles-cerradas-por-marcha-de-maestros-de-la-cnte-hoy-lunes-1-de-junio/"
-            },
-            {
-              "name": "TV Azteca",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.tvazteca.com/aztecanoticias/a-que-hora-inicia-la-megamarcha-cnte-cdmx-hoy-1-junio-2026-ruta-calles-cerradas-alternativas-viales-angel-independencia-zocalo/"
-            },
-            {
-              "name": "Sin Embargo",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.sinembargo.mx/4811251/maestros-de-la-cnte-no-logran-acuerdo-con-segob-y-evaluan-extender-planton-en-la-cdmx/"
-            },
-            {
-              "name": "Publimetro",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.publimetro.com.mx/noticias/2026/05/31/cnte-confirma-paro-nacional-y-megamarcha-este-1-de-junio-en-cdmx-a-dias-del-mundial-2026/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-mananera-day608-tomato-welfare-wc2026-jun1-2026",
-          "date": "2026-06-01",
-          "title": "Day 608 — Sheinbaum Mañanera: Tomato Price Agreement Announced for June 3; Four Young Women to Represent Mexico at World Cup Ceremony; 18.8M Bienestar Payments June 15–21",
-          "type": "political",
-          "detail": "At her June 1, 2026 (Day 608) mañanera from the National Palace, President Claudia Sheinbaum announced several policy and social actions: (1) TOMATO PRICES: Sheinbaum confirmed she would sign an agreement with tomato producers and distributors on Wednesday, June 3, to address a three-month spike in tomato prices. She cited Florida frosts, crop disease in Sinaloa, and intermediary markups as causes. The government plan: direct connections between producers and central market distribution systems. (2) FIFA WORLD CUP 2026: Sheinbaum presented four young women who will represent Mexico at the FIFA World Cup 2026 inauguration ceremony at Estadio Azteca on June 11 (Mexico vs. South Africa) — selected through national competitions. Sheinbaum had previously given her personal presidential ticket (ticket #0001) to Yolett Cervantes Cuaquehua, a 21-year-old Indigenous woman from Veracruz, at the May 29 mañanera. (3) CNTE: Expressed confidence that the teachers' dispute would be resolved via dialogue through SEP Secretary Mario Delgado and Interior Secretary Rosa Icela Rodríguez, without disrupting World Cup activities. (4) WELFARE / BIENESTAR: Announced bienestar card distribution for elderly adults and registered women, scheduled June 15–21, with new registration opening June 22–28 — affecting 18.8 million beneficiaries representing 663 million pesos. (5) SOVEREIGNTY / US PRESSURE: In response to questions about U.S. pressure and the DOJ indictment campaign, Sheinbaum reiterated her sovereignty posture at the mañanera: 'We are not anyone's puppet. If from abroad culprits are dictated and pressure is sought, that is interference.' She confirmed the FGR found no basis to charge Chihuahua Governor Maru Campos, framing external pressure as 'foreign interference.'",
-          "sources": [
-            {
-              "name": "Excélsior",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.excelsior.com.mx/politica/mananera-sheinbaum-hoy-vivo-temas-conferencia-1-junio-2026"
-            },
-            {
-              "name": "La Razón de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.razon.com.mx/mexico/2026/06/01/mananera-de-sheinbaum-1-de-junio-del-2026/"
-            },
-            {
-              "name": "Al Jazeera",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/6/1/sheinbaum-accuses-us-of-interference-amid-probe-of-mexican-officials"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-second-informe-en-defensa-soberania-may31-2026",
-          "date": "2026-05-31",
-          "title": "Day 607 — Sheinbaum Delivers Second Government Report 'En Defensa de la Soberanía' at Monumento a la Revolución; Security Gains and Record FDI Lead Agenda",
-          "type": "political",
-          "detail": "On May 31, 2026 (Day 607), President Claudia Sheinbaum delivered her second major government accountability report — titled 'En Defensa de la Soberanía' (In Defense of Sovereignty) — live from the National Palace at 10:00 AM, with tens of thousands of supporters gathered at the Monumento a la Revolución esplanade in Colonia Tabacalera, Mexico City. The event was simultaneously broadcast on public screens in plazas and government spaces across all 32 state capitals. The Zócalo was unavailable due to FIFA World Cup 2026 Fan Fest construction ahead of the June 11 opener. Mexico City Mayor Clara Brugada had called a mass mobilization at the monument from 9:00 AM, and Morena's territorial structures organized transportation from all states. The report marked approximately two years since Sheinbaum's June 2, 2024 electoral victory (59.76%). KEY FIGURES AND ANNOUNCEMENTS: (1) SECURITY: Daily intentional homicide average fell 49% from inauguration (86.9/day in Sep 2024 → 44.3/day in May 2026); 54,297 priority targets detained; 402.8 tons of drugs seized; 2,400 clandestine labs destroyed; 92 suspects extradited to the U.S.; 85 public officials arrested over two years. (2) ECONOMY: Labor poverty fell 3.2 percentage points (33.9% Q1 2025 → 30.7% Q1 2026); record Q1 2026 FDI of $23.591 billion; 12 consecutive months of minimum wage increases above inflation; 2.5% unemployment rate. (3) SOVEREIGNTY NARRATIVE: The report's central theme was explicitly framed around Mexico's resistance to foreign pressure — 'Mexico is nobody's colony, nobody's protectorate' — in direct response to the CIA expulsion (May 28) and the U.S. DOJ indictment of Sinaloa Governor Rocha Moya (April 29). Sheinbaum referenced the EU-Mexico Global Agreement (May 22) as evidence of Mexico's successful diplomatic diversification strategy. (4) INFRASTRUCTURE: Key milestones cited included the Tren Felipe Ángeles AIFA link inauguration (April 26), the first Podecobi economic hub (Tlaxcala, April 16), the IMSS Bienestar expansion to 24 states, and Pemex debt reduction of ~$23B USD. (5) MOTTO: 'La Honestidad Da Resultados' — 'Esta transformación no la detiene nadie' ('This transformation, nobody stops it'). The report was the broadest public accounting of the first 607 days of the Sheinbaum presidency and set the political narrative heading into the FIFA World Cup 2026 opening week and the approaching USMCA Round 2 (June 16–17, Washington).",
-          "sources": [
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/05/31/informe-sheinbaum-2-anos-triunfo-electoral-en-vivo/"
-            },
-            {
-              "name": "Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/5/31/sheinbaum-rendira-informe-en-el-monumento-la-revolucion-dos-anos-de-su-triunfo-822789.html"
-            },
-            {
-              "name": "Ángulo 7",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.angulo7.com.mx/2026/nacional/defensa-de-soberania-seguridad-y-plan-mexico-regiran-2-informe-de-sheinbaum/698077/"
-            },
-            {
-              "name": "Crónica",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.cronica.com.mx/nacional/2026/05/25/claudia-sheinbaum-presentara-informe-en-defensa-de-la-soberania-a-dos-anos-de-su-triunfo-electoral/"
-            }
-          ]
-        },
-        {
-          "id": "cnte-seccion22-oaxaca-paro-nacional-may30-2026",
-          "date": "2026-05-30",
-          "title": "Day 606 — CNTE Sección 22 Extraordinary Assembly Formally Votes to Join June 1 National Strike; Section Leader Declares Core Demands Unmet",
-          "type": "political",
-          "detail": "On May 30, 2026 (Day 606 — a Saturday with no mañanera), the CNTE's Sección 22 (Oaxaca teachers' section, the union's largest with approximately 70,000 members) convened an extraordinary state assembly in Oaxaca city to evaluate the outcomes of three rounds of dialogue with the federal government (Secretaría de Gobernación, SEP) and determine next steps. ASSEMBLY OUTCOME: Section leader Yenny Aracely Pérez addressed the assembly and declared that while the government had provided partial responses on administrative matters (payroll corrections, housing fund review), the core demands remained unmet: (1) Abrogation of the 2007 ISSSTE pension reform; (2) 100% base salary raise; (3) Reinstatement of workers dismissed under the 2019 Education Reform teacher evaluation system. The extraordinary assembly formally voted to: (a) Join the national indefinite strike call beginning June 1, 2026; (b) Suspend all school operations statewide from June 1 until demands are met; (c) Support the national mega-march to be held in Mexico City on June 1 with participation from Sección 22's delegados. Pérez stated the government had shown 'cerrazón' (closed-mindedness) on the central demands. BROADER CNTE CONTEXT: Sección 7 (Chiapas), Sección 18 (Michoacán), and sections from Guerrero and Hidalgo had already announced solidarity actions for June 1. The strike and march were deliberately timed to coincide with the FIFA World Cup 2026 opening weekend (Mexico vs. South Africa, June 11 at Estadio Azteca) to maximize international visibility pressure on the government.",
-          "sources": [
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/05/30/sin-acuerdos-en-gobernacion-la-cnte-de-oaxaca-se-une-al-paro-nacional-y-reprocha-cerrazon-del-gobierno-federal/"
-            },
-            {
-              "name": "Diario MX",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://diario.mx/juarez/2026/may/30/contemplan-aqui-maestros-unirse-a-paro-de-la-cnte-1120380.html"
-            },
-            {
-              "name": "Mexico Solidarity Media",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://mexicosolidarity.com/cnte-announces-indefinite-strike-in-june-during-world-cup/"
-            }
-          ]
         }
       ]
     },
@@ -1498,36 +1483,6 @@
               "name": "Office of the US Trade Representative",
               "tier": 1,
               "url": "https://ustr.gov/node/14362",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-inflation-3yr-high-june-2026",
-          "date": "2026-06-14",
-          "title": "US Inflation Hits 3-Year High Driven by Rising Gas Prices",
-          "type": "economic",
-          "detail": "US inflation rose to a three-year high, driven by rising gas prices, creating a headache for the Federal Reserve under Chair Warsh and a potential political challenge for the Trump administration ahead of midterm elections. The surge adds pressure on the Fed ahead of its June 16–17 FOMC meeting.",
-          "sources": [
-            {
-              "name": "AP News",
-              "tier": 2,
-              "url": "https://bsky.app/profile/apnews.com/post/3moaar3ygji2s",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-tariff-refund-legal-move-jun9-2026",
-          "date": "2026-06-09",
-          "title": "Trump Administration Pursues Legal Move on Tariff Refunds for Importers",
-          "type": "trade",
-          "detail": "The Trump administration has moved forward with a new legal action related to tariff refunds, raising questions about which importers could receive reimbursements under the ongoing trade framework. The move signals continued evolution of the administration's tariff enforcement and relief posture — Day 506.",
-          "sources": [
-            {
-              "name": "Google News",
-              "tier": 2,
-              "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQaDIwY29PdzFvU0tFMlpMSXBhVGx6Mjh6SG5sQVVhUkpYZkR4MjRZbmhBTnBMVkRfLVNkUFM1UV9xbmhqMHVsUzhuVS16Vk9BdF9jTU9BcXpzdDNKZVpFYWpkVXlsSjllSllXM0RyQ2VvTk5qelJITGNMa3lQc2RCY1BEb0xNN3dnYUcwd0dUeGl6UQ?oc=5&hl=en-US&gl=US&ceid=US:en",
               "pole": "western"
             }
           ]
