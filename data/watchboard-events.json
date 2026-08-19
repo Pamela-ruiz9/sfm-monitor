@@ -1,8 +1,89 @@
 {
-  "updated": "2026-08-18T14:27:17Z",
+  "updated": "2026-08-19T14:26:58Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "carney-trump-call-tariff-deadline-aug18-2026",
+          "date": "2026-08-18",
+          "title": "Carney-Trump Call 'Very Intense and Delicate' as Canada Braces for Midnight 50% Tariff Deadline",
+          "type": "trade",
+          "detail": "Prime Minister Mark Carney spoke by phone with President Trump on Monday afternoon ahead of the 50% Section 338 tariffs — covering roughly $20 billion of Canadian dairy, alcohol, and motor-vehicle goods — set to take effect 12:01am EDT Wednesday, August 19. Carney declined to detail the call, describing the negotiations only as 'very intense and delicate' and saying it was 'not the time to negotiate in public.' Canada's Trade Minister Dominic LeBlanc and chief negotiator Janice Charette met US Trade Representative Jamieson Greer and Commerce Secretary Howard Lutnick in Washington the same day — LeBlanc's fourth meeting with Greer in three weeks — saying afterward, 'We're going to continue working. Our job is not yet done.' The main sticking points remain auto-tariff content rules (Canada wants the existing 25% rate cut to 15% based on North American-content eligibility, while the US wants US-content-only credit), unresolved steel and aluminum tariffs, and Canada's dairy supply-management system. Trade experts noted that continued talks hours before the deadline were an encouraging sign, with one former White House trade adviser observing that 'the hardest issues always get resolved at the very last moment.'",
+          "sources": [
+            {
+              "name": "CP24/CTV News — Carney Speaks With Trump, Calls Trade Negotiations 'Very Intense and Delicate'",
+              "tier": 2,
+              "url": "https://www.cp24.com/news/canada/2026/08/18/carney-speaks-with-trump-calls-trade-negotiations-very-intense-and-delicate-live-tariff-updates-here/",
+              "pole": "western"
+            },
+            {
+              "name": "CBC News — Carney Says Last-Minute US Tariff Negotiations Are 'Delicate' and 'Intense' as Deadline Looms",
+              "tier": 2,
+              "url": "https://www.cbc.ca/news/politics/carney-negotiations-delicate-intense-9.7309934",
+              "pole": "western"
+            },
+            {
+              "name": "BNN Bloomberg — Trump Takes Carney's Phone Call as Tariff Deadline Approaches",
+              "tier": 2,
+              "url": "https://www.bnnbloomberg.ca/tariffs/2026/08/18/carney-and-trump-speak-on-phone-as-deadline-approaches-for-50-per-cent-tariffs/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "us-iran-mou-expires-30y-yield-2007-high-aug17-2026",
+          "date": "2026-08-17",
+          "title": "US-Iran MOU Expires Without a Deal — 30-Year Treasury Yield Hits Highest Since 2007, Stocks Slip",
+          "type": "market",
+          "detail": "The 60-day negotiating window under the June 17 US-Iran Memorandum of Understanding expired Monday without a final peace agreement. Trump said the US would not seek an extension, telling Iran to 'put up the white flag of surrender' while adding he felt 'no hurry' and would rely on the naval blockade and upcoming Treasury sanctions to apply pressure; Iran's side blamed unresolved disputes over Strait of Hormuz shipping routes, continued Israeli strikes in Lebanon and Gaza, and an unfunded $300B reconstruction package. The renewed war-risk premium pushed Brent crude up about 2.7% to $90.87/bbl and WTI up 2.6% to $84.50/bbl. Combined with mounting concern over federal debt issuance (national debt nearing $40 trillion) and persistent above-target inflation, the 30-year Treasury yield rose to 5.31-5.32% — its highest level since June 2007 — while the 10-year added to 4.72-4.74%. US equities slipped on the combination of renewed geopolitical risk and higher long-end borrowing costs: the Dow fell 0.5%, the S&P 500 fell 0.5% (snapping a three-week winning streak), and the Nasdaq fell 0.3%.",
+          "sources": [
+            {
+              "name": "Al Jazeera — US-Iran Memorandum of Understanding Expires: How and Why It Fell Apart",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/news/2026/8/17/us-iran-memorandum-of-understanding-expires-how-and-why-it-fell-apart",
+              "pole": "middle_eastern"
+            },
+            {
+              "name": "CNBC — 30-Year Treasury Yield Tops 5.31%, the Highest in 19 Years",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/17/treasury-yields-federal-reserve-fomc-minutes.html",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — Stock Market Today: Dow, S&P 500, Nasdaq Fall as Oil Rises Amid US-Iran Tensions, 30-Year Yield Hits Highest Level in Decades",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-august-17-dow-sp-500-nasdaq-oil-treasurys-094421171.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "china-july-activity-data-miss-aug17-2026",
+          "date": "2026-08-17",
+          "title": "China's July Activity Data Misses Across the Board — Industrial Output +4.5%, Retail Sales +0.6%, Investment Slump Deepens",
+          "type": "economic",
+          "detail": "China's National Bureau of Statistics reported industrial output grew 4.5% year-over-year in July, down from 5.3% in June and missing the 4.8% Reuters poll forecast, while retail sales rose just 0.6% (vs. a 1.5% forecast and June's 1.0% pace) as auto sales plunged 17.0%. Fixed-asset investment for the first seven months of 2026 contracted 6.7%, deeper than the expected 6.0% decline and worse than H1's -5.7%. Analysts attributed part of the weakness to three typhoons that made landfall in July, disrupting manufacturing hubs in eastern and southern China and forcing millions to evacuate, alongside fading government subsidy support for durable-goods purchases (daily average sales fell to 6.3 billion yuan from 9 billion in June). The data follows Q2 GDP's slowdown to a three-and-a-half-year low of 4.3% and adds pressure on Beijing to deliver stronger fiscal stimulus in the second half to hit its 2026 growth target.",
+          "sources": [
+            {
+              "name": "Reuters (via Investing.com) — China's July Industrial Output Slows, Retail Sales Miss Forecasts",
+              "tier": 2,
+              "url": "https://www.investing.com/news/economy-news/chinas-industrial-output-slows-in-july-retail-sales-miss-forecasts-4862243",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — China's Economy Slows Further in July as Retail Sales Barely Grow, Investment Slump Steepens",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/17/china-economy-sales-investment-july-.html",
+              "pole": "western"
+            },
+            {
+              "name": "The China-Global South Project — China's Retail Sales, Factory Activity Lagged in July",
+              "tier": 3,
+              "url": "https://chinaglobalsouth.com/2026/08/17/china-economy-retail-sales-factory-activity-slow-july/",
+              "pole": "eastern"
+            }
+          ]
+        },
         {
           "id": "canada-us-tariff-talks-far-apart-aug19-deadline-aug15-2026",
           "date": "2026-08-15",
@@ -647,63 +728,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "yen-40-year-low-despite-boj-hike-june30-2026",
-          "date": "2026-06-30",
-          "title": "Yen Falls to Fresh 40-Year Low Past 162/USD Despite BOJ Hike and Intervention",
-          "type": "market",
-          "detail": "The yen fell to a fresh roughly 40-year low, breaching 162 per US dollar — the weakest level since December 1986 — despite an estimated $72.5 billion in BOJ/Ministry of Finance FX interventions in late April-May and the June 16 rate hike to 1.00%. The move underscored that persistent yen weakness, and the associated carry-trade-unwind risk to global asset markets, had not been resolved by the rate hike alone.",
-          "sources": [
-            {
-              "name": "Real Investment Advice — The Yen at a 40-Year Low: Should You Care?",
-              "tier": 3,
-              "url": "https://realinvestmentadvice.com/resources/blog/the-yen-at-40-year-low-should-you-care/",
-              "pole": "western"
-            },
-            {
-              "name": "Japan Times — Yen Carry Trade Revives",
-              "tier": 2,
-              "url": "https://www.japantimes.co.jp/business/2026/06/15/markets/yen-carry-trade-revive/",
-              "pole": "eastern"
-            }
-          ]
-        },
-        {
-          "id": "h1-2026-stock-market-wrap-june30-2026",
-          "date": "2026-06-30",
-          "title": "S&P 500 Closes H1 2026 +9.6%, Best First Half Since 2020 Despite War and Rate Shocks",
-          "type": "market",
-          "detail": "The S&P 500 closed the first half of 2026 up 9.6%, the Nasdaq up 12.8%, and the Russell 2000 up roughly 22% — the small-cap index's best first half since 1991. The S&P notched 24 record closes and the Nasdaq 20 through the first half, despite the Iran war, the Section 122 tariff turmoil, and the June triple-central-bank-hike week. Brent crude, which peaked near $118 in April at the height of the war, traded near $73/barrel in early July — down roughly 40% from the war peak — as Morgan Stanley cut its Brent forecast to $90 for Q3 and $80 for Q4.",
-          "sources": [
-            {
-              "name": "CNN — Stock Market Up, Inflation, War",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/07/01/business/stock-market-up-inflation-war",
-              "pole": "western"
-            },
-            {
-              "name": "Capital.com — Oil Price Forecast",
-              "tier": 3,
-              "url": "https://capital.com/en-int/market-updates/oil-price-forecast-30-06-2026",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "investment-banks-upbeat-post-iran-deal-june29-2026",
-          "date": "2026-06-29",
-          "title": "Wall Street Banks Turn More Upbeat on Global Growth Following Iran Deal",
-          "type": "economic",
-          "detail": "Investment banks turned more optimistic on the global economic outlook in the weeks following the Iran deal. JPMorgan's chief economist wrote that the deal, cooling trade-war rhetoric, and a tech-capex surge were laying the groundwork for 'a period of strong and balanced global growth.' No specific revised numeric JPMorgan recession-probability figure was published alongside the commentary — the firm's most recent hard number remained its pre-deal estimate — but the tonal shift across major banks marked a meaningful change from the stagflation-trap narrative that had dominated the spring.",
-          "sources": [
-            {
-              "name": "Semafor — Investment Banks More Upbeat on Global Economy Following US-Iran Deal",
-              "tier": 3,
-              "url": "https://www.semafor.com/article/06/29/2026/investment-banks-more-upbeat-on-global-economy-following-us-iran-deal",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -776,9 +800,9 @@
           "source": "Federal Reserve FOMC, July 29 2026 (held; 3 hawkish dissents)",
           "contested": false,
           "delta": "Held at 3.50-3.75%; 3 dissents wanted a hike",
-          "deltaNote": "July 28-29: FOMC held at 3.50-3.75% despite the July 23 oil-driven inflation scare that had pushed September hike odds to ~82%. Three members dissented in favor of a hike — Warsh called it a 'good family fight.' The Aug 7 jobs miss (NFP -23K) subsequently cooled hike expectations for September.",
+          "deltaNote": "July 28-29: FOMC held at 3.50-3.75% despite the July 23 oil-driven inflation scare that had pushed September hike odds to ~82%. Three members dissented in favor of a hike — Warsh called it a 'good family fight.' The Aug 7 jobs miss (NFP -23K) subsequently cooled hike expectations for September. AUG 12-17 UPDATE: A Reuters poll of 104 economists found 94 expect the Fed to hold at 3.50-3.75% in September and 80 see no change through year-end; market pricing implies roughly 70% odds of a September hold, though futures still price in one hike by December. The Aug 17 expiration of the US-Iran MOU (no deal) and the resulting oil/yield jump added modest upside risk to hike bets even as the underlying data flow favors a hold.",
           "trend": "stable",
-          "lastUpdated": "2026-07-29T18:00:00Z"
+          "lastUpdated": "2026-08-17T18:00:00Z"
         },
         {
           "id": "ecb-deposit-rate",
@@ -795,14 +819,14 @@
         {
           "id": "us-10y-treasury-yield",
           "label": "US 10Y / 30Y Treasury Yield",
-          "value": "10Y ~4.65% (Aug 13) — Eased Further on Flat PPI; Hormuz Tanker Attack Aug 14 Renews Upside Risk",
+          "value": "30Y 5.31-5.32% (Aug 17) — Highest Since 2007; 10Y ~4.72-4.74%",
           "color": "red",
-          "source": "CNBC / Federal Reserve H.15 / FRED; July 23 - August 14, 2026",
+          "source": "CNBC / Federal Reserve H.15 / FRED; July 23 - August 17, 2026",
           "contested": false,
-          "delta": "Round-tripped a full cycle: surged on the July 23 Hormuz/Red Sea oil shock, fell back after the Aug 7 jobs miss, then eased a further ~4bp to 4.65% on Aug 13's flat PPI — before the Aug 14 UAE tanker attacks in the Strait of Hormuz reintroduced energy-shock upside risk.",
-          "deltaNote": "JULY 23-AUG 14: Oil-driven inflation scare (Brent >$100) pushed the 10Y to its highest since Jan 2025 in late July. The Aug 7 jobs report and Aug 13 flat PPI (below the 0.2% forecast) both reversed hike repricing, pulling September hike odds under 35% and the 10Y down to 4.65%. The Aug 14 attack on two UAE tankers in the Strait of Hormuz — the second in under a week — rebounded oil prices and re-injected energy-driven inflation risk just as soft retail sales and a crumbling Michigan sentiment reading pointed toward growth weakness instead.",
-          "trend": "down",
-          "lastUpdated": "2026-08-14T18:00:00Z"
+          "delta": "Round-tripped again: eased to 4.65% (10Y) on Aug 13's flat PPI, then jumped Aug 17 as the US-Iran MOU's 60-day window expired without a deal, reviving the oil-driven inflation premium alongside structurally rising long-end supply concerns.",
+          "deltaNote": "AUG 14-17: The Aug 14 UAE tanker attacks and the Aug 17 expiration of the US-Iran MOU (Trump ruled out an extension) re-injected war-risk premium into oil (Brent ~$91) just as national debt concerns (nearing $40T) and stubborn above-target inflation kept long-end yields elevated. The 30-year Treasury yield rose to 5.31-5.32% on Aug 17 — its highest level since June 2007 — while the 10-year added to 4.72-4.74%. A Reuters poll of 104 economists (Aug 12-17) found 94 expect the Fed to hold at 3.50-3.75% in September, with market pricing near 70% odds of a hold, though futures still imply one hike by December.",
+          "trend": "up",
+          "lastUpdated": "2026-08-17T20:00:00Z"
         },
         {
           "id": "us-consumer-confidence",
@@ -831,50 +855,50 @@
         {
           "id": "vix-fear-gauge",
           "label": "S&P 500 / Market Risk Gauge",
-          "value": "S&P 500 Record Close 7,799 (Aug 13, +0.65%, First Close Above 7,800 Intraday); Slipped Aug 14 on Weak Retail Sales/Sentiment",
-          "color": "amber",
-          "source": "CNBC / TheStreet / Federal Reserve; July 23 – August 14, 2026",
+          "value": "S&P 500 -0.5% (Aug 17) as US-Iran MOU Expires and 30Y Yield Hits 19-Year High; Record 7,799 Close Aug 13 Now Receding",
+          "color": "red",
+          "source": "CNBC / TheStreet / Yahoo Finance / Federal Reserve; July 23 – August 17, 2026",
           "contested": false,
-          "delta": "Sharp round trip and fresh record: the July 23 Hormuz/Red Sea oil shock knocked the Dow down 600+ points; markets recovered through the Jul 29 FOMC hold and Aug 7 jobs-driven rally, then set a fresh record 7,799 close on Aug 13's flat PPI before slipping fractionally Aug 14 on the retail-sales miss and Michigan sentiment plunge.",
-          "deltaNote": "JULY 23-AUG 14 ARC: Oil-driven hike fears triggered the sharpest selloff of the window July 23. The FOMC's July 29 hold, the Aug 7 jobs shock, and Aug 12-13's cooling CPI/PPI prints drove a steady rally to a fresh S&P record (7,799, clearing 7,800 intraday) on Aug 13, with September hike odds falling under 35%. Aug 14 brought a pullback — retail sales fell 0.6% (steepest drop in over a year) and Michigan consumer sentiment tumbled to 51.0 — while a fresh Hormuz tanker attack rebounded oil prices, reintroducing energy-shock risk to the disinflation narrative.",
-          "trend": "up",
-          "lastUpdated": "2026-08-14T20:00:00Z"
+          "delta": "Round trip continues: the fresh Aug 13 record (7,799, first close above 7,800 intraday) gave way to a two-day pullback — the Aug 14 retail-sales/sentiment miss, then an Aug 17 slide (Dow -0.5%, S&P -0.5%, Nasdaq -0.3%) as the US-Iran MOU expired and oil/yields jumped together.",
+          "deltaNote": "JULY 23-AUG 17 ARC: Oil-driven hike fears triggered the sharpest selloff of the window July 23. The FOMC's July 29 hold, the Aug 7 jobs shock, and Aug 12-13's cooling CPI/PPI prints drove a rally to a fresh S&P record (7,799) on Aug 13. That reversed over the following days: the Aug 14 retail-sales/sentiment miss, a second Hormuz tanker attack, and finally the Aug 17 expiration of the US-Iran MOU (no deal, no extension) pushed Brent to ~$91 and the 30-year Treasury yield to 5.31-5.32% — highest since 2007 — pulling stocks off their highs even as September hike odds remain low (Reuters poll: 94/104 economists expect a hold).",
+          "trend": "down",
+          "lastUpdated": "2026-08-17T21:00:00Z"
         },
         {
           "id": "us-effective-tariff-rate",
           "label": "US Avg Effective Tariff Rate",
-          "value": "Section 301 Forced-Labor Tariffs (10-12.5%) on 60 Economies Live Since Jul 24; New Canada Section 338 Tariffs (50% on ~$20B) Loom Aug 19",
+          "value": "Section 301 Forced-Labor Tariffs (10-12.5%) on 60 Economies Live Since Jul 24; Canada Section 338 Tariffs (50% on ~$20B) Due at Midnight Aug 19",
           "color": "red",
-          "source": "USTR / Global Trade Alert / Holland & Knight; Xinhua / CTV News; July 24 - August 15, 2026",
+          "source": "USTR / Global Trade Alert / Holland & Knight; CP24 / CBC / BNN Bloomberg; July 24 - August 18, 2026",
           "contested": true,
-          "contestNote": "The Section 122 tariff surcharge expired by statute at 12:01am EDT July 24 (150 days after its Feb 24 effective date; no Congressional extension occurred). USTR's Section 301 forced-labor tariffs (10% or 12.5%, 60 economies) took effect the same minute, avoiding the tariff-revenue coverage gap that trade counsel had flagged as a risk in mid-July. Canada/Mexico USMCA-qualifying goods and CAFTA-DR textiles remain exempt from Section 301 — but a separate Section 338 threat targets Canada directly: 50% tariffs on ~$20B of autos, alcohol, and dairy (including USMCA-qualifying goods) are due to take effect Aug 19 absent a deal. Talks between USTR Greer and Canada's LeBlanc remained 'far apart' as of Aug 15, four meetings into three weeks of negotiation.",
+          "contestNote": "The Section 122 tariff surcharge expired by statute at 12:01am EDT July 24; USTR's Section 301 forced-labor tariffs (10% or 12.5%, 60 economies) took effect the same minute, avoiding a coverage gap. Canada/Mexico USMCA-qualifying goods and CAFTA-DR textiles remain exempt from Section 301 — but the separate Section 338 threat on Canada (50% tariffs on ~$20B of autos, alcohol, and dairy) is due at 12:01am EDT Aug 19 absent a deal. Carney spoke with Trump by phone Aug 17, calling talks 'very intense and delicate'; LeBlanc met USTR Greer and Commerce Secretary Lutnick in Washington the same day (4th meeting in 3 weeks) saying 'our job is not yet done.' Sticking points: auto-tariff content rules, steel/aluminum tariffs, and dairy supply management.",
           "trend": "up",
-          "lastUpdated": "2026-08-15T12:00:00Z"
+          "lastUpdated": "2026-08-18T18:00:00Z"
         },
         {
           "id": "china-gdp-2025",
-          "label": "China GDP Q2 2026 (actual)",
-          "value": "4.3% (Q2 2026) — Slowest in 3.5 Years",
-          "color": "amber",
-          "source": "China NBS (Jul 14, 2026) / IMF WEO Jul 2026",
+          "label": "China GDP Q2 2026 (actual); July Activity Data Miss (Aug 17)",
+          "value": "4.3% (Q2 2026) — Slowest in 3.5 Years; July Output +4.5%, Retail Sales +0.6%, Both Miss",
+          "color": "red",
+          "source": "China NBS (Jul 14 / Aug 17, 2026) / IMF WEO Jul 2026 / Reuters / CNBC",
           "contested": true,
-          "contestNote": "Q2 2026 missed forecast (4.3% vs 4.5% expected), down from 5.0% in Q1 — slowest pace in roughly 3.5 years. H1 fixed-asset investment -5.7% YoY (real estate -18%). June activity data (Jul 15) was mixed: industrial production +5.3% YoY beat, retail sales +1.0% YoY soft. Stimulus speculation building ahead of the late-July Politburo meeting.",
-          "delta": "-0.7pp vs Q1 2026",
-          "deltaNote": "Q1 2026: 5.0% (front-loaded exports). Q2 2026: 4.3% — Iran war demand destruction and property-sector drag materializing as expected. IMF July WEO maintains global growth at 3.0% for 2026 but revised headline inflation up to 4.7%.",
+          "contestNote": "Q2 2026 missed forecast (4.3% vs 4.5% expected), down from 5.0% in Q1 — slowest pace in roughly 3.5 years. July activity data (Aug 17) extended the slowdown: industrial output +4.5% YoY (missed 4.8% forecast, down from June's 5.3%); retail sales +0.6% (missed 1.5% forecast; auto sales -17%); Jan-Jul fixed-asset investment -6.7% (worse than -6.0% expected, deepening from H1's -5.7%). Three July typhoons disrupted manufacturing hubs and fading subsidy support weighed on durable-goods spending. Beijing's late-July Politburo pledge of 'targeted stimulus' has yet to translate into major new measures.",
+          "delta": "-0.7pp vs Q1 2026; July activity data below forecast across output, sales, and investment",
+          "deltaNote": "Q1 2026: 5.0% (front-loaded exports). Q2 2026: 4.3% — Iran war demand destruction and property-sector drag materializing as expected. July's across-the-board miss (Aug 17) reinforces the structural-slowdown case and raises pressure on Beijing for stronger H2 fiscal support to hit its 2026 growth target.",
           "trend": "down",
-          "lastUpdated": "2026-07-14T09:00:00Z"
+          "lastUpdated": "2026-08-17T09:00:00Z"
         },
         {
           "id": "global-policy-uncertainty",
           "label": "Global Policy Uncertainty / Recession Risk",
-          "value": "AUG 14: July CPI (3.4%) and PPI (Flat) Both Cool, S&P Sets Record Above 7,800; Retail Sales -0.6% and Michigan Sentiment 51.0 Crack the Consumer Story; Hormuz Tanker Attack Renews Oil Risk",
+          "value": "AUG 17: US-Iran MOU Expires Without a Deal, 30Y Yield Hits 5.31% (Highest Since 2007); China July Activity Data Misses; Canada Faces 50% Tariffs at Midnight Aug 19",
           "color": "red",
-          "source": "Federal Reserve / BEA / BLS / Census Bureau / U. Michigan / ISM / Eurostat; July 17 – August 14, 2026",
+          "source": "Federal Reserve / BEA / BLS / China NBS / Census Bureau / U. Michigan; July 17 – August 18, 2026",
           "contested": false,
-          "delta": "AUG 10-14 ARC — DISINFLATION CONFIRMED, THEN CONSUMER DATA CRACKS AND OIL RISK RETURNS: July CPI cooled to 3.4% headline / 2.5% core (Aug 12), and July PPI came in flat — below the 0.2% forecast — with core PPI +0.2% (Aug 13), driving the S&P 500 to a fresh record 7,799 close (first time above 7,800 intraday) and pulling September Fed hike odds under 35% from ~55% a week earlier. That disinflation narrative was complicated Aug 14: July retail sales fell 0.6%, the steepest monthly drop in over a year, and the University of Michigan's preliminary August sentiment reading tumbled to 51.0 (from July's 55.2), pulling stocks off their record highs. The same day, two UAE tankers were attacked in the Strait of Hormuz — the second such incident in under a week — rebounding oil prices and reintroducing energy-driven inflation risk into the Fed's calculus.",
-          "deltaNote": "AUG 14 RECESSION RISK SNAPSHOT: The window's dominant theme flipped from inflation risk to demand risk — cooling CPI/PPI initially cleared the way for a durable 'no landing' read, but the retail-sales miss and consumer-sentiment collapse are the clearest demand-side cracks since the Aug 7 jobs shock, while the renewed Hormuz tanker attacks show the energy-shock tail risk has not gone away. Next catalysts: the final August Michigan sentiment reading (Aug 28), August jobs and CPI reports, and the September 16-17 FOMC meeting.",
+          "delta": "AUG 14-18 ARC — CONSUMER CRACKS, THEN GEOPOLITICAL AND BOND-MARKET STRESS: The Aug 14 retail-sales miss and Michigan sentiment collapse pulled stocks off their Aug 13 record. Aug 17 brought two compounding shocks: the US-Iran MOU's 60-day window expired without a deal (Trump ruled out an extension), pushing Brent to ~$91 and driving the 30-year Treasury yield to 5.31-5.32% — highest since June 2007 — while China's July activity data missed across output, retail sales, and investment. Aug 18 added a fresh trade-policy cliff: Carney and Trump spoke by phone hours before 50% Section 338 tariffs on ~$20B of Canadian goods are due to take effect at midnight, with talks still 'very intense and delicate.'",
+          "deltaNote": "AUG 18 RECESSION RISK SNAPSHOT: Four distinct risk channels are now flashing simultaneously — a bond market pricing in structurally higher long-end yields on debt/inflation concerns, a reignited Iran war-risk premium in oil, a deepening China slowdown, and an imminent US-Canada tariff deadline. None individually rises to a 2026-recession-defining shock, but the simultaneity is new. Next catalysts: the Aug 19 Section 338 deadline, the final August Michigan sentiment reading (Aug 28), and the September 16-17 FOMC meeting.",
           "trend": "down",
-          "lastUpdated": "2026-08-14T20:00:00Z"
+          "lastUpdated": "2026-08-18T20:00:00Z"
         },
         {
           "id": "boj-policy-rate",
@@ -892,6 +916,27 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "fuel-shortage-resolved-pension-bienestar-1m-aug18-2026",
+          "date": "2026-08-18",
+          "title": "Day 686 — Gasoline Shortage in CDMX, Chiapas, Nuevo León Resolved; 1 Million Women Register for Pensión Bienestar",
+          "type": "economic",
+          "detail": "On August 18, 2026 (Day 686, Tuesday), President Sheinbaum said a gasoline supply shortage affecting Mexico City, Chiapas, and Nuevo León had been resolved, calling it 'cosa de unos días.' Welfare Secretary Ariadna Montiel reported that more than 1 million women had registered for the Pensión Mujeres Bienestar program since applications opened August 1 for women aged 60 and above. Profeco director Iván Escalante presented the latest '¿Quién es Quién?' price-comparison balance tracking gasoline, groceries, and remittance-service pricing nationwide. Sheinbaum also addressed the ongoing visa revocation of Andy López Beltrán, denying his implication in the fuel-theft ('huachicol fiscal') probe and calling U.S. scrutiny of him politically motivated, and said she would meet Morena's congressional coordinators Adán Augusto López and Ricardo Monreal that afternoon on legislative priorities.",
+          "sources": [
+            {
+              "name": "La Razón de México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.razon.com.mx/mexico/2026/08/18/mananera-de-sheinbaum-18-de-agosto-del-2026/"
+            },
+            {
+              "name": "Excélsior",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.excelsior.com.mx/nacional/mananera-claudia-sheinbaum-en-vivo-18-agosto-resumen/1733729"
+            }
+          ]
+        },
         {
           "id": "peso-strengthens-tamaulipas-tour-aug14-2026",
           "date": "2026-08-14",
@@ -1173,191 +1218,38 @@
               "url": "https://www.proceso.com.mx/nacional/2026/6/5/sheinbaum-gobierno-esta-abierto-al-dialogo-con-la-cnte-no-caera-en-provocaciones-376465.html"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-xalapa-jovenes-futuro-assembly-jun6-2026",
-          "date": "2026-06-06",
-          "title": "Day 613 — Sheinbaum Leads Jóvenes Construyendo el Futuro National Assembly in Xalapa, Veracruz; Program Reaches 3.5 Million Beneficiaries, 170B Pesos Since 2019",
-          "type": "political",
-          "detail": "On June 6, 2026 (Day 613, Saturday), President Claudia Sheinbaum led a national assembly of the Jóvenes Construyendo el Futuro (Youth Building the Future) federal labor-training program at the Kaná Museum in Xalapa, Veracruz, accompanied by Veracruz Governor Rocío Nahle García. Sheinbaum highlighted the program's cumulative achievements: 3.5 million beneficiaries served since 2019; a total public investment of over 170 billion pesos; each participant receives a monthly stipend, IMSS social security coverage, and one year of formal work experience with a private- or public-sector employer. She framed youth dignified employment as a constitutional right, not a privilege, drawing a contrast with previous administrations' zero-employment-for-youth policies. The program — the flagship youth development initiative inherited from the AMLO government and expanded under the 'Second Floor of the Fourth Transformation' — was presented as a concrete pillar of Sheinbaum's social investment agenda. Veracruz ranks among Mexico's highest concentrations of program beneficiaries. The event was notable as Sheinbaum's main public activity on the Saturday before the FIFA World Cup opener (June 11), signaling her focus on social program delivery over political optics.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/06/06/de-rechazados-a-beneficiarios-sheinbaum-destaca-jovenes-construyendo-el-futuro-desde-xalapa-esta-es-la-inversion-de-2019-a-2026/"
-            },
-            {
-              "name": "El Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/6/6/claudia-sheinbaum-encabeza-asamblea-de-jovenes-construyendo-el-futuro-en-xalapa-afirma-que-el-empleo-digno-es-un-derecho-826958.html"
-            },
-            {
-              "name": "La Razón de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.razon.com.mx/mexico/2026/06/06/sheinbaum-consolida-jovenes-construyendo-el-futuro-con-35-millones-de-beneficiarios/"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/06/06/sheinbaum-destaca-que-jovenes-construyendo-el-futuro-suma-35-millones-de-beneficiarios-con-apoyo-mensual-seguridad-social-del-imss-y-un-ano-de-experiencia-laboral/"
-            }
-          ]
-        },
-        {
-          "id": "cnte-strike-day6-solidarity-wc-threat-jun6-2026",
-          "date": "2026-06-06",
-          "title": "Day 613 — CNTE Strike Day 6: Union Rejects Latest Pension Offer; Solidarity Forum with Ayotzinapa Families; Threatens World Cup Venue Blockades",
-          "type": "political",
-          "detail": "June 6, 2026 (Day 613) marked the sixth day of the CNTE national teachers' strike with no agreement reached. The union formally rejected the federal government's most recent pension proposal — which offered to strengthen PENSIONISSSTE and study the creation of a public insurance company — because it left the 2007 ISSSTE pension reform law intact, which is the CNTE's non-negotiable core demand. At least three protesters had been injured in earlier strike-related demonstrations. The CNTE organized a solidarity forum near the FIFA World Cup Fan Fest zone on Paseo de la Reforma, inviting the families of the 43 Ayotzinapa disappeared students and allied social movements to broaden its political coalition and increase international visibility. The union explicitly escalated its threat posture: it announced potential blockades of Mexico City's Benito Juárez International Airport (AICM) and Estadio Azteca (Estadio Banorte) during the FIFA World Cup opener (Mexico vs. South Africa, June 11) — with the slogan 'Si no hay solución, el balón no rodará' ('If there's no solution, the ball won't roll'). Interior Minister (SEGOB) Rosa Icela Rodríguez formally exhorted the CNTE on June 6 to accept the SEP and ISSSTE proposals and end its Zócalo encampment. The strike continued to affect over 2 million students across 29 states. With no direct presidential intervention authorized, the government remained exposed to the risk of the crisis intersecting with the World Cup's global media attention.",
-          "sources": [
-            {
-              "name": "Latin Times",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.latintimes.com/mexico-cnte-teachers-union-reject-government-offer-prepare-2026-world-cup-protests-597770"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/06/07/segob-exhorta-a-cnte-a-concluir-protesta-en-el-zocalo-tras-propuesta-de-sep-e-issste-maestros-podrian-intensificar-protestas-por-mundial/"
-            },
-            {
-              "name": "The Yucatan Times",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://theyucatantimes.com/2026/06/at-least-three-people-were-reported-injured-in-the-cnte-protest-one-of-them-suffered-an-eye-injury/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-minatitlan-petrochemical-plan-jun5-2026",
-          "date": "2026-06-05",
-          "title": "Day 612 — Sheinbaum Holds Mañanera from Minatitlán, Veracruz; Launches 93-Billion-Peso Petrochemical and Fertilizer Investment Plan 2026–2030",
-          "type": "economic",
-          "detail": "On June 5, 2026 (Day 612), President Claudia Sheinbaum held her morning press conference from Minatitlán, Veracruz — one of Mexico's historically significant petrochemical hubs — where she launched a strategic investment plan for the petrochemical and fertilizer sector. The plan commits 93 billion pesos in public and mixed (public-private) investment over 2026–2030, aimed at strengthening Pemex's downstream productive capacity and reducing Mexico's dependence on imported petrochemicals and fertilizers. The announcement aligned strategically with the Pemex-Petrobras collaboration agreement announced at the June 2 mañanera, which focuses on deepwater exploration and mature field optimization. Key elements of the plan: expansion of existing petrochemical complexes at Minatitlán and Cosoleacaque; new fertilizer production capacity at the Pajaritos complex; private-sector participation through public-private partnership frameworks under Plan México. Sheinbaum also confirmed at the mañanera that Iran's national soccer team had arrived in Mexico on June 5, settling in Tijuana as their base camp ahead of the FIFA World Cup 2026. Profeco (consumer protection agency) simultaneously launched the 'Who's Who in the World Cup' (Quién es Quién en los Precios del Mundial) price monitoring operation covering approximately 274,000 products across Mexico City, Guadalajara, and Monterrey, to detect and sanction price gouging ahead of the tournament.",
-          "sources": [
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/06/05/claudia-sheinbaum-mananera-temas-hoy-5-de-junio-de-2026-en-vivo/"
-            },
-            {
-              "name": "Eje Central",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.ejecentral.com.mx/nuestro-eje/mananera-en-vivo-resumen-de-la-mananera-del-pueblo-de-claudia-sheinbaum-hoy-viernes-5-de-junio-de-2026"
-            },
-            {
-              "name": "Proceso",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.proceso.com.mx/nacional/2026/6/5/en-vivo-conferencia-mananera-de-sheinbaum-050626-376447.html"
-            },
-            {
-              "name": "Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/6/5/la-mananera-del-pueblo-de-claudia-sheinbaum-en-vivo-hoy-viernes-de-junio-de-2026-825974.html"
-            }
-          ]
-        },
-        {
-          "id": "cnte-wc2026-strike-context-jun5-2026",
-          "date": "2026-06-05",
-          "title": "Day 612 — CNTE Strike Day 5: Latin Times Reports 'World Cup Shadow' as Talks Stall; Mexico Opens vs. South Africa June 11",
-          "type": "political",
-          "detail": "June 5, 2026 (Day 612) marked the fifth day of the CNTE national teachers' strike, with no agreement in sight. Latin Times published an analysis titled 'World Cup Shadow: Mexico's Teachers' Union Strike Escalates Days Before Kickoff,' noting the unique political tension of a labor crisis playing out in the shadow of FIFA World Cup 2026 — with Mexico playing South Africa in the tournament opener at Estadio Azteca just 6 days away on June 11. The CNTE encampment in Mexico City's Historic Center remained in place, affecting Fan Fest infrastructure access near the Zócalo. The strike continued affecting over 2 million students across 29 states. The government had not budged from its position: SEGOB (Rosa Icela Rodríguez) and SEP (Mario Delgado) remained the designated dialogue counterparts; President Sheinbaum had declined to meet directly with CNTE leadership. The CNTE had threatened to escalate actions to coincide with international World Cup coverage but had not yet specified the form. Al Jazeera separately reported on the unusual confluence of the FIFA World Cup 2026 and Mexico's unresolved labor dispute, providing international visibility to the CNTE's cause.",
-          "sources": [
-            {
-              "name": "Latin Times",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.latintimes.com/world-cup-shadow-mexico-teachers-union-strike-escalates-days-before-kickoff-597747"
-            },
-            {
-              "name": "Al Jazeera",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.aljazeera.com/sports/2026/6/3/fifa-world-cup-2026-stadiums-matches-us-canada-mexico"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/06/05/claudia-sheinbaum-mananera-temas-hoy-5-de-junio-de-2026-en-vivo/"
-            }
-          ]
-        },
-        {
-          "id": "jitomate-tomato-price-agreement-signed-jun4-2026",
-          "date": "2026-06-04",
-          "title": "Day 611 — Sheinbaum Signs National Tomato Price Agreement with Producers and Distributors",
-          "type": "economic",
-          "detail": "On June 4, 2026 (Day 611), President Claudia Sheinbaum presided over the signing of the 'National Agreement for the Ordering of Production, Supply, Commercialization and Fair Price of Tomato' (Acuerdo Nacional para el Ordenamiento de la Producción, Abasto, Comercialización y Precio Justo del Jitomate). The signing ceremony was relocated from the National Palace to the Ministry of Economy (Secretaría de Economía) building due to ongoing CNTE blockades in the Historic Center. The agreement was signed with agricultural producers, central market (Central de Abasto) representatives, and major supermarket chains. The government cited three structural causes for the three-month tomato price spike: (1) Frost damage to production zones in Florida (U.S.); (2) a crop disease outbreak in Sinaloa, Mexico's top tomato-producing state; (3) excessive intermediary markups in the supply chain — 'coyotes' buying cheaply from producers and selling at inflated prices to retailers. The agreement creates direct connections between producers and central market distribution, bypassing traditional intermediary layers. Economy Secretary Marcelo Ebrard and Agriculture Secretary Columba Jasmin López participated. Sheinbaum had announced the June 4 signing date at her June 1 mañanera (it was originally announced for June 3 but delayed one day). The tomato crisis had become emblematic of food affordability concerns ahead of the FIFA World Cup 2026, with millions of tourists expected in Mexico City, Guadalajara, and Monterrey from June 11.",
-          "sources": [
-            {
-              "name": "Quadratin",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://mexico.quadratin.com.mx/acuerdo-de-jitomate-contra-escasez-y-sin-intermediarios-sheinbaum/"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/06/04/sheinbaum-descarta-reunirse-con-la-cnte-y-deja-negociacion-en-segob-y-sep-ante-bloqueos-en-cdmx-antes-del-mundial-2026/"
-            },
-            {
-              "name": "El Chamuco",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://elchamuco.com.mx/2026/06/04/sheinbaum-acuerdo-precio-jitomate-mexico/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-defends-amlo-letter-trump-jun4-2026",
-          "date": "2026-06-04",
-          "title": "Day 611 — Sheinbaum Defends Ex-President AMLO's Letter to Trump at Mañanera; CNTE Enters Day 4 Without Agreement",
-          "type": "political",
-          "detail": "At her June 4, 2026 (Day 611) mañanera, President Claudia Sheinbaum defended and projected on screen a letter published by former President Andrés Manuel López Obrador (AMLO) that warned against foreign interference in Mexico and questioned the role of U.S. officials in domestic affairs. Sheinbaum thanked AMLO for his 'support' and accused the U.S. Republican far-right of attempting to use Mexico as a political weapon ahead of U.S. November 2026 midterm elections and the 2027 presidential race. The public endorsement of AMLO's letter represented a notable alignment between the ex-president and his successor, reinforcing the sovereignty narrative that has dominated the Sheinbaum administration since the CIA-Chihuahua affair in May. The mañanera also addressed the ongoing CNTE teachers' strike: Day 4 ended without any agreement between CNTE leadership and SEGOB. CNTE reiterated its demand for a direct meeting with Sheinbaum as a precondition for progress. Sheinbaum again declined, stating 'No vamos a reprimir' (We will not repress) while maintaining that negotiations must proceed through SEP and SEGOB channels. Affected students now exceeded 2 million across 29 states. The World Cup opening match — Mexico vs. South Africa at Estadio Azteca — was 7 days away.",
-          "sources": [
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/06/04/claudia-sheinbaum-mananera-temas-hoy-4-de-junio-de-2026-en-vivo/"
-            },
-            {
-              "name": "Infobae México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/06/04/en-vivo-la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-jueves-4-de-junio/"
-            },
-            {
-              "name": "Infobae México — CNTE Day 4",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/06/04/cuarto-dia-sin-acuerdos-entre-cnte-y-segob-magisterio-demanda-reunion-con-sheinbaum/"
-            },
-            {
-              "name": "Ámbito",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.ambito.com/mexico/informacion-general/la-mananera-claudia-sheinbaum-hoy-jueves-4-junio-2026-minuto-minuto-vivo-n6284507"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "treasury-genius-act-stablecoin-rules-proposed-aug18-2026",
+          "date": "2026-08-18",
+          "title": "Treasury Proposes GENIUS Act Rules Restricting Who Can Issue Stablecoins",
+          "type": "economic",
+          "detail": "The US Treasury Department published a Notice of Proposed Rulemaking on August 18, 2026 in the Federal Register implementing Section 3 of the GENIUS Act, the stablecoin law Trump signed in 2025, seeking public comment on which entities may lawfully issue payment stablecoins in the United States. Under the proposal, only federally or state-licensed issuers could offer stablecoins in the US starting July 18, 2028, with violations carrying fines up to $1 million and up to five years in prison. The GENIUS Act is due to take full effect January 18, 2027, though the law's original one-year deadline for finalizing implementing rules already passed in July without full compliance. Comments on the proposed rule are due by October 19, 2026.",
+          "sources": [
+            {
+              "name": "Federal Register",
+              "tier": 1,
+              "url": "https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale",
+              "pole": "western"
+            },
+            {
+              "name": "CoinDesk",
+              "tier": 2,
+              "url": "https://www.coindesk.com/policy/2026/08/17/u-s-treasury-department-proposes-genius-act-stablecoin-rule",
+              "pole": "western"
+            },
+            {
+              "name": "The Block",
+              "tier": 2,
+              "url": "https://www.theblock.co/news/regulation/2026-08-17-us-treasury-seeks-public-comment-genius-act-stablecoin-rules-411987",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "matsumoto-bls-commissioner-confirmed-aug7-2026",
           "date": "2026-08-07",
@@ -1429,60 +1321,6 @@
               "name": "Tax Foundation",
               "tier": 3,
               "url": "https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "canada-50pct-tariff-announcement-jul20-2026",
-          "date": "2026-07-20",
-          "title": "Trump Announces 50% Tariffs on Canadian Dairy, Alcohol, Vehicles Under Section 338",
-          "type": "economic",
-          "detail": "President Trump announced on July 20, 2026 that his administration will impose additional 50% ad valorem tariffs on a range of Canadian products — dairy, alcoholic beverages, furniture, and motor vehicles — under Section 338 of the Tariff Act, effective 12:01 a.m. ET on August 19, 2026. The move came via three separate proclamations alleging Canadian discrimination against US commerce in those sectors. USTR estimated the tariffs affect nearly $20 billion in annual Canadian imports (reported elsewhere as up to $16 billion for the targeted categories). Analysts described the move as a warning shot to other trading partners ahead of pending Section 301 forced-labor tariff decisions.",
-          "sources": [
-            {
-              "name": "Fox Business",
-              "tier": 2,
-              "url": "https://www.foxbusiness.com/politics/trump-administration-hits-canada-50-tariff-over-alleged-trade-discrimination",
-              "pole": "western"
-            },
-            {
-              "name": "CNN",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/07/21/economy/trump-tariffs-who-is-next",
-              "pole": "western"
-            },
-            {
-              "name": "Mondaq / Bennett Jones",
-              "tier": 3,
-              "url": "https://www.mondaq.com/unitedstates/international-trade-investment/1821108/trump-administration-announces-50-tariffs-on-certain-canadian-products-effective-august-19",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "ustr-brazil-25pct-section301-tariff-jul15-2026",
-          "date": "2026-07-15",
-          "title": "USTR Finalizes 25% Section 301 Tariff on Brazil, Effective July 22",
-          "type": "economic",
-          "detail": "The Office of the US Trade Representative finalized a Notice of Action on July 15, 2026 imposing an additional 25% Section 301 tariff on a broad range of Brazilian-origin goods, effective for goods entered for consumption on or after July 22, 2026. The action followed a Section 301 investigation opened in July 2025 into Brazilian trade practices including digital-trade and electronic-payment restrictions, preferential tariffs, weak anti-corruption enforcement, IP protection gaps, ethanol market access, and illegal deforestation. Major exemptions include oil and gas, beef, coffee, oranges, and goods already in transit before July 22 (if entered by July 29). Secretary of State Marco Rubio accused Brazilian President Lula of negotiating in bad faith.",
-          "sources": [
-            {
-              "name": "EY Global Tax News",
-              "tier": 3,
-              "url": "https://globaltaxnews.ey.com/news/2026-1530-ustr-issues-notice-of-action-imposing-25-percent-section-301-tariffs-on-imports-from-brazil-effective-22-july-2026",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance (AP)",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/article/trump-administration-announces-25-tariffs-on-brazil-ahead-of-a-global-rollout-expected-within-weeks-131730893.html",
-              "pole": "western"
-            },
-            {
-              "name": "Office of the US Trade Representative",
-              "tier": 1,
-              "url": "https://ustr.gov/node/14362",
               "pole": "western"
             }
           ]
