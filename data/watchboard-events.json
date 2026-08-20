@@ -1,8 +1,23 @@
 {
-  "updated": "2026-08-19T14:26:58Z",
+  "updated": "2026-08-20T14:30:20Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "us-treasury-bond-buybacks-dow-rally-aug19",
+          "date": "2026-08-19",
+          "title": "US Treasury Bond Buybacks Lift Dow, Drive Yields Lower",
+          "type": "markets",
+          "detail": "The US Treasury stepped up bond buybacks, driving the Dow Jones Industrial Average higher and sending long-term yields lower. Markets partially reversed recent losses tied to the expired US-Iran MOU and elevated long-term yields that had weighed on risk assets.",
+          "sources": [
+            {
+              "name": "Google News / Reuters",
+              "tier": 2,
+              "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPYUV6eHp3ak9nQS1lelJ4bUNGcXhzb3dFZHIza09ycS0yWmpROHE1T21kTWN3SEJ2dzNQUHMzOVhBTk84TXkwRjgtZmVScTJLekltN3BsVTQzNEtSS2NudzRoQXlUNFFweS1lR1IyVkhrVHJHYmdpZWppMzQyell3SnFZYU5vdmM?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "carney-trump-call-tariff-deadline-aug18-2026",
           "date": "2026-08-18",
@@ -704,27 +719,6 @@
               "name": "CNBC — US Treasury Yields, Investors Look Ahead to FOMC Meeting Minutes",
               "tier": 2,
               "url": "https://www.cnbc.com/2026/07/06/us-treasury-yields-investors-look-ahead-to-fomc-meeting-minutesu.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "june-jobs-report-weak-nfp-57k-july2-2026",
-          "date": "2026-07-02",
-          "title": "June 2026 Jobs Report: NFP +57K, Sharp Slowdown From May; Unemployment Falls to 4.2% on Lower Participation",
-          "type": "economic",
-          "detail": "The June 2026 jobs report showed nonfarm payrolls up just 57,000, well below the roughly 113,000-115,000 consensus and a sharp slowdown from May's downwardly-revised +129,000. April and May were revised down a combined 74,000. The unemployment rate fell to 4.2% (vs. 4.3% expected), but largely because the labor-force participation rate dropped to 61.5% — the lowest since March 2021 — rather than from underlying strength. Average hourly earnings rose 0.3% to $37.64, up 3.5% YoY. Despite the weak headline, stocks edged higher into the July 4 holiday weekend, with the Dow closing at a fresh record.",
-          "sources": [
-            {
-              "name": "CNBC — Jobs Report June 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/07/02/jobs-report-june-2026-.html",
-              "pole": "western"
-            },
-            {
-              "name": "247WallSt — Stock Market Live July 2 2026",
-              "tier": 3,
-              "url": "https://247wallst.com/investing/2026/07/02/stock-market-live-july-2-2026-sp-500-spy-flat-with-new-jobs-data/",
               "pole": "western"
             }
           ]
