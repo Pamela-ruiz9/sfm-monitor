@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T14:28:46Z",
+  "updated": "2026-08-24T14:35:30Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -905,6 +905,27 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "sheinbaum-flu-absence-mananera-aug21-2026",
+          "date": "2026-08-21",
+          "title": "Day 689 — Sheinbaum Misses Mañanera With Flu, Reappears Masked for Virtual IMSS Meeting",
+          "type": "political",
+          "detail": "On August 21, 2026 (Day 689, Friday), President Sheinbaum woke up with a severe flu, cough and fever and — for the first time in her presidency — did not lead the daily morning press conference; doctors recommended rest, though her office said the condition was not serious and ruled out COVID-19. Interior Secretary Rosa Icela Rodríguez led the conference in her place alongside INAH director Joel Omar Vázquez Herrera, who presented a discovery of 179 pre-Hispanic pieces and 13 offerings in the Cueva Mundo Zoque cave in Cintalapa, Chiapas. Sheinbaum kept working remotely from the National Palace, appearing on camera wearing a face mask for a virtual meeting with IMSS director Zoé Robledo reviewing progress on the Universal Health Service (Servicios de Salud) rollout. Her team said she expected to resume in-person activities the next day, including a planned Saturday inauguration of the Archivo General Agrario de la Nación in Mexico City.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/08/21/sheinbaum-amanece-con-gripa-muy-fuerte-tos-y-fiebre-encarga-la-mananera-a-rosa-icela-rodriguez/"
+            },
+            {
+              "name": "La Jornada",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.jornada.com.mx/noticia/2026/08/21/politica/sheinbaum-suspende-participacion-en-mananera-por-gripa-encabeza-secretaria-de-gobernacion"
+            }
+          ]
+        },
+        {
           "id": "olinia-cargo-ev-presentation-aug20-2026",
           "date": "2026-08-20",
           "title": "Day 688 — Sheinbaum Unveils \"Olinia de Carga\" Electric Cargo Vehicle",
@@ -1285,27 +1306,6 @@
               "name": "The Block",
               "tier": 2,
               "url": "https://www.theblock.co/news/regulation/2026-08-17-us-treasury-seeks-public-comment-genius-act-stablecoin-rules-411987",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "matsumoto-bls-commissioner-confirmed-aug7-2026",
-          "date": "2026-08-07",
-          "title": "Senate Confirms Brett Matsumoto as BLS Commissioner, Ending Year-Long Vacancy",
-          "type": "economic",
-          "detail": "The Senate confirmed career economist Brett Matsumoto as commissioner of the Bureau of Labor Statistics on August 7, 2026, in a 51-47 vote covering a block of nominees. The role had been vacant since President Trump abruptly fired commissioner Erika McEntarfer in August 2025 over a weak July 2025 jobs report, and after Trump's initial pick, Heritage Foundation economist E.J. Antoni, was withdrawn amid Republican opposition. Matsumoto, who holds a Ph.D. in economics from UNC Chapel Hill, joined BLS in 2015 as an inflation expert and was on leave at the White House Council of Economic Advisers when selected. He will serve a four-year term overseeing US jobs and inflation data.",
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/news/articles/2026-08-07/trump-s-bls-pick-brett-matsumoto-confirmed-in-senate-vote",
-              "pole": "western"
-            },
-            {
-              "name": "Reuters (via Investing.com)",
-              "tier": 2,
-              "url": "https://www.investing.com/news/economic-indicators/veteran-economist-insider-matsumoto-wins-senate-approval-as-bls-commissioner-4847293",
               "pole": "western"
             }
           ]
