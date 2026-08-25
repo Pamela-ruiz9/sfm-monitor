@@ -1,8 +1,92 @@
 {
-  "updated": "2026-08-24T14:35:30Z",
+  "updated": "2026-08-25T14:38:37Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "trump-threatens-50pct-canada-auto-steel-tariffs-jan2027-aug24-2026",
+          "date": "2026-08-24",
+          "title": "Trump Threatens 50% Tariffs on Canadian Autos, Auto Parts, and Steel Starting Jan. 1, 2027",
+          "type": "trade",
+          "detail": "Two days after Canada-US trade talks collapsed and Prime Minister Mark Carney announced Sept. 8 retaliatory tariffs, President Trump escalated further on Monday, threatening to raise tariffs on Canadian automobiles, auto parts, and steel to 50% effective January 1, 2027. Trump posted that companies should 'Build in the U.S. and there are ZERO TARIFFS,' and called Canada 'among the worst Nations in the World to deal with.' General Motors and Ford shares fell roughly 1-3% on the threat, and the announcement further clouded the outlook for the US-Mexico-Canada Agreement's scheduled 2026 joint review.",
+          "sources": [
+            {
+              "name": "Yahoo Finance — Stock Market Today: S&P 500, Nasdaq Slip as Tech Stocks Sag, US-Canada Trade Spat Escalates",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-august-24-dow-sp-500-nasdaq-080306047.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "tech-selloff-apple-cxmt-alibaba-share-sale-aug24-2026",
+          "date": "2026-08-24",
+          "title": "Tech Selloff Deepens on Apple-CXMT Chip Rumor and Alibaba's $10.2B Share Sale",
+          "type": "market",
+          "detail": "US stocks opened the week sharply diverging: the Dow Jones Industrial Average rose about 0.2% to 53,374.96, the lone major index in the green, while the S&P 500 slipped 0.35% to 7,647.82 and the Nasdaq Composite fell 0.71% to 25,995.05 as investors rotated out of high-flying AI-linked tech names into defensive and value sectors. Semiconductor stocks led the declines on reports that Apple is testing chips from China's CXMT as an alternative supplier, while Alibaba's announcement of a $10.2 billion share sale to fund AI infrastructure investment added further pressure on the sector. Gold rose about 1% toward three-month highs on 'debasement trade' concerns tied to US debt levels, and bitcoin surged over 3%. The moves came at the start of a closely watched week featuring Nvidia's Wednesday earnings report and the Fed's Jackson Hole symposium later in the week.",
+          "sources": [
+            {
+              "name": "Yahoo Finance — Stock Market Today: S&P 500, Nasdaq Slip as Tech Stocks Sag, US-Canada Trade Spat Escalates",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-august-24-dow-sp-500-nasdaq-080306047.html",
+              "pole": "western"
+            },
+            {
+              "name": "24/7 Wall St — Semiconductor Stocks Slide Ahead of Nvidia Earnings: Intel Falls 5%, AMD Slides 4%, Taiwan Semiconductor Slips 3%",
+              "tier": 3,
+              "url": "https://247wallst.com/investing/2026/08/24/semiconductor-stocks-slide-ahead-of-nvidia-earnings-intel-falls-5-amd-slides-4-taiwan-semiconductor-slips-3/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "chip-stocks-slide-nvidia-earnings-week-aug23-2026",
+          "date": "2026-08-23",
+          "title": "Chip Stocks Slide as Bond Yields Stay Elevated Heading Into Nvidia's Earnings Week",
+          "type": "market",
+          "detail": "US equity futures opened the week lower as chip-stock weakness outweighed a modest pullback in Treasury yields, with the S&P 500 slipping about 0.3% and the Nasdaq Composite falling roughly 0.6-0.8%. The semiconductor sector continued a pullback that began the prior week when the 30-year Treasury yield hit a fresh 19-year high above 5.33% — a move analysts said had nothing to do with chip fundamentals and everything to do with the US fiscal deficit ($432.3 billion in July, the highest monthly total since March 2021) pushing the fiscal-year shortfall toward $1.8 trillion. Reports that prices of servers containing Nvidia's AI chips were rising more than 15% added to profit-taking in high-flying names like Intel and AMD, both up well over 100% year-to-date, as traders trimmed AI-hardware exposure ahead of Nvidia's Wednesday, August 26 earnings report — consensus estimates call for $93-95 billion in quarterly revenue, up roughly 67% year-over-year.",
+          "sources": [
+            {
+              "name": "CNBC — S&P 500 Futures Fall Slightly as Chip Stock Slide Outweighs Yield Decline",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/23/stock-market-today-live-updates.html",
+              "pole": "western"
+            },
+            {
+              "name": "The Motley Fool — Chip Stocks Didn't Fall on Chip News This Week. They Fell on a 19-Year High in the 30-Year Treasury Yield",
+              "tier": 3,
+              "url": "https://www.fool.com/investing/2026/08/21/chip-stocks-didn-t-fall-on-chip-news-this-week-they-fell-on-a-19-year-high-in-the-30-year-treasury-yield/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "canada-us-trade-talks-collapse-carney-at-war-aug22-2026",
+          "date": "2026-08-22",
+          "title": "US-Canada Trade Talks Collapse — Carney Declares Canada 'At War,' Sets Sept. 8 Retaliatory Tariffs",
+          "type": "trade",
+          "detail": "Intensive last-minute negotiations between Ottawa and Washington broke down late Friday without a deal, hours after Trump's 50% Section 338 tariffs on roughly $20 billion of Canadian dairy, alcohol, and motor-vehicle goods took effect at 12:01am EDT. At a Saturday press conference, Prime Minister Mark Carney said Canada had pursued every option but ultimately walked away because the US 'asked too much and they offered too little,' citing unacceptable last-minute American demands on auto-content rules and restrictions on Canada's other trade partnerships. Carney announced Canada would impose 'dollar-for-dollar' retaliatory tariffs on US steel, dairy, appliances, agricultural equipment, pulp and paper, and electronics effective September 8. Asked whether Canada was now in a trade war, Carney said bluntly: 'You're at war when you get attacked. We got attacked.' He also criticized the shifting US rationale for the tariffs, saying 'its signature was written in pencil.'",
+          "sources": [
+            {
+              "name": "NPR — As Canada Readies Retaliatory Tariffs, Mark Carney Says His Nation Is 'At War' With US",
+              "tier": 2,
+              "url": "https://www.npr.org/2026/08/22/nx-s1-5941584/us-canada-tariffs",
+              "pole": "western"
+            },
+            {
+              "name": "Al Jazeera — Carney: Canada Will Enact Retaliatory US Tariffs Starting September 8",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/news/2026/8/22/carney-canada-will-enact-retaliatory-us-tariffs-starting-september-8",
+              "pole": "international"
+            },
+            {
+              "name": "CNBC — US-Canada Trade Talks Collapse, Ushering In Wave of New Tariffs",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/22/us-canada-trade-talks-collapse-ushering-in-wave-of-new-tariffs.html",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "us-dollar-falls-fed-treasury-bond-rescue-aug21",
           "date": "2026-08-21",
@@ -14,6 +98,33 @@
               "name": "Reuters",
               "tier": 2,
               "url": "https://bsky.app/profile/reuters.com/post/3mtl4tfkdyw25",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "treasury-yield-rebound-buyback-fizzles-aug20-2026",
+          "date": "2026-08-20",
+          "title": "Treasury Yield Relief From Bessent's Buyback Doubling Reverses Within a Day",
+          "type": "market",
+          "detail": "One day after Treasury Secretary Scott Bessent announced Wednesday that Treasury would at least double the size of its long-end buyback operations — from $2 billion to $4 billion per operation across the 10-to-20-year and 20-to-30-year sectors, effective September 9 through November 4 — the relief rally reversed. Wednesday's announcement had pulled the 10-year note down 5.7 basis points to 4.647% and the 30-year bond down 9 basis points to 5.196%, with Bessent signaling the buyback size could go even higher. But by Thursday, yields on the 10-year moved back up more than 5 basis points to 4.704% and the 30-year rose a similar amount to 5.248%, erasing the prior day's gains as traders concluded the buyback program does not address the underlying structural drivers of the bond selloff — a near-record fiscal deficit and national debt nearing $40 trillion.",
+          "sources": [
+            {
+              "name": "CNBC — Treasury Doubles Debt Buybacks as Bessent Moves to Steady Bond Market",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/19/treasury-announces-upscaled-buyback-operation-for-longer-term-debt-sending-yields-lower.html",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — Treasury Yields Rebound, Wiping Out the Decline Following Bessent's Intervention",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/20/bond-yields-edge-higher-as-traders-digest-treasury-debt-buyback-plan.html",
+              "pole": "western"
+            },
+            {
+              "name": "US Department of the Treasury — Increased Sizes of Nominal Long-End Liquidity Support Buybacks",
+              "tier": 1,
+              "url": "https://home.treasury.gov/news/press-releases/sb0607",
               "pole": "western"
             }
           ]
@@ -623,99 +734,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "china-june-activity-data-stimulus-expectations-july15-2026",
-          "date": "2026-07-15",
-          "title": "China June Activity Data Mixed — Industrial Production Beats, Retail Sales Soft, Stimulus Speculation Builds",
-          "type": "economic",
-          "detail": "China's June 2026 activity data showed industrial production up 5.3% YoY, beating the 4.7% forecast, while retail sales rose just 1.0% YoY — a soft print. Combined with the Q2 GDP miss reported a day earlier, the mixed data fueled market expectations of fresh stimulus measures at the Communist Party's Politburo meeting expected in late July.",
-          "sources": [
-            {
-              "name": "CNBC — China GDP, Retail Sales, Investment June 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/07/15/china-gdp-retail-sales-investment-june-.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "china-q2-2026-gdp-miss-july14-2026",
-          "date": "2026-07-14",
-          "title": "China Q2 2026 GDP Grows 4.3% YoY, Missing Forecast — Slowest Pace in 3.5 Years",
-          "type": "economic",
-          "detail": "China's Q2 2026 GDP grew 4.3% YoY, missing the 4.5% forecast and down sharply from 5.0% in Q1 — the slowest pace of growth in roughly 3.5 years. Quarter-on-quarter growth was 0.9%. H1 2026 fixed-asset investment fell 5.7% YoY, with real estate investment down 18% YoY, underscoring the property sector's continued drag on the broader economy.",
-          "sources": [
-            {
-              "name": "CNN — China Q2 GDP, Export Economy",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/07/14/business/china-q2-gdp-export-economy-intl-hnk",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — China GDP, Retail Sales, Investment June 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/07/15/china-gdp-retail-sales-investment-june-.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "june-2026-cpi-cools-35pct-july14-2026",
-          "date": "2026-07-14",
-          "title": "June 2026 US CPI Cools to 3.5% YoY as Energy Prices Tumble, Confirming Inflation Peak Passing",
-          "type": "economic",
-          "detail": "June 2026 CPI fell 0.4% MoM (vs. -0.2% expected), bringing the annual rate down to 3.5% from May's 4.2% (vs. 3.8% expected). Core CPI was flat MoM at 2.6% YoY (vs. 2.9% expected/prior). The energy index fell 5.7% MoM — the biggest monthly drop since April 2020 — though it remained up 15.7% YoY (gasoline +26.7% YoY), reflecting the lagged pass-through of the post-MOU Brent crash. Markets read the report as confirming that the inflation peak was passing: the S&P 500 closed +0.38% at 7,572.40, the Nasdaq +0.62% at 26,269.23, and the Dow +150 points (+0.29%) to 52,658.64.",
-          "sources": [
-            {
-              "name": "CNBC — Consumer Price Index Inflation Report June 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/07/14/consumer-price-index-inflation-report-june-2026.html",
-              "pole": "western"
-            },
-            {
-              "name": "Blockonomi — June 2026 CPI Report, US Inflation Cools to 3.5%",
-              "tier": 3,
-              "url": "https://blockonomi.com/june-2026-cpi-report-u-s-inflation-cools-to-3-5-as-energy-costs-tumble/",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Stock Market Today Live Updates",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/07/14/stock-market-today-live-updates.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "imf-july-2026-weo-update-july8-2026",
-          "date": "2026-07-08",
-          "title": "IMF July 2026 WEO Update: Global Growth 3.0%, Inflation Revised Up as Disinflation Stalls",
-          "type": "economic",
-          "detail": "The IMF's July 2026 World Economic Outlook Update projected global growth of 3.0% for 2026 and 3.4% for 2027 — roughly unchanged cumulatively from the April WEO, but down from the 2024-25 average of 3.5%. Global headline inflation was revised up to 4.7% as the IMF said the disinflation trend had 'stalled.' The Fund characterized risks as 'more balanced than in April,' reflecting the Iran deal's de-escalation, but flagged continued downside risk from renewed conflict or a financial-conditions repricing.",
-          "sources": [
-            {
-              "name": "International Monetary Fund — World Economic Outlook Update, July 2026",
-              "tier": 1,
-              "url": "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
-              "pole": "international"
-            }
-          ]
-        },
-        {
-          "id": "ustr-section-301-hearing-timing-gap-july7-2026",
-          "date": "2026-07-07",
-          "title": "USTR Holds Section 301 Hearing — Timing Raises Doubt Section 301 Can Fully Backstop July 24 Section 122 Cliff",
-          "type": "trade",
-          "detail": "USTR held its public hearing on the proposed Section 301 forced-labor tariffs. Under standard rulemaking procedure, a final rule must be published at least 30 days before taking effect — meaning that even an expedited Section 301 rule may not be ready to fully replace Section 122 authority when it lapses on July 24, absent Congressional action. This raised the prospect of a coverage gap in tariff collection at the cliff date, a risk not previously priced into most tariff-revenue projections.",
-          "sources": [
-            {
-              "name": "Dorsey & Whitney — New Section 301 Tariffs Client Alert",
-              "tier": 3,
-              "url": "https://www.dorsey.com/newsresources/publications/client-alerts/2026/6/new-section-301-tariffs",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -905,6 +923,117 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "cattle-exports-us-reopen-agua-prieta-aug24-2026",
+          "date": "2026-08-24",
+          "title": "Day 692 — US Reopens Border to Mexican Cattle Exports at Agua Prieta, Sonora After 14-Month Screwworm Ban",
+          "type": "economic",
+          "detail": "On August 24, 2026 (Day 692, Monday), the United States reopened the Agua Prieta (Sonora)–Douglas (Arizona) crossing to Mexican cattle exports, ending a suspension imposed after the first New World screwworm (gusano barrenador) case was detected in a Chiapas bovine in November 2024; the ban had blocked roughly 1.7 million head of cattle worth an estimated $2.2 billion. President Sheinbaum said she received a letter from U.S. Agriculture Secretary Brooke Rollins notifying her of the decision. The reopening follows a joint SADER–SENASICA–USDA sanitary action plan and enhanced traceability across a 200-km radius in Sonora and Chihuahua; an initial shipment of roughly 750 head crossed on the first day, with a target of 1,700–2,000 head per day at full capacity. Additional crossings — San Jerónimo-Santa Teresa and Puerto Palomas-Columbus, both linking Chihuahua to New Mexico — are slated to follow in a staggered rollout.",
+          "sources": [
+            {
+              "name": "Excélsior",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.excelsior.com.mx/nacional/eu-reanudara-exportacion-ganado-mexicano-finales-agosto-sheinbaum"
+            },
+            {
+              "name": "La Jornada",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.jornada.com.mx/noticia/2026/07/24/estados/estados-unidos-reabrira-el-24-de-agosto-la-frontera-de-agua-prieta-para-exportacion-de-ganado-sonorense"
+            },
+            {
+              "name": "Dossier Político",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://dossierpolitico.com/2026/08/23/sonora-reactiva-este-lunes-envio-de-ganado-a-eu-por-agua-prieta-con-embarque-de-750-cabezas/"
+            }
+          ]
+        },
+        {
+          "id": "sheinbaum-alito-moreno-entreguista-traidor-aug24-2026",
+          "date": "2026-08-24",
+          "title": "Day 692 — Sheinbaum Calls PRI's Alito Moreno \"Entreguista, Traidor\" Over US Tour, Flags $120K Consultancy Contract to INE",
+          "type": "political",
+          "detail": "On August 24, 2026 (Day 692, Monday), President Sheinbaum escalated her criticism of PRI national leader Alejandro \"Alito\" Moreno Cárdenas, calling him \"entreguista, traidor\" over his repeated trips to Washington to lobby U.S. officials against her government. She said it was up to the INE to determine whether Moreno's reported $120,000-a-month contract with Washington firm Concord Hill Strategies — covering trip logistics and image/wardrobe coaching for his meetings with Trump administration and Congressional officials — violated Mexican political-party financing rules, adding that his \"funciones están en EEUU y no en México.\" The comments follow Interior Undersecretary Ariadna Montiel's earlier accusation that Moreno's US visits sought \"protección\" from domestic corruption investigations. Separately, Sheinbaum said she was not consulted on Sinaloa Governor Rocha Moya's brief Aug 21 return to office — \"me enteré por la publicación\" — and deferred to the state Congress on the succession.",
+          "sources": [
+            {
+              "name": "Ámbito",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.ambito.com/mexico/informacion-general/la-mananera-claudia-sheinbaum-hoy-lunes-24-agosto-2026-minuto-minuto-vivo-n6313273"
+            },
+            {
+              "name": "Forbes México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://forbes.com.mx/el-presidente-del-pri-paga-120-mil-dolares-por-logistica-y-asesoria-de-imagen-para-sus-reuniones-en-eu/"
+            }
+          ]
+        },
+        {
+          "id": "sinaloa-congress-approves-rocha-moya-indefinite-leave-aug23-2026",
+          "date": "2026-08-23",
+          "title": "Day 691 — Sinaloa Congress Unanimously Approves Rocha Moya's Indefinite Leave",
+          "type": "political",
+          "detail": "On August 23, 2026 (Day 691, Sunday), the Sinaloa state Congress met in an extraordinary session and voted unanimously (all nine deputies present) to approve Rubén Rocha Moya's indefinite leave from the governorship, two days after he briefly returned to the post over a U.S. DOJ indictment tying him to the Sinaloa Cartel's \"Los Chapitos\" faction. Deputies deferred the question of who becomes interim governor to a Monday, August 24 session at 11:00 a.m., with General Secretary of Government Yeraldine Bonilla Valverde — who had already served as interim governor once, from May to August — administering the state in the meantime and seen as a likely pick to resume the role.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/08/23/congreso-de-sinaloa-aprueba-por-unanimidad-la-licencia-indefinida-de-rocha-moya-como-gobernador/"
+            },
+            {
+              "name": "El Financiero",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elfinanciero.com.mx/estados/2026/08/23/licencia-de-ruben-rocha-moya-quien-gobierna-sinaloa-actualmente-y-quienes-podrian-ocupar-el-cargo/"
+            }
+          ]
+        },
+        {
+          "id": "rocha-moya-second-leave-sheinbaum-morena-pressure-aug22-2026",
+          "date": "2026-08-22",
+          "title": "Day 690 — Rocha Moya Requests Indefinite Leave Again After Sheinbaum, Morena Distance Themselves",
+          "type": "political",
+          "detail": "On August 22, 2026 (Day 690, Saturday) at 6:40 p.m., Rubén Rocha Moya requested leave from the Sinaloa governorship for a second time — an indefinite leave submitted by letter to the state Congress — just one day after unilaterally reincorporating himself into the post over the April 29 U.S. DOJ indictment tying him to the Sinaloa Cartel's \"Los Chapitos\" faction. President Sheinbaum publicly distanced herself from his return, saying \"Sinaloa, la nación y el movimiento de transformación están por encima de todo\" and that \"ningún interés personal\" should be placed above \"los intereses del pueblo y de la Nación,\" warning against \"ambición desnuda del poder por el poder\"; Morena and the Interior Secretariat also publicly broke with him. Former DEA director Derek Maltz called for Rocha's arrest and deportation. The Sinaloa Congress suspended its session to select an interim governor, postponing the decision.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/08/23/ruben-rocha-moya-vuelve-a-pedir-licencia-como-gobernador-de-sinaloa-tras-presion-y-deslinde-de-sheinbaum-y-morena/"
+            },
+            {
+              "name": "El Imparcial",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elimparcial.com/mexico/2026/08/23/tras-la-segunda-licencia-de-ruben-rocha-moya-el-congreso-de-sinaloa-definira-este-lunes-quien-asumira-la-gubernatura-de-forma-interina-durante-los-proximos-dias/"
+            }
+          ]
+        },
+        {
+          "id": "sheinbaum-inaugura-archivo-general-agrario-aug22-2026",
+          "date": "2026-08-22",
+          "title": "Day 690 — Sheinbaum Inaugurates Archivo General Agrario in Mexico City",
+          "type": "political",
+          "detail": "On August 22, 2026 (Day 690, Saturday), President Sheinbaum inaugurated the Centro Nacional de Atención Agraria and Archivo General Agrario in Mexico City — a facility housing the Registro Agrario Nacional, the Procuraduría Agraria, and the country's historical agrarian records. Agrarian Secretary Edna Elena Vega Rangel called it \"the second in importance after the Archivo General de la Nación,\" with over 45,000 linear meters of documents, including more than 100,000 maps and land-tenure records dating to 1917 and colonial-era materials, plus the decrees of all Fourth Transformation land-restitution grants (60,000+ hectares to date). Construction began in 2022 under President López Obrador on land donated by Sheinbaum during her tenure as Mexico City mayor.",
+          "sources": [
+            {
+              "name": "Excélsior",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.excelsior.com.mx/nacional/claudia-sheinbaum-inaugura-centro-nacional-atencion-agraria-y-archivo-general-agrario-cdmx"
+            },
+            {
+              "name": "La Jornada",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.jornada.com.mx/noticia/2026/08/22/politica/sheinbaum-inaugura-el-archivo-general-agrario-el-segundo-mas-importante-del-pais"
+            }
+          ]
+        },
+        {
           "id": "sheinbaum-flu-absence-mananera-aug21-2026",
           "date": "2026-08-21",
           "title": "Day 689 — Sheinbaum Misses Mañanera With Flu, Reappears Masked for Virtual IMSS Meeting",
@@ -922,6 +1051,27 @@
               "tier": 2,
               "pole": "western",
               "url": "https://www.jornada.com.mx/noticia/2026/08/21/politica/sheinbaum-suspende-participacion-en-mananera-por-gripa-encabeza-secretaria-de-gobernacion"
+            }
+          ]
+        },
+        {
+          "id": "rocha-moya-returns-sinaloa-governor-defies-doj-aug21-2026",
+          "date": "2026-08-21",
+          "title": "Day 689 — Rocha Moya Returns as Sinaloa Governor, Defying US DOJ Indictment",
+          "type": "political",
+          "detail": "On August 21, 2026 (Day 689, Friday) at 12:07 p.m., Rubén Rocha Moya announced his reincorporation as constitutional governor of Sinaloa, ending a 112-day leave he had requested May 1-2 after an April 29 U.S. District Court (Southern District of New York) indictment charged him and nine other current and former Sinaloa officials with conspiracy to import narcotics, weapons possession, and institutional protection of the Sinaloa Cartel's \"Los Chapitos\" faction. Rocha rejected the charges and returned without first consulting the federal government or Morena party leadership; interim governor Yeraldine Bonilla Valverde, who had held the post since May 2, stepped aside and returned to the Secretaría General de Gobierno as Rocha took protest. The move came a day after the U.S. reiterated that \"the Sinaloa Cartel could not operate without the help of corrupt officials.\"",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/08/21/rocha-moya-retoma-gobierno-de-sinaloa-tras-ser-acusado-por-eeuu-de-presuntos-vinculos-con-el-narco-y-los-chapitos/"
+            },
+            {
+              "name": "CNN en Español",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://cnnespanol.cnn.com/2026/08/21/mexico/rocha-moya-retoma-gobernador-sinaloa-narcotrafico-orix"
             }
           ]
         },
@@ -1134,124 +1284,115 @@
               "url": "https://www.bluebookservices.com/u-s-allows-partial-resumption-of-avocado-inspections-in-mexico/"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-fracking-ban-key-basin-aug6-2026",
-          "date": "2026-08-06",
-          "title": "Day 674 — Sheinbaum Rules Out Fracking Expansion in Key Basin, Citing Water Tables and Indigenous Communities",
-          "type": "economic",
-          "detail": "On August 6, 2026 (Day 674, Thursday), President Sheinbaum announced that her government would not expand fracking (hydraulic fracturing) operations in a key northern petroleum basin, citing risks to regional water tables and nearby Indigenous communities. The announcement marked a partial reversal from an earlier, more open stance in which Sheinbaum had floated the possibility of 'new extraction technologies' distinct from traditional fracking methods as a way to boost domestic natural gas and oil output amid declining Pemex production. The decision underscored the balancing act facing her administration between reducing Mexico's growing dependence on U.S. natural gas imports and honoring environmental and social commitments central to the Fourth Transformation platform. The move followed years of pressure from environmental and Indigenous rights groups opposed to fracking expansion in northern Mexico.",
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.bloomberg.com/news/articles/2026-08-06/mexico-bans-oil-and-gas-fracking-in-key-basin-sheinbaum-says"
-            },
-            {
-              "name": "Semafor",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.semafor.com/article/08/06/2026/mexicos-sheinbaum-rules-out-fracking-expansion"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-approval-jumps-57pct-inflation-cools-aug6-2026",
-          "date": "2026-08-06",
-          "title": "Day 674 — Sheinbaum's Approval Jumps to 57% as Inflation Cools to Near Six-Year Low",
-          "type": "political",
-          "detail": "On August 6, 2026 (Day 674, Thursday), Bloomberg News published new AtlasIntel LatAm Pulse polling showing President Sheinbaum's approval rating rising to 57%, an 8-point jump from the prior month's survey. The rebound followed a rocky summer stretch in which her approval had dipped below 50% for the first time in early July amid concerns over falling purchasing power and rising prices. Pollsters and analysts linked the improvement to two factors: annual headline inflation falling for four consecutive months — from 4.6% in March to 3.12% in July, the lowest level since May 2020 and back inside Banxico's target range — and Sheinbaum's increasingly vocal pushback against the Trump administration's immigration crackdown, including sharpened criticism of ICE following the July 7 killing of Lorenzo Salgado Araujo in Houston. The rebound reversed months of erosion in her approval that had been driven by the Q1 2026 GDP contraction, the CIA-Chihuahua sovereignty controversy, and broader economic anxiety.",
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.bloomberg.com/news/articles/2026-08-06/sheinbaum-s-approval-jumps-as-inflation-cools-to-five-year-low"
-            },
-            {
-              "name": "Ag Bull Trading",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://www.agbull.com/sheinbaums-approval-surges-as-mexicos-inflation-cools-to-a-five-year-low/"
-            }
-          ]
-        },
-        {
-          "id": "us-suspends-avocado-inspections-michoacan-aug5-2026",
-          "date": "2026-08-05",
-          "title": "Day 673 — US Suspends Avocado Export Inspections in Michoacán Over Threat to Inspectors",
-          "type": "economic",
-          "detail": "On August 5, 2026 (Day 673, Wednesday), the U.S. Department of Agriculture (USDA) halted phytosanitary inspections required for Mexican avocado exports in Michoacán, citing an unspecified 'threat against U.S. interests' after inspectors received threats in the field. The suspension immediately froze new certifications needed to ship avocados to the United States, Mexico's overwhelming top export market (roughly 90% of Mexican avocado exports by volume, worth $3.65 billion in 2025). Michoacán supplies 75-80% of Mexico's total avocado output and the industry directly employs over 200,000 people in the state. It marked the third U.S. suspension of Michoacán avocado inspections since 2022, all tied to security incidents against American inspectors. Michoacán Governor Alfredo Ramírez Bedolla said the pause was intended to safeguard inspectors following recent security incidents and extortion-related arrests in the region.",
-          "sources": [
-            {
-              "name": "Mexico News Daily",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://mexiconewsdaily.com/business/us-suspends-avocado-imports-from-mexico-over-unspecified-threat-to-american-interests/"
-            },
-            {
-              "name": "CNN",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.cnn.com/2026/08/05/americas/mexico-us-suspends-avocado-inspections-intl-latam"
-            }
-          ]
-        },
-        {
-          "id": "q2-2026-gdp-rebound-world-cup-spending-jul30-2026",
-          "date": "2026-07-30",
-          "title": "Day 667 — Q2 2026 GDP Grows 2.1% Annually, Strongest Quarterly Rebound Since Late 2020, Boosted by World Cup Spending",
-          "type": "economic",
-          "detail": "On July 30, 2026 (Day 667, Thursday), INEGI released preliminary Q2 2026 GDP data showing the Mexican economy grew 2.1% year-on-year, a sharp rebound from the 0.4% annual expansion recorded in Q1 2026. On a seasonally adjusted quarter-on-quarter basis, GDP rose 1.5%, reversing Q1's 0.6% contraction and marking the strongest quarterly expansion since Q4 2020. All three broad sectors improved versus Q1: services rose 1.5% QoQ (from -0.4%), industry rose 1.6% QoQ (from -1.0%), and the primary sector jumped 3.3% QoQ (from -1.7%) on a sharp agricultural rebound. Analysts attributed part of the rebound to a surge in consumer and tourism spending tied to Mexico hosting 16 FIFA World Cup 2026 matches in June and July, alongside resilient domestic consumption. Economy officials said the results kept the government's 1.5% full-year 2026 growth target within reach provided the second half of the year did not see a renewed contraction, even as private-sector forecasters (OECD, Citi, IMF) maintained more cautious full-year estimates in the 0.8–1.6% range reflecting continued uncertainty from the unresolved USMCA review and U.S. tariff exposure.",
-          "sources": [
-            {
-              "name": "Mexico News Daily",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://mexiconewsdaily.com/news/world-cup-mexico-gdp-q2-2026-spending/"
-            },
-            {
-              "name": "Argus Media",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2859165-mexico-economy-tops-forecasts-with-2.2pc-2q-growth"
-            },
-            {
-              "name": "Mexico Business News",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://mexicobusiness.news/finance/news/mexico-gdp-grows-21-2q26-services-farming-rebound"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
         {
-          "id": "canada-tariffs-50pct-paused-3day-deal-aug19-2026",
-          "date": "2026-08-19",
-          "title": "Trump Pauses 50% Canada Tariffs for 3 Days as Trade Deal Nears Completion",
+          "id": "trump-canada-auto-steel-tariffs-50pct-jan2027-aug24-2026",
+          "date": "2026-08-24",
+          "title": "Trump Says US Will Raise Canada Auto, Parts, and Steel Tariffs to 50% on Jan. 1, 2027",
           "type": "economic",
-          "detail": "President Trump announced late Tuesday, August 18, 2026 that he was pausing the 50% Section 338 tariffs on Canadian imports — set to take effect the next morning, August 19 — for a three-day period, saying on Truth Social that the US and Canada 'have a deal!' subject to finalizing the paperwork. The tariffs, announced July 20 and covering roughly $16-20 billion of Canadian dairy, agriculture, furniture, alcohol, and vehicle imports, had been set to kick in hours after Trump's post. Prime Minister Mark Carney's government had been racing to close a deal with Washington before the deadline; the pause buys both sides additional time to finalize terms.",
+          "detail": "President Trump announced on Truth Social on Monday, August 24, 2026 that tariffs on all Canadian cars, trucks, automotive parts, and steel would rise to 50% effective January 1, 2027, doubling the current 25% rate applied to non-US content, and declaring 'Canada will be treated like a State no longer.' The threat follows the collapse of US-Canada trade talks on August 21 and the 50% tariffs already in effect on roughly $20 billion of other Canadian goods; Trump accused Canada of 'ripping off the United States of America for years.' Canadian Prime Minister Mark Carney has vowed to retaliate 'dollar for dollar,' with Canada's countermeasures targeting US steel, dairy, appliances, agricultural equipment, pulp, paper, and electronics starting September 8.",
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "tier": 2,
+              "url": "https://www.bloomberg.com/news/articles/2026-08-24/trump-vows-to-double-tariffs-on-canadian-autos-escalating-fight",
+              "pole": "western"
+            },
+            {
+              "name": "CBS News",
+              "tier": 2,
+              "url": "https://www.cbsnews.com/news/trump-canadian-automotive-steel-tariffs/",
+              "pole": "western"
+            },
+            {
+              "name": "ABC News",
+              "tier": 2,
+              "url": "https://abcnews.com/Business/trumps-proposed-tariffs-canada-hurtle-deadline-amid-trade/story?id=135833861",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "trump-canada-auto-steel-tariffs-50pct-jan2027-aug24-2026",
+          "date": "2026-08-24",
+          "title": "Trump Says US Will Raise Canada Auto, Parts, and Steel Tariffs to 50% on Jan. 1, 2027",
+          "type": "economic",
+          "detail": "President Trump announced on Truth Social on Monday, August 24, 2026 that tariffs on all Canadian cars, trucks, automotive parts, and steel would rise to 50% effective January 1, 2027, doubling the current 25% rate applied to non-US content, and declaring 'Canada will be treated like a State no longer.' The threat follows the collapse of US-Canada trade talks on August 21 and the 50% tariffs already in effect on roughly $20 billion of other Canadian goods; Trump accused Canada of 'ripping off the United States of America for years.' Canadian Prime Minister Mark Carney has vowed to retaliate 'dollar for dollar,' with Canada's countermeasures targeting US steel, dairy, appliances, agricultural equipment, pulp, paper, and electronics starting September 8.",
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "tier": 2,
+              "url": "https://www.bloomberg.com/news/articles/2026-08-24/trump-vows-to-double-tariffs-on-canadian-autos-escalating-fight",
+              "pole": "western"
+            },
+            {
+              "name": "CBS News",
+              "tier": 2,
+              "url": "https://www.cbsnews.com/news/trump-canadian-automotive-steel-tariffs/",
+              "pole": "western"
+            },
+            {
+              "name": "ABC News",
+              "tier": 2,
+              "url": "https://abcnews.com/Business/trumps-proposed-tariffs-canada-hurtle-deadline-amid-trade/story?id=135833861",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "us-canada-trade-talks-collapse-aug21-2026",
+          "date": "2026-08-21",
+          "title": "US-Canada Trade Talks Collapse, 50% Tariffs on $20B of Canadian Goods Take Effect",
+          "type": "economic",
+          "detail": "Trade negotiations between the US and Canada fell apart late Friday night, August 21, 2026, just before a midnight deadline — a dramatic reversal from Trump's August 18 announcement that the two sides 'have a DEAL!' Prime Minister Mark Carney said the US 'asked too much, and offered too little' with last-minute changes to the terms, including efforts to restrict Canada's ability to strike other trade deals and to weaken French-language and cultural protections tied to Canada's Online Streaming Act; Washington had also refused to extend tariff relief to medium and heavy trucks. US Trade Representative Jamieson Greer said Canada 'declined to finalize the trade deal under the terms agreed earlier this week,' while Trump posted that Canada 'wants the benefits of being a State, without being one.' With talks suspended, 50% Section 338 tariffs on roughly $20 billion of Canadian dairy, alcohol, furniture, and other goods took effect; Carney vowed 'dollar-for-dollar' retaliatory tariffs on US steel, dairy, appliances, agricultural equipment, pulp, paper, and electronics starting September 8.",
           "sources": [
             {
               "name": "NPR",
               "tier": 2,
-              "url": "https://www.npr.org/2026/08/19/g-s1-139156/trump-canada-tariffs",
+              "url": "https://www.npr.org/2026/08/22/nx-s1-5941584/us-canada-tariffs",
               "pole": "western"
             },
             {
-              "name": "CNBC",
+              "name": "CNN Business",
               "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/19/trump-canada-tariffs-deal-carney.html",
+              "url": "https://www.cnn.com/2026/08/21/economy/us-canada-trade",
               "pole": "western"
             },
             {
-              "name": "Time",
+              "name": "Global News",
               "tier": 2,
-              "url": "https://time.com/article/2026/08/19/trump-delays-50-canada-tariffs-as-the-two-countries-race-to-finalize-a-deal/",
+              "url": "https://globalnews.ca/news/12031459/united-states-canada-trade-talks-issues/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "us-canada-trade-talks-collapse-aug21-2026",
+          "date": "2026-08-21",
+          "title": "US-Canada Trade Talks Collapse, 50% Tariffs on $20B of Canadian Goods Take Effect",
+          "type": "economic",
+          "detail": "Trade negotiations between the US and Canada fell apart late Friday night, August 21, 2026, just before a midnight deadline — a dramatic reversal from Trump's August 18 announcement that the two sides 'have a DEAL!' Prime Minister Mark Carney said the US 'asked too much, and offered too little' with last-minute changes to the terms, including efforts to restrict Canada's ability to strike other trade deals and to weaken French-language and cultural protections tied to Canada's Online Streaming Act; Washington had also refused to extend tariff relief to medium and heavy trucks. US Trade Representative Jamieson Greer said Canada 'declined to finalize the trade deal under the terms agreed earlier this week,' while Trump posted that Canada 'wants the benefits of being a State, without being one.' With talks suspended, 50% Section 338 tariffs on roughly $20 billion of Canadian dairy, alcohol, furniture, and other goods took effect; Carney vowed 'dollar-for-dollar' retaliatory tariffs on US steel, dairy, appliances, agricultural equipment, pulp, paper, and electronics starting September 8.",
+          "sources": [
+            {
+              "name": "NPR",
+              "tier": 2,
+              "url": "https://www.npr.org/2026/08/22/nx-s1-5941584/us-canada-tariffs",
+              "pole": "western"
+            },
+            {
+              "name": "CNN Business",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/08/21/economy/us-canada-trade",
+              "pole": "western"
+            },
+            {
+              "name": "Global News",
+              "tier": 2,
+              "url": "https://globalnews.ca/news/12031459/united-states-canada-trade-talks-issues/",
               "pole": "western"
             }
           ]
@@ -1279,6 +1420,75 @@
               "name": "Time",
               "tier": 2,
               "url": "https://time.com/article/2026/08/19/trump-delays-50-canada-tariffs-as-the-two-countries-race-to-finalize-a-deal/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "national-debt-hits-40-trillion-aug19-2026",
+          "date": "2026-08-19",
+          "title": "US National Debt Surpasses $40 Trillion, Months Ahead of Forecasts",
+          "type": "economic",
+          "detail": "The US Treasury Department's daily statement showed total public debt outstanding crossing $40.05 trillion on August 18-19, 2026 — a record that arrived months earlier than forecasters had expected, driven partly by lost tariff revenue after the Supreme Court struck down Trump's IEEPA tariffs in February. The debt has more than doubled since 2017 and reached the milestone just five months after crossing $39 trillion in March 2026; the debt-to-GDP ratio stands near a record 123%. The Bipartisan Policy Center estimates the US will hit the $41.1 trillion debt ceiling sometime between late winter and mid-summer 2027, forcing Congress to again vote on raising or suspending the limit.",
+          "sources": [
+            {
+              "name": "CBS News",
+              "tier": 2,
+              "url": "https://www.cbsnews.com/news/national-debt-tops-40-trillion-doubles/",
+              "pole": "western"
+            },
+            {
+              "name": "ABC7 San Francisco",
+              "tier": 2,
+              "url": "https://abc7news.com/story/us-national-debt-now-stands-40-trillion/19707192/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "canada-tariffs-50pct-paused-3day-deal-aug19-2026",
+          "date": "2026-08-19",
+          "title": "Trump Pauses 50% Canada Tariffs for 3 Days as Trade Deal Nears Completion",
+          "type": "economic",
+          "detail": "President Trump announced late Tuesday, August 18, 2026 that he was pausing the 50% Section 338 tariffs on Canadian imports — set to take effect the next morning, August 19 — for a three-day period, saying on Truth Social that the US and Canada 'have a deal!' subject to finalizing the paperwork. The tariffs, announced July 20 and covering roughly $16-20 billion of Canadian dairy, agriculture, furniture, alcohol, and vehicle imports, had been set to kick in hours after Trump's post. Prime Minister Mark Carney's government had been racing to close a deal with Washington before the deadline; the pause buys both sides additional time to finalize terms.",
+          "sources": [
+            {
+              "name": "NPR",
+              "tier": 2,
+              "url": "https://www.npr.org/2026/08/19/g-s1-139156/trump-canada-tariffs",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/19/trump-canada-tariffs-deal-carney.html",
+              "pole": "western"
+            },
+            {
+              "name": "Time",
+              "tier": 2,
+              "url": "https://time.com/article/2026/08/19/trump-delays-50-canada-tariffs-as-the-two-countries-race-to-finalize-a-deal/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "national-debt-hits-40-trillion-aug19-2026",
+          "date": "2026-08-19",
+          "title": "US National Debt Surpasses $40 Trillion, Months Ahead of Forecasts",
+          "type": "economic",
+          "detail": "The US Treasury Department's daily statement showed total public debt outstanding crossing $40.05 trillion on August 18-19, 2026 — a record that arrived months earlier than forecasters had expected, driven partly by lost tariff revenue after the Supreme Court struck down Trump's IEEPA tariffs in February. The debt has more than doubled since 2017 and reached the milestone just five months after crossing $39 trillion in March 2026; the debt-to-GDP ratio stands near a record 123%. The Bipartisan Policy Center estimates the US will hit the $41.1 trillion debt ceiling sometime between late winter and mid-summer 2027, forcing Congress to again vote on raising or suspending the limit.",
+          "sources": [
+            {
+              "name": "CBS News",
+              "tier": 2,
+              "url": "https://www.cbsnews.com/news/national-debt-tops-40-trillion-doubles/",
+              "pole": "western"
+            },
+            {
+              "name": "ABC7 San Francisco",
+              "tier": 2,
+              "url": "https://abc7news.com/story/us-national-debt-now-stands-40-trillion/19707192/",
               "pole": "western"
             }
           ]
