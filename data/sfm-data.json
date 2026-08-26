@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-08-25",
+  "ultima_actualizacion": "2026-08-26",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "16.9647",
-    "fecha": "2026-08-24",
+    "actual": "16.9460",
+    "fecha": "2026-08-25",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1575,7 +1575,7 @@
       },
       {
         "mes": "2026-08",
-        "valor": 16.9647
+        "valor": 16.946
       }
     ]
   },
@@ -1584,7 +1584,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-08-25",
+        "fecha": "2024-08-26",
         "valor": 10.75
       },
       {
@@ -2733,8 +2733,8 @@
   },
   "mercado": {
     "reservas_internacionales": {
-      "actual": 257416.8,
-      "fecha": "2026-08-14",
+      "actual": 258608.8,
+      "fecha": "2026-08-21",
       "historico": [
         {
           "fecha": "2025-08-29",
@@ -2939,6 +2939,10 @@
         {
           "fecha": "2026-08-14",
           "valor": 257416.8
+        },
+        {
+          "fecha": "2026-08-21",
+          "valor": 258608.8
         }
       ]
     },
@@ -4349,8 +4353,8 @@
       ]
     },
     "cetes_28d": {
-      "actual": 6.15,
-      "fecha": "2026-08-18",
+      "actual": 6.13,
+      "fecha": "2026-08-25",
       "historico": [
         {
           "fecha": "2024-08-27",
@@ -4767,12 +4771,16 @@
         {
           "fecha": "2026-08-18",
           "valor": 6.15
+        },
+        {
+          "fecha": "2026-08-25",
+          "valor": 6.13
         }
       ]
     },
     "udis": {
-      "actual": 8.807141,
-      "fecha": "2026-08-25"
+      "actual": 8.807698,
+      "fecha": "2026-08-26"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5520,8 +5528,8 @@
       "fecha": "2026-05-08"
     },
     "tasa_real_cetes": {
-      "actual": 3.03,
-      "fecha": "2026-08-18"
+      "actual": 3.01,
+      "fecha": "2026-08-25"
     }
   },
   "credito": {
