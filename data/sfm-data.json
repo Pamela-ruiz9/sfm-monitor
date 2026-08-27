@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-08-26",
+  "ultima_actualizacion": "2026-08-27",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "16.9460",
-    "fecha": "2026-08-25",
+    "actual": "16.9712",
+    "fecha": "2026-08-27",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1575,7 +1575,7 @@
       },
       {
         "mes": "2026-08",
-        "valor": 16.946
+        "valor": 16.9712
       }
     ]
   },
@@ -1584,7 +1584,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-08-26",
+        "fecha": "2024-08-27",
         "valor": 10.75
       },
       {
@@ -2950,10 +2950,6 @@
       "actual": 6.7559,
       "fecha": "2026-08-25",
       "historico": [
-        {
-          "fecha": "2024-08-26",
-          "valor": 11.0014
-        },
         {
           "fecha": "2024-08-27",
           "valor": 11.0007
@@ -4779,8 +4775,8 @@
       ]
     },
     "udis": {
-      "actual": 8.807698,
-      "fecha": "2026-08-26"
+      "actual": 8.808255,
+      "fecha": "2026-08-27"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5109,13 +5105,9 @@
       ]
     },
     "desempleo": {
-      "actual": 3.0359,
-      "fecha": "2026-06",
+      "actual": 3.1311,
+      "fecha": "2026-07",
       "historico": [
-        {
-          "fecha": "2024-07",
-          "valor": 2.7198
-        },
         {
           "fecha": "2024-08",
           "valor": 3.3272
@@ -5207,17 +5199,17 @@
         {
           "fecha": "2026-06",
           "valor": 3.0359
+        },
+        {
+          "fecha": "2026-07",
+          "valor": 3.1311
         }
       ]
     },
     "subocupacion": {
-      "actual": 12.9015,
-      "fecha": "2026-06",
+      "actual": 12.824,
+      "fecha": "2026-07",
       "historico": [
-        {
-          "fecha": "2024-07",
-          "valor": 13.3458
-        },
         {
           "fecha": "2024-08",
           "valor": 13.2319
@@ -5309,6 +5301,10 @@
         {
           "fecha": "2026-06",
           "valor": 12.9015
+        },
+        {
+          "fecha": "2026-07",
+          "valor": 12.824
         }
       ]
     },
@@ -5407,13 +5403,9 @@
       ]
     },
     "informalidad": {
-      "actual": 35.3179,
-      "fecha": "2026-06",
+      "actual": 34.7095,
+      "fecha": "2026-07",
       "historico": [
-        {
-          "fecha": "2024-07",
-          "valor": 28.5241
-        },
         {
           "fecha": "2024-08",
           "valor": 29.0865
@@ -5505,6 +5497,10 @@
         {
           "fecha": "2026-06",
           "valor": 35.3179
+        },
+        {
+          "fecha": "2026-07",
+          "valor": 34.7095
         }
       ]
     },
