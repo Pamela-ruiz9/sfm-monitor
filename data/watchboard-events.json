@@ -1,8 +1,50 @@
 {
-  "updated": "2026-08-27T23:29:23Z",
+  "updated": "2026-08-28T23:21:45Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "nvidia-earnings-beat-ai-cycle-reaffirmed-aug27-2026",
+          "date": "2026-08-27",
+          "title": "Nvidia's Blowout Earnings Beat Sends Stocks Higher, Reaffirms AI Capex Cycle",
+          "type": "market",
+          "detail": "Nvidia reported fiscal Q2 revenue of $96.2 billion (up 106% year-over-year, above the $92.3B consensus) and adjusted EPS of $2.22 (vs. $2.09 expected), with data-center revenue of $89 billion. Guidance for Q3 came in at $105.8-110.1 billion, and management pointed to roughly 70% revenue growth for calendar 2027 — nearly double the 44% analysts had expected. CEO Jensen Huang said 'AI has reached its inflection point. It's doing useful work. Its tokens are productive and profitable,' adding 'the only regret that I have is that I didn't invest more and sooner.' Nvidia shares jumped 8.7% to $227.98 — the stock's biggest one-day gain since April 2025 — lifting the broader market: the S&P 500 rose 0.72% to 7,730.99, the Nasdaq Composite rose 1.57% to 26,541.35, and the Dow rose 0.20% to 53,569.44. Semiconductor peers Broadcom (+4.5%) and chip names in Europe and Asia also rallied, while a separate software-sector rebound saw Salesforce (+22%), Okta (+28%), and CrowdStrike (+20%) surge on their own earnings — Salesforce CEO Marc Benioff declaring 'this is not the SaaSpocalypse.' The results eased concerns about a slowdown in AI infrastructure spending, a key support for growth amid otherwise soft labor-market and consumer data.",
+          "sources": [
+            {
+              "name": "Yahoo Finance — Nvidia Earnings Soar as AI Chip Demand Drives Revenue to $96.2 Billion",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-earnings-soar-ai-chip-202449587.html",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — Stock Market Today: Dow, S&P 500, Nasdaq Rally as Nvidia Earnings Revive AI Optimism, Software Stocks Roar Back",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-august-27-dow-sp-500-nasdaq-082144520.html",
+              "pole": "western"
+            },
+            {
+              "name": "The Motley Fool — Stock Market Today, Aug. 27: Nvidia Surges on Blowout Results and Surprising Guidance",
+              "tier": 3,
+              "url": "https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-nvidia-surges-on-blowout-results-and-surprising-guidance/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "jackson-hole-symposium-opens-jobless-claims-aug27-2026",
+          "date": "2026-08-27",
+          "title": "Jackson Hole Symposium Opens; Jobless Claims Fall to 203K Ahead of Warsh's Debut Keynote",
+          "type": "policy",
+          "detail": "The Kansas City Fed's Jackson Hole Economic Policy Symposium opened Thursday (Aug 27-29, theme: 'Financial Innovation: Implications for Payments and Policy'), setting up Fed Chair Kevin Warsh's first keynote address in the role, scheduled for Friday at 10:00am ET. Same-day data showed weekly initial jobless claims fell to a seasonally adjusted 203,000 — below the 208,000 consensus estimate and the second straight weekly decline — a modestly reassuring labor-market signal heading into the speech. The dollar index was roughly flat (+0.05% to 99.18) as currency markets stayed in a holding pattern awaiting Warsh's remarks. Economists and traders are watching for any signal on whether Warsh views 2026's re-accelerating inflation as transitory or grounds for a rate hike, though he is expected to avoid explicit forward guidance in the address.",
+          "sources": [
+            {
+              "name": "Honolulu Star-Advertiser (AP) — Dollar Subdued After Data as Focus Turns to Jackson Hole",
+              "tier": 2,
+              "url": "https://www.staradvertiser.com/2026/08/27/breaking-news/dollar-subdued-after-data-as-focus-turns-to-jackson-hole/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "gdp-q2-second-estimate-durable-goods-aug26-2026",
           "date": "2026-08-26",
@@ -668,54 +710,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "us-q2-gdp-advance-estimate-miss-july30-2026",
-          "date": "2026-07-30",
-          "title": "US Q2 2026 GDP Advance Estimate: +1.5%, Below 2.1% Forecast",
-          "type": "economic",
-          "detail": "The Bureau of Economic Analysis' advance estimate put Q2 2026 real GDP growth at a 1.5% annualized rate, below the 2.1% consensus forecast though an acceleration from Q4 2025's 0.5% final estimate. Real consumer spending rose a solid 3.2%, driven by affluent-household services and durable-goods spending, while net trade subtracted 1.0 percentage point as imports stayed strong amid tariff-driven supply-chain adjustments, and inventory drawdowns cut a further 0.7 points. The miss versus consensus renewed growth concerns just as the Section 122/301 tariff transition took effect and ahead of the July jobs report.",
-          "sources": [
-            {
-              "name": "BEA — GDP (Advance Estimate), 2nd Quarter 2026",
-              "tier": 1,
-              "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-2nd-quarter-2026",
-              "pole": "western"
-            },
-            {
-              "name": "Advisor Perspectives — Q2 GDP Advance Estimate: Real GDP at 1.5%, Lower Than Expected",
-              "tier": 3,
-              "url": "https://www.advisorperspectives.com/dshort/updates/2026/07/30/gdp-gross-domestic-product-q2-2026-advance-estimate",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "fomc-holds-rates-hawkish-dissent-july29-2026",
-          "date": "2026-07-29",
-          "title": "FOMC Holds at 3.50-3.75% — Three Members Dissent in Favor of a Hike; Warsh Calls It a 'Good Family Fight'",
-          "type": "policy",
-          "detail": "The FOMC voted to maintain the federal funds rate target range at 3.50-3.75% at its July 28-29 meeting, a non-SEP meeting with no updated dot plot. Three committee members dissented, preferring a rate hike — an unusually large hawkish dissent bloc reflecting the inflation scare from the July 23 oil shock and the still-hot May PCE print. Fed Chair Kevin Warsh described the internal disagreement as a 'good family fight' among policymakers and, when pressed on whether the decision amounted to a 'pause' rather than a genuine hold-versus-hike debate, said he would not characterize it that way. The post-meeting statement described economic activity as expanding at a solid pace amid elevated uncertainty tied in part to the Middle East conflict, with job gains keeping pace with the workforce and unemployment little changed.",
-          "sources": [
-            {
-              "name": "Federal Reserve — FOMC Statement, July 29, 2026",
-              "tier": 1,
-              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Fed Meeting Recap: July 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/07/29/fed-meeting-today-live-updates.html",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Warsh Has Three Reasons to Hold Off on a Hike",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/07/28/warsh-fed-rate-decision-trump-powell-analysis.html",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -843,14 +837,14 @@
         {
           "id": "vix-fear-gauge",
           "label": "S&P 500 / Market Risk Gauge",
-          "value": "S&P 500 +0.3% to 7,677.28 (Aug 25) as Chip Rebound Offsets Canada Tariff Escalation Ahead of Nvidia Earnings",
-          "color": "amber",
-          "source": "AP / Yahoo Finance / CNBC / Federal Reserve; July 23 – August 25, 2026",
+          "value": "S&P 500 +0.7% to a Record 7,730.99 (Aug 27) as Nvidia's Blowout Earnings Reaffirm the AI Capex Cycle",
+          "color": "green",
+          "source": "AP / Yahoo Finance / The Motley Fool / Federal Reserve; July 23 – August 27, 2026",
           "contested": false,
-          "delta": "AUG 25: S&P 500 +0.3% (7,677.28), Dow +0.3% (53,577.40), Nasdaq +0.7% (26,151.30) as a semiconductor rebound and a 7bp drop in the 10Y yield outweighed Canada's newly announced retaliatory tariffs.",
-          "deltaNote": "AUG 17-25 ARC: The Aug 17 US-Iran MOU expiration (Brent ~$91, 30Y yield to 5.31-5.32%) pulled stocks off their Aug 13 record (7,799). Markets stabilized and rallied into the following week: Aug 25 saw all three major indices gain as investors rotated back into chip names (Nvidia +2%, snapping a 7-day losing streak) ahead of Wednesday's earnings and looked past Canada's $20B retaliatory tariff announcement. Attention now turns to the Aug 26 GDP second estimate, Nvidia's Aug 26 report, and incoming Fed Chair Warsh's Aug 28 Jackson Hole keynote — three catalysts in three days.",
+          "delta": "AUG 27: S&P 500 +0.7% (7,730.99, record), Nasdaq +1.6% (26,541.35), Dow +0.2% (53,569.44) as Nvidia surged 8.7% on a blowout earnings beat and 70% FY2028 revenue growth guidance, and a software-stock rebound (Salesforce +22%, Okta +28%, CrowdStrike +20%) added to gains. Jobless claims also fell to 203K.",
+          "deltaNote": "AUG 17-27 ARC: The Aug 17 US-Iran MOU expiration (Brent ~$91, 30Y yield to 5.31-5.32%) pulled stocks off their Aug 13 record (7,799). Markets recovered through Aug 25 (chip rebound, Canada tariff news shrugged off) and then broke to a fresh S&P 500 record Aug 27 on Nvidia's earnings beat ($96.2B revenue, +106% YoY) — the AI-capex narrative reasserting itself as the dominant growth-supportive story even as trade tensions with Canada escalate and the labor market softens. Attention now turns to incoming Fed Chair Warsh's Aug 28 Jackson Hole keynote, his first as Chair, with markets watching for any signal on the September 16-17 FOMC.",
           "trend": "up",
-          "lastUpdated": "2026-08-25T21:00:00Z"
+          "lastUpdated": "2026-08-27T21:00:00Z"
         },
         {
           "id": "us-effective-tariff-rate",
@@ -904,6 +898,60 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "sheinbaum-environmental-law-lgeepa-overhaul-aug26-2026",
+          "date": "2026-08-26",
+          "title": "Day 694 — Sheinbaum Signs Overhaul of 38-Year-Old Environmental Law, Sends It to Congress",
+          "type": "political",
+          "detail": "On August 26, 2026 (Day 694, Wednesday), President Sheinbaum signed an initiative to overhaul the Ley General del Equilibrio Ecológico y la Protección al Ambiente (LGEEPA), Mexico's core environmental statute, unchanged in substance since 1988 (last major update 1995). Environment Secretary Alicia Bárcena presented the ten guiding principles at the mañanera, framing the bill around ecological justice: an earlier and broader Strategic Environmental Assessment requirement for large projects, a ban on splitting projects into smaller pieces to dodge regional review, new restoration programs for rivers, mangroves, coastlines and forests, financial compensation for communities that protect natural areas, and new protections for environmental defenders. The initiative — proposed under the title Ley General de Protección Ecológica y Justicia Ambiental — now goes to the Chamber of Deputies for debate.",
+          "sources": [
+            {
+              "name": "La Jornada",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.jornada.com.mx/noticia/2026/08/26/politica/presenta-semarnat-iniciativa-para-actualizar-la-ley-general-del-equilibrio-ecologico-y-proteccion-ambiental"
+            },
+            {
+              "name": "Rio Times",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://www.riotimesonline.com/mexico-environmental-law-initiative-congress-2026/"
+            },
+            {
+              "name": "Ámbito",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.ambito.com/mexico/lifestyle/mexico-hace-historia-nivel-ambiental-claudia-sheinbaum-lanza-nueva-ley-general-proteger-y-reparar-los-ecosistemas-todo-el-pais-n6314961"
+            }
+          ]
+        },
+        {
+          "id": "dominguez-nava-sinaloa-interim-governor-aug25-2026",
+          "date": "2026-08-25",
+          "title": "Day 693 — Sinaloa Congress Names Graciela Domínguez Nava Interim Governor, 31-6",
+          "type": "political",
+          "detail": "On August 25, 2026 (Day 693, Tuesday), the Sinaloa Congress voted 31 in favor to 6 against, with zero abstentions, to designate Graciela Domínguez Nava as interim governor, resolving the succession question left open when the legislature approved Rubén Rocha Moya's indefinite leave on August 23. The session had originally been scheduled for Monday, August 24 but was suspended and reconvened the following day. Domínguez Nava, a Morena sociologist and former Sinaloa state deputy (2018–2021) and Secretary of Public Education and Culture (2021–2024) who was also serving as federal deputy for Mazatlán's District 1 before taking leave in June, becomes the state's third governor of 2026 after Rocha Moya and interim predecessor Yeraldine Bonilla Valverde.",
+          "sources": [
+            {
+              "name": "La Jornada",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.jornada.com.mx/noticia/2026/08/25/politica/graciela-dominguez-navase-convierte-en-la-gobernadora-interina-de-sinaloa"
+            },
+            {
+              "name": "Récord",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.record.com.mx/historia/quien-es-graciela-dominguez-nava-la-nueva-gobernadora-interina-de-sinaloa-que-sustituye-a-rocha-moya-2026082521043575015"
+            },
+            {
+              "name": "El Heraldo de México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://heraldodemexico.com.mx/nacional/2026/8/25/quien-es-graciela-dominguez-nava-la-nueva-gobernadora-interina-de-sinaloa-tras-licencia-de-rocha-moya-875913.html"
+            }
+          ]
+        },
         {
           "id": "cattle-exports-us-reopen-agua-prieta-aug24-2026",
           "date": "2026-08-24",
@@ -1203,53 +1251,71 @@
               "url": "https://www.excelsior.com.mx/nacional/mananera-sheinbaum-vivo-temas-conferencia-hoy-14-agosto-2026"
             }
           ]
-        },
-        {
-          "id": "amlo-son-visa-revoked-aug13-2026",
-          "date": "2026-08-13",
-          "title": "Day 681 — AMLO's Son Andy López Beltrán Says US Revoked His Visa, Adding Pressure on Sheinbaum",
-          "type": "political",
-          "detail": "On August 13, 2026 (Day 681, Thursday), Andrés Manuel 'Andy' López Beltrán — son of former president AMLO — announced via a letter posted to Instagram and addressed to Donald Trump that the U.S. State Department, under Secretary Marco Rubio and Deputy Secretary Christopher Landau, had revoked his U.S. visa. López Beltrán called the move 'political, more propagandistic than anything, in a Hitlerian style' and denied any wrongdoing. The episode increased scrutiny on the Sheinbaum government amid separate PAN questions linking López Beltrán to an FGR fuel-theft ('huachicol fiscal') investigation.",
-          "sources": [
-            {
-              "name": "Diario Cambio",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://www.diariocambio.com.mx/2026/nacional/estados-unidos-retira-visa-a-andy-lopez-beltran-hijo-de-amlo/"
-            },
-            {
-              "name": "La Crónica de Hoy",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://www.cronica.com.mx/nacional/2026/08/13/golpe-a-los-hijos-de-amlo-eu-le-retira-la-visa-a-andy-lopez-beltran-y-le-escribe-carta-a-trump/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-goldman-sachs-meeting-aug12-2026",
-          "date": "2026-08-12",
-          "title": "Day 680 — Sheinbaum Meets Goldman Sachs President Waldron to Discuss Plan México Investment",
-          "type": "economic",
-          "detail": "On August 12, 2026 (Day 680, Wednesday), President Sheinbaum met at the National Palace with Goldman Sachs President and COO John E. Waldron, alongside Finance Secretary Edgar Amador Zamora, to discuss Mexico's 'favorable perception' among international investors and opportunities under Plan México, which targets 1.5 million new jobs and investment above 25% of GDP as Mexico aims to move from the world's 15th- to a top-10 economy. No specific investment agreements or new projects were disclosed following the meeting.",
-          "sources": [
-            {
-              "name": "Mexico News Daily",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://mexiconewsdaily.com/business/sheinbuam-goldman-sachs-meeting/"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/08/12/sheinbaum-se-reune-con-john-e-waldron-director-de-uno-de-los-bancos-mas-grandes-del-mundo/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "trump-renames-lake-ontario-lake-america-aug27-2026",
+          "date": "2026-08-27",
+          "title": "Trump Signs Executive Order Renaming Lake Ontario 'Lake America' Amid Canada Trade War",
+          "type": "economic",
+          "detail": "President Trump signed an executive order on Thursday, August 27, 2026, renaming Lake Ontario as 'Lake America,' effective immediately for federal agencies, in his latest escalation of the trade war with Canada. Flanked in the Oval Office by maps of the Great Lakes labeled 'Lake America' over Lake Ontario, Trump directed the Board on Geographic Names to guide federal maps, contracts, and communications to use the new name, arguing the lake's deepest waters and most of its volume sit in US territory. It is the second time Trump has renamed an international body of water for the US, following the Gulf of Mexico's renaming to 'Gulf of America' in Jan 2025. Canadian PM Mark Carney rejected the move, noting the name Ontario derives from the Wendat word Ontari'io ('the lake is beautiful, the lake is big') and predates both Canadian Confederation and US independence by more than 400 years. The move follows the Aug 21 collapse of US-Canada trade talks, 50% Section 338 tariffs on ~$20B of Canadian goods, Trump's Aug 24 threat to raise Canada auto/steel tariffs to 50% in 2027, and Canada's Aug 25 dollar-for-dollar retaliatory tariffs on ~$20B of US goods.",
+          "sources": [
+            {
+              "name": "CNN",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/08/27/politics/trump-canada-lake-ontario-america",
+              "pole": "western"
+            },
+            {
+              "name": "NBC News",
+              "tier": 2,
+              "url": "https://www.nbcnews.com/politics/trump-administration/trump-orders-lake-ontario-renamed-lake-america-canada-trade-war-rcna594750",
+              "pole": "western"
+            },
+            {
+              "name": "Washington Post",
+              "tier": 2,
+              "url": "https://www.washingtonpost.com/politics/2026/08/27/trump-signs-order-changing-name-lake-ontario/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "trump-renames-lake-ontario-lake-america-aug27-2026",
+          "date": "2026-08-27",
+          "title": "Trump Signs Executive Order Renaming Lake Ontario 'Lake America' Amid Canada Trade War",
+          "type": "economic",
+          "detail": "President Trump signed an executive order Thursday afternoon, August 27, 2026, renaming Lake Ontario as 'Lake America,' effective immediately within the federal government, escalating his trade war with Canada. Flanked in the Oval Office by maps of the Great Lakes labeled 'Lake America' over Lake Ontario, Trump directed the Board on Geographic Names to guide agencies to use the new name on maps, contracts, and communications, arguing the deepest parts and most of the lake's volume sit in US territory. It is the second time Trump has renamed an international body of water for the US, following the Gulf of Mexico's renaming to 'Gulf of America.' Canadian Prime Minister Mark Carney rejected the move, noting the name Ontario derives from the Wendat word Ontari'io ('the lake is beautiful, the lake is big') and predates both Canadian Confederation and US independence by more than 400 years.",
+          "sources": [
+            {
+              "name": "CNN",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/08/27/politics/trump-canada-lake-ontario-america",
+              "pole": "western"
+            },
+            {
+              "name": "NBC News",
+              "tier": 2,
+              "url": "https://www.nbcnews.com/politics/trump-administration/trump-orders-lake-ontario-renamed-lake-america-canada-trade-war-rcna594750",
+              "pole": "western"
+            },
+            {
+              "name": "The Hill",
+              "tier": 2,
+              "url": "https://thehill.com/homenews/administration/6055425-lake-america-executive-order/",
+              "pole": "western"
+            },
+            {
+              "name": "Washington Post",
+              "tier": 2,
+              "url": "https://www.washingtonpost.com/politics/2026/08/27/trump-signs-order-changing-name-lake-ontario/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "canada-retaliatory-tariffs-20b-aug25-2026",
           "date": "2026-08-25",
@@ -1456,54 +1522,6 @@
               "name": "Time",
               "tier": 2,
               "url": "https://time.com/article/2026/08/19/trump-delays-50-canada-tariffs-as-the-two-countries-race-to-finalize-a-deal/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "national-debt-hits-40-trillion-aug19-2026",
-          "date": "2026-08-19",
-          "title": "US National Debt Surpasses $40 Trillion, Months Ahead of Forecasts",
-          "type": "economic",
-          "detail": "The US Treasury Department's daily statement showed total public debt outstanding crossing $40.05 trillion on August 18-19, 2026 — a record that arrived months earlier than forecasters had expected, driven partly by lost tariff revenue after the Supreme Court struck down Trump's IEEPA tariffs in February. The debt has more than doubled since 2017 and reached the milestone just five months after crossing $39 trillion in March 2026; the debt-to-GDP ratio stands near a record 123%. The Bipartisan Policy Center estimates the US will hit the $41.1 trillion debt ceiling sometime between late winter and mid-summer 2027, forcing Congress to again vote on raising or suspending the limit.",
-          "sources": [
-            {
-              "name": "CBS News",
-              "tier": 2,
-              "url": "https://www.cbsnews.com/news/national-debt-tops-40-trillion-doubles/",
-              "pole": "western"
-            },
-            {
-              "name": "ABC7 San Francisco",
-              "tier": 2,
-              "url": "https://abc7news.com/story/us-national-debt-now-stands-40-trillion/19707192/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "treasury-genius-act-stablecoin-rules-proposed-aug18-2026",
-          "date": "2026-08-18",
-          "title": "Treasury Proposes GENIUS Act Rules Restricting Who Can Issue Stablecoins",
-          "type": "economic",
-          "detail": "The US Treasury Department published a Notice of Proposed Rulemaking on August 18, 2026 in the Federal Register implementing Section 3 of the GENIUS Act, the stablecoin law Trump signed in 2025, seeking public comment on which entities may lawfully issue payment stablecoins in the United States. Under the proposal, only federally or state-licensed issuers could offer stablecoins in the US starting July 18, 2028, with violations carrying fines up to $1 million and up to five years in prison. The GENIUS Act is due to take full effect January 18, 2027, though the law's original one-year deadline for finalizing implementing rules already passed in July without full compliance. Comments on the proposed rule are due by October 19, 2026.",
-          "sources": [
-            {
-              "name": "Federal Register",
-              "tier": 1,
-              "url": "https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale",
-              "pole": "western"
-            },
-            {
-              "name": "CoinDesk",
-              "tier": 2,
-              "url": "https://www.coindesk.com/policy/2026/08/17/u-s-treasury-department-proposes-genius-act-stablecoin-rule",
-              "pole": "western"
-            },
-            {
-              "name": "The Block",
-              "tier": 2,
-              "url": "https://www.theblock.co/news/regulation/2026-08-17-us-treasury-seeks-public-comment-genius-act-stablecoin-rules-411987",
               "pole": "western"
             }
           ]
