@@ -1,8 +1,68 @@
 {
-  "updated": "2026-09-02T17:33:21Z",
+  "updated": "2026-09-03T17:27:16Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "global-bond-yield-rout-multidecade-highs-adp-miss-sep2-2026",
+          "date": "2026-09-02",
+          "title": "Global Bond Yield Rout Reaches Multi-Decade Highs; ADP Shows Private Hiring Slowing Sharply to 38,000",
+          "type": "market",
+          "detail": "The global government bond selloff that began Monday accelerated Wednesday, pushing borrowing costs to multi-decade highs across major economies: the US 10-year Treasury yield touched 4.814% intraday, its highest since November 2023; Japan's 10-year JGB yield held above 3% for the first time in roughly 30 years; Germany's 10-year Bund reached 3.375%, its highest since 2011; and UK 10-year gilts extended a post-2008 high to 5.25%. The rout was driven by renewed US-Iran hostilities near the Strait of Hormuz keeping oil elevated (WTI +1.06% to $91.18) alongside persistent inflation and government-debt-sustainability concerns. Despite the yield spike, US equities rebounded from Tuesday's selloff as investors looked past the Middle East tensions: the S&P 500 and Dow each rose about 0.47%, the Nasdaq gained 0.37%, and the Russell 2000 led with a 1.10% gain. Separately, ADP's National Employment Report showed private-sector payrolls rose just 38,000 in August — below the 48,000 forecast and down from July's revised 46,000, the slowest pace since January — with manufacturing shedding 17,000 jobs, adding to labor-market softening evidence ahead of Friday's BLS nonfarm payrolls report.",
+          "sources": [
+            {
+              "name": "CNBC — Global Bond Rout Gathers Pace as Inflation Fears Mount",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/02/global-bond-yields-inflation-rates.html",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — Private Payrolls Rose by 38,000 in August, Fewer Than Expected, ADP Reports",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/02/private-payrolls-rose-by-38000-in-august-fewer-than-expected-adp-reports.html",
+              "pole": "western"
+            },
+            {
+              "name": "ADP Research Institute — ADP National Employment Report: Private-Sector Employment Increased by 38,000 Jobs in August",
+              "tier": 1,
+              "url": "https://www.prnewswire.com/news-releases/adp-national-employment-report-private-sector-employment-increased-by-38-000-jobs-in-august-302867661.html",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — Stock Market Today (Sept. 2, 2026): Dow Edges Higher as Oil Prices Rise and Bond Yields Climb",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-2-134032621.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "hormuz-tanker-strikes-oil-spike-ism-pmi-slows-sep1-2026",
+          "date": "2026-09-01",
+          "title": "Renewed US-Iran Strikes Near Strait of Hormuz Send Oil Above $90, Stocks Fall, 10-Year Yield Hits 20-Month High",
+          "type": "market",
+          "detail": "Two oil tankers — one Saudi-owned, one South Korean-owned — were struck by projectiles in the Strait of Hormuz late Monday (Aug 31) as fighting between US and Iranian forces resumed after a stalemate lull, and markets reacted sharply on Tuesday. Brent crude jumped 4.6% to $94.65/bbl and WTI surged 5.2% to $90.22 (highest close since late July), while the US 10-year Treasury yield rose to 4.792% — a 20-month high and its fifth straight session of gains — as Japan's 10-year JGB yield crossed 3% for the first time since 1996 and UK/eurozone yields hit multi-year highs. Equities sold off broadly: the Dow fell 0.79% to 52,766.88, the S&P 500 dropped 0.71% to 7,631.47, and the Nasdaq lost 1.03% to 26,099.77. Separately, the ISM Manufacturing PMI for August registered 54.6%, down 1 point from July's 55.6% and below the 55.2% forecast — still the sector's 8th straight month of expansion, but with the New Orders Index down 3 points to 53.7% and demand sentiment among purchasing managers cooling to a 2-to-1 positive/negative comment ratio (from 3.5-to-1 in July).",
+          "sources": [
+            {
+              "name": "AOL / Yahoo Finance — Bond Selloff Pressures Stocks as Oil Crosses $91 a Barrel",
+              "tier": 2,
+              "url": "https://www.aol.com/articles/bond-selloff-pressures-stocks-oil-014547000.html",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — Stock Market Today (Sept. 1, 2026): Nasdaq Slides on Renewed U.S.-Iran Conflict",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-1-135016820.html",
+              "pole": "western"
+            },
+            {
+              "name": "Institute for Supply Management — Manufacturing PMI at 54.6%; August 2026 ISM Manufacturing PMI Report",
+              "tier": 1,
+              "url": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-54-6-august-2026-ism-manufacturing-pmi-report-302865127.html",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "stocks-slip-oil-jumps-mideast-strike-aug31-2026",
           "date": "2026-08-31",
@@ -668,48 +728,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "ism-services-pmi-july-54pt1-employment-contracts-aug5-2026",
-          "date": "2026-08-05",
-          "title": "ISM Services PMI 54.1% in July — Business Activity Jumps but Employment Falls Back Into Contraction",
-          "type": "economic",
-          "detail": "The ISM Services PMI came in at 54.1% for July, its 25th consecutive month of expansion but slightly below the 54.5% consensus forecast. The Business Activity Index jumped 3.7 points to 59.1% and New Orders rose 2.1 points to 57.2%, but the services Employment Index fell back into contraction territory, an early crack in the labor market ahead of the following Friday's weak nonfarm payrolls report.",
-          "sources": [
-            {
-              "name": "ISM / PR Newswire — Services PMI at 54.1%; July 2026 ISM Services PMI Report",
-              "tier": 2,
-              "url": "https://www.prnewswire.com/news-releases/services-pmi-at-54-1-july-2026-ism-services-pmi-report-302843134.html",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — ISM Non-Manufacturing PMI Comes in at 54.1 vs 54.5 Estimated",
-              "tier": 2,
-              "url": "https://www.cnbc.com/video/2026/08/05/ism-non-manufacturing-pmi-comes-in-at-54-point-1-vs-54-point-6-estimated.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "ism-manufacturing-pmi-july-55pt6-aug3-2026",
-          "date": "2026-08-03",
-          "title": "ISM Manufacturing PMI Jumps to 55.6% in July — Highest Since May 2022",
-          "type": "economic",
-          "detail": "The ISM Manufacturing PMI registered 55.6% in July, up 2.3 points from June and the highest reading since May 2022, marking a seventh consecutive month of expansion (21st straight month for the broader economy by ISM's read). New Orders expanded for a seventh straight month to 56.7%, Production jumped 6.3 points to 58.5% (highest since November 2021), and the Employment Index rose to 52.8% — its best level since August 2022. The strong print, released August 3, ran counter to the growth-scare narrative from the Q2 GDP miss three days earlier, though ISM commentary flagged elevated input prices tied to tariffs and geopolitical tensions.",
-          "sources": [
-            {
-              "name": "ISM — July 2026 Manufacturing PMI Report",
-              "tier": 1,
-              "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/july/",
-              "pole": "western"
-            },
-            {
-              "name": "PR Newswire — Manufacturing PMI at 55.6%; July 2026 ISM Manufacturing PMI Report",
-              "tier": 2,
-              "url": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-55-6-july-2026-ism-manufacturing-pmi-report-302840669.html",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -777,14 +795,14 @@
         {
           "id": "fed-funds-rate",
           "label": "Fed Funds Rate",
-          "value": "3.50–3.75%; September Hike Odds at 57% After Warsh's Hawkish Jackson Hole Debut",
+          "value": "3.50–3.75%; September 15-16 Hike Odds at ~57.5% as Bond Rout and Soft ADP Data Pull in Opposite Directions",
           "color": "blue",
-          "source": "Federal Reserve FOMC, July 29 2026 (held); Warsh Jackson Hole Keynote, Aug 28 2026",
+          "source": "Federal Reserve FOMC, July 29 2026 (held); Warsh Jackson Hole Keynote, Aug 28 2026; CME FedWatch, Sept 2 2026",
           "contested": false,
-          "delta": "Held at 3.50-3.75% since July 29; Sept 15-16 hike odds jumped to ~57% (from ~35%) after Warsh's Aug 28 speech",
-          "deltaNote": "AUG 28 UPDATE: Warsh's first Jackson Hole keynote as Chair (his 100th day in the role) turned notably hawkish — he said inflation remains 'above our 2 percent target,' called price stability the Fed's 'predominant focus,' and said the Fed 'may have work to do' on rates, while also stepping back from forward guidance ('you can call it an outline, you can call it a trail map, just don't call it forward guidance'). CME FedWatch September hike odds jumped to ~57% from ~35% pre-speech; the 2-year Treasury yield rose to ~4.32%, its highest since July. The S&P 500 and Nasdaq slipped modestly on the news (-0.25%/-0.52%) though the week still closed higher. Prior: July 28-29 FOMC held at 3.50-3.75% with 3 hawkish dissents; a Reuters poll (Aug 12-17, 104 economists) had found 94 expecting a September hold before the speech shifted the outlook.",
+          "delta": "Held at 3.50-3.75% since July 29; Sept 15-16 hike odds held near ~57.5% into Sept 2 even as ADP showed private payrolls slowing sharply to 38,000 in August",
+          "deltaNote": "AUG 28 UPDATE: Warsh's first Jackson Hole keynote as Chair (his 100th day in the role) turned notably hawkish — he said inflation remains 'above our 2 percent target,' called price stability the Fed's 'predominant focus,' and said the Fed 'may have work to do' on rates, while also stepping back from forward guidance ('you can call it an outline, you can call it a trail map, just don't call it forward guidance'). CME FedWatch September hike odds jumped to ~57% from ~35% pre-speech; the 2-year Treasury yield rose to ~4.32%, its highest since July. SEPT 2 UPDATE: ADP's National Employment Report showed private payrolls rose just 38,000 in August (vs 48,000 forecast, down from July's revised 46,000) — the slowest pace since January — a labor-softening signal that would normally cool hike bets, but September odds held near 57.5% as the global bond yield rout (10Y at 4.814%, highest since Nov 2023) and renewed Mideast-driven oil spike kept inflation-hawk pressure on the Fed ahead of the Sept 16-17 FOMC. Prior: July 28-29 FOMC held at 3.50-3.75% with 3 hawkish dissents.",
           "trend": "up",
-          "lastUpdated": "2026-08-28T14:00:00Z"
+          "lastUpdated": "2026-09-02T18:00:00Z"
         },
         {
           "id": "ecb-deposit-rate",
@@ -801,14 +819,14 @@
         {
           "id": "us-10y-treasury-yield",
           "label": "US 10Y / 30Y Treasury Yield",
-          "value": "10Y Near Highest Since Jan 2025 (Aug 31); 30Y 5.31-5.32% (Aug 17 Peak) — Highest Since 2007",
+          "value": "10Y Hits 4.814% (Sept 2) — Highest Since Nov 2023; 30Y 5.31-5.32% (Aug 17 Peak) — Highest Since 2007",
           "color": "red",
-          "source": "CNBC / Federal Reserve H.15 / FRED / Yahoo Finance; July 23 - August 31, 2026",
+          "source": "CNBC / Federal Reserve H.15 / FRED / Yahoo Finance; July 23 - September 2, 2026",
           "contested": false,
-          "delta": "Reversed higher: Warsh's hawkish Aug 28 Jackson Hole keynote and an Aug 31 US strike near the Strait of Hormuz (oil back above $90) both pushed yields up off the Aug 25 low.",
-          "deltaNote": "AUG 25-31 ARC: The 10-year eased to 4.625% Aug 25 as a chip-sector rebound and easing near-term hike bets outweighed the Canada tariff escalation. Yields then reversed: Warsh's Aug 28 Jackson Hole keynote pushed September hike odds to ~57% and the 2-year to ~4.32% (highest since July), and an Aug 31 US strike on Iranian rocket launchers near the Strait of Hormuz sent Brent crude back above $90/bbl, pushing the 10-year toward its highest level since January 2025. The 30-year's Aug 17 peak of 5.31-5.32% (highest since June 2007, when the US-Iran MOU expired without a deal) remains the cycle high. National debt concerns (nearing $40T) and stubborn above-target inflation remain the structural floor under long-end yields.",
+          "delta": "Renewed US-Iran strikes near the Strait of Hormuz (Aug 31-Sept 1) pushed oil and yields sharply higher; the 10Y hit 4.814% intraday Sept 2 as part of a synchronized global bond rout (Japan 10Y >3% for the first time since 1996, German Bund highest since 2011, UK gilts highest since 2008).",
+          "deltaNote": "AUG 31-SEPT 2 ARC: Warsh's Aug 28 hawkish Jackson Hole keynote lifted the 2-year to ~4.32%; an Aug 31 US strike on Iranian rocket launchers near the Strait of Hormuz then sent Brent back above $90 and yields toward their highest since January 2025. Overnight Aug 31-Sept 1, two oil tankers were struck by projectiles in the Strait of Hormuz, driving Brent to $94.65 (+4.6%) and WTI to $90.22 (+5.2%) on Sept 1 — the 10Y rose to 4.792%, a 20-month high, its fifth straight session of gains. The selloff extended Sept 2: the 10Y touched 4.814% intraday (highest since Nov 2023) as the rout went global — Japan's 10Y crossed 3% for the first time since 1996, Germany's Bund hit 3.375% (highest since 2011), and UK gilts extended a post-2008 high to 5.25%. The 30-year's Aug 17 peak of 5.31-5.32% (highest since June 2007) remains the cycle high. National debt concerns (nearing $40T) and stubborn above-target inflation remain the structural floor under long-end yields; equities shrugged off the rout Sept 2, with the S&P 500 and Dow each rebounding ~0.47%.",
           "trend": "up",
-          "lastUpdated": "2026-08-31T20:00:00Z"
+          "lastUpdated": "2026-09-02T18:00:00Z"
         },
         {
           "id": "us-consumer-confidence",
@@ -837,14 +855,14 @@
         {
           "id": "vix-fear-gauge",
           "label": "S&P 500 / Market Risk Gauge",
-          "value": "S&P 500 +0.7% to a Record 7,730.99 (Aug 27) as Nvidia's Blowout Earnings Reaffirm the AI Capex Cycle",
-          "color": "green",
-          "source": "AP / Yahoo Finance / The Motley Fool / Federal Reserve; July 23 – August 27, 2026",
+          "value": "S&P 500 Rebounds +0.47% (Sept 2) After a Two-Day Slide on Renewed Mideast Strikes and a Global Bond Rout",
+          "color": "amber",
+          "source": "AP / Yahoo Finance / The Motley Fool / Federal Reserve; July 23 – September 2, 2026",
           "contested": false,
-          "delta": "AUG 27: S&P 500 +0.7% (7,730.99, record), Nasdaq +1.6% (26,541.35), Dow +0.2% (53,569.44) as Nvidia surged 8.7% on a blowout earnings beat and 70% FY2028 revenue growth guidance, and a software-stock rebound (Salesforce +22%, Okta +28%, CrowdStrike +20%) added to gains. Jobless claims also fell to 203K.",
-          "deltaNote": "AUG 17-27 ARC: The Aug 17 US-Iran MOU expiration (Brent ~$91, 30Y yield to 5.31-5.32%) pulled stocks off their Aug 13 record (7,799). Markets recovered through Aug 25 (chip rebound, Canada tariff news shrugged off) and then broke to a fresh S&P 500 record Aug 27 on Nvidia's earnings beat ($96.2B revenue, +106% YoY) — the AI-capex narrative reasserting itself as the dominant growth-supportive story even as trade tensions with Canada escalate and the labor market softens. Attention now turns to incoming Fed Chair Warsh's Aug 28 Jackson Hole keynote, his first as Chair, with markets watching for any signal on the September 16-17 FOMC.",
-          "trend": "up",
-          "lastUpdated": "2026-08-27T21:00:00Z"
+          "delta": "SEPT 1-2: Stocks fell Sept 1 (S&P -0.71% to 7,631.47) as renewed US-Iran tanker strikes near the Strait of Hormuz spiked oil and yields, then rebounded Sept 2 (S&P +0.47%, Dow +0.47%, Nasdaq +0.37%, Russell 2000 +1.10%) even as global bond yields hit multi-decade highs.",
+          "deltaNote": "AUG 27-SEPT 2 ARC: The market's Aug 27 record run (S&P 7,730.99 on Nvidia's earnings beat) gave way to Warsh's hawkish Aug 28 Jackson Hole keynote (S&P -0.25%) and an Aug 31 Mideast strike near the Strait of Hormuz (S&P -0.33%). The selloff deepened Sept 1 after two tankers were struck in the Strait of Hormuz overnight — Dow -0.79%, S&P -0.71%, Nasdaq -1.03% — alongside a soft ISM Manufacturing PMI (54.6%, down from 55.6%) and a 20-month-high 10-year Treasury yield (4.792%). Equities then shrugged off a synchronized global bond yield rout on Sept 2 (US 10Y to 4.814%, highest since Nov 2023; Japan 10Y above 3% for the first time since 1996; German Bund and UK gilts at multi-year highs) to close broadly higher, even as ADP showed private payrolls slowing sharply to 38,000 in August.",
+          "trend": "down",
+          "lastUpdated": "2026-09-02T21:00:00Z"
         },
         {
           "id": "us-effective-tariff-rate",
@@ -873,14 +891,14 @@
         {
           "id": "global-policy-uncertainty",
           "label": "Global Policy Uncertainty / Recession Risk",
-          "value": "AUG 25: US-Canada Trade War Escalates (Retaliatory Tariffs Effective Sept 8); GDP Second Estimate + Jackson Hole + Nvidia Earnings All Land This Week",
+          "value": "SEPT 2: Global Bond Yield Rout Hits Multi-Decade Highs (US, Japan, Germany, UK) as Mideast Strikes Reignite and ADP Shows Hiring Slowdown",
           "color": "red",
-          "source": "Federal Reserve / BEA / BLS / China NBS / Census Bureau / U. Michigan; July 17 – August 25, 2026",
+          "source": "Federal Reserve / ADP / ISM / China NBS / Census Bureau / U. Michigan; July 17 – September 2, 2026",
           "contested": false,
-          "delta": "AUG 19-25 ARC — TRADE WAR ESCALATES INTO A THREE-CATALYST WEEK: US-Canada talks collapsed Aug 21; Section 338 tariffs (50% on ~$20B of Canadian goods) took effect Aug 22 after a brief suspension; Carney declared Canada 'at war' with the US on trade. Trump escalated further Aug 24, threatening 50% tariffs on Canadian autos/steel from Jan 1, 2027. Canada announced its retaliatory tariffs Aug 25 (15-50% on ~$20B of US goods, effective Sept 8, plus a C$7.5B support package), though markets shrugged it off — the S&P 500 gained 0.3% and the 10Y yield eased 7bps to 4.625% as chip stocks rebounded ahead of Nvidia's earnings.",
-          "deltaNote": "AUG 25 RECESSION RISK SNAPSHOT: Five distinct risk channels are now in play — a now-active US-Canada trade war (each side's tariffs escalating in real time), a bond market still structurally pressured by debt/inflation concerns even as it eases short-term, a deepening China slowdown, elevated equity valuations heading into Nvidia's Aug 26 report, and incoming Fed Chair Warsh's first Jackson Hole keynote (Aug 28) — his clearest policy signal yet on whether 'no landing' becomes the Fed's operative framework. None individually rises to a 2026-recession-defining shock, but the density of catalysts in a single week (GDP second estimate + durable goods Aug 26, Nvidia earnings Aug 26, Jackson Hole Aug 27-29) raises the odds of a volatile turn. Next catalysts: Nvidia earnings (Aug 26 after close), Jackson Hole (Aug 27-29), final August Michigan sentiment (Aug 28), and the September 16-17 FOMC meeting.",
+          "delta": "AUG 31-SEPT 2 ARC: Renewed US-Iran strikes and tanker attacks near the Strait of Hormuz reignited the oil/inflation channel, driving a synchronized global government bond selloff to multi-decade highs even as ADP flagged a sharp US private-hiring slowdown — a stagflation-adjacent combination that raises, rather than lowers, near-term recession risk.",
+          "deltaNote": "SEPT 2 RECESSION RISK SNAPSHOT: The dominant new risk channel is a globally synchronized bond yield rout — US 10Y at 4.814% (highest since Nov 2023), Japan's 10Y above 3% for the first time since 1996, Germany's Bund at 3.375% (highest since 2011), and UK gilts at 5.25% (highest since 2008) — driven by renewed Strait of Hormuz strikes (oil tankers hit Aug 31-Sept 1, Brent to $94.65) reigniting inflation fears just as ADP showed private payrolls slowing to 38,000 in August (from 46,000) and the ISM Manufacturing PMI cooled to 54.6%. Tightening financial conditions (higher yields) combined with softening labor and manufacturing data is the classic pre-recession mix analysts flag as most concerning. Also in play: an active US-Canada trade war (Canada's retaliatory tariffs effective Sept 8), a deepening China slowdown, and elevated equity valuations that shrugged off the yield spike Sept 2. Next catalysts: BLS August jobs report (Friday Sept 4) and the September 16-17 FOMC meeting.",
           "trend": "down",
-          "lastUpdated": "2026-08-25T21:00:00Z"
+          "lastUpdated": "2026-09-02T21:00:00Z"
         },
         {
           "id": "boj-policy-rate",
@@ -898,6 +916,147 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "mananera-redesign-new-stage-sep2-2026",
+          "date": "2026-09-02",
+          "title": "Day 701 — Sheinbaum Unveils Redesigned Mañanera Stage, Breaking From AMLO-Era Set",
+          "type": "political",
+          "detail": "On September 2, 2026 (Day 701, Wednesday), President Sheinbaum resumed her morning press conference — now used for the \"glosa\" (line-by-line follow-up) of her Second Government Report — on a newly redesigned stage at the National Palace, the first change to \"La Mañanera\" set since López Obrador introduced the format in 2018. The old flat burgundy-and-white backdrop was replaced with three panels — two angled outward — forming a semi-curved space, still using burgundy, white and gray tones and retaining the \"Conferencia de Prensa\" screen. Reporters now sit noticeably closer to the podium than the roughly four-meter distance under the old layout; Sheinbaum remarked, \"Ya los veo más cerca, antes casi no los veía.\" She said the redesign came from her presidential staff rather than any deliberate political signal.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/02/sheinbaum-redisena-la-mananera-y-corta-ciclo-quitando-escenario-de-amlo-estas-son-las-modificaciones/"
+            },
+            {
+              "name": "SDP Noticias",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.sdpnoticias.com/mexico/sheinbaum-estrena-nuevo-set-en-la-mananera-para-la-glosa-de-su-segundo-informe/"
+            }
+          ]
+        },
+        {
+          "id": "zacatecas-car-bomb-security-cabinet-response-sep2-2026",
+          "date": "2026-09-02",
+          "title": "Day 701 — Sheinbaum Calls Zacatecas Car Bombing \"Isolated,\" Sends Security Cabinet Sept 5",
+          "type": "political",
+          "detail": "On September 2, 2026 (Day 701, Wednesday), asked about the August 30 car bomb attack outside the Ojocaliente, Zacatecas police command, President Sheinbaum called the incident \"isolated\" while acknowledging it was not the first such attack, and announced her Security Cabinet would travel to Zacatecas on Friday, September 5 to present findings on the criminal group responsible. She separately urged UNAM to consider opening additional undergraduate spaces and faculty positions after the university opened 2,000 new spots, and cited figures from Legal Counsel Luisa María Alcalde crediting the administration with 27 constitutional reforms and 76 secondary-law reforms since October 2024. Sheinbaum also praised customs and tax authorities for a fuel-theft crackdown, citing the arrest of Fernando Farías Laguna as helping curb contraband and stabilize gasoline prices, and rejected suggestions of a rift with Morena Senate leader Adán Augusto López, saying their direct contact had lessened but coordination with other party leaders continued.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/02/la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-miercoles-2-de-septiembre/"
+            },
+            {
+              "name": "La Jornada",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.jornada.com.mx/noticia/2026/09/02/politica/sobre-ataque-en-zacatecas-con-coche-bomba-informara-el-gabinete-de-seguridad-el-viernes-sheinbaum"
+            },
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/02/gabinete-de-seguridad-viajara-a-zacatecas-para-explicar-ataque-con-coche-bomba-en-ojocaliente-informa-sheinbaum/"
+            }
+          ]
+        },
+        {
+          "id": "segundo-informe-gobierno-sep1-2026",
+          "date": "2026-09-01",
+          "title": "Day 700 — Sheinbaum Delivers Second Government Report From National Palace, Cites 51% Homicide Drop and Sovereignty Message",
+          "type": "political",
+          "detail": "On September 1, 2026 (Day 700, Tuesday), President Claudia Sheinbaum delivered her Second Government Report (\"En Defensa de la Soberanía\"-style annual address) from the National Palace at 11:00 AM CDMX time, replacing that day's regular mañanera. Headline claims: intentional homicides down 51% since the administration's October 2024 start (about 44 fewer deaths per day) and high-impact crimes down 32%; the monthly minimum wage risen from 2,800 pesos (2018) to 9,584 pesos, with labor poverty at its lowest level since 2005; annual inflation at 3.12% (July 2026) on a downward trend; the peso trading near 17/USD; roughly 60 million people employed and unemployment at 2.7%; H1 2026 foreign direct investment of approximately $34.97 billion (+2.1% YoY); GDP growth revised to 1.4% QoQ / 1.9% YoY for Q2 2026; and a new welfare push toward 42.86 million beneficiaries by year-end backed by roughly 1 trillion pesos in social spending. On security, the government cited 63,000 people detained for crimes since October 2024, 207 priority targets arrested, 32,824 firearms seized, 519 tonnes of drugs seized and 2,725 clandestine labs dismantled. Health and infrastructure figures included 33 new hospitals, 23+ million \"Salud Casa por Casa\" home visits, Tren Maya ridership of 2.5 million passengers, and a Pemex financial-debt reduction of roughly $20 billion. Sheinbaum highlighted a new indigenous-rights law and framed welfare programs as \"turning love into public policy.\" She struck a conciliatory, unity-focused tone toward Morena ahead of the 2027 midterms — \"que nadie se equivoque: aquí no hay divisiones, aquí no hay rompimientos\" — while repeating her sovereignty line that international cooperation \"no significa sumisión\" and that Mexico's sovereignty \"no se negocia, no se entrega y no se comparte.\" Opposition reaction was sharp: PAN deputy Federico Döring presented a rival \"informe real\" citing low growth, rising debt, Pemex's financial crisis, insecurity and disappearances; PAN also noted her administration's 0.8% average growth trails AMLO's 1.1%. PRI national leader Alejandro Moreno accused Morena of degrading quality of life and shielding drug traffickers.",
+          "sources": [
+            {
+              "name": "El Universal",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.eluniversal.com.mx/nacion/segundo-informe-de-gobierno-frases-clave-de-sheinbaum-estamos-transformando-la-vida-publica-del-pais-afirma/"
+            },
+            {
+              "name": "PorEsto",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.poresto.com/mexico/2026/9/1/segundo-informe-de-sheinbaum-estos-son-los-principales-resultados-en-economia-seguridad-salud-educacion-y-bienestar.html"
+            },
+            {
+              "name": "PorEsto",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.poresto.com/mexico/2026/9/1/segundo-informe-de-sheinbaum-gobierno-destaca-inversion-empleo-inflacion-y-fortaleza-del-peso.html"
+            },
+            {
+              "name": "CNN en Español",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://cnnespanol.cnn.com/2026/09/01/mexico/sheinbaum-segundo-informe-claves-analisis-orix"
+            },
+            {
+              "name": "La Política Online",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.lapoliticaonline.com/mexico/congreso-mx/el-pan-cuestiono-el-segundo-informe-de-sheinbaum-y-acusa-a-morena-de-bajo-crecimiento/"
+            },
+            {
+              "name": "La Razón de México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.razon.com.mx/mexico/2026/09/02/oposicion-presenta-su-informe-real/"
+            }
+          ]
+        },
+        {
+          "id": "ojocaliente-zacatecas-car-bomb-aug30-2026",
+          "date": "2026-08-30",
+          "title": "Car Bomb Explodes Outside Police Headquarters in Ojocaliente, Zacatecas — 11 Injured",
+          "type": "political",
+          "detail": "On August 30, 2026 (Sunday) around 7:30 PM local time, an unidentified man parked a vehicle laden with explosives in front of the municipal police (DSPM) command in Ojocaliente, Zacatecas, then fled on foot; the device detonated when an officer approached to inspect it. Eleven people were injured, including civilians and municipal police, at least two seriously. The blast damaged roughly five city blocks — at least seven homes, businesses, private vehicles and patrol units, with windows shattered throughout the area. State Security Secretary Arturo Medina Mayoral said authorities were investigating possible involvement of a Jalisco New Generation Cartel (CJNG) cell; the vehicle used had been reported stolen in Jalisco since April, and the explosive materials resembled those used in mining operations. A near-simultaneous explosion in Villa García led to the detention of an 18-year-old who claimed CJNG membership. State officials said the attack was the 17th documented explosive-device attack on security forces in Zacatecas over the prior two years and the 10th of 2026 alone, part of an escalating wave that has included motorcycle-borne devices and improvised metal-pipe bombs (\"niples\"). State and federal forces reinforced the area following the blast.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/01/zacatecas-enfrenta-escalada-de-ataques-con-explosivos-van-17-en-dos-anos/"
+            },
+            {
+              "name": "CNN en Español",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://cnnespanol.cnn.com/2026/09/01/mexico/video/coche-bomba-zacatecas-policia-municipal"
+            },
+            {
+              "name": "Sociedad Noticias",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://sociedad-noticias.com/2026/09/01/zacatecas-suma-10-eventos-con-explosivos-en-2026-tras-coche-bomba-en-ojocaliente/"
+            }
+          ]
+        },
+        {
+          "id": "alcalde-anticorruption-package-19-laws-aug30-2026",
+          "date": "2026-08-30",
+          "title": "Alcalde Presents Anticorruption Package Modifying 19 Laws, Creating 2 New Ones",
+          "type": "political",
+          "detail": "On August 30, 2026 (Sunday), Presidential Legal Counsel Luisa María Alcalde presented Sheinbaum's anticorruption reform package to Morena's Senate caucus, ahead of formal introduction to Congress. The package modifies 19 existing laws and creates two new ones, introducing real-time technological monitoring of public spending, tighter oversight of government contracting, and mandatory \"proactive transparency\" in public tenders — publishing bidding information without waiting for citizen requests. The design, led by Anticorruption and Good Government Secretary Raquel Buenrostro with input from the Federal Administrative Justice Tribunal and the Federal Auditor's Office (ASF), also aims to strengthen those two institutions' capacity to pursue corruption and good-governance cases. Separately, Morena's Senate bloc proposed federal deputy Higinio Martínez to preside over the Senate's Mesa Directiva for the third year of the LXVI Legislature.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/08/31/paquete-anticorrupcion-de-sheinbaum-modificara-19-leyes-luisa-maria-alcalde-presenta-detalles/"
+            },
+            {
+              "name": "Proyecto Puente",
+              "tier": 3,
+              "pole": "western",
+              "url": "https://proyectopuente.com.mx/2026/08/31/sheinbaum-lleva-la-mananera-a-una-secundaria-de-la-cdmx-para-dar-inicio-al-regreso-a-clases"
+            }
+          ]
+        },
         {
           "id": "segundo-informe-campana-spots-14-aug29-2026",
           "date": "2026-08-29",
@@ -1194,74 +1353,59 @@
               "url": "https://www.eluniversal.com.mx/nacion/detienen-a-pareja-e-hija-de-tio-lako-jefe-regional-del-cjng-en-michoacan-detienen-a-otros-nueve-integrantes-del-cartel/"
             }
           ]
-        },
-        {
-          "id": "michoacan-tio-lako-cjng-operation-aug19-2026",
-          "date": "2026-08-19",
-          "title": "Day 687 — Federal Operation Against CJNG's \"Tío Lako\" Cell Sparks Michoacán Narco-Blockades",
-          "type": "political",
-          "detail": "On August 19, 2026 (Day 687, Wednesday), President Sheinbaum confirmed at her mañanera an active federal operation to detain \"one or several priority objectives\" in Michoacán, with the Security Cabinet to brief details later that day. Army-led raids in Tanhuato and Ecuandureo targeted a CJNG cell run by regional plaza boss Heraclio Guerrero Martínez, alias \"Tío Lako\"; he evaded capture, but 9 people were detained, including his daughter Marisol \"N\" and partner Lourdes \"N.\" The operation triggered more than 20 narco-blockades and vehicle burnings on highways across Zamora, La Piedad, Ecuandureo, Zacapu, Chilchota and Tangancícuaro, and an armed clash left a preliminary 5 civilians dead. Officials tied the crackdown to Tío Lako's alleged orders to attack National Guard troops after the February 22, 2026 SEDENA operation in Tapalpa, Jalisco that killed CJNG leader Rubén \"El Mencho\" Oseguera Cervantes and Tío Lako's own son, Rubén \"El R1\" Guerrero Valadez.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/08/19/cae-hija-del-tio-lako-en-operativo-que-desato-narcobloqueos-en-michoacan/"
-            },
-            {
-              "name": "El Universal",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.eluniversal.com.mx/nacion/la-mananera-de-sheinbaum-19-de-agosto-minuto-a-minuto-3/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-cerimedo-feminicida-comment-aug19-2026",
-          "date": "2026-08-19",
-          "title": "Day 687 — Sheinbaum Calls Detained Argentine Strategist Cerimedo a \"Feminicida,\" Accuses La Derecha Diario of Running Bot Network",
-          "type": "political",
-          "detail": "On August 19, 2026 (Day 687, Wednesday), President Sheinbaum reacted to the August 18 detention in Bolivia of Argentine right-wing strategist Fernando Cerimedo — a former adviser to Javier Milei and founder of La Derecha Diario — after his ex-wife Nadia Beller accused him of hiring hitmen to attempt to kill her while she was pregnant; Bolivian prosecutors sought 180 days of preventive detention. Sheinbaum said Cerimedo was \"a feminicida, in short words, who attacked his wife multiple times,\" and separately accused La Derecha Diario of amplifying attacks on her government through a bot network, describing it as part of a coordinated international right-wing media operation.",
-          "sources": [
-            {
-              "name": "sdpnoticias",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://www.sdpnoticias.com/mexico/es-un-feminicida-sheinbaum-reacciona-a-detencion-de-fernando-cerimedo/"
-            },
-            {
-              "name": "Ámbito",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.ambito.com/mexico/informacion-general/la-mananera-claudia-sheinbaum-hoy-miercoles-19-agosto-2026-minuto-minuto-vivo-n6311893"
-            }
-          ]
-        },
-        {
-          "id": "hidalgo-podecobi-zapotlan-investment-aug19-2026",
-          "date": "2026-08-19",
-          "title": "Day 687 — Sheinbaum Unveils 147B-Peso PODECOBI Industrial Pole in Zapotlán, Hidalgo",
-          "type": "economic",
-          "detail": "On August 19, 2026 (Day 687, Wednesday), President Sheinbaum and Hidalgo Governor Julio Menchaca presented the PODECOBI (Polo de Desarrollo Económico para el Bienestar) industrial pole in Zapotlán: 130 projects worth 147 billion pesos across 910 hectares, projected to create 191,000 jobs in manufacturing, logistics, pharmaceuticals and medical devices. Lead investors include DEWA Capital (10.1 billion pesos for an industrial complex, ~5,100 jobs in its initial phase) and Cooperativa Cruz Azul (6.5 billion pesos to expand cement production and modernize hospital infrastructure in nearby Tula, ~14,200 jobs).",
-          "sources": [
-            {
-              "name": "ejecentral",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://www.ejecentral.com.mx/nuestro-eje/hidalgo-atrae-inversion-historica-de-147-mil-mdp-130-proyectos-llegaran-a-zapotlan"
-            },
-            {
-              "name": "El Universal",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.eluniversal.com.mx/nacion/la-mananera-de-sheinbaum-19-de-agosto-minuto-a-minuto-3/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "bessent-asphyxiate-iran-economy-irgc-assets-sep2-2026",
+          "date": "2026-09-02",
+          "title": "Bessent Vows to 'Economically Asphyxiate' Iran, Targets IRGC Offshore Assets",
+          "type": "economic",
+          "detail": "Treasury Secretary Scott Bessent said Tuesday, September 1, 2026, at a G20 finance ministerial discussion moderated by Larry Kudlow, 'We are going to economically asphyxiate this regime,' outlining plans to freeze Islamic Revolutionary Guard Corps offshore accounts — including trust-company holdings in the British Virgin Islands — and roughly $100 million in luxury real estate held globally. Bessent said the administration would pursue secondary sanctions barring entities that do business with the IRGC, including airline-leasing companies, from the US dollar system, Federal Reserve wire transfers, and SWIFT access, with any recovered proceeds potentially going to terror victims or the Iranian people. The push came alongside the renewed CENTCOM-IRGC exchange of strikes.",
+          "sources": [
+            {
+              "name": "Fox Business",
+              "tier": 2,
+              "url": "https://www.foxbusiness.com/politics/bessent-vows-asphyxiate-iran-economically-warns-regimes-offshore-assets-frozen",
+              "pole": "western"
+            },
+            {
+              "name": "Washington Post",
+              "tier": 2,
+              "url": "https://www.washingtonpost.com/business/2026/09/01/bessent-says-us-plan-asphyxiate-irans-economy-has-allies-support/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "trump-meets-oil-refiners-gas-prices-sep1-2026",
+          "date": "2026-09-02",
+          "title": "Trump Meets Oil Refiners at White House to Push Down $4-a-Gallon Gas Prices",
+          "type": "economic",
+          "detail": "President Trump met Tuesday, September 1, 2026, with executives from small, medium, and large oil refiners and distributors at the White House — alongside Interior Secretary Doug Burgum, Energy Secretary Chris Wright, and National Energy Dominance Council Executive Director Jarrod Agen — to discuss expanding US refining capacity and lowering pump prices, which have held near $4.10/gallon nationally amid the renewed Iran war. Discussion touched on regulatory rollbacks, faster permitting, and additional refinery investment; Exxon was reportedly not among the invited companies. The meeting followed the administration's Venezuela oil deal, under which the US secured majority control of 65 billion barrels of proven reserves.",
+          "sources": [
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/08/31/trump-refiners-gas-prices-refining-capacity.html",
+              "pole": "western"
+            },
+            {
+              "name": "Bloomberg",
+              "tier": 2,
+              "url": "https://www.bloomberg.com/news/articles/2026-09-01/trump-ramps-up-pressure-on-squeezed-refiners-to-ease-pump-prices",
+              "pole": "western"
+            },
+            {
+              "name": "Washington Times",
+              "tier": 2,
+              "url": "https://www.washingtontimes.com/news/2026/sep/1/trump-seeks-boost-us-refining-capacity-white-house-lays-details/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "trump-renames-lake-ontario-lake-america-aug27-2026",
           "date": "2026-08-27",
@@ -1399,60 +1543,6 @@
               "name": "ABC News",
               "tier": 2,
               "url": "https://abcnews.com/Business/trumps-proposed-tariffs-canada-hurtle-deadline-amid-trade/story?id=135833861",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-canada-trade-talks-collapse-aug21-2026",
-          "date": "2026-08-21",
-          "title": "US-Canada Trade Talks Collapse, 50% Tariffs on $20B of Canadian Goods Take Effect",
-          "type": "economic",
-          "detail": "Trade negotiations between the US and Canada fell apart late Friday night, August 21, 2026, just before a midnight deadline — a dramatic reversal from Trump's August 18 announcement that the two sides 'have a DEAL!' Prime Minister Mark Carney said the US 'asked too much, and offered too little' with last-minute changes to the terms, including efforts to restrict Canada's ability to strike other trade deals and to weaken French-language and cultural protections tied to Canada's Online Streaming Act; Washington had also refused to extend tariff relief to medium and heavy trucks. US Trade Representative Jamieson Greer said Canada 'declined to finalize the trade deal under the terms agreed earlier this week,' while Trump posted that Canada 'wants the benefits of being a State, without being one.' With talks suspended, 50% Section 338 tariffs on roughly $20 billion of Canadian dairy, alcohol, furniture, and other goods took effect; Carney vowed 'dollar-for-dollar' retaliatory tariffs on US steel, dairy, appliances, agricultural equipment, pulp, paper, and electronics starting September 8.",
-          "sources": [
-            {
-              "name": "NPR",
-              "tier": 2,
-              "url": "https://www.npr.org/2026/08/22/nx-s1-5941584/us-canada-tariffs",
-              "pole": "western"
-            },
-            {
-              "name": "CNN Business",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/08/21/economy/us-canada-trade",
-              "pole": "western"
-            },
-            {
-              "name": "Global News",
-              "tier": 2,
-              "url": "https://globalnews.ca/news/12031459/united-states-canada-trade-talks-issues/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-canada-trade-talks-collapse-aug21-2026",
-          "date": "2026-08-21",
-          "title": "US-Canada Trade Talks Collapse, 50% Tariffs on $20B of Canadian Goods Take Effect",
-          "type": "economic",
-          "detail": "Trade negotiations between the US and Canada fell apart late Friday night, August 21, 2026, just before a midnight deadline — a dramatic reversal from Trump's August 18 announcement that the two sides 'have a DEAL!' Prime Minister Mark Carney said the US 'asked too much, and offered too little' with last-minute changes to the terms, including efforts to restrict Canada's ability to strike other trade deals and to weaken French-language and cultural protections tied to Canada's Online Streaming Act; Washington had also refused to extend tariff relief to medium and heavy trucks. US Trade Representative Jamieson Greer said Canada 'declined to finalize the trade deal under the terms agreed earlier this week,' while Trump posted that Canada 'wants the benefits of being a State, without being one.' With talks suspended, 50% Section 338 tariffs on roughly $20 billion of Canadian dairy, alcohol, furniture, and other goods took effect; Carney vowed 'dollar-for-dollar' retaliatory tariffs on US steel, dairy, appliances, agricultural equipment, pulp, paper, and electronics starting September 8.",
-          "sources": [
-            {
-              "name": "NPR",
-              "tier": 2,
-              "url": "https://www.npr.org/2026/08/22/nx-s1-5941584/us-canada-tariffs",
-              "pole": "western"
-            },
-            {
-              "name": "CNN Business",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/08/21/economy/us-canada-trade",
-              "pole": "western"
-            },
-            {
-              "name": "Global News",
-              "tier": 2,
-              "url": "https://globalnews.ca/news/12031459/united-states-canada-trade-talks-issues/",
               "pole": "western"
             }
           ]
