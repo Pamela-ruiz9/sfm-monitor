@@ -1,8 +1,164 @@
 {
-  "updated": "2026-09-04T17:20:01Z",
+  "updated": "2026-09-07T18:32:10Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "irgc-warships-blockade-threat-sept6-2026",
+          "date": "2026-09-06",
+          "title": "IRGC Claims New Attacks on US Warships Over Naval Blockade; Ghalibaf Warns of 'Faster, Heavier, More Painful' Response",
+          "type": "market",
+          "detail": "The Strait of Hormuz crisis continued into September 6 (Sunday) with no sign of de-escalation: Iran's Revolutionary Guard Corps claimed fresh attacks on US warships enforcing the ongoing American naval blockade of Iran, which has been in place since the collapse of the June 17 ceasefire memorandum on July 8. Parliament Speaker and chief negotiator Mohammad Bagher Ghalibaf reiterated that any further attacks on Iran would 'meet a faster, heavier and more painful response,' extending the harder rhetorical line he set the day before ('the era of proportionate responses is over'). The renewed multi-day exchange — US strikes on IRGC targets (Sept 1), Iranian retaliation across Jordan, Kuwait, and the UAE (Sept 2-3), and mutual tanker/vessel strikes in the Strait (Sept 5) — keeps a live war-risk premium in oil markets heading into the new week, with commercial shipping through Hormuz still running far below its pre-crisis baseline and the September 16 FOMC meeting now set against a backdrop of both a hawkish August jobs report and an unresolved energy-supply shock.",
+          "sources": [
+            {
+              "name": "Al Jazeera — Iran War Live: Tehran Warns of 'Faster, More Painful' Response to Attacks",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/news/liveblog/2026/9/6/iran-war-live-irgc-claims-new-attacks-on-us-warships-over-naval-blockade",
+              "pole": "middle_eastern"
+            },
+            {
+              "name": "Euronews — Iranian Media Report US Strike on Iranian Oil Tanker Near Kharg Island",
+              "tier": 2,
+              "url": "https://www.euronews.com/2026/09/05/iranian-media-report-us-strike-on-iranian-oil-tanker-near-kharg-island",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "us-destroys-iranian-tankers-hormuz-sept5-2026",
+          "date": "2026-09-05",
+          "title": "US Destroys Three Iranian Oil Tankers After IRGC Ballistic Missile Attack on Carrier Group; Iran Hits Six More Vessels in Reprisal",
+          "type": "market",
+          "detail": "The Strait of Hormuz conflict escalated sharply on September 5 (Saturday): Iran's Revolutionary Guard Corps launched ballistic missiles at a US aircraft carrier and destroyer, which US Central Command said were successfully evaded with no American casualties or damage. In response, US forces destroyed or disabled three Iranian oil tankers — identified as the M/T Downy, M/T Stark 1, and M/T Kylo. Iran's Revolutionary Guards said they retaliated the same evening by targeting three more oil tankers using an 'unauthorised route' through the Strait plus three US-linked vessels elsewhere in the Gulf. Iran's chief negotiator and parliament speaker, Mohammad Bagher Ghalibaf, said 'the era of proportionate responses is over.' The exchange extends a war-risk premium in oil markets that has already pushed Brent toward an 8% weekly gain, adding fresh tanker-destruction risk to an already severely disrupted Hormuz shipping corridor a little over two months after the June 17 ceasefire MOU collapsed (July 8).",
+          "sources": [
+            {
+              "name": "Euronews — Iranian Media Report US Strike on Iranian Oil Tanker Near Kharg Island",
+              "tier": 2,
+              "url": "https://www.euronews.com/2026/09/05/iranian-media-report-us-strike-on-iranian-oil-tanker-near-kharg-island",
+              "pole": "western"
+            },
+            {
+              "name": "ABC News — Iran Live Updates: US Strikes Oil Tankers, Tehran Claims Attacks on US-Linked Vessels",
+              "tier": 2,
+              "url": "https://abcnews.com/International/live-updates/iran-live-updates-centcom-targeted-iranian-forces-posed/?id=136080582",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "august-jobs-report-blowout-hike-odds-jump-sep4-2026",
+          "date": "2026-09-04",
+          "title": "August Jobs Report Blowout — Payrolls Surge 162,000 vs 53,000 Expected, Stocks Slip as September Hike Odds Jump to 60%",
+          "type": "economic",
+          "detail": "The Bureau of Labor Statistics' August 2026 Employment Situation report, released Friday, showed nonfarm payrolls rose 162,000 — dramatically ahead of the roughly 53,000-65,000 consensus forecast among economists polled by Dow Jones — while the unemployment rate held steady at 4.1%. The prior two months were revised up: June's gain was revised from +20,000 to +31,000 (+11,000) and July's from -23,000 to +21,000 (+44,000), lifting combined June-July employment by 55,000 versus previously reported. By industry, food services and drinking places added 59,000 jobs and local government education added 42,000, while information employment fell 23,000 on continued weakness in computing infrastructure, data processing/web hosting, publishing, and broadcasting. The report reversed a one-day-old dovish narrative: coming just a day after Fed Governor Waller signaled openness to a September hold, the blowout payrolls number sent CME FedWatch odds of a September 16 rate hike jumping to roughly 60.4% (from about 49.4% the day before), since strong employment gives the Fed more room to keep tightening against above-target inflation. Stocks fell on the news despite — or because of — the strength: the S&P 500 slipped about 0.3-0.5%, the Dow Jones Industrial Average dropped roughly 245-300 points (about 0.5-0.7%) to around 53,325, and the Nasdaq Composite eased about 0.2-0.4%; the 10-year Treasury yield held around 4.76%. Semiconductor names outperformed on the day (Nvidia +1.4%, AMD +4.2%, SanDisk +10.4%, Micron +4.6%), while Lululemon sank as much as 17.4% after missing revenue targets, unrelated to the jobs data. Analysts said the report 'does lean toward the Fed increasing rates' on September 16, though cautioned it was 'not a foregone conclusion' given two more inflation prints due before the meeting.",
+          "sources": [
+            {
+              "name": "US Bureau of Labor Statistics — Employment Situation, August 2026",
+              "tier": 1,
+              "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+              "pole": "western"
+            },
+            {
+              "name": "UPI — Nonfarm Payrolls Grew by 162,000 in August, Beat Expectations",
+              "tier": 2,
+              "url": "https://www.upi.com/Top_News/US/2026/09/04/nonfarm-payrolls-bureau-labor-statistics-august-2026/8801788532242/",
+              "pole": "western"
+            },
+            {
+              "name": "Baltimore Sun (AP) — Stocks Wobble After a Surprisingly Strong Jobs Report Raises Prospects of an Interest Rate Hike",
+              "tier": 2,
+              "url": "https://www.baltimoresun.com/2026/09/04/stocks-august-jobs-report/",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — Stock Market Today (Sept. 4, 2026): S&P 500 Edges Lower After Key Jobs Report",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-4-133716564.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "brent-97-gulf-escalation-sept4-2026",
+          "date": "2026-09-04",
+          "title": "Brent Crosses $97, WTI Holds $92 as Iran-US Gulf Escalation Compounds the Jobs-Driven Bond Selloff",
+          "type": "market",
+          "detail": "Oil extended its rise on September 4 as the Iran-US military exchange that began September 1 — US strikes on IRGC targets near the Strait of Hormuz, followed by Iranian retaliatory missile/drone attacks on Camp Titin in Jordan, Kuwait, and Bahrain (Sept 2) and a second night hitting Ahmad al-Jaber Air Base in Kuwait and Al Minhad Air Base in the UAE (Sept 3) — kept a war-risk premium in crude. Brent crude touched $97.36/bbl and WTI held near $92.39, with Brent on track for roughly an 8% weekly gain as commodity-vessel transits through Hormuz stayed well below the pre-crisis baseline. The renewed Gulf war-risk premium compounded the same-day inflation-hawk pressure from the blowout August jobs report, reinforcing the 'higher-for-longer' bond-market narrative heading into the September 16 FOMC.",
+          "sources": [
+            {
+              "name": "Vantage Markets — Brent Crude Tops $97, WTI Holds $92 as Iran Strikes Kuwait",
+              "tier": 3,
+              "url": "https://www.vantagemarkets.com/market-analysis/brent-wti-crude-oil-price-september-4-2026/",
+              "pole": "international"
+            },
+            {
+              "name": "CNBC — US Strikes Iran After New Hormuz Strait Shipping Attacks",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/01/us-strikes-iran-after-new-hormuz-strait-shipping-attacks-centcom.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "waller-dovish-remarks-stocks-rally-ism-services-beat-sep3-2026",
+          "date": "2026-09-03",
+          "title": "Fed Governor Waller Signals Openness to September Hold, Sparking Broad Stock Rally as ISM Services Beats and Yields Retreat",
+          "type": "policy",
+          "detail": "Fed Governor Christopher Waller said in remarks released the morning of September 3 that while inflation remains 'meaningfully above' the FOMC's 2% goal, recent data show signs of disinflation, and if that continues over the next two weeks of incoming data he would 'be inclined to support holding the target for the federal funds rate at its current setting' at the September 16-17 meeting. Waller argued the effects of higher tariffs have already been substantially reflected in consumer prices and that post-Mideast-war energy costs have not broadly lifted prices elsewhere, calling underlying inflation 'moderating' — a notably more dovish read than Fed Chair Kevin Warsh's hawkish August 28 Jackson Hole keynote. Markets read it as a clear dovish signal: CME FedWatch odds of a September rate hike fell roughly 12 percentage points to about 54.6% (from ~66% the day before), and the 10-year Treasury yield retreated from the week's 4.818% high (its highest since November 2023) as bonds rallied. Stocks surged on the news: the S&P 500 rose about 1.1% to roughly 7,750, the Dow Jones Industrial Average gained about 1.2% to roughly 53,685, and the Nasdaq Composite jumped about 1.4% to roughly 26,584 — all three indexes' best day in weeks, snapping the prior week's rate-hike-driven slide. Same-day data added to the mixed picture: the ISM Services PMI for August came in at 55.4%, up 1.3 points from July's 54.1% and beating the roughly 54.5% forecast — the 26th straight month of services-sector expansion — while weekly initial jobless claims for the week ending August 29 rose to 206,000, a touch above the 205,000 consensus and up 2,000 from the prior week's revised 204,000, with the 4-week moving average climbing to 207,250.",
+          "sources": [
+            {
+              "name": "Federal Reserve — Speech by Governor Waller on the Economic Outlook",
+              "tier": 1,
+              "url": "https://www.federalreserve.gov/newsevents/speech/waller20260903a.htm",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — Fed Governor Waller Indicates He Will Support Holding Rates Steady at September Meeting",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/03/fed-governor-waller-indicates-he-will-support-holding-rates-steady-at-september-meeting.html",
+              "pole": "western"
+            },
+            {
+              "name": "ISM — Services PMI at 55.4%; August 2026 ISM Services PMI Report",
+              "tier": 1,
+              "url": "https://www.prnewswire.com/news-releases/services-pmi-at-55-4-august-2026-ism-services-pmi-report-302868046.html",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — US Initial Jobless Claims Rise to 206,000, Slightly Above Forecast",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/economy/articles/u-initial-jobless-claims-rise-125759530.html",
+              "pole": "western"
+            },
+            {
+              "name": "24/7 Wall St. — S&P 500 Closes Up 1.1% as All Three Major Indexes Rally Together",
+              "tier": 3,
+              "url": "https://247wallst.com/cards/all-three-major-indexes-closed-up-more-than-1-with-the-nas-gspc-market-bell-01m1mdym87x351nzj6fwn0508f",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "iran-strikes-kuwait-uae-bases-sept3-2026",
+          "date": "2026-09-03",
+          "title": "Iran Launches Second Night of Retaliation, Striking US-Linked Bases in Kuwait and the UAE; Oil Heads for ~8% Weekly Gain",
+          "type": "market",
+          "detail": "Early September 3, Iran's military claimed a second consecutive night of retaliatory strikes on US-linked positions in the Gulf, following the September 1 US strikes on IRGC targets near the Strait of Hormuz and a first round of Iranian missile/drone attacks on September 2 against Camp Titin in Jordan, plus Kuwait and Bahrain. Iran's army said it hit satellite-communication systems, equipment depots, and fighter-aircraft hangars at Ahmad al-Jaber Air Base in Kuwait, and struck force positions and radar systems at Al Minhad Air Base in the UAE. Kuwait's air defenses engaged the incoming missiles and drones; Kuwait's foreign ministry called the strikes 'a direct threat to its security and stability' and a breach of international law. A US official said the attacks did not hit any facility where American forces are based, and no casualties or damage were confirmed by host governments; the UAE did not address the Al Minhad claim. Iran separately claimed the earlier US strikes killed 11-18 people, including a disputed strike on a wedding gathering in Sirik (4 dead, Iranian claim, unverified). The renewed multi-front escalation kept oil prices elevated, with Brent crude on track for roughly an 8% weekly gain as shipping through the Strait of Hormuz remained severely disrupted.",
+          "sources": [
+            {
+              "name": "RFE/RL via GlobalSecurity.org — Iranian Military Says It Attacked Targets In Kuwait, UAE",
+              "tier": 2,
+              "url": "https://www.globalsecurity.org/wmd/library/news/iran/2026/09/iran-260903-rferl10.htm",
+              "pole": "western"
+            },
+            {
+              "name": "Gulf News — US Strikes Kill 11 in Iran as Tehran Retaliates With Missile and Drone Attacks on Kuwait, Bahrain and Jordan",
+              "tier": 2,
+              "url": "https://gulfnews.com/world/mena/us-strikes-iran-tehran-retaliates-with-missile-and-drone-attacks-in-kuwait-bahrain-and-jordan-1.500660148",
+              "pole": "middle_eastern"
+            }
+          ]
+        },
         {
           "id": "global-bond-yield-rout-multidecade-highs-adp-miss-sep2-2026",
           "date": "2026-09-02",
@@ -80,6 +236,33 @@
               "name": "The Motley Fool — Market Indexes Slip to Close Out a Winning, Turbulent August",
               "tier": 3,
               "url": "https://www.fool.com/investing/2026/08/31/market-indexes-slip-to-close-out-a-winning-august/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "china-pmi-g20-finance-ministers-aug31-2026",
+          "date": "2026-08-31",
+          "title": "China's August Manufacturing PMI Improves to 49.8 (Still Contracting) as G20 Finance Ministers Open Asheville Summit",
+          "type": "economic",
+          "detail": "China's official manufacturing PMI rose to 49.8 in August, up 0.6 points from July's 49.2 and above the roughly 49.7 forecast — its second straight monthly improvement but still below the 50-point expansion threshold, extending the sector's contraction streak. The non-manufacturing PMI held flat at 49.0 (vs 49.5 expected) and the composite PMI rose to 49.5 from 49.3, with sub-indices showing production and new orders returning to expansion (50.4 and 50.6 respectively) and new export orders rebounding to 50.1 from 49.6 — a tentative sign of stabilizing external demand even as the broader economy remains soft. The same day, the G20 Finance Ministers and Central Bank Governors meeting opened in Asheville, North Carolina, with Treasury Secretary Scott Bessent and Fed Chair Kevin Warsh addressing global growth. Warsh, fresh off his hawkish Jackson Hole keynote, told G20 finance leaders the world is in the midst of 'a global investment surge' reversing the prior decade's savings glut, dismissed secular-stagnation concerns, and said the Fed would have 'more work to do' absent more confidence inflation is heading to 2%. Bessent separately dismissed concerns about Treasury market health or the US national debt — which surpassed $40 trillion in August — attributing higher yields partly to stronger growth.",
+          "sources": [
+            {
+              "name": "Xinhua — China's Manufacturing PMI at 49.8 in August",
+              "tier": 1,
+              "url": "https://english.news.cn/20260831/94fd032a2172462fbe82d0f68705eb63/c.html",
+              "pole": "eastern"
+            },
+            {
+              "name": "InvestingLive — China Official August Manufacturing PMI 49.8 (Expected 49.7, Prior 49.2)",
+              "tier": 3,
+              "url": "https://investinglive.com/news/china-official-august-manufacturing-pmi-expected-49-7-prior-49-2/",
+              "pole": "western"
+            },
+            {
+              "name": "AOL / Yahoo Finance — Fed's Warsh Says Past Global Savings Glut Is Turning Into Investment Surge",
+              "tier": 2,
+              "url": "https://www.aol.com/articles/feds-warsh-says-past-global-190003000.html",
               "pole": "western"
             }
           ]
@@ -551,183 +734,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "july-cpi-cools-3pt4pct-headline-2pt5pct-core-aug12-2026",
-          "date": "2026-08-12",
-          "title": "July CPI Cools to 3.4% Headline, 2.5% Core — Both Down 0.1pp From June",
-          "type": "economic",
-          "detail": "BLS reported the Consumer Price Index rose a seasonally adjusted 0.1% in July, with the annual headline rate easing to 3.4% from June's 3.5%. Core CPI (ex-food and energy) rose 0.2% for the month, with the annual core rate cooling to 2.5% from 2.6%. The energy index fell 1.5% on the month even as oil prices had spiked earlier in the window, while shelter — up 0.1% — accounted for roughly two-thirds of the headline increase; food also rose 0.1%. The report matched analyst expectations and reinforced the disinflation narrative that had been complicated by the July 23 Hormuz/Red Sea oil shock, landing five weeks before the September 16-17 FOMC meeting and taking some urgency off the hawkish rate-hike case that had briefly pushed September hike odds above 80% in late July.",
-          "sources": [
-            {
-              "name": "BLS — Consumer Price Index Summary, July 2026",
-              "tier": 1,
-              "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — CPI Inflation Report July 2026: Prices Rose 0.1%, Annual Rate 3.4%",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/12/cpi-inflation-report-july-2026.html",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance / Quartz — US CPI Rose 0.1% in July, Annual Inflation Eases to 3.4%",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/economy/articles/u-cpi-rose-0-1-123747298.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "stocks-slip-fed-hike-odds-51pct-iran-talks-stall-aug11-2026",
-          "date": "2026-08-11",
-          "title": "Stocks Slip as Iran Diplomacy Optimism Fades; September Fed Hike Odds Rise to ~51%",
-          "type": "market",
-          "detail": "US equities declined Tuesday as investors positioned defensively ahead of Wednesday's July CPI release: the S&P 500 closed down roughly 0.2-0.3% near 7,728-7,735, the Dow slipped about 0.3% to roughly 53,790, and the Nasdaq led losses, down around 0.6% to roughly 26,445, with technology stocks underperforming on renewed AI-capex-spending scrutiny (Intel, Nvidia). Brent crude rose about 1.4% to near $88.91/barrel. The primary driver was fading optimism on US-Iran diplomacy — Trump rejected Iran's war-reparations demand and Tehran dismissed near-term peace prospects, clouding the outlook for a durable Strait of Hormuz shipping arrangement. Separately, market-implied odds of a 25bp September Fed rate hike rose to roughly 51%, up from about 44% a day earlier, even as Cleveland Fed President Beth Hammack said it may take more than one hike to rein in inflation. The 10-year Treasury yield eased to about 4.68% after topping 4.71% Monday.",
-          "sources": [
-            {
-              "name": "STL.News — U.S. Stock Market Today, Tuesday, August 11, 2026",
-              "tier": 2,
-              "url": "https://www.stl.news/u-s-stock-market-today-tuesday-august-11-2026/",
-              "pole": "western"
-            },
-            {
-              "name": "TheStreet — Stock Market Today (Aug. 11, 2026): Dow Edges Higher Amid U.S.-Iran Concerns",
-              "tier": 2,
-              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-11-2026",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance — Stock Market Today: Dow, S&P 500, Nasdaq Slip Amid US-Iran Impasse, Alphabet Stock Sinks",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-11-dow-sp-500-nasdaq-102827503.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "treasury-yields-oil-rise-jazan-refinery-attack-aug10-2026",
-          "date": "2026-08-10",
-          "title": "10-Year Treasury Yield Tops 4.71%, Brent Holds Near $88 After Houthi Strike on Saudi Aramco's Jazan Refinery",
-          "type": "market",
-          "detail": "The US 10-year Treasury yield rose above 4.71% Monday, its highest level in weeks, as traders priced in a growing chance of a September Fed rate hike ahead of Wednesday's July CPI report. Brent crude held near $87.55/barrel (+11 cents on the day), still elevated after a Houthi attack on Saudi Aramco's Jazan refinery on Aug 9 reignited concerns about Gulf energy-supply risk, even as it remained well off the $100.69 peak hit during the July 23 Hormuz/Red Sea shock. The combination of a firmer energy-price floor and hawkish rate repricing kept bond and oil markets on edge heading into the week's inflation data.",
-          "sources": [
-            {
-              "name": "Federal Reserve — H.15 Selected Interest Rates (Daily), August 11, 2026",
-              "tier": 1,
-              "url": "https://www.federalreserve.gov/releases/h15/",
-              "pole": "western"
-            },
-            {
-              "name": "Fortune — Current Price of Oil as of August 10, 2026",
-              "tier": 2,
-              "url": "https://fortune.com/article/price-of-oil-08-10-2026/",
-              "pole": "western"
-            },
-            {
-              "name": "CNN — August 9, 2026: Pentagon Memo to Defense Companies, Houthi Attack on Saudi Aramco's Jazan Refinery",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/08/09/world/live-news/iran-war-trump",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "houthi-drone-attack-aramco-jazan-refinery-aug9-2026",
-          "date": "2026-08-09",
-          "title": "Houthi Drone Strike Hits Saudi Aramco's Jazan Refinery — Aramco Says 'No Material Operational or Financial Impact' as Oil Risk Premium Builds",
-          "type": "market",
-          "detail": "Iran-backed Houthi forces launched a coordinated drone strike on Saudi Aramco's Jazan refinery near the Saudi-Yemen border early Sunday, sparking a fire that was extinguished by authorities with no casualties reported at the facility (a separate Houthi strike on Yemen's al-Makha port killed seven people). Houthi military spokesman Yahya Saree said the group targeted the refinery in retaliation for Saudi airspace violations. Aramco chief executive Amin Nasser acknowledged 'some production interruptions' from the recent wave of attacks but said operations would resume quickly and the strikes had 'no material operational or financial impact.' The attack — coming as the Strait of Hormuz corridor remains under strain from the broader US-Israel-Iran conflict — added a fresh, if contained, jolt to Gulf energy-supply risk just as markets were digesting the prior week's data, keeping oil's geopolitical risk premium elevated heading into the week's Treasury and inflation moves.",
-          "sources": [
-            {
-              "name": "Al Jazeera — Saudi Arabia Says Fire Extinguished at Aramco Facility in Jizan",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "NBC News — Yemen's Houthis Attack Saudi Aramco Jazan Refinery",
-              "tier": 2,
-              "url": "https://www.nbcnews.com/world/middle-east/yemens-houthis-attack-saudi-aramco-jazan-refinery-rcna591561",
-              "pole": "western"
-            },
-            {
-              "name": "CNN — August 9, 2026: Pentagon Memo to Defense Companies, Houthi Attack on Saudi Aramco's Jazan Refinery",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/08/09/world/live-news/iran-war-trump",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "july-jobs-report-miss-market-rally-fed-odds-aug7-2026",
-          "date": "2026-08-07",
-          "title": "July NFP Falls 23,000, May-June Revised Down 103,000 Combined — S&P 500 Hits Record Close as Fed Hike Odds Tumble",
-          "type": "economic",
-          "detail": "BLS reported nonfarm payrolls fell by 23,000 in July, far short of the roughly 83,000 gain expected, while May and June payrolls were revised down by a combined 103,000. The unemployment rate edged down to 4.1% from 4.2%, largely on a further decline in labor-force participation. Rather than sparking a selloff, markets rallied on reduced hike risk: the S&P 500 closed at a record 7,757.64 (+0.62%), the Dow rose 0.28% to 54,036.93, and the Nasdaq gained 1.3% to 26,690.62. The 10-year Treasury yield fell about 7 basis points to roughly 4.6%. Fed funds futures showed the odds of a September rate hike — which had surged to roughly 82% after the July 23 oil shock — collapsing after the report, a sharp reversal of the hawkish repricing seen two weeks earlier.",
-          "sources": [
-            {
-              "name": "BLS — The Employment Situation, July 2026",
-              "tier": 1,
-              "url": "https://www.bls.gov/news.release/empsit.htm",
-              "pole": "western"
-            },
-            {
-              "name": "TheStreet — Stock Market Today (Aug. 7, 2026): Nasdaq Rises After July Jobs Report Shows Unexpected Losses",
-              "tier": 2,
-              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-7-2026",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Odds the Fed Will Hike in September Tumble Following Big July Jobs Miss",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/07/odds-the-fed-hikes-in-september-tumble-following-big-july-jobs-miss.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "china-july-exports-surge-ahead-tariffs-aug7-2026",
-          "date": "2026-08-07",
-          "title": "China's July Exports Jump 23.9% YoY on AI-Tech Demand and Front-Loading Ahead of New Tariffs",
-          "type": "trade",
-          "detail": "China's exports rose 23.9% year-on-year to $397.85 billion in July, beating the 22.2% forecast though easing from June's 27.0% pace, driven by strong AI-related tech demand (semiconductor export value nearly doubled YoY, overall high-tech exports up 40.7%) and manufacturers rushing shipments to the US ahead of the new Section 301 tariffs that replaced the lapsed 10% levy with a 12.5% rate in late July. Imports rose 27.7% YoY to $285.35 billion, easing from June's 36% jump, leaving the trade surplus at $112.5 billion, above the $107 billion forecast.",
-          "sources": [
-            {
-              "name": "CNBC — China's Exports Jump 23% in July, Beating Estimates; Imports Cool",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/07/china-july-trade-exports-imports-surplus-imbalance-tariffs-.html",
-              "pole": "western"
-            },
-            {
-              "name": "Trading Economics — China Exports YoY",
-              "tier": 3,
-              "url": "https://tradingeconomics.com/china/exports-yoy",
-              "pole": "international"
-            }
-          ]
-        },
-        {
-          "id": "markets-pull-back-record-highs-oil-yields-rise-aug6-2026",
-          "date": "2026-08-06",
-          "title": "Wall Street Pulls Back From Record Highs as Oil and Treasury Yields Climb",
-          "type": "market",
-          "detail": "US stocks retreated from the record levels set earlier in the week: the Dow fell 464.02 points (-0.85%) to 53,885.10, the S&P 500 slipped 0.18% to 7,709.96, and the Nasdaq dropped 0.8% to 26,363.44. The pullback looked more like profit-taking than a sentiment shift — trading stayed orderly — but was accompanied by global oil prices rising to roughly $83/barrel on continued Strait of Hormuz uncertainty (Iran announced a tentative shipping arrangement with Oman, though implementation remained unconfirmed) and the 10-year Treasury yield climbing to 4.67% (30-year to 5.21%). Separately, weekly initial jobless claims for the week ending Aug 1 came in at 199,000, still historically low despite ticking up slightly, extending the longest sub-200K streak since 1969.",
-          "sources": [
-            {
-              "name": "CNBC — Stock Market News for Aug. 6, 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/05/stock-market-today-live-updates.html",
-              "pole": "western"
-            },
-            {
-              "name": "TheStreet — Stock Market Today (Aug. 6, 2026): S&P 500 Declines as Investors Weigh Jobs Data, Earnings Ahead",
-              "tier": 2,
-              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-6-2026",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -771,14 +777,14 @@
         {
           "id": "us-unemployment",
           "label": "US Unemployment Rate",
-          "value": "4.1%",
+          "value": "4.1% (August 2026, unchanged)",
           "color": "amber",
-          "source": "BLS July 2026 Employment Situation (released August 7, 2026)",
+          "source": "BLS August 2026 Employment Situation (released September 4, 2026)",
           "contested": false,
-          "delta": "-0.1pp vs June (4.2%)",
-          "deltaNote": "July 2026 (Aug 7): NFP fell 23,000 — a sharp miss vs the ~83,000 gain expected — with May and June revised down a combined 103,000. Unemployment eased to 4.1%, largely on lower labor-force participation rather than underlying strength. Markets read the report as reducing Fed hike risk; S&P 500 closed at a record high same day.",
+          "delta": "Unchanged vs July (4.1%); NFP beat consensus by ~3x",
+          "deltaNote": "AUG 2026 (Sept 4): NFP rose 162,000 — a large beat vs the ~53,000-56,000 gain expected — with June and July both revised up a combined 55,000. Unemployment held steady at 4.1%. Markets read the report as increasing Fed hike risk (CME odds to ~58%), reversing Fed Governor Waller's dovish Sept 3 signal within a day; the Dow, S&P 500, and Nasdaq all fell on the print. Prior: July 2026 (Aug 7) NFP fell 23,000, a sharp miss, with May/June revised down a combined 103,000.",
           "trend": "down",
-          "lastUpdated": "2026-08-07T13:30:00Z"
+          "lastUpdated": "2026-09-04T13:30:00Z"
         },
         {
           "id": "us-core-pce",
@@ -795,14 +801,14 @@
         {
           "id": "fed-funds-rate",
           "label": "Fed Funds Rate",
-          "value": "3.50–3.75%; September 15-16 Hike Odds at ~57.5% as Bond Rout and Soft ADP Data Pull in Opposite Directions",
+          "value": "3.50–3.75%; September 15-16 Hike Odds ~58% After Waller's Dovish Signal Was Reversed by a Blowout August Jobs Report",
           "color": "blue",
-          "source": "Federal Reserve FOMC, July 29 2026 (held); Warsh Jackson Hole Keynote, Aug 28 2026; CME FedWatch, Sept 2 2026",
+          "source": "Federal Reserve FOMC, July 29 2026 (held); Waller Speech, Sept 3 2026; BLS Employment Situation, Aug 2026 (released Sept 4); CME FedWatch, Sept 4 2026",
           "contested": false,
-          "delta": "Held at 3.50-3.75% since July 29; Sept 15-16 hike odds held near ~57.5% into Sept 2 even as ADP showed private payrolls slowing sharply to 38,000 in August",
-          "deltaNote": "AUG 28 UPDATE: Warsh's first Jackson Hole keynote as Chair (his 100th day in the role) turned notably hawkish — he said inflation remains 'above our 2 percent target,' called price stability the Fed's 'predominant focus,' and said the Fed 'may have work to do' on rates, while also stepping back from forward guidance ('you can call it an outline, you can call it a trail map, just don't call it forward guidance'). CME FedWatch September hike odds jumped to ~57% from ~35% pre-speech; the 2-year Treasury yield rose to ~4.32%, its highest since July. SEPT 2 UPDATE: ADP's National Employment Report showed private payrolls rose just 38,000 in August (vs 48,000 forecast, down from July's revised 46,000) — the slowest pace since January — a labor-softening signal that would normally cool hike bets, but September odds held near 57.5% as the global bond yield rout (10Y at 4.814%, highest since Nov 2023) and renewed Mideast-driven oil spike kept inflation-hawk pressure on the Fed ahead of the Sept 16-17 FOMC. Prior: July 28-29 FOMC held at 3.50-3.75% with 3 hawkish dissents.",
+          "delta": "Waller's Sept 3 dovish remarks briefly cut hike odds to ~48-55%; the Sept 4 jobs blowout (+162K vs +53K expected) reversed that, pushing odds back to ~58%",
+          "deltaNote": "SEPT 3 UPDATE: Fed Governor Christopher Waller said in a speech that if incoming data continued to show disinflation over the next two weeks, he would 'be inclined to support holding' rates at the Sept 15-16 meeting — a notably more dovish read than Chair Warsh's hawkish Aug 28 Jackson Hole keynote. CME FedWatch hike odds fell roughly 9-18 points (estimates ranged ~48.4%-54.6%) from the prior day's ~66%. SEPT 4 UPDATE: The August jobs report reversed the dovish move within 24 hours — nonfarm payrolls surged 162,000 (vs ~53,000-56,000 expected), unemployment held at 4.1%, and June/July were both revised up a combined 55,000. CME FedWatch hike odds jumped back to ~58% (up ~9 points on the day); the 10-year Treasury yield rose nearly 3bps to 4.79%, back near its Sept 2 cycle high of 4.814%. Compounding the hawkish inflation risk, renewed US-Iran strikes across the Gulf (Sept 1-6 — Kuwait, UAE, and mutual Strait of Hormuz tanker strikes) kept Brent crude on track for an ~8% weekly gain, reinforcing the 'higher-for-longer' case into the Sept 16-17 FOMC. Prior: Aug 28 Jackson Hole keynote turned hawkish, pushing hike odds to ~57% from ~35%; July 28-29 FOMC held at 3.50-3.75% with 3 hawkish dissents.",
           "trend": "up",
-          "lastUpdated": "2026-09-02T18:00:00Z"
+          "lastUpdated": "2026-09-04T18:00:00Z"
         },
         {
           "id": "ecb-deposit-rate",
@@ -819,14 +825,14 @@
         {
           "id": "us-10y-treasury-yield",
           "label": "US 10Y / 30Y Treasury Yield",
-          "value": "10Y Hits 4.814% (Sept 2) — Highest Since Nov 2023; 30Y 5.31-5.32% (Aug 17 Peak) — Highest Since 2007",
+          "value": "10Y at 4.79% (Sept 4) — Retested the Sept 2 Cycle High of 4.814% (Highest Since Nov 2023) on the August Jobs Blowout",
           "color": "red",
-          "source": "CNBC / Federal Reserve H.15 / FRED / Yahoo Finance; July 23 - September 2, 2026",
+          "source": "CNBC / Federal Reserve H.15 / FRED / Yahoo Finance; July 23 - September 4, 2026",
           "contested": false,
-          "delta": "Renewed US-Iran strikes near the Strait of Hormuz (Aug 31-Sept 1) pushed oil and yields sharply higher; the 10Y hit 4.814% intraday Sept 2 as part of a synchronized global bond rout (Japan 10Y >3% for the first time since 1996, German Bund highest since 2011, UK gilts highest since 2008).",
-          "deltaNote": "AUG 31-SEPT 2 ARC: Warsh's Aug 28 hawkish Jackson Hole keynote lifted the 2-year to ~4.32%; an Aug 31 US strike on Iranian rocket launchers near the Strait of Hormuz then sent Brent back above $90 and yields toward their highest since January 2025. Overnight Aug 31-Sept 1, two oil tankers were struck by projectiles in the Strait of Hormuz, driving Brent to $94.65 (+4.6%) and WTI to $90.22 (+5.2%) on Sept 1 — the 10Y rose to 4.792%, a 20-month high, its fifth straight session of gains. The selloff extended Sept 2: the 10Y touched 4.814% intraday (highest since Nov 2023) as the rout went global — Japan's 10Y crossed 3% for the first time since 1996, Germany's Bund hit 3.375% (highest since 2011), and UK gilts extended a post-2008 high to 5.25%. The 30-year's Aug 17 peak of 5.31-5.32% (highest since June 2007) remains the cycle high. National debt concerns (nearing $40T) and stubborn above-target inflation remain the structural floor under long-end yields; equities shrugged off the rout Sept 2, with the S&P 500 and Dow each rebounding ~0.47%.",
+          "delta": "Waller's Sept 3 dovish remarks pulled yields down briefly, but the Sept 4 jobs blowout reversed the move — the 10Y rose nearly 3bps to 4.79%, back near its Sept 2 high, while renewed Gulf strikes (Sept 1-6) kept an oil-driven inflation premium under the long end.",
+          "deltaNote": "SEPT 2-4 ARC: The 10Y touched 4.814% intraday Sept 2 (highest since Nov 2023) as a synchronized global bond rout — Japan's 10Y above 3% for the first time since 1996, Germany's Bund at 3.375% (highest since 2011), UK gilts at 5.25% (highest since 2008) — combined with renewed Strait of Hormuz tanker strikes. Fed Governor Waller's Sept 3 remarks, signaling openness to a September hold if disinflation continued, pulled yields off that high. The move reversed within a day: BLS's Aug jobs report (Sept 4, released same day) showed nonfarm payrolls +162,000 (vs ~53-56K expected) and June/July revised up a combined 55,000 — sending the 10Y back up nearly 3bps to 4.79%, within striking distance of the Sept 2 cycle high, as CME FedWatch hike odds jumped to ~58%. The 30-year's Aug 17 peak of 5.31-5.32% (highest since June 2007) remains the cycle high. National debt concerns (nearing $40T), stubborn above-target inflation, and a still-unresolved US-Iran Gulf conflict (renewed strikes Sept 1-6 across Kuwait, UAE, and the Strait of Hormuz) remain the structural floor under long-end yields heading into the Sept 16-17 FOMC.",
           "trend": "up",
-          "lastUpdated": "2026-09-02T18:00:00Z"
+          "lastUpdated": "2026-09-04T18:00:00Z"
         },
         {
           "id": "us-consumer-confidence",
@@ -855,14 +861,14 @@
         {
           "id": "vix-fear-gauge",
           "label": "S&P 500 / Market Risk Gauge",
-          "value": "S&P 500 Rebounds +0.47% (Sept 2) After a Two-Day Slide on Renewed Mideast Strikes and a Global Bond Rout",
+          "value": "S&P 500 Holds Within ~1% of Record Highs (7,718.60, Sept 4) Despite the Jobs-Driven Yield Spike and an Unresolved Gulf Conflict",
           "color": "amber",
-          "source": "AP / Yahoo Finance / The Motley Fool / Federal Reserve; July 23 – September 2, 2026",
+          "source": "AP / Yahoo Finance / CNBC / The Motley Fool / Federal Reserve; July 23 – September 5, 2026",
           "contested": false,
-          "delta": "SEPT 1-2: Stocks fell Sept 1 (S&P -0.71% to 7,631.47) as renewed US-Iran tanker strikes near the Strait of Hormuz spiked oil and yields, then rebounded Sept 2 (S&P +0.47%, Dow +0.47%, Nasdaq +0.37%, Russell 2000 +1.10%) even as global bond yields hit multi-decade highs.",
-          "deltaNote": "AUG 27-SEPT 2 ARC: The market's Aug 27 record run (S&P 7,730.99 on Nvidia's earnings beat) gave way to Warsh's hawkish Aug 28 Jackson Hole keynote (S&P -0.25%) and an Aug 31 Mideast strike near the Strait of Hormuz (S&P -0.33%). The selloff deepened Sept 1 after two tankers were struck in the Strait of Hormuz overnight — Dow -0.79%, S&P -0.71%, Nasdaq -1.03% — alongside a soft ISM Manufacturing PMI (54.6%, down from 55.6%) and a 20-month-high 10-year Treasury yield (4.792%). Equities then shrugged off a synchronized global bond yield rout on Sept 2 (US 10Y to 4.814%, highest since Nov 2023; Japan 10Y above 3% for the first time since 1996; German Bund and UK gilts at multi-year highs) to close broadly higher, even as ADP showed private payrolls slowing sharply to 38,000 in August.",
+          "delta": "SEPT 3-5: Stocks rallied Sept 3 on Waller's dovish signal (S&P +1.1%, Dow +1.2%, Nasdaq +1.4%), then slipped Sept 4 (Dow -0.51% to 53,414.25, S&P -0.38% to 7,718.60, Nasdaq -0.29%) as the blowout jobs report revived hike bets; the VIX remained low (~14.5) into the weekend even as the US-Iran Gulf conflict escalated further.",
+          "deltaNote": "AUG 27-SEPT 4 ARC: The market's Aug 27 record run gave way to a hawkish Jackson Hole keynote, an Aug 31 Mideast strike, and a two-day Sept 1-2 slide/rebound around a global bond rout. Sept 3 brought a broad rally (S&P 500 +1.1% to ~7,750, Dow +1.2% to ~53,685, Nasdaq +1.4% to ~26,584 — the best day in weeks) after Fed Governor Waller signaled openness to a September hold, even as Iran launched a second night of retaliatory strikes on Kuwait and the UAE. That reversed Sept 4: the blowout August jobs report (+162,000 vs ~53-56K expected) sent the Dow down 271.86 points (-0.51%) to 53,414.25, the S&P 500 down 0.38% to 7,718.60, and the Nasdaq down 0.29% to 26,506.99, with CME hike odds back to ~58%. Despite the whipsaw, the S&P 500 remained within about 1% of its all-time high and the VIX stayed low (~14.5), even as the Gulf conflict widened further over the weekend (US tanker strikes and Iranian reprisals, Sept 5-6) — a striking calm relative to the stacked macro and geopolitical risks.",
           "trend": "down",
-          "lastUpdated": "2026-09-02T21:00:00Z"
+          "lastUpdated": "2026-09-05T21:00:00Z"
         },
         {
           "id": "us-effective-tariff-rate",
@@ -891,14 +897,14 @@
         {
           "id": "global-policy-uncertainty",
           "label": "Global Policy Uncertainty / Recession Risk",
-          "value": "SEPT 2: Global Bond Yield Rout Hits Multi-Decade Highs (US, Japan, Germany, UK) as Mideast Strikes Reignite and ADP Shows Hiring Slowdown",
+          "value": "SEPT 6: Gulf War Escalates Further (Tanker Strikes, Naval Blockade Clashes) as a Blowout Jobs Report Reverses a One-Day Dovish Fed Signal",
           "color": "red",
-          "source": "Federal Reserve / ADP / ISM / China NBS / Census Bureau / U. Michigan; July 17 – September 2, 2026",
+          "source": "Federal Reserve / BLS / ADP / ISM / China NBS / Census Bureau / U. Michigan; July 17 – September 6, 2026",
           "contested": false,
-          "delta": "AUG 31-SEPT 2 ARC: Renewed US-Iran strikes and tanker attacks near the Strait of Hormuz reignited the oil/inflation channel, driving a synchronized global government bond selloff to multi-decade highs even as ADP flagged a sharp US private-hiring slowdown — a stagflation-adjacent combination that raises, rather than lowers, near-term recession risk.",
-          "deltaNote": "SEPT 2 RECESSION RISK SNAPSHOT: The dominant new risk channel is a globally synchronized bond yield rout — US 10Y at 4.814% (highest since Nov 2023), Japan's 10Y above 3% for the first time since 1996, Germany's Bund at 3.375% (highest since 2011), and UK gilts at 5.25% (highest since 2008) — driven by renewed Strait of Hormuz strikes (oil tankers hit Aug 31-Sept 1, Brent to $94.65) reigniting inflation fears just as ADP showed private payrolls slowing to 38,000 in August (from 46,000) and the ISM Manufacturing PMI cooled to 54.6%. Tightening financial conditions (higher yields) combined with softening labor and manufacturing data is the classic pre-recession mix analysts flag as most concerning. Also in play: an active US-Canada trade war (Canada's retaliatory tariffs effective Sept 8), a deepening China slowdown, and elevated equity valuations that shrugged off the yield spike Sept 2. Next catalysts: BLS August jobs report (Friday Sept 4) and the September 16-17 FOMC meeting.",
+          "delta": "SEPT 3-6 ARC: Fed Governor Waller's dovish Sept 3 signal was reversed within a day by a blowout August jobs report (Sept 4), while the US-Iran Gulf conflict widened into a multi-country exchange (Kuwait, UAE, mutual Hormuz tanker strikes) with no sign of de-escalation into the weekend — reinforcing both the inflation-hawk case for the Fed and the oil-supply-shock risk to growth.",
+          "deltaNote": "SEPT 6 RECESSION RISK SNAPSHOT: Two risk channels are now moving in the same direction. (1) LABOR/FED: Waller's Sept 3 remarks briefly cut September hike odds to ~48-55%, but the Sept 4 BLS report (nonfarm payrolls +162,000 vs ~53-56K expected, unemployment steady at 4.1%, June/July revised up 55,000 combined) reversed that to ~58%, with the 10Y Treasury back near its Sept 2 cycle high (4.79% vs 4.814%). (2) GULF CONFLICT: The Sept 1 US strikes near the Strait of Hormuz triggered a widening Iranian response — retaliatory strikes on US-linked bases in Jordan, Kuwait, and the UAE (Sept 2-3), then a direct IRGC ballistic-missile attack on a US carrier group answered by the US destroying three Iranian tankers, with Iran hitting six more vessels in reprisal (Sept 5), and further IRGC attacks on US warships claimed Sept 6 alongside a harsher Iranian rhetorical line ('the era of proportionate responses is over'). Brent crude is on track for roughly an 8% weekly gain. Despite the stacked risks, US equities remain within ~1% of record highs and the VIX stayed low (~14.5) — a resilience that could unwind quickly if the Gulf conflict or the Sept 16-17 FOMC surprises to the hawkish side. Also in play: Canada's retaliatory tariffs take effect Sept 8, and China's slowdown remains unresolved. Next catalysts: Canada tariff effective date (Sept 8) and the September 16-17 FOMC meeting.",
           "trend": "down",
-          "lastUpdated": "2026-09-02T21:00:00Z"
+          "lastUpdated": "2026-09-06T12:00:00Z"
         },
         {
           "id": "boj-policy-rate",
@@ -916,6 +922,99 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "monterrey-saltillo-tour-closes-sep6-2026",
+          "date": "2026-09-06",
+          "title": "Day 705 — Sheinbaum Closes 10-State Report Tour in Monterrey and Saltillo, Touts Saltillo-Nuevo Laredo Train",
+          "type": "political",
+          "detail": "On September 6, 2026 (Day 705, Sunday), President Sheinbaum concluded the four-day, ten-state leg of her Second Government Report tour — which began September 3 in Morelos and Durango and passed through Zacatecas, San Luis Potosí, Aguascalientes, Colima, Jalisco and Nayarit — with stops in Nuevo León and Coahuila. At 10:30 AM she addressed a crowd of more than 10,000 at the Explanada de los Héroes in Monterrey alongside Governor Samuel García, highlighting health, infrastructure, housing and welfare gains in the state and announcing that construction on the Saltillo-Nuevo Laredo passenger rail line — a 396-kilometer project passing through Monterrey, already 3% complete — would receive its formal groundbreaking (\"banderazo\") in the coming days. At 1:15 PM in Saltillo, Coahuila's Parque Las Maravillas, she detailed a 985-kilometer rail corridor (3% built on the Saltillo-Nuevo Laredo segment), the Saltillo-Monclova highway modernization (158 km, 24% complete), the binational Puerto Verde logistics complex, and a 558-bed regional IMSS hospital under construction (10% complete) alongside new family-medicine units.",
+          "sources": [
+            {
+              "name": "El Heraldo de México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://heraldodemexico.com.mx/nacional/2026/9/6/sheinbaum-realiza-su-gira-nacional-de-rendicion-de-cuentas-en-monterrey-nuevo-leon-883167.html"
+            },
+            {
+              "name": "Vanguardia (Coahuila)",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://vanguardia.com.mx/coahuila/llega-claudia-sheinbaum-a-coahuila-con-el-tren-carreteras-y-hospitales-como-proyectos-clave-DC23303891"
+            },
+            {
+              "name": "Milenio",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.milenio.com/politica/claudia-sheinbaum-en-nl-anuncia-banderazo-obras-tren-pasajeros"
+            }
+          ]
+        },
+        {
+          "id": "colima-jalisco-nayarit-tour-cuyutlan-protest-alito-fox-sep5-2026",
+          "date": "2026-09-05",
+          "title": "Day 704 — Sheinbaum Tours Colima, Jalisco and Nayarit; Rebuffs Cuyutlán Port Protesters, Blasts Fox-'Alito' Moreno Meeting",
+          "type": "political",
+          "detail": "On September 5, 2026 (Day 704, Saturday), President Sheinbaum continued her state-by-state Second Government Report tour with three stops in western Mexico: Colima (10:15 AM), the Arena VFG in Tlajomulco de Zúñiga, Jalisco (2:30 PM) and the Explanada de la Feria in Tepic, Nayarit (6:45 PM). In Colima, members of the Sal de Colima cooperative and other groups opposing the Port of Manzanillo's planned expansion into the Cuyutlán lagoon — a Ramsar wetland site — interrupted her remarks; Sheinbaum dismissed the disruption as provocation, saying, \"Si fuera una demanda legítima, aceptarían reunirse con nosotros para atender sus inquietudes. No vamos a caer en la provocación.\" She reported 245,365 Colima residents receive Bienestar welfare programs and, in Jalisco, cited 962,111 beneficiaries of the Pension for Elderly Adults, alongside a confirmation that construction on the Mexico City-Querétaro-Irapuato-León-Guadalajara passenger rail line will begin in 2027. Separately, asked about the previous day's meeting between former president Vicente Fox and PRI national leader Alejandro \"Alito\" Moreno at PRI headquarters, Sheinbaum said the pairing showed they \"quieren regresar al pasado de corrupción y privilegios,\" framing it as an attempted PRI-PAN alliance ahead of the 2027 midterms and contrasting it with her government's welfare programs.",
+          "sources": [
+            {
+              "name": "El Heraldo de México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://heraldodemexico.com.mx/nacional/2026/9/5/no-vamos-caer-en-la-provocacion-claudia-sheinbaum-en-colima-882680.html"
+            },
+            {
+              "name": "El Financiero",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elfinanciero.com.mx/nacional/2026/09/05/quieren-regresar-al-pasado-sheinbaum-critica-reunion-de-fox-con-alito-moreno-en-el-pri/"
+            },
+            {
+              "name": "Proyecto Puente",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://proyectopuente.com.mx/2026/09/05/quieren-regresar-al-pasado-de-corrupcion-y-privilegios-critica-sheinbaum-encuentro-entre-fox-y-alito"
+            }
+          ]
+        },
+        {
+          "id": "zacatecas-mananera-harfuch-coche-bomba-report-sep4-2026",
+          "date": "2026-09-04",
+          "title": "Day 703 — Security Cabinet Reports From Zacatecas: 200kg of Explosives in Ojocaliente Car Bomb, 3 Detained, CJNG-Cartel del Pacífico Dispute Cited",
+          "type": "political",
+          "detail": "On September 4, 2026 (Day 703, Friday), President Sheinbaum held her mañanera from Zacatecas — the first stop of a state-by-state tour following her Second Government Report — alongside Governor David Monreal and her federal Security Cabinet, delivering the findings promised after the August 30 Ojocaliente car bombing. Security Secretary Omar García Harfuch said preliminary state-prosecutor analysis found the device used approximately 200 kilograms of explosive material, and confirmed three detentions: Juan Pedro \"N\" (apprehended August 31 for planting the device), plus Hipólito \"N\" and Miguel \"N\" (the latter already wanted on a separate homicide warrant), both linked to a criminal cell operating across Aguascalientes and Zacatecas. Harfuch identified a dispute between CJNG and Cartel del Pacífico cells over routes and territory as one of the main investigative lines, and said the case remains open, with the possibility that additional suspects are operating outside the state. He separately confirmed Mexico holds an active U.S. extradition detention order for Juan Carlos Valencia González (\"El Pelón\"), the CJNG's new leader following Nemesio \"El Mencho\" Oseguera's February 2026 death, noting Valencia González holds dual Mexican-American nationality — a detail that lands one day after Sheinbaum's dual-nationality candidacy ban was formally sent to Congress. On the broader security picture, García Harfuch reported 60,000 people arrested for high-impact crimes and 32,000 firearms seized (80% traced to the U.S.) since the administration began, and cited state-level figures showing Zacatecas's daily average of intentional homicides down 96% (from 4.5 in 2021 to 0.2 in 2026) and homicides overall down 85% since September 2024. The visit also included an economic and food-security readout: annual investment up 7.7% in June (public investment +10.9% YoY, private +6%), and record 2026-cycle production of 25.41 million tonnes of maize, 1.36 million tonnes of beans (+300,000 tonnes) and 14.4 billion liters of milk (+900 million liters).",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/04/suman-tres-detenidos-por-el-coche-bomba-contra-la-policia-municipal-de-ojocaliente-revela-harfuch-desde-zacatecas/"
+            },
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/04/coche-bomba-en-zacatecas-fue-por-disputa-entre-el-cjng-y-el-cartel-del-pacifico-una-de-las-principales-lineas-de-investigacion-harfuch/"
+            },
+            {
+              "name": "El Universal",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.eluniversal.com.mx/nacion/se-utilizaron-200-kilos-de-explosivos-detalla-harfuch-sobre-coche-bomba-en-zacatecas-continuan-las-investigaciones-asegura/"
+            },
+            {
+              "name": "El Informador",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.informador.mx/mexico/ataque-con-coche-bomba-en-zacatecas-garcia-harfuch-confirma-tres-detenidos-y-revela-disputa-entre-carteles-20260904-0074.html"
+            },
+            {
+              "name": "López-Dóriga Digital",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://lopezdoriga.com/nacional/juan-carlos-valencia-lider-cjng-tiene-orden-extradicion-garcia-harfuch/"
+            }
+          ]
+        },
         {
           "id": "mananera-redesign-new-stage-sep2-2026",
           "date": "2026-09-02",
@@ -1290,74 +1389,53 @@
               "url": "https://www.jornada.com.mx/noticia/2026/08/21/politica/sheinbaum-suspende-participacion-en-mananera-por-gripa-encabeza-secretaria-de-gobernacion"
             }
           ]
-        },
-        {
-          "id": "rocha-moya-returns-sinaloa-governor-defies-doj-aug21-2026",
-          "date": "2026-08-21",
-          "title": "Day 689 — Rocha Moya Returns as Sinaloa Governor, Defying US DOJ Indictment",
-          "type": "political",
-          "detail": "On August 21, 2026 (Day 689, Friday) at 12:07 p.m., Rubén Rocha Moya announced his reincorporation as constitutional governor of Sinaloa, ending a 112-day leave he had requested May 1-2 after an April 29 U.S. District Court (Southern District of New York) indictment charged him and nine other current and former Sinaloa officials with conspiracy to import narcotics, weapons possession, and institutional protection of the Sinaloa Cartel's \"Los Chapitos\" faction. Rocha rejected the charges and returned without first consulting the federal government or Morena party leadership; interim governor Yeraldine Bonilla Valverde, who had held the post since May 2, stepped aside and returned to the Secretaría General de Gobierno as Rocha took protest. The move came a day after the U.S. reiterated that \"the Sinaloa Cartel could not operate without the help of corrupt officials.\"",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/08/21/rocha-moya-retoma-gobierno-de-sinaloa-tras-ser-acusado-por-eeuu-de-presuntos-vinculos-con-el-narco-y-los-chapitos/"
-            },
-            {
-              "name": "CNN en Español",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://cnnespanol.cnn.com/2026/08/21/mexico/rocha-moya-retoma-gobernador-sinaloa-narcotrafico-orix"
-            }
-          ]
-        },
-        {
-          "id": "olinia-cargo-ev-presentation-aug20-2026",
-          "date": "2026-08-20",
-          "title": "Day 688 — Sheinbaum Unveils \"Olinia de Carga\" Electric Cargo Vehicle",
-          "type": "economic",
-          "detail": "On August 20, 2026 (Day 688, Thursday), President Sheinbaum unveiled \"Olinia de Carga\" in the Palacio Nacional courtyard — the second Olinia electric vehicle after the passenger model presented June 7, 2026. The cargo version carries up to 650 kg (up to 12 stackable huacal crates), was engineered by roughly 70 specialists based in Puebla through Mexico's public universities, and is projected to sell for about 150,000 pesos by late 2027. Production will use mixed public-private investment; a public bidding process opens in late September 2026 with formal offers due in November, targeting initial output of 10,000 units per year scaling toward 50,000 per year.",
-          "sources": [
-            {
-              "name": "Quadratín",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://mexico.quadratin.com.mx/presenta-claudia-sheinbaum-el-vehiculo-olinia-de-carga/"
-            },
-            {
-              "name": "La Razón de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.razon.com.mx/mexico/2026/08/20/mananera-de-sheinbaum-20-de-agosto-del-2026/"
-            }
-          ]
-        },
-        {
-          "id": "michoacan-operation-12-detained-el-mencho-context-aug20-2026",
-          "date": "2026-08-20",
-          "title": "Day 688 — Michoacán CJNG Operation Toll Rises to 12 Detained; Tío Lako Still at Large",
-          "type": "political",
-          "detail": "On August 20, 2026 (Day 688, Thursday), authorities raised the toll from the prior day's federal operation against Tío Lako's CJNG cell in Tanhuato and Ecuandureo, Michoacán to 12 people detained — his daughter, partner and 10 others — while Tío Lako (Heraclio Guerrero Martínez) himself remained at large. SEDENA, the National Guard, SSPC and the Navy jointly carried out the raids, seizing 64 vehicles (one armored), a .50-caliber machine gun, four 5.56mm mini machine guns, nine long rifles, a handgun, grenade-launcher attachments, eight improvised explosive devices, a drone and ammunition. Officials again linked the crackdown to Tío Lako's alleged orders to attack National Guard troops after the February 22, 2026 SEDENA operation in Tapalpa, Jalisco that killed CJNG leader Rubén \"El Mencho\" Oseguera Cervantes and Tío Lako's son, Rubén \"El R1\" Guerrero Valadez.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/08/20/operativo-federal-en-michoacan-suma-12-detenidos-incluidos-familiares-del-tio-lako-jefe-regional-del-cjng/"
-            },
-            {
-              "name": "El Universal",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.eluniversal.com.mx/nacion/detienen-a-pareja-e-hija-de-tio-lako-jefe-regional-del-cjng-en-michoacan-detienen-a-otros-nueve-integrantes-del-cartel/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "trump-signs-beef-country-of-origin-labeling-eo-sep4-2026",
+          "date": "2026-09-04",
+          "title": "Trump Signs Executive Order on Beef Country-of-Origin Labeling",
+          "type": "economic",
+          "detail": "President Trump signed an executive order behind closed doors at the White House on Friday, September 4, 2026, at 1:30 p.m. ET addressing country-of-origin labeling requirements for beef, sources familiar with the matter said. The move follows Trump's efforts to lower record-high beef prices, including an order last month temporarily allowing up to 300,000 metric tons of lower-tariff beef imports to enter the country without the higher 'out-of-quota' rate, aimed at giving the administration time to rebuild the US cattle herd. Agricultural groups have been split: some ranchers back mandatory country-of-origin labeling as a boost to domestic producers and consumer transparency, while groups reliant on imports have opposed the broader tariff-relief push as disadvantaging US producers.",
+          "sources": [
+            {
+              "name": "GV Wire",
+              "tier": 2,
+              "url": "https://gvwire.com/2026/09/04/trump-expected-to-sign-a-beef-related-executive-order-on-friday-sources-say/",
+              "pole": "western"
+            },
+            {
+              "name": "The Hill",
+              "tier": 2,
+              "url": "https://thehill.com/video-clips/6071809-trump-beef-tariff-executive-order/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "cis-report-immigrant-population-decline-sep3-2026",
+          "date": "2026-09-03",
+          "title": "Foreign-Born Population Falls 2.9 Million Since Trump Took Office, First Sustained Decline Since 1930s",
+          "type": "economic",
+          "detail": "A Center for Immigration Studies analysis of Census Bureau household survey data, released Thursday, September 3, 2026, found the total US foreign-born population fell 2.9 million from January 2025 (53.3 million) to July 2026 (50.5 million) — the illegal immigrant population accounting for most of the drop, an estimated 2.3 million decline from 15.8 million to 13.5 million, while the legal immigrant population fell roughly 600,000. CIS research director Steven Camarota called it the first sustained net decrease in US migration since the 1930s, reversing an 8.3 million increase during the post-COVID border surge under the Biden administration. CIS attributed the decline to border enforcement and interior removals; the Current Population Survey underlying the estimate covers about 60,000 households and carries a margin of error of roughly ±1 million.",
+          "sources": [
+            {
+              "name": "Center for Immigration Studies",
+              "tier": 3,
+              "url": "https://cis.org/Report/Census-Bureau-Survey-Shows-Total-ForeignBorn-Down-29-Million",
+              "pole": "western"
+            },
+            {
+              "name": "Washington Times",
+              "tier": 2,
+              "url": "https://www.washingtontimes.com/news/2026/sep/3/donald-trump-cuts-migrant-population-nearly-3-million-total-us/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "bessent-asphyxiate-iran-economy-irgc-assets-sep2-2026",
           "date": "2026-09-02",
@@ -1489,60 +1567,6 @@
               "name": "NPR",
               "tier": 2,
               "url": "https://www.npr.org/2026/08/25/nx-s1-5944240/canada-us-tariffs",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-canada-auto-steel-tariffs-50pct-jan2027-aug24-2026",
-          "date": "2026-08-24",
-          "title": "Trump Says US Will Raise Canada Auto, Parts, and Steel Tariffs to 50% on Jan. 1, 2027",
-          "type": "economic",
-          "detail": "President Trump announced on Truth Social on Monday, August 24, 2026 that tariffs on all Canadian cars, trucks, automotive parts, and steel would rise to 50% effective January 1, 2027, doubling the current 25% rate applied to non-US content, and declaring 'Canada will be treated like a State no longer.' The threat follows the collapse of US-Canada trade talks on August 21 and the 50% tariffs already in effect on roughly $20 billion of other Canadian goods; Trump accused Canada of 'ripping off the United States of America for years.' Canadian Prime Minister Mark Carney has vowed to retaliate 'dollar for dollar,' with Canada's countermeasures targeting US steel, dairy, appliances, agricultural equipment, pulp, paper, and electronics starting September 8.",
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/news/articles/2026-08-24/trump-vows-to-double-tariffs-on-canadian-autos-escalating-fight",
-              "pole": "western"
-            },
-            {
-              "name": "CBS News",
-              "tier": 2,
-              "url": "https://www.cbsnews.com/news/trump-canadian-automotive-steel-tariffs/",
-              "pole": "western"
-            },
-            {
-              "name": "ABC News",
-              "tier": 2,
-              "url": "https://abcnews.com/Business/trumps-proposed-tariffs-canada-hurtle-deadline-amid-trade/story?id=135833861",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-canada-auto-steel-tariffs-50pct-jan2027-aug24-2026",
-          "date": "2026-08-24",
-          "title": "Trump Says US Will Raise Canada Auto, Parts, and Steel Tariffs to 50% on Jan. 1, 2027",
-          "type": "economic",
-          "detail": "President Trump announced on Truth Social on Monday, August 24, 2026 that tariffs on all Canadian cars, trucks, automotive parts, and steel would rise to 50% effective January 1, 2027, doubling the current 25% rate applied to non-US content, and declaring 'Canada will be treated like a State no longer.' The threat follows the collapse of US-Canada trade talks on August 21 and the 50% tariffs already in effect on roughly $20 billion of other Canadian goods; Trump accused Canada of 'ripping off the United States of America for years.' Canadian Prime Minister Mark Carney has vowed to retaliate 'dollar for dollar,' with Canada's countermeasures targeting US steel, dairy, appliances, agricultural equipment, pulp, paper, and electronics starting September 8.",
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/news/articles/2026-08-24/trump-vows-to-double-tariffs-on-canadian-autos-escalating-fight",
-              "pole": "western"
-            },
-            {
-              "name": "CBS News",
-              "tier": 2,
-              "url": "https://www.cbsnews.com/news/trump-canadian-automotive-steel-tariffs/",
-              "pole": "western"
-            },
-            {
-              "name": "ABC News",
-              "tier": 2,
-              "url": "https://abcnews.com/Business/trumps-proposed-tariffs-canada-hurtle-deadline-amid-trade/story?id=135833861",
               "pole": "western"
             }
           ]
