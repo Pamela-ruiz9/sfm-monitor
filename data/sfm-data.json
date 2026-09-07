@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-09-04",
+  "ultima_actualizacion": "2026-09-07",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "16.9560",
-    "fecha": "2026-09-03",
+    "actual": "16.9237",
+    "fecha": "2026-09-07",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1579,7 +1579,7 @@
       },
       {
         "mes": "2026-09",
-        "valor": 16.956
+        "valor": 16.9237
       }
     ]
   },
@@ -1588,7 +1588,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-09-04",
+        "fecha": "2024-09-07",
         "valor": 10.75
       },
       {
@@ -2741,10 +2741,6 @@
       "fecha": "2026-08-28",
       "historico": [
         {
-          "fecha": "2025-09-05",
-          "valor": 245465.4
-        },
-        {
           "fecha": "2025-09-12",
           "valor": 246266.1
         },
@@ -2951,21 +2947,9 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7659,
-      "fecha": "2026-09-03",
+      "actual": 6.7458,
+      "fecha": "2026-09-07",
       "historico": [
-        {
-          "fecha": "2024-09-04",
-          "valor": 10.985
-        },
-        {
-          "fecha": "2024-09-05",
-          "valor": 10.98
-        },
-        {
-          "fecha": "2024-09-06",
-          "valor": 10.975
-        },
         {
           "fecha": "2024-09-09",
           "valor": 10.9725
@@ -4337,6 +4321,10 @@
         {
           "fecha": "2026-09-03",
           "valor": 6.7659
+        },
+        {
+          "fecha": "2026-09-07",
+          "valor": 6.7458
         }
       ]
     },
@@ -4763,8 +4751,8 @@
       ]
     },
     "udis": {
-      "actual": 8.812711,
-      "fecha": "2026-09-04"
+      "actual": 8.814383,
+      "fecha": "2026-09-07"
     },
     "salario_minimo": {
       "actual": 315.04,
