@@ -1,8 +1,35 @@
 {
-  "updated": "2026-09-07T18:32:10Z",
+  "updated": "2026-09-08T17:41:52Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "iran-restricted-hormuz-zone-centcom-92-vessels-sept7-2026",
+          "date": "2026-09-07",
+          "title": "Iran to Declare New Restricted Zone Near Hormuz as Tanker Traffic Hits 4-Month Low; CENTCOM Says 92 Vessels Redirected, Oil Extends Gains",
+          "type": "market",
+          "detail": "Iran's Supreme National Security Council secretary Mohsen Rezaei said on state television September 6 that Tehran will declare a new restricted maritime zone within days, running from the line of the US naval blockade outward through the Strait of Hormuz and into portions of the Persian Gulf; any vessel identified as intending to transit the Strait while inside the zone would be added to Iran's sanctions list, with consequences for insurance coverage and future access to the waterway. Rezaei separately said maps for a new international shipping corridor through Iranian and Omani waters had been agreed and were expected to be signed in the coming days. The announcement came as commercial tanker traffic through the Strait fell to its lowest level since May — an average of just 10 vessels a day over the prior 10 days versus 15+ on the preceding Friday, and only two vessels on Saturday, per shipping-analytics firm Kpler cited by Reuters. US Central Command said it has redirected 92 commercial vessels, disabled three, and boarded two since ramping up enforcement of the blockade, and released footage of an F-35A stealth fighter patrolling the waterway. Oil extended its rise into the new week: Brent crude rose toward $97.39/bbl (WTI ~$92.32), building on the prior week's roughly 8% gain, even as US equity markets were closed for Labor Day; European shares were mixed, with the Stoxx 600 little changed after falling 0.81% the week before.",
+          "sources": [
+            {
+              "name": "Middle East Eye — Iran to Impose Restricted Shipping Zone Near Strait of Hormuz",
+              "tier": 2,
+              "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-impose-restricted-shipping-zone-near-strait-hormuz",
+              "pole": "middle_eastern"
+            },
+            {
+              "name": "Northeast Times — Iran Sets New Restricted Zone Near Hormuz as Tanker Traffic Falls to Four-Month Low",
+              "tier": 3,
+              "url": "https://northeasttimes.com/2026/09/07/iran-sets-new-restricted-zone-near-hormuz-as-tanker-traffic-falls-to-four-month/",
+              "pole": "international"
+            },
+            {
+              "name": "Al Jazeera — US-Iran Engaged in Tanker War: Where Is the Months-Long Conflict Headed?",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed",
+              "pole": "middle_eastern"
+            }
+          ]
+        },
         {
           "id": "irgc-warships-blockade-threat-sept6-2026",
           "date": "2026-09-06",
@@ -20,6 +47,27 @@
               "name": "Euronews — Iranian Media Report US Strike on Iranian Oil Tanker Near Kharg Island",
               "tier": 2,
               "url": "https://www.euronews.com/2026/09/05/iranian-media-report-us-strike-on-iranian-oil-tanker-near-kharg-island",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "wright-iran-nuclear-deal-unlikely-sept6-2026",
+          "date": "2026-09-06",
+          "title": "Energy Secretary Wright: Iran Nuclear Deal 'May Not' Happen, Says US May Instead Destroy Tehran's Capabilities",
+          "type": "political",
+          "detail": "US Energy Secretary Chris Wright said on ABC News' 'This Week' on September 6 that a nuclear agreement with Iran may not be reachable anytime soon, seven months into the war that began February 28. 'There may not be a nuclear agreement,' Wright said, adding the alternative path could be 'simply destroying their capabilities to do it' rather than negotiating a deal. He said any formal agreement 'may await the next administration in Iran,' while acknowledging 'we simply don't know that,' and claimed continued US bombing campaigns are 'degrading their capacity to develop nuclear weapons and ultimately to deliver them.' The comments came the same weekend the US destroyed three Iranian oil tankers and Iran fired ballistic missiles at a US carrier group, underscoring that the administration sees military pressure — not diplomacy — as the near-term path on Iran, with implications for how long the Strait of Hormuz naval blockade and its oil-market disruption persist.",
+          "sources": [
+            {
+              "name": "The Hill — Energy Secretary Chris Wright Says Trump Administration May Not Reach Iran Nuclear Deal",
+              "tier": 2,
+              "url": "https://thehill.com/homenews/administration/6073768-wright-iran-nuclear-deal/",
+              "pole": "western"
+            },
+            {
+              "name": "Washington Post — US Energy Secretary Chris Wright Says Iran Nuclear Deal 'May Not' Happen",
+              "tier": 2,
+              "url": "https://www.washingtonpost.com/world/2026/09/06/us-energy-secretary-chris-wright-says-iran-nuclear-deal-may-not-happen/",
               "pole": "western"
             }
           ]
@@ -680,60 +728,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "hormuz-tankers-attacked-oil-rebounds-aug14-2026",
-          "date": "2026-08-14",
-          "title": "Two UAE Tankers Attacked in Strait of Hormuz — Oil Rebounds to End the Week, Renewing Energy-Shock Risk to Fed Policy",
-          "type": "market",
-          "detail": "Two ADNOC-operated tankers were struck by drones late Thursday into Friday while transiting the Strait of Hormuz; the UAE's Foreign Ministry blamed Iran's Revolutionary Guard Corps, calling the attacks 'acts of piracy' and a 'flagrant violation' of freedom-of-navigation principles. The UK Maritime Trade Operations Center reported both vessels suffered only minor damage with no casualties. It is the second such attack in less than a week — ADNOC reported a similar strike on Aug 8 — bringing the total to 15 ADNOC vessels attacked while transiting the Strait since the US-Israel war with Iran began in February. Oil prices, which had eased earlier in the week alongside the cooler PPI and CPI prints, rebounded to end the week on renewed Gulf supply-risk concerns, re-injecting energy-driven inflation risk into the Fed's rate-path calculus just as soft retail sales and a crumbling consumer-sentiment reading were pulling the recession-risk narrative in the opposite direction.",
-          "sources": [
-            {
-              "name": "Al Jazeera — UAE Accuses Iran of Attacks on Two ADNOC Vessels in Strait of Hormuz",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/news/2026/8/14/uae-accuses-iran-of-attacks-on-two-adnoc-vessels-in-strait-of-hormuz",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "U.S. News & World Report / AP — 2 UAE Tankers Attacked While Transiting Strait of Hormuz",
-              "tier": 2,
-              "url": "https://www.usnews.com/news/world/articles/2026-08-14/2-uae-tankers-attacked-while-transiting-strait-of-hormuz-and-other-news-from-the-middle-east",
-              "pole": "western"
-            },
-            {
-              "name": "BNN Bloomberg — US Markets Strive for a Positive Week Ahead of Retail Sales Data and Signs of Cooling Inflation",
-              "tier": 2,
-              "url": "https://www.bnnbloomberg.ca/markets/2026/08/14/world-shares-mostly-fall-and-us-futures-are-mixed-after-us-inflation-data-improves/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "ppi-flat-sp500-clears-7800-hike-odds-below-35pct-aug13-2026",
-          "date": "2026-08-13",
-          "title": "July PPI Flat, Core Below Forecast — S&P 500 Clears 7,800 for First Time as September Fed Hike Odds Sink Below 35%",
-          "type": "economic",
-          "detail": "BLS reported the Producer Price Index for final demand was unchanged in July, below the 0.2% Dow Jones consensus forecast; core PPI (ex-food and energy) rose 0.2%, also below the 0.3% estimate. The annual headline rate held at 4.7%, core at 4.2%. Goods prices fell 0.7%, driven by a 3.1% drop in energy costs (gasoline -5.7%), while services prices rose 0.2% and food fell 0.9%. Arriving a day after the softer-than-expected July CPI, the cooler wholesale-inflation reading further eased pressure on the Fed: the S&P 500 gained 0.65% to close at a fresh record 7,799 — clearing 7,800 intraday for the first time — the Nasdaq Composite rose 0.81% to 26,803, and the Dow edged up 0.13% to 53,840. The 10-year Treasury yield eased about 4bp to 4.65%, and gold fell 1.3% to $4,349.85/oz. Market-implied odds of a 25bp September Fed rate hike fell to under 35%, down from roughly 55% a week earlier.",
-          "sources": [
-            {
-              "name": "BLS — Producer Price Index News Release, July 2026",
-              "tier": 1,
-              "url": "https://www.bls.gov/news.release/ppi.nr0.htm",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Wholesale Prices Were Flat in July, Below Expectations for 0.2% Increase",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/13/wholesale-prices-were-flat-in-july-below-expectations-for-0point2percent-increase.html",
-              "pole": "western"
-            },
-            {
-              "name": "TheStreet — Stock Market Today (Aug. 13, 2026): S&P 500 Sets New Record, Clearing 7,800 for the First Time",
-              "tier": 2,
-              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-13-2026",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -922,6 +916,39 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "sheinbaum-fox-traidor-democracia-paquete-sin-impuestos-sep7-2026",
+          "date": "2026-09-07",
+          "title": "Day 706 — Sheinbaum Calls Fox a 'Traitor to Democracy' Over Alito Moreno Meeting, Pledges No New Taxes in 2027 Economic Package",
+          "type": "political",
+          "detail": "On September 7, 2026 (Day 706, Monday), back at the National Palace after her ten-state Second Government Report tour, President Sheinbaum sharpened her earlier criticism of the September 4 meeting between former president Vicente Fox and PRI national leader Alejandro \"Alito\" Moreno, mocking it as \"the new vision of Mexican politics\" and saying it would not go well for them. She called Fox a \"traitor to democracy... seen by all Mexicans, first for the desafuero [2004 attempt to bar AMLO from the presidential race] and then for the 2006 electoral fraud,\" and accused PAN's younger leadership of ties to real-estate corruption scandals, arguing neither PRI nor PAN reaches double digits in support. Separately, ahead of the September 8 delivery of the 2027 Economic Package to Congress, Sheinbaum reiterated \"no ha habido un aumento de impuestos ni va a haber\" (there has not been a tax increase, nor will there be), saying additional revenue will come from combating tax evasion and shell companies used for false invoicing rather than new levies or new social programs, while keeping austerity in senior government salaries to fund existing welfare spending.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/07/sheinbaum-se-burla-de-la-reunion-de-fox-con-alito-moreno-e-ironiza-la-nueva-vision-de-la-politica-mexicana/"
+            },
+            {
+              "name": "El Financiero",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elfinanciero.com.mx/nacional/2026/09/07/sheinbaum-se-burla-de-reunion-entre-vicente-fox-y-alito-no-les-ira-muy-bien/"
+            },
+            {
+              "name": "El Heraldo de México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://heraldodemexico.com.mx/nacional/2026/9/7/sheinbaum-asegura-que-no-habra-aumento-de-impuestos-en-2027-no-ha-habido-ni-va-haber-883737.html"
+            },
+            {
+              "name": "López-Dóriga Digital",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://lopezdoriga.com/economia-y-finanzas/no-habido-aumento-impuestos-ni-va-haber-sheinbaum-sobre-paquete-economico-2027/"
+            }
+          ]
+        },
         {
           "id": "monterrey-saltillo-tour-closes-sep6-2026",
           "date": "2026-09-06",
@@ -1347,53 +1374,32 @@
               "url": "https://www.elimparcial.com/mexico/2026/08/23/tras-la-segunda-licencia-de-ruben-rocha-moya-el-congreso-de-sinaloa-definira-este-lunes-quien-asumira-la-gubernatura-de-forma-interina-durante-los-proximos-dias/"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-inaugura-archivo-general-agrario-aug22-2026",
-          "date": "2026-08-22",
-          "title": "Day 690 — Sheinbaum Inaugurates Archivo General Agrario in Mexico City",
-          "type": "political",
-          "detail": "On August 22, 2026 (Day 690, Saturday), President Sheinbaum inaugurated the Centro Nacional de Atención Agraria and Archivo General Agrario in Mexico City — a facility housing the Registro Agrario Nacional, the Procuraduría Agraria, and the country's historical agrarian records. Agrarian Secretary Edna Elena Vega Rangel called it \"the second in importance after the Archivo General de la Nación,\" with over 45,000 linear meters of documents, including more than 100,000 maps and land-tenure records dating to 1917 and colonial-era materials, plus the decrees of all Fourth Transformation land-restitution grants (60,000+ hectares to date). Construction began in 2022 under President López Obrador on land donated by Sheinbaum during her tenure as Mexico City mayor.",
-          "sources": [
-            {
-              "name": "Excélsior",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.excelsior.com.mx/nacional/claudia-sheinbaum-inaugura-centro-nacional-atencion-agraria-y-archivo-general-agrario-cdmx"
-            },
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/noticia/2026/08/22/politica/sheinbaum-inaugura-el-archivo-general-agrario-el-segundo-mas-importante-del-pais"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-flu-absence-mananera-aug21-2026",
-          "date": "2026-08-21",
-          "title": "Day 689 — Sheinbaum Misses Mañanera With Flu, Reappears Masked for Virtual IMSS Meeting",
-          "type": "political",
-          "detail": "On August 21, 2026 (Day 689, Friday), President Sheinbaum woke up with a severe flu, cough and fever and — for the first time in her presidency — did not lead the daily morning press conference; doctors recommended rest, though her office said the condition was not serious and ruled out COVID-19. Interior Secretary Rosa Icela Rodríguez led the conference in her place alongside INAH director Joel Omar Vázquez Herrera, who presented a discovery of 179 pre-Hispanic pieces and 13 offerings in the Cueva Mundo Zoque cave in Cintalapa, Chiapas. Sheinbaum kept working remotely from the National Palace, appearing on camera wearing a face mask for a virtual meeting with IMSS director Zoé Robledo reviewing progress on the Universal Health Service (Servicios de Salud) rollout. Her team said she expected to resume in-person activities the next day, including a planned Saturday inauguration of the Archivo General Agrario de la Nación in Mexico City.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/08/21/sheinbaum-amanece-con-gripa-muy-fuerte-tos-y-fiebre-encarga-la-mananera-a-rosa-icela-rodriguez/"
-            },
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/noticia/2026/08/21/politica/sheinbaum-suspende-participacion-en-mananera-por-gripa-encabeza-secretaria-de-gobernacion"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "trump-intel-stock-ai-image-hundreds-of-billions-sep7-2026",
+          "date": "2026-09-07",
+          "title": "Trump Posts Second AI-Generated Image Claiming 'Hundreds of Billions' in Intel Stock Gains",
+          "type": "economic",
+          "detail": "President Trump posted an AI-generated image to Truth Social early Monday, September 7, 2026, depicting himself day-trading Intel stock from $20 to $95 a share, captioned with a claim of making 'Hundreds of Billions of Dollars.' It was the second time Trump shared the identical image style — an earlier version last September showed Intel rising from $20 to $30, after the government took a 9.9% stake in the chipmaker. Intel shares closed at $95.80 on September 4 and touched $95.89 two days later, nearly quadrupling off a 52-week low of $24.05, but the largest documented paper gain the government holds on record is roughly $33 billion — far short of Trump's 'hundreds of billions' claim, which he did not substantiate with specific holdings or a time period. Ethics watchdogs have flagged the pattern of Trump publicly touting stocks the government holds a stake in.",
+          "sources": [
+            {
+              "name": "Yahoo Finance",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/stocks/articles/trump-again-touts-intel-stock-070603662.html",
+              "pole": "western"
+            },
+            {
+              "name": "IBTimes UK",
+              "tier": 2,
+              "url": "https://www.ibtimes.co.uk/trumps-bizarre-ai-stock-trading-fantasy-puts-hundreds-billions-line-oval-office-1818311",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "trump-signs-beef-country-of-origin-labeling-eo-sep4-2026",
           "date": "2026-09-04",
@@ -1480,93 +1486,6 @@
               "name": "Washington Times",
               "tier": 2,
               "url": "https://www.washingtontimes.com/news/2026/sep/1/trump-seeks-boost-us-refining-capacity-white-house-lays-details/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-renames-lake-ontario-lake-america-aug27-2026",
-          "date": "2026-08-27",
-          "title": "Trump Signs Executive Order Renaming Lake Ontario 'Lake America' Amid Canada Trade War",
-          "type": "economic",
-          "detail": "President Trump signed an executive order on Thursday, August 27, 2026, renaming Lake Ontario as 'Lake America,' effective immediately for federal agencies, in his latest escalation of the trade war with Canada. Flanked in the Oval Office by maps of the Great Lakes labeled 'Lake America' over Lake Ontario, Trump directed the Board on Geographic Names to guide federal maps, contracts, and communications to use the new name, arguing the lake's deepest waters and most of its volume sit in US territory. It is the second time Trump has renamed an international body of water for the US, following the Gulf of Mexico's renaming to 'Gulf of America' in Jan 2025. Canadian PM Mark Carney rejected the move, noting the name Ontario derives from the Wendat word Ontari'io ('the lake is beautiful, the lake is big') and predates both Canadian Confederation and US independence by more than 400 years. The move follows the Aug 21 collapse of US-Canada trade talks, 50% Section 338 tariffs on ~$20B of Canadian goods, Trump's Aug 24 threat to raise Canada auto/steel tariffs to 50% in 2027, and Canada's Aug 25 dollar-for-dollar retaliatory tariffs on ~$20B of US goods.",
-          "sources": [
-            {
-              "name": "CNN",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/08/27/politics/trump-canada-lake-ontario-america",
-              "pole": "western"
-            },
-            {
-              "name": "NBC News",
-              "tier": 2,
-              "url": "https://www.nbcnews.com/politics/trump-administration/trump-orders-lake-ontario-renamed-lake-america-canada-trade-war-rcna594750",
-              "pole": "western"
-            },
-            {
-              "name": "Washington Post",
-              "tier": 2,
-              "url": "https://www.washingtonpost.com/politics/2026/08/27/trump-signs-order-changing-name-lake-ontario/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-renames-lake-ontario-lake-america-aug27-2026",
-          "date": "2026-08-27",
-          "title": "Trump Signs Executive Order Renaming Lake Ontario 'Lake America' Amid Canada Trade War",
-          "type": "economic",
-          "detail": "President Trump signed an executive order Thursday afternoon, August 27, 2026, renaming Lake Ontario as 'Lake America,' effective immediately within the federal government, escalating his trade war with Canada. Flanked in the Oval Office by maps of the Great Lakes labeled 'Lake America' over Lake Ontario, Trump directed the Board on Geographic Names to guide agencies to use the new name on maps, contracts, and communications, arguing the deepest parts and most of the lake's volume sit in US territory. It is the second time Trump has renamed an international body of water for the US, following the Gulf of Mexico's renaming to 'Gulf of America.' Canadian Prime Minister Mark Carney rejected the move, noting the name Ontario derives from the Wendat word Ontari'io ('the lake is beautiful, the lake is big') and predates both Canadian Confederation and US independence by more than 400 years.",
-          "sources": [
-            {
-              "name": "CNN",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/08/27/politics/trump-canada-lake-ontario-america",
-              "pole": "western"
-            },
-            {
-              "name": "NBC News",
-              "tier": 2,
-              "url": "https://www.nbcnews.com/politics/trump-administration/trump-orders-lake-ontario-renamed-lake-america-canada-trade-war-rcna594750",
-              "pole": "western"
-            },
-            {
-              "name": "The Hill",
-              "tier": 2,
-              "url": "https://thehill.com/homenews/administration/6055425-lake-america-executive-order/",
-              "pole": "western"
-            },
-            {
-              "name": "Washington Post",
-              "tier": 2,
-              "url": "https://www.washingtonpost.com/politics/2026/08/27/trump-signs-order-changing-name-lake-ontario/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "canada-retaliatory-tariffs-20b-aug25-2026",
-          "date": "2026-08-25",
-          "title": "Canada Announces Retaliatory Tariffs on $20 Billion of US Goods",
-          "type": "economic",
-          "detail": "Canada announced retaliatory duties on C$27.6 billion (roughly $19.94 billion USD) of American goods on Tuesday, August 25, 2026, matching Washington's tariffs dollar-for-dollar. The counter-tariffs, taking effect September 8, impose 50% duties on steel, aluminum, furniture, and clothing; 25% on cheese, appliances, and some seafood; and 15% on electronics and tools, spanning roughly 700 US products. Prime Minister Mark Carney's government also unveiled a C$7.5 billion support package for affected businesses and workers, including cash-flow funding for small and medium-sized enterprises. The move follows the collapse of US-Canada trade talks on August 21 and the 50% US tariffs on $20 billion of Canadian goods that took effect that weekend.",
-          "sources": [
-            {
-              "name": "Washington Post",
-              "tier": 2,
-              "url": "https://www.washingtonpost.com/business/2026/08/25/canada-issues-retaliatory-tariffs-up-50-percent-us-imports/",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/25/canada-trump-tariffs-trade-carney-leblanc.html",
-              "pole": "western"
-            },
-            {
-              "name": "NPR",
-              "tier": 2,
-              "url": "https://www.npr.org/2026/08/25/nx-s1-5944240/canada-us-tariffs",
               "pole": "western"
             }
           ]
