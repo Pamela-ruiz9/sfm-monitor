@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-09-07",
+  "ultima_actualizacion": "2026-09-08",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
@@ -1588,7 +1588,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-09-07",
+        "fecha": "2024-09-08",
         "valor": 10.75
       },
       {
@@ -2737,8 +2737,8 @@
   },
   "mercado": {
     "reservas_internacionales": {
-      "actual": 258564.1,
-      "fecha": "2026-08-28",
+      "actual": 258034.6,
+      "fecha": "2026-09-04",
       "historico": [
         {
           "fecha": "2025-09-12",
@@ -2943,12 +2943,16 @@
         {
           "fecha": "2026-08-28",
           "valor": 258564.1
+        },
+        {
+          "fecha": "2026-09-04",
+          "valor": 258034.6
         }
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7458,
-      "fecha": "2026-09-07",
+      "actual": 6.7257,
+      "fecha": "2026-09-08",
       "historico": [
         {
           "fecha": "2024-09-09",
@@ -4325,12 +4329,16 @@
         {
           "fecha": "2026-09-07",
           "valor": 6.7458
+        },
+        {
+          "fecha": "2026-09-08",
+          "valor": 6.7257
         }
       ]
     },
     "cetes_28d": {
-      "actual": 6.49,
-      "fecha": "2026-09-01",
+      "actual": 6.25,
+      "fecha": "2026-09-08",
       "historico": [
         {
           "fecha": "2024-09-10",
@@ -4747,12 +4755,16 @@
         {
           "fecha": "2026-09-01",
           "valor": 6.49
+        },
+        {
+          "fecha": "2026-09-08",
+          "valor": 6.25
         }
       ]
     },
     "udis": {
-      "actual": 8.814383,
-      "fecha": "2026-09-07"
+      "actual": 8.81494,
+      "fecha": "2026-09-08"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5500,8 +5512,8 @@
       "fecha": "2026-05-08"
     },
     "tasa_real_cetes": {
-      "actual": 3.37,
-      "fecha": "2026-09-01"
+      "actual": 3.13,
+      "fecha": "2026-09-08"
     }
   },
   "credito": {
