@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-09-08",
+  "ultima_actualizacion": "2026-09-09",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "16.9237",
-    "fecha": "2026-09-07",
+    "actual": "16.9202",
+    "fecha": "2026-09-08",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1579,7 +1579,7 @@
       },
       {
         "mes": "2026-09",
-        "valor": 16.9237
+        "valor": 16.9202
       }
     ]
   },
@@ -1588,7 +1588,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-09-08",
+        "fecha": "2024-09-09",
         "valor": 10.75
       },
       {
@@ -1646,14 +1646,9 @@
     ]
   },
   "inflacion": {
-    "actual": 3.12,
-    "fecha": "2026-07-01",
+    "actual": 3.26,
+    "fecha": "2026-08-01",
     "historico_mensual": [
-      {
-        "mes": "2020-08",
-        "fecha": "2020-08-01",
-        "valor": 4.05
-      },
       {
         "mes": "2020-09",
         "fecha": "2020-09-01",
@@ -2008,14 +2003,14 @@
         "mes": "2026-07",
         "fecha": "2026-07-01",
         "valor": 3.12
+      },
+      {
+        "mes": "2026-08",
+        "fecha": "2026-08-01",
+        "valor": 3.26
       }
     ],
     "subyacente_mensual": [
-      {
-        "mes": "2020-08",
-        "fecha": "2020-08-01",
-        "valor": 3.97
-      },
       {
         "mes": "2020-09",
         "fecha": "2020-09-01",
@@ -2370,14 +2365,14 @@
         "mes": "2026-07",
         "fecha": "2026-07-01",
         "valor": 3.95
+      },
+      {
+        "mes": "2026-08",
+        "fecha": "2026-08-01",
+        "valor": 3.88
       }
     ],
     "no_subyacente_mensual": [
-      {
-        "mes": "2020-08",
-        "fecha": "2020-08-01",
-        "valor": 3.58
-      },
       {
         "mes": "2020-09",
         "fecha": "2020-09-01",
@@ -2732,6 +2727,11 @@
         "mes": "2026-07",
         "fecha": "2026-07-01",
         "valor": 2.37
+      },
+      {
+        "mes": "2026-08",
+        "fecha": "2026-08-01",
+        "valor": 2.32
       }
     ]
   },
@@ -2951,8 +2951,8 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7257,
-      "fecha": "2026-09-08",
+      "actual": 6.7458,
+      "fecha": "2026-09-09",
       "historico": [
         {
           "fecha": "2024-09-09",
@@ -4333,6 +4333,10 @@
         {
           "fecha": "2026-09-08",
           "valor": 6.7257
+        },
+        {
+          "fecha": "2026-09-09",
+          "valor": 6.7458
         }
       ]
     },
@@ -4763,8 +4767,8 @@
       ]
     },
     "udis": {
-      "actual": 8.81494,
-      "fecha": "2026-09-08"
+      "actual": 8.815497,
+      "fecha": "2026-09-09"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5508,11 +5512,11 @@
       "historico": []
     },
     "tasa_real_banxico": {
-      "actual": 3.38,
+      "actual": 3.24,
       "fecha": "2026-05-08"
     },
     "tasa_real_cetes": {
-      "actual": 3.13,
+      "actual": 2.99,
       "fecha": "2026-09-08"
     }
   },
