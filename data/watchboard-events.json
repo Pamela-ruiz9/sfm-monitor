@@ -1,8 +1,194 @@
 {
-  "updated": "2026-09-11T17:27:57Z",
+  "updated": "2026-09-14T18:59:05Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "hormuz-qeshm-vessel-attack-oil-shock-sept13-2026",
+          "date": "2026-09-13",
+          "title": "Vessel Struck Near Qeshm Island Kills One as Hormuz Shipping Runs 90% Below Pre-War Levels, Renewing Oil-Supply Risk Into FOMC Week",
+          "type": "market",
+          "detail": "A merchant vessel was hit by an unidentified projectile in the early hours of September 13 near Qeshm/Hengam Island in the Strait of Hormuz, roughly 14 miles from Iran's Bandar Abbas port, according to the UK Maritime Trade Operations Centre (UKMTO). Iranian state broadcaster IRIB said one crew member was killed and several others wounded; a fire broke out and local authorities evacuated the remaining crew. Neither Iran nor the US military claimed responsibility. The attack lands one day before Iran's planned regional shipping-management briefing and just two days ahead of the September 15-16 FOMC meeting, keeping a fresh war-risk premium in oil heading into the week. Commercial shipping through the strait has now fallen roughly 90% from its pre-conflict baseline of about 20 million barrels a day, per shipping-industry tracking cited in the wake of the strike — underscoring why the still-unresolved Hormuz campaign keeps showing up directly in US inflation data (the diesel-driven August PPI spike) rather than staying a contained regional story.",
+          "sources": [
+            {
+              "name": "Marine Insight — Iranian Seafarer Killed As Unidentified Strike Hits Ship Near Strait of Hormuz",
+              "tier": 3,
+              "url": "https://www.marineinsight.com/strait-of-hormuz-vessel-struck-qeshm/",
+              "pole": "international"
+            },
+            {
+              "name": "CNN — Vessel Struck in Strait of Hormuz, UKMTO Reports",
+              "tier": 2,
+              "url": "https://us.cnn.com/2026/09/13/middleeast/iran-hormuz-qeshm-attack-intl",
+              "pole": "western"
+            },
+            {
+              "name": "UPI — Container Ship Attacked in Strait of Hormuz; 1 Dead, Iran Says",
+              "tier": 2,
+              "url": "https://www.upi.com/Top_News/World-News/2026/09/13/iran-hormuz-strait-attack/9681789307409",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "uae-iran-brics-summit-meeting-sept12-2026",
+          "date": "2026-09-12",
+          "title": "UAE Crown Prince Meets Iran's Pezeshkian at BRICS Summit — First High-Level Contact Since Abu Dhabi Suspended Trade Ties",
+          "type": "political",
+          "detail": "On the sidelines of the BRICS summit in New Delhi on September 12, Abu Dhabi Crown Prince Sheikh Khaled bin Mohamed bin Zayed Al Nahyan held talks with Iranian President Masoud Pezeshkian — the highest-level UAE-Iran contact since the US-Israel-Iran war escalated and since the UAE suspended all trade and financial dealings with Tehran in August. Both sides publicly emphasized reducing tensions, though no changes to the existing trade suspension were announced. Leaders at the summit backed a New Delhi Declaration calling for protecting global trade, supply chains, and energy flows, and for preventing disruption to energy infrastructure and navigation through the Strait of Hormuz — language read by markets as a signal that even Iran's remaining diplomatic partners want the oil-shipping chokepoint stabilized. Pezeshkian used the summit to press Iran's case that the US naval blockade, not Iranian action, is the source of the Hormuz disruption, and said Tehran was finalizing a shared shipping-route arrangement with Oman — index of the economic stakes for India, which sources roughly 30% of its crude through the strait and had flagged the standoff as a summit-defining risk.",
+          "sources": [
+            {
+              "name": "Euronews — UAE and Iran Leaders Meet at the BRICS Summit for the First Time Since the War",
+              "tier": 2,
+              "url": "https://www.euronews.com/2026/09/13/uae-and-iran-leaders-meet-at-the-brics-summit-for-the-first-time-since-the-war",
+              "pole": "western"
+            },
+            {
+              "name": "Bloomberg — Iran Turns to BRICS Summit as US War Deepens Its Isolation",
+              "tier": 2,
+              "url": "https://www.bloomberg.com/news/articles/2026-09-11/iran-turns-to-brics-summit-as-us-war-deepens-its-isolation",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "august-cpi-core-hot-fed-hike-odds-87pct-sept11-2026",
+          "date": "2026-09-11",
+          "title": "August CPI Comes In Hot on Core; Fed September Hike Odds Jump to 87% as Stocks Rebound on Falling Oil",
+          "type": "economic",
+          "detail": "The Bureau of Labor Statistics' August 2026 CPI report, released September 11, showed the headline index rose a seasonally adjusted 0.4% for the month, putting the 12-month rate at 3.4% — both in line with the Dow Jones consensus. But core CPI (excluding food and energy) rose 0.3% MoM, 0.1 percentage point above the 0.2% forecast, while the core annual rate held at 2.4%, matching expectations. Gasoline rose 3.9% in August, accounting for over a third of the monthly all-items increase, while shelter (+0.3%), communication (+2.3%), and airline fares (+2.7%) also contributed to the core upside; medical care (-0.2%) and motor vehicle insurance (-0.8%) partially offset the gains. Traders responded by pushing CME FedWatch odds of a 25bp hike at the September 15-16 FOMC meeting to roughly 87%, up sharply from about 70% ahead of the release, with economists including Nationwide's Kathy Bostjancic noting that Chair Warsh's condition for a hold — continued disinflation — was not met. Equities nonetheless rallied as oil prices pulled back from Thursday's four-month high, ending a four-session losing streak: the Dow rose 1.03% to 52,602.74, the S&P 500 gained 1.07% to 7,672.80, and the Nasdaq climbed 1.23% to 26,403.77.",
+          "sources": [
+            {
+              "name": "US Bureau of Labor Statistics — Consumer Price Index Summary, August 2026",
+              "tier": 1,
+              "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — CPI Inflation Report, August 2026",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html",
+              "pole": "western"
+            },
+            {
+              "name": "Bloomberg — US Core CPI Up More Than Forecast, Bolstering Case for Hike",
+              "tier": 2,
+              "url": "https://www.bloomberg.com/news/articles/2026-09-11/us-core-cpi-rises-more-than-forecast-bolstering-case-for-hike",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "august-ppi-wholesale-inflation-accelerates-sept10-2026",
+          "date": "2026-09-10",
+          "title": "August PPI Accelerates to +5.4% YoY as Iran War Drives Energy Costs; Diesel Surges 24.1%",
+          "type": "economic",
+          "detail": "The Bureau of Labor Statistics' Producer Price Index for final demand rose 0.4% (seasonally adjusted) in August, released September 10, lifting the unadjusted 12-month rate to 5.4% — an acceleration from July's cooler print. More than three-quarters of the broad-based monthly rise was attributable to final-demand energy prices, which jumped 4.2%; within that, diesel fuel surged 24.1%, accounting for over a third of the increase in final-demand goods, as the unresolved US-Iran Gulf conflict kept a war-risk premium in crude and refined products. Final-demand goods prices overall advanced 1.1% while services rose a more modest 0.1%. The hotter wholesale print reinforced the case that the Gulf conflict's oil shock is now feeding directly into the domestic inflation pipeline just six days before the September 15-16 FOMC meeting, compounding pressure on a Fed already leaning hawkish after the August jobs blowout.",
+          "sources": [
+            {
+              "name": "US Bureau of Labor Statistics — Producer Price Index News Release, August 2026",
+              "tier": 1,
+              "url": "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — PPI Inflation Report, August 2026",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "treasury-yield-cycle-high-oil-105-stocks-fall-sept10-2026",
+          "date": "2026-09-10",
+          "title": "10-Year Treasury Tops 4.9% Cycle High as Oil Surges Past $105, Highest in Nearly Four Months; Stocks Fall a Fifth Day",
+          "type": "market",
+          "detail": "The 10-year Treasury yield climbed to roughly 4.97% on September 10 — its firmest level since October 2023 — as oil prices topped $100 a barrel on fears of a prolonged US-Iran conflict, with Brent crude touching $105-107/bbl (WTI near $100) by mid-morning, the highest in nearly four months, and diesel hitting a record $5.94/gallon. The move followed Wednesday's hotter-than-expected August PPI print, which showed wholesale energy costs accelerating on the same Gulf-conflict oil shock. US equities extended their losing streak to a fifth session: the S&P 500 fell roughly 0.6% to about 7,592, the Dow eased about 0.6% to roughly 52,064, and the Nasdaq lost about 0.65% to around 26,082, as investors rotated out of duration-sensitive shares ahead of Friday's CPI print. The synchronized rise in yields and oil left markets pricing close to a 70% probability of a 25bp Fed hike at the September 15-16 FOMC meeting going into the CPI release.",
+          "sources": [
+            {
+              "name": "CNBC — 10-Year Treasury Yield Tops 4.9%, Highest Since 2023, as Oil Surge Raises Inflation Fears",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/10/us-treasurys-bonds-yield.html",
+              "pole": "western"
+            },
+            {
+              "name": "Fortune — Current Price of Oil as of September 10, 2026",
+              "tier": 2,
+              "url": "https://fortune.com/article/price-of-oil-09-10-2026/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "dow-four-day-losing-streak-treasury-yields-oil-sept9-2026",
+          "date": "2026-09-09",
+          "title": "Dow Tumbles ~300 Points to Notch a Four-Day Losing Streak as Treasury Yields and Oil Prices Surge",
+          "type": "market",
+          "detail": "US equities fell for a fourth straight session on September 9 as a combination of rising Treasury yields and surging oil prices weighed on sentiment ahead of the week's inflation data. The Dow Jones Industrial Average dropped roughly 300 points, extending a losing streak that began after the August jobs report reignited September rate-hike bets. The 10-year Treasury yield briefly ticked back above 4.8% as oil prices continued climbing on the unresolved US-Iran Gulf conflict, and touched its highest level since 2023 even after Treasury Secretary Scott Bessent unveiled a $6 billion bond buyback plan intended to support liquidity in longer-dated debt — a signal the move higher in yields was being driven by inflation and oil-supply concerns rather than a lack of demand for Treasuries. The combination of a hawkish Fed backdrop, an oil-driven inflation premium, and a widening US-Canada trade rift left risk assets on the defensive heading into Thursday's PPI report and Friday's CPI print.",
+          "sources": [
+            {
+              "name": "CNBC — Dow Tumbles 300 Points to Notch 4-Day Drop as Treasury Yields and Oil Prices Surge",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/09/stock-market-today-live-updates.html",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC — 10-Year Treasury Yield Touches Highest Level Since 2023 Despite Bessent's $6 Billion Bond Buyback Plan",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/09/treasury-yields-oil-inflation.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "canada-retaliatory-tariffs-effective-sept8-2026",
+          "date": "2026-09-08",
+          "title": "Canada's $27.6 Billion Retaliatory Tariffs on US Goods Take Effect",
+          "type": "trade",
+          "detail": "Canada's counter-tariffs on roughly $27.6 billion of US goods took effect at 12:01 a.m. on September 8, escalating the trade rift that began when Washington's Section 338 tariffs (50% on ~$20B of Canadian autos, alcohol, and dairy) took effect August 22 after trade talks collapsed. Ottawa's countermeasures are tiered at 15%, 25%, or 50% depending on the product, largely matching the corresponding US rate: steel, aluminum, and iron products face a 50% Canadian tariff, along with furniture, motorcycles, and clothing, while dairy, seafood, and appliances face 25%, and other industrial goods face 15%. The measures apply only to goods originating in the US and exempt shipments already in transit when the tariffs came into force. Prime Minister Mark Carney had announced the package August 25, alongside a C$7.5B (US$5.4B) support fund for affected Canadian workers and businesses, describing the response as 'dollar for dollar.' Two days after that announcement, Trump additionally threatened 50% tariffs on Canadian autos, auto parts, and steel starting January 1, 2027, leaving the bilateral relationship on an escalatory track heading into the fall.",
+          "sources": [
+            {
+              "name": "CNBC — Canada's Retaliatory Tariffs Worth $27.6 Billion Take Effect as Trade Rift with US Deepens",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/08/canada-retaliatory-tariffs.html",
+              "pole": "western"
+            },
+            {
+              "name": "Canada Department of Finance — List of Products from the United States Subject to Counter-Tariffs Effective September 8, 2026",
+              "tier": 1,
+              "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html",
+              "pole": "international"
+            },
+            {
+              "name": "Mohawk Global — Canada Announces New Retaliatory Tariffs on US Goods Effective September 8",
+              "tier": 3,
+              "url": "https://mohawkglobal.com/canada/canada-announces-new-retaliatory-tariffs-on-us-goods-effective-september-8/",
+              "pole": "international"
+            }
+          ]
+        },
+        {
+          "id": "china-august-trade-data-exports-surge-imports-miss-sept8-2026",
+          "date": "2026-09-08",
+          "title": "China's August Exports Jump 25% to a Record Trade Surplus; Imports Miss Forecast on Soft Domestic Demand",
+          "type": "economic",
+          "detail": "China's August 2026 trade data, released September 8, showed exports rose 25% year-on-year to $401.44 billion, extending July's nearly 24% gain and driven by strong demand for autos (+43% YoY) and semiconductors (+129.8% YoY) tied to the global AI-infrastructure buildout. Imports climbed 28.2% YoY, gathering momentum from July's 27.5% but missing the roughly 30% consensus forecast, a sign domestic demand remains tepid even as Beijing faces mounting pressure to rebalance the economy toward consumption. The trade surplus widened to $119.09 billion, up from $112.5 billion in July and from $101.01 billion a year earlier; China's bilateral surplus with the US alone was roughly $29.2 billion, with US exports to China up 34.4% YoY to $42.5 billion against $13.3 billion of US imports from China. China has increasingly redirected exports toward Southeast Asia, Latin America, and Africa to cushion the impact of higher US tariffs, with exports now the primary growth driver for the world's second-largest economy as the property slump and weak household spending continue to weigh on domestic activity.",
+          "sources": [
+            {
+              "name": "CNBC — China's Imports in August Miss Estimates as Calls for Rebalancing Trade Grow",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/08/china-exports-imports-august-trade-rebalance-demand-surplus-.html",
+              "pole": "western"
+            },
+            {
+              "name": "Click On Detroit (AP) — China's Exports Pick Up in August, Jumping 25% as Its Trade Surplus Widens",
+              "tier": 2,
+              "url": "https://www.clickondetroit.com/business/2026/09/08/chinas-exports-pick-up-in-august-jumping-25-on-strong-demand-for-autos-and-high-tech-goods/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "iran-restricted-hormuz-zone-centcom-92-vessels-sept7-2026",
           "date": "2026-09-07",
@@ -536,198 +722,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "us-dollar-falls-fed-treasury-bond-rescue-aug21",
-          "date": "2026-08-21",
-          "title": "US Dollar Falls as Fed and Treasury Bond Rescue Efforts Raise Stability Concerns",
-          "type": "markets",
-          "detail": "The US dollar declined as investors weighed the Federal Reserve and Treasury's bond rescue efforts, signaling renewed concerns about dollar stability. The intervention measures, designed to support the bond market, instead prompted questions about underlying demand for US debt and the longer-term trajectory of the currency.",
-          "sources": [
-            {
-              "name": "Reuters",
-              "tier": 2,
-              "url": "https://bsky.app/profile/reuters.com/post/3mtl4tfkdyw25",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "treasury-yield-rebound-buyback-fizzles-aug20-2026",
-          "date": "2026-08-20",
-          "title": "Treasury Yield Relief From Bessent's Buyback Doubling Reverses Within a Day",
-          "type": "market",
-          "detail": "One day after Treasury Secretary Scott Bessent announced Wednesday that Treasury would at least double the size of its long-end buyback operations — from $2 billion to $4 billion per operation across the 10-to-20-year and 20-to-30-year sectors, effective September 9 through November 4 — the relief rally reversed. Wednesday's announcement had pulled the 10-year note down 5.7 basis points to 4.647% and the 30-year bond down 9 basis points to 5.196%, with Bessent signaling the buyback size could go even higher. But by Thursday, yields on the 10-year moved back up more than 5 basis points to 4.704% and the 30-year rose a similar amount to 5.248%, erasing the prior day's gains as traders concluded the buyback program does not address the underlying structural drivers of the bond selloff — a near-record fiscal deficit and national debt nearing $40 trillion.",
-          "sources": [
-            {
-              "name": "CNBC — Treasury Doubles Debt Buybacks as Bessent Moves to Steady Bond Market",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/19/treasury-announces-upscaled-buyback-operation-for-longer-term-debt-sending-yields-lower.html",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Treasury Yields Rebound, Wiping Out the Decline Following Bessent's Intervention",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/20/bond-yields-edge-higher-as-traders-digest-treasury-debt-buyback-plan.html",
-              "pole": "western"
-            },
-            {
-              "name": "US Department of the Treasury — Increased Sizes of Nominal Long-End Liquidity Support Buybacks",
-              "tier": 1,
-              "url": "https://home.treasury.gov/news/press-releases/sb0607",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-treasury-bond-buybacks-dow-rally-aug19",
-          "date": "2026-08-19",
-          "title": "US Treasury Bond Buybacks Lift Dow, Drive Yields Lower",
-          "type": "markets",
-          "detail": "The US Treasury stepped up bond buybacks, driving the Dow Jones Industrial Average higher and sending long-term yields lower. Markets partially reversed recent losses tied to the expired US-Iran MOU and elevated long-term yields that had weighed on risk assets.",
-          "sources": [
-            {
-              "name": "Google News / Reuters",
-              "tier": 2,
-              "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPYUV6eHp3ak9nQS1lelJ4bUNGcXhzb3dFZHIza09ycS0yWmpROHE1T21kTWN3SEJ2dzNQUHMzOVhBTk84TXkwRjgtZmVScTJLekltN3BsVTQzNEtSS2NudzRoQXlUNFFweS1lR1IyVkhrVHJHYmdpZWppMzQyell3SnFZYU5vdmM?oc=5&hl=en-US&gl=US&ceid=US:en",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "carney-trump-call-tariff-deadline-aug18-2026",
-          "date": "2026-08-18",
-          "title": "Carney-Trump Call 'Very Intense and Delicate' as Canada Braces for Midnight 50% Tariff Deadline",
-          "type": "trade",
-          "detail": "Prime Minister Mark Carney spoke by phone with President Trump on Monday afternoon ahead of the 50% Section 338 tariffs — covering roughly $20 billion of Canadian dairy, alcohol, and motor-vehicle goods — set to take effect 12:01am EDT Wednesday, August 19. Carney declined to detail the call, describing the negotiations only as 'very intense and delicate' and saying it was 'not the time to negotiate in public.' Canada's Trade Minister Dominic LeBlanc and chief negotiator Janice Charette met US Trade Representative Jamieson Greer and Commerce Secretary Howard Lutnick in Washington the same day — LeBlanc's fourth meeting with Greer in three weeks — saying afterward, 'We're going to continue working. Our job is not yet done.' The main sticking points remain auto-tariff content rules (Canada wants the existing 25% rate cut to 15% based on North American-content eligibility, while the US wants US-content-only credit), unresolved steel and aluminum tariffs, and Canada's dairy supply-management system. Trade experts noted that continued talks hours before the deadline were an encouraging sign, with one former White House trade adviser observing that 'the hardest issues always get resolved at the very last moment.'",
-          "sources": [
-            {
-              "name": "CP24/CTV News — Carney Speaks With Trump, Calls Trade Negotiations 'Very Intense and Delicate'",
-              "tier": 2,
-              "url": "https://www.cp24.com/news/canada/2026/08/18/carney-speaks-with-trump-calls-trade-negotiations-very-intense-and-delicate-live-tariff-updates-here/",
-              "pole": "western"
-            },
-            {
-              "name": "CBC News — Carney Says Last-Minute US Tariff Negotiations Are 'Delicate' and 'Intense' as Deadline Looms",
-              "tier": 2,
-              "url": "https://www.cbc.ca/news/politics/carney-negotiations-delicate-intense-9.7309934",
-              "pole": "western"
-            },
-            {
-              "name": "BNN Bloomberg — Trump Takes Carney's Phone Call as Tariff Deadline Approaches",
-              "tier": 2,
-              "url": "https://www.bnnbloomberg.ca/tariffs/2026/08/18/carney-and-trump-speak-on-phone-as-deadline-approaches-for-50-per-cent-tariffs/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-iran-mou-expires-30y-yield-2007-high-aug17-2026",
-          "date": "2026-08-17",
-          "title": "US-Iran MOU Expires Without a Deal — 30-Year Treasury Yield Hits Highest Since 2007, Stocks Slip",
-          "type": "market",
-          "detail": "The 60-day negotiating window under the June 17 US-Iran Memorandum of Understanding expired Monday without a final peace agreement. Trump said the US would not seek an extension, telling Iran to 'put up the white flag of surrender' while adding he felt 'no hurry' and would rely on the naval blockade and upcoming Treasury sanctions to apply pressure; Iran's side blamed unresolved disputes over Strait of Hormuz shipping routes, continued Israeli strikes in Lebanon and Gaza, and an unfunded $300B reconstruction package. The renewed war-risk premium pushed Brent crude up about 2.7% to $90.87/bbl and WTI up 2.6% to $84.50/bbl. Combined with mounting concern over federal debt issuance (national debt nearing $40 trillion) and persistent above-target inflation, the 30-year Treasury yield rose to 5.31-5.32% — its highest level since June 2007 — while the 10-year added to 4.72-4.74%. US equities slipped on the combination of renewed geopolitical risk and higher long-end borrowing costs: the Dow fell 0.5%, the S&P 500 fell 0.5% (snapping a three-week winning streak), and the Nasdaq fell 0.3%.",
-          "sources": [
-            {
-              "name": "Al Jazeera — US-Iran Memorandum of Understanding Expires: How and Why It Fell Apart",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/news/2026/8/17/us-iran-memorandum-of-understanding-expires-how-and-why-it-fell-apart",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "CNBC — 30-Year Treasury Yield Tops 5.31%, the Highest in 19 Years",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/17/treasury-yields-federal-reserve-fomc-minutes.html",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance — Stock Market Today: Dow, S&P 500, Nasdaq Fall as Oil Rises Amid US-Iran Tensions, 30-Year Yield Hits Highest Level in Decades",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-august-17-dow-sp-500-nasdaq-oil-treasurys-094421171.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "china-july-activity-data-miss-aug17-2026",
-          "date": "2026-08-17",
-          "title": "China's July Activity Data Misses Across the Board — Industrial Output +4.5%, Retail Sales +0.6%, Investment Slump Deepens",
-          "type": "economic",
-          "detail": "China's National Bureau of Statistics reported industrial output grew 4.5% year-over-year in July, down from 5.3% in June and missing the 4.8% Reuters poll forecast, while retail sales rose just 0.6% (vs. a 1.5% forecast and June's 1.0% pace) as auto sales plunged 17.0%. Fixed-asset investment for the first seven months of 2026 contracted 6.7%, deeper than the expected 6.0% decline and worse than H1's -5.7%. Analysts attributed part of the weakness to three typhoons that made landfall in July, disrupting manufacturing hubs in eastern and southern China and forcing millions to evacuate, alongside fading government subsidy support for durable-goods purchases (daily average sales fell to 6.3 billion yuan from 9 billion in June). The data follows Q2 GDP's slowdown to a three-and-a-half-year low of 4.3% and adds pressure on Beijing to deliver stronger fiscal stimulus in the second half to hit its 2026 growth target.",
-          "sources": [
-            {
-              "name": "Reuters (via Investing.com) — China's July Industrial Output Slows, Retail Sales Miss Forecasts",
-              "tier": 2,
-              "url": "https://www.investing.com/news/economy-news/chinas-industrial-output-slows-in-july-retail-sales-miss-forecasts-4862243",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — China's Economy Slows Further in July as Retail Sales Barely Grow, Investment Slump Steepens",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/17/china-economy-sales-investment-july-.html",
-              "pole": "western"
-            },
-            {
-              "name": "The China-Global South Project — China's Retail Sales, Factory Activity Lagged in July",
-              "tier": 3,
-              "url": "https://chinaglobalsouth.com/2026/08/17/china-economy-retail-sales-factory-activity-slow-july/",
-              "pole": "eastern"
-            }
-          ]
-        },
-        {
-          "id": "canada-us-tariff-talks-far-apart-aug19-deadline-aug15-2026",
-          "date": "2026-08-15",
-          "title": "Canada, US 'Far Apart' in Trade Talks Four Days Before 50% Section 338 Tariffs Hit $20B of Canadian Goods",
-          "type": "trade",
-          "detail": "Canadian Trade Minister Dominic LeBlanc told a government advisory group Saturday that Canada and the US remain significantly divided in talks meant to head off a fresh round of 50% Section 338 tariffs — covering roughly $20 billion of Canadian autos, alcohol, and dairy exports, including USMCA-qualifying goods — set to take effect at 12:01am EDT Wednesday, August 19. LeBlanc has met US Trade Representative Jamieson Greer four times in three weeks (most recently Thursday, August 13), with talks continuing through the weekend; sticking points include Canada's 25% retaliatory tariff on US vehicles, provincial restrictions on American alcohol sales, and dairy quota arrangements, while Canada is separately pushing for relief from existing US steel and aluminum tariffs. Canadian Chamber of Commerce CEO Candace Laing said both sides are exploring an interim agreement that would bundle the new threat together with tariffs already in place. The standoff is the latest flashpoint in the broader 2026 tariff cycle — alongside the July 24 Section 122/Section 301 transition — that continues to weigh on the US effective tariff rate and cross-border trade volumes.",
-          "sources": [
-            {
-              "name": "Xinhua — Canada, U.S. Remain Far Apart in Trade Talks as Tariff Deadline Looms",
-              "tier": 2,
-              "url": "https://english.news.cn/20260815/4507d6202d6a4fe8acbb12722c1fc442/c.html",
-              "pole": "eastern"
-            },
-            {
-              "name": "Bloomberg — US, Canada Still See Sticking Points Before Deadline for 50% Tariffs",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/news/articles/2026-08-15/us-canada-still-see-sticking-points-before-deadline-for-50-tariffs",
-              "pole": "western"
-            },
-            {
-              "name": "CTV News / BNN Bloomberg — LeBlanc Says 'We'll Have as Many Meetings as It Takes' as Canada-US Trade Talks Continue",
-              "tier": 2,
-              "url": "https://www.ctvnews.ca/world/trumps-tariffs/article/leblanc-says-well-have-as-many-meetings-as-it-takes-as-canada-us-trade-talks-continue/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "retail-sales-miss-consumer-sentiment-slumps-aug14-2026",
-          "date": "2026-08-14",
-          "title": "July Retail Sales Fall 0.6% — Steepest Drop in Over a Year — as Michigan Sentiment Craters to 51.0; Stocks Slip From Record High",
-          "type": "economic",
-          "detail": "The Census Bureau reported July retail and food-services sales fell 0.6% MoM to $763.6 billion, missing the +0.1% forecast and marking the sharpest monthly decline in more than a year (sales remained up 5.0% YoY). The drop was led by motor vehicle and parts dealers (-1.8%), nonstore/online retailers (-2.2%), and gasoline stations (-0.9%), partly offset by gains in clothing (+1.9%) and health/personal care (+0.7%). Separately, the University of Michigan's preliminary August Consumer Sentiment Index tumbled to 51.0 — a 7.6% MoM decline and 12.4% YoY drop, badly missing the 54.5 consensus and down sharply from July's final 55.2 — with year-ahead inflation expectations rising to 4.3% and short-term expectations falling 11%. The weak-demand, weak-sentiment combination pulled US equities off Thursday's record close: the S&P 500 slipped just below flat, the Dow fell about 0.2%, and the Nasdaq-100 dropped about 0.2%, even after Wednesday's flat PPI and Thursday's cooler CPI had briefly driven stocks to fresh highs.",
-          "sources": [
-            {
-              "name": "US Census Bureau — Advance Monthly Sales for Retail and Food Services, July 2026",
-              "tier": 1,
-              "url": "https://www.census.gov/retail/marts/www/marts_current.pdf",
-              "pole": "western"
-            },
-            {
-              "name": "CNN — US Consumers Cut Retail Spending Sharply in July",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/08/14/economy/us-retail-sales-july",
-              "pole": "western"
-            },
-            {
-              "name": "University of Michigan — Surveys of Consumers, Preliminary August 2026",
-              "tier": 1,
-              "url": "https://www.sca.isr.umich.edu/",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -795,14 +789,14 @@
         {
           "id": "fed-funds-rate",
           "label": "Fed Funds Rate",
-          "value": "3.50–3.75%; September 15-16 Hike Odds ~58% After Waller's Dovish Signal Was Reversed by a Blowout August Jobs Report",
+          "value": "3.50–3.75%; September 15-16 Hike Odds ~87-88% as a Fatal Weekend Hormuz Attack Keeps the Oil-Risk Premium Live Into FOMC Week",
           "color": "blue",
-          "source": "Federal Reserve FOMC, July 29 2026 (held); Waller Speech, Sept 3 2026; BLS Employment Situation, Aug 2026 (released Sept 4); CME FedWatch, Sept 4 2026",
+          "source": "Federal Reserve FOMC, July 29 2026 (held); BLS PPI (Sept 10) and CPI (Sept 11) August releases; CME FedWatch, Sept 11 2026; UKMTO / Marine Insight, Sept 13 2026",
           "contested": false,
-          "delta": "Waller's Sept 3 dovish remarks briefly cut hike odds to ~48-55%; the Sept 4 jobs blowout (+162K vs +53K expected) reversed that, pushing odds back to ~58%",
-          "deltaNote": "SEPT 3 UPDATE: Fed Governor Christopher Waller said in a speech that if incoming data continued to show disinflation over the next two weeks, he would 'be inclined to support holding' rates at the Sept 15-16 meeting — a notably more dovish read than Chair Warsh's hawkish Aug 28 Jackson Hole keynote. CME FedWatch hike odds fell roughly 9-18 points (estimates ranged ~48.4%-54.6%) from the prior day's ~66%. SEPT 4 UPDATE: The August jobs report reversed the dovish move within 24 hours — nonfarm payrolls surged 162,000 (vs ~53,000-56,000 expected), unemployment held at 4.1%, and June/July were both revised up a combined 55,000. CME FedWatch hike odds jumped back to ~58% (up ~9 points on the day); the 10-year Treasury yield rose nearly 3bps to 4.79%, back near its Sept 2 cycle high of 4.814%. Compounding the hawkish inflation risk, renewed US-Iran strikes across the Gulf (Sept 1-6 — Kuwait, UAE, and mutual Strait of Hormuz tanker strikes) kept Brent crude on track for an ~8% weekly gain, reinforcing the 'higher-for-longer' case into the Sept 16-17 FOMC. Prior: Aug 28 Jackson Hole keynote turned hawkish, pushing hike odds to ~57% from ~35%; July 28-29 FOMC held at 3.50-3.75% with 3 hawkish dissents.",
+          "delta": "+29pp — hike odds jumped from ~58% (Sept 4) to ~70% (pre-CPI, Sept 10-11) to ~87% after the Sept 11 core CPI beat; little changed over the weekend with markets closed",
+          "deltaNote": "SEPT 8-11 ARC: Canada's $27.6B retaliatory tariffs took effect Sept 8, adding a fresh trade-friction input. The Aug PPI (Sept 10) showed wholesale inflation accelerating to 5.4% YoY, over three-quarters of the rise from energy (diesel +24.1%) as the Gulf oil shock fed into producer prices; the 10Y Treasury hit a 4.969% cycle high the same day as Brent topped $105-107, its highest in nearly four months. The Aug CPI (Sept 11) then ran hot on core — 0.3% MoM (0.1pp above forecast), 2.4% YoY in line — even though headline (3.4% YoY, 0.4% MoM) matched consensus. CME FedWatch hike odds for the Sept 15-16 FOMC jumped to ~87% (from ~70% pre-CPI), with Nationwide's Kathy Bostjancic noting Warsh's condition for a hold — continued disinflation — was not met. Equities rallied Sept 11 (Dow +1.03%, S&P +1.07%, Nasdaq +1.23%) as oil pulled back, ending a four-session slide. SEPT 12-13 WEEKEND: With cash markets shut, the story shifted to diplomacy and the Gulf itself — the UAE's Crown Prince met Iran's Pezeshkian at the BRICS summit Sept 12 (first high-level UAE-Iran contact since Abu Dhabi's August trade suspension), and Iran signaled a shared Hormuz shipping route with Oman was close to signing. That diplomatic thaw was undercut hours later: a still-unclaimed strike killed one crew member on a vessel near Qeshm/Hengam Island on Sept 13, with shipping through the strait now running roughly 90% below its pre-conflict baseline. Futures markets reopen Monday with the oil-risk channel to the Fed's decision reinforced rather than resolved. Prior: Waller's Sept 3 dovish remarks briefly cut odds to ~48-55%; the Sept 4 jobs blowout (+162K vs +53K expected) reversed that to ~58%.",
           "trend": "up",
-          "lastUpdated": "2026-09-04T18:00:00Z"
+          "lastUpdated": "2026-09-13T17:42:04Z"
         },
         {
           "id": "ecb-deposit-rate",
@@ -819,14 +813,19 @@
         {
           "id": "us-10y-treasury-yield",
           "label": "US 10Y / 30Y Treasury Yield",
-          "value": "10Y at 4.79% (Sept 4) — Retested the Sept 2 Cycle High of 4.814% (Highest Since Nov 2023) on the August Jobs Blowout",
+          "value": "10Y at ~4.97% (Sept 10) — New Cycle High, Highest Since October 2023, as Oil Topped $105 and PPI Ran Hot",
           "color": "red",
-          "source": "CNBC / Federal Reserve H.15 / FRED / Yahoo Finance; July 23 - September 4, 2026",
+          "source": "CNBC / Federal Reserve H.15 / FRED / Yahoo Finance; July 23 - September 10, 2026",
           "contested": false,
-          "delta": "Waller's Sept 3 dovish remarks pulled yields down briefly, but the Sept 4 jobs blowout reversed the move — the 10Y rose nearly 3bps to 4.79%, back near its Sept 2 high, while renewed Gulf strikes (Sept 1-6) kept an oil-driven inflation premium under the long end.",
-          "deltaNote": "SEPT 2-4 ARC: The 10Y touched 4.814% intraday Sept 2 (highest since Nov 2023) as a synchronized global bond rout — Japan's 10Y above 3% for the first time since 1996, Germany's Bund at 3.375% (highest since 2011), UK gilts at 5.25% (highest since 2008) — combined with renewed Strait of Hormuz tanker strikes. Fed Governor Waller's Sept 3 remarks, signaling openness to a September hold if disinflation continued, pulled yields off that high. The move reversed within a day: BLS's Aug jobs report (Sept 4, released same day) showed nonfarm payrolls +162,000 (vs ~53-56K expected) and June/July revised up a combined 55,000 — sending the 10Y back up nearly 3bps to 4.79%, within striking distance of the Sept 2 cycle high, as CME FedWatch hike odds jumped to ~58%. The 30-year's Aug 17 peak of 5.31-5.32% (highest since June 2007) remains the cycle high. National debt concerns (nearing $40T), stubborn above-target inflation, and a still-unresolved US-Iran Gulf conflict (renewed strikes Sept 1-6 across Kuwait, UAE, and the Strait of Hormuz) remain the structural floor under long-end yields heading into the Sept 16-17 FOMC.",
+          "delta": "+0.18pp since Sept 4 (4.79% → 4.969%) as the Aug PPI print (5.4% YoY) and a fresh oil surge (Brent >$105) pushed the 10Y to its firmest level since October 2023",
+          "deltaDetail": {
+            "value": 0.18,
+            "direction": "up",
+            "period": "6d"
+          },
+          "deltaNote": "SEPT 4-10 ARC: The Sept 4 jobs blowout sent the 10Y back to 4.79%, near its Sept 2 cycle high, as CME hike odds rose to ~58%. Yields kept climbing into the new week: a fourth straight losing session for stocks on Sept 9 came alongside the 10Y touching its highest level since 2023 even after Treasury Secretary Bessent unveiled a $6B bond buyback plan aimed at supporting liquidity. The move culminated Sept 10 when the Aug PPI showed wholesale inflation accelerating to 5.4% YoY (energy +4.2%, diesel +24.1%) on the Gulf conflict's oil shock — the same day Brent topped $105-107/bbl (highest in ~4 months) and diesel hit a record $5.94/gal — sending the 10Y to roughly 4.97%, its firmest level since October 2023. The Sept 11 CPI (core 0.3% MoM, hot) pushed Fed hike odds to ~87%, though yields eased modestly as oil pulled back and stocks rallied. The 30-year's Aug 17 peak of 5.31-5.32% (highest since June 2007) remains the cycle high for that tenor. National debt concerns (nearing $40T), stubborn above-target inflation, and the unresolved US-Iran Gulf conflict remain the structural floor under long-end yields heading into the Sept 16-17 FOMC.",
           "trend": "up",
-          "lastUpdated": "2026-09-04T18:00:00Z"
+          "lastUpdated": "2026-09-10T18:00:00Z"
         },
         {
           "id": "us-consumer-confidence",
@@ -855,50 +854,57 @@
         {
           "id": "vix-fear-gauge",
           "label": "S&P 500 / Market Risk Gauge",
-          "value": "S&P 500 Holds Within ~1% of Record Highs (7,718.60, Sept 4) Despite the Jobs-Driven Yield Spike and an Unresolved Gulf Conflict",
+          "value": "S&P 500 at 7,672.80 (Sept 11) — Rebounded 1.07% to End a Four-Session Slide as Oil Cooled and CPI Read 'In Line Enough'",
           "color": "amber",
-          "source": "AP / Yahoo Finance / CNBC / The Motley Fool / Federal Reserve; July 23 – September 5, 2026",
+          "source": "AP / Yahoo Finance / CNBC / TheStreet / Federal Reserve; July 23 – September 11, 2026",
           "contested": false,
-          "delta": "SEPT 3-5: Stocks rallied Sept 3 on Waller's dovish signal (S&P +1.1%, Dow +1.2%, Nasdaq +1.4%), then slipped Sept 4 (Dow -0.51% to 53,414.25, S&P -0.38% to 7,718.60, Nasdaq -0.29%) as the blowout jobs report revived hike bets; the VIX remained low (~14.5) into the weekend even as the US-Iran Gulf conflict escalated further.",
-          "deltaNote": "AUG 27-SEPT 4 ARC: The market's Aug 27 record run gave way to a hawkish Jackson Hole keynote, an Aug 31 Mideast strike, and a two-day Sept 1-2 slide/rebound around a global bond rout. Sept 3 brought a broad rally (S&P 500 +1.1% to ~7,750, Dow +1.2% to ~53,685, Nasdaq +1.4% to ~26,584 — the best day in weeks) after Fed Governor Waller signaled openness to a September hold, even as Iran launched a second night of retaliatory strikes on Kuwait and the UAE. That reversed Sept 4: the blowout August jobs report (+162,000 vs ~53-56K expected) sent the Dow down 271.86 points (-0.51%) to 53,414.25, the S&P 500 down 0.38% to 7,718.60, and the Nasdaq down 0.29% to 26,506.99, with CME hike odds back to ~58%. Despite the whipsaw, the S&P 500 remained within about 1% of its all-time high and the VIX stayed low (~14.5), even as the Gulf conflict widened further over the weekend (US tanker strikes and Iranian reprisals, Sept 5-6) — a striking calm relative to the stacked macro and geopolitical risks.",
+          "delta": "-45.8 vs Sept 4 close (7,718.60 → 7,672.80) over the week, but +1.07% on Sept 11 alone as the index snapped a four-day losing streak",
+          "deltaDetail": {
+            "value": -45.8,
+            "direction": "down",
+            "period": "since Sept 4"
+          },
+          "deltaNote": "SEPT 4-11 ARC: The Sept 4 jobs blowout left the S&P 500 at 7,718.60, within ~1% of its record high. From there, a synchronized rise in oil (Brent toward $105-107 by Sept 10, highest in ~4 months) and Treasury yields (10Y to a fresh ~4.97% cycle high) drove a four-session slide into Sept 10, when the S&P closed around 7,592 (Dow ~52,064, Nasdaq ~26,082), down roughly 0.6% each on the day. The Aug PPI (Sept 10, +5.4% YoY) compounded the pressure. Sept 11 reversed the slide sharply: the Aug CPI's headline (3.4% YoY, 0.4% MoM) matched consensus even though core ran hot, and — combined with oil pulling back from its Sept 10 high — stocks rallied hard: Dow +1.03% to 52,602.74, S&P 500 +1.07% to 7,672.80, Nasdaq +1.23% to 26,403.77. The net effect: CME Fed hike odds for Sept 15-16 surged to ~87%, yet equities read the week as resolving uncertainty rather than raising it, closing essentially flat for the week despite the intraweek volatility.",
           "trend": "down",
-          "lastUpdated": "2026-09-05T21:00:00Z"
+          "lastUpdated": "2026-09-11T21:00:00Z"
         },
         {
           "id": "us-effective-tariff-rate",
           "label": "US Avg Effective Tariff Rate",
-          "value": "Canada Section 338 Tariffs (50% on ~$20B) Took Effect Aug 22; Canada Retaliates With 15-50% Tariffs on $20B, Effective Sept 8",
+          "value": "Canada's $27.6B Retaliatory Tariffs (15-50%) Took Effect Sept 8, Confirming a Live Two-Way Trade War With Its Largest Trading Partner",
           "color": "red",
-          "source": "USTR / Global Trade Alert / Bloomberg / AP; July 24 - August 25, 2026",
+          "source": "USTR / Canada Department of Finance / CNBC / Global Trade Alert; July 24 - September 8, 2026",
           "contested": true,
-          "contestNote": "US-Canada trade talks collapsed late Aug 21; the Section 338 tariffs (50% on ~$20B of Canadian autos, alcohol, and dairy) took effect Aug 22 (after a brief 3-day suspension from the original Aug 19 date). Carney declared Canada 'at war' with the US on trade. On Aug 25, Carney announced Canada's countermeasures: tiered 15%/25%/50% retaliatory tariffs on ~$20B of US goods across 700+ products (steel, aluminum, furniture, clothing at 50%; appliances, dairy, seafood at 25%; other industrial goods at 15%), effective September 8, plus a C$7.5B (US$5.4B) support package for affected workers and businesses. Two days later (Aug 24) Trump additionally threatened 50% tariffs on Canadian autos, auto parts, and steel starting Jan 1, 2027. Separately, the Section 122/Section 301 transition (60 economies, 10-12.5%) that resolved July 24 remains in force; USMCA-qualifying goods stay exempt from Section 301.",
+          "contestNote": "Canada's counter-tariffs on roughly $27.6B of US goods took effect at 12:01am Sept 8, tiered at 15%/25%/50% by product (steel, aluminum, furniture, clothing at 50%; dairy, seafood, appliances at 25%; other industrial goods at 15%), largely matching the corresponding US Section 338 rate. This confirms the Aug 25 announcement is now live, not just threatened. The Section 338 tariffs themselves (50% on ~$20B of Canadian autos, alcohol, and dairy) have been in force since Aug 22, after US-Canada trade talks collapsed. Trump's Aug 24 threat of additional 50% tariffs on Canadian autos, auto parts, and steel from Jan 1, 2027 remains outstanding. Separately, the Section 122/Section 301 transition (60 economies, 10-12.5%) that resolved July 24 remains in force; USMCA-qualifying goods stay exempt from Section 301.",
+          "delta": "Announced tariffs (Aug 25) became operative Sept 8 — status moved from threat to enforced two-way trade barrier",
+          "deltaNote": "SEPT 8: Canada's retaliatory tariffs took effect exactly as announced Aug 25, with no last-minute deal reached. Goods already in transit on Sept 8 are exempt.",
           "trend": "up",
-          "lastUpdated": "2026-08-25T18:00:00Z"
+          "lastUpdated": "2026-09-08T04:00:00Z"
         },
         {
           "id": "china-gdp-2025",
-          "label": "China GDP Q2 2026 (actual); July Activity Data Miss (Aug 17)",
-          "value": "4.3% (Q2 2026) — Slowest in 3.5 Years; July Output +4.5%, Retail Sales +0.6%, Both Miss",
+          "label": "China GDP Q2 2026 (actual); August Trade Data Mixed (Sept 8)",
+          "value": "4.3% (Q2 2026) — Slowest in 3.5 Years; August Exports +25% to Record Surplus, but Imports Miss on Soft Domestic Demand",
           "color": "red",
-          "source": "China NBS (Jul 14 / Aug 17, 2026) / IMF WEO Jul 2026 / Reuters / CNBC",
+          "source": "China NBS (Jul 14 / Aug 17 / Sept 8, 2026) / IMF WEO Jul 2026 / Reuters / CNBC",
           "contested": true,
-          "contestNote": "Q2 2026 missed forecast (4.3% vs 4.5% expected), down from 5.0% in Q1 — slowest pace in roughly 3.5 years. July activity data (Aug 17) extended the slowdown: industrial output +4.5% YoY (missed 4.8% forecast, down from June's 5.3%); retail sales +0.6% (missed 1.5% forecast; auto sales -17%); Jan-Jul fixed-asset investment -6.7% (worse than -6.0% expected, deepening from H1's -5.7%). Three July typhoons disrupted manufacturing hubs and fading subsidy support weighed on durable-goods spending. Beijing's late-July Politburo pledge of 'targeted stimulus' has yet to translate into major new measures.",
-          "delta": "-0.7pp vs Q1 2026; July activity data below forecast across output, sales, and investment",
-          "deltaNote": "Q1 2026: 5.0% (front-loaded exports). Q2 2026: 4.3% — Iran war demand destruction and property-sector drag materializing as expected. July's across-the-board miss (Aug 17) reinforces the structural-slowdown case and raises pressure on Beijing for stronger H2 fiscal support to hit its 2026 growth target.",
+          "contestNote": "Q2 2026 missed forecast (4.3% vs 4.5% expected), down from 5.0% in Q1 — slowest pace in roughly 3.5 years. July activity data (Aug 17) extended the slowdown: industrial output +4.5% YoY (missed forecast); retail sales +0.6% (missed forecast); Jan-Jul fixed-asset investment -6.7%. August trade data (Sept 8) is a mixed signal for the recovery debate: exports jumped 25% YoY to $401.44B (autos +43%, semiconductors +129.8%) on AI-driven global demand, pushing the trade surplus to a record $119.09B, but imports rose only 28.2% YoY versus a ~30% forecast — evidence domestic demand remains soft even as exports do the heavy lifting. Beijing's late-July Politburo pledge of 'targeted stimulus' has yet to translate into major new measures.",
+          "delta": "-0.7pp vs Q1 2026 GDP; August trade surplus widened to a record $119.09B (from $112.5B in July) on export strength, but import growth missed forecast",
+          "deltaNote": "Q1 2026: 5.0% (front-loaded exports). Q2 2026: 4.3% — Iran war demand destruction and property-sector drag materializing as expected. July's across-the-board activity miss (Aug 17) reinforced the structural-slowdown case. Sept 8 trade data shows exports remain the primary growth engine (redirected increasingly to Southeast Asia, Latin America, and Africa to offset US tariffs) while the import miss confirms household demand has not recovered, keeping pressure on Beijing for stronger H2 fiscal support.",
           "trend": "down",
-          "lastUpdated": "2026-08-17T09:00:00Z"
+          "lastUpdated": "2026-09-08T03:00:00Z"
         },
         {
           "id": "global-policy-uncertainty",
           "label": "Global Policy Uncertainty / Recession Risk",
-          "value": "SEPT 6: Gulf War Escalates Further (Tanker Strikes, Naval Blockade Clashes) as a Blowout Jobs Report Reverses a One-Day Dovish Fed Signal",
+          "value": "SEPT 13: A Fatal Hormuz Attack and Stalled UAE-Iran Diplomacy Keep the Oil-Risk Channel Live Two Days Before a Fed Meeting Already Priced for a Hike",
           "color": "red",
-          "source": "Federal Reserve / BLS / ADP / ISM / China NBS / Census Bureau / U. Michigan; July 17 – September 6, 2026",
+          "source": "Federal Reserve / BLS / CME FedWatch / China NBS / Canada Dept. of Finance / UKMTO; July 17 – September 13, 2026",
           "contested": false,
-          "delta": "SEPT 3-6 ARC: Fed Governor Waller's dovish Sept 3 signal was reversed within a day by a blowout August jobs report (Sept 4), while the US-Iran Gulf conflict widened into a multi-country exchange (Kuwait, UAE, mutual Hormuz tanker strikes) with no sign of de-escalation into the weekend — reinforcing both the inflation-hawk case for the Fed and the oil-supply-shock risk to growth.",
-          "deltaNote": "SEPT 6 RECESSION RISK SNAPSHOT: Two risk channels are now moving in the same direction. (1) LABOR/FED: Waller's Sept 3 remarks briefly cut September hike odds to ~48-55%, but the Sept 4 BLS report (nonfarm payrolls +162,000 vs ~53-56K expected, unemployment steady at 4.1%, June/July revised up 55,000 combined) reversed that to ~58%, with the 10Y Treasury back near its Sept 2 cycle high (4.79% vs 4.814%). (2) GULF CONFLICT: The Sept 1 US strikes near the Strait of Hormuz triggered a widening Iranian response — retaliatory strikes on US-linked bases in Jordan, Kuwait, and the UAE (Sept 2-3), then a direct IRGC ballistic-missile attack on a US carrier group answered by the US destroying three Iranian tankers, with Iran hitting six more vessels in reprisal (Sept 5), and further IRGC attacks on US warships claimed Sept 6 alongside a harsher Iranian rhetorical line ('the era of proportionate responses is over'). Brent crude is on track for roughly an 8% weekly gain. Despite the stacked risks, US equities remain within ~1% of record highs and the VIX stayed low (~14.5) — a resilience that could unwind quickly if the Gulf conflict or the Sept 16-17 FOMC surprises to the hawkish side. Also in play: Canada's retaliatory tariffs take effect Sept 8, and China's slowdown remains unresolved. Next catalysts: Canada tariff effective date (Sept 8) and the September 16-17 FOMC meeting.",
+          "delta": "SEPT 12-13 ARC: A BRICS-summit UAE-Iran meeting (Sept 12) raised hopes of Gulf de-escalation, but a fatal, unclaimed strike on a vessel near Qeshm/Hengam Island (Sept 13) renewed the oil-supply risk into the Sept 15-16 FOMC, where hike odds remain ~87-88%.",
+          "deltaNote": "SEPT 13 RECESSION RISK SNAPSHOT: The week's three risk channels (trade, inflation/Fed, oil/yields — see Sept 11 snapshot) carried into the weekend largely unresolved. DIPLOMACY VS. VIOLENCE: The BRICS summit in New Delhi produced the highest-level UAE-Iran contact since Abu Dhabi's August trade suspension (Sept 12), plus a bloc-wide declaration calling for protected energy flows through Hormuz, and Iran signaled a shared shipping-route deal with Oman was near signing — the most concrete de-escalation signal in weeks. That was undercut within a day: an unclaimed strike killed one crew member on a vessel near Qeshm/Hengam Island (Sept 13), with strait shipping now running roughly 90% below its pre-conflict baseline. OIL: WTI had pulled back to $100.05 (-2.4%) and Brent to ~$104.60 on Sept 11 as the VIX plunged 11.2% to 15.84, but the Sept 13 attack reopens the case for a fresh leg higher when futures resume Monday, just as the Fed enters its blackout-adjacent final stretch before Sept 15-16. NET: with cash equities and Treasuries closed over the weekend, the dominant channel into the FOMC decision is now the Gulf itself rather than incremental US data — recession-risk estimates stay elevated on the same 'no landing' logic (above-trend growth signals plus above-target, oil-driven inflation) flagged since June.",
           "trend": "down",
-          "lastUpdated": "2026-09-06T12:00:00Z"
+          "lastUpdated": "2026-09-13T17:42:04Z"
         },
         {
           "id": "boj-policy-rate",
@@ -916,6 +922,126 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "sheinbaum-ceremonia-ninos-heroes-chapultepec-sep13-2026",
+          "date": "2026-09-13",
+          "title": "Day 712 — Sheinbaum Leads 179th Niños Héroes Chapultepec Ceremony as Commander-in-Chief; Defense Secretary Pledges 'Absolute Loyalty'",
+          "type": "political",
+          "detail": "On September 13, 2026 (Day 712, Sunday), President Sheinbaum, in her capacity as commander-in-chief of the Armed Forces, led the ceremony marking the 179th anniversary of the 1847 defense of Chapultepec Castle against the U.S. invasion, held at the Altar a la Patria in the Bosque de Chapultepec, Mexico City, before members of Congress, federal officials, military commanders, cadets and students. Defense Secretary Ricardo Trevilla Trejo delivered the main address, calling to \"strengthen our national unity, transmit to our children and youth the love for Mexico\" and pledging that the Armed Forces would continue contributing to security and welfare \"under your guidance,\" with \"absolute loyalty\" to Mexico and its institutions. A company of cadets from the Heroico Colegio Militar fired a rifle salute in memory of the six cadets who died defending the castle in 1847: Lieutenant Juan de la Barrera and cadets Juan Escutia, Agustín Melgar, Vicente Suárez, Fernando Montes de Oca and Francisco Márquez. Trevilla Trejo framed national sovereignty as both a constitutional mandate and a historical responsibility. Sheinbaum was scheduled to travel afterward to Pachuca, Hidalgo, to continue her \"Honestidad y Resultados\" report tour with a regional accountability event at the Domo de las Estrellas.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/13/secretario-de-la-defensa-pide-unidad-nacional-en-el-179-aniversario-de-la-gesta-heroica-de-los-ninos-heroes-de-chapultepec/"
+            },
+            {
+              "name": "El Heraldo de México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://heraldodemexico.com.mx/nacional/2026/9/13/sheinbaum-encabeza-ceremonia-por-los-179-anos-de-la-gesta-heroica-de-los-ninos-heroes-887419.html"
+            },
+            {
+              "name": "PorEsto",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.poresto.com/mexico/2026/9/13/encabeza-claudia-sheinbaum-homenaje-a-los-ninos-heroes-en-chapultepec-en-vivo.html"
+            },
+            {
+              "name": "La Jornada Hidalgo",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://lajornadahidalgo.com/sheinbaum-en-pachuca-fecha-hora-y-lugar-de-su-visita-a-hidalgo/"
+            }
+          ]
+        },
+        {
+          "id": "sheinbaum-informe-honestidad-resultados-merida-yucatan-sep12-2026",
+          "date": "2026-09-12",
+          "title": "Day 711 — Sheinbaum Presents Yucatán Accountability Report in Mérida: 781,000 in Welfare Programs, Tren Maya Cargo Line, New Power Plant",
+          "type": "political",
+          "detail": "On September 12, 2026 (Day 711, Saturday), President Sheinbaum arrived in Mérida to deliver her regional \"Honestidad y Resultados\" (Honesty and Results) accountability report at the Yucatán Siglo XXI Convention Center, accompanied by Governor Joaquín \"Huacho\" Díaz Mena, federal cabinet officials and regional representatives. She reported that 781,215 Yucatecans receive benefits from federal welfare programs, representing an investment of more than 17 billion pesos in the state. On healthcare, she highlighted Yucatán's full integration into IMSS-Bienestar — guaranteeing free medical care — and the ongoing 5.41-billion-peso expansion of the Hospital General \"Dr. Agustín O'Horán\" in Mérida, plus construction of a Health University in Umán and three Benito Juárez García Welfare Universities. On infrastructure, she announced 244 new primary-care clinics for Yucatán as part of a 12,750-unit national network, cited the newly completed \"Elvia Carrillo Puerto\" combined-cycle power plant (454 million USD investment, 518 MW capacity, benefiting roughly 1.2 million residents), and detailed the first stage of the Tren Maya de Carga freight line — a 36.614-billion-peso investment with five cargo complexes and four operating yards. A new 1,100-student high school in Mérida was also announced. Yucatán was the 16th state visited in the tour's first two weeks; the \"Honestidad y Resultados\" tour reaches its midpoint here and is scheduled to conclude September 27 in Mexico City.",
+          "sources": [
+            {
+              "name": "LJA.mx",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.lja.mx/2026/09/la-transformacion-recupero-la-dignidad-del-pueblo-de-mexico-presidenta-claudia-sheinbaum/"
+            },
+            {
+              "name": "La Crónica de Hoy",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.cronica.com.mx/nacional/2026/09/12/sheinbaum-destaca-avances-en-yucatan-con-vivienda-energia-y-el-tren-maya-de-carga/"
+            },
+            {
+              "name": "The Yucatan Times",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://theyucatantimes.com/2026/09/mexican-president-claudia-sheinbaum-presents-accountability-report-in-merida/"
+            },
+            {
+              "name": "PorEsto",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.poresto.com/yucatan/merida/2026/9/12/claudia-sheinbaum-presenta-honestidad-y-resultados-desde-merida-sigue-la-transmision-en-vivo.html"
+            }
+          ]
+        },
+        {
+          "id": "chiapas-seguridad-ine-boleta-recta-sep11-2026",
+          "date": "2026-09-11",
+          "title": "Day 710 — Sheinbaum Holds Mañanera in Chiapas, Cites Security Gains and Reversal of Forced Displacement; Questions INE Straight-Ballot Criteria",
+          "type": "political",
+          "detail": "On September 11, 2026 (Day 710, Friday), President Sheinbaum held her mañanera in Tuxtla Gutiérrez, Chiapas, alongside Governor Eduardo Ramírez Aguilar. Security Secretary Omar García Harfuch reported that since December 2024 the state has recorded 9,949 detentions, 1,832 recovered vehicles, 1,545 seized weapons and 71,798 confiscated cartridges, plus 18.6 tonnes of drugs secured through 101,907 joint interinstitutional operations, alongside a 64% drop in the daily average of intentional homicides and a 44% drop in other high-impact crimes compared to December 2024; the governor cited incorporating 800 experienced officers and a 55% police salary increase. Officials said forced displacement in Chiapas — which shifted in character from religious conflicts toward territorial disputes among criminal groups — has substantially reversed, with roughly 95% of displaced families returned home, including in Comalapa and Chicomuselo municipalities where residents had fled into Guatemala. On literacy, Chiapas reported reaching 194,818 people since 2025 against a 250,000 target. Sheinbaum also asked the INE to clarify new criteria that would count unfolded \"straight ballots\" as valid votes, and argued the agency's 2027 election budget should be based on 2024 spending adjusted for inflation. Asked about PAN officials' trip to Europe during the early stage of the 2026–27 electoral process, she said, \"Tienen derecho... pero tiene su simbolismo,\" noting the timing near Mexico's Independence Day.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/11/en-vivo-la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-11-de-septiembre/"
+            },
+            {
+              "name": "El Imparcial",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elimparcial.com/mexico/2026/09/11/mananera-de-claudia-sheinbaum-hoy-viernes-11-de-septiembre-del-2026/"
+            },
+            {
+              "name": "Serpientes y Escaleras",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://serpientesyescaleras.mx/mananera-de-sheinbaum-hoy-11-de-septiembre-seguridad-en-chiapas-ine-y-pisa/"
+            }
+          ]
+        },
+        {
+          "id": "sheinbaum-ley-economia-digital-tasa-cero-libros-sep10-2026",
+          "date": "2026-09-10",
+          "title": "Day 709 — Economy Secretary Details Digital Economy Law, Sheinbaum Announces Zero VAT Rate for Books",
+          "type": "economic",
+          "detail": "Also at the September 10, 2026 mañanera, the Secretariat of Economy detailed the Digital Economy Law for Digital and Electronic Payments — sent to the Chamber of Deputies alongside the 2027 Economic Package — which sets phased targets and timelines to shift public institutions, private companies and priority sectors from cash toward digital and electronic payment methods, with incentives and training tools aimed at helping micro and small businesses adopt secure electronic collection without hurting their income. Officials said more than 4.1 million taxpayers would benefit from simplified, fully digital tax procedures, including small businesses newly able to pay income tax on a quarterly rather than monthly basis. Separately, Sheinbaum announced books will be subject to a zero VAT rate rather than the standard exemption, allowing bookstores and publishers to recover VAT paid on their own expenses without the retail price to readers increasing.",
+          "sources": [
+            {
+              "name": "El Imparcial",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elimparcial.com/mexico/2026/09/10/mananera-de-claudia-sheinbaum-hoy-jueves-10-de-septiembre-del-2026/"
+            },
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/10/la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-10-de-septiembre/"
+            },
+            {
+              "name": "El Financiero",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elfinanciero.com.mx/nacional/2026/09/10/claudia-sheinbaum-mananera-temas-hoy-10-de-septiembre-de-2026-en-vivo/"
+            }
+          ]
+        },
         {
           "id": "sheinbaum-presenta-paquete-economico-2027-ley-economia-digital-sep9-2026",
           "date": "2026-09-09",
@@ -1093,6 +1219,39 @@
               "tier": 2,
               "pole": "western",
               "url": "https://lopezdoriga.com/nacional/juan-carlos-valencia-lider-cjng-tiene-orden-extradicion-garcia-harfuch/"
+            }
+          ]
+        },
+        {
+          "id": "zenyazen-escobar-diputado-morena-muerte-veracruz-sep4-2026",
+          "date": "2026-09-04",
+          "title": "Morena Federal Deputy Zenyazen Escobar García Found Dead in Veracruz; FGR Takes Over Investigation",
+          "type": "political",
+          "detail": "On the morning of September 4, 2026, federal deputy Zenyazen Roberto Escobar García (Morena, District 16, Córdoba, Veracruz) was found dead inside a vehicle on the Veracruz-Xalapa federal highway in the La Gloria community of Puente Nacional municipality, with at least one gunshot wound. Veracruz state government secretary Ricardo Ahued Bardahuil initially said authorities were not treating it as an attack, noting the vehicle showed no visible damage, while state prosecutors opened a homicide investigation; the Fiscalía General de la República (FGR) announced it would take over the case given Escobar's status as a sitting federal legislator. Escobar, 42, previously served as Veracruz's Secretary of Education (2018–2021) under Governor Cuitláhuac García and had drawn controversy in May 2026 over an altercation with a PRI legislator inside the Chamber of Deputies. Morena's Chamber coordinator Ricardo Monreal offered condolences, calling Escobar a public servant devoted to Veracruz; on September 8, Jucopo coordinators agreed not to form a special legislative commission, opting instead to await the FGR's forensic findings before any further chamber action, alongside a moment of silence and posthumous tribute.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/04/asesinan-al-diputado-de-morena-zenyazen-escobar-acusado-de-emborracharse-en-la-camara-de-diputados-en-mayo/"
+            },
+            {
+              "name": "El Financiero",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elfinanciero.com.mx/estados/2026/09/04/asesinan-a-zenyazen-escobar-diputado-federal-de-morena-fue-atacado-en-carretera-en-veracruz/"
+            },
+            {
+              "name": "La Jornada",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.jornada.com.mx/noticia/2026/09/04/politica/fgr-atraera-investigacion-del-homicidio-del-diputado-de-morena-zenyazen-escobar"
+            },
+            {
+              "name": "El Imparcial",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elimparcial.com/mexico/2026/09/08/zenyazen-escobar-camara-de-diputados-descarta-comision-para-investigar-la-muerte-del-legislador-de-morena/"
             }
           ]
         },
@@ -1311,86 +1470,68 @@
               "url": "https://www.ambito.com/mexico/lifestyle/mexico-hace-historia-nivel-ambiental-claudia-sheinbaum-lanza-nueva-ley-general-proteger-y-reparar-los-ecosistemas-todo-el-pais-n6314961"
             }
           ]
-        },
-        {
-          "id": "dominguez-nava-sinaloa-interim-governor-aug25-2026",
-          "date": "2026-08-25",
-          "title": "Day 693 — Sinaloa Congress Names Graciela Domínguez Nava Interim Governor, 31-6",
-          "type": "political",
-          "detail": "On August 25, 2026 (Day 693, Tuesday), the Sinaloa Congress voted 31 in favor to 6 against, with zero abstentions, to designate Graciela Domínguez Nava as interim governor, resolving the succession question left open when the legislature approved Rubén Rocha Moya's indefinite leave on August 23. The session had originally been scheduled for Monday, August 24 but was suspended and reconvened the following day. Domínguez Nava, a Morena sociologist and former Sinaloa state deputy (2018–2021) and Secretary of Public Education and Culture (2021–2024) who was also serving as federal deputy for Mazatlán's District 1 before taking leave in June, becomes the state's third governor of 2026 after Rocha Moya and interim predecessor Yeraldine Bonilla Valverde.",
-          "sources": [
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/noticia/2026/08/25/politica/graciela-dominguez-navase-convierte-en-la-gobernadora-interina-de-sinaloa"
-            },
-            {
-              "name": "Récord",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.record.com.mx/historia/quien-es-graciela-dominguez-nava-la-nueva-gobernadora-interina-de-sinaloa-que-sustituye-a-rocha-moya-2026082521043575015"
-            },
-            {
-              "name": "El Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/8/25/quien-es-graciela-dominguez-nava-la-nueva-gobernadora-interina-de-sinaloa-tras-licencia-de-rocha-moya-875913.html"
-            }
-          ]
-        },
-        {
-          "id": "cattle-exports-us-reopen-agua-prieta-aug24-2026",
-          "date": "2026-08-24",
-          "title": "Day 692 — US Reopens Border to Mexican Cattle Exports at Agua Prieta, Sonora After 14-Month Screwworm Ban",
-          "type": "economic",
-          "detail": "On August 24, 2026 (Day 692, Monday), the United States reopened the Agua Prieta (Sonora)–Douglas (Arizona) crossing to Mexican cattle exports, ending a suspension imposed after the first New World screwworm (gusano barrenador) case was detected in a Chiapas bovine in November 2024; the ban had blocked roughly 1.7 million head of cattle worth an estimated $2.2 billion. President Sheinbaum said she received a letter from U.S. Agriculture Secretary Brooke Rollins notifying her of the decision. The reopening follows a joint SADER–SENASICA–USDA sanitary action plan and enhanced traceability across a 200-km radius in Sonora and Chihuahua; an initial shipment of roughly 750 head crossed on the first day, with a target of 1,700–2,000 head per day at full capacity. Additional crossings — San Jerónimo-Santa Teresa and Puerto Palomas-Columbus, both linking Chihuahua to New Mexico — are slated to follow in a staggered rollout.",
-          "sources": [
-            {
-              "name": "Excélsior",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.excelsior.com.mx/nacional/eu-reanudara-exportacion-ganado-mexicano-finales-agosto-sheinbaum"
-            },
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/noticia/2026/07/24/estados/estados-unidos-reabrira-el-24-de-agosto-la-frontera-de-agua-prieta-para-exportacion-de-ganado-sonorense"
-            },
-            {
-              "name": "Dossier Político",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://dossierpolitico.com/2026/08/23/sonora-reactiva-este-lunes-envio-de-ganado-a-eu-por-agua-prieta-con-embarque-de-750-cabezas/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-alito-moreno-entreguista-traidor-aug24-2026",
-          "date": "2026-08-24",
-          "title": "Day 692 — Sheinbaum Calls PRI's Alito Moreno \"Entreguista, Traidor\" Over US Tour, Flags $120K Consultancy Contract to INE",
-          "type": "political",
-          "detail": "On August 24, 2026 (Day 692, Monday), President Sheinbaum escalated her criticism of PRI national leader Alejandro \"Alito\" Moreno Cárdenas, calling him \"entreguista, traidor\" over his repeated trips to Washington to lobby U.S. officials against her government. She said it was up to the INE to determine whether Moreno's reported $120,000-a-month contract with Washington firm Concord Hill Strategies — covering trip logistics and image/wardrobe coaching for his meetings with Trump administration and Congressional officials — violated Mexican political-party financing rules, adding that his \"funciones están en EEUU y no en México.\" The comments follow Interior Undersecretary Ariadna Montiel's earlier accusation that Moreno's US visits sought \"protección\" from domestic corruption investigations. Separately, Sheinbaum said she was not consulted on Sinaloa Governor Rocha Moya's brief Aug 21 return to office — \"me enteré por la publicación\" — and deferred to the state Congress on the succession.",
-          "sources": [
-            {
-              "name": "Ámbito",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.ambito.com/mexico/informacion-general/la-mananera-claudia-sheinbaum-hoy-lunes-24-agosto-2026-minuto-minuto-vivo-n6313273"
-            },
-            {
-              "name": "Forbes México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://forbes.com.mx/el-presidente-del-pri-paga-120-mil-dolares-por-logistica-y-asesoria-de-imagen-para-sus-reuniones-en-eu/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "canada-trump-trade-war-impact-sep12-2026",
+          "date": "2026-09-12",
+          "title": "Canadians Adjust to Sustained Impact of Trump's Trade War",
+          "type": "economic",
+          "detail": "Canadians describe how they are adjusting economically and politically to the sustained impact of Trump's trade war, including supply chain shifts and consumer price pressures as tariff policies continue to reshape North American commerce.",
+          "sources": [
+            {
+              "name": "Al Jazeera",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/economy/2026/9/12/how-canadians-are-bracing-for-the-impact-of-trumps-trade-war?traffic_source=rss",
+              "pole": "middle_eastern"
+            }
+          ]
+        },
+        {
+          "id": "trump-5000-dividend-dallas-convention-closing-sep10-2026",
+          "date": "2026-09-10",
+          "title": "Trump Promises $5,000 'Dividend' Checks to Every American Adult if Republicans Keep Congress",
+          "type": "economic",
+          "detail": "Closing out the RNC's first-ever midterm convention at Dallas's American Airlines Center on Thursday, September 10, 2026, President Trump pledged that every American adult citizen would receive a $5,000 check — which he dubbed the 'Trump dividend' — if Republicans retain control of the House and Senate in November. 'If the Republicans win, you win with us and you get $5,000,' Trump told the crowd, offering no detail on funding mechanics, though Vice President Vance had indicated tariff revenue would partly cover the cost. With roughly 245 million US adult citizens, the payout would total an estimated $1.2 trillion. Tax Foundation economist Erica York said the checks would 'spend almost all the revenue that the new tariffs are projected to bring in over a decade,' and former IMF chief economist Kenneth Rogoff warned it would 'blow up' an already unsustainable deficit; election-law scholar Rick Hasen said Trump likely has First Amendment latitude to make the campaign promise (citing Brown v. Hartlage) but actual payments would require congressional approval. Similar Trump pledges in 2025 — a tariff dividend and a DOGE dividend — never materialized. In the same speech Trump also vowed to make his tax cuts permanent, pursue 'most-favored-nation' prescription drug pricing, redirect health-insurer payments directly to citizens, and told the crowd 'you go to hell' if they don't vote in November.",
+          "sources": [
+            {
+              "name": "PBS News",
+              "tier": 2,
+              "url": "https://www.pbs.org/newshour/politics/trump-promised-5000-checks-if-republicans-win-the-midterms-how-would-that-work",
+              "pole": "western"
+            },
+            {
+              "name": "Fox 4 Dallas-Fort Worth",
+              "tier": 2,
+              "url": "https://www.fox4news.com/election/donald-trump-republican-midterm-convention-dallas-texas-closing",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "trump-5000-dividend-dallas-convention-closing-sep10-2026",
+          "date": "2026-09-10",
+          "title": "Trump Promises $5,000 'Dividend' Checks to Every American Adult if Republicans Keep Congress",
+          "type": "economic",
+          "detail": "Closing out the RNC's first-ever midterm convention at Dallas's American Airlines Center on Thursday, September 10, 2026, President Trump pledged that every American adult citizen would receive a $5,000 check — which he dubbed the 'Trump dividend' — if Republicans retain control of the House and Senate in November. 'If the Republicans win, you win with us and you get $5,000,' Trump told the crowd, offering no detail on funding mechanics, though Vice President Vance had indicated tariff revenue would partly cover the cost. With roughly 245 million US adult citizens, the payout would total an estimated $1.2 trillion. Tax Foundation economist Erica York said the checks would 'spend almost all the revenue that the new tariffs are projected to bring in over a decade,' and former IMF chief economist Kenneth Rogoff warned it would 'blow up' an already unsustainable deficit; election-law scholar Rick Hasen said Trump likely has First Amendment latitude to make the campaign promise (citing Brown v. Hartlage) but actual payments would require congressional approval. Similar Trump pledges in 2025 — a tariff dividend and a DOGE dividend — never materialized. In the same speech Trump also vowed to make his tax cuts permanent, pursue 'most-favored-nation' prescription drug pricing, redirect health-insurer payments directly to citizens, and told the crowd 'you go to hell' if they don't vote in November.",
+          "sources": [
+            {
+              "name": "PBS News",
+              "tier": 2,
+              "url": "https://www.pbs.org/newshour/politics/trump-promised-5000-checks-if-republicans-win-the-midterms-how-would-that-work",
+              "pole": "western"
+            },
+            {
+              "name": "Fox 4 Dallas-Fort Worth",
+              "tier": 2,
+              "url": "https://www.fox4news.com/election/donald-trump-republican-midterm-convention-dallas-texas-closing",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "treasury-operation-economic-outcast-iran-airlines-sanctions-sep8-2026",
           "date": "2026-09-08",
@@ -1430,6 +1571,33 @@
               "tier": 2,
               "url": "https://www.agbi.com/aviation/2026/09/us-sanctions-iranian-airlines-in-financial-crackdown/",
               "pole": "middle_eastern"
+            }
+          ]
+        },
+        {
+          "id": "trump-canada-section-338-import-bans-sep8-2026",
+          "date": "2026-09-08",
+          "title": "Trump Escalates Canada Trade War: Bans Canadian Dairy, Alcohol and Motorcycle Imports Under Section 338",
+          "type": "economic",
+          "detail": "President Trump signed five proclamations Tuesday, September 8, 2026, sharply escalating the trade war with Canada in direct response to Canada's retaliatory tariffs that took effect at 12:01 a.m. the same day. Three proclamations impose outright bans, effective September 29, 2026, on imports of Canadian dairy products, molasses and non-alcoholic beer, most alcoholic beverages, and motorcycles; two others revise the 50% Section 338 tariff list, removing cement, road salt and hospital pads while adding all-terrain vehicles, additional cheeses and motorboats. Section 338 of the Tariff Act of 1930 — unused for nearly a century before Trump invoked it in late August 2026 — lets the president act without a new statute. USTR Jamieson Greer said of Canada's retaliation, 'That's not the kind of company you really want to be running in.' Earlier the same day, Trump posted on Truth Social that he would bar federal agencies from buying Canadian goods 'unless Canada restores full and fair reciprocity for American Farmers and Companies.'",
+          "sources": [
+            {
+              "name": "NBC News",
+              "tier": 2,
+              "url": "https://www.nbcnews.com/business/economy/trump-escalates-trade-war-canada-moving-ban-import-autos-dairy-alcohol-rcna596666",
+              "pole": "western"
+            },
+            {
+              "name": "The White House",
+              "tier": 1,
+              "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-responds-to-canadas-retaliation/",
+              "pole": "western"
+            },
+            {
+              "name": "Axios",
+              "tier": 2,
+              "url": "https://www.axios.com/2026/09/08/trump-tariffs-canada-import-ban-alcohol-dairy-motorcycles",
+              "pole": "western"
             }
           ]
         },
@@ -1492,54 +1660,6 @@
               "name": "Washington Times",
               "tier": 2,
               "url": "https://www.washingtontimes.com/news/2026/sep/3/donald-trump-cuts-migrant-population-nearly-3-million-total-us/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "bessent-asphyxiate-iran-economy-irgc-assets-sep2-2026",
-          "date": "2026-09-02",
-          "title": "Bessent Vows to 'Economically Asphyxiate' Iran, Targets IRGC Offshore Assets",
-          "type": "economic",
-          "detail": "Treasury Secretary Scott Bessent said Tuesday, September 1, 2026, at a G20 finance ministerial discussion moderated by Larry Kudlow, 'We are going to economically asphyxiate this regime,' outlining plans to freeze Islamic Revolutionary Guard Corps offshore accounts — including trust-company holdings in the British Virgin Islands — and roughly $100 million in luxury real estate held globally. Bessent said the administration would pursue secondary sanctions barring entities that do business with the IRGC, including airline-leasing companies, from the US dollar system, Federal Reserve wire transfers, and SWIFT access, with any recovered proceeds potentially going to terror victims or the Iranian people. The push came alongside the renewed CENTCOM-IRGC exchange of strikes.",
-          "sources": [
-            {
-              "name": "Fox Business",
-              "tier": 2,
-              "url": "https://www.foxbusiness.com/politics/bessent-vows-asphyxiate-iran-economically-warns-regimes-offshore-assets-frozen",
-              "pole": "western"
-            },
-            {
-              "name": "Washington Post",
-              "tier": 2,
-              "url": "https://www.washingtonpost.com/business/2026/09/01/bessent-says-us-plan-asphyxiate-irans-economy-has-allies-support/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-meets-oil-refiners-gas-prices-sep1-2026",
-          "date": "2026-09-02",
-          "title": "Trump Meets Oil Refiners at White House to Push Down $4-a-Gallon Gas Prices",
-          "type": "economic",
-          "detail": "President Trump met Tuesday, September 1, 2026, with executives from small, medium, and large oil refiners and distributors at the White House — alongside Interior Secretary Doug Burgum, Energy Secretary Chris Wright, and National Energy Dominance Council Executive Director Jarrod Agen — to discuss expanding US refining capacity and lowering pump prices, which have held near $4.10/gallon nationally amid the renewed Iran war. Discussion touched on regulatory rollbacks, faster permitting, and additional refinery investment; Exxon was reportedly not among the invited companies. The meeting followed the administration's Venezuela oil deal, under which the US secured majority control of 65 billion barrels of proven reserves.",
-          "sources": [
-            {
-              "name": "CNBC",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/31/trump-refiners-gas-prices-refining-capacity.html",
-              "pole": "western"
-            },
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/news/articles/2026-09-01/trump-ramps-up-pressure-on-squeezed-refiners-to-ease-pump-prices",
-              "pole": "western"
-            },
-            {
-              "name": "Washington Times",
-              "tier": 2,
-              "url": "https://www.washingtontimes.com/news/2026/sep/1/trump-seeks-boost-us-refining-capacity-white-house-lays-details/",
               "pole": "western"
             }
           ]
