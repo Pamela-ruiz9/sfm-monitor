@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-09-14",
+  "ultima_actualizacion": "2026-09-15",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
@@ -1588,7 +1588,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-09-14",
+        "fecha": "2024-09-15",
         "valor": 10.75
       },
       {
@@ -2737,8 +2737,8 @@
   },
   "mercado": {
     "reservas_internacionales": {
-      "actual": 258034.6,
-      "fecha": "2026-09-04",
+      "actual": 257553.9,
+      "fecha": "2026-09-11",
       "historico": [
         {
           "fecha": "2025-09-19",
@@ -2943,12 +2943,16 @@
         {
           "fecha": "2026-09-04",
           "valor": 258034.6
+        },
+        {
+          "fecha": "2026-09-11",
+          "valor": 257553.9
         }
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7559,
-      "fecha": "2026-09-14",
+      "actual": 6.7458,
+      "fecha": "2026-09-15",
       "historico": [
         {
           "fecha": "2024-09-17",
@@ -4329,6 +4333,10 @@
         {
           "fecha": "2026-09-14",
           "valor": 6.7559
+        },
+        {
+          "fecha": "2026-09-15",
+          "valor": 6.7458
         }
       ]
     },
@@ -4759,8 +4767,8 @@
       ]
     },
     "udis": {
-      "actual": 8.818285,
-      "fecha": "2026-09-14"
+      "actual": 8.818843,
+      "fecha": "2026-09-15"
     },
     "salario_minimo": {
       "actual": 315.04,
