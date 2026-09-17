@@ -1,8 +1,77 @@
 {
-  "updated": "2026-09-16T17:54:25Z",
+  "updated": "2026-09-17T17:53:32Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "fed-hikes-25bp-first-since-2023-sept16-2026",
+          "date": "2026-09-16",
+          "title": "Fed Delivers First Rate Hike Since 2023 — Unanimous 25bp Move Lifts Funds Rate to 3.75-4.00%",
+          "type": "policy",
+          "detail": "The FOMC voted unanimously to raise the federal funds rate 25 basis points to a target range of 3.75%-4.00%, the Fed's first hike since July 2023, ending more than three years without an increase. The post-meeting statement said 'inflation remains elevated' and that 'today's policy action will support a timelier return to the Committee's 2 percent goal.' The updated Summary of Economic Projections showed the median 2026 rate dot rising to 4.1%, up from June's 3.8% — four members projected a further 50 basis points of hikes before year-end, while two saw no additional moves. The unanimous vote was notable given Chair Kevin Warsh was appointed by President Trump, who has pushed publicly for lower rates; Warsh's press conference instead emphasized rebuilding the Fed's inflation-fighting credibility, citing stubborn CPI/PPI readings and the Gulf-driven oil shock. Equities took the move in stride: the S&P 500 rose about 0.3%, the Nasdaq added roughly 0.7%, and the Dow slipped about 44 points (-0.1%), while the 10-year Treasury yield eased back below 5% to roughly 4.95% following the announcement, having touched a post-2007 high of 5.02% the day before.",
+          "sources": [
+            {
+              "name": "CNN Business — Live Updates: Fed Raises Interest Rates for the First Time Since 2023",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/09/16/business/live-news/federal-reserve-interest-rate-september",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — Fed Meeting Live Updates: Fed Hikes Interest Rates by 25 Basis Points for First Time in 3 Years in Unanimous Decision",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/economy/policy/live/federal-reserve-meeting-live-updates-chairman-kevin-warsh-143452661.html",
+              "pole": "western"
+            },
+            {
+              "name": "CryptoTimes — FOMC Live: Federal Reserve Raised Interest Rates by 25 Basis Points",
+              "tier": 3,
+              "url": "https://www.cryptotimes.io/2026/09/16/fomc-live-meeting-rate-decision-time-schedule-kevin-warsh-announcement/",
+              "pole": "international"
+            }
+          ]
+        },
+        {
+          "id": "treasury-yield-tops-2007-high-oil-fomc-eve-sept15-2026",
+          "date": "2026-09-15",
+          "title": "10-Year Treasury Yield Tops 5%, Highest Since 2007, as Oil Holds Near $109 and Houthi Escalation Deepens on FOMC Eve",
+          "type": "market",
+          "detail": "US stocks fell for a third straight session on the eve of the Fed's rate decision: the Dow lost 328.09 points (-0.63%) to close at 52,093.11, the S&P 500 fell 0.45% to 7,585.73, and the Nasdaq dropped 0.78% to 25,981.57. Energy (+1.9%) and Materials (+0.32%) were the only advancing S&P sectors as Brent crude settled near $109/bbl. The 10-year Treasury yield rose as much as 4 basis points to touch 5.02% intraday — surpassing its 2023 peak and reaching its highest level since July 2007 — as traders priced in roughly 92% odds of a quarter-point hike the next day. The move came alongside a deepening Yemen crisis: Houthi forces, having seized the Red Sea port of Mokha and the islands of Perim and Zuqar the prior weekend, escalated attacks on Saudi territory, displacing nearly 94,000 people, while Trump Middle East adviser Massad Boulos said freedom of navigation in the Red Sea remained a 'red line' for the administration. The combination of a still-closed Strait of Hormuz, Saudi Arabia's East-West pipeline shutdown after the Sept 10-11 drone strikes from Iraqi territory, and the Houthi Red Sea campaign kept a war-risk premium in oil and yields heading into Wednesday's FOMC decision.",
+          "sources": [
+            {
+              "name": "The National — US Expects Change in Red Sea Security Situation 'Soon'",
+              "tier": 2,
+              "url": "https://www.thenationalnews.com/news/gulf/2026/09/15/houthi-attacks-on-saudi-arabia-escalate-as-nearly-94000-displaced/",
+              "pole": "middle_eastern"
+            },
+            {
+              "name": "TheStreet — Stock Market Today (Sept. 15, 2026): Dow Futures Slide as Oil Prices Surge and Treasury Yields Hit 2007 Highs",
+              "tier": 2,
+              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-sept-15-2026-dow-futures-slide-as-oil-prices-surge-and-treasury-yields-hit-2007-highs",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "salalah-hormuz-talks-postponed-oil-surge-sept14-2026",
+          "date": "2026-09-14",
+          "title": "Salalah Hormuz Talks Postponed at Saudi Request; Oil Jumps Over 3%, 10-Year Yield Nears 5% Two Days Before FOMC",
+          "type": "market",
+          "detail": "Oman postponed Monday's planned Salalah ministerial between Iran, Iraq and GCC states (Bahrain declined to attend) without setting a new date, after Saudi Arabia objected to proposed amendments to the Iran-Oman shipping-corridor arrangement. The meeting was meant to establish a temporary joint navigation corridor through the Strait of Hormuz and a joint mine-clearance project. Oman's Foreign Minister Badr Albusaidi said the delay was 'in the interests of consensus,' while Iran's Foreign Ministry attributed it to 'Saudi objection' and said it would still pursue a bilateral shipping arrangement with Oman. The setback landed the same weekend Houthi forces seized Yemen's Red Sea port of Mokha and the islands of Perim and Zuqar near Bab el-Mandeb, and struck Saudi territory again. Oil futures jumped more than 3% at Monday's open — Brent to $108.23, WTI to $103.20 — and the 10-year Treasury yield touched an intraday high near 5.00%, its highest since October 2023, before easing. US equities closed only modestly lower (S&P 500 -0.35% to 7,630.34) two days before the Fed's September 15-16 decision, where hike odds held near 83-87%.",
+          "sources": [
+            {
+              "name": "Al Jazeera — Temporary Hormuz Solution Deferred as Iran-Arab Summit Falls Through",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/news-analysis/2026/9/14/temporary-hormuz-solution-deferred-as-iran-arab-summit-falls-through",
+              "pole": "middle_eastern"
+            },
+            {
+              "name": "Bloomberg — Hormuz Meeting With Iran and Gulf Nations Delayed, Oman Says",
+              "tier": 2,
+              "url": "https://www.bloomberg.com/news/articles/2026-09-13/hormuz-meeting-with-iran-and-gulf-nations-postponed-oman-says",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "hormuz-qeshm-vessel-attack-oil-shock-sept13-2026",
           "date": "2026-09-13",
@@ -653,75 +722,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "tech-selloff-apple-cxmt-alibaba-share-sale-aug24-2026",
-          "date": "2026-08-24",
-          "title": "Tech Selloff Deepens on Apple-CXMT Chip Rumor and Alibaba's $10.2B Share Sale",
-          "type": "market",
-          "detail": "US stocks opened the week sharply diverging: the Dow Jones Industrial Average rose about 0.2% to 53,374.96, the lone major index in the green, while the S&P 500 slipped 0.35% to 7,647.82 and the Nasdaq Composite fell 0.71% to 25,995.05 as investors rotated out of high-flying AI-linked tech names into defensive and value sectors. Semiconductor stocks led the declines on reports that Apple is testing chips from China's CXMT as an alternative supplier, while Alibaba's announcement of a $10.2 billion share sale to fund AI infrastructure investment added further pressure on the sector. Gold rose about 1% toward three-month highs on 'debasement trade' concerns tied to US debt levels, and bitcoin surged over 3%. The moves came at the start of a closely watched week featuring Nvidia's Wednesday earnings report and the Fed's Jackson Hole symposium later in the week.",
-          "sources": [
-            {
-              "name": "Yahoo Finance — Stock Market Today: S&P 500, Nasdaq Slip as Tech Stocks Sag, US-Canada Trade Spat Escalates",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-august-24-dow-sp-500-nasdaq-080306047.html",
-              "pole": "western"
-            },
-            {
-              "name": "24/7 Wall St — Semiconductor Stocks Slide Ahead of Nvidia Earnings: Intel Falls 5%, AMD Slides 4%, Taiwan Semiconductor Slips 3%",
-              "tier": 3,
-              "url": "https://247wallst.com/investing/2026/08/24/semiconductor-stocks-slide-ahead-of-nvidia-earnings-intel-falls-5-amd-slides-4-taiwan-semiconductor-slips-3/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "chip-stocks-slide-nvidia-earnings-week-aug23-2026",
-          "date": "2026-08-23",
-          "title": "Chip Stocks Slide as Bond Yields Stay Elevated Heading Into Nvidia's Earnings Week",
-          "type": "market",
-          "detail": "US equity futures opened the week lower as chip-stock weakness outweighed a modest pullback in Treasury yields, with the S&P 500 slipping about 0.3% and the Nasdaq Composite falling roughly 0.6-0.8%. The semiconductor sector continued a pullback that began the prior week when the 30-year Treasury yield hit a fresh 19-year high above 5.33% — a move analysts said had nothing to do with chip fundamentals and everything to do with the US fiscal deficit ($432.3 billion in July, the highest monthly total since March 2021) pushing the fiscal-year shortfall toward $1.8 trillion. Reports that prices of servers containing Nvidia's AI chips were rising more than 15% added to profit-taking in high-flying names like Intel and AMD, both up well over 100% year-to-date, as traders trimmed AI-hardware exposure ahead of Nvidia's Wednesday, August 26 earnings report — consensus estimates call for $93-95 billion in quarterly revenue, up roughly 67% year-over-year.",
-          "sources": [
-            {
-              "name": "CNBC — S&P 500 Futures Fall Slightly as Chip Stock Slide Outweighs Yield Decline",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/23/stock-market-today-live-updates.html",
-              "pole": "western"
-            },
-            {
-              "name": "The Motley Fool — Chip Stocks Didn't Fall on Chip News This Week. They Fell on a 19-Year High in the 30-Year Treasury Yield",
-              "tier": 3,
-              "url": "https://www.fool.com/investing/2026/08/21/chip-stocks-didn-t-fall-on-chip-news-this-week-they-fell-on-a-19-year-high-in-the-30-year-treasury-yield/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "canada-us-trade-talks-collapse-carney-at-war-aug22-2026",
-          "date": "2026-08-22",
-          "title": "US-Canada Trade Talks Collapse — Carney Declares Canada 'At War,' Sets Sept. 8 Retaliatory Tariffs",
-          "type": "trade",
-          "detail": "Intensive last-minute negotiations between Ottawa and Washington broke down late Friday without a deal, hours after Trump's 50% Section 338 tariffs on roughly $20 billion of Canadian dairy, alcohol, and motor-vehicle goods took effect at 12:01am EDT. At a Saturday press conference, Prime Minister Mark Carney said Canada had pursued every option but ultimately walked away because the US 'asked too much and they offered too little,' citing unacceptable last-minute American demands on auto-content rules and restrictions on Canada's other trade partnerships. Carney announced Canada would impose 'dollar-for-dollar' retaliatory tariffs on US steel, dairy, appliances, agricultural equipment, pulp and paper, and electronics effective September 8. Asked whether Canada was now in a trade war, Carney said bluntly: 'You're at war when you get attacked. We got attacked.' He also criticized the shifting US rationale for the tariffs, saying 'its signature was written in pencil.'",
-          "sources": [
-            {
-              "name": "NPR — As Canada Readies Retaliatory Tariffs, Mark Carney Says His Nation Is 'At War' With US",
-              "tier": 2,
-              "url": "https://www.npr.org/2026/08/22/nx-s1-5941584/us-canada-tariffs",
-              "pole": "western"
-            },
-            {
-              "name": "Al Jazeera — Carney: Canada Will Enact Retaliatory US Tariffs Starting September 8",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/news/2026/8/22/carney-canada-will-enact-retaliatory-us-tariffs-starting-september-8",
-              "pole": "international"
-            },
-            {
-              "name": "CNBC — US-Canada Trade Talks Collapse, Ushering In Wave of New Tariffs",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/22/us-canada-trade-talks-collapse-ushering-in-wave-of-new-tariffs.html",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -789,14 +789,19 @@
         {
           "id": "fed-funds-rate",
           "label": "Fed Funds Rate",
-          "value": "3.50–3.75%; September 15-16 Hike Odds ~83-87% as Oman-Hosted Hormuz Talks Collapse and the 10-Year Yield Nears 5% Two Days Before the Decision",
+          "value": "3.75–4.00% — Fed Delivers First Hike Since July 2023 (Sept 16), Unanimous Vote; Dot Plot Median Rises to 4.1% for 2026",
           "color": "blue",
-          "source": "Federal Reserve FOMC, July 29 2026 (held); BLS PPI (Sept 10) and CPI (Sept 11) August releases; CME FedWatch, Sept 14 2026; Bloomberg / NPR / Al Jazeera, Sept 14 2026",
+          "source": "Federal Reserve FOMC Statement + Summary of Economic Projections, Sept 16 2026; BLS PPI (Sept 10) and CPI (Sept 11) August releases; CNN / Yahoo Finance / CryptoTimes, Sept 16 2026",
           "contested": false,
-          "delta": "Little changed from Sept 11 (~87%) — Monday's collapse of the Oman-hosted Hormuz talks and a fresh oil surge keep the hike case intact into the Sept 15-16 meeting",
-          "deltaNote": "SEPT 8-11 ARC: Canada's $27.6B retaliatory tariffs took effect Sept 8, adding a fresh trade-friction input. The Aug PPI (Sept 10) showed wholesale inflation accelerating to 5.4% YoY, over three-quarters of the rise from energy (diesel +24.1%) as the Gulf oil shock fed into producer prices; the 10Y Treasury hit a 4.969% cycle high the same day as Brent topped $105-107, its highest in nearly four months. The Aug CPI (Sept 11) then ran hot on core — 0.3% MoM (0.1pp above forecast), 2.4% YoY in line — even though headline (3.4% YoY, 0.4% MoM) matched consensus. CME FedWatch hike odds for the Sept 15-16 FOMC jumped to ~87% (from ~70% pre-CPI), with Nationwide's Kathy Bostjancic noting Warsh's condition for a hold — continued disinflation — was not met. Equities rallied Sept 11 (Dow +1.03%, S&P +1.07%, Nasdaq +1.23%) as oil pulled back, ending a four-session slide. SEPT 12-13 WEEKEND: With cash markets shut, the story shifted to diplomacy and the Gulf itself — the UAE's Crown Prince met Iran's Pezeshkian at the BRICS summit Sept 12 (first high-level UAE-Iran contact since Abu Dhabi's August trade suspension), and Iran signaled a shared Hormuz shipping route with Oman was close to signing. That diplomatic thaw was undercut hours later: a still-unclaimed strike killed one crew member on a vessel near Qeshm/Hengam Island on Sept 13, with shipping through the strait now running roughly 90% below its pre-conflict baseline. SEPT 14 (MONDAY REOPEN): The Salalah meeting between Iran, Iraq and GCC states meant to set up a temporary Hormuz shipping corridor was postponed at Saudi Arabia's request after Houthi forces seized Yemen's Red Sea port of Mokha over the weekend and struck Saudi territory again — Oman's FM Badr Albusaidi said the delay was 'in the interests of consensus.' Oil futures jumped over 3% at the open (Brent to $108.23, WTI to $103.20) and the 10-year Treasury yield touched an intraday high near 5.00% — its highest since October 2023 — before easing; the S&P 500 closed down 0.35% at 7,630.34. CME FedWatch odds for the Sept 15-16 hike held at roughly 83-87% heading into Wednesday's decision and Chair Warsh's press conference. Prior: Waller's Sept 3 dovish remarks briefly cut odds to ~48-55%; the Sept 4 jobs blowout (+162K vs +53K expected) reversed that to ~58%.",
+          "delta": "+25 bps — first hike since July 2023",
+          "deltaNote": "SEPT 8-11 ARC: Canada's $27.6B retaliatory tariffs took effect Sept 8, adding a fresh trade-friction input. The Aug PPI (Sept 10) showed wholesale inflation accelerating to 5.4% YoY, over three-quarters of the rise from energy (diesel +24.1%) as the Gulf oil shock fed into producer prices; the 10Y Treasury hit a 4.969% cycle high the same day as Brent topped $105-107, its highest in nearly four months. The Aug CPI (Sept 11) then ran hot on core — 0.3% MoM (0.1pp above forecast), 2.4% YoY in line — even though headline (3.4% YoY, 0.4% MoM) matched consensus. CME FedWatch hike odds for the Sept 15-16 FOMC jumped to ~87% (from ~70% pre-CPI), with Nationwide's Kathy Bostjancic noting Warsh's condition for a hold — continued disinflation — was not met. Equities rallied Sept 11 (Dow +1.03%, S&P +1.07%, Nasdaq +1.23%) as oil pulled back, ending a four-session slide. SEPT 12-13 WEEKEND: With cash markets shut, the story shifted to diplomacy and the Gulf itself — the UAE's Crown Prince met Iran's Pezeshkian at the BRICS summit Sept 12 (first high-level UAE-Iran contact since Abu Dhabi's August trade suspension), and Iran signaled a shared Hormuz shipping route with Oman was close to signing. That diplomatic thaw was undercut hours later: a still-unclaimed strike killed one crew member on a vessel near Qeshm/Hengam Island on Sept 13, with shipping through the strait now running roughly 90% below its pre-conflict baseline. SEPT 14 (MONDAY REOPEN): The Salalah meeting between Iran, Iraq and GCC states meant to set up a temporary Hormuz shipping corridor was postponed at Saudi Arabia's request after Houthi forces seized Yemen's Red Sea port of Mokha over the weekend and struck Saudi territory again — Oman's FM Badr Albusaidi said the delay was 'in the interests of consensus.' Oil futures jumped over 3% at the open (Brent to $108.23, WTI to $103.20) and the 10-year Treasury yield touched an intraday high near 5.00% — its highest since October 2023 — before easing; the S&P 500 closed down 0.35% at 7,630.34. CME FedWatch odds for the Sept 15-16 hike held at roughly 83-87% heading into Wednesday's decision and Chair Warsh's press conference. Prior: Waller's Sept 3 dovish remarks briefly cut odds to ~48-55%; the Sept 4 jobs blowout (+162K vs +53K expected) reversed that to ~58%. SEPT 15 (TUESDAY — FOMC EVE): Stocks fell a third straight session (Dow -0.63% to 52,093.11, S&P -0.45% to 7,585.73, Nasdaq -0.78% to 25,981.57) as the 10Y touched an intraday 5.02% — surpassing its 2023 peak to the highest since July 2007 — and Brent settled near $109, with CME odds for a hike at ~92%. SEPT 16 (WEDNESDAY — DECISION DAY): The FOMC voted unanimously to raise the federal funds rate 25bp to 3.75-4.00%, the first hike since July 2023, saying 'inflation remains elevated' and that 'today's policy action will support a timelier return to the Committee's 2 percent goal.' The new SEP showed a median 2026 rate dot of 4.1%, up from June's 3.8% — four members projected a further 50bp of hikes this year, two saw no more. Chair Warsh's press conference stressed inflation-fighting credibility even though the committee he was appointed to steer toward lower rates delivered a hike instead. Equities took the move in stride: the S&P 500 rose about 0.3%, the Nasdaq added roughly 0.7%, and the Dow slipped about 0.1% (-44 points), while the 10-year Treasury yield eased back below 5% to roughly 4.95% after the announcement.",
           "trend": "up",
-          "lastUpdated": "2026-09-14T19:15:00Z"
+          "lastUpdated": "2026-09-16T18:30:00Z",
+          "deltaDetail": {
+            "value": 0.25,
+            "direction": "up",
+            "period": "FOMC"
+          }
         },
         {
           "id": "ecb-deposit-rate",
@@ -922,6 +927,72 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "sheinbaum-desfile-civico-militar-216-aniversario-sep16-2026",
+          "date": "2026-09-16",
+          "title": "Day 715 — Sheinbaum Leads Civic-Military Parade for 216th Independence Anniversary; 15,458 Troops, 99 Aircraft Fly Over Zócalo for First Time",
+          "type": "political",
+          "detail": "On September 16, 2026 (Day 715), President Sheinbaum, as commander-in-chief, led the civic-military parade marking the 216th anniversary of Mexican independence, reviewing the Armed Forces from the Zócalo before the terrestrial column advanced along the parade route to Campo Marte. The Army, Navy, Air Force and National Guard deployed 15,458 personnel, organized into six contingents — Justicia y Paz, Centinelas de la Nación, Crisol de Patriotas, Desarrollo Nacional, Fraternidad Solidaria and Raíces de Honor — alongside roughly 400 horses, 142 military working dogs and 26 eagles. For the first time in the parade's history, 99 aircraft flew simultaneously over the Plaza de la Constitución, including 45 tactical drones making their public debut, 5 Texan T-6C planes and 3 Naval Aviation MI-17 helicopters marking that branch's centennial; new SARAF Balam remote-fire-control armored vehicles and DN-XI units were also shown publicly for the first time. Sheinbaum used the occasion to again underscore Mexico's sovereignty and independence, days after the record-breaking Zócalo turnout at her September 15 Grito de Independencia address. No mañanera was held on September 15–16 for the Independence Day holiday; she was scheduled to resume the daily press conference on September 17.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/16/en-vivo-desfile-militar-del-16-de-septiembre-sigue-los-drones-blindados-y-el-pase-de-lista-de-claudia-sheinbaum/"
+            },
+            {
+              "name": "La Jornada",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.jornada.com.mx/noticia/2026/09/16/politica/sheinbaum-encabezara-el-desfile-militar-99-aeronaves-sobrevolaran-el-zocalo-por-primera-vez"
+            },
+            {
+              "name": "El Universal",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.eluniversal.com.mx/nacion/desfile-del-16-de-septiembre-sigue-en-vivo/"
+            },
+            {
+              "name": "El Imparcial",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.elimparcial.com/mexico/2026/09/15/desfile-civico-militar-del-16-de-septiembre-2026-a-que-hora-empieza-ruta-y-donde-verlo-en-vivo/"
+            }
+          ]
+        },
+        {
+          "id": "sheinbaum-segundo-grito-independencia-zocalo-sep15-2026",
+          "date": "2026-09-15",
+          "title": "Day 714 — Sheinbaum Gives Second Grito de Independencia Before Record 300,000-Strong Zócalo Crowd, Names Guadalupe Victoria and Antonia Nava",
+          "type": "political",
+          "detail": "On September 15, 2026 (Day 714), President Sheinbaum led the 216th-anniversary Grito de Independencia ceremony from the central balcony of the National Palace at 11:00 PM, ringing the historic bell and delivering 21 arengas before a Zócalo crowd Mexico City's interior affairs office put at more than 300,000 — surpassing the roughly 280,000 who attended her first Grito in 2025 and marking the biggest crowd yet for the ceremony. The roll call named traditional independence figures — Miguel Hidalgo y Costilla, Josefa Ortiz Téllez-Girón, José María Morelos y Pavón, Leona Vicario, Vicente Guerrero and Gertrudis Bocanegra — alongside two names added for the first time this year, Guadalupe Victoria (Mexico's first president, 1824–1829) and insurgent Antonia Nava, while dropping Ignacio Allende and Manuela \"La Capitana\" Molina from the 2025 list. She also issued vivas recognizing Indigenous and Afro-Mexican peoples and, for the first time, Mexican migrants (\"hermanos y hermanas migrantes\"), fulfilling a pledge she made at her September 11 mañanera to \"name new heroes and heroines that are not normally named.\" The ceremony came days after Sheinbaum told reporters, referencing ongoing USMCA tariff negotiations with Washington, \"no vamos a firmar nada que tenga que ver con una afectación\" to Mexico's sovereignty or economy. Free concerts by Grupo Intocable and Los Tigres del Norte preceded the ceremony, and the National Palace observed the bicentennial of Margarita Maza de Juárez, whom the federal government designated the honoree of the 2026 \"Año de Margarita Maza\" observance. No mañanera was held September 15–16 for the Independence Day holiday.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/15/cuando-y-a-que-hora-es-el-grito-de-independencia-2026-sheinbaum-encabezara-la-ceremonia-desde-palacio-nacional/"
+            },
+            {
+              "name": "Expansión Política",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://politica.expansion.mx/mexico/2026/09/15/sheinbaum-grito-independencia-2026-palacio-nacional"
+            },
+            {
+              "name": "Latin Times",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.latintimes.com/sheinbaums-second-grito-draws-mexicos-biggest-zocalo-crowd-yet-pointed-message-washington-599270"
+            },
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://mexiconewsdaily.com/news/grito-sheinbaum-migrants-insurgents-dignity/"
+            }
+          ]
+        },
         {
           "id": "sheinbaum-mananera-rechazo-tropas-eeuu-infonavit-sep14-2026",
           "date": "2026-09-14",
@@ -1476,6 +1547,27 @@
     "trump-presidencies": {
       "events": [
         {
+          "id": "cbo-iran-war-inflation-cost-report-sep15-2026",
+          "date": "2026-09-15",
+          "title": "CBO: Iran War Has Cost $38.1 Billion, Is Driving Up Inflation and Borrowing Costs",
+          "type": "economic",
+          "detail": "The Congressional Budget Office released a report Tuesday, September 15, 2026, finding the US-Israel war with Iran, launched February 28, has directly cost the United States $38.1 billion through August 1 and continues to cost roughly $2-3 billion per month, with more than half the total ($21.7 billion) spent replacing munitions — including $13.1 billion in missile-defense interceptors CBO estimates will take five years for the Pentagon to fully replace. CBO attributed more than 40% of US inflation during the second quarter of 2026 to the war and projected it will add roughly half a percentage point to inflation in the first quarter of 2027, also pushing up borrowing costs; the report noted the average 30-year mortgage rate, under 6% before the war began, stood at 7.22% on the day of the report. The findings add a nonpartisan cost estimate to a war Trump has repeatedly predicted will end 'right after the midterms, maybe before,' and follow the administration's own August acknowledgment that it is 'not in a hurry' to resume talks with Tehran.",
+          "sources": [
+            {
+              "name": "NBC News",
+              "tier": 2,
+              "url": "https://www.nbcnews.com/politics/national-security/iran-war-driving-inflation-americans-cbo-report-says-rcna597978",
+              "pole": "western"
+            },
+            {
+              "name": "CNN",
+              "tier": 2,
+              "url": "https://www.cnn.com/2026/09/15/politics/cbo-releases-iran-war-cost-estimate",
+              "pole": "western"
+            }
+          ]
+        },
+        {
           "id": "canada-trump-trade-war-impact-sep12-2026",
           "date": "2026-09-12",
           "title": "Canadians Adjust to Sustained Impact of Trump's Trade War",
@@ -1618,48 +1710,6 @@
               "name": "IBTimes UK",
               "tier": 2,
               "url": "https://www.ibtimes.co.uk/trumps-bizarre-ai-stock-trading-fantasy-puts-hundreds-billions-line-oval-office-1818311",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-signs-beef-country-of-origin-labeling-eo-sep4-2026",
-          "date": "2026-09-04",
-          "title": "Trump Signs Executive Order on Beef Country-of-Origin Labeling",
-          "type": "economic",
-          "detail": "President Trump signed an executive order behind closed doors at the White House on Friday, September 4, 2026, at 1:30 p.m. ET addressing country-of-origin labeling requirements for beef, sources familiar with the matter said. The move follows Trump's efforts to lower record-high beef prices, including an order last month temporarily allowing up to 300,000 metric tons of lower-tariff beef imports to enter the country without the higher 'out-of-quota' rate, aimed at giving the administration time to rebuild the US cattle herd. Agricultural groups have been split: some ranchers back mandatory country-of-origin labeling as a boost to domestic producers and consumer transparency, while groups reliant on imports have opposed the broader tariff-relief push as disadvantaging US producers.",
-          "sources": [
-            {
-              "name": "GV Wire",
-              "tier": 2,
-              "url": "https://gvwire.com/2026/09/04/trump-expected-to-sign-a-beef-related-executive-order-on-friday-sources-say/",
-              "pole": "western"
-            },
-            {
-              "name": "The Hill",
-              "tier": 2,
-              "url": "https://thehill.com/video-clips/6071809-trump-beef-tariff-executive-order/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "cis-report-immigrant-population-decline-sep3-2026",
-          "date": "2026-09-03",
-          "title": "Foreign-Born Population Falls 2.9 Million Since Trump Took Office, First Sustained Decline Since 1930s",
-          "type": "economic",
-          "detail": "A Center for Immigration Studies analysis of Census Bureau household survey data, released Thursday, September 3, 2026, found the total US foreign-born population fell 2.9 million from January 2025 (53.3 million) to July 2026 (50.5 million) — the illegal immigrant population accounting for most of the drop, an estimated 2.3 million decline from 15.8 million to 13.5 million, while the legal immigrant population fell roughly 600,000. CIS research director Steven Camarota called it the first sustained net decrease in US migration since the 1930s, reversing an 8.3 million increase during the post-COVID border surge under the Biden administration. CIS attributed the decline to border enforcement and interior removals; the Current Population Survey underlying the estimate covers about 60,000 households and carries a margin of error of roughly ±1 million.",
-          "sources": [
-            {
-              "name": "Center for Immigration Studies",
-              "tier": 3,
-              "url": "https://cis.org/Report/Census-Bureau-Survey-Shows-Total-ForeignBorn-Down-29-Million",
-              "pole": "western"
-            },
-            {
-              "name": "Washington Times",
-              "tier": 2,
-              "url": "https://www.washingtontimes.com/news/2026/sep/3/donald-trump-cuts-migrant-population-nearly-3-million-total-us/",
               "pole": "western"
             }
           ]
