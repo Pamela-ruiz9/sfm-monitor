@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T18:10:18Z",
+  "updated": "2026-09-24T18:06:15Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -934,6 +934,33 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "sheinbaum-trenes-pasajeros-2400km-avance-sep23-2026",
+          "date": "2026-09-23",
+          "title": "Day 722 — Sheinbaum Details 2,400km Passenger-Rail Buildout: AIFA-Pachuca 45%, CDMX-Querétaro 31%, 750 Billion Pesos Committed",
+          "type": "economic",
+          "detail": "Sheinbaum used her September 23, 2026 mañanera to detail progress on the government's 2,400km national passenger-rail program, backed by roughly 750 billion pesos ('750 mil mdp') in combined passenger and freight investment. She presented completion figures for four routes under construction: Mexico City (AIFA)–Pachuca Interoceánico at 45% (58km of double electrified track, 4 stations, 2 substations, 1 maintenance base, 10 work fronts, 8,800 workers of whom 21% are women), Mexico City–Querétaro at 31%, Querétaro–Irapuato at 22%, and Saltillo–Nuevo Laredo at 10%, alongside the Tren Maya cargo line at 67%. She said the AIFA-Pachuca and Mexico City-Querétaro lines are expected to begin operations in 2027, that construction has generated roughly 60,000 direct and 120,000 indirect jobs, and that the completed network will serve about 41.3 million people with average travel-time reductions near 40% and pollutant-emission cuts of up to 50%; 64 families have been relocated for right-of-way at a cost of 63.5 million pesos, with resettlement compensation ongoing. She framed the buildout — which her government says adds 40% more track than was built during the AMLO administration — as core to the nearshoring and public-investment agenda. Separately, INEGI figures presented the same day showed national population growth slowing to 0.7%, which Sheinbaum attributed to smaller family sizes and rising childlessness rather than a policy failure.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/23/gobierno-de-sheinbaum-construye-40-mas-vias-que-el-sexenio-de-amlo-destina-750-millones-de-pesos-a-infraestructura-ferroviaria/"
+            },
+            {
+              "name": "Ámbito",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.ambito.com/mexico/informacion-general/la-mananera-claudia-sheinbaum-hoy-miercoles-23-septiembre-2026-minuto-minuto-vivo-n6325157"
+            },
+            {
+              "name": "Ángulo 7",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.angulo7.com.mx/2026/nacional/tren-aifa-pachuca-con-avance-del-45-sheinbaum-invertira-750-mmdp-en-2400-km-de-red-ferroviaria/724382/"
+            }
+          ]
+        },
+        {
           "id": "sheinbaum-mananera-celulares-diesel-tmec-jitomate-sep21-2026",
           "date": "2026-09-21",
           "title": "Day 720 — Sheinbaum Announces School Cellphone Ban (Nov 3), Guarantees Diesel Prices Through Year-End, Reiterates Sinaloa 'Injerencia' Warning",
@@ -1571,105 +1598,6 @@
               "url": "https://www.sdpnoticias.com/mexico/sheinbaum-estrena-nuevo-set-en-la-mananera-para-la-glosa-de-su-segundo-informe/"
             }
           ]
-        },
-        {
-          "id": "zacatecas-car-bomb-security-cabinet-response-sep2-2026",
-          "date": "2026-09-02",
-          "title": "Day 701 — Sheinbaum Calls Zacatecas Car Bombing \"Isolated,\" Sends Security Cabinet Sept 5",
-          "type": "political",
-          "detail": "On September 2, 2026 (Day 701, Wednesday), asked about the August 30 car bomb attack outside the Ojocaliente, Zacatecas police command, President Sheinbaum called the incident \"isolated\" while acknowledging it was not the first such attack, and announced her Security Cabinet would travel to Zacatecas on Friday, September 5 to present findings on the criminal group responsible. She separately urged UNAM to consider opening additional undergraduate spaces and faculty positions after the university opened 2,000 new spots, and cited figures from Legal Counsel Luisa María Alcalde crediting the administration with 27 constitutional reforms and 76 secondary-law reforms since October 2024. Sheinbaum also praised customs and tax authorities for a fuel-theft crackdown, citing the arrest of Fernando Farías Laguna as helping curb contraband and stabilize gasoline prices, and rejected suggestions of a rift with Morena Senate leader Adán Augusto López, saying their direct contact had lessened but coordination with other party leaders continued.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/02/la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-miercoles-2-de-septiembre/"
-            },
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/noticia/2026/09/02/politica/sobre-ataque-en-zacatecas-con-coche-bomba-informara-el-gabinete-de-seguridad-el-viernes-sheinbaum"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/02/gabinete-de-seguridad-viajara-a-zacatecas-para-explicar-ataque-con-coche-bomba-en-ojocaliente-informa-sheinbaum/"
-            }
-          ]
-        },
-        {
-          "id": "segundo-informe-gobierno-sep1-2026",
-          "date": "2026-09-01",
-          "title": "Day 700 — Sheinbaum Delivers Second Government Report From National Palace, Cites 51% Homicide Drop and Sovereignty Message",
-          "type": "political",
-          "detail": "On September 1, 2026 (Day 700, Tuesday), President Claudia Sheinbaum delivered her Second Government Report (\"En Defensa de la Soberanía\"-style annual address) from the National Palace at 11:00 AM CDMX time, replacing that day's regular mañanera. Headline claims: intentional homicides down 51% since the administration's October 2024 start (about 44 fewer deaths per day) and high-impact crimes down 32%; the monthly minimum wage risen from 2,800 pesos (2018) to 9,584 pesos, with labor poverty at its lowest level since 2005; annual inflation at 3.12% (July 2026) on a downward trend; the peso trading near 17/USD; roughly 60 million people employed and unemployment at 2.7%; H1 2026 foreign direct investment of approximately $34.97 billion (+2.1% YoY); GDP growth revised to 1.4% QoQ / 1.9% YoY for Q2 2026; and a new welfare push toward 42.86 million beneficiaries by year-end backed by roughly 1 trillion pesos in social spending. On security, the government cited 63,000 people detained for crimes since October 2024, 207 priority targets arrested, 32,824 firearms seized, 519 tonnes of drugs seized and 2,725 clandestine labs dismantled. Health and infrastructure figures included 33 new hospitals, 23+ million \"Salud Casa por Casa\" home visits, Tren Maya ridership of 2.5 million passengers, and a Pemex financial-debt reduction of roughly $20 billion. Sheinbaum highlighted a new indigenous-rights law and framed welfare programs as \"turning love into public policy.\" She struck a conciliatory, unity-focused tone toward Morena ahead of the 2027 midterms — \"que nadie se equivoque: aquí no hay divisiones, aquí no hay rompimientos\" — while repeating her sovereignty line that international cooperation \"no significa sumisión\" and that Mexico's sovereignty \"no se negocia, no se entrega y no se comparte.\" Opposition reaction was sharp: PAN deputy Federico Döring presented a rival \"informe real\" citing low growth, rising debt, Pemex's financial crisis, insecurity and disappearances; PAN also noted her administration's 0.8% average growth trails AMLO's 1.1%. PRI national leader Alejandro Moreno accused Morena of degrading quality of life and shielding drug traffickers.",
-          "sources": [
-            {
-              "name": "El Universal",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.eluniversal.com.mx/nacion/segundo-informe-de-gobierno-frases-clave-de-sheinbaum-estamos-transformando-la-vida-publica-del-pais-afirma/"
-            },
-            {
-              "name": "PorEsto",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.poresto.com/mexico/2026/9/1/segundo-informe-de-sheinbaum-estos-son-los-principales-resultados-en-economia-seguridad-salud-educacion-y-bienestar.html"
-            },
-            {
-              "name": "PorEsto",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.poresto.com/mexico/2026/9/1/segundo-informe-de-sheinbaum-gobierno-destaca-inversion-empleo-inflacion-y-fortaleza-del-peso.html"
-            },
-            {
-              "name": "CNN en Español",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://cnnespanol.cnn.com/2026/09/01/mexico/sheinbaum-segundo-informe-claves-analisis-orix"
-            },
-            {
-              "name": "La Política Online",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.lapoliticaonline.com/mexico/congreso-mx/el-pan-cuestiono-el-segundo-informe-de-sheinbaum-y-acusa-a-morena-de-bajo-crecimiento/"
-            },
-            {
-              "name": "La Razón de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.razon.com.mx/mexico/2026/09/02/oposicion-presenta-su-informe-real/"
-            }
-          ]
-        },
-        {
-          "id": "ojocaliente-zacatecas-car-bomb-aug30-2026",
-          "date": "2026-08-30",
-          "title": "Car Bomb Explodes Outside Police Headquarters in Ojocaliente, Zacatecas — 11 Injured",
-          "type": "political",
-          "detail": "On August 30, 2026 (Sunday) around 7:30 PM local time, an unidentified man parked a vehicle laden with explosives in front of the municipal police (DSPM) command in Ojocaliente, Zacatecas, then fled on foot; the device detonated when an officer approached to inspect it. Eleven people were injured, including civilians and municipal police, at least two seriously. The blast damaged roughly five city blocks — at least seven homes, businesses, private vehicles and patrol units, with windows shattered throughout the area. State Security Secretary Arturo Medina Mayoral said authorities were investigating possible involvement of a Jalisco New Generation Cartel (CJNG) cell; the vehicle used had been reported stolen in Jalisco since April, and the explosive materials resembled those used in mining operations. A near-simultaneous explosion in Villa García led to the detention of an 18-year-old who claimed CJNG membership. State officials said the attack was the 17th documented explosive-device attack on security forces in Zacatecas over the prior two years and the 10th of 2026 alone, part of an escalating wave that has included motorcycle-borne devices and improvised metal-pipe bombs (\"niples\"). State and federal forces reinforced the area following the blast.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/01/zacatecas-enfrenta-escalada-de-ataques-con-explosivos-van-17-en-dos-anos/"
-            },
-            {
-              "name": "CNN en Español",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://cnnespanol.cnn.com/2026/09/01/mexico/video/coche-bomba-zacatecas-policia-municipal"
-            },
-            {
-              "name": "Sociedad Noticias",
-              "tier": 3,
-              "pole": "western",
-              "url": "https://sociedad-noticias.com/2026/09/01/zacatecas-suma-10-eventos-con-explosivos-en-2026-tras-coche-bomba-en-ojocaliente/"
-            }
-          ]
         }
       ]
     },
@@ -1776,75 +1704,6 @@
               "name": "Fox 4 Dallas-Fort Worth",
               "tier": 2,
               "url": "https://www.fox4news.com/election/donald-trump-republican-midterm-convention-dallas-texas-closing",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "treasury-operation-economic-outcast-iran-airlines-sanctions-sep8-2026",
-          "date": "2026-09-08",
-          "title": "Treasury Sanctions 27 Iranian Airlines Under 'Operation Economic Outcast'",
-          "type": "economic",
-          "detail": "The Treasury Department sanctioned 36 targets on Tuesday, September 8, 2026 — including 27 of Iran's remaining commercial airlines, aircraft-procurement front companies, and cargo service providers — under Executive Order 13902 as part of Secretary Scott Bessent's 'Operation Economic Outcast' campaign, first unveiled in August. The action targeted Mahan Air (first designated in 2011) and newer carriers including Varesh Airlines, Sepehran Airlines, and Qeshm Air, several of which still fly to Dubai, Muscat, and Kuwait City. Bessent said: 'Let this be a warning to anyone doing business with Iran's remaining airlines, all of which we sanctioned today: You are at risk of being cut off from the global financial system.' FinCEN separately alerted US banks to increase scrutiny of transactions linked to Iranian aviation procurement, the latest step in the financial-pressure campaign the administration has pursued since the Aug 24 'economic D-Day' sanctions round.",
-          "sources": [
-            {
-              "name": "US Department of the Treasury",
-              "tier": 1,
-              "url": "https://home.treasury.gov/news/press-releases/sb0623/",
-              "pole": "western"
-            },
-            {
-              "name": "AGBI",
-              "tier": 2,
-              "url": "https://www.agbi.com/aviation/2026/09/us-sanctions-iranian-airlines-in-financial-crackdown/",
-              "pole": "middle_eastern"
-            }
-          ]
-        },
-        {
-          "id": "treasury-operation-economic-outcast-iran-airlines-sanctions-sep8-2026",
-          "date": "2026-09-08",
-          "title": "Treasury Sanctions 27 Iranian Airlines Under 'Operation Economic Outcast'",
-          "type": "economic",
-          "detail": "The Treasury Department on Tuesday, September 8, 2026, sanctioned 36 targets — including 27 of Iran's remaining commercial airlines, aircraft-procurement front companies, and cargo service providers — under Executive Order 13902 as part of Secretary Scott Bessent's 'Operation Economic Outcast' campaign. The action targeted Mahan Air (first designated in 2011) and newer carriers including Varesh Airlines, Sepehran Airlines, and Qeshm Air, several of which still fly to Dubai, Muscat, and Kuwait City. Bessent said: 'Under Operation Economic Outcast, we promised severe consequences for those providing financial lifelines to the Iranian regime. Today, we followed through on that promise... Let this be a warning to anyone doing business with Iran's remaining airlines, all of which we sanctioned today: You are at risk of being cut off from the global financial system.' The Financial Crimes Enforcement Network separately alerted US banks to increase scrutiny of transactions linked to Iranian aviation procurement.",
-          "sources": [
-            {
-              "name": "US Department of the Treasury",
-              "tier": 1,
-              "url": "https://home.treasury.gov/news/press-releases/sb0623/",
-              "pole": "western"
-            },
-            {
-              "name": "AGBI",
-              "tier": 2,
-              "url": "https://www.agbi.com/aviation/2026/09/us-sanctions-iranian-airlines-in-financial-crackdown/",
-              "pole": "middle_eastern"
-            }
-          ]
-        },
-        {
-          "id": "trump-canada-section-338-import-bans-sep8-2026",
-          "date": "2026-09-08",
-          "title": "Trump Escalates Canada Trade War: Bans Canadian Dairy, Alcohol and Motorcycle Imports Under Section 338",
-          "type": "economic",
-          "detail": "President Trump signed five proclamations Tuesday, September 8, 2026, sharply escalating the trade war with Canada in direct response to Canada's retaliatory tariffs that took effect at 12:01 a.m. the same day. Three proclamations impose outright bans, effective September 29, 2026, on imports of Canadian dairy products, molasses and non-alcoholic beer, most alcoholic beverages, and motorcycles; two others revise the 50% Section 338 tariff list, removing cement, road salt and hospital pads while adding all-terrain vehicles, additional cheeses and motorboats. Section 338 of the Tariff Act of 1930 — unused for nearly a century before Trump invoked it in late August 2026 — lets the president act without a new statute. USTR Jamieson Greer said of Canada's retaliation, 'That's not the kind of company you really want to be running in.' Earlier the same day, Trump posted on Truth Social that he would bar federal agencies from buying Canadian goods 'unless Canada restores full and fair reciprocity for American Farmers and Companies.'",
-          "sources": [
-            {
-              "name": "NBC News",
-              "tier": 2,
-              "url": "https://www.nbcnews.com/business/economy/trump-escalates-trade-war-canada-moving-ban-import-autos-dairy-alcohol-rcna596666",
-              "pole": "western"
-            },
-            {
-              "name": "The White House",
-              "tier": 1,
-              "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-responds-to-canadas-retaliation/",
-              "pole": "western"
-            },
-            {
-              "name": "Axios",
-              "tier": 2,
-              "url": "https://www.axios.com/2026/09/08/trump-tariffs-canada-import-ban-alcohol-dairy-motorcycles",
               "pole": "western"
             }
           ]
