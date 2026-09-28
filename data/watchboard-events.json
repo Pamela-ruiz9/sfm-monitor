@@ -1,8 +1,104 @@
 {
-  "updated": "2026-09-25T18:10:45Z",
+  "updated": "2026-09-28T20:20:42Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "trump-xi-summit-washington-sept24-2026",
+          "date": "2026-09-24",
+          "title": "Trump and Xi Hold Cordial Washington Summit With Few Concrete Deals; Markets Flat as Traders Weigh Fed and Oil",
+          "type": "political",
+          "detail": "President Trump hosted Chinese President Xi Jinping for a state visit and summit in Washington, DC, the two leaders' first in-person meeting of the term. Trump called it a 'great meeting' and said he discussed the Iran war with Xi, adding 'I think we're going to do great' without elaborating; Xi's three-day visit covered AI, tariffs, critical minerals, Taiwan and the Iran conflict. Beyond the previously announced Busan Agreement truce extension to January 10, 2027, the summit produced few new concrete agreements — CBS and Al Jazeera both characterized it as light on deliverables, with Chinese analysts quoted saying the bilateral relationship 'appears as strained as ever' despite the cordial public tone. US equities were little moved: the S&P 500 slipped 1.90 points to 7,704.13, the Dow fell 161.61 points (-0.3%) to 51,349.98, while the Nasdaq edged up 3.34 points to 26,939.37, as pressure from a bond-market selloff offset any summit optimism. Stocks bounced off session lows on revived hopes for a deal to reopen the Strait of Hormuz.",
+          "sources": [
+            {
+              "name": "Al Jazeera — Trump-Xi Summit: Four Key Takeaways From the Washington, DC, Meeting",
+              "tier": 2,
+              "url": "https://www.aljazeera.com/news/2026/9/24/trump-xi-summit-four-key-takeaways-from-the-washington-dc-meeting",
+              "pole": "middle_eastern"
+            },
+            {
+              "name": "CBS News — Trump-Xi Visit Wraps Up With Few Achievements Announced",
+              "tier": 2,
+              "url": "https://www.cbsnews.com/live-updates/trump-china-xi-jinping-state-visit-dinner-tariffs-ai/",
+              "pole": "western"
+            },
+            {
+              "name": "NPR — Trump and Xi Strike Cordial Tone at Summit Amid Underlying Tensions",
+              "tier": 2,
+              "url": "https://www.npr.org/2026/09/24/g-s1-144806/trump-xi-summit",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "oecd-raises-2026-growth-forecast-sept23-2026",
+          "date": "2026-09-23",
+          "title": "OECD Raises 2026 Global Growth Forecast to 2.9%, Says World Economy Absorbed Middle East Energy Shock Better Than Expected",
+          "type": "economic",
+          "detail": "The OECD's September Interim Economic Outlook raised its 2026 global GDP growth projection to 2.9% (up 0.1 point from June) and forecast 3.0% for 2027, concluding the world economy 'has weathered the energy supply shock triggered by the conflict in the Middle East better than expected' thanks to government support measures, alternative energy supply from outside the Gulf, drawdowns of oil reserves, and continued AI-driven investment. Country-level detail: US growth was revised up 0.2 points to 2.2%, the eurozone up 0.2 points to 1.0%, and China held steady at 4.5%; G20 headline inflation is projected at 4.1% for the year. OECD Secretary-General Mathias Cormann and Chief Economist Stefano Scarpetta, presenting the outlook, flagged three key downside risks: a prolonged Middle East conflict, weather-related supply shocks from a strong El Niño, and AI investment returns that fail to meet expectations — plus rising long-term sovereign bond yields straining public finances in heavily indebted economies.",
+          "sources": [
+            {
+              "name": "Euronews — OECD Lifts 2026 Global Economic Growth Forecast to 2.9% Despite Iran War Disruption",
+              "tier": 2,
+              "url": "https://www.euronews.com/2026/09/23/oecd-lifts-2026-global-economic-growth-forecast-to-29-despite-iran-war-disruption",
+              "pole": "western"
+            },
+            {
+              "name": "OECD — Global Growth Holds Up Despite Successive Shocks, but Risks Persist",
+              "tier": 1,
+              "url": "https://www.oecd.org/en/about/news/press-releases/2026/09/global-growth-holds-up-despite-successive-shocks-but-risks-persist.html",
+              "pole": "international"
+            }
+          ]
+        },
+        {
+          "id": "busan-agreement-extended-january-2027-sept23-2026",
+          "date": "2026-09-23",
+          "title": "Bessent Says US and China Extend 'Busan Agreement' Trade Truce to January 10, 2027, Ahead of Xi's Washington Visit",
+          "type": "trade",
+          "detail": "Treasury Secretary Scott Bessent announced the US and China agreed to extend the 'Busan Agreement' — the trade détente reached at the October 30, 2025 Busan summit — by roughly two months, from its original November 10, 2026 expiration to January 10, 2027. The framework had reduced the average US tariff rate on Chinese imports from 57% to 47% (with fentanyl-linked punitive tariffs cut from 20% to 10%), suspended retaliatory Chinese tariffs and rare-earth/high-tech export controls for a year, and secured Chinese agricultural purchase commitments. The extension came a day after Bessent and USTR Jamieson Greer held 'successful' pre-summit talks in New York with Chinese Vice Premier He Lifeng on AI, tariffs and critical minerals, and just ahead of Xi Jinping's state visit to Washington for a summit with President Trump. Bessent indicated some Chinese compliance with existing terms still needed improvement, and floated further expansion into agricultural purchases, financial services, consumer goods, energy and medical devices, plus a new bilateral AI-safety notification mechanism.",
+          "sources": [
+            {
+              "name": "NBC News — U.S. and China Agree to Extend Trade Truce Through Jan. 10, Bessent Says",
+              "tier": 2,
+              "url": "https://www.nbcnews.com/business/economy/us-china-extend-trade-truce-trump-rcna599525",
+              "pole": "western"
+            },
+            {
+              "name": "U.S. News — US, China Agree to Extend 'The Busan Agreement' Until January, Bessent Says",
+              "tier": 2,
+              "url": "https://www.usnews.com/news/top-news/articles/2026-09-23/us-china-agree-to-extend-the-busan-agreement-until-january-bessent-says",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "fed-barr-collins-october-hike-signal-pmi-record-sept22-2026",
+          "date": "2026-09-22",
+          "title": "Fed's Barr and Collins Open Door to October Hike as Flash PMI Hits 5-Year High; Richmond Fed Manufacturing Contracts",
+          "type": "policy",
+          "detail": "Federal Reserve Governor Michael Barr told a housing conference in Chicago that 'further policy adjustments are likely to be needed to ensure inflation comes down to target in a timely fashion,' putting an October rate hike squarely on the table barely a week after the Fed's September 16 quarter-point increase. Boston Fed President Susan Collins separately said she backed the September hike and anticipates one additional increase by December. The hawkish signals landed the same morning S&P Global's flash PMI showed US business activity expanding at its fastest pace in more than five years — the composite index jumped to 58.4 (from 56 in August, beating the 55.2 forecast), with services at a near-five-year high of 58.7 and manufacturing output at 56.7, both the strongest since 2022. The strong-growth-plus-hawkish-Fed combination pushed Treasury yields higher and stocks lower. Separately, the Richmond Fed's regional manufacturing index fell to -2 in September from +4 in August as new orders and shipments both contracted, a discordant regional signal against the national PMI strength. Oil eased as Saudi Arabia restarted its East-West pipeline, running a low-rate test flow toward its 4 million bpd capacity after the September 11 drone attack shut it down; Brent dipped over $2 to a two-week low near $98 and WTI fell below $92 on the news, though full pipeline restoration was still described as weeks away.",
+          "sources": [
+            {
+              "name": "Bloomberg — Fed's Collins Says Rate Hike Will Help Return Inflation to Goal",
+              "tier": 2,
+              "url": "https://www.bloomberg.com/news/articles/2026-09-22/fed-s-collins-says-rate-hike-will-help-return-inflation-to-goal",
+              "pole": "western"
+            },
+            {
+              "name": "The Hill — Fed's Barr Says Future Interest Rate Hikes 'Likely' Needed to Tame Inflation",
+              "tier": 2,
+              "url": "https://thehill.com/business/6107670-fed-governor-barr-rate-hike/",
+              "pole": "western"
+            },
+            {
+              "name": "U.S. News — Saudi Arabia Restarts East-West Oil Pipeline, to Resume Exports From Yanbu, Sources Say",
+              "tier": 2,
+              "url": "https://www.usnews.com/news/world/articles/2026-09-22/saudi-arabia-restarts-east-west-oil-pipeline-to-resume-exports-from-yanbu-sources-say",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "markets-rally-oil-crashes-trump-xi-summit-nears-sept21-2026",
           "date": "2026-09-21",
@@ -626,108 +722,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "stocks-slip-oil-jumps-mideast-strike-aug31-2026",
-          "date": "2026-08-31",
-          "title": "Stocks Slip, Oil Jumps Above $88 as Renewed Mideast Strikes Revive Rate-Hike Bets — August Closes Higher",
-          "type": "market",
-          "detail": "US stocks fell Monday after American forces struck Iranian rocket launchers near the Strait of Hormuz — the first acknowledged US strike in the region in weeks — fueling a jump in oil prices and adding to bets the Fed will raise rates in September. Brent crude climbed roughly 2.8% back above $90/bbl intraday, while Yahoo Finance reported WTI-linked Brent futures above $88; the United States Oil Fund rose about 2.5%. The S&P 500 fell 0.33% to 7,686.14, the Dow Jones Industrial Average dropped 0.70% (-374.09 points) to 53,185.90, and the Nasdaq Composite slipped 0.12% to 26,370.89, ending the Dow's five-day winning streak. Higher energy costs pushed the 10-year Treasury yield toward its highest level since January 2025. Despite the pullback, all three major indexes closed out August with solid monthly gains — the S&P 500 up about 2.5%, the Nasdaq up about 3%, and the Dow up about 1.3%, marking the Dow's fifth consecutive monthly gain and the S&P/Nasdaq's first up months since May — with both the S&P 500 and Dow having touched fresh record highs earlier in the month.",
-          "sources": [
-            {
-              "name": "Yahoo Finance — Stock Market Today: Dow, S&P 500, Nasdaq Slip but Cap Winning Month for Stocks",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-august-31-dow-sp-500-nasdaq-113851714.html",
-              "pole": "western"
-            },
-            {
-              "name": "The Motley Fool — Market Indexes Slip to Close Out a Winning, Turbulent August",
-              "tier": 3,
-              "url": "https://www.fool.com/investing/2026/08/31/market-indexes-slip-to-close-out-a-winning-august/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "china-pmi-g20-finance-ministers-aug31-2026",
-          "date": "2026-08-31",
-          "title": "China's August Manufacturing PMI Improves to 49.8 (Still Contracting) as G20 Finance Ministers Open Asheville Summit",
-          "type": "economic",
-          "detail": "China's official manufacturing PMI rose to 49.8 in August, up 0.6 points from July's 49.2 and above the roughly 49.7 forecast — its second straight monthly improvement but still below the 50-point expansion threshold, extending the sector's contraction streak. The non-manufacturing PMI held flat at 49.0 (vs 49.5 expected) and the composite PMI rose to 49.5 from 49.3, with sub-indices showing production and new orders returning to expansion (50.4 and 50.6 respectively) and new export orders rebounding to 50.1 from 49.6 — a tentative sign of stabilizing external demand even as the broader economy remains soft. The same day, the G20 Finance Ministers and Central Bank Governors meeting opened in Asheville, North Carolina, with Treasury Secretary Scott Bessent and Fed Chair Kevin Warsh addressing global growth. Warsh, fresh off his hawkish Jackson Hole keynote, told G20 finance leaders the world is in the midst of 'a global investment surge' reversing the prior decade's savings glut, dismissed secular-stagnation concerns, and said the Fed would have 'more work to do' absent more confidence inflation is heading to 2%. Bessent separately dismissed concerns about Treasury market health or the US national debt — which surpassed $40 trillion in August — attributing higher yields partly to stronger growth.",
-          "sources": [
-            {
-              "name": "Xinhua — China's Manufacturing PMI at 49.8 in August",
-              "tier": 1,
-              "url": "https://english.news.cn/20260831/94fd032a2172462fbe82d0f68705eb63/c.html",
-              "pole": "eastern"
-            },
-            {
-              "name": "InvestingLive — China Official August Manufacturing PMI 49.8 (Expected 49.7, Prior 49.2)",
-              "tier": 3,
-              "url": "https://investinglive.com/news/china-official-august-manufacturing-pmi-expected-49-7-prior-49-2/",
-              "pole": "western"
-            },
-            {
-              "name": "AOL / Yahoo Finance — Fed's Warsh Says Past Global Savings Glut Is Turning Into Investment Surge",
-              "tier": 2,
-              "url": "https://www.aol.com/articles/feds-warsh-says-past-global-190003000.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "warsh-jackson-hole-debut-keynote-hawkish-aug28-2026",
-          "date": "2026-08-28",
-          "title": "Warsh's Debut Jackson Hole Keynote Turns Hawkish: September Hike Odds Jump to 57%",
-          "type": "policy",
-          "detail": "Fed Chair Kevin Warsh delivered his first Jackson Hole keynote Friday (10:00am ET, marking his 100th day as Chairman), and struck a notably more hawkish tone than his prior public remarks. Warsh said inflation remains 'above our 2 percent target' — 12-month PCE at 3.7%, six-month at 4.1% — and that while summer readings improved, 'they do not tell me that underlying trends have meaningfully improved'; price stability, he said, must be the Fed's 'predominant focus,' and the central bank 'may have work to do' on rates. He also announced a step back from forward guidance, quipping 'you can call it an outline, you can call it a trail map, just don't call it forward guidance,' and said the Fed would form task forces to study AI's effects on productivity and labor markets. Markets read the speech as a clear hawkish signal: CME FedWatch odds of a September 15-16 rate hike jumped to roughly 57% (from about 35% before the speech), the 2-year Treasury yield rose to around 4.32% (its highest since July), and the dollar index gained about 0.5% to 99.65. Stocks slipped modestly on the news — the S&P 500 fell 0.25% to 7,711.76 and the Nasdaq lost 0.52% to 26,402.42, though the Dow was roughly flat (-0.02% to 53,559.99) — but all three major indexes still closed the week higher (S&P +0.5%, Nasdaq +0.9%, Dow +0.5%, its first winning week in three).",
-          "sources": [
-            {
-              "name": "Federal Reserve — Keynote Remarks by Chairman Warsh at the 2026 Jackson Hole Economic Policy Symposium",
-              "tier": 1,
-              "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Fed Chairman Warsh Warns on Inflation at Jackson Hole",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance — Stock Market Today: Dow, S&P 500, Nasdaq End Week on Down Note as Rate-Hike Bets Jump",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-august-28-dow-sp-500-nasdaq-dip-fed-warsh-jackson-hole-speech-081514091.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "nvidia-earnings-beat-ai-cycle-reaffirmed-aug27-2026",
-          "date": "2026-08-27",
-          "title": "Nvidia's Blowout Earnings Beat Sends Stocks Higher, Reaffirms AI Capex Cycle",
-          "type": "market",
-          "detail": "Nvidia reported fiscal Q2 revenue of $96.2 billion (up 106% year-over-year, above the $92.3B consensus) and adjusted EPS of $2.22 (vs. $2.09 expected), with data-center revenue of $89 billion. Guidance for Q3 came in at $105.8-110.1 billion, and management pointed to roughly 70% revenue growth for calendar 2027 — nearly double the 44% analysts had expected. CEO Jensen Huang said 'AI has reached its inflection point. It's doing useful work. Its tokens are productive and profitable,' adding 'the only regret that I have is that I didn't invest more and sooner.' Nvidia shares jumped 8.7% to $227.98 — the stock's biggest one-day gain since April 2025 — lifting the broader market: the S&P 500 rose 0.72% to 7,730.99, the Nasdaq Composite rose 1.57% to 26,541.35, and the Dow rose 0.20% to 53,569.44. Semiconductor peers Broadcom (+4.5%) and chip names in Europe and Asia also rallied, while a separate software-sector rebound saw Salesforce (+22%), Okta (+28%), and CrowdStrike (+20%) surge on their own earnings — Salesforce CEO Marc Benioff declaring 'this is not the SaaSpocalypse.' The results eased concerns about a slowdown in AI infrastructure spending, a key support for growth amid otherwise soft labor-market and consumer data.",
-          "sources": [
-            {
-              "name": "Yahoo Finance — Nvidia Earnings Soar as AI Chip Demand Drives Revenue to $96.2 Billion",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-earnings-soar-ai-chip-202449587.html",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance — Stock Market Today: Dow, S&P 500, Nasdaq Rally as Nvidia Earnings Revive AI Optimism, Software Stocks Roar Back",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-august-27-dow-sp-500-nasdaq-082144520.html",
-              "pole": "western"
-            },
-            {
-              "name": "The Motley Fool — Stock Market Today, Aug. 27: Nvidia Surges on Blowout Results and Surprising Guidance",
-              "tier": 3,
-              "url": "https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-nvidia-surges-on-blowout-results-and-surprising-guidance/",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -933,6 +927,114 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "sheinbaum-zocalo-cierre-gira-segundo-informe-sep27-2026",
+          "date": "2026-09-27",
+          "title": "Day 726 — Sheinbaum Closes 32-State Accountability Tour With Zócalo Message Warning Against Foreign 'Injerencia,' Citing 850,000 Attendees",
+          "type": "political",
+          "detail": "President Sheinbaum closed her national \"Honestidad y Resultados\" accountability tour with a message from the Zócalo in Mexico City on September 27, 2026 (Day 726, Sunday), marking the end of a tour that covered all 32 states following her September 1 Second Government Report; her office estimated roughly 850,000 people attended the tour's assemblies in total. Speaking on the 205th anniversary of the Consumación de la Independencia, Sheinbaum said \"soberanía quiere decir que solo el pueblo determina el destino de México\" and \"México debe defender su soberanía frente a cualquier injerencia extranjera,\" framing the message amid ongoing US-Mexico security talks over American military presence on Mexican soil. She invoked Independence, Reform and Revolution as historical processes that etched sovereignty, liberty, social justice and democracy \"grabadas con sangre y fuego,\" declared \"no hay divorcio entre pueblo y gobierno, que gobierno y pueblo unidos, jamás seremos vencidos,\" and listed tour-cited accomplishments including the 40-hour workweek push, above-inflation wage increases, universal pensions for older adults and people with disabilities, education scholarships, housing and healthcare framed as rights, and a ban on nepotism in public office.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/27/cierre-de-gira-y-rendicion-de-cuentas-de-claudia-sheinbaum-en-el-zocalo/"
+            },
+            {
+              "name": "El Universal",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.eluniversal.com.mx/nacion/entre-gritos-de-no-estas-sola-sheinbaum-cierra-gira-en-el-zocalo-por-segundo-informe-llama-a-rechazar-intervencionismo/"
+            },
+            {
+              "name": "Expansión Política",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://politica.expansion.mx/mexico/2026/09/27/sheinbaum-zocalo-cierre-gira-segundo-informe-gobierno"
+            }
+          ]
+        },
+        {
+          "id": "sheinbaum-sonora-hermosillo-segundo-informe-sep26-2026",
+          "date": "2026-09-26",
+          "title": "Day 725 — Sonora Tour Stop: Sheinbaum Presents Second Government Report in Hermosillo, Announces Guaymas Port and Highway Projects",
+          "type": "political",
+          "detail": "President Sheinbaum presented her Second Government Report results at the Centro de Usos Múltiples in Hermosillo, Sonora, on September 26, 2026 (Day 725, Saturday) — one of the final stops of her nationwide \"Honestidad y Resultados\" accountability tour — alongside Governor Alfonso Durazo. Federal officials cited more than 20 billion pesos in Welfare Program spending in Sonora this year, with one in three Sonorans receiving federal benefits and 343,192 older adults receiving pensions. Sheinbaum highlighted joint federal-state infrastructure projects including modernization of the Port of Guaymas, the Guaymas–Chihuahua highway to improve connectivity toward Ciudad Juárez and the Arizona/Texas border crossings, an upgraded well-based water supply solution for Hermosillo (replacing an earlier dam proposal), and modernization of the Sonoyta–Puerto Peñasco highway. The government also announced action on Cananea labor disputes, an Integral Plan for Environmental and Social Justice for Cananea and the Río Sonora, and the restitution of 45,794 hectares of land to the Yaqui people.",
+          "sources": [
+            {
+              "name": "INFOSON",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://infoson.com.mx/2026/09/26/claudia-sheinbaum-presenta-este-sabado-en-hermosillo-resultados-de-su-gobierno-y-obras-para-sonora/"
+            },
+            {
+              "name": "Proyecto Puente",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://proyectopuente.com.mx/2026/09/26/lorenia-valles-destaca-politica-social-de-sheinbaum-y-mas-de-20-mil-mdp-destinados-a-sonora"
+            },
+            {
+              "name": "PorEsto",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.poresto.com/mexico/2026/9/26/presidenta-sheinbaum-encabeza-honestidad-y-resultados-en-sonora-en-la-recta-final-de-su-gira-nacional-en-vivo.html"
+            }
+          ]
+        },
+        {
+          "id": "sheinbaum-tabasco-gira-seguridad-lopez-beltran-sep25-2026",
+          "date": "2026-09-25",
+          "title": "Day 724 — Tabasco Tour Stop: Sheinbaum Touts Crime-Rate Drop, Declines Meeting With Andy López Beltrán Amid His US Visa Revocation",
+          "type": "political",
+          "detail": "Sheinbaum held her September 25, 2026 mañanera from Villahermosa, Tabasco, where Governor Javier May Rodríguez thanked her for the visit and highlighted scholarships, social programs and cacao-producer support. SESNSP executive secretary Marcela Figueroa Franco presented state security data showing Tabasco's daily average of high-impact crimes fell 18% (from 12.6 to 10.3) and homicidios dolosos dropped 54% since the administration's national security strategy took effect, with vehicle theft down 51% versus November 2024. Asked about Andrés Manuel López Beltrán — the former president's son, whose U.S. visa the State Department revoked in August, prompting a letter from López Beltrán accusing Secretary of State Marco Rubio and Christopher Landau of acting \"like gang bosses\" — Sheinbaum called the revocation \"a political matter, it has nothing to do with anything else,\" said any accusations against Mexican citizens should come with evidence presented to Mexican authorities, and ruled out meeting him during the Tabasco visit while saying his territorial work ahead of a 2027 federal deputy run looks \"very well\" to her.",
+          "sources": [
+            {
+              "name": "Diario de Tabasco",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.diariodetabasco.mx/tabasco/2026/09/25/la-atencion-a-las-causas-de-la-estrategia-nacional-de-seguridad-y-la-cero-impunidad-reducen-en-5454-los-homicidios-dolosos-en-tabasco-sheinbaum/"
+            },
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/25/sheinbaum-descarta-reunion-con-andy-lopez-beltran-durante-gira-en-tabasco-y-palomea-campana-rumbo-a-eleccion-de-2027/"
+            },
+            {
+              "name": "Capital México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.capitalmexico.com.mx/estados/tabasco-registra-reduccion-de-54-en-homicidios-dolosos-durante-la-administracion-de-sheinbaum/"
+            }
+          ]
+        },
+        {
+          "id": "lego-inversion-400md-nuevo-leon-sep24-2026",
+          "date": "2026-09-24",
+          "title": "Day 723 — LEGO to Invest $400 Million in Nuevo León Plant, 1,300 Jobs; Sheinbaum Clarifies Digital Economy Law Won't Ban Cash",
+          "type": "economic",
+          "detail": "At her September 24, 2026 (Day 723) mañanera, Economy Secretary Marcelo Ebrard announced LEGO will invest $400 million (roughly 8.6 billion pesos) through 2029 to expand its Ciénaga de Flores, Nuevo León plant — already the company's largest in the world — adding about 62,000 square meters of industrial and automated-warehouse space and creating an estimated 1,300 jobs; formal groundbreaking is set for September 30, 2026. Ebrard cited the project as further evidence of rising foreign direct investment under the Plan México nearshoring strategy. Separately, Sheinbaum clarified that the government's proposed Digital Economy Law will not prohibit cash, but is meant to \"facilitate the use of technology for digital payments,\" deepen financial inclusion and formalization, and build on existing tools like CoDi, according to the head of the Digital Transformation and Telecommunications Agency. Sheinbaum also ruled out cabinet changes, confirmed a Stray Kids concert is being arranged with 10 DIF-gifted tickets for low-income children, and said the U.S. would need Foreign Ministry (SRE) authorization to contract firms that notify deported Mexicans of immigration fines.",
+          "sources": [
+            {
+              "name": "Excélsior",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.excelsior.com.mx/nacional/lego-invertira-400-millones-dolares-nuevo-leon-y-generara-mil-300-empleos"
+            },
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/24/lego-anuncia-inversion-de-400-millones-de-dolares-para-impulsar-la-produccion-de-juguetes-en-mexico/"
+            },
+            {
+              "name": "La Jornada",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.jornada.com.mx/noticia/2026/09/24/economia/grupo-lego-anuncia-inversion-por-400-mdd-para-nueva-planta-en-nuevo-leon"
+            }
+          ]
+        },
         {
           "id": "sheinbaum-trenes-pasajeros-2400km-avance-sep23-2026",
           "date": "2026-09-23",
@@ -1451,158 +1553,38 @@
               "url": "https://lopezdoriga.com/economia-y-finanzas/no-habido-aumento-impuestos-ni-va-haber-sheinbaum-sobre-paquete-economico-2027/"
             }
           ]
-        },
-        {
-          "id": "monterrey-saltillo-tour-closes-sep6-2026",
-          "date": "2026-09-06",
-          "title": "Day 705 — Sheinbaum Closes 10-State Report Tour in Monterrey and Saltillo, Touts Saltillo-Nuevo Laredo Train",
-          "type": "political",
-          "detail": "On September 6, 2026 (Day 705, Sunday), President Sheinbaum concluded the four-day, ten-state leg of her Second Government Report tour — which began September 3 in Morelos and Durango and passed through Zacatecas, San Luis Potosí, Aguascalientes, Colima, Jalisco and Nayarit — with stops in Nuevo León and Coahuila. At 10:30 AM she addressed a crowd of more than 10,000 at the Explanada de los Héroes in Monterrey alongside Governor Samuel García, highlighting health, infrastructure, housing and welfare gains in the state and announcing that construction on the Saltillo-Nuevo Laredo passenger rail line — a 396-kilometer project passing through Monterrey, already 3% complete — would receive its formal groundbreaking (\"banderazo\") in the coming days. At 1:15 PM in Saltillo, Coahuila's Parque Las Maravillas, she detailed a 985-kilometer rail corridor (3% built on the Saltillo-Nuevo Laredo segment), the Saltillo-Monclova highway modernization (158 km, 24% complete), the binational Puerto Verde logistics complex, and a 558-bed regional IMSS hospital under construction (10% complete) alongside new family-medicine units.",
-          "sources": [
-            {
-              "name": "El Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/9/6/sheinbaum-realiza-su-gira-nacional-de-rendicion-de-cuentas-en-monterrey-nuevo-leon-883167.html"
-            },
-            {
-              "name": "Vanguardia (Coahuila)",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://vanguardia.com.mx/coahuila/llega-claudia-sheinbaum-a-coahuila-con-el-tren-carreteras-y-hospitales-como-proyectos-clave-DC23303891"
-            },
-            {
-              "name": "Milenio",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.milenio.com/politica/claudia-sheinbaum-en-nl-anuncia-banderazo-obras-tren-pasajeros"
-            }
-          ]
-        },
-        {
-          "id": "colima-jalisco-nayarit-tour-cuyutlan-protest-alito-fox-sep5-2026",
-          "date": "2026-09-05",
-          "title": "Day 704 — Sheinbaum Tours Colima, Jalisco and Nayarit; Rebuffs Cuyutlán Port Protesters, Blasts Fox-'Alito' Moreno Meeting",
-          "type": "political",
-          "detail": "On September 5, 2026 (Day 704, Saturday), President Sheinbaum continued her state-by-state Second Government Report tour with three stops in western Mexico: Colima (10:15 AM), the Arena VFG in Tlajomulco de Zúñiga, Jalisco (2:30 PM) and the Explanada de la Feria in Tepic, Nayarit (6:45 PM). In Colima, members of the Sal de Colima cooperative and other groups opposing the Port of Manzanillo's planned expansion into the Cuyutlán lagoon — a Ramsar wetland site — interrupted her remarks; Sheinbaum dismissed the disruption as provocation, saying, \"Si fuera una demanda legítima, aceptarían reunirse con nosotros para atender sus inquietudes. No vamos a caer en la provocación.\" She reported 245,365 Colima residents receive Bienestar welfare programs and, in Jalisco, cited 962,111 beneficiaries of the Pension for Elderly Adults, alongside a confirmation that construction on the Mexico City-Querétaro-Irapuato-León-Guadalajara passenger rail line will begin in 2027. Separately, asked about the previous day's meeting between former president Vicente Fox and PRI national leader Alejandro \"Alito\" Moreno at PRI headquarters, Sheinbaum said the pairing showed they \"quieren regresar al pasado de corrupción y privilegios,\" framing it as an attempted PRI-PAN alliance ahead of the 2027 midterms and contrasting it with her government's welfare programs.",
-          "sources": [
-            {
-              "name": "El Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/9/5/no-vamos-caer-en-la-provocacion-claudia-sheinbaum-en-colima-882680.html"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/09/05/quieren-regresar-al-pasado-sheinbaum-critica-reunion-de-fox-con-alito-moreno-en-el-pri/"
-            },
-            {
-              "name": "Proyecto Puente",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://proyectopuente.com.mx/2026/09/05/quieren-regresar-al-pasado-de-corrupcion-y-privilegios-critica-sheinbaum-encuentro-entre-fox-y-alito"
-            }
-          ]
-        },
-        {
-          "id": "zacatecas-mananera-harfuch-coche-bomba-report-sep4-2026",
-          "date": "2026-09-04",
-          "title": "Day 703 — Security Cabinet Reports From Zacatecas: 200kg of Explosives in Ojocaliente Car Bomb, 3 Detained, CJNG-Cartel del Pacífico Dispute Cited",
-          "type": "political",
-          "detail": "On September 4, 2026 (Day 703, Friday), President Sheinbaum held her mañanera from Zacatecas — the first stop of a state-by-state tour following her Second Government Report — alongside Governor David Monreal and her federal Security Cabinet, delivering the findings promised after the August 30 Ojocaliente car bombing. Security Secretary Omar García Harfuch said preliminary state-prosecutor analysis found the device used approximately 200 kilograms of explosive material, and confirmed three detentions: Juan Pedro \"N\" (apprehended August 31 for planting the device), plus Hipólito \"N\" and Miguel \"N\" (the latter already wanted on a separate homicide warrant), both linked to a criminal cell operating across Aguascalientes and Zacatecas. Harfuch identified a dispute between CJNG and Cartel del Pacífico cells over routes and territory as one of the main investigative lines, and said the case remains open, with the possibility that additional suspects are operating outside the state. He separately confirmed Mexico holds an active U.S. extradition detention order for Juan Carlos Valencia González (\"El Pelón\"), the CJNG's new leader following Nemesio \"El Mencho\" Oseguera's February 2026 death, noting Valencia González holds dual Mexican-American nationality — a detail that lands one day after Sheinbaum's dual-nationality candidacy ban was formally sent to Congress. On the broader security picture, García Harfuch reported 60,000 people arrested for high-impact crimes and 32,000 firearms seized (80% traced to the U.S.) since the administration began, and cited state-level figures showing Zacatecas's daily average of intentional homicides down 96% (from 4.5 in 2021 to 0.2 in 2026) and homicides overall down 85% since September 2024. The visit also included an economic and food-security readout: annual investment up 7.7% in June (public investment +10.9% YoY, private +6%), and record 2026-cycle production of 25.41 million tonnes of maize, 1.36 million tonnes of beans (+300,000 tonnes) and 14.4 billion liters of milk (+900 million liters).",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/04/suman-tres-detenidos-por-el-coche-bomba-contra-la-policia-municipal-de-ojocaliente-revela-harfuch-desde-zacatecas/"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/04/coche-bomba-en-zacatecas-fue-por-disputa-entre-el-cjng-y-el-cartel-del-pacifico-una-de-las-principales-lineas-de-investigacion-harfuch/"
-            },
-            {
-              "name": "El Universal",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.eluniversal.com.mx/nacion/se-utilizaron-200-kilos-de-explosivos-detalla-harfuch-sobre-coche-bomba-en-zacatecas-continuan-las-investigaciones-asegura/"
-            },
-            {
-              "name": "El Informador",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.informador.mx/mexico/ataque-con-coche-bomba-en-zacatecas-garcia-harfuch-confirma-tres-detenidos-y-revela-disputa-entre-carteles-20260904-0074.html"
-            },
-            {
-              "name": "López-Dóriga Digital",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://lopezdoriga.com/nacional/juan-carlos-valencia-lider-cjng-tiene-orden-extradicion-garcia-harfuch/"
-            }
-          ]
-        },
-        {
-          "id": "zenyazen-escobar-diputado-morena-muerte-veracruz-sep4-2026",
-          "date": "2026-09-04",
-          "title": "Morena Federal Deputy Zenyazen Escobar García Found Dead in Veracruz; FGR Takes Over Investigation",
-          "type": "political",
-          "detail": "On the morning of September 4, 2026, federal deputy Zenyazen Roberto Escobar García (Morena, District 16, Córdoba, Veracruz) was found dead inside a vehicle on the Veracruz-Xalapa federal highway in the La Gloria community of Puente Nacional municipality, with at least one gunshot wound. Veracruz state government secretary Ricardo Ahued Bardahuil initially said authorities were not treating it as an attack, noting the vehicle showed no visible damage, while state prosecutors opened a homicide investigation; the Fiscalía General de la República (FGR) announced it would take over the case given Escobar's status as a sitting federal legislator. Escobar, 42, previously served as Veracruz's Secretary of Education (2018–2021) under Governor Cuitláhuac García and had drawn controversy in May 2026 over an altercation with a PRI legislator inside the Chamber of Deputies. Morena's Chamber coordinator Ricardo Monreal offered condolences, calling Escobar a public servant devoted to Veracruz; on September 8, Jucopo coordinators agreed not to form a special legislative commission, opting instead to await the FGR's forensic findings before any further chamber action, alongside a moment of silence and posthumous tribute.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/04/asesinan-al-diputado-de-morena-zenyazen-escobar-acusado-de-emborracharse-en-la-camara-de-diputados-en-mayo/"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/estados/2026/09/04/asesinan-a-zenyazen-escobar-diputado-federal-de-morena-fue-atacado-en-carretera-en-veracruz/"
-            },
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/noticia/2026/09/04/politica/fgr-atraera-investigacion-del-homicidio-del-diputado-de-morena-zenyazen-escobar"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/09/08/zenyazen-escobar-camara-de-diputados-descarta-comision-para-investigar-la-muerte-del-legislador-de-morena/"
-            }
-          ]
-        },
-        {
-          "id": "mananera-redesign-new-stage-sep2-2026",
-          "date": "2026-09-02",
-          "title": "Day 701 — Sheinbaum Unveils Redesigned Mañanera Stage, Breaking From AMLO-Era Set",
-          "type": "political",
-          "detail": "On September 2, 2026 (Day 701, Wednesday), President Sheinbaum resumed her morning press conference — now used for the \"glosa\" (line-by-line follow-up) of her Second Government Report — on a newly redesigned stage at the National Palace, the first change to \"La Mañanera\" set since López Obrador introduced the format in 2018. The old flat burgundy-and-white backdrop was replaced with three panels — two angled outward — forming a semi-curved space, still using burgundy, white and gray tones and retaining the \"Conferencia de Prensa\" screen. Reporters now sit noticeably closer to the podium than the roughly four-meter distance under the old layout; Sheinbaum remarked, \"Ya los veo más cerca, antes casi no los veía.\" She said the redesign came from her presidential staff rather than any deliberate political signal.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/02/sheinbaum-redisena-la-mananera-y-corta-ciclo-quitando-escenario-de-amlo-estas-son-las-modificaciones/"
-            },
-            {
-              "name": "SDP Noticias",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.sdpnoticias.com/mexico/sheinbaum-estrena-nuevo-set-en-la-mananera-para-la-glosa-de-su-segundo-informe/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "treasury-yield-19yr-high-oil-spike-hormuz-sep24-2026",
+          "date": "2026-09-24",
+          "title": "10-Year Treasury Yield Hits 19-Year High, Mortgage Rates Spike as Oil Surges on Hormuz Vessel Strike",
+          "type": "economic",
+          "detail": "The 10-year Treasury yield climbed to 5.13% on Wednesday, September 23, 2026 — its sharpest one-day jump since April 9, 2025 — after Brent crude jumped 3.8% to $103.08/bbl following reports that a cargo vessel was struck by an unknown projectile in the Strait of Hormuz; the 30-year fixed mortgage rate rose to 7.26%, its highest since January 13, 2025, and the Dow fell 352 points. The yield climbed further to a cycle-high near 5.18% on Thursday, September 24 — the highest level since June 2007, months before the global financial crisis — as accelerating inflation data, fuel-cost pressure from the six-month Iran war, and market odds of an October Fed rate hike exceeding 70% pushed borrowing costs up across the economy. AAA's national gas average hit $4.48/gallon on September 24, a record for this time of year. Oil eased back below $98/bbl by Friday, September 25 as US and Iranian negotiators explored a phased deal to reopen the Strait, and the Dow rallied 478.62 points (+0.93%) to close at 51,828.62, though the elevated 10-year yield — a benchmark that feeds through to mortgages, corporate bonds and auto loans — persisted.",
+          "sources": [
+            {
+              "name": "NBC News",
+              "tier": 2,
+              "url": "https://www.nbcnews.com/business/energy/treasury-yields-oil-stocks-rcna599398",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/09/25/treasury-yield-buy-bonds.html",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-september-25-dow-sp-500-nasdaq-081738529.html",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "fed-raises-rates-375-400-first-hike-3yrs-sep16-2026",
           "date": "2026-09-16",
@@ -1647,63 +1629,6 @@
               "name": "CNN",
               "tier": 2,
               "url": "https://www.cnn.com/2026/09/15/politics/cbo-releases-iran-war-cost-estimate",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "canada-trump-trade-war-impact-sep12-2026",
-          "date": "2026-09-12",
-          "title": "Canadians Adjust to Sustained Impact of Trump's Trade War",
-          "type": "economic",
-          "detail": "Canadians describe how they are adjusting economically and politically to the sustained impact of Trump's trade war, including supply chain shifts and consumer price pressures as tariff policies continue to reshape North American commerce.",
-          "sources": [
-            {
-              "name": "Al Jazeera",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/economy/2026/9/12/how-canadians-are-bracing-for-the-impact-of-trumps-trade-war?traffic_source=rss",
-              "pole": "middle_eastern"
-            }
-          ]
-        },
-        {
-          "id": "trump-5000-dividend-dallas-convention-closing-sep10-2026",
-          "date": "2026-09-10",
-          "title": "Trump Promises $5,000 'Dividend' Checks to Every American Adult if Republicans Keep Congress",
-          "type": "economic",
-          "detail": "Closing out the RNC's first-ever midterm convention at Dallas's American Airlines Center on Thursday, September 10, 2026, President Trump pledged that every American adult citizen would receive a $5,000 check — which he dubbed the 'Trump dividend' — if Republicans retain control of the House and Senate in November. 'If the Republicans win, you win with us and you get $5,000,' Trump told the crowd, offering no detail on funding mechanics, though Vice President Vance had indicated tariff revenue would partly cover the cost. With roughly 245 million US adult citizens, the payout would total an estimated $1.2 trillion. Tax Foundation economist Erica York said the checks would 'spend almost all the revenue that the new tariffs are projected to bring in over a decade,' and former IMF chief economist Kenneth Rogoff warned it would 'blow up' an already unsustainable deficit; election-law scholar Rick Hasen said Trump likely has First Amendment latitude to make the campaign promise (citing Brown v. Hartlage) but actual payments would require congressional approval. Similar Trump pledges in 2025 — a tariff dividend and a DOGE dividend — never materialized. In the same speech Trump also vowed to make his tax cuts permanent, pursue 'most-favored-nation' prescription drug pricing, redirect health-insurer payments directly to citizens, and told the crowd 'you go to hell' if they don't vote in November.",
-          "sources": [
-            {
-              "name": "PBS News",
-              "tier": 2,
-              "url": "https://www.pbs.org/newshour/politics/trump-promised-5000-checks-if-republicans-win-the-midterms-how-would-that-work",
-              "pole": "western"
-            },
-            {
-              "name": "Fox 4 Dallas-Fort Worth",
-              "tier": 2,
-              "url": "https://www.fox4news.com/election/donald-trump-republican-midterm-convention-dallas-texas-closing",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-5000-dividend-dallas-convention-closing-sep10-2026",
-          "date": "2026-09-10",
-          "title": "Trump Promises $5,000 'Dividend' Checks to Every American Adult if Republicans Keep Congress",
-          "type": "economic",
-          "detail": "Closing out the RNC's first-ever midterm convention at Dallas's American Airlines Center on Thursday, September 10, 2026, President Trump pledged that every American adult citizen would receive a $5,000 check — which he dubbed the 'Trump dividend' — if Republicans retain control of the House and Senate in November. 'If the Republicans win, you win with us and you get $5,000,' Trump told the crowd, offering no detail on funding mechanics, though Vice President Vance had indicated tariff revenue would partly cover the cost. With roughly 245 million US adult citizens, the payout would total an estimated $1.2 trillion. Tax Foundation economist Erica York said the checks would 'spend almost all the revenue that the new tariffs are projected to bring in over a decade,' and former IMF chief economist Kenneth Rogoff warned it would 'blow up' an already unsustainable deficit; election-law scholar Rick Hasen said Trump likely has First Amendment latitude to make the campaign promise (citing Brown v. Hartlage) but actual payments would require congressional approval. Similar Trump pledges in 2025 — a tariff dividend and a DOGE dividend — never materialized. In the same speech Trump also vowed to make his tax cuts permanent, pursue 'most-favored-nation' prescription drug pricing, redirect health-insurer payments directly to citizens, and told the crowd 'you go to hell' if they don't vote in November.",
-          "sources": [
-            {
-              "name": "PBS News",
-              "tier": 2,
-              "url": "https://www.pbs.org/newshour/politics/trump-promised-5000-checks-if-republicans-win-the-midterms-how-would-that-work",
-              "pole": "western"
-            },
-            {
-              "name": "Fox 4 Dallas-Fort Worth",
-              "tier": 2,
-              "url": "https://www.fox4news.com/election/donald-trump-republican-midterm-convention-dallas-texas-closing",
               "pole": "western"
             }
           ]
