@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T20:20:42Z",
+  "updated": "2026-09-29T19:04:28Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -928,6 +928,48 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "ayotzinapa-new-suspects-lemonde-sep29-2026",
+          "date": "2026-09-29",
+          "title": "New Suspects Identified in Ayotzinapa Case, Le Monde Reports",
+          "type": "political",
+          "detail": "French newspaper Le Monde reports that new suspects have been identified in the Ayotzinapa case involving the 2014 forced disappearance of 43 normalista students, signaling an advance in Mexico's ongoing investigation. The case — a long-standing human rights priority — gained renewed attention ahead of the 12th anniversary of the tragedy. President Sheinbaum had stated on September 28 that the investigation remains open.",
+          "sources": [
+            {
+              "name": "Le Monde",
+              "tier": 2,
+              "url": "https://www.lemonde.fr/international/article/2026/09/29/au-mexique-de-nouveaux-suspects-identifies-dans-l-affaire-des-43-etudiants-disparus-d-ayotzinapa-en-2014_6785376_3210.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "mananera-ayotzinapa-polo-empleo-sep28-2026",
+          "date": "2026-09-28",
+          "title": "Day 727 — Sheinbaum Says Ayotzinapa Case 'Not Closed,' Announces New Report Ahead of 12th Anniversary; Warns of Hurricane Polo",
+          "type": "political",
+          "detail": "At her Monday mañanera on September 28, 2026 (Day 727), President Sheinbaum said the investigation into the 2014 disappearance of the 43 Ayotzinapa students is \"not closed\" and announced a new report, to be presented by Deputy Interior Minister Arturo Medina and special prosecutor Mauricio Pazarán, on new investigative methodologies and lines of inquiry ahead of the 12th anniversary. She also warned of Category 3 Hurricane Polo, forecast to make landfall in Comondú, Baja California Sur, in the afternoon, and said employment had grown by roughly 1.2–1.3 million people to 60.7 million. She criticised the UN's absence on international conflicts and anticipated a mandatory labour certificate for avocado exports.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://mexiconewsdaily.com/politics/sheinbaum-report-ayotzinapa-mananera-monday/"
+            },
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.infobae.com/mexico/2026/09/28/la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-lunes-28-de-septiembre/"
+            },
+            {
+              "name": "La Razón de México",
+              "tier": 2,
+              "pole": "western",
+              "url": "https://www.razon.com.mx/mexico/2026/09/28/mananera-de-sheinbaum-28-de-septiembre-del-2026/"
+            }
+          ]
+        },
+        {
           "id": "sheinbaum-zocalo-cierre-gira-segundo-informe-sep27-2026",
           "date": "2026-09-27",
           "title": "Day 726 — Sheinbaum Closes 32-State Accountability Tour With Zócalo Message Warning Against Foreign 'Injerencia,' Citing 850,000 Attendees",
@@ -1520,44 +1562,26 @@
               "url": "https://expansion.mx/economia/2026/09/08/fechas-paquete-economico-2027"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-fox-traidor-democracia-paquete-sin-impuestos-sep7-2026",
-          "date": "2026-09-07",
-          "title": "Day 706 — Sheinbaum Calls Fox a 'Traitor to Democracy' Over Alito Moreno Meeting, Pledges No New Taxes in 2027 Economic Package",
-          "type": "political",
-          "detail": "On September 7, 2026 (Day 706, Monday), back at the National Palace after her ten-state Second Government Report tour, President Sheinbaum sharpened her earlier criticism of the September 4 meeting between former president Vicente Fox and PRI national leader Alejandro \"Alito\" Moreno, mocking it as \"the new vision of Mexican politics\" and saying it would not go well for them. She called Fox a \"traitor to democracy... seen by all Mexicans, first for the desafuero [2004 attempt to bar AMLO from the presidential race] and then for the 2006 electoral fraud,\" and accused PAN's younger leadership of ties to real-estate corruption scandals, arguing neither PRI nor PAN reaches double digits in support. Separately, ahead of the September 8 delivery of the 2027 Economic Package to Congress, Sheinbaum reiterated \"no ha habido un aumento de impuestos ni va a haber\" (there has not been a tax increase, nor will there be), saying additional revenue will come from combating tax evasion and shell companies used for false invoicing rather than new levies or new social programs, while keeping austerity in senior government salaries to fund existing welfare spending.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/07/sheinbaum-se-burla-de-la-reunion-de-fox-con-alito-moreno-e-ironiza-la-nueva-vision-de-la-politica-mexicana/"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/09/07/sheinbaum-se-burla-de-reunion-entre-vicente-fox-y-alito-no-les-ira-muy-bien/"
-            },
-            {
-              "name": "El Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/9/7/sheinbaum-asegura-que-no-habra-aumento-de-impuestos-en-2027-no-ha-habido-ni-va-haber-883737.html"
-            },
-            {
-              "name": "López-Dóriga Digital",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://lopezdoriga.com/economia-y-finanzas/no-habido-aumento-impuestos-ni-va-haber-sheinbaum-sobre-paquete-economico-2027/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "us-china-toy-tariffs-christmas-sep28-2026",
+          "date": "2026-09-28",
+          "title": "US and China Pledge to Reduce Toy Tariffs Ahead of Christmas Season",
+          "type": "economic",
+          "detail": "The United States and China pledged to reduce tariffs on toys ahead of the Christmas shopping season, potentially easing supply chain pressure for manufacturers and retailers. The announcement extends momentum from Chinese President Xi Jinping's recent state visit to Washington, which concluded with an extension of the US-China trade truce through January 10, 2027. The toy tariff reduction signals continued trade diplomacy between the two countries in the lead-up to the holiday season.",
+          "sources": [
+            {
+              "name": "Reuters",
+              "tier": 2,
+              "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSWN6eWZvTHVwUlBIRFY3cEc1Z0d3MzVQNk1yTWxhczVPUEQtOE5fbTB3STB6eDEzOHNkUDZHYlF6NVBHU0kxaTlqM28xbmp1bDRTSzJ5QVJCVWJqMHM2bjctX0NqUHdXdkYwVHp3NUxsSTd0TXZpWnRjUU5vOFAyNmlOVnY1SVZEb19yT1VMVnYtclBSNUpuWFQ5eW9Iay1sTDBNT1p5YTFsSXBhNzd3Z0VYcFZ2YlgwUXJGaUdWQjU?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "treasury-yield-19yr-high-oil-spike-hormuz-sep24-2026",
           "date": "2026-09-24",
