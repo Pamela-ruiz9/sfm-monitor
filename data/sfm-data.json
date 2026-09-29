@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-09-28",
+  "ultima_actualizacion": "2026-09-29",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "17.8413",
-    "fecha": "2026-09-28",
+    "actual": "18.0710",
+    "fecha": "2026-09-29",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1579,7 +1579,7 @@
       },
       {
         "mes": "2026-09",
-        "valor": 17.8413
+        "valor": 18.071
       }
     ]
   },
@@ -1588,7 +1588,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-09-28",
+        "fecha": "2024-09-29",
         "valor": 10.5
       },
       {
@@ -2733,8 +2733,8 @@
   },
   "mercado": {
     "reservas_internacionales": {
-      "actual": 257238.2,
-      "fecha": "2026-09-18",
+      "actual": 256542.8,
+      "fecha": "2026-09-25",
       "historico": [
         {
           "fecha": "2025-10-03",
@@ -2939,12 +2939,16 @@
         {
           "fecha": "2026-09-18",
           "valor": 257238.2
+        },
+        {
+          "fecha": "2026-09-25",
+          "valor": 256542.8
         }
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.786,
-      "fecha": "2026-09-25",
+      "actual": 6.8061,
+      "fecha": "2026-09-29",
       "historico": [
         {
           "fecha": "2024-09-30",
@@ -4313,12 +4317,16 @@
         {
           "fecha": "2026-09-25",
           "valor": 6.786
+        },
+        {
+          "fecha": "2026-09-29",
+          "valor": 6.8061
         }
       ]
     },
     "cetes_28d": {
-      "actual": 6.15,
-      "fecha": "2026-09-22",
+      "actual": 6.01,
+      "fecha": "2026-09-29",
       "historico": [
         {
           "fecha": "2024-09-30",
@@ -4735,12 +4743,16 @@
         {
           "fecha": "2026-09-22",
           "valor": 6.15
+        },
+        {
+          "fecha": "2026-09-29",
+          "valor": 6.01
         }
       ]
     },
     "udis": {
-      "actual": 8.830224,
-      "fecha": "2026-09-28"
+      "actual": 8.832158,
+      "fecha": "2026-09-29"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5488,8 +5500,8 @@
       "fecha": "2026-05-08"
     },
     "tasa_real_cetes": {
-      "actual": 2.89,
-      "fecha": "2026-09-22"
+      "actual": 2.75,
+      "fecha": "2026-09-29"
     }
   },
   "credito": {
