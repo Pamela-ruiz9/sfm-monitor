@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-09-30",
+  "ultima_actualizacion": "2026-10-01",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "18.0692",
-    "fecha": "2026-09-30",
+    "actual": "18.3688",
+    "fecha": "2026-10-01",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1580,6 +1580,10 @@
       {
         "mes": "2026-09",
         "valor": 18.0692
+      },
+      {
+        "mes": "2026-10",
+        "valor": 18.3688
       }
     ]
   },
@@ -1588,7 +1592,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-09-30",
+        "fecha": "2024-10-01",
         "valor": 10.5
       },
       {
@@ -2947,11 +2951,11 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.8162,
-      "fecha": "2026-09-30",
+      "actual": 6.776,
+      "fecha": "2026-10-01",
       "historico": [
         {
-          "fecha": "2024-09-30",
+          "fecha": "2024-10-02",
           "valor": 10.74
         },
         {
@@ -4325,6 +4329,10 @@
         {
           "fecha": "2026-09-30",
           "valor": 6.8162
+        },
+        {
+          "fecha": "2026-10-01",
+          "valor": 6.776
         }
       ]
     },
@@ -4332,10 +4340,6 @@
       "actual": 6.01,
       "fecha": "2026-09-29",
       "historico": [
-        {
-          "fecha": "2024-09-30",
-          "valor": 10.3
-        },
         {
           "fecha": "2024-10-08",
           "valor": 10.3
@@ -4755,8 +4759,8 @@
       ]
     },
     "udis": {
-      "actual": 8.834094,
-      "fecha": "2026-09-30"
+      "actual": 8.836029,
+      "fecha": "2026-10-01"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5289,8 +5293,8 @@
       ]
     },
     "remesas": {
-      "actual": 5570.5823,
-      "fecha": "2026-07",
+      "actual": 5452.3367,
+      "fecha": "2026-08",
       "historico": [
         {
           "fecha": "2024-10",
@@ -5379,6 +5383,10 @@
         {
           "fecha": "2026-07",
           "valor": 5570.5823
+        },
+        {
+          "fecha": "2026-08",
+          "valor": 5452.3367
         }
       ]
     },
