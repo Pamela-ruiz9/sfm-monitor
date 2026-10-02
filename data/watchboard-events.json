@@ -1,8 +1,50 @@
 {
-  "updated": "2026-10-01T19:12:24Z",
+  "updated": "2026-10-02T18:54:06Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "global-equity-bond-selloff-jobs-data-2026-10-02",
+          "date": "2026-10-02",
+          "title": "Global Equities Mixed as Bond Sell-Off Deepens Ahead of US Jobs Data",
+          "type": "market",
+          "detail": "Global equity markets traded mixed on October 2 following a deepening bond market sell-off, with investors adopting a cautious stance ahead of the upcoming US non-farm payrolls report. The jobs data is expected to be a key determinant of Federal Reserve rate policy, adding to uncertainty across risk assets. Rising yields weighed on equities in several regions as markets priced in the possibility that strong employment figures could reduce the Fed's appetite for rate cuts.",
+          "sources": [
+            {
+              "name": "The Hindu Business",
+              "tier": 2,
+              "url": "https://www.thehindu.com/business/markets/world-shares-mixed-after-global-bond-sell-off-deepens-ahead-of-us-jobs-data/article71536631.ece",
+              "pole": "international"
+            }
+          ]
+        },
+        {
+          "id": "us-pce-august-2026-cooler-sep30",
+          "date": "2026-09-30",
+          "title": "August PCE Inflation Cools to 3.4% (Core 3.0%), Below Forecasts; October Fed Hike Odds Fall to ~35%",
+          "type": "economic",
+          "detail": "The BEA's August Personal Consumption Expenditures report, released Sept 30, showed headline PCE up 0.3% m/m and 3.4% y/y (vs 3.7% in July and ~3.7% expected), and core PCE up 0.2% m/m and 3.0% y/y (vs 3.3% prior and 3.3% expected). CME FedWatch moved to roughly 65% odds that the Fed holds in October versus ~35% for another 25bp hike, after the Fed's first hike in three years on Sept 16. Treasury yields fell and US equity futures rose about 0.3% on the soft print, though inflation remains well above the Fed's 2% target.",
+          "sources": [
+            {
+              "name": "Fox Business — August PCE: Fed's favored inflation gauge rose less than expected",
+              "tier": 2,
+              "url": "https://www.foxbusiness.com/economy/august-2026-pce-inflation",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance — PCE inflation eases to 3.4%, cooling the case for another Fed rate hike",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/economy/policy/article/pce-inflation-eases-to-34--cooling-the-case-for-another-fed-rate-hike-125513195.html",
+              "pole": "western"
+            },
+            {
+              "name": "Invezz — US PCE inflation rises 3.4% in August, below expectations",
+              "tier": 3,
+              "url": "https://invezz.com/news/2026/09/30/us-pce-inflation-rises-3-4-in-august-below-expectations-as-economy-stays-resilient/",
+              "pole": "international"
+            }
+          ]
+        },
         {
           "id": "trump-xi-summit-washington-sept24-2026",
           "date": "2026-09-24",
@@ -662,66 +704,6 @@
               "pole": "middle_eastern"
             }
           ]
-        },
-        {
-          "id": "global-bond-yield-rout-multidecade-highs-adp-miss-sep2-2026",
-          "date": "2026-09-02",
-          "title": "Global Bond Yield Rout Reaches Multi-Decade Highs; ADP Shows Private Hiring Slowing Sharply to 38,000",
-          "type": "market",
-          "detail": "The global government bond selloff that began Monday accelerated Wednesday, pushing borrowing costs to multi-decade highs across major economies: the US 10-year Treasury yield touched 4.814% intraday, its highest since November 2023; Japan's 10-year JGB yield held above 3% for the first time in roughly 30 years; Germany's 10-year Bund reached 3.375%, its highest since 2011; and UK 10-year gilts extended a post-2008 high to 5.25%. The rout was driven by renewed US-Iran hostilities near the Strait of Hormuz keeping oil elevated (WTI +1.06% to $91.18) alongside persistent inflation and government-debt-sustainability concerns. Despite the yield spike, US equities rebounded from Tuesday's selloff as investors looked past the Middle East tensions: the S&P 500 and Dow each rose about 0.47%, the Nasdaq gained 0.37%, and the Russell 2000 led with a 1.10% gain. Separately, ADP's National Employment Report showed private-sector payrolls rose just 38,000 in August — below the 48,000 forecast and down from July's revised 46,000, the slowest pace since January — with manufacturing shedding 17,000 jobs, adding to labor-market softening evidence ahead of Friday's BLS nonfarm payrolls report.",
-          "sources": [
-            {
-              "name": "CNBC — Global Bond Rout Gathers Pace as Inflation Fears Mount",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/02/global-bond-yields-inflation-rates.html",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Private Payrolls Rose by 38,000 in August, Fewer Than Expected, ADP Reports",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/02/private-payrolls-rose-by-38000-in-august-fewer-than-expected-adp-reports.html",
-              "pole": "western"
-            },
-            {
-              "name": "ADP Research Institute — ADP National Employment Report: Private-Sector Employment Increased by 38,000 Jobs in August",
-              "tier": 1,
-              "url": "https://www.prnewswire.com/news-releases/adp-national-employment-report-private-sector-employment-increased-by-38-000-jobs-in-august-302867661.html",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance — Stock Market Today (Sept. 2, 2026): Dow Edges Higher as Oil Prices Rise and Bond Yields Climb",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-2-134032621.html",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "hormuz-tanker-strikes-oil-spike-ism-pmi-slows-sep1-2026",
-          "date": "2026-09-01",
-          "title": "Renewed US-Iran Strikes Near Strait of Hormuz Send Oil Above $90, Stocks Fall, 10-Year Yield Hits 20-Month High",
-          "type": "market",
-          "detail": "Two oil tankers — one Saudi-owned, one South Korean-owned — were struck by projectiles in the Strait of Hormuz late Monday (Aug 31) as fighting between US and Iranian forces resumed after a stalemate lull, and markets reacted sharply on Tuesday. Brent crude jumped 4.6% to $94.65/bbl and WTI surged 5.2% to $90.22 (highest close since late July), while the US 10-year Treasury yield rose to 4.792% — a 20-month high and its fifth straight session of gains — as Japan's 10-year JGB yield crossed 3% for the first time since 1996 and UK/eurozone yields hit multi-year highs. Equities sold off broadly: the Dow fell 0.79% to 52,766.88, the S&P 500 dropped 0.71% to 7,631.47, and the Nasdaq lost 1.03% to 26,099.77. Separately, the ISM Manufacturing PMI for August registered 54.6%, down 1 point from July's 55.6% and below the 55.2% forecast — still the sector's 8th straight month of expansion, but with the New Orders Index down 3 points to 53.7% and demand sentiment among purchasing managers cooling to a 2-to-1 positive/negative comment ratio (from 3.5-to-1 in July).",
-          "sources": [
-            {
-              "name": "AOL / Yahoo Finance — Bond Selloff Pressures Stocks as Oil Crosses $91 a Barrel",
-              "tier": 2,
-              "url": "https://www.aol.com/articles/bond-selloff-pressures-stocks-oil-014547000.html",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance — Stock Market Today (Sept. 1, 2026): Nasdaq Slides on Renewed U.S.-Iran Conflict",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-1-135016820.html",
-              "pole": "western"
-            },
-            {
-              "name": "Institute for Supply Management — Manufacturing PMI at 54.6%; August 2026 ISM Manufacturing PMI Report",
-              "tier": 1,
-              "url": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-54-6-august-2026-ism-manufacturing-pmi-report-302865127.html",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -776,15 +758,20 @@
         },
         {
           "id": "us-core-pce",
-          "label": "US PCE Inflation (July 2026)",
-          "value": "3.3% Core / 3.7% Headline",
-          "color": "red",
-          "source": "BEA Personal Income and Outlays, July 2026 (released August 26, 2026)",
+          "label": "US PCE Inflation (August 2026)",
+          "value": "3.0% Core / 3.4% Headline",
+          "color": "amber",
+          "source": "BEA Personal Income and Outlays, August 2026 (released September 30, 2026)",
           "contested": false,
-          "delta": "Core flat vs June (3.3%); headline +0.1pp above consensus",
-          "deltaNote": "JULY 2026 (released Aug 26): Headline PCE 3.7% YoY (+0.2% MoM), 0.1pp above the Dow Jones consensus. Core PCE 3.3% YoY (+0.2% MoM), matching consensus and flat vs June's 3.3% (down from May's cycle-high 3.4%). Personal income +0.4% MoM; spending +0.2% MoM; saving rate 3.0%. Warsh cited these exact 3.7%/4.1% (12mo/6mo) readings in his Aug 28 Jackson Hole keynote as evidence 'underlying trends have [not] meaningfully improved,' noting 54% of the consumption basket is still rising faster than 3% — a key justification for the hawkish tilt that pushed September hike odds to 57%.",
-          "trend": "up",
-          "lastUpdated": "2026-08-26T12:30:00Z"
+          "delta": "Core -0.3pp vs July (3.3%); headline -0.3pp vs July (3.7%); both below consensus",
+          "deltaNote": "AUG 2026 (Sept 30): Headline 3.4% y/y (+0.3% m/m), core 3.0% y/y (+0.2% m/m), both below consensus of 3.7%/3.3%. October hike odds fell to ~35%. Prior: July headline 3.7%, core 3.3%. JULY 2026 (released Aug 26): Headline PCE 3.7% YoY (+0.2% MoM), 0.1pp above the Dow Jones consensus. Core PCE 3.3% YoY (+0.2% MoM), matching consensus and flat vs June's 3.3% (down from May's cycle-high 3.4%). Personal income +0.4% MoM; spending +0.2% MoM; saving rate 3.0%. Warsh cited these exact 3.7%/4.1% (12mo/6mo) readings in his Aug 28 Jackson Hole keynote as evidence 'underlying trends have [not] meaningfully improved,' noting 54% of the consumption basket is still rising faster than 3% — a key justification for the hawkish tilt that pushed September hike odds to 57%.",
+          "trend": "down",
+          "lastUpdated": "2026-09-30T12:30:00Z",
+          "deltaDetail": {
+            "value": -0.3,
+            "direction": "down",
+            "period": "since Aug 26"
+          }
         },
         {
           "id": "fed-funds-rate",
@@ -927,6 +914,27 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "mananera-calderon-statue-amlo-book-oct1-2026",
+          "date": "2026-10-01",
+          "title": "Sheinbaum Condemns Decapitation of Calderón Statue at Los Pinos on Two-Year Anniversary",
+          "type": "political",
+          "detail": "At her Oct 1 morning conference, marking two years in office, Sheinbaum said she disagreed with former Luz y Fuerza del Centro workers decapitating the statue of Felipe Calderón at Los Pinos and with how they entered, rejecting any act of violence. She also criticised Calderón's participation in the Free Americas Forum, said AMLO's video presenting his new book was emotional and thanked him, and explained the scope and timing of the constitutional reform on nationality requirements for gubernatorial candidates.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "url": "https://www.infobae.com/mexico/2026/10/01/sheinbaum-condena-vandalismo-contra-estatua-de-felipe-calderon-en-los-pinos-y-critica-su-presentacion-en-foro-de-derecha/",
+              "pole": "western"
+            },
+            {
+              "name": "El Financiero",
+              "tier": 2,
+              "url": "https://www.elfinanciero.com.mx/nacional/2026/10/01/claudia-sheinbaum-mananera-temas-hoy-1-de-octubre-de-2026-en-vivo/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "mananera-interpol-calderon-forum-sep30-2026",
           "date": "2026-09-30",
@@ -1529,33 +1537,6 @@
               "url": "https://www.elfinanciero.com.mx/nacional/2026/09/10/claudia-sheinbaum-mananera-temas-hoy-10-de-septiembre-de-2026-en-vivo/"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-presenta-paquete-economico-2027-ley-economia-digital-sep9-2026",
-          "date": "2026-09-09",
-          "title": "Day 708 — Sheinbaum Presents 2027 Economic Package at National Palace, Announces Digital Economy Law to Curb Cash Use",
-          "type": "economic",
-          "detail": "On September 9, 2026 (Day 708, Wednesday), President Sheinbaum presented the 2027 Economic Package at her mañanera in the National Palace, a day after Finance Secretary Édgar Amador Zamora formally delivered it to the Chamber of Deputies. Sheinbaum reiterated that the package \"no contempla nuevos impuestos ni va a haber gasolinazos\" (contemplates no new taxes and no fuel-price shocks), framing it as \"responsible\" and protective of welfare, health and education spending while pursuing gradual fiscal consolidation and reinforced anti-tax-evasion enforcement rather than new levies. She announced a new Digital Economy Law would be sent to Congress alongside the package, aimed at gradually reducing cash usage in commercial transactions through phased targets and timelines, promoting secure digital payment platforms, and providing incentives and training tools to help micro and small businesses adopt electronic collection methods without hurting their income. Sheinbaum said Finance Secretary Amador would detail the macroeconomic criteria, revenue initiatives and small-business support programs at her mañaneras on September 11 and 12. Officials confirmed the package projects total net spending of 10.636 trillion pesos, revenue of 9.157 trillion pesos, a deficit equal to 3.9% of GDP, and 2027 GDP growth of 1.5%–2.5%.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/09/gobierno-de-sheinbaum-preve-gastar-mas-de-10-billones-de-pesos-en-2027-secretario-de-hacienda-entrega-el-paquete-economico/"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/09/08/sheinbaum-buscara-un-mexico-con-menos-efectivo-con-el-paquete-economico-2027/"
-            },
-            {
-              "name": "Ráfaga Noticias",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://rafaganoticias.com/2026/09/09/paquete-economico-2027-es-responsable-garantiza-bienestar-sin-nuevos-impuestos-ni-gasolinazos-y-mantiene-incentivos-presidenta-sheinbaum/"
-            }
-          ]
         }
       ]
     },
@@ -1572,33 +1553,6 @@
               "name": "Reuters",
               "tier": 2,
               "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSWN6eWZvTHVwUlBIRFY3cEc1Z0d3MzVQNk1yTWxhczVPUEQtOE5fbTB3STB6eDEzOHNkUDZHYlF6NVBHU0kxaTlqM28xbmp1bDRTSzJ5QVJCVWJqMHM2bjctX0NqUHdXdkYwVHp3NUxsSTd0TXZpWnRjUU5vOFAyNmlOVnY1SVZEb19yT1VMVnYtclBSNUpuWFQ5eW9Iay1sTDBNT1p5YTFsSXBhNzd3Z0VYcFZ2YlgwUXJGaUdWQjU?oc=5&hl=en-US&gl=US&ceid=US:en",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "treasury-yield-19yr-high-oil-spike-hormuz-sep24-2026",
-          "date": "2026-09-24",
-          "title": "10-Year Treasury Yield Hits 19-Year High, Mortgage Rates Spike as Oil Surges on Hormuz Vessel Strike",
-          "type": "economic",
-          "detail": "The 10-year Treasury yield climbed to 5.13% on Wednesday, September 23, 2026 — its sharpest one-day jump since April 9, 2025 — after Brent crude jumped 3.8% to $103.08/bbl following reports that a cargo vessel was struck by an unknown projectile in the Strait of Hormuz; the 30-year fixed mortgage rate rose to 7.26%, its highest since January 13, 2025, and the Dow fell 352 points. The yield climbed further to a cycle-high near 5.18% on Thursday, September 24 — the highest level since June 2007, months before the global financial crisis — as accelerating inflation data, fuel-cost pressure from the six-month Iran war, and market odds of an October Fed rate hike exceeding 70% pushed borrowing costs up across the economy. AAA's national gas average hit $4.48/gallon on September 24, a record for this time of year. Oil eased back below $98/bbl by Friday, September 25 as US and Iranian negotiators explored a phased deal to reopen the Strait, and the Dow rallied 478.62 points (+0.93%) to close at 51,828.62, though the elevated 10-year yield — a benchmark that feeds through to mortgages, corporate bonds and auto loans — persisted.",
-          "sources": [
-            {
-              "name": "NBC News",
-              "tier": 2,
-              "url": "https://www.nbcnews.com/business/energy/treasury-yields-oil-stocks-rcna599398",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/25/treasury-yield-buy-bonds.html",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-september-25-dow-sp-500-nasdaq-081738529.html",
               "pole": "western"
             }
           ]
