@@ -1,8 +1,23 @@
 {
-  "updated": "2026-10-02T18:54:06Z",
+  "updated": "2026-10-05T21:19:37Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "us-oil-prices-drop-5pct-2026-10-03",
+          "date": "2026-10-03",
+          "title": "US Oil Prices Drop 5% in Sharp Single-Session Decline",
+          "type": "market",
+          "detail": "US oil prices fell sharply by approximately 5% in a significant single-session decline, marking one of the steeper intraday moves in recent months. The drop raises concerns about weakening demand expectations across global energy markets and may signal broader economic softening. Falling oil prices add to the composite recession risk picture, as sustained declines historically correlate with reduced industrial activity and investment.",
+          "sources": [
+            {
+              "name": "Insider Paper",
+              "tier": 4,
+              "url": "https://t.me/insiderpaper/44992",
+              "pole": "international"
+            }
+          ]
+        },
         {
           "id": "global-equity-bond-selloff-jobs-data-2026-10-02",
           "date": "2026-10-02",
@@ -15,6 +30,27 @@
               "tier": 2,
               "url": "https://www.thehindu.com/business/markets/world-shares-mixed-after-global-bond-sell-off-deepens-ahead-of-us-jobs-data/article71536631.ece",
               "pole": "international"
+            }
+          ]
+        },
+        {
+          "id": "us-sept-jobs-report-29k-2026-10-02",
+          "date": "2026-10-02",
+          "title": "US Payrolls Rise Just 29,000 in September; Unemployment Ticks Up to 4.2%",
+          "type": "economic",
+          "detail": "The US economy added 29,000 nonfarm jobs in September versus a consensus of about 84,000, and the unemployment rate rose to 4.2% (forecast 4.1%). July was revised to a loss of 10,000 and August down to 133,000, cutting prior counts by 60,000 combined. Private payrolls rose 46,000 while government shed 17,000; participation edged up to 61.8%.",
+          "sources": [
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html",
+              "pole": "western"
+            },
+            {
+              "name": "Fox Business",
+              "tier": 2,
+              "url": "https://www.foxbusiness.com/economy/us-jobs-report-september-2026",
+              "pole": "western"
             }
           ]
         },
@@ -644,66 +680,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "waller-dovish-remarks-stocks-rally-ism-services-beat-sep3-2026",
-          "date": "2026-09-03",
-          "title": "Fed Governor Waller Signals Openness to September Hold, Sparking Broad Stock Rally as ISM Services Beats and Yields Retreat",
-          "type": "policy",
-          "detail": "Fed Governor Christopher Waller said in remarks released the morning of September 3 that while inflation remains 'meaningfully above' the FOMC's 2% goal, recent data show signs of disinflation, and if that continues over the next two weeks of incoming data he would 'be inclined to support holding the target for the federal funds rate at its current setting' at the September 16-17 meeting. Waller argued the effects of higher tariffs have already been substantially reflected in consumer prices and that post-Mideast-war energy costs have not broadly lifted prices elsewhere, calling underlying inflation 'moderating' — a notably more dovish read than Fed Chair Kevin Warsh's hawkish August 28 Jackson Hole keynote. Markets read it as a clear dovish signal: CME FedWatch odds of a September rate hike fell roughly 12 percentage points to about 54.6% (from ~66% the day before), and the 10-year Treasury yield retreated from the week's 4.818% high (its highest since November 2023) as bonds rallied. Stocks surged on the news: the S&P 500 rose about 1.1% to roughly 7,750, the Dow Jones Industrial Average gained about 1.2% to roughly 53,685, and the Nasdaq Composite jumped about 1.4% to roughly 26,584 — all three indexes' best day in weeks, snapping the prior week's rate-hike-driven slide. Same-day data added to the mixed picture: the ISM Services PMI for August came in at 55.4%, up 1.3 points from July's 54.1% and beating the roughly 54.5% forecast — the 26th straight month of services-sector expansion — while weekly initial jobless claims for the week ending August 29 rose to 206,000, a touch above the 205,000 consensus and up 2,000 from the prior week's revised 204,000, with the 4-week moving average climbing to 207,250.",
-          "sources": [
-            {
-              "name": "Federal Reserve — Speech by Governor Waller on the Economic Outlook",
-              "tier": 1,
-              "url": "https://www.federalreserve.gov/newsevents/speech/waller20260903a.htm",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — Fed Governor Waller Indicates He Will Support Holding Rates Steady at September Meeting",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/03/fed-governor-waller-indicates-he-will-support-holding-rates-steady-at-september-meeting.html",
-              "pole": "western"
-            },
-            {
-              "name": "ISM — Services PMI at 55.4%; August 2026 ISM Services PMI Report",
-              "tier": 1,
-              "url": "https://www.prnewswire.com/news-releases/services-pmi-at-55-4-august-2026-ism-services-pmi-report-302868046.html",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance — US Initial Jobless Claims Rise to 206,000, Slightly Above Forecast",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/economy/articles/u-initial-jobless-claims-rise-125759530.html",
-              "pole": "western"
-            },
-            {
-              "name": "24/7 Wall St. — S&P 500 Closes Up 1.1% as All Three Major Indexes Rally Together",
-              "tier": 3,
-              "url": "https://247wallst.com/cards/all-three-major-indexes-closed-up-more-than-1-with-the-nas-gspc-market-bell-01m1mdym87x351nzj6fwn0508f",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "iran-strikes-kuwait-uae-bases-sept3-2026",
-          "date": "2026-09-03",
-          "title": "Iran Launches Second Night of Retaliation, Striking US-Linked Bases in Kuwait and the UAE; Oil Heads for ~8% Weekly Gain",
-          "type": "market",
-          "detail": "Early September 3, Iran's military claimed a second consecutive night of retaliatory strikes on US-linked positions in the Gulf, following the September 1 US strikes on IRGC targets near the Strait of Hormuz and a first round of Iranian missile/drone attacks on September 2 against Camp Titin in Jordan, plus Kuwait and Bahrain. Iran's army said it hit satellite-communication systems, equipment depots, and fighter-aircraft hangars at Ahmad al-Jaber Air Base in Kuwait, and struck force positions and radar systems at Al Minhad Air Base in the UAE. Kuwait's air defenses engaged the incoming missiles and drones; Kuwait's foreign ministry called the strikes 'a direct threat to its security and stability' and a breach of international law. A US official said the attacks did not hit any facility where American forces are based, and no casualties or damage were confirmed by host governments; the UAE did not address the Al Minhad claim. Iran separately claimed the earlier US strikes killed 11-18 people, including a disputed strike on a wedding gathering in Sirik (4 dead, Iranian claim, unverified). The renewed multi-front escalation kept oil prices elevated, with Brent crude on track for roughly an 8% weekly gain as shipping through the Strait of Hormuz remained severely disrupted.",
-          "sources": [
-            {
-              "name": "RFE/RL via GlobalSecurity.org — Iranian Military Says It Attacked Targets In Kuwait, UAE",
-              "tier": 2,
-              "url": "https://www.globalsecurity.org/wmd/library/news/iran/2026/09/iran-260903-rferl10.htm",
-              "pole": "western"
-            },
-            {
-              "name": "Gulf News — US Strikes Kill 11 in Iran as Tehran Retaliates With Missile and Drone Attacks on Kuwait, Bahrain and Jordan",
-              "tier": 2,
-              "url": "https://gulfnews.com/world/mena/us-strikes-iran-tehran-retaliates-with-missile-and-drone-attacks-in-kuwait-bahrain-and-jordan-1.500660148",
-              "pole": "middle_eastern"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -914,6 +890,27 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "mananera-torreon-school-attack-tlatelolco-oct2-2026",
+          "date": "2026-10-02",
+          "title": "Sheinbaum Announces Decree on Social Media Violence Content After Torreón School Attack; Marks Tlatelolco Anniversary",
+          "type": "political",
+          "detail": "At her Oct 2 morning conference Sheinbaum addressed an attack at a secondary school in Torreón, Coahuila, and said the government is preparing a decree obliging digital platforms to detect, report and promptly remove posts and comments that directly incite violence, alongside strengthened school wellness efforts such as 'El ABC de las emociones'. On the 58th anniversary of the 1968 Tlatelolco massacre she remembered the victims and ruled out repression. Culture Secretary Claudia Curiel presented a two-year results report, citing 32% growth in cultural offerings and 520,000 activities across all 32 states.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "url": "https://www.infobae.com/mexico/2026/10/02/en-vivo-la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-viernes-2-de-octubre/",
+              "pole": "western"
+            },
+            {
+              "name": "Tribuna",
+              "tier": 2,
+              "url": "https://tribuna.com.mx/mexico/2026/10/02/2-de-octubre-no-se-olvida-en-la-mananera-sheinbaum-recuerda-la-masacre-de-tlatelolco-y-descarta-represion_697062",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "mananera-calderon-statue-amlo-book-oct1-2026",
           "date": "2026-10-01",
@@ -1510,38 +1507,41 @@
               "url": "https://serpientesyescaleras.mx/mananera-de-sheinbaum-hoy-11-de-septiembre-seguridad-en-chiapas-ine-y-pisa/"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-ley-economia-digital-tasa-cero-libros-sep10-2026",
-          "date": "2026-09-10",
-          "title": "Day 709 — Economy Secretary Details Digital Economy Law, Sheinbaum Announces Zero VAT Rate for Books",
-          "type": "economic",
-          "detail": "Also at the September 10, 2026 mañanera, the Secretariat of Economy detailed the Digital Economy Law for Digital and Electronic Payments — sent to the Chamber of Deputies alongside the 2027 Economic Package — which sets phased targets and timelines to shift public institutions, private companies and priority sectors from cash toward digital and electronic payment methods, with incentives and training tools aimed at helping micro and small businesses adopt secure electronic collection without hurting their income. Officials said more than 4.1 million taxpayers would benefit from simplified, fully digital tax procedures, including small businesses newly able to pay income tax on a quarterly rather than monthly basis. Separately, Sheinbaum announced books will be subject to a zero VAT rate rather than the standard exemption, allowing bookstores and publishers to recover VAT paid on their own expenses without the retail price to readers increasing.",
-          "sources": [
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/09/10/mananera-de-claudia-sheinbaum-hoy-jueves-10-de-septiembre-del-2026/"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/10/la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-10-de-septiembre/"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/09/10/claudia-sheinbaum-mananera-temas-hoy-10-de-septiembre-de-2026-en-vivo/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "medicare-90-dollar-payment-seniors-oct03",
+          "date": "2026-10-03",
+          "title": "Administration Announces One-Time $90 Payment for 20+ Million Medicare Recipients",
+          "type": "economic",
+          "detail": "The Trump administration announced a one-time $90 payment to more than 20 million Medicare recipients to help offset Part B premium costs.",
+          "sources": [
+            {
+              "name": "Local 12",
+              "tier": 3,
+              "url": "https://local12.com/news/nation-world/trump-one-time-90-dollars-medicare-payment-millions-seniors-eligibility-october-2026",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "g20-trade-ministerial-milwaukee-no-deal-oct03",
+          "date": "2026-10-03",
+          "title": "G20 Trade Ministers Fail to Agree on Overcapacity and Forced Labor After Milwaukee Meeting",
+          "type": "economic",
+          "detail": "G20 trade ministers meeting in Milwaukee (Sept 30–Oct 1) failed to reach agreement on curbing overcapacity or on forced labor, the issue the administration cites for double-digit tariffs on 60+ countries. USTR Greer had urged members to back the US agenda and target China's subsidies.",
+          "sources": [
+            {
+              "name": "The Washington Times",
+              "tier": 2,
+              "url": "https://www.washingtontimes.com/news/2026/oct/1/g20-trade-talks-yield-little-progress-tensions-simmer/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "us-china-toy-tariffs-christmas-sep28-2026",
           "date": "2026-09-28",
