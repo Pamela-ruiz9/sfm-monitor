@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T21:19:37Z",
+  "updated": "2026-10-06T19:16:26Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -891,6 +891,21 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "mananera-queretaro-police-academy-oct5-2026",
+          "date": "2026-10-05",
+          "title": "Sheinbaum Questions Binational Police Training Academy in Querétaro",
+          "type": "political",
+          "detail": "At her Oct 5 morning conference Sheinbaum said the federal government was not informed of an 'International Police Training Academy' in Querétaro involving Governor Mauricio Kuri and U.S. Ambassador Ronald Johnson. She said any foreign institution training in Mexico must go through the Foreign Ministry and comply with the national security law, and that a state cannot set up an international academy without federal authorization. She said she would direct the Foreign Ministry to contact Johnson and Kuri. Asked about Brazil's runoff, she declined to comment.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "url": "https://mexiconewsdaily.com/politics/sheinbaum-police-academy-queretaro-mananera-monday/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
           "id": "mananera-torreon-school-attack-tlatelolco-oct2-2026",
           "date": "2026-10-02",
           "title": "Sheinbaum Announces Decree on Social Media Violence Content After Torreón School Attack; Marks Tlatelolco Anniversary",
@@ -1538,21 +1553,6 @@
               "name": "The Washington Times",
               "tier": 2,
               "url": "https://www.washingtontimes.com/news/2026/oct/1/g20-trade-talks-yield-little-progress-tensions-simmer/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-china-toy-tariffs-christmas-sep28-2026",
-          "date": "2026-09-28",
-          "title": "US and China Pledge to Reduce Toy Tariffs Ahead of Christmas Season",
-          "type": "economic",
-          "detail": "The United States and China pledged to reduce tariffs on toys ahead of the Christmas shopping season, potentially easing supply chain pressure for manufacturers and retailers. The announcement extends momentum from Chinese President Xi Jinping's recent state visit to Washington, which concluded with an extension of the US-China trade truce through January 10, 2027. The toy tariff reduction signals continued trade diplomacy between the two countries in the lead-up to the holiday season.",
-          "sources": [
-            {
-              "name": "Reuters",
-              "tier": 2,
-              "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSWN6eWZvTHVwUlBIRFY3cEc1Z0d3MzVQNk1yTWxhczVPUEQtOE5fbTB3STB6eDEzOHNkUDZHYlF6NVBHU0kxaTlqM28xbmp1bDRTSzJ5QVJCVWJqMHM2bjctX0NqUHdXdkYwVHp3NUxsSTd0TXZpWnRjUU5vOFAyNmlOVnY1SVZEb19yT1VMVnYtclBSNUpuWFQ5eW9Iay1sTDBNT1p5YTFsSXBhNzd3Z0VYcFZ2YlgwUXJGaUdWQjU?oc=5&hl=en-US&gl=US&ceid=US:en",
               "pole": "western"
             }
           ]
