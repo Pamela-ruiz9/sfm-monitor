@@ -1,8 +1,29 @@
 {
-  "updated": "2026-10-07T19:40:49Z",
+  "updated": "2026-10-08T19:37:15Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "us-stocks-record-yields-ease-2026-10-06",
+          "date": "2026-10-06",
+          "title": "S&P 500 and Nasdaq Hit Records as Treasury Yields Retreat From Two-Decade Highs",
+          "type": "market",
+          "detail": "US equities closed at record highs on Oct 6 as long-dated Treasury yields eased from multi-year peaks (30-year around 5.62% after touching a 2002-high 5.70% a day earlier; 10-year around 5.28% after briefly topping 5.3%) and oil fell more than 2%. A softer September jobs report cut expectations for near-term Fed hikes: CME FedWatch showed ~78% odds of a hold at the Oct 28 meeting, though a December hike remained largely priced in. The bond-equity divergence keeps rate-driven stress in focus.",
+          "sources": [
+            {
+              "name": "Detroit News (Reuters)",
+              "tier": 2,
+              "url": "https://www.detroitnews.com/story/business/2026/10/06/sp-500-nasdaq-touch-new-peaks-as-treasury-yields-cool-oil-slips/92117491007/",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-6-134418932.html",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "us-oil-prices-drop-5pct-2026-10-03",
           "date": "2026-10-03",
@@ -659,27 +680,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "brent-97-gulf-escalation-sept4-2026",
-          "date": "2026-09-04",
-          "title": "Brent Crosses $97, WTI Holds $92 as Iran-US Gulf Escalation Compounds the Jobs-Driven Bond Selloff",
-          "type": "market",
-          "detail": "Oil extended its rise on September 4 as the Iran-US military exchange that began September 1 — US strikes on IRGC targets near the Strait of Hormuz, followed by Iranian retaliatory missile/drone attacks on Camp Titin in Jordan, Kuwait, and Bahrain (Sept 2) and a second night hitting Ahmad al-Jaber Air Base in Kuwait and Al Minhad Air Base in the UAE (Sept 3) — kept a war-risk premium in crude. Brent crude touched $97.36/bbl and WTI held near $92.39, with Brent on track for roughly an 8% weekly gain as commodity-vessel transits through Hormuz stayed well below the pre-crisis baseline. The renewed Gulf war-risk premium compounded the same-day inflation-hawk pressure from the blowout August jobs report, reinforcing the 'higher-for-longer' bond-market narrative heading into the September 16 FOMC.",
-          "sources": [
-            {
-              "name": "Vantage Markets — Brent Crude Tops $97, WTI Holds $92 as Iran Strikes Kuwait",
-              "tier": 3,
-              "url": "https://www.vantagemarkets.com/market-analysis/brent-wti-crude-oil-price-september-4-2026/",
-              "pole": "international"
-            },
-            {
-              "name": "CNBC — US Strikes Iran After New Hormuz Strait Shipping Attacks",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/01/us-strikes-iran-after-new-hormuz-strait-shipping-attacks-centcom.html",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -890,6 +890,33 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "mananera-oct6-2026-police-academy-coast-guard-sus",
+          "date": "2026-10-06",
+          "title": "Sheinbaum: Querétaro Police Academy Not Authorized; Asks U.S. for Evidence on Coast Guard Shots",
+          "type": "political",
+          "detail": "At her Oct 6 conference Sheinbaum said the Querétaro police academy involving U.S. agencies was not among nine collaboration projects approved by the High-Level Security Group and that it must obtain federal authorization, calling her remarks a warning to Governor Mauricio Kuri's government. She said Mexico has no evidence of shots fired from Mexico at a U.S. Coast Guard vessel and asked Washington for proof. She announced more than 12,700 SUS clinics tied to IMSS-Bienestar, said the Banco de México should review lifetime pensions of former officials, and ruled out changes to the alcohol IEPS tax.",
+          "sources": [
+            {
+              "name": "El Financiero",
+              "tier": 2,
+              "url": "https://www.elfinanciero.com.mx/nacional/2026/10/06/claudia-sheinbaum-mananera-temas-hoy-6-de-octubre-de-2026-en-vivo/",
+              "pole": "western"
+            },
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "url": "https://www.infobae.com/mexico/2026/10/06/en-vivo-la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-martes-6-de-septiembre/",
+              "pole": "western"
+            },
+            {
+              "name": "La Razón de México",
+              "tier": 2,
+              "url": "https://www.razon.com.mx/mexico/2026/10/06/mananera-de-sheinbaum-6-de-octubre-del-2026/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "mananera-queretaro-police-academy-oct5-2026",
           "date": "2026-10-05",
@@ -1495,38 +1522,26 @@
               "url": "https://www.poresto.com/yucatan/merida/2026/9/12/claudia-sheinbaum-presenta-honestidad-y-resultados-desde-merida-sigue-la-transmision-en-vivo.html"
             }
           ]
-        },
-        {
-          "id": "chiapas-seguridad-ine-boleta-recta-sep11-2026",
-          "date": "2026-09-11",
-          "title": "Day 710 — Sheinbaum Holds Mañanera in Chiapas, Cites Security Gains and Reversal of Forced Displacement; Questions INE Straight-Ballot Criteria",
-          "type": "political",
-          "detail": "On September 11, 2026 (Day 710, Friday), President Sheinbaum held her mañanera in Tuxtla Gutiérrez, Chiapas, alongside Governor Eduardo Ramírez Aguilar. Security Secretary Omar García Harfuch reported that since December 2024 the state has recorded 9,949 detentions, 1,832 recovered vehicles, 1,545 seized weapons and 71,798 confiscated cartridges, plus 18.6 tonnes of drugs secured through 101,907 joint interinstitutional operations, alongside a 64% drop in the daily average of intentional homicides and a 44% drop in other high-impact crimes compared to December 2024; the governor cited incorporating 800 experienced officers and a 55% police salary increase. Officials said forced displacement in Chiapas — which shifted in character from religious conflicts toward territorial disputes among criminal groups — has substantially reversed, with roughly 95% of displaced families returned home, including in Comalapa and Chicomuselo municipalities where residents had fled into Guatemala. On literacy, Chiapas reported reaching 194,818 people since 2025 against a 250,000 target. Sheinbaum also asked the INE to clarify new criteria that would count unfolded \"straight ballots\" as valid votes, and argued the agency's 2027 election budget should be based on 2024 spending adjusted for inflation. Asked about PAN officials' trip to Europe during the early stage of the 2026–27 electoral process, she said, \"Tienen derecho... pero tiene su simbolismo,\" noting the timing near Mexico's Independence Day.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/11/en-vivo-la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-11-de-septiembre/"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/09/11/mananera-de-claudia-sheinbaum-hoy-viernes-11-de-septiembre-del-2026/"
-            },
-            {
-              "name": "Serpientes y Escaleras",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://serpientesyescaleras.mx/mananera-de-sheinbaum-hoy-11-de-septiembre-seguridad-en-chiapas-ine-y-pisa/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "trump-tariffs-inflation-study-oct7",
+          "date": "2026-10-07",
+          "title": "Study Finds Trump-Era Tariffs Drove Up Consumer Prices Ahead of Midterms",
+          "type": "economic",
+          "detail": "A new study provides fresh empirical evidence that Trump administration tariffs drove up prices for consumer goods, adding to the economic debate ahead of the November midterms. The findings suggest the inflationary impact of tariff policy remains a key issue for voters as Republicans defend their House majority.",
+          "sources": [
+            {
+              "name": "Google News",
+              "tier": 3,
+              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWThaYVdHekItYl9fUUYtSWhPUktMbGNMcU1pNXAyVTE1S3pkdVJCbTNlYUNjRzR0VHVweHBxOXNzbW5IY2VkRWczMGtLaTBYYXRQa0g2Yzk1SmwwYlFwSEFaaDJpWUEwQUxFc2d3Xy05TVljSFZZbnZCX01Wd2MzSHZ1SkdmQmRkdlRmSUlqVkdmdVNNeHpJdWtISTZ4Wlg5czRoNQ",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "medicare-90-dollar-payment-seniors-oct03",
           "date": "2026-10-03",
