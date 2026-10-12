@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T19:11:56Z",
+  "updated": "2026-10-12T21:56:48Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -29,6 +29,42 @@
               "name": "The Japan Times",
               "tier": 2,
               "url": "https://www.japantimes.co.jp/business/2026/10/09/companies/global-banks-japan-dcm/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "trump-russia-diesel-supply-us-markets-2026-10-09",
+          "date": "2026-10-09",
+          "title": "Trump Announces Russia to Supply Diesel to US and Global Markets",
+          "type": "econ",
+          "detail": "President Trump announced that Russia will supply diesel fuel to the United States and the broader global market, a move Reuters reported is aimed at easing domestic fuel price pressures ahead of US midterm elections. The agreement marks a significant geopolitical shift in energy trade flows, potentially reducing consumer pain at the pump while raising questions about sanctions policy and the US-Russia relationship. Analysts note the move could dampen diesel price inflation, which has been a key driver of broader goods price pressures in the US economy.",
+          "sources": [
+            {
+              "name": "Reuters",
+              "tier": 1,
+              "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQU3RwVkZ4Mkg3Vy1fdGF2T2t4RmRLV3lQaU5LcXdnd3hKd21HRlZqR1dBTDlEbmNheE1MYVNjZldOLVlUd2lpMDdSaDd5c0tSUEpVRWJPLU1rTU9hSVhTYlF3Z2JPUlQydXgyb0VraVpvMUlwdHlFY2RoNEZ3WUE4Y0JjNnlHMV9VakFsdzMzOFFzUnQ3MlE",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "treasury-yields-back-off-24yr-high-auction-2026-10-07",
+          "date": "2026-10-07",
+          "title": "10-Year Treasury Yield Backs Off 24-Year High After Solid Auction; Stocks Retreat From Records",
+          "type": "market",
+          "detail": "The 10-year Treasury yield peaked near 5.35%, its highest since April 2002, before easing after a solid 10-year note auction eased demand fears. The 30-year reached about 5.73%. Stocks dipped from record highs on bond-market jitters, with rising borrowing costs remaining the key risk channel.",
+          "sources": [
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/10/07/treasury-yields-auction-fomc-minutes.html",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-7-dow-sp-500-nasdaq-080241833.html",
               "pole": "western"
             }
           ]
@@ -614,48 +650,6 @@
               "pole": "middle_eastern"
             }
           ]
-        },
-        {
-          "id": "irgc-warships-blockade-threat-sept6-2026",
-          "date": "2026-09-06",
-          "title": "IRGC Claims New Attacks on US Warships Over Naval Blockade; Ghalibaf Warns of 'Faster, Heavier, More Painful' Response",
-          "type": "market",
-          "detail": "The Strait of Hormuz crisis continued into September 6 (Sunday) with no sign of de-escalation: Iran's Revolutionary Guard Corps claimed fresh attacks on US warships enforcing the ongoing American naval blockade of Iran, which has been in place since the collapse of the June 17 ceasefire memorandum on July 8. Parliament Speaker and chief negotiator Mohammad Bagher Ghalibaf reiterated that any further attacks on Iran would 'meet a faster, heavier and more painful response,' extending the harder rhetorical line he set the day before ('the era of proportionate responses is over'). The renewed multi-day exchange — US strikes on IRGC targets (Sept 1), Iranian retaliation across Jordan, Kuwait, and the UAE (Sept 2-3), and mutual tanker/vessel strikes in the Strait (Sept 5) — keeps a live war-risk premium in oil markets heading into the new week, with commercial shipping through Hormuz still running far below its pre-crisis baseline and the September 16 FOMC meeting now set against a backdrop of both a hawkish August jobs report and an unresolved energy-supply shock.",
-          "sources": [
-            {
-              "name": "Al Jazeera — Iran War Live: Tehran Warns of 'Faster, More Painful' Response to Attacks",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/news/liveblog/2026/9/6/iran-war-live-irgc-claims-new-attacks-on-us-warships-over-naval-blockade",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "Euronews — Iranian Media Report US Strike on Iranian Oil Tanker Near Kharg Island",
-              "tier": 2,
-              "url": "https://www.euronews.com/2026/09/05/iranian-media-report-us-strike-on-iranian-oil-tanker-near-kharg-island",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "wright-iran-nuclear-deal-unlikely-sept6-2026",
-          "date": "2026-09-06",
-          "title": "Energy Secretary Wright: Iran Nuclear Deal 'May Not' Happen, Says US May Instead Destroy Tehran's Capabilities",
-          "type": "political",
-          "detail": "US Energy Secretary Chris Wright said on ABC News' 'This Week' on September 6 that a nuclear agreement with Iran may not be reachable anytime soon, seven months into the war that began February 28. 'There may not be a nuclear agreement,' Wright said, adding the alternative path could be 'simply destroying their capabilities to do it' rather than negotiating a deal. He said any formal agreement 'may await the next administration in Iran,' while acknowledging 'we simply don't know that,' and claimed continued US bombing campaigns are 'degrading their capacity to develop nuclear weapons and ultimately to deliver them.' The comments came the same weekend the US destroyed three Iranian oil tankers and Iran fired ballistic missiles at a US carrier group, underscoring that the administration sees military pressure — not diplomacy — as the near-term path on Iran, with implications for how long the Strait of Hormuz naval blockade and its oil-market disruption persist.",
-          "sources": [
-            {
-              "name": "The Hill — Energy Secretary Chris Wright Says Trump Administration May Not Reach Iran Nuclear Deal",
-              "tier": 2,
-              "url": "https://thehill.com/homenews/administration/6073768-wright-iran-nuclear-deal/",
-              "pole": "western"
-            },
-            {
-              "name": "Washington Post — US Energy Secretary Chris Wright Says Iran Nuclear Deal 'May Not' Happen",
-              "tier": 2,
-              "url": "https://www.washingtonpost.com/world/2026/09/06/us-energy-secretary-chris-wright-says-iran-nuclear-deal-may-not-happen/",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -866,6 +860,48 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "mananera-oct8-2026-mexicana-harfuch-2030",
+          "date": "2026-10-08",
+          "title": "Sheinbaum Deflects 2030 Talk on García Harfuch; Mexicana de Aviación Reports Progress",
+          "type": "political",
+          "detail": "At her Oct 8 conference Sheinbaum answered Senator Manuel Velasco's proposal of security secretary Omar García Harfuch for 2030, saying he is dedicated full time to security and that no one in her cabinet is thinking of political aspirations. Mexicana de Aviación's director said the airline has raised seat supply 83% since June, carried over 1.2 million passengers and expects break-even from 2030. Sheinbaum also said the security cabinet is investigating a video of alleged Mexican cartel members in the Ukraine war, with no official confirmation of identities.",
+          "sources": [
+            {
+              "name": "Excélsior",
+              "tier": 2,
+              "url": "https://www.excelsior.com.mx/nacional/mananera-sheinbaum-hoy-temas-conferencia-8-octubre-2026",
+              "pole": "western"
+            },
+            {
+              "name": "UnoTV",
+              "tier": 2,
+              "url": "https://www.unotv.com/nacional/la-mananera-de-claudia-sheinbaum-8-de-octubre-de-2026/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "mananera-oct7-2026-dual-nationality-decree",
+          "date": "2026-10-07",
+          "title": "Sheinbaum Signs Decree Barring Dual Nationals from Presidency and Governorships from 2028",
+          "type": "political",
+          "detail": "At her Oct 7 conference Sheinbaum signed the decree implementing the constitutional reform that bars people with dual nationality from running for president or governor starting in 2028; the reform passed both chambers and 22 state congresses, and publication in the Diario Oficial was expected that evening. CFE presented the Chicoasén II hydroelectric project and a plan to end blackouts on the Yucatán Peninsula. She also marked Morena's anniversary, saying governors of the movement should uphold honesty.",
+          "sources": [
+            {
+              "name": "Excélsior",
+              "tier": 2,
+              "url": "https://www.excelsior.com.mx/nacional/mananera-sheinbaum-hoy-temas-conferencia-7-octubre-2026",
+              "pole": "western"
+            },
+            {
+              "name": "UnoTV",
+              "tier": 2,
+              "url": "https://www.unotv.com/nacional/la-mananera-de-claudia-sheinbaum-7-de-octubre-de-2026/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "mananera-oct6-2026-police-academy-coast-guard-sus",
           "date": "2026-10-06",
@@ -1432,77 +1468,26 @@
               "url": "https://www.eluniversal.com.mx/nacion/la-mananera-de-sheinbaum-14-de-septiembre-minuto-a-minuto/"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-ceremonia-ninos-heroes-chapultepec-sep13-2026",
-          "date": "2026-09-13",
-          "title": "Day 712 — Sheinbaum Leads 179th Niños Héroes Chapultepec Ceremony as Commander-in-Chief; Defense Secretary Pledges 'Absolute Loyalty'",
-          "type": "political",
-          "detail": "On September 13, 2026 (Day 712, Sunday), President Sheinbaum, in her capacity as commander-in-chief of the Armed Forces, led the ceremony marking the 179th anniversary of the 1847 defense of Chapultepec Castle against the U.S. invasion, held at the Altar a la Patria in the Bosque de Chapultepec, Mexico City, before members of Congress, federal officials, military commanders, cadets and students. Defense Secretary Ricardo Trevilla Trejo delivered the main address, calling to \"strengthen our national unity, transmit to our children and youth the love for Mexico\" and pledging that the Armed Forces would continue contributing to security and welfare \"under your guidance,\" with \"absolute loyalty\" to Mexico and its institutions. A company of cadets from the Heroico Colegio Militar fired a rifle salute in memory of the six cadets who died defending the castle in 1847: Lieutenant Juan de la Barrera and cadets Juan Escutia, Agustín Melgar, Vicente Suárez, Fernando Montes de Oca and Francisco Márquez. Trevilla Trejo framed national sovereignty as both a constitutional mandate and a historical responsibility. Sheinbaum was scheduled to travel afterward to Pachuca, Hidalgo, to continue her \"Honestidad y Resultados\" report tour with a regional accountability event at the Domo de las Estrellas.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/13/secretario-de-la-defensa-pide-unidad-nacional-en-el-179-aniversario-de-la-gesta-heroica-de-los-ninos-heroes-de-chapultepec/"
-            },
-            {
-              "name": "El Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/9/13/sheinbaum-encabeza-ceremonia-por-los-179-anos-de-la-gesta-heroica-de-los-ninos-heroes-887419.html"
-            },
-            {
-              "name": "PorEsto",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.poresto.com/mexico/2026/9/13/encabeza-claudia-sheinbaum-homenaje-a-los-ninos-heroes-en-chapultepec-en-vivo.html"
-            },
-            {
-              "name": "La Jornada Hidalgo",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://lajornadahidalgo.com/sheinbaum-en-pachuca-fecha-hora-y-lugar-de-su-visita-a-hidalgo/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-informe-honestidad-resultados-merida-yucatan-sep12-2026",
-          "date": "2026-09-12",
-          "title": "Day 711 — Sheinbaum Presents Yucatán Accountability Report in Mérida: 781,000 in Welfare Programs, Tren Maya Cargo Line, New Power Plant",
-          "type": "political",
-          "detail": "On September 12, 2026 (Day 711, Saturday), President Sheinbaum arrived in Mérida to deliver her regional \"Honestidad y Resultados\" (Honesty and Results) accountability report at the Yucatán Siglo XXI Convention Center, accompanied by Governor Joaquín \"Huacho\" Díaz Mena, federal cabinet officials and regional representatives. She reported that 781,215 Yucatecans receive benefits from federal welfare programs, representing an investment of more than 17 billion pesos in the state. On healthcare, she highlighted Yucatán's full integration into IMSS-Bienestar — guaranteeing free medical care — and the ongoing 5.41-billion-peso expansion of the Hospital General \"Dr. Agustín O'Horán\" in Mérida, plus construction of a Health University in Umán and three Benito Juárez García Welfare Universities. On infrastructure, she announced 244 new primary-care clinics for Yucatán as part of a 12,750-unit national network, cited the newly completed \"Elvia Carrillo Puerto\" combined-cycle power plant (454 million USD investment, 518 MW capacity, benefiting roughly 1.2 million residents), and detailed the first stage of the Tren Maya de Carga freight line — a 36.614-billion-peso investment with five cargo complexes and four operating yards. A new 1,100-student high school in Mérida was also announced. Yucatán was the 16th state visited in the tour's first two weeks; the \"Honestidad y Resultados\" tour reaches its midpoint here and is scheduled to conclude September 27 in Mexico City.",
-          "sources": [
-            {
-              "name": "LJA.mx",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.lja.mx/2026/09/la-transformacion-recupero-la-dignidad-del-pueblo-de-mexico-presidenta-claudia-sheinbaum/"
-            },
-            {
-              "name": "La Crónica de Hoy",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.cronica.com.mx/nacional/2026/09/12/sheinbaum-destaca-avances-en-yucatan-con-vivienda-energia-y-el-tren-maya-de-carga/"
-            },
-            {
-              "name": "The Yucatan Times",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://theyucatantimes.com/2026/09/mexican-president-claudia-sheinbaum-presents-accountability-report-in-merida/"
-            },
-            {
-              "name": "PorEsto",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.poresto.com/yucatan/merida/2026/9/12/claudia-sheinbaum-presenta-honestidad-y-resultados-desde-merida-sigue-la-transmision-en-vivo.html"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "trade-deficit-17-month-high-oct-2026",
+          "date": "2026-10-10",
+          "title": "US Trade Deficit Hits 17-Month High of $105.6 Billion",
+          "type": "economic",
+          "detail": "The US trade deficit surged to a 17-month high of $105.6 billion in the latest report, driven by a sharp increase in imports of oil and other goods. The figure underscores ongoing pressures on the US current account balance amid continued global supply chain shifts and energy market dynamics.",
+          "sources": [
+            {
+              "name": "DiscloseTV",
+              "tier": 3,
+              "url": "https://t.me/disclosetv/21881",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "trump-tariffs-inflation-study-oct7",
           "date": "2026-10-07",
