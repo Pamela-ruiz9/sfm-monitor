@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-10-12",
+  "ultima_actualizacion": "2026-10-13",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "18.2542",
-    "fecha": "2026-10-12",
+    "actual": "18.3528",
+    "fecha": "2026-10-13",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1583,7 +1583,7 @@
       },
       {
         "mes": "2026-10",
-        "valor": 18.2542
+        "valor": 18.3528
       }
     ]
   },
@@ -1592,7 +1592,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-10-12",
+        "fecha": "2024-10-13",
         "valor": 10.5
       },
       {
@@ -2737,8 +2737,8 @@
   },
   "mercado": {
     "reservas_internacionales": {
-      "actual": 256039.8,
-      "fecha": "2026-10-02",
+      "actual": 256344.4,
+      "fecha": "2026-10-09",
       "historico": [
         {
           "fecha": "2025-10-17",
@@ -2943,6 +2943,10 @@
         {
           "fecha": "2026-10-02",
           "valor": 256039.8
+        },
+        {
+          "fecha": "2026-10-09",
+          "valor": 256344.4
         }
       ]
     },
@@ -4329,8 +4333,8 @@
       ]
     },
     "cetes_28d": {
-      "actual": 6.09,
-      "fecha": "2026-10-06",
+      "actual": 6.25,
+      "fecha": "2026-10-13",
       "historico": [
         {
           "fecha": "2024-10-15",
@@ -4747,12 +4751,16 @@
         {
           "fecha": "2026-10-06",
           "valor": 6.09
+        },
+        {
+          "fecha": "2026-10-13",
+          "valor": 6.25
         }
       ]
     },
     "udis": {
-      "actual": 8.854518,
-      "fecha": "2026-10-12"
+      "actual": 8.855043,
+      "fecha": "2026-10-13"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5500,8 +5508,8 @@
       "fecha": "2026-05-08"
     },
     "tasa_real_cetes": {
-      "actual": 2.64,
-      "fecha": "2026-10-06"
+      "actual": 2.8,
+      "fecha": "2026-10-13"
     }
   },
   "credito": {
