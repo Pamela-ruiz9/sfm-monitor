@@ -1,8 +1,23 @@
 {
-  "updated": "2026-10-14T18:15:40Z",
+  "updated": "2026-10-15T17:57:02Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "stocks-sell-off-us-economy-vulnerable-2026-10-15",
+          "date": "2026-10-15",
+          "title": "Stocks Sell Off as Wall Street Worries U.S. Economy Is 'Vulnerable'",
+          "type": "markets",
+          "detail": "U.S. equities sold off on Oct 15 as investors voiced concern that the U.S. economy is 'vulnerable'. Only the headline was available at time of writing; index levels and the specific triggers were not confirmed.",
+          "sources": [
+            {
+              "name": "Google News (aggregated headline)",
+              "tier": 3,
+              "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1Jdk5UNG1NVVJLYzhkR1dqakExQ1J4dDdXRGMtc1dBbndIdGRhQ1BxNW0wQi12M3hsWnpCUGpWM3VIaVBYekxkaWpEZW84Q0VYVEN6N1B5M1BsWFc4a2YxN09PZ0dFZmtVMXBOdnFhSWVuLVpHNkpXZE8tVXg?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "china-yuan-yield-gap-global-role-2026-10-09",
           "date": "2026-10-09",
@@ -621,33 +636,6 @@
               "tier": 2,
               "url": "https://www.clickondetroit.com/business/2026/09/08/chinas-exports-pick-up-in-august-jumping-25-on-strong-demand-for-autos-and-high-tech-goods/",
               "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "iran-restricted-hormuz-zone-centcom-92-vessels-sept7-2026",
-          "date": "2026-09-07",
-          "title": "Iran to Declare New Restricted Zone Near Hormuz as Tanker Traffic Hits 4-Month Low; CENTCOM Says 92 Vessels Redirected, Oil Extends Gains",
-          "type": "market",
-          "detail": "Iran's Supreme National Security Council secretary Mohsen Rezaei said on state television September 6 that Tehran will declare a new restricted maritime zone within days, running from the line of the US naval blockade outward through the Strait of Hormuz and into portions of the Persian Gulf; any vessel identified as intending to transit the Strait while inside the zone would be added to Iran's sanctions list, with consequences for insurance coverage and future access to the waterway. Rezaei separately said maps for a new international shipping corridor through Iranian and Omani waters had been agreed and were expected to be signed in the coming days. The announcement came as commercial tanker traffic through the Strait fell to its lowest level since May — an average of just 10 vessels a day over the prior 10 days versus 15+ on the preceding Friday, and only two vessels on Saturday, per shipping-analytics firm Kpler cited by Reuters. US Central Command said it has redirected 92 commercial vessels, disabled three, and boarded two since ramping up enforcement of the blockade, and released footage of an F-35A stealth fighter patrolling the waterway. Oil extended its rise into the new week: Brent crude rose toward $97.39/bbl (WTI ~$92.32), building on the prior week's roughly 8% gain, even as US equity markets were closed for Labor Day; European shares were mixed, with the Stoxx 600 little changed after falling 0.81% the week before.",
-          "sources": [
-            {
-              "name": "Middle East Eye — Iran to Impose Restricted Shipping Zone Near Strait of Hormuz",
-              "tier": 2,
-              "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-impose-restricted-shipping-zone-near-strait-hormuz",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "Northeast Times — Iran Sets New Restricted Zone Near Hormuz as Tanker Traffic Falls to Four-Month Low",
-              "tier": 3,
-              "url": "https://northeasttimes.com/2026/09/07/iran-sets-new-restricted-zone-near-hormuz-as-tanker-traffic-falls-to-four-month/",
-              "pole": "international"
-            },
-            {
-              "name": "Al Jazeera — US-Iran Engaged in Tanker War: Where Is the Months-Long Conflict Headed?",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed",
-              "pole": "middle_eastern"
             }
           ]
         }
