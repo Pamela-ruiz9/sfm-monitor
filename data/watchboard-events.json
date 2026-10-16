@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T17:57:02Z",
+  "updated": "2026-10-16T17:47:12Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -849,6 +849,21 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "mananera-oct12-2026-simon-jalisco-water-usmca",
+          "date": "2026-10-12",
+          "title": "Sheinbaum Criticizes Jalisco Protest Repression, Says USMCA Not Being Terminated as Simón Nears Sinaloa",
+          "type": "political",
+          "detail": "At her Oct 12 conference Sheinbaum said she disagrees with the repression of Sunday's protests over contaminated water in Jalisco and asked the state government to clarify detentions; she said Mexico will not back any proposal that privatizes water. Responding to Trump's remarks, she said USMCA is not being terminated because all three legislatures approved it. The SMN said Hurricane Simón (category 3) was expected to weaken and make landfall near Mazatlán, Sinaloa around Oct 15; one death was reported in Guerrero. She also defended the 'Ley Antimemes' as targeting only fraudulent use of government logos, and Profeco reported 87.4% of stations selling diesel below 27 pesos per liter.",
+          "sources": [
+            {
+              "name": "UnoTV",
+              "tier": 2,
+              "url": "https://www.unotv.com/nacional/la-mananera-de-claudia-sheinbaum-12-de-octubre-de-2026/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
           "id": "mananera-oct9-2026-digital-decree-hurricane-simon",
           "date": "2026-10-09",
           "title": "Sheinbaum Presents Decree Protecting Minors Online; Hurricane Simón Threatens Jalisco-Colima Coast",
@@ -1415,39 +1430,6 @@
               "tier": 2,
               "pole": "western",
               "url": "https://www.elimparcial.com/mexico/2026/09/15/desfile-civico-militar-del-16-de-septiembre-2026-a-que-hora-empieza-ruta-y-donde-verlo-en-vivo/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-segundo-grito-independencia-zocalo-sep15-2026",
-          "date": "2026-09-15",
-          "title": "Day 714 — Sheinbaum Gives Second Grito de Independencia Before Record 300,000-Strong Zócalo Crowd, Names Guadalupe Victoria and Antonia Nava",
-          "type": "political",
-          "detail": "On September 15, 2026 (Day 714), President Sheinbaum led the 216th-anniversary Grito de Independencia ceremony from the central balcony of the National Palace at 11:00 PM, ringing the historic bell and delivering 21 arengas before a Zócalo crowd Mexico City's interior affairs office put at more than 300,000 — surpassing the roughly 280,000 who attended her first Grito in 2025 and marking the biggest crowd yet for the ceremony. The roll call named traditional independence figures — Miguel Hidalgo y Costilla, Josefa Ortiz Téllez-Girón, José María Morelos y Pavón, Leona Vicario, Vicente Guerrero and Gertrudis Bocanegra — alongside two names added for the first time this year, Guadalupe Victoria (Mexico's first president, 1824–1829) and insurgent Antonia Nava, while dropping Ignacio Allende and Manuela \"La Capitana\" Molina from the 2025 list. She also issued vivas recognizing Indigenous and Afro-Mexican peoples and, for the first time, Mexican migrants (\"hermanos y hermanas migrantes\"), fulfilling a pledge she made at her September 11 mañanera to \"name new heroes and heroines that are not normally named.\" The ceremony came days after Sheinbaum told reporters, referencing ongoing USMCA tariff negotiations with Washington, \"no vamos a firmar nada que tenga que ver con una afectación\" to Mexico's sovereignty or economy. Free concerts by Grupo Intocable and Los Tigres del Norte preceded the ceremony, and the National Palace observed the bicentennial of Margarita Maza de Juárez, whom the federal government designated the honoree of the 2026 \"Año de Margarita Maza\" observance. No mañanera was held September 15–16 for the Independence Day holiday.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/15/cuando-y-a-que-hora-es-el-grito-de-independencia-2026-sheinbaum-encabezara-la-ceremonia-desde-palacio-nacional/"
-            },
-            {
-              "name": "Expansión Política",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://politica.expansion.mx/mexico/2026/09/15/sheinbaum-grito-independencia-2026-palacio-nacional"
-            },
-            {
-              "name": "Latin Times",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.latintimes.com/sheinbaums-second-grito-draws-mexicos-biggest-zocalo-crowd-yet-pointed-message-washington-599270"
-            },
-            {
-              "name": "Mexico News Daily",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://mexiconewsdaily.com/news/grito-sheinbaum-migrants-insurgents-dignity/"
             }
           ]
         }
