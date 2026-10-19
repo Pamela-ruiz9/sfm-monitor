@@ -1,8 +1,29 @@
 {
-  "updated": "2026-10-16T17:47:12Z",
+  "updated": "2026-10-19T19:36:17Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "nasdaq-worst-week-since-june-hot-cpi-2026-10-16",
+          "date": "2026-10-16",
+          "title": "Nasdaq Posts Worst Week Since June as AI Sell-Off and Oil Hit Stocks After Hot September CPI",
+          "type": "market",
+          "detail": "The S&P 500 fell 1.09% to 7,659.44 and the Nasdaq Composite dropped 2.14% to 26,140.03 on Friday, Oct 16, per CNBC and Yahoo Finance coverage. The S&P lost about 2% on the week and the Nasdaq more than 4%, its worst week since June. Coverage attributes the slide to an AI-related tech sell-off and higher oil prices. September CPI came in above expectations on Wednesday, pushing the 10-year Treasury yield to about 5.25% (peak 5.33%) before it eased to roughly 5.07% by Friday; Bloomberg bond-futures pricing put the odds of an October Fed hike near 15%. Figures vary slightly across outlets.",
+          "sources": [
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/10/15/stock-market-today-live-updates.html",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-112939401.html",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "stocks-sell-off-us-economy-vulnerable-2026-10-15",
           "date": "2026-10-15",
@@ -617,27 +638,6 @@
               "pole": "international"
             }
           ]
-        },
-        {
-          "id": "china-august-trade-data-exports-surge-imports-miss-sept8-2026",
-          "date": "2026-09-08",
-          "title": "China's August Exports Jump 25% to a Record Trade Surplus; Imports Miss Forecast on Soft Domestic Demand",
-          "type": "economic",
-          "detail": "China's August 2026 trade data, released September 8, showed exports rose 25% year-on-year to $401.44 billion, extending July's nearly 24% gain and driven by strong demand for autos (+43% YoY) and semiconductors (+129.8% YoY) tied to the global AI-infrastructure buildout. Imports climbed 28.2% YoY, gathering momentum from July's 27.5% but missing the roughly 30% consensus forecast, a sign domestic demand remains tepid even as Beijing faces mounting pressure to rebalance the economy toward consumption. The trade surplus widened to $119.09 billion, up from $112.5 billion in July and from $101.01 billion a year earlier; China's bilateral surplus with the US alone was roughly $29.2 billion, with US exports to China up 34.4% YoY to $42.5 billion against $13.3 billion of US imports from China. China has increasingly redirected exports toward Southeast Asia, Latin America, and Africa to cushion the impact of higher US tariffs, with exports now the primary growth driver for the world's second-largest economy as the property slump and weak household spending continue to weigh on domestic activity.",
-          "sources": [
-            {
-              "name": "CNBC — China's Imports in August Miss Estimates as Calls for Rebalancing Trade Grow",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/08/china-exports-imports-august-trade-rebalance-demand-surplus-.html",
-              "pole": "western"
-            },
-            {
-              "name": "Click On Detroit (AP) — China's Exports Pick Up in August, Jumping 25% as Its Trade Surplus Widens",
-              "tier": 2,
-              "url": "https://www.clickondetroit.com/business/2026/09/08/chinas-exports-pick-up-in-august-jumping-25-on-strong-demand-for-autos-and-high-tech-goods/",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -848,6 +848,21 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "mananera-oct15-2026-tourism-morelos-jalisco-imss",
+          "date": "2026-10-15",
+          "title": "Sheinbaum Touts 1.4% H1 GDP Growth and Tourism Data, Orders Probe of CDMX Police at Oct 2 March",
+          "type": "political",
+          "detail": "At her Oct 15 conference Sheinbaum said GDP grew 1.4% in the first half, citing construction and AI-driven electronics demand, and that talks with the US remain good despite tariffs because most exports fall under USMCA. Tourism data: 32.7 million international tourists Jan-Aug (+3.9%). The non-resident fee will be 75 pesos, half the initial proposal. She called for investigating CDMX police over alleged abuses at the Oct 2 march, said the CNDH is investigating the repression of Jalisco protesters, discussed a security plan for Cuautla, Morelos after the mayor's arrest, and asked IMSS to improve its wage offer to health workers.",
+          "sources": [
+            {
+              "name": "UnoTV",
+              "tier": 2,
+              "url": "https://www.unotv.com/nacional/la-mananera-de-claudia-sheinbaum-15-de-octubre-de-2026/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "mananera-oct12-2026-simon-jalisco-water-usmca",
           "date": "2026-10-12",
@@ -1399,39 +1414,6 @@
               "url": "https://www.elimparcial.com/mexico/2026/09/17/mananera-de-claudia-sheinbaum-hoy-jueves-17-de-septiembre/"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-desfile-civico-militar-216-aniversario-sep16-2026",
-          "date": "2026-09-16",
-          "title": "Day 715 — Sheinbaum Leads Civic-Military Parade for 216th Independence Anniversary; 15,458 Troops, 99 Aircraft Fly Over Zócalo for First Time",
-          "type": "political",
-          "detail": "On September 16, 2026 (Day 715), President Sheinbaum, as commander-in-chief, led the civic-military parade marking the 216th anniversary of Mexican independence, reviewing the Armed Forces from the Zócalo before the terrestrial column advanced along the parade route to Campo Marte. The Army, Navy, Air Force and National Guard deployed 15,458 personnel, organized into six contingents — Justicia y Paz, Centinelas de la Nación, Crisol de Patriotas, Desarrollo Nacional, Fraternidad Solidaria and Raíces de Honor — alongside roughly 400 horses, 142 military working dogs and 26 eagles. For the first time in the parade's history, 99 aircraft flew simultaneously over the Plaza de la Constitución, including 45 tactical drones making their public debut, 5 Texan T-6C planes and 3 Naval Aviation MI-17 helicopters marking that branch's centennial; new SARAF Balam remote-fire-control armored vehicles and DN-XI units were also shown publicly for the first time. Sheinbaum used the occasion to again underscore Mexico's sovereignty and independence, days after the record-breaking Zócalo turnout at her September 15 Grito de Independencia address. No mañanera was held on September 15–16 for the Independence Day holiday; she was scheduled to resume the daily press conference on September 17.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/16/en-vivo-desfile-militar-del-16-de-septiembre-sigue-los-drones-blindados-y-el-pase-de-lista-de-claudia-sheinbaum/"
-            },
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/noticia/2026/09/16/politica/sheinbaum-encabezara-el-desfile-militar-99-aeronaves-sobrevolaran-el-zocalo-por-primera-vez"
-            },
-            {
-              "name": "El Universal",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.eluniversal.com.mx/nacion/desfile-del-16-de-septiembre-sigue-en-vivo/"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/09/15/desfile-civico-militar-del-16-de-septiembre-2026-a-que-hora-empieza-ruta-y-donde-verlo-en-vivo/"
-            }
-          ]
         }
       ]
     },
@@ -1493,21 +1475,6 @@
               "name": "Local 12",
               "tier": 3,
               "url": "https://local12.com/news/nation-world/trump-one-time-90-dollars-medicare-payment-millions-seniors-eligibility-october-2026",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "g20-trade-ministerial-milwaukee-no-deal-oct03",
-          "date": "2026-10-03",
-          "title": "G20 Trade Ministers Fail to Agree on Overcapacity and Forced Labor After Milwaukee Meeting",
-          "type": "economic",
-          "detail": "G20 trade ministers meeting in Milwaukee (Sept 30–Oct 1) failed to reach agreement on curbing overcapacity or on forced labor, the issue the administration cites for double-digit tariffs on 60+ countries. USTR Greer had urged members to back the US agenda and target China's subsidies.",
-          "sources": [
-            {
-              "name": "The Washington Times",
-              "tier": 2,
-              "url": "https://www.washingtontimes.com/news/2026/oct/1/g20-trade-talks-yield-little-progress-tensions-simmer/",
               "pole": "western"
             }
           ]
