@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T19:36:17Z",
+  "updated": "2026-10-20T18:15:13Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -1420,6 +1420,21 @@
     "trump-presidencies": {
       "events": [
         {
+          "id": "trump-8-billion-farm-losses-plan-oct20-2026",
+          "date": "2026-10-20",
+          "title": "Trump announces $8 billion plan to cover farm losses",
+          "type": "economic",
+          "detail": "Trump announced an $8 billion plan to cover farm losses, per an aggregated headline from Oct 20, 2026. Details pending confirmation from primary outlets.",
+          "sources": [
+            {
+              "name": "Google News (aggregated headline)",
+              "tier": 4,
+              "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1DWWgxTmRVd0M3dXBTS01YQnNHWjRYY3Z1blhRZWR5U2p6UkZWOTdwOEh0a0Y5WWNxTHREa3QzNkotS19oeDhCSEVxaG8yeFZQSEZjU0s3dHdoQmxkVkpocWY4WFJZVGdwTkFvU3dDNDdTVGwyV2R4dQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
+        {
           "id": "tariff-domestic-goods-price-research-oct14-2026",
           "date": "2026-10-14",
           "title": "Research Finds Trump Tariffs Raised Prices on American-Made Domestic Goods",
@@ -1460,21 +1475,6 @@
               "name": "Google News",
               "tier": 3,
               "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWThaYVdHekItYl9fUUYtSWhPUktMbGNMcU1pNXAyVTE1S3pkdVJCbTNlYUNjRzR0VHVweHBxOXNzbW5IY2VkRWczMGtLaTBYYXRQa0g2Yzk1SmwwYlFwSEFaaDJpWUEwQUxFc2d3Xy05TVljSFZZbnZCX01Wd2MzSHZ1SkdmQmRkdlRmSUlqVkdmdVNNeHpJdWtISTZ4Wlg5czRoNQ",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "medicare-90-dollar-payment-seniors-oct03",
-          "date": "2026-10-03",
-          "title": "Administration Announces One-Time $90 Payment for 20+ Million Medicare Recipients",
-          "type": "economic",
-          "detail": "The Trump administration announced a one-time $90 payment to more than 20 million Medicare recipients to help offset Part B premium costs.",
-          "sources": [
-            {
-              "name": "Local 12",
-              "tier": 3,
-              "url": "https://local12.com/news/nation-world/trump-one-time-90-dollars-medicare-payment-millions-seniors-eligibility-october-2026",
               "pole": "western"
             }
           ]
