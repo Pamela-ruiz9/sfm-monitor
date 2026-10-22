@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T18:19:40Z",
+  "updated": "2026-10-22T18:14:00Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -849,6 +849,51 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "jauregui-treason-charge-oct21-2026",
+          "date": "2026-10-21",
+          "title": "Ex-Prosecutor Charged With Treason in Mexico Over US Drug Raid",
+          "type": "political",
+          "detail": "BBC reported on Oct 21, 2026 that a former prosecutor has been charged with treason in Mexico in connection with a US drug raid. This follows the Oct 19 detention of ex-Chihuahua prosecutor César Jáuregui and the FGR treason probe tied to CIA agents in Mexico.",
+          "sources": [
+            {
+              "name": "BBC News",
+              "tier": 2,
+              "url": "https://www.bbc.co.uk/news/articles/ckx2qpw4rjd7o",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "mananera-oct19-2026-trump-pemex-jauregui",
+          "date": "2026-10-19",
+          "title": "Sheinbaum Says She Refused Trump Request on Pemex Assets; Ex-Chihuahua Prosecutor Detained",
+          "type": "political",
+          "detail": "At her Oct 19 conference Sheinbaum said Trump told her organized crime governs Mexico, which she disputed, and that she rejected a proposal to hand over Pemex assets because the law prohibits it. Ex-Chihuahua prosecutor César Jáuregui was detained on a state warrant and the FGR opened a treason probe tied to CIA agents in Mexico. Becas Bienestar reached 19.6 million beneficiaries (136.9 billion pesos in 2026); INEGI reported manufacturing up 4.1% in August; authorities removed about 1,800 pages tied to forced recruitment. A Mexican national died in ICE detention and the SRE will file a complaint.",
+          "sources": [
+            {
+              "name": "UnoTV",
+              "tier": 2,
+              "url": "https://www.unotv.com/nacional/la-mananera-de-claudia-sheinbaum-19-de-octubre-de-2026/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "mananera-oct16-2026-trudy-casa-tlalpan",
+          "date": "2026-10-16",
+          "title": "Sheinbaum Hands Ex-Durazo Estate to Education Project, Warns of Hurricane Trudy",
+          "type": "political",
+          "detail": "At her Oct 16 conference the SMN said Hurricane Trudy is Category 3 and strengthening, expected near Colima and Jalisco early Sunday. INDEP is transferring the 6-hectare Casa Tlalpan, once held by Arturo Durazo, for a Rosario Castellanos university campus (4,800 places from March 2027) and a technical high school for 1,200 students; investment about 150 million pesos. Bienestar will assist Ensenada and San Quintín after Rachel damaged at least 1,500 homes. Sheinbaum said she will attend APEC in China for two days, and that a Sonora gas liquefaction plant is suspended by an amparo.",
+          "sources": [
+            {
+              "name": "UnoTV",
+              "tier": 2,
+              "url": "https://www.unotv.com/nacional/la-mananera-de-claudia-sheinbaum-16-de-octubre-de-2026/",
+              "pole": "western"
+            }
+          ]
+        },
+        {
           "id": "mananera-oct15-2026-tourism-morelos-jalisco-imss",
           "date": "2026-10-15",
           "title": "Sheinbaum Touts 1.4% H1 GDP Growth and Tourism Data, Orders Probe of CDMX Police at Oct 2 March",
@@ -1354,66 +1399,6 @@
               "url": "https://kvia.com/news/2026/09/20/mexican-president-claudia-sheinbaum-visits-ciudad-juarez/"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-decomiso-huachicol-guanajuato-trump-llamada-sep18-2026",
-          "date": "2026-09-18",
-          "title": "Day 717 — Sheinbaum Holds Mañanera in Irapuato, Confirms Trump Call on Trade Deal; Reveals Record 59-Million-Liter Fuel Seizure in Guanajuato",
-          "type": "political",
-          "detail": "On September 18, 2026 (Day 717, Friday), President Sheinbaum held her mañanera in Irapuato, Guanajuato, alongside Governor Libia Dennise García and her Security Cabinet, as part of her regional \"Honestidad y Resultados\" report tour. Officials reported the state's daily average of intentional-homicide victims fell 75% between September 2024 and August 2026 (from 12.7 to 3.2 per day) and that federal-state coordination since October 1, 2024 produced more than 10,600 detentions (including 172 priority targets), over 6 tonnes of drugs, 1,000 fentanyl pills, 2,000 firearms and 72,000 cartridges seized. Separately, authorities disclosed a seizure of more than 59 million liters of unverified-origin hydrocarbons (59,036,870.527 liters, roughly 371,000 barrels) across storage tanks on a property in La Fragua, San José Iturbide, Guanajuato — the largest single fuel seizure documented under her administration, nearly quadrupling the prior record of 15.48 million liters seized in Coahuila in July 2025. Sheinbaum said the FGR-led investigation, supported by Pemex, SEDENA and the National Guard, was still tracing the fuel's origin and distribution network and denied any link to former Baja California governor Ernesto Ruffo's July fuel-smuggling case; García Harfuch said no arrests had yet been made but that detentions \"vienen después.\" Sheinbaum also confirmed a September 16 phone call with President Trump — her 22nd since taking office — joined by Foreign Affairs Secretary Roberto Velasco and Economy Secretary Marcelo Ebrard, saying \"vamos avanzando bien en la posibilidad de un acuerdo\" between Mexico and the US but that no formal announcement could be made until a final agreement is reached; the call preceded a rescheduled Round 4 of USMCA negotiations set for September 28–29 in Washington.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/18/decomiso-de-59-millones-de-combustible-en-guanajuato-no-esta-ligado-a-caso-de-ernesto-ruffo-afirma-sheinbaum/"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/09/18/decomiso-historico-en-guanajuato-deja-59-millones-de-litros-de-combustible-asegurados-y-ningun-detenido-sheinbaum-destaca-coordinacion/"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/09/18/claudia-sheinbaum-mananera-temas-hoy-18-de-septiembre-de-2026-en-vivo/"
-            },
-            {
-              "name": "Tribuna",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://tribuna.com.mx/mexico/2026/09/18/sheinbaum-destaca-coordinacion-con-libia-dennise-y-reduccion-de-homicidios-en-guanajuato_689760/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-simulacro-nacional-carretera-57-sep17-2026",
-          "date": "2026-09-17",
-          "title": "Day 716 — Sheinbaum Previews Sept 19 National Earthquake Drill, Announces Route 57 Highway Extension to US Border",
-          "type": "political",
-          "detail": "On September 17, 2026 (Day 716, Thursday), President Sheinbaum held her mañanera in the National Palace's Salón Tesorería, previewing the Segundo Simulacro Nacional 2026, scheduled for Saturday, September 19 at 12:00 noon local time across all 32 states — a date chosen to mark the anniversaries of the 1985 and 2017 earthquakes. She confirmed the drill would use the same seismic-alert tone as a real earthquake, broadcast via cellphone alerts and roughly 23,000 loudspeakers concentrated in Pacific-coast and central states. Separately, the director of Banobras presented the administration's public-private highway program of 19 projects, including extending Federal Highway 57 — which currently links Mexico City through Querétaro, San Luis Potosí and Saltillo — northward to the US border, financed without straining public finances. Sheinbaum also addressed a survey on foreign intervention in Mexico and a US report on drug trafficking, and discussed women's political participation.",
-          "sources": [
-            {
-              "name": "Excélsior",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.excelsior.com.mx/nacional/mananera-sheinbaum-hoy-17-septiembre-2026"
-            },
-            {
-              "name": "La Razón de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.razon.com.mx/mexico/2026/09/17/mananera-de-sheinbaum-17-de-septiembre-del-2026/"
-            },
-            {
-              "name": "El Imparcial",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elimparcial.com/mexico/2026/09/17/mananera-de-claudia-sheinbaum-hoy-jueves-17-de-septiembre/"
-            }
-          ]
         }
       ]
     },
@@ -1422,14 +1407,26 @@
         {
           "id": "trump-8-billion-farm-losses-plan-oct20-2026",
           "date": "2026-10-20",
-          "title": "Trump announces $8 billion plan to cover farm losses",
+          "title": "Trump announces $8 billion Harvest Fuel Relief for farmers ahead of midterms",
           "type": "economic",
-          "detail": "Trump announced an $8 billion plan to cover farm losses, per an aggregated headline from Oct 20, 2026. Details pending confirmation from primary outlets.",
+          "detail": "At a Kansas rally on Oct 19, Trump announced an $8 billion Harvest Fuel Relief program to offset soaring diesel costs tied to the Iran war. USDA will reimburse a portion of losses using a formula based on acres and crops planted; payment rates are due in November. It follows the $12 billion Farmer Bridge Assistance package from December 2025, and arrives 15 days before the midterm elections as Republicans struggle in polls.",
           "sources": [
             {
-              "name": "Google News (aggregated headline)",
-              "tier": 4,
-              "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1DWWgxTmRVd0M3dXBTS01YQnNHWjRYY3Z1blhRZWR5U2p6UkZWOTdwOEh0a0Y5WWNxTHREa3QzNkotS19oeDhCSEVxaG8yeFZQSEZjU0s3dHdoQmxkVkpocWY4WFJZVGdwTkFvU3dDNDdTVGwyV2R4dQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "name": "CBS News",
+              "tier": 2,
+              "url": "https://www.cbsnews.com/news/trump-farmer-harvest-fuel-relief-aid/",
+              "pole": "western"
+            },
+            {
+              "name": "The Washington Post",
+              "tier": 2,
+              "url": "https://www.washingtonpost.com/politics/2026/10/20/trump-announces-8-billion-aid-farmers-gop-struggles/",
+              "pole": "western"
+            },
+            {
+              "name": "Fox Business",
+              "tier": 2,
+              "url": "https://www.foxbusiness.com/energy/trump-announces-8b-bailout-farmers-cover-diesel-cost-surge-amid-attacks-global-supply",
               "pole": "western"
             }
           ]
@@ -1602,27 +1599,6 @@
               "name": "Mexico News Daily",
               "tier": 2,
               "url": "https://mexiconewsdaily.com/politics/latam-pulse-poll-mexico-sheinbaum-approval/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "mexico-mip-infrastructure-fund-12b-may5-2026",
-          "date": "2026-05-05",
-          "title": "Mexico's Sovereign Infrastructure Fund (MIP) Seeks to Deploy $12 Billion; World Cup Airspace Security Decree Published",
-          "type": "economic",
-          "detail": "Mexico's sovereign infrastructure fund (Fondo Mexicano del Petróleo para la Estabilización y el Desarrollo, MIP) announced it is actively seeking to deploy USD $12 billion in new infrastructure investments — a major complement to the Plan México Acciones framework unveiled the previous day. The deployment targets strategic infrastructure including ports, rail corridors, industrial parks, and energy grid upgrades to support the nearshoring manufacturing boom. Separately, on May 5, Mexico's Secretariat of National Defense (SEDENA) published a formal decree establishing four Zones of Surveillance and Protection of Mexican Airspace (ZVP) for the FIFA World Cup period running from May 11 through July 20, 2026 — covering Mexico City, Guadalajara, and Monterrey. The decree operationalizes Mexico's counter-drone (CUAS) commitments and coordinates military airspace control with civilian aviation authorities. Mexico City's Benito Juárez Airport simultaneously completed three-day tactical exercises simulating hijacking, hostage-taking, and CBRN (chemical, biological, radiological, nuclear) scenarios. The dual announcements — major investment mobilization and World Cup security finalization — reflected the Sheinbaum government's effort to project institutional capacity despite the Sinaloa governor crisis and US sovereignty disputes of the preceding week.",
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/news/articles/2026-05-05/mexico-s-mip-seeking-to-invest-12-billion-for-infrastructure",
-              "pole": "western"
-            },
-            {
-              "name": "Focus on Travel News",
-              "tier": 3,
-              "url": "https://ftnnews.com/travel-news/other-news/mexico-president-urges-tighter-security-before-2026-world-cup/",
               "pole": "western"
             }
           ]
