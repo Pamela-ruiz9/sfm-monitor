@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T18:14:00Z",
+  "updated": "2026-10-23T18:03:04Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -1404,6 +1404,21 @@
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "trump-wind-turbine-tariffs-delay-oct22-2026",
+          "date": "2026-10-22",
+          "title": "Trump delays wind turbine tariffs, allowing 180 days for talks",
+          "type": "economic",
+          "detail": "Bloomberg reported on Oct 22 that Trump delayed planned tariffs on wind turbines, giving 180 days for negotiations before the duties take effect.",
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "tier": 2,
+              "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPOGpoQklQcElFSEt1c2t3S0NibFRHRFZsanBOU1VRU3JNcmNQREJXZVNEd0JVMWEzNXVKdHJybnFVbEtfRW9pWURBQ19uQTBIOTBzQUdpSzJRYV9rMFF3Uk1wN2NBUmpJMnBValJ2OW81QlV1Qm5xcWtBTkpBd3BFenlwUEpWUjFpVFNYTXBaMG96VUpKU0w0RVJaSm5OUERVS1RYZVRTU29VUGJCVUFhQlp3?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "trump-8-billion-farm-losses-plan-oct20-2026",
           "date": "2026-10-20",
