@@ -1,8 +1,29 @@
 {
-  "updated": "2026-10-23T18:03:04Z",
+  "updated": "2026-10-26T19:41:29Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "10y-yield-back-to-5-pct-ai-worries-2026-10-23",
+          "date": "2026-10-23",
+          "title": "10-Year Treasury Yield Slips Back to About 5% as AI Worries and Oil Drive Haven Demand",
+          "type": "market",
+          "detail": "The 10-year Treasury yield ended the week of Oct 19-23 at about 5.00% (2-year about 4.69%), per ETF Trends' weekly snapshot, after dipping below 5% midweek for the first time in a month, per CNBC. CNBC attributed the move to investors seeking cover from AI-spending worries and higher oil prices. The Fed funds rate is 3.75-4.00% with no change expected at the Oct 27-28 FOMC; futures price a high probability of a quarter-point hike in December. Figures are from summary snippets and may differ slightly across outlets.",
+          "sources": [
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html",
+              "pole": "western"
+            },
+            {
+              "name": "ETF Trends",
+              "tier": 3,
+              "url": "https://www.etftrends.com/fixed-income-content-hub/treasury-yields-snapshot-october-23-2026/",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "nasdaq-worst-week-since-june-hot-cpi-2026-10-16",
           "date": "2026-10-16",
@@ -611,33 +632,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "canada-retaliatory-tariffs-effective-sept8-2026",
-          "date": "2026-09-08",
-          "title": "Canada's $27.6 Billion Retaliatory Tariffs on US Goods Take Effect",
-          "type": "trade",
-          "detail": "Canada's counter-tariffs on roughly $27.6 billion of US goods took effect at 12:01 a.m. on September 8, escalating the trade rift that began when Washington's Section 338 tariffs (50% on ~$20B of Canadian autos, alcohol, and dairy) took effect August 22 after trade talks collapsed. Ottawa's countermeasures are tiered at 15%, 25%, or 50% depending on the product, largely matching the corresponding US rate: steel, aluminum, and iron products face a 50% Canadian tariff, along with furniture, motorcycles, and clothing, while dairy, seafood, and appliances face 25%, and other industrial goods face 15%. The measures apply only to goods originating in the US and exempt shipments already in transit when the tariffs came into force. Prime Minister Mark Carney had announced the package August 25, alongside a C$7.5B (US$5.4B) support fund for affected Canadian workers and businesses, describing the response as 'dollar for dollar.' Two days after that announcement, Trump additionally threatened 50% tariffs on Canadian autos, auto parts, and steel starting January 1, 2027, leaving the bilateral relationship on an escalatory track heading into the fall.",
-          "sources": [
-            {
-              "name": "CNBC — Canada's Retaliatory Tariffs Worth $27.6 Billion Take Effect as Trade Rift with US Deepens",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/08/canada-retaliatory-tariffs.html",
-              "pole": "western"
-            },
-            {
-              "name": "Canada Department of Finance — List of Products from the United States Subject to Counter-Tariffs Effective September 8, 2026",
-              "tier": 1,
-              "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html",
-              "pole": "international"
-            },
-            {
-              "name": "Mohawk Global — Canada Announces New Retaliatory Tariffs on US Goods Effective September 8",
-              "tier": 3,
-              "url": "https://mohawkglobal.com/canada/canada-announces-new-retaliatory-tariffs-on-us-goods-effective-september-8/",
-              "pole": "international"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -860,6 +854,27 @@
               "tier": 2,
               "url": "https://www.bbc.co.uk/news/articles/ckx2qpw4rjd7o",
               "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "mananera-oct21-2026-jalisco-water-gas",
+          "date": "2026-10-21",
+          "title": "Sheinbaum: federal funds for Jalisco water works; no deal to buy more US gas",
+          "type": "political",
+          "detail": "At her Oct 21 conference Sheinbaum said the federal government will contribute to water projects in Jalisco after meeting Conagua's director, seeking funding that avoids new debt. She said there is no agreement or commitment to buy more natural gas from the US, an idea raised in the context of the trade deficit. Coverage also noted Pemex debt reduction and the fiscal huachicol crackdown.",
+          "sources": [
+            {
+              "name": "Infobae",
+              "tier": 2,
+              "url": "https://www.infobae.com/mexico/2026/10/21/la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-miercoles-21-de-octubre/",
+              "pole": "international"
+            },
+            {
+              "name": "UnoTV",
+              "tier": 2,
+              "url": "https://www.unotv.com/nacional/la-mananera-de-claudia-sheinbaum-21-de-octubre-de-2026/",
+              "pole": "international"
             }
           ]
         },
@@ -1360,50 +1375,41 @@
               "url": "https://sinaloa.gob.mx/mas-de-50-mil-sinaloenses-recibieron-con-entusiasmo-y-carino-a-la-presidenta-claudia-sheinbaum/"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-simulacro-nacional-chihuahua-maru-campos-sep19-2026",
-          "date": "2026-09-19",
-          "title": "Day 718 — Sheinbaum Joins Second National Earthquake Drill from Chihuahua; Tension with Gov. Maru Campos Surfaces on Accountability Tour Stop",
-          "type": "political",
-          "detail": "On September 19, 2026 (Day 718, Saturday), President Sheinbaum took part in the Segundo Simulacro Nacional 2026 — the nationwide earthquake drill marking the anniversaries of the 1985 and 2017 earthquakes — from Ciudad Juárez, Chihuahua, where she was making the 23rd stop of her \"Honestidad y Resultados\" accountability tour. The drill activated 98% of Mexico City's 27,984 seismic-alert loudspeakers (a reaction time of 1 minute 43 seconds and roughly 7.89 million participants in the capital alone) at the noon local-time alert, with a moment of silence held in Tlatelolco for the victims of the 1985 and 2017 quakes; Sheinbaum said the exercises \"nos permiten detectar fallas antes de enfrentar una emergencia real\" and reaffirmed \"la prevención es nuestra fuerza.\" Her Chihuahua stop was notable for the absence of Governor María Eugenia \"Maru\" Campos Galván (PAN), with whom relations have cooled since the 2024 Sierra del Pinal drug-lab raid in which two U.S. CIA operatives died and Sheinbaum's May 2026 questioning of Campos's bilateral security pact with Texas. Campos had requested a sit-down on security, water resources, and 1944-treaty compliance, but Sheinbaum limited their contact to a brief airport greeting and did not incorporate her into the state event. Addressing the crowd, Sheinbaum invoked historical memory and sovereignty — \"los pueblos que no tienen memoria tampoco tienen brújula\" — framing Mexican independence and figures like Benito Juárez as evidence that \"la soberanía debe residir en el pueblo y no en potencias extranjeras.\" Residents lined her motorcade route through Ciudad Juárez, some chanting support.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/19/sheinbaum-participa-en-el-simulacro-nacional-por-19-s-desde-chihuahua-la-prevencion-es-nuestra-fuerza/"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/19/sin-maru-campos-sheinbaum-encabeza-evento-en-chihuahua-y-destaca-soberania-tras-tension-con-gobernadora/"
-            },
-            {
-              "name": "El Universal",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.eluniversal.com.mx/nacion/19-s-sheinbaum-participa-en-segundo-simulacro-nacional-2026-la-prevencion-es-nuestra-fuerza-asegura/"
-            },
-            {
-              "name": "El Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/9/19/sheinbaum-reacciona-al-simulacro-nacional-2026-la-prevencion-es-nuestra-fuerza-891177.html"
-            },
-            {
-              "name": "KVIA (El Paso/Juárez border TV)",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://kvia.com/news/2026/09/20/mexican-president-claudia-sheinbaum-visits-ciudad-juarez/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "trump-audi-georgia-factory-rally-oct25-2026",
+          "date": "2026-10-25",
+          "title": "Trump announces Audi's first-ever U.S. factory in Georgia at rally, defends tariffs",
+          "type": "economic",
+          "detail": "At a rally, Trump announced that Audi will build its first-ever U.S. factory in Georgia, citing it as evidence that his tariffs are driving manufacturing investment, as he defended the tariff policy ahead of the November midterms.",
+          "sources": [
+            {
+              "name": "Japan Times",
+              "tier": 2,
+              "url": "https://www.japantimes.co.jp/business/2026/10/25/economy/trump-tariffs-audi-factory-election/",
+              "pole": "international"
+            }
+          ]
+        },
+        {
+          "id": "trump-canada-tariff-exemptions-collins-oct23-2026",
+          "date": "2026-10-23",
+          "title": "Trump exempts some Canadian goods from 50% tariffs, boosting Collins in Maine",
+          "type": "trade",
+          "detail": "Trump dropped some tariffs on Canadian exports, exempting certain goods from his 50% tariffs, in a move seen as aiding Sen. Susan Collins in Maine ahead of the midterms, The Guardian reported on Oct 23.",
+          "sources": [
+            {
+              "name": "The Guardian",
+              "tier": 2,
+              "url": "https://www.theguardian.com/us-news/2026/oct/23/susan-collins-maine-trump-tariffs-canada",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "trump-wind-turbine-tariffs-delay-oct22-2026",
           "date": "2026-10-22",
