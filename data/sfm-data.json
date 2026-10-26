@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-10-23",
+  "ultima_actualizacion": "2026-10-26",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "18.6670",
-    "fecha": "2026-10-23",
+    "actual": "18.5798",
+    "fecha": "2026-10-26",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1583,7 +1583,7 @@
       },
       {
         "mes": "2026-10",
-        "valor": 18.667
+        "valor": 18.5798
       }
     ]
   },
@@ -1592,7 +1592,7 @@
     "fecha": "2026-05-08",
     "historico": [
       {
-        "fecha": "2024-10-23",
+        "fecha": "2024-10-26",
         "valor": 10.5
       },
       {
@@ -2741,10 +2741,6 @@
       "fecha": "2026-10-16",
       "historico": [
         {
-          "fecha": "2025-10-24",
-          "valor": 249340.9
-        },
-        {
           "fecha": "2025-10-31",
           "valor": 248852.0
         },
@@ -2951,21 +2947,9 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.776,
-      "fecha": "2026-10-21",
+      "actual": 6.786,
+      "fecha": "2026-10-26",
       "historico": [
-        {
-          "fecha": "2024-10-23",
-          "valor": 10.74
-        },
-        {
-          "fecha": "2024-10-24",
-          "valor": 10.7252
-        },
-        {
-          "fecha": "2024-10-25",
-          "valor": 10.73
-        },
         {
           "fecha": "2024-10-28",
           "valor": 10.7157
@@ -4321,6 +4305,10 @@
         {
           "fecha": "2026-10-21",
           "valor": 6.776
+        },
+        {
+          "fecha": "2026-10-26",
+          "valor": 6.786
         }
       ]
     },
@@ -4747,8 +4735,8 @@
       ]
     },
     "udis": {
-      "actual": 8.860298,
-      "fecha": "2026-10-23"
+      "actual": 8.863616,
+      "fecha": "2026-10-26"
     },
     "salario_minimo": {
       "actual": 315.04,
