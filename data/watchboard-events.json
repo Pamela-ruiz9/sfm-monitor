@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T19:41:29Z",
+  "updated": "2026-10-27T19:10:10Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -1381,6 +1381,21 @@
     "trump-presidencies": {
       "events": [
         {
+          "id": "us-canada-steel-auto-tariff-deal-talks-oct-26",
+          "date": "2026-10-26",
+          "title": "US and Canada reportedly working on deal to ease steel and auto tariffs",
+          "type": "trade",
+          "detail": "Sources say the US and Canada are working on a deal to ease tariffs on steel and autos. Canadian PM Mark Carney said the US is 'coming closer to our position'. No agreement has been announced.",
+          "sources": [
+            {
+              "name": "Google News (aggregated report)",
+              "tier": 3,
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQU1JXYWUtZ2l1TGNtSDlwbkN6SkxUR1RxaWZjQnFpNk8yTzBuLTR5OEUxQ296SmZEd3dDS25tMjh1eW5hRGg4X1gtVUpVQi1UbWIyYXpJQmh6NGxpX011WWlEYWh0Z3FKRm55UUl6UnpKUTZmM3lhUElLNUVIb0tkWDBYVkI1LXI2aWxwT1Q2aUpSZjhOcUVxaTByX21WVlExQVE?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
+        {
           "id": "trump-audi-georgia-factory-rally-oct25-2026",
           "date": "2026-10-25",
           "title": "Trump announces Audi's first-ever U.S. factory in Georgia at rally, defends tariffs",
@@ -1392,6 +1407,21 @@
               "tier": 2,
               "url": "https://www.japantimes.co.jp/business/2026/10/25/economy/trump-tariffs-audi-factory-election/",
               "pole": "international"
+            }
+          ]
+        },
+        {
+          "id": "trump-michigan-border-rally-canada-tariff-oct25-2026",
+          "date": "2026-10-25",
+          "title": "Trump says Canada tariff deal coming 'soon' at Michigan border rally",
+          "type": "economic",
+          "detail": "At a rally near the Michigan-Canada border, Trump said a deal resolving the tariff dispute with Canada was coming 'soon', as he campaigned ahead of the November midterms.",
+          "sources": [
+            {
+              "name": "US News",
+              "tier": 2,
+              "url": "https://www.usnews.com/news/politics/articles/2026-10-25/trump-says-canada-tariff-deal-coming-soon-at-michigan-border-rally",
+              "pole": "western"
             }
           ]
         },
@@ -1478,21 +1508,6 @@
               "name": "DiscloseTV",
               "tier": 3,
               "url": "https://t.me/disclosetv/21881",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-tariffs-inflation-study-oct7",
-          "date": "2026-10-07",
-          "title": "Study Finds Trump-Era Tariffs Drove Up Consumer Prices Ahead of Midterms",
-          "type": "economic",
-          "detail": "A new study provides fresh empirical evidence that Trump administration tariffs drove up prices for consumer goods, adding to the economic debate ahead of the November midterms. The findings suggest the inflationary impact of tariff policy remains a key issue for voters as Republicans defend their House majority.",
-          "sources": [
-            {
-              "name": "Google News",
-              "tier": 3,
-              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWThaYVdHekItYl9fUUYtSWhPUktMbGNMcU1pNXAyVTE1S3pkdVJCbTNlYUNjRzR0VHVweHBxOXNzbW5IY2VkRWczMGtLaTBYYXRQa0g2Yzk1SmwwYlFwSEFaaDJpWUEwQUxFc2d3Xy05TVljSFZZbnZCX01Wd2MzSHZ1SkdmQmRkdlRmSUlqVkdmdVNNeHpJdWtISTZ4Wlg5czRoNQ",
               "pole": "western"
             }
           ]
