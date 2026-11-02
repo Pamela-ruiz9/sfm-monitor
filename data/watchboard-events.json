@@ -1,8 +1,29 @@
 {
-  "updated": "2026-10-30T18:56:35Z",
+  "updated": "2026-11-02T22:33:07Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "us-q3-gdp-advance-pce-2026-10-29",
+          "date": "2026-10-29",
+          "title": "US Q3 GDP Advance Estimate Beats at +3.4%; September PCE Inflation Hits 3.6%",
+          "type": "economic",
+          "detail": "BEA's advance estimate put Q3 2026 real GDP growth at 3.4% annualized, up from 2.2% in Q2 and above the ~3.2% forecast. The quarterly PCE price index rose 2.1% (core 2.5%), down from 5.0% and 3.3% in Q2. September monthly data showed headline PCE +0.5% m/m and 3.6% y/y, core +0.3% m/m and 3.1% y/y, keeping a December Fed hike in focus after the Oct 28 hold.",
+          "sources": [
+            {
+              "name": "BEA",
+              "tier": 1,
+              "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026",
+              "pole": "western"
+            },
+            {
+              "name": "Kitco",
+              "tier": 3,
+              "url": "https://www.kitco.com/news/article/2026-10-29/spot-gold-4025oz-us-gdp-growth-rises-34-q3-core-pce-rises-25",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "fed-holds-3-75-4-split-vote-2026-10-28",
           "date": "2026-10-28",
@@ -611,41 +632,25 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "treasury-yield-cycle-high-oil-105-stocks-fall-sept10-2026",
-          "date": "2026-09-10",
-          "title": "10-Year Treasury Tops 4.9% Cycle High as Oil Surges Past $105, Highest in Nearly Four Months; Stocks Fall a Fifth Day",
-          "type": "market",
-          "detail": "The 10-year Treasury yield climbed to roughly 4.97% on September 10 — its firmest level since October 2023 — as oil prices topped $100 a barrel on fears of a prolonged US-Iran conflict, with Brent crude touching $105-107/bbl (WTI near $100) by mid-morning, the highest in nearly four months, and diesel hitting a record $5.94/gallon. The move followed Wednesday's hotter-than-expected August PPI print, which showed wholesale energy costs accelerating on the same Gulf-conflict oil shock. US equities extended their losing streak to a fifth session: the S&P 500 fell roughly 0.6% to about 7,592, the Dow eased about 0.6% to roughly 52,064, and the Nasdaq lost about 0.65% to around 26,082, as investors rotated out of duration-sensitive shares ahead of Friday's CPI print. The synchronized rise in yields and oil left markets pricing close to a 70% probability of a 25bp Fed hike at the September 15-16 FOMC meeting going into the CPI release.",
-          "sources": [
-            {
-              "name": "CNBC — 10-Year Treasury Yield Tops 4.9%, Highest Since 2023, as Oil Surge Raises Inflation Fears",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/10/us-treasurys-bonds-yield.html",
-              "pole": "western"
-            },
-            {
-              "name": "Fortune — Current Price of Oil as of September 10, 2026",
-              "tier": 2,
-              "url": "https://fortune.com/article/price-of-oil-09-10-2026/",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
         {
           "id": "us-gdp-q1-2026-advance",
-          "label": "US GDP Q2 2026 (Second Estimate)",
-          "value": "+1.5%",
-          "color": "amber",
-          "source": "BEA GDP Second Estimate, Q2 2026 (released August 26, 2026)",
+          "label": "US GDP Q3 2026 (Advance Estimate)",
+          "value": "+3.4%",
+          "color": "green",
+          "source": "BEA GDP Advance Estimate, Q3 2026 (released October 29, 2026)",
           "contested": false,
-          "delta": "Unrevised from advance estimate; down from Q1 2026's +2.1%",
-          "deltaNote": "AUG 26 UPDATE — SECOND ESTIMATE CONFIRMS: Q2 2026 real GDP held at +1.5% annualized, unrevised from the July 30 advance estimate. An upward revision to consumer spending was offset by an upward revision to imports. Real GDI rose 2.2% (vs 1.2% in Q1); corporate profits rose $400.9B (vs $74.4B in Q1). The PCE price index within the report ran hot — 5.3% headline, 3.6% core — underscoring the stagflation-adjacent mix of sub-trend growth and above-target inflation heading into Warsh's first Jackson Hole keynote (Aug 28). Prior: Q2 advance estimate (July 30): +1.5% annualized, missing the 2.1% consensus forecast; consumer spending +3.2%, net trade -1.0pp, inventories -0.7pp.",
-          "trend": "down",
-          "lastUpdated": "2026-08-26T12:30:00Z"
+          "delta": "+1.2pp vs Q2 (+2.2%)",
+          "deltaNote": "OCT 29: Q3 advance GDP +3.4% annualized vs ~3.2% consensus; Q2 now shown at +2.2%. Next revision Nov 25. Prior: Q2 second estimate +1.5% (Aug 26).",
+          "trend": "up",
+          "lastUpdated": "2026-10-29T12:30:00Z",
+          "deltaDetail": {
+            "value": 1.2,
+            "direction": "up",
+            "period": "since Q2 2026"
+          }
         },
         {
           "id": "us-gdp-q4-2025",
@@ -687,18 +692,18 @@
         {
           "id": "us-core-pce",
           "label": "US PCE Inflation (August 2026)",
-          "value": "3.0% Core / 3.4% Headline",
+          "value": "3.1% Core / 3.6% Headline (Sept y/y)",
           "color": "amber",
-          "source": "BEA Personal Income and Outlays, August 2026 (released September 30, 2026)",
+          "source": "BEA Personal Income and Outlays, September 2026 (Oct 29, 2026)",
           "contested": false,
           "delta": "Core -0.3pp vs July (3.3%); headline -0.3pp vs July (3.7%); both below consensus",
           "deltaNote": "AUG 2026 (Sept 30): Headline 3.4% y/y (+0.3% m/m), core 3.0% y/y (+0.2% m/m), both below consensus of 3.7%/3.3%. October hike odds fell to ~35%. Prior: July headline 3.7%, core 3.3%. JULY 2026 (released Aug 26): Headline PCE 3.7% YoY (+0.2% MoM), 0.1pp above the Dow Jones consensus. Core PCE 3.3% YoY (+0.2% MoM), matching consensus and flat vs June's 3.3% (down from May's cycle-high 3.4%). Personal income +0.4% MoM; spending +0.2% MoM; saving rate 3.0%. Warsh cited these exact 3.7%/4.1% (12mo/6mo) readings in his Aug 28 Jackson Hole keynote as evidence 'underlying trends have [not] meaningfully improved,' noting 54% of the consumption basket is still rising faster than 3% — a key justification for the hawkish tilt that pushed September hike odds to 57%.",
           "trend": "down",
-          "lastUpdated": "2026-09-30T12:30:00Z",
+          "lastUpdated": "2026-10-29T12:30:00Z",
           "deltaDetail": {
-            "value": -0.3,
-            "direction": "down",
-            "period": "since Aug 26"
+            "value": 0.1,
+            "direction": "up",
+            "period": "since previous reading"
           }
         },
         {
@@ -842,6 +847,27 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "mananera-oct28-2026-guadalajara-water",
+          "date": "2026-10-28",
+          "title": "Sheinbaum and Jalisco governor announce Guadalajara water aqueducts",
+          "type": "political",
+          "detail": "At her Oct 28 conference, with Jalisco governor Pablo Lemus present, Sheinbaum discussed water supply and quality for the Guadalajara metro area. UnoTV reported two planned aqueducts (Chapala-Guadalajara and Calderón-San Gaspar) and a follow-up commission; investment figures differed between outlets.",
+          "sources": [
+            {
+              "name": "UnoTV",
+              "tier": 2,
+              "url": "https://www.unotv.com/nacional/la-mananera-de-claudia-sheinbaum-28-de-octubre-de-2026/",
+              "pole": "international"
+            },
+            {
+              "name": "Excélsior",
+              "tier": 2,
+              "url": "https://www.excelsior.com.mx/nacional/mananera-sheinbaum-vivo-temas-conferencia-hoy-28-octubre-2026",
+              "pole": "international"
+            }
+          ]
+        },
         {
           "id": "jauregui-treason-charge-oct21-2026",
           "date": "2026-10-21",
@@ -1315,82 +1341,43 @@
               "url": "https://www.jornada.com.mx/2026/09/21/politica/003n1pol?partner=rss"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-baja-california-sur-soberania-intervencionismo-sep20-2026",
-          "date": "2026-09-20",
-          "title": "Day 719 — Sheinbaum Warns Against Foreign Intervention at Baja California Sur Accountability Stop; Governor Pledges Wetlands and Mangrove Protections",
-          "type": "political",
-          "detail": "On September 20, 2026 (Day 719, Sunday), President Sheinbaum held the next stop of her \"Honestidad y Resultados\" nationwide accountability tour in Baja California Sur, continuing the sovereignty message she struck a day earlier in Chihuahua. She told the crowd \"México es un país libre, independiente y soberano, bastante nos costó\" — invoking the historical cost in lives and sacrifice of Mexican independence — and argued that political authority rests with the Mexican people rather than with foreign powers or domestic elites seeking outside backing for internal disputes, a message read as a continued rebuttal to U.S. pressure narratives around cartel control and sovereignty. Baja California Sur Governor Víctor Manuel Castro Cosío used the event to announce a state commitment to protect the peninsula's wetlands, coastal dunes, mangroves, marine reefs and other protected natural areas from harmful development projects. Separately, border-area coverage noted Sheinbaum's motorcade had passed through Ciudad Juárez with her vehicle window down as residents gathered along the route, some chanting support, as she reiterated that defending national sovereignty and independence is a responsibility shared by all Mexicans.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/20/claudia-sheinbaum-advierte-contra-el-intervencionismo-mexico-es-un-pais-libre-y-soberano-bastante-nos-costo/"
-            },
-            {
-              "name": "KVIA",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://kvia.com/news/2026/09/20/mexican-president-claudia-sheinbaum-visits-ciudad-juarez/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-culiacan-sinaloa-informe-injerencia-camaron-sep20-2026",
-          "date": "2026-09-20",
-          "title": "Day 719 — Sheinbaum Draws 50,000+ in Culiacán, Warns 'La Injerencia Provoca Violencia' Amid US Case Against Sinaloa Officials; Deploys Cabinet, Reviews Shrimp Imports",
-          "type": "political",
-          "detail": "On September 20, 2026 (Day 719, Sunday), President Sheinbaum led the Culiacán stop of her \"Honestidad y Resultados en Sinaloa\" accountability tour at the city's Feria Ganadera, drawing more than 50,000 attendees per state government figures. Addressing the fallout from the U.S. Justice Department's case against former governor Rubén Rocha Moya and other Sinaloa officials over alleged Sinaloa Cartel ties, Sheinbaum said \"la injerencia no resuelve los problemas, la injerencia provoca violencia\" and \"no queremos injerencia de ningún gobierno extranjero en nuestro territorio,\" arguing the state's future must be decided by Sinaloans amid the ongoing Los Chapitos factional violence that intensified after Ismael \"El Mayo\" Zambada's July 2024 US capture. She reaffirmed federal backing for interim Governor Graciela Domínguez Nava (in office since Rocha Moya's indefinite leave began August 25) and said the Armed Forces would remain deployed in the state as long as necessary. Sheinbaum announced the federal cabinet will fan out across Sinaloa starting the following week for direct constituent attention: SADER pledged uninterrupted resources to farmers, CFE will extend electricity subsidies another month, SEP will build 20 new preparatory schools, SHCP will provide extraordinary budget support, and the ATDT's José Antonio Peña Merino will work with Customs to address producers' complaints about foreign (largely South American) shrimp undercutting Sinaloa's catch — \"el mejor camarón es el de Sinaloa,\" she said. She cited roughly 94 billion pesos in federal investment in Sinaloa over two years spanning roads, ports, irrigation, health, housing and education, plus 1.128 million residents receiving welfare payments, 5,000 youths enrolled in \"Jóvenes Unen al Barrio,\" 10 new community centers, a new Mazatlán vehicular bridge, 55,300 homes built, and over 400 free clinics under the Universal Health Service.",
-          "sources": [
-            {
-              "name": "El Heraldo de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://heraldodemexico.com.mx/nacional/2026/9/20/sheinbaum-refrenda-apoyo-sinaloa-en-seguridad-anuncia-revision-por-entrada-de-camaron-891694.html"
-            },
-            {
-              "name": "La Razón de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.razon.com.mx/mexico/2026/09/20/sheinbaum-anuncia-atencion-directa-del-gabinete-federal-a-poblacion-de-sinaloa-a-partir-de-la-proxima-semana/"
-            },
-            {
-              "name": "AM",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.am.com.mx/nacional/2026/09/20/mensaje-a-eu-la-injerencia-genera-violencia-advierte-sheinbaum-en-sinaloa-1846921.html"
-            },
-            {
-              "name": "Tribuna",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://tribuna.com.mx/mexico/2026/09/20/no-queremos-injerencia-de-ningun-gobierno-extranjero-sheinbaum-desde-sinaloa_690935/"
-            },
-            {
-              "name": "Gobierno del Estado de Sinaloa",
-              "tier": 1,
-              "pole": "western",
-              "url": "https://sinaloa.gob.mx/mas-de-50-mil-sinaloenses-recibieron-con-entusiasmo-y-carino-a-la-presidenta-claudia-sheinbaum/"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
         {
+          "id": "tesla-samsung-oppose-vietnam-tariffs-nov-2",
+          "date": "2026-11-02",
+          "title": "Tesla and Samsung oppose fresh US tariffs on Vietnam as Trump's Nov 29 deadline nears",
+          "type": "trade",
+          "detail": "Tesla and Samsung are reported to oppose new US tariffs on Vietnam ahead of a November 29 deadline set by Trump. Based on a single aggregator headline; details of the tariff rate and scope were not reviewed.",
+          "sources": [
+            {
+              "name": "Google News (aggregator)",
+              "tier": 4,
+              "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVk9Yd0FWV1plYlE5LUcwZElzUG4zcFV0UUVPTktRNjQ1dzhwQ29zTUh4MDN6ZUo3QVl4Q0hlUzZsaGtaQl9yRjNRRS1zNUdINl9BSDJYTUF3c2ZmODNXTEtDWDlGNS1fcEVwSXE0ZUwtZEQ1TU53ZmpTOTF3Uk5NOWFTc0Z0STAyd1loUml1RlN6QU9YRjB1SlNLbHpBQU5yWlNvekpSQTNRejRBcGV0dUFOR0JkMk9EdzhmcU83LTA0Yk5QaXpkbl9razBJdm54TEZNMkhpNnhlNnfSAeABQVVfeXFMTnp2Y2xDYVdBS2hCUXpnTkFxZTh5eTMtc2JqOEVHbGlaYWRPT3pMWjJRaHFKeDE1NV9ldXpsd1FsclpGekpoYnBpWkNVbElCTF9zUXU1UjFzVHlCckpLakRYX2hmdDNwVmJxY3JGMmkzLTM1N0I3bjJUYzlCRGM2bzM3TTRQZUpCYXAxZWxtSDlBSG9Ua2UxMzBqVkVrZ2lCRVMwemhsNWtKTU5lQks0R3RtazBsWlVHX01WZVhPcjJPeGdiWUlzblZpbERERjRjbDNTbHlpcUhjVDVscW5TaWc?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
+        {
           "id": "trump-revises-canada-building-materials-tariffs-oct-28",
           "date": "2026-10-28",
           "title": "Trump revises 50% tariffs on Canadian building materials",
           "type": "trade",
-          "detail": "Headline-level report that Trump revised the 50% tariffs on Canadian building materials; specifics not yet confirmed.",
+          "detail": "Trump revised the 50% tariffs on Canadian goods: a proclamation would remove plywood, certain industrial machinery and select packaging and paper materials from coverage, effective Oct. 30, per Facilities Dive. Full product list not independently confirmed against the proclamation text.",
           "sources": [
             {
               "name": "Google News",
               "tier": 3,
               "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZ1BOMVNkRUhlXzdMUE1UUi1SY1dFenZvbFdnSlhMX3RkUF8tbXNTMGZLenVKVnFXaEQ0TjFFZzRtNEVFeTA5cFplam90c2R3UjVMc0RtZDhMMy1HQ0plcThzVDFhN0pYWklNX1NUazhaQ0NmOHZtcTFjN053eEtyZjNnaUlmVElITk9hbnJoWmZyNWE3d2lyX0ZFM0VuWjBrZkZOc2NzM0k?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            },
+            {
+              "name": "Facilities Dive",
+              "tier": 3,
+              "url": "https://www.facilitiesdive.com/news/trump-tweaks-canada-tariffs-removing-certain-goods-while-adding-others/872765/",
               "pole": "western"
             }
           ]
