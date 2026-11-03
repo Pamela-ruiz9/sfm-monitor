@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T22:33:07Z",
+  "updated": "2026-11-03T20:23:00Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -848,6 +848,27 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "mananera-oct30-2026-electoral-contracts",
+          "date": "2026-10-30",
+          "title": "Sheinbaum flags two-firm concentration of electoral material contracts, says 2027 vote not at risk",
+          "type": "political",
+          "detail": "At her Oct 30 conference Sheinbaum said two companies have held INE and state electoral-body (OPLE) material contracts for over two decades, and ruled out that the probe endangers the 2027 elections. She also confirmed she will attend a Bellas Artes tribute to Cuauhtémoc Cárdenas, and the conference was announced as suspended on Nov 2 for Day of the Dead (resuming Nov 3).",
+          "sources": [
+            {
+              "name": "Excélsior",
+              "tier": 2,
+              "url": "https://www.excelsior.com.mx/nacional/mananera-sheinbaum-hoy-temas-conferencia-30-octubre-2026",
+              "pole": "international"
+            },
+            {
+              "name": "UnoTV",
+              "tier": 2,
+              "url": "https://www.unotv.com/nacional/la-mananera-de-claudia-sheinbaum-30-de-octubre-de-2026/",
+              "pole": "international"
+            }
+          ]
+        },
+        {
           "id": "mananera-oct28-2026-guadalajara-water",
           "date": "2026-10-28",
           "title": "Sheinbaum and Jalisco governor announce Guadalajara water aqueducts",
@@ -1306,39 +1327,6 @@
               "tier": 2,
               "pole": "western",
               "url": "https://www.angulo7.com.mx/2026/nacional/tren-aifa-pachuca-con-avance-del-45-sheinbaum-invertira-750-mmdp-en-2400-km-de-red-ferroviaria/724382/"
-            }
-          ]
-        },
-        {
-          "id": "sheinbaum-mananera-celulares-diesel-tmec-jitomate-sep21-2026",
-          "date": "2026-09-21",
-          "title": "Day 720 — Sheinbaum Announces School Cellphone Ban (Nov 3), Guarantees Diesel Prices Through Year-End, Reiterates Sinaloa 'Injerencia' Warning",
-          "type": "political",
-          "detail": "At her September 21, 2026 (Day 720, Monday) mañanera in the Salón Tesorería of the National Palace, President Sheinbaum's administration announced that a Secretaría de Educación Pública regulation restricting cellphone use in primary and secondary schools, to be published in the Diario Oficial de la Federación, takes effect November 3, framed as a measure \"para fomentar la creatividad.\" Sheinbaum guaranteed diesel prices will hold stable through the end of 2026, crediting the Dos Bocas (Olmeca) refinery's output for insulating Mexico from volatility she said would otherwise be \"un problema real.\" On US tariff pressure ahead of the USMCA review, she said Mexico will pursue deeper regional commercial integration and boost Sinaloa tomato production, while seeking increased US purchases from Mexican firms already embedded in North American supply chains. She reiterated the sovereignty message from her Culiacán stop a day earlier — that foreign interference does not solve problems but provokes violence — in response to continued US pressure over cartel ties among Sinaloa officials. Separately, Sheinbaum defended Morena's internal coordinator-selection process against favoritism accusations, saying \"no hay de dedazos como en el PRI, es un proceso democrático,\" and pledged to release survey results; she noted Guanajuato's 75% drop in its daily homicide average since 2024, said an Ayotzinapa case report is forthcoming, cited Mexico as the OECD's second-fastest-growing economy, and committed to meet with Oaxacan artisan Elvis Guerra over extortion complaints.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/21/la-mananera-de-la-presidenta-claudia-sheinbaum-hoy-lunes-21-de-septiembre/"
-            },
-            {
-              "name": "El Financiero",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.elfinanciero.com.mx/nacional/2026/09/21/claudia-sheinbaum-mananera-temas-hoy-21-de-septiembre-de-2026-en-vivo/"
-            },
-            {
-              "name": "La Razón de México",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.razon.com.mx/mexico/2026/09/21/mananera-de-sheinbaum-21-de-septiembre-del-2026/"
-            },
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/2026/09/21/politica/003n1pol?partner=rss"
             }
           ]
         }
