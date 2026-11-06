@@ -1,13 +1,13 @@
 {
-  "ultima_actualizacion": "2026-11-05",
+  "ultima_actualizacion": "2026-11-06",
   "fuentes": {
     "tipo_cambio": "Banxico SIE SF43718 - Tipo de cambio FIX",
     "tasa_objetivo": "Banxico SIE SF61745 - Tasa objetivo",
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "18.7147",
-    "fecha": "2026-11-05",
+    "actual": "18.6297",
+    "fecha": "2026-11-06",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1587,16 +1587,16 @@
       },
       {
         "mes": "2026-11",
-        "valor": 18.7147
+        "valor": 18.6297
       }
     ]
   },
   "tasa_banxico": {
-    "actual": "6.5000",
-    "fecha": "2026-05-08",
+    "actual": "6.2500",
+    "fecha": "2026-11-06",
     "historico": [
       {
-        "fecha": "2024-11-05",
+        "fecha": "2024-11-06",
         "valor": 10.5
       },
       {
@@ -1646,6 +1646,10 @@
       {
         "fecha": "2026-05-08",
         "valor": 6.5
+      },
+      {
+        "fecha": "2026-11-06",
+        "valor": 6.25
       }
     ]
   },
@@ -2955,13 +2959,9 @@
       ]
     },
     "tiie_fondeo": {
-      "actual": 6.7559,
-      "fecha": "2026-11-05",
+      "actual": 6.7659,
+      "fecha": "2026-11-06",
       "historico": [
-        {
-          "fecha": "2024-11-05",
-          "valor": 10.72
-        },
         {
           "fecha": "2024-11-06",
           "valor": 10.7058
@@ -4325,6 +4325,10 @@
         {
           "fecha": "2026-11-05",
           "valor": 6.7559
+        },
+        {
+          "fecha": "2026-11-06",
+          "valor": 6.7659
         }
       ]
     },
@@ -4332,10 +4336,6 @@
       "actual": 6.5,
       "fecha": "2026-11-03",
       "historico": [
-        {
-          "fecha": "2024-11-05",
-          "valor": 10.1
-        },
         {
           "fecha": "2024-11-12",
           "valor": 10.1
@@ -4755,8 +4755,8 @@
       ]
     },
     "udis": {
-      "actual": 8.886305,
-      "fecha": "2026-11-05"
+      "actual": 8.888577,
+      "fecha": "2026-11-06"
     },
     "salario_minimo": {
       "actual": 315.04,
@@ -5500,8 +5500,8 @@
       "historico": []
     },
     "tasa_real_banxico": {
-      "actual": 3.05,
-      "fecha": "2026-05-08"
+      "actual": 2.8,
+      "fecha": "2026-11-06"
     },
     "tasa_real_cetes": {
       "actual": 3.05,
