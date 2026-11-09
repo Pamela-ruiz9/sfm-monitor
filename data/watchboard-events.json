@@ -1,8 +1,44 @@
 {
-  "updated": "2026-11-06T20:12:09Z",
+  "updated": "2026-11-09T23:14:52Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "us-october-jobs-2026-11-06",
+          "date": "2026-11-06",
+          "title": "October Payrolls Beat at +165K, Unemployment 4.1%; Fed December Hike Odds Firm",
+          "type": "market",
+          "detail": "BLS October payrolls rose 165,000 versus ~65-70K expected; September revised to +60K. Unemployment edged down to 4.1% and wages rose 0.4% m/m. The data strengthened expectations of a December Fed hike. Stocks rebounded partially (S&P +0.7%, Nasdaq +1.6%) but remained on track for the worst week since June.",
+          "sources": [
+            {
+              "name": "Yahoo Finance",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "ai-chip-selloff-2026-11-05",
+          "date": "2026-11-05",
+          "title": "Wall Street Plunges: S&P 500 -4.4%, Nasdaq -5.5% in Worst Day Since April 2025",
+          "type": "market",
+          "detail": "A sharp AI and semiconductor sell-off hit US equities. The Dow fell 1,833 points (3.44%), the S&P 500 4.36% and the Nasdaq 5.52%, entering correction territory. The Philadelphia Semiconductor Index fell over 12% and Nvidia about 9%. Investors cited fears that Democratic midterm wins could bring restrictions on data center buildout and AI spending.",
+          "sources": [
+            {
+              "name": "Fox Business",
+              "tier": 2,
+              "url": "https://foxbusiness.com/markets/stocks-nov-5-2026",
+              "pole": "western"
+            },
+            {
+              "name": "Yahoo Finance",
+              "tier": 2,
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "us-q3-gdp-advance-pce-2026-10-29",
           "date": "2026-10-29",
@@ -584,54 +620,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "august-cpi-core-hot-fed-hike-odds-87pct-sept11-2026",
-          "date": "2026-09-11",
-          "title": "August CPI Comes In Hot on Core; Fed September Hike Odds Jump to 87% as Stocks Rebound on Falling Oil",
-          "type": "economic",
-          "detail": "The Bureau of Labor Statistics' August 2026 CPI report, released September 11, showed the headline index rose a seasonally adjusted 0.4% for the month, putting the 12-month rate at 3.4% — both in line with the Dow Jones consensus. But core CPI (excluding food and energy) rose 0.3% MoM, 0.1 percentage point above the 0.2% forecast, while the core annual rate held at 2.4%, matching expectations. Gasoline rose 3.9% in August, accounting for over a third of the monthly all-items increase, while shelter (+0.3%), communication (+2.3%), and airline fares (+2.7%) also contributed to the core upside; medical care (-0.2%) and motor vehicle insurance (-0.8%) partially offset the gains. Traders responded by pushing CME FedWatch odds of a 25bp hike at the September 15-16 FOMC meeting to roughly 87%, up sharply from about 70% ahead of the release, with economists including Nationwide's Kathy Bostjancic noting that Chair Warsh's condition for a hold — continued disinflation — was not met. Equities nonetheless rallied as oil prices pulled back from Thursday's four-month high, ending a four-session losing streak: the Dow rose 1.03% to 52,602.74, the S&P 500 gained 1.07% to 7,672.80, and the Nasdaq climbed 1.23% to 26,403.77.",
-          "sources": [
-            {
-              "name": "US Bureau of Labor Statistics — Consumer Price Index Summary, August 2026",
-              "tier": 1,
-              "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — CPI Inflation Report, August 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html",
-              "pole": "western"
-            },
-            {
-              "name": "Bloomberg — US Core CPI Up More Than Forecast, Bolstering Case for Hike",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/news/articles/2026-09-11/us-core-cpi-rises-more-than-forecast-bolstering-case-for-hike",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "august-ppi-wholesale-inflation-accelerates-sept10-2026",
-          "date": "2026-09-10",
-          "title": "August PPI Accelerates to +5.4% YoY as Iran War Drives Energy Costs; Diesel Surges 24.1%",
-          "type": "economic",
-          "detail": "The Bureau of Labor Statistics' Producer Price Index for final demand rose 0.4% (seasonally adjusted) in August, released September 10, lifting the unadjusted 12-month rate to 5.4% — an acceleration from July's cooler print. More than three-quarters of the broad-based monthly rise was attributable to final-demand energy prices, which jumped 4.2%; within that, diesel fuel surged 24.1%, accounting for over a third of the increase in final-demand goods, as the unresolved US-Iran Gulf conflict kept a war-risk premium in crude and refined products. Final-demand goods prices overall advanced 1.1% while services rose a more modest 0.1%. The hotter wholesale print reinforced the case that the Gulf conflict's oil shock is now feeding directly into the domestic inflation pipeline just six days before the September 15-16 FOMC meeting, compounding pressure on a Fed already leaning hawkish after the August jobs blowout.",
-          "sources": [
-            {
-              "name": "US Bureau of Labor Statistics — Producer Price Index News Release, August 2026",
-              "tier": 1,
-              "url": "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
-              "pole": "western"
-            },
-            {
-              "name": "CNBC — PPI Inflation Report, August 2026",
-              "tier": 2,
-              "url": "https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -680,14 +668,14 @@
         {
           "id": "us-unemployment",
           "label": "US Unemployment Rate",
-          "value": "4.1% (August 2026, unchanged)",
+          "value": "4.1% (October 2026)",
           "color": "amber",
-          "source": "BLS August 2026 Employment Situation (released September 4, 2026)",
+          "source": "BLS October 2026 Employment Situation (released Nov 6, 2026)",
           "contested": false,
-          "delta": "Unchanged vs July (4.1%); NFP beat consensus by ~3x",
-          "deltaNote": "AUG 2026 (Sept 4): NFP rose 162,000 — a large beat vs the ~53,000-56,000 gain expected — with June and July both revised up a combined 55,000. Unemployment held steady at 4.1%. Markets read the report as increasing Fed hike risk (CME odds to ~58%), reversing Fed Governor Waller's dovish Sept 3 signal within a day; the Dow, S&P 500, and Nasdaq all fell on the print. Prior: July 2026 (Aug 7) NFP fell 23,000, a sharp miss, with May/June revised down a combined 103,000.",
-          "trend": "down",
-          "lastUpdated": "2026-09-04T13:30:00Z"
+          "delta": "Payrolls +165K vs ~70K expected",
+          "deltaNote": "NOV 6: October NFP +165,000, well above consensus; September revised to +60,000; wages +0.4% m/m. Reinforces December Fed hike expectations.",
+          "trend": "up",
+          "lastUpdated": "2026-11-06T13:30:00Z"
         },
         {
           "id": "us-core-pce",
@@ -1483,36 +1471,6 @@
               "name": "Fox Business",
               "tier": 2,
               "url": "https://www.foxbusiness.com/energy/trump-announces-8b-bailout-farmers-cover-diesel-cost-surge-amid-attacks-global-supply",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "tariff-domestic-goods-price-research-oct14-2026",
-          "date": "2026-10-14",
-          "title": "Research Finds Trump Tariffs Raised Prices on American-Made Domestic Goods",
-          "type": "economic",
-          "detail": "New research finds American-made domestic goods became more expensive under Trump tariffs, contradicting the administration's messaging that only foreign imports bore the cost of the trade levies. The findings challenge the core argument that tariffs protect U.S. manufacturers without burdening American consumers.",
-          "sources": [
-            {
-              "name": "Google News",
-              "tier": 3,
-              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNY0lDa2ZfdDlxajZ2QXJPV0lDaGFsRHpkTkZzc1NnLTYzM1owRUwtTU9NX1V4eW5XM09ycnRlQVlEbjhQN3h6MXBDREU2OFo3dDJZeUZtUGlNNHI5VzQ3elBnMkkzMi1JdU1kWmRlYVlHeWw1RFR0YTlZWkVGTnhXRXlJbEZIUlZ6dm51WEpUYWNPcWFFV1VnLVk0R2NQdmQyQjE40gGoAUFVX3lxTE81MlA0NFNZQWI5MVBCMVdXaFowWEdKRUdNNG9CMEdiZ3RjYkN2cWRsWGJjQnIybEhoZDRMWFBZRGc0UWFtWlNHUWRtNW5yRHNLMHIxNVpBdVN3dGIzUzM5TUZOdVYzMXJlVVV5MThuckZ0MVFDcW9jbEV6UHFUdXVBU3NnMXJOVWN6ejNrM3NNdDRGLWUwbFJPRlZpSF84QU1ObkhmZUxUSQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trade-deficit-17-month-high-oct-2026",
-          "date": "2026-10-10",
-          "title": "US Trade Deficit Hits 17-Month High of $105.6 Billion",
-          "type": "economic",
-          "detail": "The US trade deficit surged to a 17-month high of $105.6 billion in the latest report, driven by a sharp increase in imports of oil and other goods. The figure underscores ongoing pressures on the US current account balance amid continued global supply chain shifts and energy market dynamics.",
-          "sources": [
-            {
-              "name": "DiscloseTV",
-              "tier": 3,
-              "url": "https://t.me/disclosetv/21881",
               "pole": "western"
             }
           ]
