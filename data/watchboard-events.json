@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T23:14:52Z",
+  "updated": "2026-11-10T20:40:46Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -1322,6 +1322,21 @@
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "india-solar-tariffs-over-100-percent-nov-10",
+          "date": "2026-11-10",
+          "title": "Trump administration imposes tariffs above 100% on Indian solar panels",
+          "type": "trade",
+          "detail": "The Trump administration imposed tariffs topping 100 percent on solar panels imported from India, per a Google News-aggregated report. Original outlet not identified; details unverified.",
+          "sources": [
+            {
+              "name": "Google News",
+              "tier": 4,
+              "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPd1JZSnE5T2VfOUV0LTRZbzBQbVAxRGdBbEZ2ektablNCMlNRX2ZHcVNjaWZ6MFpCVE9hN285RGtDV01COUFHRUVCMFVtUjdXOTBYTXl5QjFNaF9pNHRqYTdwN2FUYjdILUF1WDlSTXRNWFlPd2F6M0pIdzdIV2g4cERsNzRKMFgwSGc5LWxhTzEyMXJnbjFmcHR3bk01aGNxTlpjNndpd1NtY2xxTkpRVlNQQzY2a293YkE?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "tesla-samsung-oppose-vietnam-tariffs-nov-2",
           "date": "2026-11-02",
