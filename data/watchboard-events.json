@@ -1,8 +1,29 @@
 {
-  "updated": "2026-11-11T21:01:16Z",
+  "updated": "2026-11-12T21:16:03Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "us-stocks-rebound-ai-rout-2026-11-09",
+          "date": "2026-11-09",
+          "title": "Wall Street Rallies After Last Week's AI Rout as Oil Slides; Nvidia Falls",
+          "type": "market",
+          "detail": "The S&P 500 rose about 1.9% to ~7,517 in morning trade Nov 9, clawing back part of the prior week's AI/semiconductor sell-off as oil prices swung lower. Nvidia bucked the rally, gapping ~8% lower after its board opened an independent investigation into CEO Jensen Huang. Markets are also watching a CPI release that analysts expect to be cooler but probably not enough to stop a December Fed hike.",
+          "sources": [
+            {
+              "name": "Associated Press (via Star Advertiser)",
+              "tier": 2,
+              "url": "https://www.staradvertiser.com/2026/11/09/breaking-news/wall-street-rallies-after-last-weeks-ai-rout-nvidia-falls/",
+              "pole": "western"
+            },
+            {
+              "name": "TradingNews",
+              "tier": 3,
+              "url": "https://www.tradingnews.com/news/sp500-hirts-7517-nasdaq-jumps-578-points-dow-climbs-to-52139",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "us-october-jobs-2026-11-06",
           "date": "2026-11-06",
@@ -599,27 +620,6 @@
               "pole": "western"
             }
           ]
-        },
-        {
-          "id": "uae-iran-brics-summit-meeting-sept12-2026",
-          "date": "2026-09-12",
-          "title": "UAE Crown Prince Meets Iran's Pezeshkian at BRICS Summit — First High-Level Contact Since Abu Dhabi Suspended Trade Ties",
-          "type": "political",
-          "detail": "On the sidelines of the BRICS summit in New Delhi on September 12, Abu Dhabi Crown Prince Sheikh Khaled bin Mohamed bin Zayed Al Nahyan held talks with Iranian President Masoud Pezeshkian — the highest-level UAE-Iran contact since the US-Israel-Iran war escalated and since the UAE suspended all trade and financial dealings with Tehran in August. Both sides publicly emphasized reducing tensions, though no changes to the existing trade suspension were announced. Leaders at the summit backed a New Delhi Declaration calling for protecting global trade, supply chains, and energy flows, and for preventing disruption to energy infrastructure and navigation through the Strait of Hormuz — language read by markets as a signal that even Iran's remaining diplomatic partners want the oil-shipping chokepoint stabilized. Pezeshkian used the summit to press Iran's case that the US naval blockade, not Iranian action, is the source of the Hormuz disruption, and said Tehran was finalizing a shared shipping-route arrangement with Oman — index of the economic stakes for India, which sources roughly 30% of its crude through the strait and had flagged the standoff as a summit-defining risk.",
-          "sources": [
-            {
-              "name": "Euronews — UAE and Iran Leaders Meet at the BRICS Summit for the First Time Since the War",
-              "tier": 2,
-              "url": "https://www.euronews.com/2026/09/13/uae-and-iran-leaders-meet-at-the-brics-summit-for-the-first-time-since-the-war",
-              "pole": "western"
-            },
-            {
-              "name": "Bloomberg — Iran Turns to BRICS Summit as US War Deepens Its Isolation",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/news/articles/2026-09-11/iran-turns-to-brics-summit-as-us-war-deepens-its-isolation",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -835,6 +835,27 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "mananera-nov5-2026-apec-xi-meeting",
+          "date": "2026-11-05",
+          "title": "Sheinbaum confirms APEC trip to China and a bilateral meeting with Xi; Trump meeting uncertain",
+          "type": "political",
+          "detail": "At her Nov 5 conference Sheinbaum said she will travel to China on Nov 15 for the APEC summit in Shenzhen (Nov 18–19), returning around Nov 20, and confirmed a bilateral meeting with Xi Jinping; agenda details are still pending. A meeting with Trump depends on whether he attends. She also said US immigration raids 'very likely' cost Republicans Latino votes in the midterms.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "url": "https://mexiconewsdaily.com/politics/sheinbaum-ice-immigration-raids-us-midterms-latino-votes-november-5-mananera/",
+              "pole": "international"
+            },
+            {
+              "name": "Por Esto",
+              "tier": 2,
+              "url": "https://www.poresto.com/mexico/2026/11/5/presidenta-mexico-viajara-china-noviembre-confirma-reunion-xi-jinping-busca-encuentro-trump.html",
+              "pole": "international"
+            }
+          ]
+        },
         {
           "id": "mananera-oct30-2026-electoral-contracts",
           "date": "2026-10-30",
@@ -1323,6 +1344,21 @@
     "trump-presidencies": {
       "events": [
         {
+          "id": "trump-threatens-mexico-double-tariffs-migrant-caravan-2026-11-12",
+          "date": "2026-11-12",
+          "title": "Trump threatens Mexico with double tariffs amid reports of a migrant caravan",
+          "type": "trade",
+          "detail": "Trump threatened to double tariffs on Mexico amid reports of a large migrant caravan, per a Google News-aggregated headline. Original outlet and details not identified; unverified.",
+          "sources": [
+            {
+              "name": "Google News",
+              "tier": 4,
+              "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPU0J0SmJGNllTUDUwMVE3dmR1Zkc5M1JtVWpEUlhwT0NJQUNycHNHSFNjOW9vam43WjZESjhldmltOGgzQzBNcmE5NzNmTm5RUW9hSVlVUnZZRXZ0QXVxblBzWExqdm1HcFNVTWpiWDdvZE9Jd1N5RkZHWG8ySE51cEpnc201MTNFZ1FCay1BRGxsZjhaX3o3N2xxOUV6VmFBRGs0ZWJYREoxa1ZnZzhTNlFJN0UxYlU?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
+        {
           "id": "white-house-tariffs-despite-midterm-losses-2026-11-11",
           "date": "2026-11-11",
           "title": "White House vows to press ahead with tariffs despite midterm losses",
@@ -1474,33 +1510,6 @@
               "name": "Bloomberg",
               "tier": 2,
               "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPOGpoQklQcElFSEt1c2t3S0NibFRHRFZsanBOU1VRU3JNcmNQREJXZVNEd0JVMWEzNXVKdHJybnFVbEtfRW9pWURBQ19uQTBIOTBzQUdpSzJRYV9rMFF3Uk1wN2NBUmpJMnBValJ2OW81QlV1Qm5xcWtBTkpBd3BFenlwUEpWUjFpVFNYTXBaMG96VUpKU0w0RVJaSm5OUERVS1RYZVRTU29VUGJCVUFhQlp3?oc=5&hl=en-US&gl=US&ceid=US:en",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-8-billion-farm-losses-plan-oct20-2026",
-          "date": "2026-10-20",
-          "title": "Trump announces $8 billion Harvest Fuel Relief for farmers ahead of midterms",
-          "type": "economic",
-          "detail": "At a Kansas rally on Oct 19, Trump announced an $8 billion Harvest Fuel Relief program to offset soaring diesel costs tied to the Iran war. USDA will reimburse a portion of losses using a formula based on acres and crops planted; payment rates are due in November. It follows the $12 billion Farmer Bridge Assistance package from December 2025, and arrives 15 days before the midterm elections as Republicans struggle in polls.",
-          "sources": [
-            {
-              "name": "CBS News",
-              "tier": 2,
-              "url": "https://www.cbsnews.com/news/trump-farmer-harvest-fuel-relief-aid/",
-              "pole": "western"
-            },
-            {
-              "name": "The Washington Post",
-              "tier": 2,
-              "url": "https://www.washingtonpost.com/politics/2026/10/20/trump-announces-8-billion-aid-farmers-gop-struggles/",
-              "pole": "western"
-            },
-            {
-              "name": "Fox Business",
-              "tier": 2,
-              "url": "https://www.foxbusiness.com/energy/trump-announces-8b-bailout-farmers-cover-diesel-cost-surge-amid-attacks-global-supply",
               "pole": "western"
             }
           ]
