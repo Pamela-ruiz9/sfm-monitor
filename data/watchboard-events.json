@@ -1,8 +1,29 @@
 {
-  "updated": "2026-11-12T21:16:03Z",
+  "updated": "2026-11-13T20:43:45Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "hot-october-cpi-yields-5pct-2026-11-10",
+          "date": "2026-11-10",
+          "title": "Hotter October CPI Sends 10-Year Yield Back Toward 5%, Stocks Slide",
+          "type": "market",
+          "detail": "US consumer prices rose 0.4% in October versus a 0.3% forecast, with core CPI up 0.3% against 0.2% expected. Treasury yields jumped, with the 10-year reclaiming the 5% mark during the session and stocks falling, reversing part of Monday's rebound. The data reinforced expectations of a Fed rate hike in December.",
+          "sources": [
+            {
+              "name": "MarketWatch (via Morningstar)",
+              "tier": 2,
+              "url": "https://www.morningstar.com/news/marketwatch/2026111076/stocks-fall-as-the-10-year-treasury-yield-reclaims-5",
+              "pole": "western"
+            },
+            {
+              "name": "MarketWatch (via Morningstar)",
+              "tier": 2,
+              "url": "https://www.morningstar.com/news/marketwatch/20261110148/stocks-fall-as-the-10-year-treasury-yield-nears-5-mark",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "us-stocks-rebound-ai-rout-2026-11-09",
           "date": "2026-11-09",
@@ -590,33 +611,6 @@
               "name": "Bloomberg — Hormuz Meeting With Iran and Gulf Nations Delayed, Oman Says",
               "tier": 2,
               "url": "https://www.bloomberg.com/news/articles/2026-09-13/hormuz-meeting-with-iran-and-gulf-nations-postponed-oman-says",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "hormuz-qeshm-vessel-attack-oil-shock-sept13-2026",
-          "date": "2026-09-13",
-          "title": "Vessel Struck Near Qeshm Island Kills One as Hormuz Shipping Runs 90% Below Pre-War Levels, Renewing Oil-Supply Risk Into FOMC Week",
-          "type": "market",
-          "detail": "A merchant vessel was hit by an unidentified projectile in the early hours of September 13 near Qeshm/Hengam Island in the Strait of Hormuz, roughly 14 miles from Iran's Bandar Abbas port, according to the UK Maritime Trade Operations Centre (UKMTO). Iranian state broadcaster IRIB said one crew member was killed and several others wounded; a fire broke out and local authorities evacuated the remaining crew. Neither Iran nor the US military claimed responsibility. The attack lands one day before Iran's planned regional shipping-management briefing and just two days ahead of the September 15-16 FOMC meeting, keeping a fresh war-risk premium in oil heading into the week. Commercial shipping through the strait has now fallen roughly 90% from its pre-conflict baseline of about 20 million barrels a day, per shipping-industry tracking cited in the wake of the strike — underscoring why the still-unresolved Hormuz campaign keeps showing up directly in US inflation data (the diesel-driven August PPI spike) rather than staying a contained regional story.",
-          "sources": [
-            {
-              "name": "Marine Insight — Iranian Seafarer Killed As Unidentified Strike Hits Ship Near Strait of Hormuz",
-              "tier": 3,
-              "url": "https://www.marineinsight.com/strait-of-hormuz-vessel-struck-qeshm/",
-              "pole": "international"
-            },
-            {
-              "name": "CNN — Vessel Struck in Strait of Hormuz, UKMTO Reports",
-              "tier": 2,
-              "url": "https://us.cnn.com/2026/09/13/middleeast/iran-hormuz-qeshm-attack-intl",
-              "pole": "western"
-            },
-            {
-              "name": "UPI — Container Ship Attacked in Strait of Hormuz; 1 Dead, Iran Says",
-              "tier": 2,
-              "url": "https://www.upi.com/Top_News/World-News/2026/09/13/iran-hormuz-strait-attack/9681789307409",
               "pole": "western"
             }
           ]
@@ -1495,21 +1489,6 @@
               "name": "The Guardian",
               "tier": 2,
               "url": "https://www.theguardian.com/us-news/2026/oct/23/susan-collins-maine-trump-tariffs-canada",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-wind-turbine-tariffs-delay-oct22-2026",
-          "date": "2026-10-22",
-          "title": "Trump delays wind turbine tariffs, allowing 180 days for talks",
-          "type": "economic",
-          "detail": "Bloomberg reported on Oct 22 that Trump delayed planned tariffs on wind turbines, giving 180 days for negotiations before the duties take effect.",
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPOGpoQklQcElFSEt1c2t3S0NibFRHRFZsanBOU1VRU3JNcmNQREJXZVNEd0JVMWEzNXVKdHJybnFVbEtfRW9pWURBQ19uQTBIOTBzQUdpSzJRYV9rMFF3Uk1wN2NBUmpJMnBValJ2OW81QlV1Qm5xcWtBTkpBd3BFenlwUEpWUjFpVFNYTXBaMG96VUpKU0w0RVJaSm5OUERVS1RYZVRTU29VUGJCVUFhQlp3?oc=5&hl=en-US&gl=US&ceid=US:en",
               "pole": "western"
             }
           ]
