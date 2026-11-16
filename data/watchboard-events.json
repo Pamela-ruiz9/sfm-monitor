@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T20:43:45Z",
+  "updated": "2026-11-16T23:09:35Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -851,6 +851,33 @@
           ]
         },
         {
+          "id": "banxico-surprise-cut-6-25-nov5-2026",
+          "date": "2026-11-05",
+          "title": "Banxico unexpectedly cuts policy rate 25bp to 6.25% on a split 3-2 vote",
+          "type": "economic",
+          "detail": "Banxico's Governing Board cut its benchmark rate from 6.50% to 6.25% on Nov 5, defying consensus for a hold. Jonathan Heath and Galia Borja dissented. The bank called it a one-time adjustment, signalled the rate could be held for an extended period, and raised its Q4 headline inflation forecast to 3.7%.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "url": "https://mexiconewsdaily.com/business/bucking-expectations-banxico-lowers-interest-rate-despite-some-inflation-concerns/",
+              "pole": "international"
+            },
+            {
+              "name": "Por Esto",
+              "tier": 2,
+              "url": "https://www.poresto.com/mexico/2026/11/5/banxico-sorprende-baja-tasa-interes-mexico-preve-mantenerla-periodo-prolongado.amp.html",
+              "pole": "international"
+            },
+            {
+              "name": "N+",
+              "tier": 2,
+              "url": "https://www.nmas.com.mx/economia/banxico-reduce-tasa-de-interes-la-coloca-en-625/",
+              "pole": "international"
+            }
+          ]
+        },
+        {
           "id": "mananera-oct30-2026-electoral-contracts",
           "date": "2026-10-30",
           "title": "Sheinbaum flags two-firm concentration of electoral material contracts, says 2027 vote not at risk",
@@ -1474,21 +1501,6 @@
               "name": "US News",
               "tier": 2,
               "url": "https://www.usnews.com/news/politics/articles/2026-10-25/trump-says-canada-tariff-deal-coming-soon-at-michigan-border-rally",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-canada-tariff-exemptions-collins-oct23-2026",
-          "date": "2026-10-23",
-          "title": "Trump exempts some Canadian goods from 50% tariffs, boosting Collins in Maine",
-          "type": "trade",
-          "detail": "Trump dropped some tariffs on Canadian exports, exempting certain goods from his 50% tariffs, in a move seen as aiding Sen. Susan Collins in Maine ahead of the midterms, The Guardian reported on Oct 23.",
-          "sources": [
-            {
-              "name": "The Guardian",
-              "tier": 2,
-              "url": "https://www.theguardian.com/us-news/2026/oct/23/susan-collins-maine-trump-tariffs-canada",
               "pole": "western"
             }
           ]
