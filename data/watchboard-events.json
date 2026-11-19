@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T21:40:53Z",
+  "updated": "2026-11-19T21:56:46Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -830,6 +830,27 @@
     "sheinbaum-presidency": {
       "events": [
         {
+          "id": "sheinbaum-lands-shenzhen-apec-nov16-2026",
+          "date": "2026-11-16",
+          "title": "Sheinbaum lands in Shenzhen on a commercial flight for the APEC summit",
+          "type": "political",
+          "detail": "Sheinbaum arrived in Shenzhen on Nov 16 at about 11:30 local time after leaving Mexico City on Nov 14 and flying from Tijuana on a China Southern commercial flight. Her first event was a meeting with Mexicans living in China. Her delegation includes Ebrard, González, Kershenobich, Bárcena and Ruiz. On Nov 17 she was scheduled to address the APEC Business Advisory Council on Plan México and to meet Xi Jinping and Canada's Mark Carney. She plans to return by Nov 20. No outcome of the Xi meeting had been reported when this entry was written.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "url": "https://mexiconewsdaily.com/news/apec-summit-sheinbaum-meets-mexicans-china/",
+              "pole": "international"
+            },
+            {
+              "name": "teleSUR",
+              "tier": 2,
+              "url": "https://www.telesurtv.net/presidenta-mexico-llega-shenzhen-china-participar-cumbre-apec/",
+              "pole": "international"
+            }
+          ]
+        },
+        {
           "id": "mananera-nov5-2026-apec-xi-meeting",
           "date": "2026-11-05",
           "title": "Sheinbaum confirms APEC trip to China and a bilateral meeting with Xi; Trump meeting uncertain",
@@ -1332,33 +1353,6 @@
               "url": "https://www.jornada.com.mx/noticia/2026/09/24/economia/grupo-lego-anuncia-inversion-por-400-mdd-para-nueva-planta-en-nuevo-leon"
             }
           ]
-        },
-        {
-          "id": "sheinbaum-trenes-pasajeros-2400km-avance-sep23-2026",
-          "date": "2026-09-23",
-          "title": "Day 722 — Sheinbaum Details 2,400km Passenger-Rail Buildout: AIFA-Pachuca 45%, CDMX-Querétaro 31%, 750 Billion Pesos Committed",
-          "type": "economic",
-          "detail": "Sheinbaum used her September 23, 2026 mañanera to detail progress on the government's 2,400km national passenger-rail program, backed by roughly 750 billion pesos ('750 mil mdp') in combined passenger and freight investment. She presented completion figures for four routes under construction: Mexico City (AIFA)–Pachuca Interoceánico at 45% (58km of double electrified track, 4 stations, 2 substations, 1 maintenance base, 10 work fronts, 8,800 workers of whom 21% are women), Mexico City–Querétaro at 31%, Querétaro–Irapuato at 22%, and Saltillo–Nuevo Laredo at 10%, alongside the Tren Maya cargo line at 67%. She said the AIFA-Pachuca and Mexico City-Querétaro lines are expected to begin operations in 2027, that construction has generated roughly 60,000 direct and 120,000 indirect jobs, and that the completed network will serve about 41.3 million people with average travel-time reductions near 40% and pollutant-emission cuts of up to 50%; 64 families have been relocated for right-of-way at a cost of 63.5 million pesos, with resettlement compensation ongoing. She framed the buildout — which her government says adds 40% more track than was built during the AMLO administration — as core to the nearshoring and public-investment agenda. Separately, INEGI figures presented the same day showed national population growth slowing to 0.7%, which Sheinbaum attributed to smaller family sizes and rising childlessness rather than a policy failure.",
-          "sources": [
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/23/gobierno-de-sheinbaum-construye-40-mas-vias-que-el-sexenio-de-amlo-destina-750-millones-de-pesos-a-infraestructura-ferroviaria/"
-            },
-            {
-              "name": "Ámbito",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.ambito.com/mexico/informacion-general/la-mananera-claudia-sheinbaum-hoy-miercoles-23-septiembre-2026-minuto-minuto-vivo-n6325157"
-            },
-            {
-              "name": "Ángulo 7",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.angulo7.com.mx/2026/nacional/tren-aifa-pachuca-con-avance-del-45-sheinbaum-invertira-750-mmdp-en-2400-km-de-red-ferroviaria/724382/"
-            }
-          ]
         }
       ]
     },
@@ -1574,60 +1568,6 @@
               "name": "Bloomberg",
               "tier": 2,
               "url": "https://www.bloomberg.com/news/articles/2026-06-25/mexico-holds-key-interest-rate-at-6-5-after-two-years-of-cuts",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "banxico-rate-cut-6p5-may7-2026",
-          "date": "2026-05-07",
-          "title": "Banxico Cuts Benchmark Rate to 6.5% in Split Vote, Signals End of Two-Year Easing Cycle",
-          "type": "economic",
-          "detail": "Mexico's central bank (Banco de México / Banxico) voted 3-2 to cut its benchmark overnight interest rate by 25 basis points to 6.5% — the lowest level since May 2022 — following April inflation data showing a first deceleration since December 2025. The governing board simultaneously signaled this cut marked the end of a two-year-plus easing cycle that had lowered rates from the August 2023 peak of 11.25%. Board members in the minority voted to hold rates, citing continued uncertainty over US tariff impacts on inflation and peso stability. The peso traded at approximately 17.31 per dollar in early May, representing significant strengthening from the 2025 average of approximately 19.20. The rate decision comes against a complex macroeconomic backdrop: while inflation is moderating and the peso has strengthened, Mexico's economy contracted in Q1 2026 (largest decline in over a year) with investment falling 6.6% in 2025. The Banxico decision was interpreted as a signal that monetary policy has done its work and that structural reforms — fiscal stimulus, investment promotion through Plan México Acciones — must now carry the weight of economic revival. The 6.5% rate still provides meaningful real interest rates above the approximately 4% headline inflation reading, preserving Mexico's financial stability credentials.",
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/news/articles/2026-05-07/banxico-to-cut-interest-rate-to-6-5",
-              "pole": "western"
-            },
-            {
-              "name": "Mexico News Daily",
-              "tier": 2,
-              "url": "https://mexiconewsdaily.com/news/central-bank-cuts-interest-rate-7/",
-              "pole": "western"
-            },
-            {
-              "name": "Rio Times",
-              "tier": 3,
-              "url": "https://www.riotimesonline.com/mexico-investment-contraction-banxico-cut-may-2026/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "mexico-labor-poverty-record-low-coneval-may6-2026",
-          "date": "2026-05-06",
-          "title": "Mexico's Labor Poverty Rate Hits Historic Low at 32.3% in Q4 2025, Despite GDP Contraction Warnings",
-          "type": "economic",
-          "detail": "Mexico's Labor Ministry (STPS) and CONEVAL released Q4 2025 labor poverty data on May 6, 2026, confirming a historic milestone: the share of Mexicans in households unable to cover basic food needs with wage income fell to 32.3% — the lowest on record since the measure was introduced. Labor Minister Marath Bolaños highlighted the figure as evidence that the minimum wage increases (cumulative 283% since 2018 under AMLO and Sheinbaum) have translated into genuine material gains for low-income workers. Mexico raised the minimum wage again in January 2026 to MX$278.80/day (approximately $16.10/day), the highest nominal level since the modern wage was established. However, the milestone came amid contradictory signals: the Q1 2026 GDP contraction of 0.8% — confirmed by INEGI on April 30 — created downside risk for formal employment in the near term. Bloomberg's May 6 analysis argued that 'Mexico will lose more from a bad USMCA rewrite than from no deal,' noting that the agreement generates approximately $839 billion in annual bilateral trade and sustains millions of formal jobs in manufacturing, agriculture, and services. The labor poverty reduction is credited to formal job creation driven by nearshoring investment — FDI into Mexico's manufacturing sector hit $36.9 billion in 2024, the highest on record — and the sustained minimum wage policy. Critics noted that 32.3% labor poverty still means nearly one in three Mexicans cannot cover basic food needs through labor income alone.",
-          "sources": [
-            {
-              "name": "Americas Quarterly",
-              "tier": 2,
-              "url": "https://www.americasquarterly.org/article/sheinbaums-triple-economic-dilemma/",
-              "pole": "western"
-            },
-            {
-              "name": "Bloomberg",
-              "tier": 2,
-              "url": "https://www.bloomberg.com/opinion/articles/2026-05-06/mexico-will-lose-more-from-a-bad-usmca-rewrite-than-from-no-deal",
-              "pole": "western"
-            },
-            {
-              "name": "Mexico News Daily",
-              "tier": 2,
-              "url": "https://mexiconewsdaily.com/politics/latam-pulse-poll-mexico-sheinbaum-approval/",
               "pole": "western"
             }
           ]
