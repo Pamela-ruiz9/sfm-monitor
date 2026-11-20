@@ -1,8 +1,29 @@
 {
-  "updated": "2026-11-19T21:56:46Z",
+  "updated": "2026-11-20T21:39:02Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "stocks-slide-retail-sales-musalem-four-hikes-2026-11-17",
+          "date": "2026-11-17",
+          "title": "Dow Falls 849 Points as Musalem Flags Up to Four More Hikes; 10-Year Holds Near 5.1%",
+          "type": "market",
+          "detail": "The Dow fell 848.75 points (1.64%) to 50,759 and the S&P 500 lost 1.03% to 7,340, its lowest close since late July, with the VIX up as much as 21% to 27.7. October retail sales rose 0.2% (in line), with the ex-autos-and-gas measure +0.6% vs 0.4% expected; import prices rose 1.1% vs 0.7% expected. St. Louis Fed President Musalem said as many as four more hikes may be needed before spring 2027. CME FedWatch priced about 95% odds of a 25bp December hike; the 10-year yield sat near 5.11% and the 2-year near 4.81%. Goldman raised its Q4 GDP forecast to 2.4%. FOMC minutes are due Wednesday.",
+          "sources": [
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/11/16/stock-market-today-live-updates.html",
+              "pole": "western"
+            },
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/11/17/treasury-yields-bonds-inflation.html",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "soft-ppi-eases-fed-50bp-bets-2026-11-13",
           "date": "2026-11-13",
@@ -593,27 +614,6 @@
               "pole": "international"
             }
           ]
-        },
-        {
-          "id": "treasury-yield-tops-2007-high-oil-fomc-eve-sept15-2026",
-          "date": "2026-09-15",
-          "title": "10-Year Treasury Yield Tops 5%, Highest Since 2007, as Oil Holds Near $109 and Houthi Escalation Deepens on FOMC Eve",
-          "type": "market",
-          "detail": "US stocks fell for a third straight session on the eve of the Fed's rate decision: the Dow lost 328.09 points (-0.63%) to close at 52,093.11, the S&P 500 fell 0.45% to 7,585.73, and the Nasdaq dropped 0.78% to 25,981.57. Energy (+1.9%) and Materials (+0.32%) were the only advancing S&P sectors as Brent crude settled near $109/bbl. The 10-year Treasury yield rose as much as 4 basis points to touch 5.02% intraday — surpassing its 2023 peak and reaching its highest level since July 2007 — as traders priced in roughly 92% odds of a quarter-point hike the next day. The move came alongside a deepening Yemen crisis: Houthi forces, having seized the Red Sea port of Mokha and the islands of Perim and Zuqar the prior weekend, escalated attacks on Saudi territory, displacing nearly 94,000 people, while Trump Middle East adviser Massad Boulos said freedom of navigation in the Red Sea remained a 'red line' for the administration. The combination of a still-closed Strait of Hormuz, Saudi Arabia's East-West pipeline shutdown after the Sept 10-11 drone strikes from Iraqi territory, and the Houthi Red Sea campaign kept a war-risk premium in oil and yields heading into Wednesday's FOMC decision.",
-          "sources": [
-            {
-              "name": "The National — US Expects Change in Red Sea Security Situation 'Soon'",
-              "tier": 2,
-              "url": "https://www.thenationalnews.com/news/gulf/2026/09/15/houthi-attacks-on-saudi-arabia-escalate-as-nearly-94000-displaced/",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "TheStreet — Stock Market Today (Sept. 15, 2026): Dow Futures Slide as Oil Prices Surge and Treasury Yields Hit 2007 Highs",
-              "tier": 2,
-              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-sept-15-2026-dow-futures-slide-as-oil-prices-surge-and-treasury-yields-hit-2007-highs",
-              "pole": "western"
-            }
-          ]
         }
       ],
       "kpis": [
@@ -829,6 +829,27 @@
     },
     "sheinbaum-presidency": {
       "events": [
+        {
+          "id": "sheinbaum-xi-meeting-shenzhen-nov17-2026",
+          "date": "2026-11-17",
+          "title": "Sheinbaum meets Xi Jinping in Shenzhen, calls it a 'new era' for Mexico-China ties",
+          "type": "political",
+          "detail": "On Nov 17 Sheinbaum met Xi Jinping in Shenzhen ahead of the APEC Leaders' Meeting. They discussed cooperation in science, technology, clean energy, water, health, agriculture and tourism, and expanding Mexican exports to China. Official statements did not mention Mexico's recent tariffs on Chinese goods. Sheinbaum said she would not let the meeting hinder trade talks with Washington, and told Xi Mexico hosts APEC in 2028.",
+          "sources": [
+            {
+              "name": "Mexico News Daily",
+              "tier": 2,
+              "url": "https://mexiconewsdaily.com/politics/sheinbaum-xi-meet-shenzhen-mexico-china-relations/",
+              "pole": "international"
+            },
+            {
+              "name": "Chinese Embassy in the US (official readout)",
+              "tier": 1,
+              "url": "https://us.china-embassy.gov.cn/eng/zgyw/202611/t20261117_12061358.htm",
+              "pole": "eastern"
+            }
+          ]
+        },
         {
           "id": "sheinbaum-lands-shenzhen-apec-nov16-2026",
           "date": "2026-11-16",
