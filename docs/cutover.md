@@ -76,6 +76,8 @@ Solo ejecutar si **todos** los gates G1-G7 están ✅. Crear branch dedicada, no
 
 ### 1. Branch + preserve legacy
 
+> **Hecho (2026-11-24):** los archivos legacy ya están en `legacy/` (`v0.1.0.html`, `roadmap-v0.1.0.html`, `README.md`). GitHub Pages ya despliega `app/dist` vía `deploy.yml`.
+
 ```bash
 git checkout main && git pull
 git checkout -b release/v0.2.0

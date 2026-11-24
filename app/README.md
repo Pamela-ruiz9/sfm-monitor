@@ -1,20 +1,17 @@
 # SFM Monitor — Astro app (`v0.2.0-dev.1`)
 
-App-like redesign + PWA del dashboard SFM Monitor en **Astro 5 + React 19 + TypeScript strict**, target deploy en custom domain (`sfmrisk.mx` por defecto, ver `public/CNAME`).
+App-like redesign + PWA del dashboard SFM Monitor en **Astro 5 + React 19 + TypeScript strict**, publicado en GitHub Pages.
 
 > Para el inventario completo de features, paleta, componentes y métricas, ver `../CHANGELOG.md` `[0.2.0-dev.1]`. Este README es un quickstart.
 
 ## Hosting
 
-- **Site canónico**: `https://sfmrisk.mx` (`astro.config.ts` → `site` y `public/CNAME`)
-- **Base path**: `/`
-- **Legacy** `../index.html` sigue accesible en `https://pamela-ruiz9.github.io/sfm-monitor/` — son sitios separados, no compiten
+- **URL**: `https://pamela-ruiz9.github.io/sfm-monitor/` (`astro.config.ts` → `SITE` + `BASE = '/sfm-monitor'`)
+- **Deploy**: `.github/workflows/deploy.yml` publica `app/dist` en GitHub Pages en cada push a `main` que toque `app/**` o `data/sfm-data.json`
+- **Sin dominio propio** por ahora (no hay `public/CNAME`)
+- El dashboard HTML v0.1.0 está archivado en [`../legacy/`](../legacy/) y ya no se publica
 
-Para cambiar el dominio target:
-1. Editar `public/CNAME` con el dominio nuevo
-2. Editar `astro.config.ts` → `SITE`
-3. Configurar DNS apuntando a Cloudflare Pages / GitHub Pages
-4. Esperar propagación + cert SSL automático
+Para usar un dominio propio: crear `public/CNAME`, ajustar `SITE` y `BASE` en `astro.config.ts` y configurar DNS.
 
 ## Quick start
 

@@ -3,11 +3,10 @@
 
 Dashboard público de riesgo financiero para México — datos reales de CNBV y Banxico.
 
-🔗 **Live (estable v0.1.0):** [pamela-ruiz9.github.io/sfm-monitor](https://pamela-ruiz9.github.io/sfm-monitor)
-📋 **Roadmap:** [pamela-ruiz9.github.io/sfm-monitor/roadmap.html](https://pamela-ruiz9.github.io/sfm-monitor/roadmap.html)
+🔗 **Live:** [pamela-ruiz9.github.io/sfm-monitor](https://pamela-ruiz9.github.io/sfm-monitor) — app Astro (`app/`), desplegada por `deploy.yml`
+📋 **Roadmap:** [docs/roadmap-epics.md](docs/roadmap-epics.md) (epics e historias de usuario)
 🧭 **Blueprint:** [docs/research/blueprint-2026.md](docs/research/blueprint-2026.md)
-📜 **Versión actual:** `v0.1.0` ([CHANGELOG](CHANGELOG.md))
-🧪 **Preview Astro v0.2.0-dev:** [`app/`](app/) — app-like redesign + PWA en branch `feat/app-redesign-pwa-v0.2.0-dev` ([PR #1](https://github.com/Pamela-ruiz9/sfm-monitor/pull/1))
+📜 **Versión actual:** `v0.2.0-dev` ([CHANGELOG](CHANGELOG.md)) — el dashboard HTML v0.1.0 está archivado en [`legacy/`](legacy/)
 
 ---
 
@@ -42,18 +41,24 @@ Agrega indicadores de riesgo del sistema financiero mexicano en un solo dashboar
 
 ```
 sfm-monitor/
-├── index.html          — Dashboard principal (HTML/CSS/JS auto-contenido)
-├── roadmap.html        — Cuaderno de trabajo interactivo
+├── app/                — Dashboard (Astro + React + TS), lo que se publica
+├── legacy/             — Dashboard HTML v0.1.0 archivado (no se publica)
 ├── data/
-│   └── sfm-data.json   — Todos los datos históricos procesados
-├── raw-data/           — Archivos originales de CNBV (.gitignored por tamaño)
-│   ├── cnbv_indicadores.json  — IMOR histórico por banco y segmento
-│   ├── sofipos_catalogo.xlsx  — Datos SoFiPOs por cartera
-│   └── ifrs9_bm.zip           — Datos IFRS9 Banca Múltiple
+│   ├── sfm-data.json   — Todos los datos históricos procesados
+│   └── Raw_data/       — Catálogos CNBV versionados (ver Data.md)
+├── scripts/            — Extracción y normalización CNBV / Banxico / INEGI
+├── raw-data/           — Insumos CNBV (los grandes en .gitignore)
+│   ├── cnbv_indicadores.json  — Indicadores por cartera (versionado; entrada de CI)
+│   ├── sofipos_by_inst.json   — SoFiPOs por institución (versionado; entrada de CI)
+│   └── ifrs9_bm.zip           — Datos IFRS9 Banca Múltiple (solo local)
 └── .github/
     └── workflows/
-        └── update-data.yml    — GitHub Actions: actualización diaria Banxico
+        ├── update-data.yml    — Actualización diaria Banxico
+        ├── update-cnbv.yml    — Normalización CNBV al subir raw-data/
+        └── deploy.yml         — Build de app/ y deploy a GitHub Pages
 ```
+
+Catálogos versionados: [`data/Raw_data/Data.md`](data/Raw_data/Data.md) · Fuentes y descarga de insumos: [`docs/data-sources.md`](docs/data-sources.md) · Dashboard anterior: [`legacy/`](legacy/)
 
 ---
 
@@ -65,7 +70,7 @@ sfm-monitor/
 - TIIE 28 días (SF43783)
 - Inflación anual calculada del INPC (SP74625)
 
-Los datos de CNBV (IMOR, ICOR, IFRS9) se actualizan **manualmente** cuando CNBV publica el nuevo mes (~30 días de rezago).
+Los datos de CNBV (IMOR, ICOR, IFRS9) se actualizan **manualmente** cuando CNBV publica el nuevo mes (~30 días de rezago). Guía operativa de qué archivo bajar y de dónde: [`docs/data-sources.md`](docs/data-sources.md).
 
 ---
 
@@ -107,7 +112,7 @@ Los datos de CNBV (IMOR, ICOR, IFRS9) se actualizan **manualmente** cuando CNBV 
 | **Fase 3** | 🔄 En progreso | Datos CNBV reales, IFRS9, SoFiPOs, semáforo calculado |
 | **Fase 4** | 📋 Pendiente | Banca de Desarrollo, spread soberano, comparación internacional |
 
-Ver roadmap interactivo en [roadmap.html](https://pamela-ruiz9.github.io/sfm-monitor/roadmap.html)
+Detalle por epic e historia de usuario en [`docs/roadmap-epics.md`](docs/roadmap-epics.md). Backlogs: [contenido](docs/roadmap-contenido.md) · [infraestructura](docs/roadmap-infraestructura.md).
 
 ---
 

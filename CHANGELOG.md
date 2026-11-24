@@ -17,6 +17,9 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - `raw-data/cnbv_indicadores.json` versionado con las series por cartera de US-406 (faltaba en `acd7989`; `update-cnbv.yml` lo usa como entrada).
 - Eliminados archivos sin consumidores: `raw-data/imor_historico.json`, `raw-data/samples/normalize-cnbv.py` (copia obsoleta del script), fixtures `*_sample.*` de `raw-data/samples/`, `app/src/components/kpi/KpiHero.tsx` (reemplazado por `HeroScore.astro`).
 - `raw-data/sofipos_inst.xlsx` (41 MB) y `raw-data/transfers/ifrs9_bm.zip` (20 MB) dejan de versionarse; son entradas locales de `extract-cnbv-raw.py` / `normalize-ifrs9.py`, que CI no lee. El zip vive ahora en `raw-data/ifrs9_bm.zip` (ruta que espera el script, ya en `.gitignore`).
+- Dashboard HTML v0.1.0 archivado: `index.html` → `legacy/v0.1.0.html`, `roadmap.html` → `legacy/roadmap-v0.1.0.html` (ya no se publicaban; Pages despliega `app/dist`).
+- README, `AGENTS.md` y `app/README.md` corregidos: la app Astro es producción, sin dominio propio; enlace roto a `roadmap.html` reemplazado por `docs/roadmap-epics.md`.
+- Enlazados documentos huérfanos: `docs/data-sources.md`, `docs/roadmap-epics.md`, `data/Raw_data/Data.md` (este último ahora describe el catálogo).
 
 ### feat(cnbv): desagregación quitas/EPRC/tasa_activa/cartera por cartera e institución (2026-06-11)
 
