@@ -1,8 +1,71 @@
 {
-  "updated": "2026-11-20T21:39:02Z",
+  "updated": "2026-11-24T01:26:38Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "global-selloff-hk-19-month-low-2026-11-23",
+          "date": "2026-11-23",
+          "title": "AI Selloff Spreads to Asia: Hong Kong Stocks Hit 19-Month Low, Oil Falls on Weak Sentiment",
+          "type": "market",
+          "detail": "The global market selloff deepened on Nov 23 as the AI-led rout spread to Asia: Hong Kong stocks plunged to a 19-month low, and oil prices fell as weak sentiment weighed on crude, with Gulf attacks limiting losses.",
+          "sources": [
+            {
+              "name": "Times of India",
+              "tier": 2,
+              "url": "https://timesofindia.indiatimes.com/business/international-business/oil-prices-fall-as-global-market-selloff-weighs-on-sentiment-gulf-attacks-limit-losses/articleshow/136088018.cms",
+              "pole": "eastern"
+            },
+            {
+              "name": "South China Morning Post",
+              "tier": 2,
+              "url": "https://www.scmp.com/business/markets/article/3375424/new-19-month-low-hong-kong-stocks-plunge-ai-sell-spreads-asia",
+              "pole": "eastern"
+            }
+          ]
+        },
+        {
+          "id": "stocks-correction-nasdaq-erases-gains-yields-fall-2026-11-20",
+          "date": "2026-11-20",
+          "title": "S&P 500 and Dow Enter Correction, Nasdaq Erases 2026 Gain as AI Selloff Sends Yields Sharply Lower",
+          "type": "market",
+          "detail": "The S&P 500 and Dow each closed about 10% below recent highs, and the Nasdaq Composite turned negative for the year, as investors took profits in AI stocks after the Anthropic IPO and worried about the AI investment wave. Treasuries rallied on safe-haven demand: the 10-year fell 12bp to 4.932%, the 2-year fell over 14bp to 4.634% and the 30-year fell over 8bp to 5.316%. Despite the growth scare, CME FedWatch still priced about a 92% chance of a 25bp December hike, and Philadelphia Fed's Paulson said further tightening lies ahead. University of Michigan sentiment rose to 51.5 in November from 48.0.",
+          "sources": [
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html",
+              "pole": "western"
+            },
+            {
+              "name": "NBC News",
+              "tier": 2,
+              "url": "https://nbcnews.com/business/markets/anthropic-shares-markets-selloff-nasdaq-rcna610394",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "fomc-minutes-waller-half-point-2026-11-18",
+          "date": "2026-11-18",
+          "title": "FOMC Minutes Show Near-Consensus for Further Hikes; Waller Says a Half-Point Move May Be Needed",
+          "type": "policy",
+          "detail": "Minutes of the October FOMC meeting, released Nov 18, showed nearly all participants judged further rate increases would likely be appropriate under their baseline outlooks, with some discussion of disappointing returns on AI investment. Governor Christopher Waller said a half-point hike is likely needed in December and that the Fed may have to \"shock people,\" saying he is \"very, very concerned about inflation.\"",
+          "sources": [
+            {
+              "name": "CNBC",
+              "tier": 2,
+              "url": "https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html",
+              "pole": "western"
+            },
+            {
+              "name": "HDFC Sky",
+              "tier": 3,
+              "url": "https://hdfcsky.com/news/nasdaq-plunges-8percent-as-hawkish-fed-minutes-and-ai-unwind-erase-2-trillion-in-market-value",
+              "pole": "international"
+            }
+          ]
+        },
         {
           "id": "stocks-slide-retail-sales-musalem-four-hikes-2026-11-17",
           "date": "2026-11-17",
@@ -543,75 +606,6 @@
               "tier": 2,
               "url": "https://www.globalsecurity.org/wmd/library/news/iran/2026/09/iran-260919-rferl01.htm",
               "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "iran-strikes-tanker-hormuz-oct-hike-bets-sept18-2026",
-          "date": "2026-09-18",
-          "title": "Iran Strikes Togo-Flagged Tanker in Hormuz, Warns of 'Destruction' for Unauthorized Vessels; 10Y Yield Climbs Back Toward 5% on October Hike Bets",
-          "type": "market",
-          "detail": "Iran's Revolutionary Guard said it struck the Togo-flagged oil tanker Trend late Thursday for an 'illegal attempt' to transit the Strait of Hormuz without authorization; the AP could not independently verify the claim. It followed a separate incident the prior day in which another tanker exiting the strait was hit by an 'unknown projectile,' sparking a fire that was extinguished with the crew reported safe. The Guard's navy warned that vessels attempting passage without permission face 'destruction,' underscoring Tehran's continued de facto control over much of the waterway since the conflict began. Oil rebounded from Thursday's pullback, with Brent settling around $103.65. US equities were mixed: the S&P 500 edged up 0.11%, the Dow slipped 0.13%, and the Nasdaq gained 0.39%, while the 10-year Treasury yield rose about 5bp back toward 5% as traders raised bets on a further Fed hike at the October meeting following Warsh's hawkish tone.",
-          "sources": [
-            {
-              "name": "AP via ClickOnDetroit — Iran Says It Strikes an Oil Tanker, and Other Mideast Developments",
-              "tier": 2,
-              "url": "https://www.clickondetroit.com/news/world/2026/09/18/iran-says-it-strikes-an-oil-tanker-and-other-mideast-developments/",
-              "pole": "western"
-            },
-            {
-              "name": "TheStreet — Stock Market Today (Sept. 18, 2026): S&P 500 Edges Lower After Fed Rate Hike Lifts Stocks",
-              "tier": 2,
-              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-18-2026",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "wall-street-rebounds-warsh-independence-sept17-2026",
-          "date": "2026-09-17",
-          "title": "Wall Street Reverses Fed-Hike Selloff as Oil and Yields Retreat; Warsh's Unanimous Hike Read as Defying Trump",
-          "type": "market",
-          "detail": "Wednesday's initial muted reaction to the Fed's 25bp hike gave way to a selloff into the close once Chair Warsh's press conference stressed sticky inflation: the Dow fell 631.21 points (-1.21%) to 51,461.90, the S&P 500 fell 0.45% to 7,551.81, and the Nasdaq closed roughly flat (-0.01%) at 25,978.42. Thursday reversed most of that move as oil and Treasury yields retreated: the Dow rose 316.14 points (+0.61%) to 51,778.04, the S&P 500 gained roughly 0.6% to around 7,596 — its best day in about six weeks per CNBC — the Nasdaq 100 added 1.7%, and a gauge of chipmakers climbed 3.1% on call-buying in Intel, Micron and AMD. Brent and WTI extended Wednesday's pullback, easing toward $102 and $100 respectively, while the 10-year Treasury yield eased roughly 5bp to around 4.94-4.96%, snapping an eight-session rising streak. Separately, CNN's economics desk framed the unanimous hike as Warsh 'defying' President Trump, who has publicly pushed for lower rates since appointing him; Warsh declined at Wednesday's press conference to discuss his private conversations with Trump, saying 'I've got nothing for you on the discussion with the president.'",
-          "sources": [
-            {
-              "name": "TheStreet — Stock Market Today (Sept. 17, 2026): Nasdaq, S&P 500 Surge on Post-Fed Rate Hike Buying",
-              "tier": 2,
-              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-17-2026",
-              "pole": "western"
-            },
-            {
-              "name": "CNN Business — Kevin Warsh Just Defied Donald Trump. Now What?",
-              "tier": 2,
-              "url": "https://edition.cnn.com/2026/09/17/economy/fed-trump-rate-hike-warsh",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "fed-hikes-25bp-first-since-2023-sept16-2026",
-          "date": "2026-09-16",
-          "title": "Fed Delivers First Rate Hike Since 2023 — Unanimous 25bp Move Lifts Funds Rate to 3.75-4.00%",
-          "type": "policy",
-          "detail": "The FOMC voted unanimously to raise the federal funds rate 25 basis points to a target range of 3.75%-4.00%, the Fed's first hike since July 2023, ending more than three years without an increase. The post-meeting statement said 'inflation remains elevated' and that 'today's policy action will support a timelier return to the Committee's 2 percent goal.' The updated Summary of Economic Projections showed the median 2026 rate dot rising to 4.1%, up from June's 3.8% — four members projected a further 50 basis points of hikes before year-end, while two saw no additional moves. The unanimous vote was notable given Chair Kevin Warsh was appointed by President Trump, who has pushed publicly for lower rates; Warsh's press conference instead emphasized rebuilding the Fed's inflation-fighting credibility, citing stubborn CPI/PPI readings and the Gulf-driven oil shock. Equities took the move in stride: the S&P 500 rose about 0.3%, the Nasdaq added roughly 0.7%, and the Dow slipped about 44 points (-0.1%), while the 10-year Treasury yield eased back below 5% to roughly 4.95% following the announcement, having touched a post-2007 high of 5.02% the day before.",
-          "sources": [
-            {
-              "name": "CNN Business — Live Updates: Fed Raises Interest Rates for the First Time Since 2023",
-              "tier": 2,
-              "url": "https://www.cnn.com/2026/09/16/business/live-news/federal-reserve-interest-rate-september",
-              "pole": "western"
-            },
-            {
-              "name": "Yahoo Finance — Fed Meeting Live Updates: Fed Hikes Interest Rates by 25 Basis Points for First Time in 3 Years in Unanimous Decision",
-              "tier": 2,
-              "url": "https://finance.yahoo.com/economy/policy/live/federal-reserve-meeting-live-updates-chairman-kevin-warsh-143452661.html",
-              "pole": "western"
-            },
-            {
-              "name": "CryptoTimes — FOMC Live: Federal Reserve Raised Interest Rates by 25 Basis Points",
-              "tier": 3,
-              "url": "https://www.cryptotimes.io/2026/09/16/fomc-live-meeting-rate-decision-time-schedule-kevin-warsh-announcement/",
-              "pole": "international"
             }
           ]
         }
@@ -1347,38 +1341,26 @@
               "url": "https://www.capitalmexico.com.mx/estados/tabasco-registra-reduccion-de-54-en-homicidios-dolosos-durante-la-administracion-de-sheinbaum/"
             }
           ]
-        },
-        {
-          "id": "lego-inversion-400md-nuevo-leon-sep24-2026",
-          "date": "2026-09-24",
-          "title": "Day 723 — LEGO to Invest $400 Million in Nuevo León Plant, 1,300 Jobs; Sheinbaum Clarifies Digital Economy Law Won't Ban Cash",
-          "type": "economic",
-          "detail": "At her September 24, 2026 (Day 723) mañanera, Economy Secretary Marcelo Ebrard announced LEGO will invest $400 million (roughly 8.6 billion pesos) through 2029 to expand its Ciénaga de Flores, Nuevo León plant — already the company's largest in the world — adding about 62,000 square meters of industrial and automated-warehouse space and creating an estimated 1,300 jobs; formal groundbreaking is set for September 30, 2026. Ebrard cited the project as further evidence of rising foreign direct investment under the Plan México nearshoring strategy. Separately, Sheinbaum clarified that the government's proposed Digital Economy Law will not prohibit cash, but is meant to \"facilitate the use of technology for digital payments,\" deepen financial inclusion and formalization, and build on existing tools like CoDi, according to the head of the Digital Transformation and Telecommunications Agency. Sheinbaum also ruled out cabinet changes, confirmed a Stray Kids concert is being arranged with 10 DIF-gifted tickets for low-income children, and said the U.S. would need Foreign Ministry (SRE) authorization to contract firms that notify deported Mexicans of immigration fines.",
-          "sources": [
-            {
-              "name": "Excélsior",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.excelsior.com.mx/nacional/lego-invertira-400-millones-dolares-nuevo-leon-y-generara-mil-300-empleos"
-            },
-            {
-              "name": "Infobae",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.infobae.com/mexico/2026/09/24/lego-anuncia-inversion-de-400-millones-de-dolares-para-impulsar-la-produccion-de-juguetes-en-mexico/"
-            },
-            {
-              "name": "La Jornada",
-              "tier": 2,
-              "pole": "western",
-              "url": "https://www.jornada.com.mx/noticia/2026/09/24/economia/grupo-lego-anuncia-inversion-por-400-mdd-para-nueva-planta-en-nuevo-leon"
-            }
-          ]
         }
       ]
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "section-301-digital-regulation-probe-weighed-2026-11-23",
+          "date": "2026-11-23",
+          "title": "Trump administration weighs Section 301 probe into digital regulations in South Korea, EU and Australia",
+          "type": "trade",
+          "detail": "The Trump administration is weighing a Section 301 investigation into digital regulations in South Korea, the EU and Australia, per a news report aggregated via Google News (single report; outlet not identified in the feed, no official confirmation).",
+          "sources": [
+            {
+              "name": "Google News (aggregated report)",
+              "tier": 4,
+              "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE80WExxZlRhTWxrZHJTbFpnR1k4dXlydlkwQ1I2eWpzQXNqbkd6ampWWXF0WkdJQVNqVXY5WkNtb3JhaEp2eG1TTWRFNzNOYzdUQWJLcE1vTElaOTlhdmpGSFJBbTM?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "trump-threatens-mexico-double-tariffs-migrant-caravan-2026-11-12",
           "date": "2026-11-12",
@@ -1471,51 +1453,6 @@
               "name": "Google News",
               "tier": 3,
               "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbUp2SjdYSFFKSDRxY0lWTkNjV1BGSjVrams3dnc4NFRpdGpINkxVa1ZMYjBGRmpHTDRqZXV1azI1OEtiV3AyTDhobGpEcnFGWGYyU1FrT3hkSlV3U0hSMm9tZmVhbXM2MVdTcnc1a2ZCNUw0WnpIZS1EejhFakZEOUNyTTBOME5fa25UTFhjdklncGVjUFFFM3lBMWtCejZCSGxfZkxIbFNUNmtfRFBSc01zbw?oc=5&hl=en-US&gl=US&ceid=US:en",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "us-canada-steel-auto-tariff-deal-talks-oct-26",
-          "date": "2026-10-26",
-          "title": "US and Canada reportedly working on deal to ease steel and auto tariffs",
-          "type": "trade",
-          "detail": "Sources say the US and Canada are working on a deal to ease tariffs on steel and autos. Canadian PM Mark Carney said the US is 'coming closer to our position'. No agreement has been announced.",
-          "sources": [
-            {
-              "name": "Google News (aggregated report)",
-              "tier": 3,
-              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQU1JXYWUtZ2l1TGNtSDlwbkN6SkxUR1RxaWZjQnFpNk8yTzBuLTR5OEUxQ296SmZEd3dDS25tMjh1eW5hRGg4X1gtVUpVQi1UbWIyYXpJQmh6NGxpX011WWlEYWh0Z3FKRm55UUl6UnpKUTZmM3lhUElLNUVIb0tkWDBYVkI1LXI2aWxwT1Q2aUpSZjhOcUVxaTByX21WVlExQVE?oc=5&hl=en-US&gl=US&ceid=US:en",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-audi-georgia-factory-rally-oct25-2026",
-          "date": "2026-10-25",
-          "title": "Trump announces Audi's first-ever U.S. factory in Georgia at rally, defends tariffs",
-          "type": "economic",
-          "detail": "At a rally, Trump announced that Audi will build its first-ever U.S. factory in Georgia, citing it as evidence that his tariffs are driving manufacturing investment, as he defended the tariff policy ahead of the November midterms.",
-          "sources": [
-            {
-              "name": "Japan Times",
-              "tier": 2,
-              "url": "https://www.japantimes.co.jp/business/2026/10/25/economy/trump-tariffs-audi-factory-election/",
-              "pole": "international"
-            }
-          ]
-        },
-        {
-          "id": "trump-michigan-border-rally-canada-tariff-oct25-2026",
-          "date": "2026-10-25",
-          "title": "Trump says Canada tariff deal coming 'soon' at Michigan border rally",
-          "type": "economic",
-          "detail": "At a rally near the Michigan-Canada border, Trump said a deal resolving the tariff dispute with Canada was coming 'soon', as he campaigned ahead of the November midterms.",
-          "sources": [
-            {
-              "name": "US News",
-              "tier": 2,
-              "url": "https://www.usnews.com/news/politics/articles/2026-10-25/trump-says-canada-tariff-deal-coming-soon-at-michigan-border-rally",
               "pole": "western"
             }
           ]
