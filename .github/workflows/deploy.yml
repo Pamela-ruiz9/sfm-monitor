@@ -12,13 +12,15 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Job-level (también aplica cuando se invoca vía workflow_call desde
+    # update-data / update-watchboard, que corren a la misma hora).
+    # Sin cancel-in-progress: un deploy en curso termina; el siguiente espera.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -26,7 +28,12 @@ jobs:
       run:
         working-directory: app
     steps:
+      # Punta actual de la rama, no github.sha: cuando lo llama un workflow
+      # de datos, github.sha es el commit ANTERIOR al que ese workflow acaba
+      # de pushear, y se desplegarían datos viejos.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - uses: actions/setup-node@v4
         with:

@@ -14,9 +14,10 @@ test('clicking ⌘K trigger opens palette and search returns results', async ({ 
   await page.waitForLoadState('networkidle');
   // Dismiss any driver.js overlay that may still appear by pressing Escape
   await page.keyboard.press('Escape');
-  // Use the visible button trigger from the header (works cross-viewport)
+  // Hay un trigger en Header (móvil, lg:hidden) y otro en Sidebar (desktop):
+  // usa el visible en el viewport actual.
   // Force-click bypasses pointer-intercept checks so driver.js overlay doesn't block
-  await page.locator('[data-cmdk-trigger]').first().click({ force: true });
+  await page.locator('[data-cmdk-trigger]:visible').first().click({ force: true });
   // cmdk renders the input with cmdk-input attribute after the dialog opens
   const input = page.locator('input[cmdk-input]');
   await expect(input).toBeVisible({ timeout: 5000 });

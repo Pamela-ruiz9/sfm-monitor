@@ -1,5 +1,5 @@
 ---
-import { Home, Thermometer, Building2, TrendingUp, BookOpen } from 'lucide-react';
+import { Home, Thermometer, Building2, TrendingUp, BookOpen, Search } from 'lucide-react';
 import SfmLogo from '~/components/shell/SfmLogo.astro';
 import { SidebarToggle } from '~/components/shell/SidebarToggle';
 import { ThemeToggle } from '~/components/shell/ThemeToggle';
@@ -133,6 +133,23 @@ const SUBNAV = [
     >
       Metodología →
     </a>
+  </div>
+
+  <!-- Búsqueda (⌘K). En desktop el Header está oculto (lg:hidden), así que este
+       es el único trigger visible; CmdKPalette escucha clicks en [data-cmdk-trigger]. -->
+  <div class="pt-2">
+    <button
+      type="button"
+      data-cmdk-trigger
+      class="nav-link w-[calc(100%-0.5rem)] flex items-center gap-3 px-3 py-2 mx-1 rounded-md border border-(--color-border) bg-(--color-bg-elev) text-(--color-text-mute) hover:text-(--color-text) hover:border-(--color-accent) transition-colors"
+      aria-label="Buscar indicador"
+      title="Buscar indicador (⌘K)">
+      <Search className="size-4 shrink-0" aria-hidden="true" />
+      <span class="sidebar-label flex-1 flex items-center justify-between min-w-0 text-xs">
+        Buscar
+        <kbd class="text-[10px] mono px-1.5 py-0.5 rounded bg-(--color-bg-elev-2) border border-(--color-border-soft)">⌘K</kbd>
+      </span>
+    </button>
   </div>
 
   <!-- Nav links -->

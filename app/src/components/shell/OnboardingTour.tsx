@@ -45,7 +45,12 @@ export function OnboardingTour() {
               },
             },
             {
-              element: '[data-cmdk-trigger]',
+              // Hay un trigger en Header (móvil) y otro en Sidebar (desktop);
+              // apunta al que esté visible en el viewport actual.
+              element: () =>
+                Array.from(document.querySelectorAll('[data-cmdk-trigger]')).find(
+                  (el) => el.getBoundingClientRect().width > 0,
+                ) ?? document.body,
               popover: {
                 title: 'Búsqueda rápida',
                 description:

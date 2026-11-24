@@ -77,8 +77,11 @@ test('credito: no JS console errors', async ({ page }) => {
 });
 
 test('credito: ImoraChart canvas renders', async ({ page, context }) => {
+  // banca-multiple pesa >9 MB de HTML (62 bancos × 304 meses): carga lenta
+  test.slow();
+  // /credito → /instituciones → /instituciones/tipos (sin charts); los charts viven aquí
   await forceClientVisible(context);
-  await page.goto(`${BASE}/credito`);
+  await page.goto(`${BASE}/instituciones/banca-multiple`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();
@@ -86,8 +89,10 @@ test('credito: ImoraChart canvas renders', async ({ page, context }) => {
 });
 
 test('credito: IcorChart canvas renders', async ({ page, context }) => {
+  // banca-multiple pesa >9 MB de HTML (62 bancos × 304 meses): carga lenta
+  test.slow();
   await forceClientVisible(context);
-  await page.goto(`${BASE}/credito`);
+  await page.goto(`${BASE}/instituciones/banca-multiple`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   // At least two canvas elements should be present (multiple charts on /credito)
@@ -98,10 +103,13 @@ test('credito: IcorChart canvas renders', async ({ page, context }) => {
 });
 
 test('instituciones: pivot renders and sector toggle works', async ({ page, context }) => {
+  // banca-multiple pesa >9 MB de HTML (62 bancos × 304 meses): carga lenta
+  test.slow();
   const errors = watchErrors(page);
   await forceClientVisible(context);
-  // /credito redirects to /instituciones (BM + SoFiPOs unified)
-  await page.goto(`${BASE}/instituciones`);
+  // ImorSegPivotChart vive en /instituciones/banca-multiple
+  // (/instituciones redirige a /instituciones/tipos, que no tiene charts)
+  await page.goto(`${BASE}/instituciones/banca-multiple`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
 
@@ -109,7 +117,7 @@ test('instituciones: pivot renders and sector toggle works', async ({ page, cont
   await expect(page.locator('canvas').first()).toBeVisible({ timeout: 20000 });
 
   // No blocking errors
-  expect(errors, `Request failures on /instituciones:\n${errors.join('\n')}`).toEqual([]);
+  expect(errors, `Request failures on /instituciones/banca-multiple:\n${errors.join('\n')}`).toEqual([]);
 });
 
 // ─── /sofipos charts ─────────────────────────────────────────────────────────
@@ -122,7 +130,7 @@ test('sofipos: no JS console errors', async ({ page }) => {
 
 test('sofipos: at least one canvas renders', async ({ page, context }) => {
   await forceClientVisible(context);
-  await page.goto(`${BASE}/sofipos`);
+  await page.goto(`${BASE}/instituciones/sofipos`);
   await page.waitForLoadState('networkidle');
   await scrollAndWaitForCanvas(page);
   const canvas = page.locator('canvas').first();

@@ -10,6 +10,7 @@ export type IndicatorId =
   | 'tiie28'
   | 'ifrs9'
   | 'sofipos-imor'
+  | 'sofipos-imor-vivienda'
   | 'sofipos-imora'
   | 'sofipos-roa'
   | 'tiie'
@@ -185,6 +186,18 @@ export const INDICATORS: readonly Indicator[] = [
     upIsGood: false,
     description:
       'IMOR de las 15 SoFiPOs más grandes por activo. Sector con morosidad ~4× la de Banca Múltiple.',
+  },
+  {
+    id: 'sofipos-imor-vivienda',
+    label: 'SoFiPOs — IMOR Vivienda',
+    shortLabel: 'SoFi IMOR Viv.',
+    aliases: ['sofipos vivienda', 'imor vivienda sofipos'],
+    unit: '%',
+    source: 'CNBV, Portafolio de Información, Sector 50',
+    tab: 'sofipos',
+    tone: 'red',
+    upIsGood: false,
+    description: 'IMOR de la cartera de vivienda del sector SoFiPOs.',
   },
   {
     id: 'sofipos-imora',

@@ -12,6 +12,13 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### fix(app,ci): E2E en verde, búsqueda en desktop y deploys de datos (2026-11-24)
+
+- **Búsqueda ⌘K sin botón en desktop**: el Header (único trigger) es `lg:hidden`; se añade botón "Buscar ⌘K" en `Sidebar.astro`. El paso de búsqueda del onboarding ahora apunta al trigger visible.
+- **KPIs de Banca Múltiple que recargaban la página**: `bm-imor`, `bm-imora`, `bm-icor`, `bm-roa` no existían en el registro de indicadores; se usan `imor`/`imora`/`icor`/`roa`. Se registra `sofipos-imor-vivienda`. `KpiCard.indicatorId` pasa a tipo `IndicatorId`, así `astro check` rechaza ids inexistentes.
+- **deploy.yml**: checkout de la punta de la rama (`github.ref`) en vez de `github.sha` — los workflows de datos desplegaban el commit anterior a sus propios datos. Concurrencia `pages` a nivel job y sin `cancel-in-progress` (update-data y update-watchboard corren a la misma hora y se cancelaban/fallaban entre sí).
+- **E2E**: rutas actualizadas (`/credito` y `/sofipos` redirigen a `/instituciones/tipos`, sin charts; los charts están en `/instituciones/banca-multiple` y `/instituciones/sofipos`), trigger cmdk visible, drawer probado donde aplica y nuevo test del comportamiento de la home (click en KPI cambia la gráfica inline). Tests de `banca-multiple` marcados `test.slow()` (página >9 MB).
+
 ### chore: limpieza de repositorio (2026-11-24)
 
 - `raw-data/cnbv_indicadores.json` versionado con las series por cartera de US-406 (faltaba en `acd7989`; `update-cnbv.yml` lo usa como entrada).

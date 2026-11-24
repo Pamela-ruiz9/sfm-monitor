@@ -3,6 +3,7 @@ import { ArrowDownRight, ArrowUpRight, Minus, Activity, Shield, TrendingUp, Tren
 const ICON_MAP = { Activity, Shield, TrendingUp, TrendingDown, Percent, BarChart2, DollarSign } as const;
 type IconName = keyof typeof ICON_MAP;
 import { cn } from '~/lib/utils';
+import type { IndicatorId } from '~/data/indicators';
 
 // Will be moved to ~/data/indicators in Task 8 and imported from there.
 export type Tone = 'gold' | 'green' | 'yellow' | 'red';
@@ -24,7 +25,7 @@ interface Props {
     | null
     | undefined;
   /** Indicator id, e.g. "fx", "tasa". Used for view-transition-name + drawer link. */
-  indicatorId?: string;
+  indicatorId?: IndicatorId;
 }
 
 const VALUE_COLOR: Record<Tone, string> = {
