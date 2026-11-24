@@ -12,6 +12,12 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 
 ## [Sin publicar]
 
+### chore: limpieza de repositorio (2026-11-24)
+
+- `raw-data/cnbv_indicadores.json` versionado con las series por cartera de US-406 (faltaba en `acd7989`; `update-cnbv.yml` lo usa como entrada).
+- Eliminados archivos sin consumidores: `raw-data/imor_historico.json`, `raw-data/samples/normalize-cnbv.py` (copia obsoleta del script), fixtures `*_sample.*` de `raw-data/samples/`, `app/src/components/kpi/KpiHero.tsx` (reemplazado por `HeroScore.astro`).
+- `raw-data/sofipos_inst.xlsx` (41 MB) y `raw-data/transfers/ifrs9_bm.zip` (20 MB) dejan de versionarse; son entradas locales de `extract-cnbv-raw.py` / `normalize-ifrs9.py`, que CI no lee. El zip vive ahora en `raw-data/ifrs9_bm.zip` (ruta que espera el script, ya en `.gitignore`).
+
 ### feat(cnbv): desagregación quitas/EPRC/tasa_activa/cartera por cartera e institución (2026-06-11)
 
 **Pipeline**

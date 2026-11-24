@@ -69,7 +69,7 @@ sfm-monitor/
 │   │   ├── components/
 │   │   │   ├── shell/                      ← Header, TabBar, BottomNav, CmdKPalette, PWAInstallPrompt, OnboardingTour, SwipeNav, PullToRefresh, UpdateToast
 │   │   │   ├── chrome/                     ← Section, EditorialHeadline
-│   │   │   ├── kpi/                        ← KpiCard, KpiHero
+│   │   │   ├── kpi/                        ← KpiCard
 │   │   │   ├── drawer/                     ← ChartDrawer (vaul), DrawerMetadata, DrawerExport
 │   │   │   ├── alerts/AlertsPanel.astro
 │   │   │   ├── DataFreshnessBadge.tsx

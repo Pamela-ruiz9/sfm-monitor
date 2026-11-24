@@ -76,8 +76,7 @@ app/
 │   │   │   ├── Section.astro                ← eyebrow + title + source + tone-tinted card
 │   │   │   └── EditorialHeadline.astro      ← serif hero headline
 │   │   ├── kpi/
-│   │   │   ├── KpiCard.tsx                  ← Cormorant value, delta con upIsGood semantic
-│   │   │   └── KpiHero.tsx                  ← variante hero más grande
+│   │   │   └── KpiCard.tsx                  ← Cormorant value, delta con upIsGood semantic
 │   │   ├── drawer/
 │   │   │   ├── ChartDrawer.tsx              ← vaul Drawer.Root, URL-synced
 │   │   │   ├── DrawerMetadata.tsx
