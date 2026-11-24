@@ -6,8 +6,8 @@
     "inflacion": "Banxico SIE SP1 (INPC general) · SP74625 (subyacente) · SP74627 (no subyacente)"
   },
   "tipo_cambio": {
-    "actual": "19.1648",
-    "fecha": "2026-11-23",
+    "actual": "19.3668",
+    "fecha": "2026-11-24",
     "historico_mensual": [
       {
         "mes": "1994-01",
@@ -1587,7 +1587,7 @@
       },
       {
         "mes": "2026-11",
-        "valor": 19.1648
+        "valor": 19.3668
       }
     ]
   },
@@ -2741,8 +2741,8 @@
   },
   "mercado": {
     "reservas_internacionales": {
-      "actual": 256329.6,
-      "fecha": "2026-11-13",
+      "actual": 255668.2,
+      "fecha": "2026-11-20",
       "historico": [
         {
           "fecha": "2025-11-28",
@@ -2947,6 +2947,10 @@
         {
           "fecha": "2026-11-13",
           "valor": 256329.6
+        },
+        {
+          "fecha": "2026-11-20",
+          "valor": 255668.2
         }
       ]
     },
@@ -4285,8 +4289,8 @@
       ]
     },
     "cetes_28d": {
-      "actual": 6.19,
-      "fecha": "2026-11-17",
+      "actual": 6.2,
+      "fecha": "2026-11-24",
       "historico": [
         {
           "fecha": "2024-11-26",
@@ -4703,6 +4707,10 @@
         {
           "fecha": "2026-11-17",
           "valor": 6.19
+        },
+        {
+          "fecha": "2026-11-24",
+          "valor": 6.2
         }
       ]
     },
@@ -5456,8 +5464,8 @@
       "fecha": "2026-11-06"
     },
     "tasa_real_cetes": {
-      "actual": 2.44,
-      "fecha": "2026-11-17"
+      "actual": 2.45,
+      "fecha": "2026-11-24"
     }
   },
   "credito": {
