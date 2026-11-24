@@ -16,6 +16,7 @@ jobs:
       - name: Probe candidate series
         env:
           INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}
+          EXTRA_IDS: ${{ inputs.extra_ids }}
         run: |
           python3 << 'PYEOF'
           import urllib.request, json, os
@@ -72,5 +73,3 @@ jobs:
                   probe(sid)
 
           PYEOF
-        env:
-          EXTRA_IDS: ${{ inputs.extra_ids }}

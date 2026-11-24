@@ -22,7 +22,8 @@ jobs:
   test:
     name: Unit + E2E + Lighthouse
     needs: smoke-ci
-    runs-on: ubuntu-latest
+    # Pinned: Playwright no soporta chromium en ubuntu-latest (26.04) todavía
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: app

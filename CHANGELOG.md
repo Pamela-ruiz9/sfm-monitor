@@ -20,6 +20,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - Dashboard HTML v0.1.0 archivado: `index.html` → `legacy/v0.1.0.html`, `roadmap.html` → `legacy/roadmap-v0.1.0.html` (ya no se publicaban; Pages despliega `app/dist`).
 - README, `AGENTS.md` y `app/README.md` corregidos: la app Astro es producción, sin dominio propio; enlace roto a `roadmap.html` reemplazado por `docs/roadmap-epics.md`.
 - Enlazados documentos huérfanos: `docs/data-sources.md`, `docs/roadmap-epics.md`, `data/Raw_data/Data.md` (este último ahora describe el catálogo).
+- CI: `test.yml` fija `ubuntu-24.04` (Playwright no soporta chromium en `ubuntu-latest` = 26.04); `probe-inegi.yml` tenía `env:` duplicado en el mismo step y GitHub lo rechazaba en cada push.
 
 ### feat(cnbv): desagregación quitas/EPRC/tasa_activa/cartera por cartera e institución (2026-06-11)
 
