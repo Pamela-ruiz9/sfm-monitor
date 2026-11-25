@@ -1,8 +1,23 @@
 {
-  "updated": "2026-11-24T23:20:59Z",
+  "updated": "2026-11-25T22:53:20Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
+        {
+          "id": "us-stocks-sink-hot-inflation-tariffs-chip-rout-2026-11-25",
+          "date": "2026-11-25",
+          "title": "Wall Street Sinks on Hot Inflation Data and New Trump Tariffs as Chip Rout Continues",
+          "type": "market",
+          "detail": "The Dow, S&P 500 and Nasdaq fell on Nov 25 after hotter-than-expected inflation data and newly announced Trump tariffs, as the semiconductor selloff continued. Details of the inflation reading and tariff scope were not available in the feed summary and are unverified.",
+          "sources": [
+            {
+              "name": "Google News (aggregated headline)",
+              "tier": 4,
+              "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUEhyLTdac1NBTVdPT1QyLUJKck4wUUJkNjlXQWFHTG1peDJyeDRqNklFSkVpek9JbmEyQ0gya1R6dGZicmpfbkFIS1BjR3lDeGhFMmpIYU90ajhxZ2lwYW5sLW93TmdZcXR3Q2p3akUxc1JBRVRmbEpVQW5LM3pDaXhNZWx6a0txT19rUTQ3R2xVejJWQkh0TzdSRmlOY0lDa05oNklJOE1fVV9CY1FuRXJMNHJrVG8zQzdTX0pjYmNwanNhd0VJcTVkRQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "global-selloff-hk-19-month-low-2026-11-23",
           "date": "2026-11-23",
@@ -585,27 +600,6 @@
               "tier": 2,
               "url": "https://www.aljazeera.com/economy/2026/9/20/us-china-open-high-level-talks-ahead-of-trump-xi-summit",
               "pole": "middle_eastern"
-            }
-          ]
-        },
-        {
-          "id": "iran-conditions-qatar-hormuz-risk-sept19-2026",
-          "date": "2026-09-19",
-          "title": "Iran Says It Sent Conditions to End War to US via Qatar; Rezaei Warns Trump Threats 'Will Not Yield Results'",
-          "type": "political",
-          "detail": "Mohsen Rezaei, secretary of Iran's Supreme National Security Council, told Al Jazeera in an interview published Saturday that Tehran had conveyed a formal set of conditions to Washington through Qatari mediators for ending the war — ending fighting on all fronts, unfreezing Iranian financial assets, and lifting the US naval blockade — and was now awaiting a response from President Trump. Rezaei said consultations were continuing with Qatari and Pakistani mediators, argued it was in Washington's interest to accept Iran's terms, and said Trump's threats 'will not yield results,' adding Iran was prepared for a 'decisive war.' The statement followed Trump's September 17 remark that he was approaching a 'major decision' on whether to resume large-scale strikes on Iran. With the Strait of Hormuz still the central variable behind the oil-driven inflation shock running through Fed policy this year, the unresolved standoff kept the war-risk premium in crude and Treasury yields alive heading into the new week.",
-          "sources": [
-            {
-              "name": "Al Jazeera — Iran Says Conditions to Re-engage in Talks, End War Sent to US via Qatar",
-              "tier": 2,
-              "url": "https://www.aljazeera.com/news/2026/9/19/iran-says-conditions-to-re-engage-in-talks-end-war-sent-to-us-via-qatar",
-              "pole": "middle_eastern"
-            },
-            {
-              "name": "RFE/RL via GlobalSecurity.org — Iran Repeats Long-Standing Demands Before Any Restart of US Talks",
-              "tier": 2,
-              "url": "https://www.globalsecurity.org/wmd/library/news/iran/2026/09/iran-260919-rferl01.htm",
-              "pole": "western"
             }
           ]
         }
@@ -1346,6 +1340,21 @@
     },
     "trump-presidencies": {
       "events": [
+        {
+          "id": "overcapacity-tariffs-14-partners-2026-11-25",
+          "date": "2026-11-25",
+          "title": "Administration announces new tariffs on 14 trading partners over industrial overcapacity",
+          "type": "trade",
+          "detail": "Per a Google News-aggregated report, the Trump administration announced new tariffs on 14 trading partners, including China, Japan, Singapore and some EU members, citing industrial overcapacity. The proposal reportedly retains a 15% cap for Korea, Japan and the EU. The EU rejected the case for the tariffs. Rates and effective dates not confirmed in the feed.",
+          "sources": [
+            {
+              "name": "Google News (aggregated report)",
+              "tier": 4,
+              "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOU3FnamwtTXpFa0hPcDhhc1dodGc3bXNmYnJYZXcyaEVrMkl3WmRaRXRSeDl1X1Q0aWhUTlVaSWxxOVRTanZPelpkWVY1akhzY2xrdzRNTEFYM01UQWRRSTk2NzQwWXFkdFdQdUlwSTh2aUFTcUs3U1hLbkhHUEFzQg?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
         {
           "id": "overcapacity-probe-tariffs-expected-2026-11-24",
           "date": "2026-11-24",
