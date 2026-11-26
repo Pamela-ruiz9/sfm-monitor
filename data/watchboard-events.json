@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T22:53:20Z",
+  "updated": "2026-11-26T22:45:33Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -1462,21 +1462,6 @@
               "name": "Facilities Dive",
               "tier": 3,
               "url": "https://www.facilitiesdive.com/news/trump-tweaks-canada-tariffs-removing-certain-goods-while-adding-others/872765/",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-delays-robotics-machinery-tariffs-oct-28",
-          "date": "2026-10-28",
-          "title": "Trump delays robotics and machinery tariffs in favor of more talks",
-          "type": "trade",
-          "detail": "Headline-level report that Trump delayed tariffs on robotics and machinery in favor of further talks; specifics not yet confirmed.",
-          "sources": [
-            {
-              "name": "Google News",
-              "tier": 3,
-              "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbUp2SjdYSFFKSDRxY0lWTkNjV1BGSjVrams3dnc4NFRpdGpINkxVa1ZMYjBGRmpHTDRqZXV1azI1OEtiV3AyTDhobGpEcnFGWGYyU1FrT3hkSlV3U0hSMm9tZmVhbXM2MVdTcnc1a2ZCNUw0WnpIZS1EejhFakZEOUNyTTBOME5fa25UTFhjdklncGVjUFFFM3lBMWtCejZCSGxfZkxIbFNUNmtfRFBSc01zbw?oc=5&hl=en-US&gl=US&ceid=US:en",
               "pole": "western"
             }
           ]
