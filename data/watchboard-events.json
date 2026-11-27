@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T22:45:33Z",
+  "updated": "2026-11-27T22:27:00Z",
   "trackers": {
     "global-recession-risk": {
       "events": [
@@ -1341,6 +1341,36 @@
     "trump-presidencies": {
       "events": [
         {
+          "id": "japan-partners-reject-tariff-hikes-2026-11-27",
+          "date": "2026-11-27",
+          "title": "Japan and partners reject Trump's new tariff hikes",
+          "type": "trade",
+          "detail": "Per a Google News-aggregated headline, Japan and other partners rejected Trump's new tariff increases. Which partners, the tariff rates and any retaliation not confirmed in the feed.",
+          "sources": [
+            {
+              "name": "Google News (aggregated report)",
+              "tier": 4,
+              "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1kNVYtM1dnT1B3OFp2MVU5Ym5pcldsekVXNFZkekxDMHpTeVYtb19KLVJUS1RzdzlRTVFHamJTMnJTeGVzYy11cXVpNkhVWW9IYmF2S2dTNHpmNEpVd3Rsc3Y4VzR0QzVFNUZicDlDbXg3YVRacGNJamxB?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
+        {
+          "id": "gop-senators-open-to-challenging-tariffs-2026-11-27",
+          "date": "2026-11-27",
+          "title": "Several GOP senators open to challenging Trump's tariffs amid voter price anger",
+          "type": "trade",
+          "detail": "Per a Google News-aggregated headline, several Republican senators say they are open to challenging Trump's tariffs as voter anger over prices grows. Names, specific measures and vote timing not confirmed in the feed.",
+          "sources": [
+            {
+              "name": "Google News (aggregated report)",
+              "tier": 4,
+              "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNZndXbkNJMXRkUGFhMFpxXzVjZ2s0SnZpbkx1ajItRDFuNHBDQTlqdklBXzI5UXZOOWFKWi1DenV1MTF6MFFPYmxNS0IwZHByaG81WXFGWGlXSXBOSVpaaTk5UEdMWnpseE4temJUN2JNVFVpUl9DZlNDZ3p0UEpURDNJTnZra3hoR3RxYXpIWkJnSnlSLVBxRXlkLWliTWduU09rMm94T01HZEU0U0J2b29MWDlYSk1SNnc?oc=5&hl=en-US&gl=US&ceid=US:en",
+              "pole": "western"
+            }
+          ]
+        },
+        {
           "id": "overcapacity-tariffs-14-partners-2026-11-25",
           "date": "2026-11-25",
           "title": "Administration announces new tariffs on 14 trading partners over industrial overcapacity",
@@ -1441,27 +1471,6 @@
               "name": "Google News (aggregator)",
               "tier": 4,
               "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVk9Yd0FWV1plYlE5LUcwZElzUG4zcFV0UUVPTktRNjQ1dzhwQ29zTUh4MDN6ZUo3QVl4Q0hlUzZsaGtaQl9yRjNRRS1zNUdINl9BSDJYTUF3c2ZmODNXTEtDWDlGNS1fcEVwSXE0ZUwtZEQ1TU53ZmpTOTF3Uk5NOWFTc0Z0STAyd1loUml1RlN6QU9YRjB1SlNLbHpBQU5yWlNvekpSQTNRejRBcGV0dUFOR0JkMk9EdzhmcU83LTA0Yk5QaXpkbl9razBJdm54TEZNMkhpNnhlNnfSAeABQVVfeXFMTnp2Y2xDYVdBS2hCUXpnTkFxZTh5eTMtc2JqOEVHbGlaYWRPT3pMWjJRaHFKeDE1NV9ldXpsd1FsclpGekpoYnBpWkNVbElCTF9zUXU1UjFzVHlCckpLakRYX2hmdDNwVmJxY3JGMmkzLTM1N0I3bjJUYzlCRGM2bzM3TTRQZUpCYXAxZWxtSDlBSG9Ua2UxMzBqVkVrZ2lCRVMwemhsNWtKTU5lQks0R3RtazBsWlVHX01WZVhPcjJPeGdiWUlzblZpbERERjRjbDNTbHlpcUhjVDVscW5TaWc?oc=5&hl=en-US&gl=US&ceid=US:en",
-              "pole": "western"
-            }
-          ]
-        },
-        {
-          "id": "trump-revises-canada-building-materials-tariffs-oct-28",
-          "date": "2026-10-28",
-          "title": "Trump revises 50% tariffs on Canadian building materials",
-          "type": "trade",
-          "detail": "Trump revised the 50% tariffs on Canadian goods: a proclamation would remove plywood, certain industrial machinery and select packaging and paper materials from coverage, effective Oct. 30, per Facilities Dive. Full product list not independently confirmed against the proclamation text.",
-          "sources": [
-            {
-              "name": "Google News",
-              "tier": 3,
-              "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZ1BOMVNkRUhlXzdMUE1UUi1SY1dFenZvbFdnSlhMX3RkUF8tbXNTMGZLenVKVnFXaEQ0TjFFZzRtNEVFeTA5cFplam90c2R3UjVMc0RtZDhMMy1HQ0plcThzVDFhN0pYWklNX1NUazhaQ0NmOHZtcTFjN053eEtyZjNnaUlmVElITk9hbnJoWmZyNWE3d2lyX0ZFM0VuWjBrZkZOc2NzM0k?oc=5&hl=en-US&gl=US&ceid=US:en",
-              "pole": "western"
-            },
-            {
-              "name": "Facilities Dive",
-              "tier": 3,
-              "url": "https://www.facilitiesdive.com/news/trump-tweaks-canada-tariffs-removing-certain-goods-while-adding-others/872765/",
               "pole": "western"
             }
           ]
